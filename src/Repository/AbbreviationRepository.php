@@ -3,10 +3,16 @@
 namespace App\Repository;
 
 use App\Entity\Abbreviation;
-use Doctrine\ORM\EntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class AbbreviationRepository extends EntityRepository
+class AbbreviationRepository extends ServiceEntityRepository
 {
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, Abbreviation::class);
+    }
+
     /**
      * @return Abbreviation[]
      */

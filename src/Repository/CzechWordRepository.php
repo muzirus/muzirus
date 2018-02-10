@@ -2,11 +2,18 @@
 
 namespace App\Repository;
 
+use App\Entity\CzechWord;
 use App\Entity\CzechWordInterface;
-use Doctrine\ORM\EntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class CzechWordRepository extends EntityRepository
+class CzechWordRepository extends ServiceEntityRepository
 {
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, CzechWord::class);
+    }
+
     /**
      * @return CzechWordInterface[]
      */

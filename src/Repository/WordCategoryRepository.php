@@ -3,11 +3,17 @@
 namespace App\Repository;
 
 use App\Entity\WordCategory;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Collections\Criteria;
-use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class WordCategoryRepository extends EntityRepository
+class WordCategoryRepository extends ServiceEntityRepository
 {
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, WordCategory::class);
+    }
+
     /**
      * @return WordCategory[]
      */

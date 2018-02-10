@@ -3,11 +3,17 @@
 namespace App\Repository;
 
 use App\Entity\Source;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Collections\Criteria;
-use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class SourceRepository extends EntityRepository
+class SourceRepository extends ServiceEntityRepository
 {
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, Source::class);
+    }
+
     /**
      * @return Source[]
      */

@@ -3,10 +3,16 @@
 namespace App\Repository;
 
 use App\Entity\SourceType;
-use Doctrine\ORM\EntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class SourceTypeRepository extends EntityRepository
+class SourceTypeRepository extends ServiceEntityRepository
 {
+    public function __construct(RegistryInterface $registry)
+    {
+        parent::__construct($registry, SourceType::class);
+    }
+
     /**
      * @return SourceType[]
      */
