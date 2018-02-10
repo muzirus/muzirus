@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Repository;
+
+use App\Entity\TranslationExample;
+use Doctrine\ORM\EntityRepository;
+
+class TranslationExampleRepository extends EntityRepository
+{
+    /**
+     * @return TranslationExample[]
+     */
+    public function getAll(): array
+    {
+        return $this
+            ->createQueryBuilder('te')
+            ->select(['te', 't', 'cw', 'rw'])
+            ->join('te.translation', 't')
+            ->join('t.russianWord', 'rw')
+            ->join('t.czechWord', 'cw')
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @param int $id
+     * @return TranslationExample
+     * @throws \Doctrine\ORM\NoResultException
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getOne(int $id): TranslationExample
+    {
+        return $this->createQueryBuilder('te')
+            ->select('te')
+            ->where('te.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getSingleResult();
+    }
+}
