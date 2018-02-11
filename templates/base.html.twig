@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
     {% endblock %}
 </head>
-<body id="{% block body_id %}{% endblock %}">
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
 {% block body %}{% endblock %}
 {% block javascripts %}
     <script src="{{ asset('build/manifest.js') }}"></script>
