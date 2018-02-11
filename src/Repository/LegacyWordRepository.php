@@ -12,4 +12,15 @@ class LegacyWordRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, LegacyWord::class);
     }
+
+    /**
+     * @return LegacyWord[]
+     */
+    public function getAll(): array
+    {
+        return $this->createQueryBuilder('lw')
+            ->orderBy('lw.original', 'ASC')
+            ->getQuery()
+            ->getResult();
+    }
 }

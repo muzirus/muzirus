@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Legacy words' %}
+
+{% block body %}
+    <table>
+        {% for word in words %}
+            <tr>
+                <td>{{ word.id }}</td>
+                <td>{{ word.original }}</td>
+                <td>
+                    <a href="{{ url('admin.legacy_word.view', {'id': word.id}) }}">View</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
