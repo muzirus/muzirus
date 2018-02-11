@@ -35,6 +35,17 @@ class AbbreviationFacade
         return $abbreviation;
     }
 
+    public function updateAbbreviation(Abbreviation $abbreviation, AbbreviationFormData $formData): Abbreviation
+    {
+        $abbreviation->setTitle($formData->getTitle());
+        $abbreviation->setContent($formData->getContent());
+        $abbreviation->setDescription($formData->getDescription());
+
+        $this->entityManager->flush();
+
+        return $abbreviation;
+    }
+
     public function deleteAbbreviation(Abbreviation $abbreviation): void
     {
         $this->entityManager->remove($abbreviation);

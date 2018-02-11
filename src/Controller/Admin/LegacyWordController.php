@@ -10,12 +10,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("admin/legacy-word", name="admin.legacy_word.")
+ * @Route("admin/legacy-word")
  */
 class LegacyWordController extends AbstractController
 {
     /**
-     * @Route(name="index")
+     * @Route(name="admin.legacy_word")
      * @Method("GET")
      */
     public function index(LegacyWordRepository $legacyWordRepository): Response
@@ -29,7 +29,7 @@ class LegacyWordController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="view", requirements={"id": "\d+"})
+     * @Route("/{id}", name="admin.legacy_word.view", requirements={"id": "\d+"})
      * @Method("GET")
      */
     public function view(LegacyWord $word): Response
