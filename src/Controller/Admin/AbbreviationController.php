@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Abbreviation;
+use App\Facade\AbbreviationFacade;
 use App\Form\AbbreviationType;
 use App\Repository\AbbreviationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -17,6 +18,16 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class AbbreviationController extends AbstractController
 {
+    /**
+     * @var AbbreviationFacade
+     */
+    private $abbreviationFacade;
+
+    public function __construct(AbbreviationFacade $abbreviationFacade)
+    {
+        $this->abbreviationFacade = $abbreviationFacade;
+    }
+
     /**
      * @Route("", name="admin.abbreviation")
      * @Method("GET")
@@ -42,7 +53,7 @@ class AbbreviationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // todo: save abbreviations
+            $this->abbreviationFacade->createAbbreviation($form->getData());
 
             $this->addFlash('success', 'abbreviation.created_successfully');
 
@@ -77,6 +88,8 @@ class AbbreviationController extends AbstractController
      */
     public function edit(Abbreviation $abbreviation): Response
     {
+        // todo
+
         return $this->render(
             'admin/abbreviation/edit.html.twig',
             [
@@ -91,7 +104,7 @@ class AbbreviationController extends AbstractController
      */
     public function remove(Abbreviation $abbreviation): RedirectResponse
     {
-        // todo
+        $this->abbreviationFacade->deleteAbbreviation($abbreviation);
 
         $this->addFlash('success', 'abbreviation.deleted_successfully');
 
