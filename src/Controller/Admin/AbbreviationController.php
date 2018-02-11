@@ -3,10 +3,12 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Abbreviation;
+use App\Form\AbbreviationType;
 use App\Repository\AbbreviationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -33,12 +35,24 @@ class AbbreviationController extends AbstractController
      * @Route("/add", name="admin.abbreviation.add")
      * @Method({"GET", "POST"})
      */
-    public function add(): Response
+    public function add(Request $request): Response
     {
+        $form = $this->createForm(AbbreviationType::class);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            // todo: save abbreviations
+
+            $this->addFlash('success', 'abbreviation.created_successfully');
+
+            return $this->redirectToRoute('admin.abbreviation');
+        }
+
         return $this->render(
             'admin/abbreviation/add.html.twig',
             [
-                // todo
+                'form' => $form->createView(),
             ]
         );
     }
@@ -78,6 +92,9 @@ class AbbreviationController extends AbstractController
     public function remove(Abbreviation $abbreviation): RedirectResponse
     {
         // todo
+
+        $this->addFlash('success', 'abbreviation.deleted_successfully');
+
         return $this->redirectToRoute('admin.abbreviation');
     }
 }
