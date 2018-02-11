@@ -1,6 +1,10 @@
 {
   "devDependencies": {
     "@symfony/webpack-encore": "^0.17.0",
+    "bootstrap-sass": "^3.3.7",
+    "bootstrap-toggle": "^2.2.2",
+    "datatables.net": "^1.10.16",
+    "datatables.net-bs": "^1.10.16",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "lato-font": "^3.0.0",
@@ -14,5 +18,8 @@
     "dev": "./node_modules/.bin/encore dev",
     "watch": "./node_modules/.bin/encore dev --watch",
     "build": "./node_modules/.bin/encore production"
+  },
+  "dependencies": {
+    "admin-lte": "^2.4.2"
   }
 }
