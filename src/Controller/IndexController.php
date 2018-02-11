@@ -10,7 +10,6 @@ class IndexController extends AbstractController
 {
     /**
      * @Route("/", name="index")
-     * @Route("/", name="title_page")
      */
     public function index(): Response
     {
