@@ -1,5 +1,14 @@
 (function ($) {
     $(function () {
+        // defaults for dataTable
+        $.extend(true, $.fn.dataTable.defaults, {
+            scrollX: true,
+            responsive: true,
+            autoWidth: false,
+            stateSave: true,
+            stateDuration: 60 * 60 * 24 // default: 7200
+        });
+
         $('.js-data-table').DataTable();
 
         // select2

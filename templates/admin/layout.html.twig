@@ -13,152 +13,153 @@
 {% block body_class 'skin-purple hold-transition sidebar-mini fixed' %}
 
 {% block body %}
-    {% block nav %}
-        <header class="main-header">
-            <a href="#" class="logo">
-                <span class="logo-mini"><b>D</b></span>
-                <span class="logo-lg"><b>DICTIONARY</b></span>
-            </a>
-            <nav class="navbar navbar-static-top">
-                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                    <span class="sr-only">Toggle navigation</span>
+    <div class="wrapper">
+        {% block nav %}
+            <header class="main-header">
+                <a href="#" class="logo">
+                    <span class="logo-mini"><b>D</b></span>
+                    <span class="logo-lg"><b>DICTIONARY</b></span>
                 </a>
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
+                <nav class="navbar navbar-static-top">
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#">
+                                    <span class="hidden-xs">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="return confirm('Are you sure?');">
+                                    <span class="hidden-xs">Sign out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        {% endblock %}
+        {% block sidebar %}
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <div class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="sidebar-menu">
+                        <li class="header">Home</li>
                         <li>
                             <a href="#">
-                                <span class="hidden-xs">Profile</span>
+                                <i class="fa fa-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="header">Words</li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Russian words</span>
+                                <span class="pull-right-container"><small class="text-muted pull-right">666</small></span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" onclick="return confirm('Are you sure?');">
-                                <span class="hidden-xs">Sign out</span>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Czech words</span>
+                                <span class="pull-right-container"><small class="text-muted pull-right">666</small></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-bookmark"></i>
+                                <span>Original database</span>
+                            </a>
+                        </li>
+                        <li class="header">Translations</li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Translations</span>
+                                <span class="pull-right-container">
+                        <small class="text-muted pull-right">666</small>
+                    </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Example sentences</span>
+                                <span class="pull-right-container">
+                        <small class="text-muted pull-right">5</small>
+                    </span>
+                            </a>
+                        </li>
+                        <li class="header">Sources</li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Sources</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Source types</span>
+                            </a>
+                        </li>
+                        <li class="header">Other</li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Symbols</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Abbreviations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Word categories</span>
+                            </a>
+                        </li>
+                        <li class="header">System</li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-users"></i>
+                                <span>Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-lock"></i>
+                                <span>Sign out</span>
                             </a>
                         </li>
                     </ul>
-                </div>
-            </nav>
-        </header>
-    {% endblock %}
-    {% block sidebar %}
-        <aside class="main-sidebar">
-            <section class="sidebar">
-                <form action="#" method="get" class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search...">
-                        <div class="input-group-btn">
-                            <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <ul class="sidebar-menu">
-                    <li class="header">Home</li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-dashboard"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="header">Words</li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Russian words</span>
-                            <span class="pull-right-container"><small class="text-muted pull-right">666</small></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Czech words</span>
-                            <span class="pull-right-container"><small class="text-muted pull-right">666</small></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-bookmark"></i>
-                            <span>Original database</span>
-                        </a>
-                    </li>
-                    <li class="header">Translations</li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Translations</span>
-                            <span class="pull-right-container">
-                        <small class="text-muted pull-right">666</small>
-                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Example sentences</span>
-                            <span class="pull-right-container">
-                        <small class="text-muted pull-right">5</small>
-                    </span>
-                        </a>
-                    </li>
-                    <li class="header">Sources</li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Sources</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Source types</span>
-                        </a>
-                    </li>
-                    <li class="header">Other</li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Symbols</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Abbreviations</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Word categories</span>
-                        </a>
-                    </li>
-                    <li class="header">System</li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-users"></i>
-                            <span>Users</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-lock"></i>
-                            <span>Sign out</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </aside>
-    {% endblock %}
+                </section>
+            </aside>
+        {% endblock %}
 
-    <div class="content-wrapper">
-        {% block main %}{% endblock %}
+        <div class="content-wrapper">
+            {% block main %}{% endblock %}
+        </div>
+
+        {% block footer %}
+            <footer class="main-footer">
+                <strong>Copyright &copy; 2018 <a href="https://www.petrofcik.eu" target="_blank">Matúš Petrofčík</a>.</strong>
+            </footer>
+        {% endblock %}
     </div>
-
-    {% block footer %}
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2018 <a href="https://www.petrofcik.eu" target="_blank">Matúš Petrofčík</a>.</strong>
-        </footer>
-    {% endblock %}
-
 {% endblock %}
