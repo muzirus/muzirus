@@ -2,3 +2,10 @@
 // to load the Bootswatch web fonts locally and avoid loading them from Google servers
 // see https://github.com/thomaspark/bootswatch/issues/55#issuecomment-298093182
 $web-font-path: 'data:text/css;base64,';
+
+@import "~font-awesome/scss/font-awesome.scss";
+
+// pick the Lato fonts individually to avoid importing the entire font family
+@import '~lato-font/scss/public-api';
+@include lato-include-font('normal');
+@include lato-include-font('bold');
