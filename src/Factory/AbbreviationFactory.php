@@ -9,12 +9,10 @@ class AbbreviationFactory
 {
     public function createFromFormData(AbbreviationFormData $formData): Abbreviation
     {
-        $abbreviation = new Abbreviation(
+        return new Abbreviation(
             $formData->getTitle(),
             $formData->getContent(),
             $formData->getDescription()
         );
-
-        return $abbreviation;
     }
 }
