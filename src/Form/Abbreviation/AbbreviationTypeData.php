@@ -1,10 +1,10 @@
 <?php
 
-namespace App\FormData;
+namespace App\Form\Abbreviation;
 
 use App\Entity\Abbreviation;
 
-class AbbreviationFormData
+class AbbreviationTypeData
 {
     /**
      * @var string

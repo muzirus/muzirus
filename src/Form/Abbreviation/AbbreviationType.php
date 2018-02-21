@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Form;
+namespace App\Form\Abbreviation;
 
-use App\FormData\AbbreviationFormData;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -29,7 +28,7 @@ class AbbreviationType extends FormType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => AbbreviationFormData::class,
+            'data_class' => AbbreviationTypeData::class,
         ]);
     }
 }
