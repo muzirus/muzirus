@@ -4,7 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Abbreviation;
 use App\Facade\AbbreviationFacade;
-use App\Form\AbbreviationType;
+use App\Form\Abbreviation\AbbreviationForm;
 use App\Repository\AbbreviationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -48,7 +48,7 @@ class AbbreviationController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(AbbreviationType::class);
+        $form = $this->createForm(AbbreviationForm::class);
 
         $form->handleRequest($request);
 
