@@ -2,7 +2,7 @@
 
 namespace App\Service;
 
-class GitService
+class GitInfoService
 {
     /**
      * @var string
