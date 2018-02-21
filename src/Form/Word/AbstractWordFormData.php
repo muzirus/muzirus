@@ -1,10 +1,10 @@
 <?php
 
-namespace App\FormData;
+namespace App\Form\Word;
 
 use App\Entity\AbstractWord;
 
-abstract class AbstractWordData
+abstract class AbstractWordFormData
 {
     /**
      * @var string

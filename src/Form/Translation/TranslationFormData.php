@@ -1,6 +1,6 @@
 <?php
 
-namespace App\FormData;
+namespace App\Form\Translation;
 
 class TranslationFormData
 {

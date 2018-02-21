@@ -1,10 +1,10 @@
 <?php
 
-namespace App\FormData;
+namespace App\Form\Word;
 
 use App\Entity\CzechWordInterface;
 
-class CzechWordData extends AbstractWordData
+class CzechWordFormData extends AbstractWordFormData
 {
     public static function createFromWord(CzechWordInterface $word): self
     {

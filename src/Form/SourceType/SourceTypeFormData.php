@@ -1,6 +1,6 @@
 <?php
 
-namespace App\FormData;
+namespace App\Form\SourceType;
 
 use App\Entity\SourceType;
 

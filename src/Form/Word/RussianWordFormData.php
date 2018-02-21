@@ -1,10 +1,10 @@
 <?php
 
-namespace App\FormData;
+namespace App\Form\Word;
 
 use App\Entity\RussianWordInterface;
 
-class RussianWordData extends AbstractWordData
+class RussianWordFormData extends AbstractWordFormData
 {
     /**
      * @var string

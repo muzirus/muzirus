@@ -1,10 +1,10 @@
 <?php
 
-namespace App\FormData;
+namespace App\Form\Category;
 
 use App\Entity\WordCategory;
 
-class WordCategoryFormData
+class CategoryFormData
 {
     /**
      * @var string

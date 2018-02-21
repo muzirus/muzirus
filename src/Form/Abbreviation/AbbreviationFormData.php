@@ -1,10 +1,10 @@
 <?php
 
-namespace App\FormData;
+namespace App\Form\Abbreviation;
 
-use App\Entity\Symbol;
+use App\Entity\Abbreviation;
 
-class SymbolFormData
+class AbbreviationFormData
 {
     /**
      * @var string
@@ -23,13 +23,12 @@ class SymbolFormData
 
     //-------------------------------------------------------------------------
 
-    public static function createFromSymbol(Symbol $symbol): self
+    public static function createFromAbbreviation(Abbreviation $abbreviation): self
     {
         $formData = new self();
-
-        $formData->setTitle($symbol->getTitle());
-        $formData->setContent($symbol->getContent());
-        $formData->setDescription($symbol->getDescription());
+        $formData->setTitle($abbreviation->getTitle());
+        $formData->setContent($abbreviation->getContent());
+        $formData->setDescription($abbreviation->getDescription());
 
         return $formData;
     }
