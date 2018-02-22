@@ -3,11 +3,12 @@
 namespace App\Factory;
 
 use App\Entity\Abbreviation;
+use App\Entity\AbbreviationInterface;
 use App\Form\Abbreviation\AbbreviationFormData;
 
 class AbbreviationFactory
 {
-    public function createFromFormData(AbbreviationFormData $formData): Abbreviation
+    public function createFromFormData(AbbreviationFormData $formData): AbbreviationInterface
     {
         return new Abbreviation(
             $formData->getTitle(),

@@ -2,7 +2,7 @@
 
 namespace App\Facade;
 
-use App\Entity\Abbreviation;
+use App\Entity\AbbreviationInterface;
 use App\Factory\AbbreviationFactory;
 use App\Form\Abbreviation\AbbreviationFormData;
 use Doctrine\ORM\EntityManagerInterface;
@@ -25,7 +25,7 @@ class AbbreviationFacade
         $this->abbreviationFactory = $abbreviationFactory;
     }
 
-    public function createAbbreviation(AbbreviationFormData $formData): Abbreviation
+    public function createAbbreviation(AbbreviationFormData $formData): AbbreviationInterface
     {
         $abbreviation = $this->abbreviationFactory->createFromFormData($formData);
 
@@ -35,18 +35,16 @@ class AbbreviationFacade
         return $abbreviation;
     }
 
-    public function updateAbbreviation(Abbreviation $abbreviation, AbbreviationFormData $formData): Abbreviation
+    public function updateAbbreviation(AbbreviationInterface $abbreviation, AbbreviationFormData $formData): void
     {
         $abbreviation->setTitle($formData->getTitle());
         $abbreviation->setContent($formData->getContent());
         $abbreviation->setDescription($formData->getDescription());
 
         $this->entityManager->flush();
-
-        return $abbreviation;
     }
 
-    public function deleteAbbreviation(Abbreviation $abbreviation): void
+    public function deleteAbbreviation(AbbreviationInterface $abbreviation): void
     {
         $this->entityManager->remove($abbreviation);
         $this->entityManager->flush();
