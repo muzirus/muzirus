@@ -8,10 +8,10 @@ use App\Facade\AbbreviationFacade;
 use App\Form\Abbreviation\AbbreviationForm;
 use App\Repository\AbbreviationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("admin/abbreviation")
@@ -55,7 +55,7 @@ class AbbreviationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->abbreviationFacade->createAbbreviation($form->getData());
 
-            $this->addFlash('success', 'abbreviation.created_successfully');
+            $this->addFlashSuccess('abbreviation.created_successfully');
 
             return $this->redirectToRoute('admin.abbreviation');
         }
@@ -106,7 +106,7 @@ class AbbreviationController extends AbstractController
     {
         $this->abbreviationFacade->deleteAbbreviation($abbreviation);
 
-        $this->addFlash('success', 'abbreviation.deleted_successfully');
+        $this->addFlashSuccess('abbreviation.deleted_successfully');
 
         return $this->redirectToRoute('admin.abbreviation');
     }
