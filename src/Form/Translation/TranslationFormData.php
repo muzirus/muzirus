@@ -5,32 +5,62 @@ namespace App\Form\Translation;
 class TranslationFormData
 {
     /**
-     * @var string
+     * @var int
      */
-    private $noteRussian = '';
+    private $russianWordId = 0;
+
+    /**
+     * @var int
+     */
+    private $czechWordId = 0;
 
     /**
      * @var string
      */
-    private $noteCzech = '';
+    private $russianWordNote = '';
 
-    public function getNoteRussian(): string
+    /**
+     * @var string
+     */
+    private $czechWordNote = '';
+
+    public function getRussianWordId(): int
     {
-        return $this->noteRussian;
+        return $this->russianWordId;
     }
 
-    public function setNoteRussian(string $noteRussian): void
+    public function setRussianWordId(int $russianWordId): void
     {
-        $this->noteRussian = $noteRussian;
+        $this->russianWordId = $russianWordId;
     }
 
-    public function getNoteCzech(): string
+    public function getCzechWordId(): int
     {
-        return $this->noteCzech;
+        return $this->czechWordId;
     }
 
-    public function setNoteCzech(string $noteCzech): void
+    public function setCzechWordId(int $czechWordId): void
     {
-        $this->noteCzech = $noteCzech;
+        $this->czechWordId = $czechWordId;
+    }
+
+    public function getRussianWordNote(): string
+    {
+        return $this->russianWordNote;
+    }
+
+    public function setRussianWordNote(string $russianWordNote): void
+    {
+        $this->russianWordNote = $russianWordNote;
+    }
+
+    public function getCzechWordNote(): string
+    {
+        return $this->czechWordNote;
+    }
+
+    public function setCzechWordNote(string $czechWordNote): void
+    {
+        $this->czechWordNote = $czechWordNote;
     }
 }
