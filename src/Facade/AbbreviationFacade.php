@@ -4,7 +4,7 @@ namespace App\Facade;
 
 use App\Entity\Abbreviation;
 use App\Factory\AbbreviationFactory;
-use App\FormData\AbbreviationFormData;
+use App\Form\Abbreviation\AbbreviationFormData;
 use Doctrine\ORM\EntityManagerInterface;
 
 class AbbreviationFacade

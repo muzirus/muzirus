@@ -3,7 +3,7 @@
 namespace App\Factory;
 
 use App\Entity\Symbol;
-use App\FormData\SymbolFormData;
+use App\Form\Symbol\SymbolFormData;
 
 class SymbolFactory
 {

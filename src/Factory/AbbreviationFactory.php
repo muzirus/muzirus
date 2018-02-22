@@ -3,7 +3,7 @@
 namespace App\Factory;
 
 use App\Entity\Abbreviation;
-use App\FormData\AbbreviationFormData;
+use App\Form\Abbreviation\AbbreviationFormData;
 
 class AbbreviationFactory
 {
