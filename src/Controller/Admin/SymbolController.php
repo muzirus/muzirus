@@ -13,6 +13,9 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * @Route("admin/symbol")
+ */
 class SymbolController extends AbstractController
 {
     /**
