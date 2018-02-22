@@ -8,15 +8,15 @@ use App\Entity\Able\Timestampable;
 
 interface TranslationExampleInterface extends Timestampable, Approvable, Refusable
 {
-    public function getTranslation(): Translation;
+    public function getId(): int;
 
-    public function setTranslation(Translation $translation): void;
+    public function getTranslation(): TranslationInterface;
 
-    public function getFirstWordSentence(): string;
+    public function getRussianWordSentence(): string;
 
-    public function setFirstWordSentence(string $russianWordSentence): void;
+    public function setRussianWordSentence(string $russianWordSentence): void;
 
-    public function getSecondWordSentence(): string;
+    public function getCzechWordSentence(): string;
 
-    public function setSecondWordSentence(string $czechWordSentence): void;
+    public function setCzechWordSentence(string $czechWordSentence): void;
 }

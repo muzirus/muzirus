@@ -71,7 +71,7 @@ class TranslationExample implements TranslationExampleInterface
 
     //-------------------------------------------------------------------------
 
-    public function __construct(Translation $translation, string $russianWordSentence, string $czechWordSentence)
+    public function __construct(TranslationInterface $translation, string $russianWordSentence, string $czechWordSentence)
     {
         $this->translation = $translation;
         $this->russianWordSentence = $russianWordSentence;
@@ -87,33 +87,27 @@ class TranslationExample implements TranslationExampleInterface
         return $this->id;
     }
 
-    public function getTranslation(): Translation
+    public function getTranslation(): TranslationInterface
     {
         return $this->translation;
     }
 
-
-    public function setTranslation(Translation $translation): void
-    {
-        $this->translation = $translation;
-    }
-
-    public function getFirstWordSentence(): string
+    public function getRussianWordSentence(): string
     {
         return $this->russianWordSentence;
     }
 
-    public function setFirstWordSentence(string $russianWordSentence): void
+    public function setRussianWordSentence(string $russianWordSentence): void
     {
         $this->russianWordSentence = $russianWordSentence;
     }
 
-    public function getSecondWordSentence(): string
+    public function getCzechWordSentence(): string
     {
         return $this->czechWordSentence;
     }
 
-    public function setSecondWordSentence(string $czechWordSentence): void
+    public function setCzechWordSentence(string $czechWordSentence): void
     {
         $this->czechWordSentence = $czechWordSentence;
     }

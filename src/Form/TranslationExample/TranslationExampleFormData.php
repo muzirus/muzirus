@@ -7,32 +7,32 @@ class TranslationExampleFormData
     /**
      * @var string
      */
-    private $sentenceOne = '';
+    private $czechWordSentence = '';
 
     /**
      * @var string
      */
-    private $sentenceTwo = '';
+    private $russianWordSentence = '';
 
     //-------------------------------------------------------------------------
 
-    public function getSentenceOne(): string
+    public function getCzechWordSentence(): string
     {
-        return $this->sentenceOne;
+        return $this->czechWordSentence;
     }
 
-    public function setSentenceOne(string $sentenceOne): void
+    public function setCzechWordSentence(string $czechWordSentence): void
     {
-        $this->sentenceOne = $sentenceOne;
+        $this->czechWordSentence = $czechWordSentence;
     }
 
-    public function getSentenceTwo(): string
+    public function getRussianWordSentence(): string
     {
-        return $this->sentenceTwo;
+        return $this->russianWordSentence;
     }
 
-    public function setSentenceTwo(string $sentenceTwo): void
+    public function setRussianWordSentence(string $russianWordSentence): void
     {
-        $this->sentenceTwo = $sentenceTwo;
+        $this->russianWordSentence = $russianWordSentence;
     }
 }
