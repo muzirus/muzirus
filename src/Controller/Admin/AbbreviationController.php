@@ -2,12 +2,12 @@
 
 namespace App\Controller\Admin;
 
+use App\Controller\AbstractController;
 use App\Entity\Abbreviation;
 use App\Facade\AbbreviationFacade;
 use App\Form\Abbreviation\AbbreviationForm;
 use App\Repository\AbbreviationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
