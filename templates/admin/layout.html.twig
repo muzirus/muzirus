@@ -18,12 +18,21 @@
         {% include 'admin/fragment/_sidebar.html.twig' %}
 
         <div class="content-wrapper">
-            {% include 'admin/fragment/_flash_messages.html.twig' %}
-            {% block content %}
-                <div class="well">
-                    <h1>Oh no, there is no content!</h1>
-                </div>
-            {% endblock %}
+            <section class="content-header">
+                <h1>
+                    {% block heading 'No heading' %}
+                </h1>
+            </section>
+            <section class="content">
+                {% include 'admin/fragment/_flash_messages.html.twig' %}
+                {% block content %}
+                    <div class="box">
+                        <div class="box-body">
+                            Oh no, there is no content!
+                        </div>
+                    </div>
+                {% endblock %}
+            </section>
         </div>
 
         {% include 'admin/fragment/_footer.html.twig' %}
