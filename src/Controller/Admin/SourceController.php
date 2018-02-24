@@ -37,7 +37,7 @@ class SourceController extends AbstractController
         return $this->render(
             'admin/source/index.html.twig',
             [
-                'categories' => $sourceRepository->getAll(),
+                'sources' => $sourceRepository->getAll(),
             ]
         );
     }
