@@ -2,9 +2,9 @@
 
 namespace App\Form\TranslationExample;
 
-use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\AbstractType;
 
-class TranslationExampleForm extends FormType
+class TranslationExampleForm extends AbstractType
 {
 
 }

@@ -2,28 +2,35 @@
 
 namespace App\Form\Abbreviation;
 
-use App\Entity\Abbreviation;
+use App\Entity\AbbreviationInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class AbbreviationFormData
 {
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
      * @var string
      */
     private $title = '';
 
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
      * @var string
      */
     private $content = '';
 
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
      * @var string
      */
     private $description = '';
 
     //-------------------------------------------------------------------------
 
-    public static function createFromAbbreviation(Abbreviation $abbreviation): self
+    public static function fromAbbreviation(AbbreviationInterface $abbreviation): self
     {
         $formData = new self();
         $formData->setTitle($abbreviation->getTitle());

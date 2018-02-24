@@ -2,9 +2,9 @@
 
 namespace App\Form\Source;
 
-use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\AbstractType;
 
-class SourceForm extends FormType
+class SourceForm extends AbstractType
 {
 
 }

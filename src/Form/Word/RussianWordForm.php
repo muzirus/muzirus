@@ -2,9 +2,9 @@
 
 namespace App\Form\Word;
 
-use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\AbstractType;
 
-class RussianWordForm extends FormType
+class RussianWordForm extends AbstractType
 {
 
 }

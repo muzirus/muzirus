@@ -2,7 +2,7 @@
 
 namespace App\Form\Word;
 
-use App\Entity\AbstractWord;
+use App\Entity\AbstractWordInterface;
 
 abstract class AbstractWordFormData
 {
@@ -39,7 +39,7 @@ abstract class AbstractWordFormData
     /**
      * @var int
      */
-    protected $languageNoteGender = AbstractWord::GENDER_UNKNOWN;
+    protected $languageNoteGender = AbstractWordInterface::GENDER_UNKNOWN;
 
     /**
      * @var string
@@ -69,7 +69,7 @@ abstract class AbstractWordFormData
     /**
      * @var int
      */
-    protected $statusLight = AbstractWord::STATUS_LIGHT_UNKNOWN;
+    protected $statusLight = AbstractWordInterface::STATUS_LIGHT_UNKNOWN;
 
     //-------------------------------------------------------------------------
 

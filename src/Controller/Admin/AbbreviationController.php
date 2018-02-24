@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\Abbreviation;
 use App\Facade\AbbreviationFacade;
 use App\Form\Abbreviation\AbbreviationForm;
+use App\Form\Abbreviation\AbbreviationFormData;
 use App\Repository\AbbreviationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,12 +49,13 @@ class AbbreviationController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(AbbreviationForm::class);
+        $abbreviationFormData = new AbbreviationFormData();
 
+        $form = $this->createForm(AbbreviationForm::class, $abbreviationFormData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->abbreviationFacade->createAbbreviation($form->getData());
+            //$this->abbreviationFacade->createAbbreviation($abbreviationFormData);
 
             $this->addFlashSuccess('abbreviation.created_successfully');
 
@@ -86,14 +88,26 @@ class AbbreviationController extends AbstractController
      * @Route("/{id}/edit", name="admin.abbreviation.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Abbreviation $abbreviation): Response
+    public function edit(Request $request, Abbreviation $abbreviation): Response
     {
-        // todo
+        $abbreviationFormData = AbbreviationFormData::fromAbbreviation($abbreviation);
+
+        $form = $this->createForm(AbbreviationForm::class, $abbreviationFormData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->abbreviationFacade->updateAbbreviation($abbreviation, $abbreviationFormData);
+
+            $this->addFlashSuccess('abbreviation.updated_successfully');
+
+            return $this->redirectToRoute('admin.abbreviation');
+        }
 
         return $this->render(
             'admin/abbreviation/edit.html.twig',
             [
                 'abbreviation' => $abbreviation,
+                'form' => $form->createView(),
             ]
         );
     }

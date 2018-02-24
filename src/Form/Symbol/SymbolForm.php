@@ -2,9 +2,9 @@
 
 namespace App\Form\Symbol;
 
-use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\AbstractType;
 
-class SymbolForm extends FormType
+class SymbolForm extends AbstractType
 {
 
 }

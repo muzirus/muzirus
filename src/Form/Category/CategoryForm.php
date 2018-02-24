@@ -2,9 +2,9 @@
 
 namespace App\Form\Category;
 
-use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\AbstractType;
 
-class CategoryForm extends FormType
+class CategoryForm extends AbstractType
 {
 
 }
