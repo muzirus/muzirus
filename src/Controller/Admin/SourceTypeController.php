@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\SourceType;
 use App\Facade\SourceTypeFacade;
 use App\Form\SourceType\SourceTypeForm;
+use App\Form\SourceType\SourceTypeFormData;
 use App\Repository\SourceTypeRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,12 +49,13 @@ class SourceTypeController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(SourceTypeForm::class);
+        $formData = new SourceTypeFormData();
 
+        $form = $this->createForm(SourceTypeForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->sourceTypeFacade->createSourceType($form->getData());
+            $this->sourceTypeFacade->createSourceType($formData);
 
             $this->addFlashSuccess('source-type.created_successfully');
 
@@ -86,14 +88,26 @@ class SourceTypeController extends AbstractController
      * @Route("/{id}/edit", name="admin.source-type.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(SourceType $sourceType): Response
+    public function edit(Request $request, SourceType $sourceType): Response
     {
-        // todo
+        $formData = SourceTypeFormData::createFromSourceType($sourceType);
+
+        $form = $this->createForm(SourceTypeForm::class, $formData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->sourceTypeFacade->updateSourceType($sourceType, $formData);
+
+            $this->addFlashSuccess('source-type.updated_successfully');
+
+            return $this->redirectToRoute('admin.source-type');
+        }
 
         return $this->render(
             'admin/source-type/edit.html.twig',
             [
                 'sourceType' => $sourceType,
+                'form' => $form->createView(),
             ]
         );
     }

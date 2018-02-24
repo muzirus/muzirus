@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\Symbol;
 use App\Facade\SymbolFacade;
 use App\Form\Symbol\SymbolForm;
+use App\Form\Symbol\SymbolFormData;
 use App\Repository\SymbolRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,12 +49,13 @@ class SymbolController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(SymbolForm::class);
+        $formData = new SymbolFormData();
 
+        $form = $this->createForm(SymbolForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->symbolFacade->createSymbol($form->getData());
+            $this->symbolFacade->createSymbol($formData);
 
             $this->addFlashSuccess('symbol.created_successfully');
 
@@ -86,14 +88,26 @@ class SymbolController extends AbstractController
      * @Route("/{id}/edit", name="admin.symbol.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Symbol $symbol): Response
+    public function edit(Request $request, Symbol $symbol): Response
     {
-        // todo
+        $formData = SymbolFormData::createFromSymbol($symbol);
+
+        $form = $this->createForm(SymbolForm::class, $formData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->symbolFacade->updateSymbol($symbol, $formData);
+
+            $this->addFlashSuccess('symbol.updated_successfully');
+
+            return $this->redirectToRoute('admin.symbol');
+        }
 
         return $this->render(
             'admin/symbol/edit.html.twig',
             [
                 'symbol' => $symbol,
+                'form' => $form->createView(),
             ]
         );
     }

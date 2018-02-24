@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\Translation;
 use App\Facade\TranslationFacade;
 use App\Form\Translation\TranslationForm;
+use App\Form\Translation\TranslationFormData;
 use App\Repository\TranslationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,12 +49,13 @@ class TranslationController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(TranslationForm::class);
+        $formData = new TranslationFormData();
 
+        $form = $this->createForm(TranslationForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->translationFacade->createTranslation($form->getData());
+            $this->translationFacade->createTranslation($formData);
 
             $this->addFlashSuccess('translation.created_successfully');
 

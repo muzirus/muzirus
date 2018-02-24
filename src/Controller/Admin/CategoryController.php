@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\WordCategory;
 use App\Facade\CategoryFacade;
 use App\Form\Category\CategoryForm;
+use App\Form\Category\CategoryFormData;
 use App\Repository\WordCategoryRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,12 +49,13 @@ class CategoryController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(CategoryForm::class);
+        $formData = new CategoryFormData();
 
+        $form = $this->createForm(CategoryForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->categoryFacade->createCategory($form->getData());
+            $this->categoryFacade->createCategory($formData);
 
             $this->addFlashSuccess('category.created_successfully');
 
@@ -86,14 +88,26 @@ class CategoryController extends AbstractController
      * @Route("/{id}/edit", name="admin.category.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(WordCategory $category): Response
+    public function edit(Request $request, WordCategory $category): Response
     {
-        // todo
+        $formData = CategoryFormData::createFromWordCategory($category);
+
+        $form = $this->createForm(CategoryForm::class, $formData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->categoryFacade->updateCategory($category, $formData);
+
+            $this->addFlashSuccess('category.update_successfully');
+
+            return $this->redirectToRoute('admin.category');
+        }
 
         return $this->render(
             'admin/category/edit.html.twig',
             [
                 'category' => $category,
+                'form' => $form->createView(),
             ]
         );
     }

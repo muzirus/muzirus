@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\RussianWord;
 use App\Facade\RussianWordFacade;
 use App\Form\Word\RussianWordForm;
+use App\Form\Word\RussianWordFormData;
 use App\Repository\RussianWordRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,12 +49,13 @@ class RussianWordController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(RussianWordForm::class);
+        $formData = new RussianWordFormData();
 
+        $form = $this->createForm(RussianWordForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->russianWordFacade->createWord($form->getData());
+            $this->russianWordFacade->createWord($formData);
 
             $this->addFlashSuccess('russian-word.created_successfully');
 
@@ -100,11 +102,20 @@ class RussianWordController extends AbstractController
      * @Route("/{id}/edit", name="admin.russian-word.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(RussianWord $russianWord): Response
+    public function edit(Request $request, RussianWord $russianWord): Response
     {
-        $form = $this->createForm(RussianWordForm::class);
+        $formData = RussianWordFormData::createFromWord($russianWord);
 
-        // todo
+        $form = $this->createForm(RussianWordForm::class, $formData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->russianWordFacade->updateWord($russianWord, $formData);
+
+            $this->addFlashSuccess('russian-word.updated_successfully');
+
+            return $this->redirectToRoute('admin.russian-word');
+        }
 
         return $this->render(
             'admin/russian-word/edit.html.twig',

@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\Source;
 use App\Facade\SourceFacade;
 use App\Form\Source\SourceForm;
+use App\Form\Source\SourceFormData;
 use App\Repository\SourceRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,12 +49,13 @@ class SourceController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(SourceForm::class);
+        $formData = new SourceFormData();
 
+        $form = $this->createForm(SourceForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->sourceFacade->createSource($form->getData());
+            $this->sourceFacade->createSource($formData);
 
             $this->addFlashSuccess('source.created_successfully');
 
@@ -86,14 +88,26 @@ class SourceController extends AbstractController
      * @Route("/{id}/edit", name="admin.source.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Source $source): Response
+    public function edit(Request $request, Source $source): Response
     {
-        // todo
+        $formData = SourceFormData::createFromSource($source);
+
+        $form = $this->createForm(SourceForm::class, $formData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->sourceFacade->updateSource($source, $formData);
+
+            $this->addFlashSuccess('source.update_successfully');
+
+            return $this->redirectToRoute('admin.source');
+        }
 
         return $this->render(
             'admin/source/edit.html.twig',
             [
                 'source' => $source,
+                'form' => $form->createView(),
             ]
         );
     }

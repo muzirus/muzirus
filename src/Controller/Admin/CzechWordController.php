@@ -6,6 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\CzechWord;
 use App\Facade\CzechWordFacade;
 use App\Form\Word\CzechWordForm;
+use App\Form\Word\CzechWordFormData;
 use App\Repository\CzechWordRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -48,12 +49,13 @@ class CzechWordController extends AbstractController
      */
     public function add(Request $request): Response
     {
-        $form = $this->createForm(CzechWordForm::class);
+        $formData = new CzechWordFormData();
 
+        $form = $this->createForm(CzechWordForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->czechWordFacade->createWord($form->getData());
+            $this->czechWordFacade->createWord($formData);
 
             $this->addFlashSuccess('czech-word.created_successfully');
 
@@ -100,11 +102,20 @@ class CzechWordController extends AbstractController
      * @Route("/{id}/edit", name="admin.czech-word.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(CzechWord $czechWord): Response
+    public function edit(Request $request, CzechWord $czechWord): Response
     {
-        $form = $this->createForm(CzechWordForm::class);
+        $formData = CzechWordFormData::createFromWord($czechWord);
 
-        // todo
+        $form = $this->createForm(CzechWordForm::class, $formData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->czechWordFacade->updateWord($czechWord, $formData);
+
+            $this->addFlashSuccess('czech-word.updated_successfully');
+
+            return $this->redirectToRoute('admin.czech-word');
+        }
 
         return $this->render(
             'admin/czech-word/edit.html.twig',
