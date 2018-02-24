@@ -83,6 +83,20 @@ class RussianWordController extends AbstractController
     }
 
     /**
+     * @Route("/{id}/translations", name="admin.russian-word.view-translations", requirements={"id": "\d+"})
+     * @Method("GET")
+     */
+    public function viewTranslations(RussianWord $russianWord): Response
+    {
+        return $this->render(
+            'admin/russian-word/view-translations.html.twig',
+            [
+                'russianWord' => $russianWord,
+            ]
+        );
+    }
+
+    /**
      * @Route("/{id}/edit", name="admin.russian-word.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */

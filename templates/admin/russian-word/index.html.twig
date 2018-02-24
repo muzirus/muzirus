@@ -1,2 +1,66 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/layout.html.twig' %}
 
+{% block title 'Ruská slova' %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-body">
+            <table class="table table-striped table-hover js-data-table">
+                <thead>
+                <tr>
+                    <th>Word</th>
+                    <th>Word with accent</th>
+                    <th>Translations</th>
+                    <th>Inflection</th>
+                    <th>Gender</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for word in russianWords %}
+                    <tr>
+                        <td>
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <a href="{{ url('admin.russian-word.edit', {id: word.id}) }}">
+                                        {{ word.content|escape|highlight_latin|raw }}
+                                    </a>
+                                </div>
+                                <div class="pull-right">
+                                    {% if word.imported %}
+                                        <i class="fa fa-info-circle text-info" data-toggle="tooltip" data-placement="left" title="Imported"></i>
+                                    {% endif %}
+                                    {{ word.statusLight|convert_status_code_to_icon|raw }}
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            {{ word.contentWithAccent|escape|highlight_accent|raw }}
+                        </td>
+                        <td>
+                            <a href="{{ url('admin.russian-word.view-translations', {id: word.id}) }}">
+                                <span class="label label-default">{{ word.translationsCount }}</span>
+                            </a>
+                        </td>
+                        <td>{{ word.languageNoteExceptionToInflection }}</td>
+                        <td>{{ word.languageNoteGender|gender_as_string }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Word</th>
+                    <th>Word with accent</th>
+                    <th>Translations</th>
+                    <th>Inflection</th>
+                    <th>Gender</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="box-footer">
+            <a href="{{ url('admin.russian-word.add') }}" class="btn btn-primary">
+                Add word
+            </a>
+        </div>
+    </div>
+{% endblock %}

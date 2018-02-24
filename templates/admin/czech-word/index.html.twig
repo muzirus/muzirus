@@ -21,7 +21,7 @@
                             <div class="clearfix">
                                 <div class="pull-left">
                                     <a href="{{ url('admin.czech-word.edit', {id: word.id}) }}">
-                                        {{ word.content|highlight_cyrillic }}
+                                        {{ word.content|escape|highlight_cyrillic|raw }}
                                     </a>
                                 </div>
                                 <div class="pull-right">
@@ -38,7 +38,7 @@
                             </a>
                         </td>
                         <td>{{ word.languageNoteExceptionToInflection }}</td>
-                        <td>{{ word.languageNoteGender }}</td>
+                        <td>{{ word.languageNoteGender|gender_as_string }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>
