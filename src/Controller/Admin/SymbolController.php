@@ -37,7 +37,7 @@ class SymbolController extends AbstractController
         return $this->render(
             'admin/symbol/index.html.twig',
             [
-                'categories' => $symbolRepository->getAll(),
+                'symbols' => $symbolRepository->getAll(),
             ]
         );
     }
