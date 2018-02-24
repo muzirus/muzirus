@@ -1,0 +1,108 @@
+<aside class="main-sidebar">
+    <section class="sidebar">
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <div class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <ul class="sidebar-menu">
+            <li class="header">Home</li>
+            <li>
+                <a href="{{ url('admin.dashboard') }}">
+                    <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="header">Words</li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-book"></i>
+                    <span>Russian words</span>
+                    <span class="pull-right-container"><small class="text-muted pull-right">666</small></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-book"></i>
+                    <span>Czech words</span>
+                    <span class="pull-right-container"><small class="text-muted pull-right">666</small></span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('admin.legacy_word') }}">
+                    <i class="fa fa-bookmark"></i>
+                    <span>Original database</span>
+                </a>
+            </li>
+            <li class="header">Translations</li>
+            <li>
+                <a href="{{ url('admin.translation') }}">
+                    <i class="fa fa-book"></i>
+                    <span>Translations</span>
+                    <span class="pull-right-container">
+                        <small class="text-muted pull-right">666</small>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-book"></i>
+                    <span>Example sentences</span>
+                    <span class="pull-right-container">
+                        <small class="text-muted pull-right">5</small>
+                    </span>
+                </a>
+            </li>
+            <li class="header">Sources</li>
+            <li>
+                <a href="{{ url('admin.source') }}">
+                    <i class="fa fa-book"></i>
+                    <span>Sources</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('admin.source-type') }}">
+                    <i class="fa fa-book"></i>
+                    <span>Source types</span>
+                </a>
+            </li>
+            <li class="header">Other</li>
+            <li>
+                <a href="{{ url('admin.symbol') }}">
+                    <i class="fa fa-book"></i>
+                    <span>Symbols</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('admin.abbreviation') }}">
+                    <i class="fa fa-book"></i>
+                    <span>Abbreviations</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('admin.category') }}">
+                    <i class="fa fa-book"></i>
+                    <span>Word categories</span>
+                </a>
+            </li>
+            <li class="header">System</li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-users"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-lock"></i>
+                    <span>Sign out</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</aside>
