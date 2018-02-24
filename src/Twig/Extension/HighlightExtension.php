@@ -4,7 +4,7 @@ namespace App\Twig\Extension;
 
 class HighlightExtension extends \Twig_Extension
 {
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new \Twig_SimpleFilter('highlight_accent', [$this, 'highlightAccent']),

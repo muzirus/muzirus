@@ -23,14 +23,14 @@
                 <a href="{{ url('admin.russian-word') }}">
                     <i class="fa fa-book"></i>
                     <span>Russian words</span>
-                    <span class="pull-right-container"><small class="text-muted pull-right">666</small></span>
+                    <span class="pull-right-container"><small class="text-muted pull-right">{{ count_russian_words() }}</small></span>
                 </a>
             </li>
             <li>
                 <a href="{{ url('admin.czech-word') }}">
                     <i class="fa fa-book"></i>
                     <span>Czech words</span>
-                    <span class="pull-right-container"><small class="text-muted pull-right">666</small></span>
+                    <span class="pull-right-container"><small class="text-muted pull-right">{{ count_czech_words() }}</small></span>
                 </a>
             </li>
             <li>
@@ -45,7 +45,7 @@
                     <i class="fa fa-book"></i>
                     <span>Translations</span>
                     <span class="pull-right-container">
-                        <small class="text-muted pull-right">666</small>
+                        <small class="text-muted pull-right">{{ count_translations() }}</small>
                     </span>
                 </a>
             </li>
@@ -54,7 +54,7 @@
                     <i class="fa fa-book"></i>
                     <span>Example sentences</span>
                     <span class="pull-right-container">
-                        <small class="text-muted pull-right">5</small>
+                        <small class="text-muted pull-right">{{ count_translation_examples() }}</small>
                     </span>
                 </a>
             </li>
