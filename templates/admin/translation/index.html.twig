@@ -1,2 +1,68 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/layout.html.twig' %}
 
+{% block title 'Translations' %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-body">
+            <table class="table table-striped table-hover js-data-table">
+                <thead>
+                <tr>
+                    <th>Translation</th>
+                    <th>Russian</th>
+                    <th>Czech</th>
+                    <th>Examples</th>
+                    <th>Note RU</th>
+                    <th>Note CS</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for translation in translations %}
+                    <tr>
+                        <td>
+                            <a href="#">
+                                {{ translation.russianWord.content }} - {{ translation.czechWord.content }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                {{ translation.russianWord.content }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                {{ translation.czechWord.content }}
+                            </a>
+                        <td>
+                            {{ translation.examplesCount }}
+                        </td>
+                        <td>
+                            {{ translation.russianWordNote }}
+                        </td>
+                        <td>
+                            {{ translation.czechWordNote }}
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-xs btn-primary">
+                                Edit
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Translation</th>
+                    <th>Russian</th>
+                    <th>Czech</th>
+                    <th>Examples</th>
+                    <th>Note RU</th>
+                    <th>Note CS</th>
+                    <th>Action</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+{% endblock %}
