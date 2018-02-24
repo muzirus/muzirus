@@ -33,3 +33,29 @@ composer install
 ```bash
 yarn install
 ```
+
+## Dev server
+
+Start server
+
+```bash
+bin/console server:start
+```
+
+Restart server
+
+```bash
+bin/console server:restart
+```
+
+Stop server
+
+```bash
+bin/console server:stop
+```
+
+Get status of server
+
+```bash
+bin/console server:status
+```
