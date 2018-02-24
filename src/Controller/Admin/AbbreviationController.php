@@ -55,7 +55,7 @@ class AbbreviationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            //$this->abbreviationFacade->createAbbreviation($abbreviationFormData);
+            $this->abbreviationFacade->createAbbreviation($abbreviationFormData);
 
             $this->addFlashSuccess('abbreviation.created_successfully');
 
