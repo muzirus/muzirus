@@ -8,16 +8,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * @Route("/admin/dashboard")
+ * @Route("admin")
  */
-class DashboardController extends AbstractController
+class IndexController extends AbstractController
 {
     /**
-     * @Route("", name="admin.dashboard")
+     * @Route("", name="admin")
      * @Method("GET")
      */
     public function index(): Response
     {
-        return $this->render('admin/dashboard/index.html.twig');
+        return $this->redirectToRoute('admin.dashboard');
     }
 }
