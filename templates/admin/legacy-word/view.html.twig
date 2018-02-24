@@ -3,10 +3,52 @@
 {% block title 'Legacy word' %}
 
 {% block content %}
-    <table>
-        <tr>
-            <td>{{ word.id }}</td>
-            <td>{{ word.original }}</td>
-        </tr>
-    </table>
+    <div class="box">
+        <div class="box-body">
+            <div class="form-group">
+                <label class="form-label">Word</label>
+                <div class="form-control">{{ word.original }}</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Language note</label>
+                <div class="form-control">{{ word.languageNote }}</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Source</label>
+                <div class="form-control">{{ word.source }}</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Translation</label>
+                <div class="form-control">{{ word.translation }}</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Category</label>
+                <div class="form-control">{{ word.category }}</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Explanation</label>
+                <div class="form-control">{{ word.explanation }}</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Deleted</label>
+                <div class="form-control">{{ word.deleted ? 'yes' : 'no' }}</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Hidden</label>
+                <div class="form-control">{{ word.hidden ? 'yes' : 'no' }}</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Approved?</label>
+                <div class="form-control">1: {{ word.approved1 ? 'yes' : 'no' }}</div>
+                <div class="form-control">2: {{ word.approved2 ? 'yes' : 'no' }}</div>
+                <div class="form-control">3: {{ word.approved3 ? 'yes' : 'no' }}</div>
+                <div class="form-control">4: {{ word.approved4 ? 'yes' : 'no' }}</div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <a href="{{ path('admin.legacy_word') }}" class="btn btn-primary">
+                Back to list
+            </a>
+        </div>
+    </div>
 {% endblock %}
