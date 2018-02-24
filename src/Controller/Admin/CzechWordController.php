@@ -13,6 +13,9 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * @Route("admin/czech-word")
+ */
 class CzechWordController extends AbstractController
 {
     /**
@@ -73,6 +76,20 @@ class CzechWordController extends AbstractController
     {
         return $this->render(
             'admin/czech-word/view.html.twig',
+            [
+                'czechWord' => $czechWord,
+            ]
+        );
+    }
+
+    /**
+     * @Route("/{id}/translations", name="admin.czech-word.view-translations", requirements={"id": "\d+"})
+     * @Method("GET")
+     */
+    public function viewTranslations(CzechWord $czechWord): Response
+    {
+        return $this->render(
+            'admin/czech-word/view-translations.html.twig',
             [
                 'czechWord' => $czechWord,
             ]

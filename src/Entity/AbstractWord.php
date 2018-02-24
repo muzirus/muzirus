@@ -24,22 +24,12 @@ abstract class AbstractWord implements AbstractWordInterface
 
     //-------------------------------------------------------------------------
 
-    public const GENDER_UNKNOWN = 0;
-    public const GENDER_MASCULINE = 1;
-    public const GENDER_FEMININE = 2;
-    public const GENDER_NEUTER = 3;
-
     public const GENDERS = [
         self::GENDER_UNKNOWN => 'Unknown',
         self::GENDER_MASCULINE => 'Masculine',
         self::GENDER_FEMININE => 'Feminine',
         self::GENDER_NEUTER => 'Neuter',
     ];
-
-    public const STATUS_LIGHT_UNKNOWN = 0;
-    public const STATUS_LIGHT_RED = 1;
-    public const STATUS_LIGHT_YELLOW = 2;
-    public const STATUS_LIGHT_GREEN = 3;
 
     public const STATUS_LIGHTS = [
         self::STATUS_LIGHT_UNKNOWN => 'Unknown',

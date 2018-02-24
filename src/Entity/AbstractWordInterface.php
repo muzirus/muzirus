@@ -6,6 +6,16 @@ use App\Entity\Able\Timestampable;
 
 interface AbstractWordInterface extends Timestampable
 {
+    public const GENDER_UNKNOWN = 0;
+    public const GENDER_MASCULINE = 1;
+    public const GENDER_FEMININE = 2;
+    public const GENDER_NEUTER = 3;
+
+    public const STATUS_LIGHT_UNKNOWN = 0;
+    public const STATUS_LIGHT_RED = 1;
+    public const STATUS_LIGHT_YELLOW = 2;
+    public const STATUS_LIGHT_GREEN = 3;
+
     public function __toString(): string;
 
     public function getId(): int;

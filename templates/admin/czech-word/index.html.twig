@@ -1,2 +1,61 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/layout.html.twig' %}
 
+{% block title 'Česká slova' %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-body">
+            <table class="table table-striped table-hover js-data-table">
+                <thead>
+                <tr>
+                    <th>Word</th>
+                    <th>Translations</th>
+                    <th>Inflection</th>
+                    <th>Gender</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for word in czechWords %}
+                    <tr>
+                        <td>
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <a href="{{ url('admin.czech-word.edit', {id: word.id}) }}">
+                                        {{ word.content|highlight_cyrillic }}
+                                    </a>
+                                </div>
+                                <div class="pull-right">
+                                    {% if word.imported %}
+                                        <i class="fa fa-info-circle text-info" data-toggle="tooltip" data-placement="left" title="Imported"></i>
+                                    {% endif %}
+                                    {{ word.statusLight|convert_status_code_to_icon|raw }}
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="{{ url('admin.czech-word.view-translations', {id: word.id}) }}">
+                                <span class="label label-default">{{ word.translationsCount }}</span>
+                            </a>
+                        </td>
+                        <td>{{ word.languageNoteExceptionToInflection }}</td>
+                        <td>{{ word.languageNoteGender }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Word</th>
+                    <th>Translations</th>
+                    <th>Inflection</th>
+                    <th>Gender</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="box-footer">
+            <a href="{{ url('admin.czech-word.add') }}" class="btn btn-primary">
+                Add word
+            </a>
+        </div>
+    </div>
+{% endblock %}
