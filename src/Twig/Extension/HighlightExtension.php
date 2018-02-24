@@ -7,13 +7,19 @@ class HighlightExtension extends \Twig_Extension
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter('highlight_accent', [$this, 'highlightAccent']),
-            new \Twig_SimpleFilter('highlight_cyrillic', [$this, 'highlightCyrillic']),
-            new \Twig_SimpleFilter('highlight_latin', [$this, 'highlightLatin']),
+            new \Twig_SimpleFilter('highlight_accent', function (string $text) {
+                return $this->highlightAccent($text);
+            }),
+            new \Twig_SimpleFilter('highlight_cyrillic', function (string $text) {
+                return $this->highlightCyrillic($text);
+            }),
+            new \Twig_SimpleFilter('highlight_latin', function (string $text) {
+                return $this->highlightLatin($text);
+            }),
         ];
     }
 
-    public function highlightAccent(string $text): string
+    private function highlightAccent(string $text): string
     {
         return preg_replace(
             '/\((.)\)/u',
@@ -22,7 +28,7 @@ class HighlightExtension extends \Twig_Extension
         );
     }
 
-    public function highlightCyrillic(string $text): string
+    private function highlightCyrillic(string $text): string
     {
         return preg_replace(
             '/([\p{Cyrillic}]+)/u',
@@ -31,7 +37,7 @@ class HighlightExtension extends \Twig_Extension
         );
     }
 
-    public function highlightLatin(string $text): string
+    private function highlightLatin(string $text): string
     {
         return preg_replace(
             '/([\p{Latin}]+)/u',

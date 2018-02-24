@@ -9,13 +9,15 @@ class WordGenderExtension extends \Twig_Extension
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter('gender_as_string', [$this, 'convertGenderIdToString']),
+            new \Twig_SimpleFilter('gender_as_string', function (int $gender) {
+                return $this->convertGenderIdToString($gender);
+            }),
         ];
     }
 
-    public function convertGenderIdToString(int $id): string
+    private function convertGenderIdToString(int $gender): string
     {
-        switch ($id) {
+        switch ($gender) {
             case AbstractWordInterface::GENDER_MASCULINE:
                 return 'mužský rod';
             case AbstractWordInterface::GENDER_FEMININE:

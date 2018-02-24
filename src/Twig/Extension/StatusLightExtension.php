@@ -9,11 +9,13 @@ class StatusLightExtension extends \Twig_Extension
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter('convert_status_code_to_icon', [$this, 'getStatusLightCode']),
+            new \Twig_SimpleFilter('convert_status_code_to_icon', function (int $status) {
+                return $this->getStatusLightCode($status);
+            }),
         ];
     }
 
-    public function getStatusLightCode(int $status): string
+    private function getStatusLightCode(int $status): string
     {
         switch ($status) {
             case AbstractWordInterface::STATUS_LIGHT_RED:
