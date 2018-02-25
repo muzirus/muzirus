@@ -15,87 +15,84 @@ abstract class AbstractWordFormData
      * @Assert\Type("string")
      * @var string
      */
-    protected $content = '';
+    private $content = '';
 
     /**
      * @Assert\Type("array")
      * @var WordCategory[]
      */
-    protected $categories = [];
+    private $categories = [];
 
     /**
      * @Assert\Type("array")
      * @var Source[]
      */
-    protected $sources = [];
+    private $sources = [];
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
      * @var string
      */
-    protected $languageNotePronunciation = '';
+    private $languageNotePronunciation = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
      * @var string
      */
-    protected $languageNoteInflection = '';
+    private $languageNoteInflection = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
      * @var string
      */
-    protected $languageNoteExceptionToInflection = '';
+    private $languageNoteExceptionToInflection = '';
 
     /**
      * @Assert\Type("integer")
      * @var int
      */
-    protected $languageNoteGender = AbstractWordInterface::GENDER_UNKNOWN;
+    private $languageNoteGender = AbstractWordInterface::GENDER_UNKNOWN;
+
+    /**
+     * @Assert\Type("string")
+     * @var string
+     */
+    private $languageNoteOther = '';
+
+    /**
+     * @Assert\Type("string")
+     * @var string
+     */
+    private $explanation = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
      * @var string
      */
-    protected $languageNoteOther = '';
+    private $explanationSourceInfo = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
      * @var string
      */
-    protected $explanation = '';
+    private $explanationSourceDate = '';
 
     /**
-     * @Assert\Length(max="255")
      * @Assert\Type("string")
      * @var string
      */
-    protected $explanationSourceInfo = '';
-
-    /**
-     * @Assert\Length(max="255")
-     * @Assert\Type("string")
-     * @var string
-     */
-    protected $explanationSourceDate = '';
-
-    /**
-     * @Assert\Length(max="255")
-     * @Assert\Type("string")
-     * @var string
-     */
-    protected $note = '';
+    private $note = '';
 
     /**
      * @Assert\Type("integer")
      * @var int
      */
-    protected $statusLight = AbstractWordInterface::STATUS_LIGHT_UNKNOWN;
+    private $statusLight = AbstractWordInterface::STATUS_LIGHT_UNKNOWN;
 
     //-------------------------------------------------------------------------
 

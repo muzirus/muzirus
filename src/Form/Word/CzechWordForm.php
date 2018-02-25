@@ -42,13 +42,19 @@ class CzechWordForm extends AbstractType
                 'expanded' => true,
                 'empty_data' => AbstractWordInterface::GENDER_UNKNOWN,
             ])
-            ->add('languageNoteOther', TextType::class, [
+            ->add('languageNoteOther', TextareaType::class, [
                 'required' => false,
                 'empty_data' => '',
+                'attr' => [
+                    'style' => 'resize: vertical;',
+                ],
             ])
-            ->add('explanation', TextType::class, [
+            ->add('explanation', TextareaType::class, [
                 'required' => false,
                 'empty_data' => '',
+                'attr' => [
+                    'style' => 'resize: vertical;',
+                ],
             ])
             ->add('explanationSourceInfo', TextType::class, [
                 'required' => false,
@@ -61,6 +67,9 @@ class CzechWordForm extends AbstractType
             ->add('note', TextareaType::class, [
                 'required' => false,
                 'empty_data' => '',
+                'attr' => [
+                    'style' => 'resize: vertical;',
+                ],
             ])
             ->add('categories', EntityType::class, [
                 'class' => WordCategory::class,

@@ -2,9 +2,18 @@
 
 namespace App\Form\Word;
 
-use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\FormBuilderInterface;
 
-class RussianWordForm extends AbstractType
+class RussianWordForm extends CzechWordForm
 {
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        parent::buildForm($builder, $options);
 
+        $builder->add('contentWithAccent', TextType::class, [
+            'required' => false,
+            'empty_data' => '',
+        ]);
+    }
 }

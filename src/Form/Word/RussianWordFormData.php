@@ -3,10 +3,13 @@
 namespace App\Form\Word;
 
 use App\Entity\RussianWordInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class RussianWordFormData extends AbstractWordFormData
 {
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $contentWithAccent = '';

@@ -67,15 +67,22 @@
                 {{ form_widget(form.note) }}
                 {{ form_errors(form.note) }}
             </div>
-            <div class="form-group">
-                {{ form_label(form.categories) }}
-                {{ form_widget(form.categories) }}
-                {{ form_errors(form.categories) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.sources) }}
-                {{ form_widget(form.sources) }}
-                {{ form_errors(form.sources) }}
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.categories) }}
+                        {{ form_widget(form.categories) }}
+                        {{ form_errors(form.categories) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.sources) }}
+                        {{ form_widget(form.sources) }}
+                        {{ form_errors(form.sources) }}
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 {{ form_label(form.statusLight) }}
