@@ -12,16 +12,17 @@ class AbbreviationForm extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
+                'empty_data' => '',
                 'attr' => [
                     'autofocus' => true,
                 ],
-                'label' => 'label.title',
-            ])
-            ->add('description', TextType::class, [
-                'label' => 'label.description',
             ])
             ->add('content', TextType::class, [
-                'label' => 'label.content',
+                'empty_data' => '',
+            ])
+            ->add('description', TextType::class, [
+                'empty_data' => '',
+                'required' => false,
             ]);
     }
 }

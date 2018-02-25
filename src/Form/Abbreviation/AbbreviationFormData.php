@@ -10,6 +10,7 @@ class AbbreviationFormData
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $title = '';
@@ -17,13 +18,14 @@ class AbbreviationFormData
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $content = '';
 
     /**
-     * @Assert\NotBlank()
      * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $description = '';
