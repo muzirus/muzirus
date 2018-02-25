@@ -10,6 +10,7 @@ class CategoryFormData
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $title = '';
