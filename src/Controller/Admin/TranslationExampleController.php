@@ -6,7 +6,7 @@ use App\Controller\AbstractController;
 use App\Entity\TranslationExample;
 use App\Facade\TranslationExampleFacade;
 use App\Form\TranslationExample\TranslationExampleForm;
-use App\Repository\TranslationRepository;
+use App\Repository\TranslationExampleRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -32,12 +32,12 @@ class TranslationExampleController extends AbstractController
      * @Route("", name="admin.translation-example")
      * @Method("GET")
      */
-    public function index(TranslationRepository $translationRepository): Response
+    public function index(TranslationExampleRepository $translationExampleRepository): Response
     {
         return $this->render(
             'admin/translation-example/index.html.twig',
             [
-                'translations' => $translationRepository->getAll(),
+                'examples' => $translationExampleRepository->getAll(),
             ]
         );
     }
@@ -50,15 +50,15 @@ class TranslationExampleController extends AbstractController
     {
         $form = $this->createForm(TranslationExampleForm::class);
 
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->translationExampleFacade->createTranslationExample($form->getData());
-
-            $this->addFlashSuccess('translation-example.created_successfully');
-
-            return $this->redirectToRoute('admin.translation-example');
-        }
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $this->translationExampleFacade->createTranslationExample($form->getData());
+//
+//            $this->addFlashSuccess('translation-example.created_successfully');
+//
+//            return $this->redirectToRoute('admin.translation-example');
+//        }
 
         return $this->render(
             'admin/translation-example/add.html.twig',

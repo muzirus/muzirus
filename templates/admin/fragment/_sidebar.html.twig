@@ -13,35 +13,35 @@
         <ul class="sidebar-menu">
             <li class="header">Home</li>
             <li>
-                <a href="{{ url('admin.dashboard') }}">
+                <a href="{{ path('admin.dashboard') }}">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li class="header">Words</li>
             <li>
-                <a href="{{ url('admin.russian-word') }}">
+                <a href="{{ path('admin.russian-word') }}">
                     <i class="fa fa-book"></i>
                     <span>Russian words</span>
                     <span class="pull-right-container"><small class="text-muted pull-right">{{ count_russian_words() }}</small></span>
                 </a>
             </li>
             <li>
-                <a href="{{ url('admin.czech-word') }}">
+                <a href="{{ path('admin.czech-word') }}">
                     <i class="fa fa-book"></i>
                     <span>Czech words</span>
                     <span class="pull-right-container"><small class="text-muted pull-right">{{ count_czech_words() }}</small></span>
                 </a>
             </li>
             <li>
-                <a href="{{ url('admin.legacy_word') }}">
+                <a href="{{ path('admin.legacy_word') }}">
                     <i class="fa fa-bookmark"></i>
                     <span>Původní databáze</span>
                 </a>
             </li>
             <li class="header">Translations</li>
             <li>
-                <a href="{{ url('admin.translation') }}">
+                <a href="{{ path('admin.translation') }}">
                     <i class="fa fa-book"></i>
                     <span>Translations</span>
                     <span class="pull-right-container">
@@ -50,7 +50,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ path('admin.translation-example') }}">
                     <i class="fa fa-book"></i>
                     <span>Example sentences</span>
                     <span class="pull-right-container">
@@ -60,32 +60,32 @@
             </li>
             <li class="header">Sources</li>
             <li>
-                <a href="{{ url('admin.source') }}">
+                <a href="{{ path('admin.source') }}">
                     <i class="fa fa-book"></i>
                     <span>Sources</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url('admin.source-type') }}">
+                <a href="{{ path('admin.source-type') }}">
                     <i class="fa fa-book"></i>
                     <span>Source types</span>
                 </a>
             </li>
             <li class="header">Other</li>
             <li>
-                <a href="{{ url('admin.symbol') }}">
+                <a href="{{ path('admin.symbol') }}">
                     <i class="fa fa-book"></i>
                     <span>Symbols</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url('admin.abbreviation') }}">
+                <a href="{{ path('admin.abbreviation') }}">
                     <i class="fa fa-book"></i>
                     <span>Abbreviations</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url('admin.category') }}">
+                <a href="{{ path('admin.category') }}">
                     <i class="fa fa-book"></i>
                     <span>Word categories</span>
                 </a>

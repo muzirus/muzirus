@@ -1,2 +1,57 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/layout.html.twig' %}
 
+{% block title 'Translation examples' %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-body">
+            <table class="table table-striped table-hover js-data-table">
+                <thead>
+                <tr>
+                    <th>Russian word</th>
+                    <th>Russian sentence</th>
+                    <th>Czech sentence</th>
+                    <th>Czech word</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for example in examples %}
+                    <tr>
+                        <td>
+                            <a href="{{ path('admin.russian-word.edit', {id: example.translation.russianWord.id}) }}">
+                                {{ example.translation.russianWord.content }}
+                            </a>
+                        </td>
+                        <td>
+                            {{ example.russianWordSentence }}
+                        </td>
+                        <td>
+                            {{ example.czechWordSentence }}
+                        </td>
+                        <td>
+                            <a href="{{ path('admin.czech-word.edit', {id: example.translation.czechWord.id}) }}">
+                                {{ example.translation.czechWord.content }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ path('admin.translation.edit', {id: example.translation.id}) }}">
+                                Translation
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Russian word</th>
+                    <th>Russian sentence</th>
+                    <th>Czech sentence</th>
+                    <th>Czech word</th>
+                    <th>Action</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+{% endblock %}
