@@ -3,6 +3,8 @@
 namespace App\Form\Word;
 
 use App\Entity\AbstractWordInterface;
+use App\Entity\Source;
+use App\Entity\WordCategory;
 
 abstract class AbstractWordFormData
 {
@@ -12,14 +14,14 @@ abstract class AbstractWordFormData
     protected $content = '';
 
     /**
-     * @var array
+     * @var WordCategory[]
      */
-    protected $categoryIds = [];
+    protected $categories = [];
 
     /**
-     * @var array
+     * @var Source[]
      */
-    protected $sourceIds = [];
+    protected $sources = [];
 
     /**
      * @var string
@@ -83,24 +85,36 @@ abstract class AbstractWordFormData
         $this->content = $content;
     }
 
-    public function getCategoryIds(): array
+    /**
+     * @return WordCategory[]
+     */
+    public function getCategories(): array
     {
-        return $this->categoryIds;
+        return $this->categories;
     }
 
-    public function setCategoryIds(array $categoryIds): void
+    /**
+     * @param WordCategory[] $categories
+     */
+    public function setCategories(array $categories): void
     {
-        $this->categoryIds = $categoryIds;
+        $this->categories = $categories;
     }
 
-    public function getSourceIds(): array
+    /**
+     * @return Source[]
+     */
+    public function getSources(): array
     {
-        return $this->sourceIds;
+        return $this->sources;
     }
 
-    public function setSourceIds(array $sourceIds): void
+    /**
+     * @param Source[] $sources
+     */
+    public function setSources(array $sources): void
     {
-        $this->sourceIds = $sourceIds;
+        $this->sources = $sources;
     }
 
     public function getLanguageNotePronunciation(): string
@@ -201,5 +215,22 @@ abstract class AbstractWordFormData
     public function setStatusLight(int $statusLight): void
     {
         $this->statusLight = $statusLight;
+    }
+
+    public function populate(AbstractWordInterface $word): void
+    {
+        $this->setContent($word->getContent());
+        $this->setCategories($word->getCategories());
+        $this->setSources($word->getSources());
+        $this->setLanguageNotePronunciation($word->getLanguageNotePronunciation());
+        $this->setLanguageNoteInflection($word->getLanguageNoteInflection());
+        $this->setLanguageNoteExceptionToInflection($word->getLanguageNoteExceptionToInflection());
+        $this->setLanguageNoteGender($word->getLanguageNoteGender());
+        $this->setLanguageNoteOther($word->getLanguageNoteOther());
+        $this->setExplanation($word->getExplanation());
+        $this->setExplanationSourceInfo($word->getExplanationSourceInfo());
+        $this->setExplanationSourceDate($word->getExplanationSourceDate());
+        $this->setNote($word->getNote());
+        $this->setStatusLight($word->getStatusLight());
     }
 }

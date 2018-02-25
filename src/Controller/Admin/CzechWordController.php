@@ -55,6 +55,9 @@ class CzechWordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            dump($formData);
+            exit();
+
             $this->czechWordFacade->createWord($formData);
 
             $this->addFlashSuccess('czech-word.created_successfully');
