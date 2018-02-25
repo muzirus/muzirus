@@ -3,10 +3,14 @@
 namespace App\Form\SourceType;
 
 use App\Entity\SourceType;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class SourceTypeFormData
 {
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $title = '';

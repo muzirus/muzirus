@@ -1,2 +1,30 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/layout.html.twig' %}
 
+{% block title 'Typy zdrojů' %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block content %}
+    <div class="box">
+        {{ form_start(form) }}
+        <div class="box-header with-border">
+            <h3 class="box-title">Edit</h3>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title) }}
+                {{ form_errors(form.title) }}
+            </div>
+        </div>
+        <div class="box-footer">
+            <button class="btn btn-primary">
+                Save
+            </button>
+            <a href="{{ path('admin.source-type') }}" class="btn btn-default">
+                Back to list
+            </a>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
