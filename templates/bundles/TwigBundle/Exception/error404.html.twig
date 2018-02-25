@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="text-center">
+        <h1>A 404 error occurred</h1>
+        <div>
+            <img src="{{ asset('build/images/pokemon-charmander.97dc01c5.gif') }}" alt="">
+        </div>
+        <div>
+            <a href="#" class="btn btn-default" onclick="return window.history.back();">Go back</a>
+        </div>
+    </div>
+{% endblock %}
