@@ -24,21 +24,27 @@ class RussianWordController extends AbstractController
      */
     private $russianWordFacade;
 
-    public function __construct(RussianWordFacade $russianWordFacade)
+    /**
+     * @var RussianWordRepository
+     */
+    private $russianWordRepository;
+
+    public function __construct(RussianWordFacade $russianWordFacade, RussianWordRepository $russianWordRepository)
     {
         $this->russianWordFacade = $russianWordFacade;
+        $this->russianWordRepository = $russianWordRepository;
     }
 
     /**
      * @Route("", name="admin.russian-word")
      * @Method("GET")
      */
-    public function index(RussianWordRepository $russianWordRepository): Response
+    public function index(): Response
     {
         return $this->render(
             'admin/russian-word/index.html.twig',
             [
-                'russianWords' => $russianWordRepository->getAll(),
+                'words' => $this->russianWordRepository->getAll(),
             ]
         );
     }
@@ -74,12 +80,12 @@ class RussianWordController extends AbstractController
      * @Route("/{id}", name="admin.russian-word.view", requirements={"id": "\d+"})
      * @Method("GET")
      */
-    public function view(RussianWord $russianWord): Response
+    public function view(RussianWord $word): Response
     {
         return $this->render(
             'admin/russian-word/view.html.twig',
             [
-                'russianWord' => $russianWord,
+                'word' => $word,
             ]
         );
     }
@@ -88,12 +94,14 @@ class RussianWordController extends AbstractController
      * @Route("/{id}/translations", name="admin.russian-word.view-translations", requirements={"id": "\d+"})
      * @Method("GET")
      */
-    public function viewTranslations(RussianWord $russianWord): Response
+    public function viewTranslations(RussianWord $word): Response
     {
         return $this->render(
             'admin/russian-word/view-translations.html.twig',
             [
-                'russianWord' => $russianWord,
+                'word' => $word,
+                'wordNext' => $this->russianWordRepository->findOneNext($word),
+                'wordPrev' => $this->russianWordRepository->findOnePrev($word),
             ]
         );
     }
@@ -102,15 +110,15 @@ class RussianWordController extends AbstractController
      * @Route("/{id}/edit", name="admin.russian-word.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, RussianWord $russianWord): Response
+    public function edit(Request $request, RussianWord $word): Response
     {
-        $formData = RussianWordFormData::createFromWord($russianWord);
+        $formData = RussianWordFormData::createFromWord($word);
 
         $form = $this->createForm(RussianWordForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->russianWordFacade->updateWord($russianWord, $formData);
+            $this->russianWordFacade->updateWord($word, $formData);
 
             $this->addFlashSuccess('russian-word.updated_successfully');
 
@@ -120,7 +128,9 @@ class RussianWordController extends AbstractController
         return $this->render(
             'admin/russian-word/edit.html.twig',
             [
-                'russianWord' => $russianWord,
+                'word' => $word,
+                'wordNext' => $this->russianWordRepository->findOneNext($word),
+                'wordPrev' => $this->russianWordRepository->findOnePrev($word),
                 'form' => $form->createView(),
             ]
         );
@@ -130,9 +140,9 @@ class RussianWordController extends AbstractController
      * @Route("/{id}/remove", name="admin.russian-word.remove", requirements={"id": "\d+"})
      * @Method("POST")
      */
-    public function remove(RussianWord $russianWord): RedirectResponse
+    public function remove(RussianWord $word): RedirectResponse
     {
-        $this->russianWordFacade->deleteWord($russianWord);
+        $this->russianWordFacade->deleteWord($word);
 
         $this->addFlashSuccess('russian-word.deleted_successfully');
 

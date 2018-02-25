@@ -44,7 +44,7 @@ class CzechWordController extends AbstractController
         return $this->render(
             'admin/czech-word/index.html.twig',
             [
-                'czechWords' => $this->czechWordRepository->getAll(),
+                'words' => $this->czechWordRepository->getAll(),
             ]
         );
     }
@@ -80,12 +80,12 @@ class CzechWordController extends AbstractController
      * @Route("/{id}", name="admin.czech-word.view", requirements={"id": "\d+"})
      * @Method("GET")
      */
-    public function view(CzechWord $czechWord): Response
+    public function view(CzechWord $word): Response
     {
         return $this->render(
             'admin/czech-word/view.html.twig',
             [
-                'czechWord' => $czechWord,
+                'word' => $word,
             ]
         );
     }
@@ -140,9 +140,9 @@ class CzechWordController extends AbstractController
      * @Route("/{id}/remove", name="admin.czech-word.remove", requirements={"id": "\d+"})
      * @Method("POST")
      */
-    public function remove(CzechWord $czechWord): RedirectResponse
+    public function remove(CzechWord $word): RedirectResponse
     {
-        $this->czechWordFacade->deleteWord($czechWord);
+        $this->czechWordFacade->deleteWord($word);
 
         $this->addFlashSuccess('czech-word.deleted_successfully');
 
