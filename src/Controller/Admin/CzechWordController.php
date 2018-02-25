@@ -24,21 +24,27 @@ class CzechWordController extends AbstractController
      */
     private $czechWordFacade;
 
-    public function __construct(CzechWordFacade $czechWordFacade)
+    /**
+     * @var CzechWordRepository
+     */
+    private $czechWordRepository;
+
+    public function __construct(CzechWordFacade $czechWordFacade, CzechWordRepository $czechWordRepository)
     {
         $this->czechWordFacade = $czechWordFacade;
+        $this->czechWordRepository = $czechWordRepository;
     }
 
     /**
      * @Route("", name="admin.czech-word")
      * @Method("GET")
      */
-    public function index(CzechWordRepository $czechWordRepository): Response
+    public function index(): Response
     {
         return $this->render(
             'admin/czech-word/index.html.twig',
             [
-                'czechWords' => $czechWordRepository->getAll(),
+                'czechWords' => $this->czechWordRepository->getAll(),
             ]
         );
     }
@@ -102,15 +108,15 @@ class CzechWordController extends AbstractController
      * @Route("/{id}/edit", name="admin.czech-word.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, CzechWord $czechWord): Response
+    public function edit(Request $request, CzechWord $word): Response
     {
-        $formData = CzechWordFormData::createFromWord($czechWord);
+        $formData = CzechWordFormData::createFromWord($word);
 
         $form = $this->createForm(CzechWordForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->czechWordFacade->updateWord($czechWord, $formData);
+            $this->czechWordFacade->updateWord($word, $formData);
 
             $this->addFlashSuccess('czech-word.updated_successfully');
 
@@ -120,8 +126,10 @@ class CzechWordController extends AbstractController
         return $this->render(
             'admin/czech-word/edit.html.twig',
             [
-                'czechWord' => $czechWord,
                 'form' => $form->createView(),
+                'word' => $word,
+                'wordNext' => $this->czechWordRepository->findOneNext($word),
+                'wordPrev' => $this->czechWordRepository->findOnePrev($word),
             ]
         );
     }

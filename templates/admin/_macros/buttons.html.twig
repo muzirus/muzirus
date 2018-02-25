@@ -1,0 +1,13 @@
+{% macro wordNext(content, path) %}
+    <a class="btn btn-default" href="{{ path }}">
+        {{ content }}
+        <i class="fa fa-arrow-right"></i>
+    </a>
+{% endmacro %}
+
+{% macro wordPrev(content, path) %}
+    <a class="btn btn-default" href="{{ path }}">
+        <i class="fa fa-arrow-left"></i>
+        {{ content }}
+    </a>
+{% endmacro %}

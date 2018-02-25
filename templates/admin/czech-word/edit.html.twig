@@ -1,14 +1,36 @@
 {% extends 'admin/layout.html.twig' %}
+{% import 'admin/_macros/buttons.html.twig' as buttons %}
 
 {% block title 'Česká slova' %}
 
 {% form_theme form 'bootstrap_3_layout.html.twig' %}
 
 {% block content %}
-    <div class="box">
+    <div class="box no-border">
         {{ form_start(form) }}
-        <div class="box-header with-border">
-            <h3 class="box-title">Edit</h3>
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs clearfix">
+                <li class="active">
+                    <a href="{{ path('admin.czech-word.edit', {id: word.id}) }}">
+                        Edit
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('admin.czech-word.view-translations', {id: word.id}) }}">
+                        Exemplifications
+                    </a>
+                </li>
+                <li class="pull-right">
+                    <div class="btn-group">
+                        {% if wordPrev is not null %}
+                            {{ buttons.wordPrev(wordPrev.content, path('admin.czech-word.edit', {id: wordPrev.id})) }}
+                        {% endif %}
+                        {% if wordNext is not null %}
+                            {{ buttons.wordNext(wordNext.content, path('admin.czech-word.edit', {id: wordNext.id})) }}
+                        {% endif %}
+                    </div>
+                </li>
+            </ul>
         </div>
         <div class="box-body">
             <div class="form-group">
@@ -16,7 +38,7 @@
                 {{ form_widget(form.content) }}
                 {{ form_errors(form.content) }}
                 <div class="help-block">
-                    {{ czechWord.content|escape|highlight_cyrillic|raw }}
+                    {{ word.content|escape|highlight_cyrillic|raw }}
                 </div>
             </div>
             <div class="form-group">
