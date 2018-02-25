@@ -1,0 +1,25 @@
+{% macro removeModal(action, body) %}
+    <div class="modal modal-danger fade" id="js-modal-remove">
+        <div class="modal-dialog">
+            <form class="modal-content" action="{{ action }}" method="post">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"><i class="fa fa-warning"></i> Danger!</h4>
+                </div>
+                <div class="modal-body">
+                    {{ body }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-outline">
+                        Yes, remove it!
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endmacro %}

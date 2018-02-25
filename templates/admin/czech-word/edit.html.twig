@@ -1,5 +1,6 @@
 {% extends 'admin/layout.html.twig' %}
 {% import 'admin/_macros/buttons.html.twig' as buttons %}
+{% import 'admin/_macros/modals.html.twig' as modals %}
 
 {% block title 'Česká slova' %}
 
@@ -113,15 +114,30 @@
                     {{ form_errors(form.statusLight) }}
                 </div>
             </div>
-            <div class="box-footer">
-                <button type="submit" name="save" class="btn btn-primary">
-                    Save
-                </button>
-                <a href="{{ path('admin.czech-word') }}" class="btn btn-default">
-                    Back to list
-                </a>
+            <div class="box-footer clearfix">
+                <div class="pull-left">
+                    <button type="submit" name="save" class="btn btn-primary">
+                        Save
+                    </button>
+                    <a href="{{ path('admin.czech-word.add') }}" class="btn btn-default">
+                        Add new
+                    </a>
+                    <a href="{{ path('admin.czech-word') }}" class="btn btn-default">
+                        Back to list
+                    </a>
+                </div>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#js-modal-remove">
+                        Remove
+                    </button>
+                </div>
             </div>
             {{ form_end(form) }}
         </div>
     </div>
+
+    {{ modals.removeModal(
+        path('admin.czech-word.remove', {id: word.id}),
+        'Do you really want to remove this word?'
+    ) }}
 {% endblock %}
