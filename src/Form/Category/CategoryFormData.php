@@ -3,10 +3,13 @@
 namespace App\Form\Category;
 
 use App\Entity\WordCategory;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class CategoryFormData
 {
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
      * @var string
      */
     private $title = '';

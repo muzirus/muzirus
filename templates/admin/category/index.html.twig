@@ -15,7 +15,7 @@
                 {% for category in categories %}
                     <tr>
                         <td>
-                            <a href="{{ url('admin.category.view', {id: category.id}) }}">
+                            <a href="{{ url('admin.category.edit', {id: category.id}) }}">
                                 {{ category.title }}
                             </a>
                         </td>
