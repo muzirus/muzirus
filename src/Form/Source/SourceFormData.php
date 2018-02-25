@@ -2,63 +2,84 @@
 
 namespace App\Form\Source;
 
-use App\Entity\Source;
+use App\Entity\SourceInterface;
+use App\Entity\SourceTypeInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class SourceFormData
 {
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $title = '';
 
     /**
-     * @var int
+     * @Assert\NotBlank()
+     * @Assert\Type("object")
+     * @var SourceTypeInterface
      */
-    private $typeId = 0;
+    private $type;
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $nameOfAuthor = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $nameOfPublisher = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $dateOfRelease = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $placeOfRelease = '';
 
     /**
+     * @Assert\Type("integer")
+     * @Assert\GreaterThanOrEqual(0)
      * @var int
      */
     private $pagesCount = 0;
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $isbnCode = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $note = '';
 
     //-------------------------------------------------------------------------
 
-    public static function createFromSource(Source $source): self
+    public static function createFromSource(SourceInterface $source): self
     {
         $formData = new self();
 
         $formData->setTitle($source->getTitle());
-        $formData->setTypeId($source->getType()->getId());
+        $formData->setType($source->getType());
         $formData->setNameOfAuthor($source->getNameOfAuthor());
         $formData->setNameOfPublisher($source->getNameOfPublisher());
         $formData->setDateOfRelease($source->getDateOfRelease());
@@ -82,14 +103,14 @@ class SourceFormData
         $this->title = $title;
     }
 
-    public function getTypeId(): int
+    public function getType(): ?SourceTypeInterface
     {
-        return $this->typeId;
+        return $this->type;
     }
 
-    public function setTypeId(int $typeId): void
+    public function setType(SourceTypeInterface $type): void
     {
-        $this->typeId = $typeId;
+        $this->type = $type;
     }
 
     public function getNameOfAuthor(): string

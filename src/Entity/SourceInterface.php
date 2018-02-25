@@ -14,9 +14,9 @@ interface SourceInterface extends Timestampable
 
     public function setTitle(string $title): void;
 
-    public function getType(): SourceType;
+    public function getType(): SourceTypeInterface;
 
-    public function setType(SourceType $type): void;
+    public function setType(SourceTypeInterface $type): void;
 
     public function getNameOfAuthor(): string;
 

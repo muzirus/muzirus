@@ -82,7 +82,7 @@ class Source implements SourceInterface
 
     //-------------------------------------------------------------------------
 
-    public function __construct(string $title, SourceType $type)
+    public function __construct(string $title, SourceTypeInterface $type)
     {
         $this->setTitle($title);
         $this->setType($type);
@@ -110,12 +110,12 @@ class Source implements SourceInterface
         $this->title = $title;
     }
 
-    public function getType(): SourceType
+    public function getType(): SourceTypeInterface
     {
         return $this->type;
     }
 
-    public function setType(SourceType $type): void
+    public function setType(SourceTypeInterface $type): void
     {
         $this->type = $type;
     }

@@ -25,10 +25,6 @@ class SourceFacade
         $this->sourceFactory = $sourceFactory;
     }
 
-    /**
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
     public function createSource(SourceFormData $formData): SourceInterface
     {
         $source = $this->sourceFactory->createSourceFromFormData($formData);
@@ -42,7 +38,7 @@ class SourceFacade
     public function updateSource(SourceInterface $source, SourceFormData $formData): void
     {
         $source->setTitle($formData->getTitle());
-        //$source->setType(...) todo: set title
+        $source->setType($formData->getType());
         $source->setNameOfAuthor($formData->getNameOfAuthor());
         $source->setNameOfPublisher($formData->getNameOfPublisher());
         $source->setDateOfRelease($formData->getDateOfRelease());

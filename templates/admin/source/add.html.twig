@@ -1,2 +1,70 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/layout.html.twig' %}
 
+{% block title 'Typy zdrojů' %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block content %}
+    <div class="box">
+        {{ form_start(form) }}
+        <div class="box-header with-border">
+            <h3 class="box-title">Add</h3>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title) }}
+                {{ form_errors(form.title) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.type) }}
+                {{ form_widget(form.type) }}
+                {{ form_errors(form.type) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.nameOfAuthor) }}
+                {{ form_widget(form.nameOfAuthor) }}
+                {{ form_errors(form.nameOfAuthor) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.nameOfPublisher) }}
+                {{ form_widget(form.nameOfPublisher) }}
+                {{ form_errors(form.nameOfPublisher) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.dateOfRelease) }}
+                {{ form_widget(form.dateOfRelease) }}
+                {{ form_errors(form.dateOfRelease) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.placeOfRelease) }}
+                {{ form_widget(form.placeOfRelease) }}
+                {{ form_errors(form.placeOfRelease) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.pagesCount) }}
+                {{ form_widget(form.pagesCount) }}
+                {{ form_errors(form.pagesCount) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.isbnCode) }}
+                {{ form_widget(form.isbnCode) }}
+                {{ form_errors(form.isbnCode) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.note) }}
+                {{ form_widget(form.note) }}
+                {{ form_errors(form.note) }}
+            </div>
+        </div>
+        <div class="box-footer">
+            <button class="btn btn-primary">
+                Save
+            </button>
+            <a href="{{ path('admin.source-type') }}" class="btn btn-default">
+                Back to list
+            </a>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

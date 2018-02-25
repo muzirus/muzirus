@@ -19,18 +19,9 @@ class SourceFactory
         $this->sourceTypeRepository = $sourceTypeRepository;
     }
 
-    /**
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
     public function createSourceFromFormData(SourceFormData $formData): SourceInterface
     {
-        $sourceType = $this->sourceTypeRepository->getOneById($formData->getTypeId());
-
-        $source = new Source(
-            $formData->getTitle(),
-            $sourceType
-        );
+        $source = new Source($formData->getTitle(), $formData->getType());
 
         $source->setNameOfAuthor($formData->getNameOfAuthor());
         $source->setNameOfPublisher($formData->getNameOfPublisher());
