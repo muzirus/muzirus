@@ -5,70 +5,94 @@ namespace App\Form\Word;
 use App\Entity\AbstractWordInterface;
 use App\Entity\Source;
 use App\Entity\WordCategory;
+use Symfony\Component\Validator\Constraints as Assert;
 
 abstract class AbstractWordFormData
 {
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $content = '';
 
     /**
+     * @Assert\Type("array")
      * @var WordCategory[]
      */
     protected $categories = [];
 
     /**
+     * @Assert\Type("array")
      * @var Source[]
      */
     protected $sources = [];
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $languageNotePronunciation = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $languageNoteInflection = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $languageNoteExceptionToInflection = '';
 
     /**
+     * @Assert\Type("integer")
      * @var int
      */
     protected $languageNoteGender = AbstractWordInterface::GENDER_UNKNOWN;
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $languageNoteOther = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $explanation = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $explanationSourceInfo = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $explanationSourceDate = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     protected $note = '';
 
     /**
+     * @Assert\Type("integer")
      * @var int
      */
     protected $statusLight = AbstractWordInterface::STATUS_LIGHT_UNKNOWN;
