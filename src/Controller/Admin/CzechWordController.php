@@ -94,12 +94,14 @@ class CzechWordController extends AbstractController
      * @Route("/{id}/translations", name="admin.czech-word.view-translations", requirements={"id": "\d+"})
      * @Method("GET")
      */
-    public function viewTranslations(CzechWord $czechWord): Response
+    public function viewTranslations(CzechWord $word): Response
     {
         return $this->render(
             'admin/czech-word/view-translations.html.twig',
             [
-                'czechWord' => $czechWord,
+                'word' => $word,
+                'wordNext' => $this->czechWordRepository->findOneNext($word),
+                'wordPrev' => $this->czechWordRepository->findOnePrev($word),
             ]
         );
     }
