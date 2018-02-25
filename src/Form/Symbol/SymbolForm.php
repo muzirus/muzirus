@@ -12,16 +12,17 @@ class SymbolForm extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
+                'empty_data' => '',
                 'attr' => [
                     'autofocus' => true,
                 ],
-                'label' => 'label.title',
             ])
             ->add('content', TextType::class, [
-                'label' => 'label.content',
+                'empty_data' => '',
             ])
             ->add('description', TextType::class, [
-                'label' => 'label.description',
+                'empty_data' => '',
+                'required' => false,
             ]);
     }
 }

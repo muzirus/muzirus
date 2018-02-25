@@ -3,20 +3,29 @@
 namespace App\Form\Symbol;
 
 use App\Entity\Symbol;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class SymbolFormData
 {
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $title = '';
 
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $content = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $description = '';
