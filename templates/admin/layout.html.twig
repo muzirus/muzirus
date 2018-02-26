@@ -14,8 +14,8 @@
 
 {% block body %}
     <div class="wrapper">
-        {% include 'admin/fragment/_nav.html.twig' %}
-        {% include 'admin/fragment/_sidebar.html.twig' %}
+        {% include 'admin/_fragments/_nav.html.twig' %}
+        {% include 'admin/_fragments/_sidebar.html.twig' %}
 
         <div class="content-wrapper">
             <section class="content-header">
@@ -24,7 +24,7 @@
                 </h1>
             </section>
             <section class="content">
-                {% include 'admin/fragment/_flash_messages.html.twig' %}
+                {% include 'admin/_fragments/_flash_messages.html.twig' %}
                 {% block content %}
                     <div class="box">
                         <div class="box-body">
@@ -35,6 +35,6 @@
             </section>
         </div>
 
-        {% include 'admin/fragment/_footer.html.twig' %}
+        {% include 'admin/_fragments/_footer.html.twig' %}
     </div>
 {% endblock %}
