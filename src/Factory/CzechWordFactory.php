@@ -10,10 +10,27 @@ class CzechWordFactory
 {
     public function createFromFormData(CzechWordFormData $formData): CzechWordInterface
     {
-        $czechWord = new CzechWord($formData->getContent());
+        $word = new CzechWord($formData->getContent());
 
-        // todo: add other things
+        foreach ($formData->getCategories() as $category) {
+            $word->addCategory($category);
+        }
 
-        return $czechWord;
+        foreach ($formData->getSources() as $source) {
+            $word->addSource($source);
+        }
+
+        $word->setLanguageNotePronunciation($formData->getLanguageNotePronunciation());
+        $word->setLanguageNoteInflection($formData->getLanguageNoteInflection());
+        $word->setLanguageNoteExceptionToInflection($formData->getLanguageNoteExceptionToInflection());
+        $word->setLanguageNoteGender($formData->getLanguageNoteGender());
+        $word->setLanguageNoteOther($formData->getLanguageNoteOther());
+        $word->setExplanation($formData->getExplanation());
+        $word->setExplanationSourceInfo($formData->getExplanationSourceInfo());
+        $word->setExplanationSourceDate($formData->getExplanationSourceDate());
+        $word->setNote($formData->getNote());
+        $word->setStatusLight($formData->getStatusLight());
+
+        return $word;
     }
 }

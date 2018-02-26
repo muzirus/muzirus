@@ -27,26 +27,45 @@ class CzechWordFacade
 
     public function createWord(CzechWordFormData $formData): CzechWordInterface
     {
-        $czechWord = $this->czechWordFactory->createFromFormData($formData);
+        $word = $this->czechWordFactory->createFromFormData($formData);
 
-        $this->entityManager->persist($czechWord);
+        $this->entityManager->persist($word);
         $this->entityManager->flush();
 
-        return $czechWord;
+        return $word;
     }
 
-    public function updateWord(CzechWordInterface $czechWord, CzechWordFormData $formData): void
+    public function updateWord(CzechWordInterface $word, CzechWordFormData $formData): void
     {
-        $czechWord->setContent($formData->getContent());
+        $word->setContent($formData->getContent());
 
-        // todo: add other things
+        $word->removeCategories();
+        foreach ($formData->getCategories() as $category) {
+            $word->addCategory($category);
+        }
+
+        $word->removeSources();
+        foreach ($formData->getSources() as $source) {
+            $word->addSource($source);
+        }
+
+        $word->setLanguageNotePronunciation($formData->getLanguageNotePronunciation());
+        $word->setLanguageNoteInflection($formData->getLanguageNoteInflection());
+        $word->setLanguageNoteExceptionToInflection($formData->getLanguageNoteExceptionToInflection());
+        $word->setLanguageNoteGender($formData->getLanguageNoteGender());
+        $word->setLanguageNoteOther($formData->getLanguageNoteOther());
+        $word->setExplanation($formData->getExplanation());
+        $word->setExplanationSourceInfo($formData->getExplanationSourceInfo());
+        $word->setExplanationSourceDate($formData->getExplanationSourceDate());
+        $word->setNote($formData->getNote());
+        $word->setStatusLight($formData->getStatusLight());
 
         $this->entityManager->flush();
     }
 
-    public function deleteWord(CzechWordInterface $czechWord): void
+    public function deleteWord(CzechWordInterface $word): void
     {
-        $this->entityManager->remove($czechWord);
+        $this->entityManager->remove($word);
         $this->entityManager->flush();
     }
 }

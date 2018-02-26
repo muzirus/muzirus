@@ -27,26 +27,46 @@ class RussianWordFacade
 
     public function createWord(RussianWordFormData $formData): RussianWordInterface
     {
-        $russianWord = $this->russianWordFactory->createFromFormData($formData);
+        $word = $this->russianWordFactory->createFromFormData($formData);
 
-        $this->entityManager->persist($russianWord);
+        $this->entityManager->persist($word);
         $this->entityManager->flush();
 
-        return $russianWord;
+        return $word;
     }
 
-    public function updateWord(RussianWordInterface $russianWord, RussianWordFormData $formData): void
+    public function updateWord(RussianWordInterface $word, RussianWordFormData $formData): void
     {
-        $russianWord->setContent($formData->getContent());
+        $word->setContent($formData->getContent());
 
-        // todo: add other things
+        $word->removeCategories();
+        foreach ($formData->getCategories() as $category) {
+            $word->addCategory($category);
+        }
+
+        $word->removeSources();
+        foreach ($formData->getSources() as $source) {
+            $word->addSource($source);
+        }
+
+        $word->setContentWithAccent($formData->getContentWithAccent());
+        $word->setLanguageNotePronunciation($formData->getLanguageNotePronunciation());
+        $word->setLanguageNoteInflection($formData->getLanguageNoteInflection());
+        $word->setLanguageNoteExceptionToInflection($formData->getLanguageNoteExceptionToInflection());
+        $word->setLanguageNoteGender($formData->getLanguageNoteGender());
+        $word->setLanguageNoteOther($formData->getLanguageNoteOther());
+        $word->setExplanation($formData->getExplanation());
+        $word->setExplanationSourceInfo($formData->getExplanationSourceInfo());
+        $word->setExplanationSourceDate($formData->getExplanationSourceDate());
+        $word->setNote($formData->getNote());
+        $word->setStatusLight($formData->getStatusLight());
 
         $this->entityManager->flush();
     }
 
-    public function deleteWord(RussianWordInterface $russianWord): void
+    public function deleteWord(RussianWordInterface $word): void
     {
-        $this->entityManager->remove($russianWord);
+        $this->entityManager->remove($word);
         $this->entityManager->flush();
     }
 }
