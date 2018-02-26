@@ -59,3 +59,23 @@ Get status of server
 ```bash
 bin/console server:status
 ```
+
+## Docker
+
+Docker Up (as daemon)
+
+```bash
+docker-compose up -d
+```
+
+Docker Down
+
+```bash
+docker-compose down
+```
+
+Docker Build
+
+```bash
+docker-compose build
+```
