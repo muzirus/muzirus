@@ -1,25 +1,46 @@
-{% extends 'base.html.twig' %}
+{% extends 'app/layout.html.twig' %}
 
 {% block title 'Login' %}
 
-{% block body %}
-    {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-
-    <form action="{{ path('login') }}" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}">
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password">
-
-        {#
-            If you want to control the URL the user
-            is redirected to on success (more details below)
-            <input type="hidden" name="_target_path" value="/account" />
-        #}
-
-        <button type="submit">login</button>
-    </form>
+{% block content %}
+    <div class="row" style="padding-top: 20px">
+        <div class="col-md-6 col-md-offset-3">
+            {% if error %}
+                <div class="alert alert-warning">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <div class="well">
+                <form method="post" action="{{ path('login') }}">
+                    <div class="form-group">
+                        <label class="control-label" for="email">Email</label>
+                        <input type="email" id="email" name="_username" class="form-control" placeholder="john.doe&#x40;example.com" autofocus="autofocus" value="{{ last_username }}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="password">Password</label>
+                        <input type="password" id="password" name="_password" class="form-control" value="">
+                    </div>
+                    {#
+                        If you want to control the URL the user
+                        is redirected to on success (more details below)
+                        <input type="hidden" name="_target_path" value="/account" />
+                    #}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    Sign in
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <a href="#" class="btn btn-default btn-block" disabled="true">
+                                    I forgot password
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}
