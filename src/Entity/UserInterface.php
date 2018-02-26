@@ -3,8 +3,9 @@
 namespace App\Entity;
 
 use App\Entity\Able\Timestampable;
+use Symfony\Component\Security\Core\User\UserInterface as SymfonyUserInterface;
 
-interface UserInterface extends Timestampable
+interface UserInterface extends \Serializable, SymfonyUserInterface, Timestampable
 {
     public function __toString(): string;
 

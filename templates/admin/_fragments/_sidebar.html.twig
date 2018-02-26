@@ -93,12 +93,14 @@
                 </a>
             </li>
             <li class="header">System</li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-users"></i>
-                    <span>Users</span>
-                </a>
-            </li>
+            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                <li>
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span>Users</span>
+                    </a>
+                </li>
+            {% endif %}
             <li>
                 <a href="{{ path('logout') }}">
                     <i class="fa fa-lock"></i>
