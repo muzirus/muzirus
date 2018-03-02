@@ -11,8 +11,8 @@ services:
   app:
     build:
       context: .
-      dockerfile: .docker/Dockerfile
-    image: dictionary-docker
+      dockerfile: .docker/app/Dockerfile
+    image: dictionary-app
     ports:
       - 80:80
     volumes:
