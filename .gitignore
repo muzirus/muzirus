@@ -1,5 +1,4 @@
 /.idea/
-/.docker/data/
 
 ###> symfony/framework-bundle ###
 .env
