@@ -13,7 +13,7 @@
 ### Clone repository
 
 ```bash
-git clone git@gitlab.com:petrofcikmatus/dictionary.git dictionary
+git clone git@github.com:petrofcikmatus/dictionary.git dictionary
 ```
 
 ### Go to project folder
@@ -58,24 +58,4 @@ Get status of server
 
 ```bash
 bin/console server:status
-```
-
-## Docker
-
-Docker Up (as daemon)
-
-```bash
-docker-compose up -d
-```
-
-Docker Down
-
-```bash
-docker-compose down
-```
-
-Docker Build
-
-```bash
-docker-compose build
 ```
