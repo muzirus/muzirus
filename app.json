@@ -1,0 +1,28 @@
+{
+    "name": "Dictionary",
+    "repository": "https://github.com/petrofcikmatus/dictionary",
+    "success_url": "/",
+    "scripts": {
+        "postdeploy": "php bin/console doctrine:migrations:migrate -n"
+    },
+    "image": "heroku/php",
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "env": {
+        "APP_ENV": {
+            "value": "prod"
+        },
+        "APP_DEBUG": {
+            "value": "0"
+        },
+        "APP_SECRET": {
+            "generator": "secret"
+        },
+        "MAILER_URL": {
+            "value": "null://localhost"
+        }
+    }
+}
