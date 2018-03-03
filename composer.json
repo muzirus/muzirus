@@ -84,7 +84,7 @@
             "yarn dev"
         ],
         "compile": [
-            "php bin/console doctrine:migrations:migrate -n"
+            "php bin/console doctrine:migrations:migrate --quiet --allow-no-migration"
         ]
     },
     "conflict": {
