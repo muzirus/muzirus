@@ -75,13 +75,11 @@
         "prod": [
             "composer install --no-dev --optimize-autoloader",
             "composer clear-cache",
-            "yarn install",
-            "yarn build"
+            "yarn install"
         ],
         "dev": [
             "composer install",
-            "yarn install",
-            "yarn dev"
+            "yarn install"
         ],
         "compile": [
             "php bin/console doctrine:migrations:migrate --quiet --allow-no-migration"
