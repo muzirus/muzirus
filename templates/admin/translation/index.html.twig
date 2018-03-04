@@ -1,66 +1,52 @@
 {% extends 'admin/layout.html.twig' %}
 
-{% block title 'Translations' %}
+{% block title 'Exemplifikace' %}
 
 {% block content %}
     <div class="box">
         <div class="box-body">
             <table class="table table-striped table-hover js-data-table">
                 <thead>
-                <tr>
-                    <th>Translation</th>
-                    <th>Russian</th>
-                    <th>Czech</th>
-                    <th>Examples</th>
-                    <th>Note RU</th>
-                    <th>Note CS</th>
-                    <th>Action</th>
-                </tr>
+                    <tr>
+                        <th>Russian</th>
+                        <th>Czech</th>
+                        <th>Examples</th>
+                        <th>Note RU</th>
+                        <th>Note CS</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {% for translation in translations %}
-                    <tr>
-                        <td>
-                            <a href="{{ path('admin.translation.view', {id: translation.id}) }}">
-                                {{ translation.russianWord.content }} - {{ translation.czechWord.content }}
-                            </a>
-                        </td>
-                        <td>
-                            <a href="{{ path('admin.russian-word.edit', {id: translation.russianWord.id}) }}">
-                                {{ translation.russianWord.content }}
-                            </a>
-                        </td>
-                        <td>
-                            <a href="{{ path('admin.czech-word.edit', {id: translation.czechWord.id}) }}">
-                                {{ translation.czechWord.content }}
-                            </a>
-                        <td>
-                            {{ translation.examplesCount }}
-                        </td>
-                        <td>
-                            {{ translation.russianWordNote }}
-                        </td>
-                        <td>
-                            {{ translation.czechWordNote }}
-                        </td>
-                        <td>
-                            <a href="{{ path('admin.translation.edit', {id: translation.id}) }}" class="btn btn-xs btn-primary">
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
-                {% endfor %}
+                    {% for translation in translations %}
+                        <tr>
+                            <td>
+                                <a href="{{ path('admin.russian-word.edit', {id: translation.russianWord.id}) }}">
+                                    {{ translation.russianWord.content }}
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ path('admin.czech-word.edit', {id: translation.czechWord.id}) }}">
+                                    {{ translation.czechWord.content }}
+                                </a>
+                            <td>
+                                {{ translation.examplesCount }}
+                            </td>
+                            <td>
+                                {{ translation.russianWordNote }}
+                            </td>
+                            <td>
+                                {{ translation.czechWordNote }}
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
                 <tfoot>
-                <tr>
-                    <th>Translation</th>
-                    <th>Russian</th>
-                    <th>Czech</th>
-                    <th>Examples</th>
-                    <th>Note RU</th>
-                    <th>Note CS</th>
-                    <th>Action</th>
-                </tr>
+                    <tr>
+                        <th>Russian</th>
+                        <th>Czech</th>
+                        <th>Examples</th>
+                        <th>Note RU</th>
+                        <th>Note CS</th>
+                    </tr>
                 </tfoot>
             </table>
         </div>

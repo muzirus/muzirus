@@ -3,7 +3,8 @@
 namespace App\Facade;
 
 use App\Entity\TranslationInterface;
-use App\Form\Translation\TranslationFormData;
+use App\Form\Translation\CreateTranslationFormDataInterface;
+use App\Form\Translation\UpdateTranslationFormData;
 use Doctrine\ORM\EntityManagerInterface;
 
 class TranslationFacade
@@ -24,7 +25,7 @@ class TranslationFacade
         $this->translationFactory = $translationFactory;
     }
 
-    public function createTranslation(TranslationFormData $formData): TranslationInterface
+    public function createTranslation(CreateTranslationFormDataInterface $formData): TranslationInterface
     {
         $translation = $this->translationFactory->createTranslationFromFormData($formData);
 
@@ -34,7 +35,7 @@ class TranslationFacade
         return $translation;
     }
 
-    public function updateTranslation(TranslationInterface $translation, TranslationFormData $formData): void
+    public function updateTranslation(TranslationInterface $translation, UpdateTranslationFormData $formData): void
     {
         $translation->setCzechWordNote($formData->getCzechWordNote());
         $translation->setRussianWordNote($formData->getRussianWordNote());
