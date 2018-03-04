@@ -21,17 +21,17 @@
                 {% for translation in translations %}
                     <tr>
                         <td>
-                            <a href="{{ url('admin.translation.view', {id: translation.id}) }}">
+                            <a href="{{ path('admin.translation.view', {id: translation.id}) }}">
                                 {{ translation.russianWord.content }} - {{ translation.czechWord.content }}
                             </a>
                         </td>
                         <td>
-                            <a href="{{ url('admin.russian-word.edit', {id: translation.russianWord.id}) }}">
+                            <a href="{{ path('admin.russian-word.edit', {id: translation.russianWord.id}) }}">
                                 {{ translation.russianWord.content }}
                             </a>
                         </td>
                         <td>
-                            <a href="{{ url('admin.czech-word.edit', {id: translation.czechWord.id}) }}">
+                            <a href="{{ path('admin.czech-word.edit', {id: translation.czechWord.id}) }}">
                                 {{ translation.czechWord.content }}
                             </a>
                         <td>
@@ -44,7 +44,7 @@
                             {{ translation.czechWordNote }}
                         </td>
                         <td>
-                            <a href="{{ url('admin.translation.edit', {id: translation.id}) }}" class="btn btn-xs btn-primary">
+                            <a href="{{ path('admin.translation.edit', {id: translation.id}) }}" class="btn btn-xs btn-primary">
                                 Edit
                             </a>
                         </td>
