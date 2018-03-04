@@ -21,7 +21,7 @@
                 {% for word in words %}
                     <tr>
                         <td>
-                            <a href="{{ url('admin.legacy_word.view', {'id': word.id}) }}">
+                            <a href="{{ path('admin.legacy_word.view', {'id': word.id}) }}">
                                 {{ word.original }}
                             </a>
                         </td>

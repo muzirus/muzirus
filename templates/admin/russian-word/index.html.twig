@@ -21,7 +21,7 @@
                         <td>
                             <div class="clearfix">
                                 <div class="pull-left">
-                                    <a href="{{ url('admin.russian-word.edit', {id: word.id}) }}">
+                                    <a href="{{ path('admin.russian-word.edit', {id: word.id}) }}">
                                         {{ word.content|escape|highlight_latin|raw }}
                                     </a>
                                 </div>
@@ -37,7 +37,7 @@
                             {{ word.contentWithAccent|escape|highlight_accent|raw }}
                         </td>
                         <td>
-                            <a href="{{ url('admin.russian-word.view-translations', {id: word.id}) }}">
+                            <a href="{{ path('admin.russian-word.view-translations', {id: word.id}) }}">
                                 <span class="label label-default">{{ word.translationsCount }}</span>
                             </a>
                         </td>
@@ -58,7 +58,7 @@
             </table>
         </div>
         <div class="box-footer">
-            <a href="{{ url('admin.russian-word.add') }}" class="btn btn-primary">
+            <a href="{{ path('admin.russian-word.add') }}" class="btn btn-primary">
                 Add word
             </a>
         </div>
