@@ -14,6 +14,7 @@ Encore
         './assets/js/app.js'
     ])
     .addEntry('js/admin', [
+        './node_modules/bootstrap/dist/js/bootstrap.min.js',
         './node_modules/datatables.net/js/jquery.dataTables.js',
         './node_modules/datatables.net-bs/js/dataTables.bootstrap.js',
         './node_modules/jquery-slimscroll/jquery.slimscroll.min.js',

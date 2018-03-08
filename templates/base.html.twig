@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Welcome!{% endblock %}</title>
-    {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
-    {% endblock %}
+    {% block stylesheets %}{% endblock %}
 </head>
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
-{% block body %}{% endblock %}
-{% block javascripts %}
-    <script src="{{ asset('build/manifest.js') }}"></script>
-    <script src="{{ asset('build/js/common.js') }}"></script>
-    <script src="{{ asset('build/js/app.js') }}"></script>
-{% endblock %}
+    {% block body %}{% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('build/manifest.js') }}"></script>
+        <script src="{{ asset('build/js/common.js') }}"></script>
+    {% endblock %}
 </body>
 </html>
