@@ -12,7 +12,8 @@
         $('.js-data-table').DataTable();
 
         // select2
-        $('.select2').select2();
+        //$('.js-select2').select2();
+        $('[data-select="select2"]').select2();
 
         // jquery.are-you-sure
         $('.js-are-you-sure').areYouSure();

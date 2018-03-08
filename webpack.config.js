@@ -25,6 +25,7 @@ Encore
     .addStyleEntry('css/app', './assets/scss/app.scss')
     .addStyleEntry('css/admin', [
         './node_modules/datatables.net-bs/css/dataTables.bootstrap.css',
+        './node_modules/select2/dist/css/select2.min.css',
         './node_modules/admin-lte/dist/css/AdminLTE.min.css',
         './node_modules/admin-lte/dist/css/skins/_all-skins.min.css',
         './assets/scss/admin.scss'

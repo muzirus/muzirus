@@ -4,7 +4,7 @@ namespace App\Facade;
 
 use App\Entity\Translation;
 use App\Entity\TranslationInterface;
-use App\Form\Translation\TranslationFormData;
+use App\Form\Translation\CreateTranslationFormDataInterface;
 use App\Repository\CzechWordRepository;
 use App\Repository\RussianWordRepository;
 
@@ -26,12 +26,12 @@ class TranslationFactory
         $this->russianWordRepository = $russianWordRepository;
     }
 
-    public function createTranslationFromFormData(TranslationFormData $formData): TranslationInterface
+    public function createTranslationFromFormData(CreateTranslationFormDataInterface $formData): TranslationInterface
     {
-        $czechWord = $this->czechWordRepository->getOne($formData->getCzechWordId());
-        $russianWord = $this->russianWordRepository->getOne($formData->getRussianWordId());
-
-        $translation = new Translation($russianWord, $czechWord);
+        $translation = new Translation(
+            $formData->getRussianWord(),
+            $formData->getCzechWord()
+        );
 
         $translation->setCzechWordNote($formData->getCzechWordNote());
         $translation->setRussianWordNote($formData->getRussianWordNote());

@@ -71,20 +71,6 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin.category.view", requirements={"id": "\d+"})
-     * @Method("GET")
-     */
-    public function view(WordCategory $category): Response
-    {
-        return $this->render(
-            'admin/category/view.html.twig',
-            [
-                'category' => $category,
-            ]
-        );
-    }
-
-    /**
      * @Route("/{id}/edit", name="admin.category.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */

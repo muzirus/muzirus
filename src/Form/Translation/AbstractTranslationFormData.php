@@ -2,47 +2,23 @@
 
 namespace App\Form\Translation;
 
-class TranslationFormData
+use Symfony\Component\Validator\Constraints as Assert;
+
+abstract class AbstractTranslationFormData
 {
     /**
-     * @var int
-     */
-    private $russianWordId = 0;
-
-    /**
-     * @var int
-     */
-    private $czechWordId = 0;
-
-    /**
      * @var string
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      */
     private $russianWordNote = '';
 
     /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
      * @var string
      */
     private $czechWordNote = '';
-
-    public function getRussianWordId(): int
-    {
-        return $this->russianWordId;
-    }
-
-    public function setRussianWordId(int $russianWordId): void
-    {
-        $this->russianWordId = $russianWordId;
-    }
-
-    public function getCzechWordId(): int
-    {
-        return $this->czechWordId;
-    }
-
-    public function setCzechWordId(int $czechWordId): void
-    {
-        $this->czechWordId = $czechWordId;
-    }
 
     public function getRussianWordNote(): string
     {
