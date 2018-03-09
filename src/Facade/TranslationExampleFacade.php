@@ -4,7 +4,6 @@ namespace App\Facade;
 
 use App\Entity\TranslationExample;
 use App\Entity\TranslationExampleInterface;
-use App\Entity\TranslationInterface;
 use App\Form\TranslationExample\TranslationExampleFormData;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -20,10 +19,10 @@ class TranslationExampleFacade
         $this->entityManager = $entityManager;
     }
 
-    public function createTranslationExample(TranslationInterface $translation, TranslationExampleFormData $formData): TranslationExampleInterface
+    public function createTranslationExample(TranslationExampleFormData $formData): TranslationExampleInterface
     {
         $translationExample = new TranslationExample(
-            $translation,
+            $formData->getTranslation(),
             $formData->getRussianWordSentence(),
             $formData->getCzechWordSentence()
         );
@@ -34,8 +33,10 @@ class TranslationExampleFacade
         return $translationExample;
     }
 
-    public function updateTranslationExample(TranslationExampleInterface $translationExample, TranslationExampleFormData $formData): void
-    {
+    public function updateTranslationExample(
+        TranslationExampleInterface $translationExample,
+        TranslationExampleFormData $formData
+    ): void {
         $translationExample->setRussianWordSentence($formData->getRussianWordSentence());
         $translationExample->setCzechWordSentence($formData->getCzechWordSentence());
 

@@ -46,7 +46,9 @@
                     {{ form_widget(form.contentWithAccent) }}
                     {{ form_errors(form.contentWithAccent) }}
                     <div class="help-block">
-                        {{ word.contentWithAccent|escape|highlight_latin|raw }} - {{ word.contentWithAccent|escape|highlight_accent|raw }}
+                        {{ word.contentWithAccent|escape|highlight_latin|raw }}
+                        -
+                        {{ word.contentWithAccent|escape|highlight_accent|raw }}
                     </div>
                 </div>
                 <div class="form-group">

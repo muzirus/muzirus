@@ -7,48 +7,49 @@
         <div class="box-body">
             <table class="table table-striped table-hover js-data-table">
                 <thead>
-                <tr>
-                    <th>Word</th>
-                    <th>Translations</th>
-                    <th>Inflection</th>
-                    <th>Gender</th>
-                </tr>
+                    <tr>
+                        <th>Word</th>
+                        <th>Translations</th>
+                        <th>Inflection</th>
+                        <th>Gender</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {% for word in words %}
-                    <tr>
-                        <td>
-                            <div class="clearfix">
-                                <div class="pull-left">
-                                    <a href="{{ path('admin.czech-word.edit', {id: word.id}) }}">
-                                        {{ word.content|escape|highlight_cyrillic|raw }}
-                                    </a>
+                    {% for word in words %}
+                        <tr>
+                            <td>
+                                <div class="clearfix">
+                                    <div class="pull-left">
+                                        <a href="{{ path('admin.czech-word.edit', {id: word.id}) }}">
+                                            {{ word.content|escape|highlight_cyrillic|raw }}
+                                        </a>
+                                    </div>
+                                    <div class="pull-right">
+                                        {% if word.imported %}
+                                            <i class="fa fa-info-circle text-info" data-toggle="tooltip"
+                                               data-placement="left" title="Imported"></i>
+                                        {% endif %}
+                                        {{ word.statusLight|convert_status_code_to_icon|raw }}
+                                    </div>
                                 </div>
-                                <div class="pull-right">
-                                    {% if word.imported %}
-                                        <i class="fa fa-info-circle text-info" data-toggle="tooltip" data-placement="left" title="Imported"></i>
-                                    {% endif %}
-                                    {{ word.statusLight|convert_status_code_to_icon|raw }}
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <a href="{{ path('admin.czech-word.translations', {id: word.id}) }}">
-                                <span class="label label-default">{{ word.translationsCount }}</span>
-                            </a>
-                        </td>
-                        <td>{{ word.languageNoteExceptionToInflection }}</td>
-                        <td>{{ word.languageNoteGender|gender_as_string }}</td>
-                    </tr>
-                {% endfor %}
+                            </td>
+                            <td>
+                                <a href="{{ path('admin.czech-word.translations', {id: word.id}) }}">
+                                    <span class="label label-default">{{ word.translationsCount }}</span>
+                                </a>
+                            </td>
+                            <td>{{ word.languageNoteExceptionToInflection }}</td>
+                            <td>{{ word.languageNoteGender|gender_as_string }}</td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
                 <tfoot>
-                <tr>
-                    <th>Word</th>
-                    <th>Translations</th>
-                    <th>Inflection</th>
-                    <th>Gender</th>
-                </tr>
+                    <tr>
+                        <th>Word</th>
+                        <th>Translations</th>
+                        <th>Inflection</th>
+                        <th>Gender</th>
+                    </tr>
                 </tfoot>
             </table>
         </div>
