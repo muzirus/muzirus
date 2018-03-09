@@ -13,6 +13,8 @@
                         <th>Translations</th>
                         <th>Inflection</th>
                         <th>Gender</th>
+                        <th>Created</th>
+                        <th>Updated</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,6 +46,8 @@
                             </td>
                             <td>{{ word.languageNoteExceptionToInflection }}</td>
                             <td>{{ word.languageNoteGender|gender_as_string }}</td>
+                            <td>{{ word.createdAtFormat('Y-m-d') }}</td>
+                            <td>{{ word.updatedAtFormat('Y-m-d') }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -54,6 +58,8 @@
                         <th>Translations</th>
                         <th>Inflection</th>
                         <th>Gender</th>
+                        <th>Created</th>
+                        <th>Updated</th>
                     </tr>
                 </tfoot>
             </table>
