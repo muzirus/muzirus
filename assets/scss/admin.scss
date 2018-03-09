@@ -4,7 +4,11 @@
 $web-font-path: 'data:text/css;base64,';
 
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~datatables.net-bs/css/dataTables.bootstrap.css";
 @import "~font-awesome/scss/font-awesome.scss";
+@import "~select2/dist/css/select2.min.css";
+@import "~admin-lte/dist/css/AdminLTE.min.css";
+@import "~admin-lte/dist/css/skins/_all-skins.min.css";
 
 .toggle.admin {
   border-radius: 0;

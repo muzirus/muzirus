@@ -5,12 +5,16 @@ namespace App\Controller\Admin;
 use App\Controller\AbstractController;
 use App\Entity\CzechWord;
 use App\Entity\Translation;
+use App\Entity\TranslationExample;
 use App\Facade\CzechWordFacade;
+use App\Facade\TranslationExampleFacade;
 use App\Facade\TranslationFacade;
 use App\Form\Translation\CreateRussianTranslationForm;
 use App\Form\Translation\CreateRussianTranslationFormData;
 use App\Form\Translation\UpdateTranslationForm;
 use App\Form\Translation\UpdateTranslationFormData;
+use App\Form\TranslationExample\TranslationExampleForm;
+use App\Form\TranslationExample\TranslationExampleFormData;
 use App\Form\Word\CzechWordForm;
 use App\Form\Word\CzechWordFormData;
 use App\Repository\CzechWordRepository;
@@ -52,11 +56,11 @@ class CzechWordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $czechWordFacade->createWord($formData);
+            $word = $czechWordFacade->createWord($formData);
 
             $this->addFlashSuccess('czech-word.created_successfully');
 
-            return $this->redirectToRoute('admin.czech-word');
+            return $this->redirectToRoute('admin.czech-word.edit', ['id' => $word->getId()]);
         }
 
         return $this->render(
@@ -87,7 +91,7 @@ class CzechWordController extends AbstractController
 
             $this->addFlashSuccess('czech-word.updated_successfully');
 
-            return $this->redirectToRoute('admin.czech-word');
+            return $this->redirectToRoute('admin.czech-word.edit', ['id' => $word->getId()]);
         }
 
         return $this->render(
@@ -153,7 +157,7 @@ class CzechWordController extends AbstractController
      *     name="admin.czech-word.translations.edit",
      *     requirements={"id": "\d+", "translationId": "\d+"}
      * )
-     * @ParamConverter("translation", options={"id" = "translationId"})
+     * @ParamConverter("translation", options={"id": "translationId"})
      * @Method({"GET", "POST"})
      */
     public function translationsEdit(
@@ -173,9 +177,10 @@ class CzechWordController extends AbstractController
             $this->addFlashSuccess('translation.updated_successfully');
 
             return $this->redirectToRoute(
-                'admin.czech-word.translations',
+                'admin.czech-word.translations.edit',
                 [
                     'id' => $word->getId(),
+                    'translationId' => $translation->getId(),
                 ]
             );
         }
@@ -196,7 +201,7 @@ class CzechWordController extends AbstractController
      *     name="admin.czech-word.translations.remove",
      *     requirements={"id": "\d+", "translationId": "\d+"}
      * )
-     * @ParamConverter("translation", options={"id" = "translationId"})
+     * @ParamConverter("translation", options={"id": "translationId"})
      * @Method("POST")
      */
     public function translationsRemove(
@@ -211,5 +216,127 @@ class CzechWordController extends AbstractController
         $this->addFlashSuccess('translation.deleted_successfully');
 
         return $this->redirectToRoute('admin.czech-word.translations', ['id' => $word->getId()]);
+    }
+
+    /**
+     * @Route(
+     *     "/{id}/translations/{translationId}/examples",
+     *     name="admin.czech-word.translations.examples",
+     *     requirements={"id": "\d+", "translationId": "\d+"}
+     * )
+     * @ParamConverter("translation", options={"id": "translationId"})
+     * @Method({"GET", "POST"})
+     */
+    public function translationExamples(
+        Request $request,
+        CzechWord $word,
+        Translation $translation,
+        TranslationExampleFacade $translationExampleFacade
+    ): Response {
+        $formData = new TranslationExampleFormData($translation);
+        $form = $this->createForm(TranslationExampleForm::class, $formData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $translationExampleFacade->createTranslationExample($formData);
+
+            $this->addFlashSuccess('translation_example.created_successfully');
+
+            return $this->redirectToRoute(
+                'admin.czech-word.translations.examples',
+                [
+                    'id' => $word->getId(),
+                    'translationId' => $translation->getId(),
+                ]
+            );
+        }
+
+        return $this->render(
+            'admin/czech-word/translations/examples/index.html.twig',
+            [
+                'form' => $form->createView(),
+                'word' => $word,
+                'translation' => $translation,
+            ]
+        );
+    }
+
+    /**
+     * @Route(
+     *     "/{id}/translations/{translationId}/examples/{translationExampleId}/edit",
+     *     name="admin.czech-word.translations.examples.edit",
+     *     requirements={"id": "\d+", "translationId": "\d+", "translationExampleId": "\d+"}
+     * )
+     * @ParamConverter("translation", options={"id": "translationId"})
+     * @ParamConverter("translationExample", options={"id": "translationExampleId"})
+     * @Method({"GET", "POST"})
+     */
+    public function translationExamplesEdit(
+        Request $request,
+        CzechWord $word,
+        Translation $translation,
+        TranslationExample $translationExample,
+        TranslationExampleFacade $translationExampleFacade
+    ): Response {
+        $formData = TranslationExampleFormData::fromTranslationExample($translationExample);
+
+        $form = $this->createForm(TranslationExampleForm::class, $formData);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $translationExampleFacade->updateTranslationExample($translationExample, $formData);
+
+            $this->addFlashSuccess('translation_example.updated_successfully');
+
+            return $this->redirectToRoute(
+                'admin.czech-word.translations.examples.edit',
+                [
+                    'id' => $word->getId(),
+                    'translationId' => $translation->getId(),
+                    'translationExampleId' => $translationExample->getId(),
+                ]
+            );
+        }
+
+        return $this->render(
+            'admin/czech-word/translations/examples/edit.html.twig',
+            [
+                'form' => $form->createView(),
+                'word' => $word,
+                'translation' => $translation,
+                'translationExample' => $translationExample,
+            ]
+        );
+    }
+
+    /**
+     * @Route(
+     *     "/{id}/translations/{translationId}/examples/{translationExampleId}/remove",
+     *     name="admin.czech-word.translations.examples.remove",
+     *     requirements={"id": "\d+", "translationId": "\d+", "translationExampleId": "\d+"}
+     * )
+     * @ParamConverter("translation", options={"id": "translationId"})
+     * @ParamConverter("translationExample", options={"id": "translationExampleId"})
+     * @Method("POST")
+     */
+    public function translationExamplesRemove(
+        CzechWord $word,
+        Translation $translation,
+        TranslationExample $translationExample,
+        TranslationExampleFacade $translationExampleFacade
+    ): RedirectResponse {
+        // todo: check that translation example belongs to that word and that translation
+
+        $translationExampleFacade->deleteTranslationExample($translationExample);
+
+        $this->addFlashSuccess('translation_example.deleted_successfully');
+
+        return $this->redirectToRoute(
+            'admin.czech-word.translations.examples',
+            [
+                'id' => $word->getId(),
+                'translationId' => $translation->getId(),
+            ]
+        );
     }
 }

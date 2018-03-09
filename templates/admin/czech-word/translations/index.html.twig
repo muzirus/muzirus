@@ -56,7 +56,12 @@
                                     </a>
                                 </td>
                                 <td>
-                                    {{ translation.examplesCount }}
+                                    <a href="{{ path('admin.czech-word.translations.examples', {
+                                        id: word.id,
+                                        translationId: translation.id
+                                    }) }}">
+                                        <span class="label label-default">{{ translation.examplesCount }}</span>
+                                    </a>
                                 </td>
                                 <td>
                                     {{ translation.russianWordNote }}
@@ -67,7 +72,8 @@
                                 <td>
                                     <div class="btn-group btn-group-xs">
                                         <a href="{{ path('admin.czech-word.translations.edit', {
-                                            id: word.id, translationId: translation.id
+                                            id: word.id,
+                                            translationId: translation.id
                                         }) }}"
                                            class="btn btn-primary">
                                             Edit
@@ -92,41 +98,40 @@
                     </tfoot>
                 </table>
             </div>
+            <div class="box-footer">
+                {{ form_start(form) }}
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="form-control">{{ word.content }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.czechWordNote) }}
+                            {{ form_errors(form.czechWordNote) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.russianWord) }}
+                            {{ form_errors(form.russianWord) }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.russianWordNote) }}
+                            {{ form_errors(form.russianWordNote) }}
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary">
+                    Add exemplification
+                </button>
+                {{ form_end(form) }}
+            </div>
         </div>
-    </div>
-
-    <div class="box-footer">
-        {{ form_start(form) }}
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <div class="form-control">{{ word.content }}</div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    {{ form_widget(form.czechWordNote) }}
-                    {{ form_errors(form.czechWordNote) }}
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    {{ form_widget(form.russianWord) }}
-                    {{ form_errors(form.russianWord) }}
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    {{ form_widget(form.russianWordNote) }}
-                    {{ form_errors(form.russianWordNote) }}
-                </div>
-            </div>
-        </div>
-        <button class="btn btn-primary btn-block">
-            Add exemplification
-        </button>
-        {{ form_end(form) }}
     </div>
 {% endblock %}

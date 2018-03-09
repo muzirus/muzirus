@@ -1,0 +1,30 @@
+<div class="box">
+    {{ form_start(form) }}
+    <div class="box-header with-border">
+        <h3 class="box-title">Add example</h3>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    {{ form_label(form.czechWordSentence) }}
+                    {{ form_widget(form.czechWordSentence) }}
+                    {{ form_errors(form.czechWordSentence) }}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    {{ form_label(form.russianWordSentence) }}
+                    {{ form_widget(form.russianWordSentence) }}
+                    {{ form_errors(form.russianWordSentence) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-footer">
+        <button class="btn btn-primary">
+            Add example
+        </button>
+    </div>
+    {{ form_end(form) }}
+</div>
