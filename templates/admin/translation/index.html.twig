@@ -13,6 +13,7 @@
                         <th>Examples</th>
                         <th>Note RU</th>
                         <th>Note CS</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,13 +29,19 @@
                                     {{ translation.czechWord.content }}
                                 </a>
                             <td>
-                                {{ translation.examplesCount }}
+                                <span class="label label-default">{{ translation.examplesCount }}</span>
                             </td>
                             <td>
                                 {{ translation.russianWordNote }}
                             </td>
                             <td>
                                 {{ translation.czechWordNote }}
+                            </td>
+                            <td>
+                                <a href="{{ path('admin.translation.edit', {id: translation.id}) }}"
+                                   class="btn btn-primary btn-xs">
+                                    Edit
+                                </a>
                             </td>
                         </tr>
                     {% endfor %}
@@ -46,6 +53,7 @@
                         <th>Examples</th>
                         <th>Note RU</th>
                         <th>Note CS</th>
+                        <th>Action</th>
                     </tr>
                 </tfoot>
             </table>

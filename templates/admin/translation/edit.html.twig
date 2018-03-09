@@ -1,7 +1,5 @@
-{% extends 'admin/layout.html.twig' %}
+{% extends 'admin/translation/index.html.twig' %}
 {% import 'admin/_macros/modals.html.twig' as modals %}
-
-{% block title 'Česká slova' %}
 
 {% form_theme form 'bootstrap_3_layout.html.twig' %}
 
@@ -42,8 +40,7 @@
                 <button class="btn btn-primary">
                     Save
                 </button>
-                <a href="{{ path('admin.czech-word.translations', { 'id': word.id }) }}"
-                   class="btn btn-default">
+                <a href="{{ path('admin.translation') }}" class="btn btn-default">
                     Back to list
                 </a>
             </div>
@@ -57,10 +54,7 @@
     </div>
 
     {{ modals.removeModal(
-        path('admin.czech-word.translations.remove', {
-            id: word.id,
-            translationId: translation.id
-        }),
+        path('admin.translation.remove', { id: translation.id }),
         'Do you really want to remove this translation?'
     ) }}
 {% endblock %}

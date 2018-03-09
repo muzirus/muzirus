@@ -59,8 +59,8 @@
                                     <a href="{{ path('admin.russian-word.translations.examples', {
                                         id: word.id,
                                         translationId: translation.id
-                                    }) }}">
-                                        <span class="label label-default">{{ translation.examplesCount }}</span>
+                                    }) }}" class="btn btn-primary btn-xs">
+                                        {{ translation.examplesCount }} examples
                                     </a>
                                 </td>
                                 <td>
@@ -70,18 +70,13 @@
                                     {{ translation.czechWordNote }}
                                 </td>
                                 <td>
-                                    <div class="btn-group btn-group-xs">
-                                        <a href="{{ path('admin.russian-word.translations.edit', {
-                                            id: word.id,
-                                            translationId: translation.id
-                                        }) }}"
-                                           class="btn btn-primary">
-                                            Edit
-                                        </a>
-                                        <a href="#" class="btn btn-danger" onclick="return confirm('Are you sure?');">
-                                            Remove
-                                        </a>
-                                    </div>
+                                    <a href="{{ path('admin.russian-word.translations.edit', {
+                                        id: word.id,
+                                        translationId: translation.id
+                                    }) }}"
+                                       class="btn btn-primary btn-xs">
+                                        Edit
+                                    </a>
                                 </td>
                             </tr>
                         {% endfor %}
