@@ -39,7 +39,6 @@ class CzechWordForm extends AbstractType
                     'neuter' => AbstractWordInterface::GENDER_NEUTER,
                     'unknown' => AbstractWordInterface::GENDER_UNKNOWN,
                 ],
-                'expanded' => true,
                 'empty_data' => AbstractWordInterface::GENDER_UNKNOWN,
             ])
             ->add('languageNoteOther', TextareaType::class, [
