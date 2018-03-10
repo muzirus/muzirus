@@ -3,6 +3,7 @@
 namespace App\Form\Source;
 
 use App\Entity\SourceType;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -23,6 +24,9 @@ class SourceForm extends AbstractType
             ->add('type', Entitytype::class, [
                 'class' => SourceType::class,
                 'choice_label' => 'title',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('st')->orderBy('st.title', 'ASC');
+                },
             ])
             ->add('nameOfAuthor', TextType::class, [
                 'empty_data' => '',

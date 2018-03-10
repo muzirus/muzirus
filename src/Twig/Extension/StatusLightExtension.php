@@ -12,6 +12,9 @@ class StatusLightExtension extends \Twig_Extension
             new \Twig_SimpleFilter('convert_status_code_to_icon', function (int $status) {
                 return $this->getStatusLightCode($status);
             }),
+            new \Twig_SimpleFilter('convert_status_code_to_class', function (int $status) {
+                return $this->getStatusLightClass($status);
+            }),
         ];
     }
 
@@ -27,6 +30,22 @@ class StatusLightExtension extends \Twig_Extension
             case AbstractWordInterface::STATUS_LIGHT_UNKNOWN:
             default:
                 return '<i class="fa fa-question-circle text-gray"></i>';
+        }
+    }
+
+    private function getStatusLightClass(int $status): string
+    {
+        switch ($status) {
+            case AbstractWordInterface::STATUS_LIGHT_RED:
+                //return 'danger';
+                return '';
+            case AbstractWordInterface::STATUS_LIGHT_YELLOW:
+                return 'warning';
+            case AbstractWordInterface::STATUS_LIGHT_GREEN:
+                return 'success';
+            case AbstractWordInterface::STATUS_LIGHT_UNKNOWN:
+            default:
+                return '';
         }
     }
 }

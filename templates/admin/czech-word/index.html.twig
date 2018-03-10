@@ -1,5 +1,7 @@
 {% extends 'admin/layout.html.twig' %}
 
+{% import 'admin/_macros/labels.html.twig' as labels %}
+
 {% block title 'Česká slova' %}
 
 {% block content %}
@@ -12,11 +14,14 @@
                         <th>Translations</th>
                         <th>Inflection</th>
                         <th>Gender</th>
+                        <th>Created</th>
+                        <th>Updated</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for word in words %}
-                        <tr>
+                        <tr class="{{ word.statusLight|convert_status_code_to_class }}">
                             <td>
                                 <div class="clearfix">
                                     <div class="pull-left">
@@ -29,7 +34,6 @@
                                             <i class="fa fa-info-circle text-info" data-toggle="tooltip"
                                                data-placement="left" title="Imported"></i>
                                         {% endif %}
-                                        {{ word.statusLight|convert_status_code_to_icon|raw }}
                                     </div>
                                 </div>
                             </td>
@@ -40,6 +44,9 @@
                             </td>
                             <td>{{ word.languageNoteExceptionToInflection }}</td>
                             <td>{{ word.languageNoteGender|gender_as_string }}</td>
+                            <td>{{ word.createdAtFormat('Y-m-d') }}</td>
+                            <td>{{ word.updatedAtFormat('Y-m-d') }}</td>
+                            <td>{{ labels.wordStatus(word.statusLight) }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -49,6 +56,9 @@
                         <th>Translations</th>
                         <th>Inflection</th>
                         <th>Gender</th>
+                        <th>Created</th>
+                        <th>Updated</th>
+                        <th>Status</th>
                     </tr>
                 </tfoot>
             </table>

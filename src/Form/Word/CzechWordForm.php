@@ -5,6 +5,7 @@ namespace App\Form\Word;
 use App\Entity\AbstractWordInterface;
 use App\Entity\Source;
 use App\Entity\WordCategory;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -73,6 +74,9 @@ class CzechWordForm extends AbstractType
             ->add('categories', EntityType::class, [
                 'class' => WordCategory::class,
                 'choice_label' => 'title',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('wc')->orderBy('wc.title', 'ASC');
+                },
                 'multiple' => true,
                 'expanded' => true,
                 'empty_data' => [],
@@ -80,16 +84,19 @@ class CzechWordForm extends AbstractType
             ->add('sources', EntityType::class, [
                 'class' => Source::class,
                 'choice_label' => 'title',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('s')->orderBy('s.title', 'ASC');
+                },
                 'multiple' => true,
                 'expanded' => true,
                 'empty_data' => [],
             ])
             ->add('statusLight', ChoiceType::class, [
                 'choices' => [
-                    'green' => AbstractWordInterface::STATUS_LIGHT_GREEN,
-                    'yellow' => AbstractWordInterface::STATUS_LIGHT_YELLOW,
-                    'red' => AbstractWordInterface::STATUS_LIGHT_RED,
-                    'unknown' => AbstractWordInterface::STATUS_LIGHT_UNKNOWN,
+                    'Ready' => AbstractWordInterface::STATUS_LIGHT_GREEN,
+                    'Need work' => AbstractWordInterface::STATUS_LIGHT_YELLOW,
+                    'Not processed' => AbstractWordInterface::STATUS_LIGHT_RED,
+                    'Unknown' => AbstractWordInterface::STATUS_LIGHT_UNKNOWN,
                 ],
                 'expanded' => true,
                 'empty_data' => AbstractWordInterface::STATUS_LIGHT_UNKNOWN,

@@ -1,7 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'app/layout.html.twig' %}
 
 {% block title 'Hey bro!' %}
 
-{% block body %}
-    Hello world!
+{% block content %}
+    <div class="form-group">
+        <input class="form-control" type="text" title="" placeholder="Začněte psát...">
+    </div>
+    <hr>
+    <div class="well">
+        some words
+    </div>
 {% endblock %}
