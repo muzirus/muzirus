@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {{ include('app/_fragments/_nav.html.twig') }}
     <div class="container">
+        <h1 class="text-center">{% block title '' %}</h1>
         {% block content %}
             <div class="well">
                 <h1>Hi there! General Kenobi...</h1>

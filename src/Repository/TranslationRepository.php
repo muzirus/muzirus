@@ -2,10 +2,11 @@
 
 namespace App\Repository;
 
-use App\Entity\CzechWordInterface;
-use App\Entity\RussianWordInterface;
 use App\Entity\Translation;
+use App\Entity\TranslationInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 class TranslationRepository extends ServiceEntityRepository
@@ -16,7 +17,7 @@ class TranslationRepository extends ServiceEntityRepository
     }
 
     /**
-     * @return Translation[]
+     * @return TranslationInterface[]
      */
     public function getAll(): array
     {
@@ -33,39 +34,52 @@ class TranslationRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param int $id
-     * @return Translation
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return Pagerfanta|TranslationInterface[]
      */
-    public function getOneById(int $id): Translation
+    public function findWithWordsAsPaginator(int $page, int $maxPerPage = 10): Pagerfanta
     {
-        $qb = $this->createQueryBuilder('t');
+        $query = $this
+            ->createQueryBuilder('t')
+            ->select(['t', 'rw', 'cw'])
+            ->join('t.russianWord', 'rw')
+            ->join('t.czechWord', 'cw')
+            ->getQuery();
 
-        $qb->select(['t']);
-        $qb->where('t.id = :id');
-        $qb->setParameter('id', $id);
 
-        return $qb->getQuery()->getSingleResult();
+        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
+        $paginator->setMaxPerPage($maxPerPage);
+        $paginator->setCurrentPage($page);
+
+        return $paginator;
     }
 
     /**
-     * @param RussianWordInterface $firstWord
-     * @param CzechWordInterface $secondWord
-     * @return Translation
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return TranslationInterface[]
      */
-    public function getOneByWords(RussianWordInterface $firstWord, CzechWordInterface $secondWord): Translation
+    public function findByStartingLettersOfRussianWord(string $letters): array
     {
-        $qb = $this->createQueryBuilder('t');
+        return $this->createQueryBuilder('t')
+            ->select('t, rw, cw')
+            ->join('t.russianWord', 'rw')
+            ->join('t.czechWord', 'cw')
+            ->where('rw.content LIKE :letters')
+            ->setParameter('letters', "%${letters}")
+            ->getQuery()
+            ->getArrayResult();
+    }
 
-        $qb->where('t.firstWord = :firstWord');
-        $qb->andWhere('t.secondWord = :secondWord');
-
-        $qb->setParameter('firstWord', $firstWord);
-        $qb->setParameter('secondWord', $secondWord);
-
-        return $qb->getQuery()->getSingleResult();
+    /**
+     * @return TranslationInterface[]
+     */
+    public function findByStartingLettersOfCzechWord(string $letters): array
+    {
+        return $this->createQueryBuilder('t')
+            ->select('t, rw, cw')
+            ->join('t.russianWord', 'rw')
+            ->join('t.czechWord', 'cw')
+            ->where('cw.content LIKE :letters')
+            ->setParameter('letters', "%${letters}")
+            ->getQuery()
+            ->getArrayResult();
     }
 }

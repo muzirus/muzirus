@@ -1,0 +1,25 @@
+{% extends 'app/layout.html.twig' %}
+
+{% block title 'Česká slová' %}
+
+{% block content %}
+    {% for word in words %}
+        <h3>
+            <a href="{{ path('app.word.czech_to_russian.detail', { id: word.id }) }}">{{ word }}</a>
+        </h3>
+        <ol>
+            {% for translation in word.translations %}
+                <li>
+                    {{ word }} &equals;&gt; {{ translation.russianWord }}
+                </li>
+            {% endfor %}
+        </ol>
+        <hr>
+    {% endfor %}
+
+    {% if words.haveToPaginate %}
+        <div class="navigation text-center">
+            {{ pagerfanta(words, 'twitter_bootstrap3', { routeName: 'app.word.czech_to_russian.paginated' }) }}
+        </div>
+    {% endif %}
+{% endblock %}

@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Entity\RussianWord;
 use App\Entity\RussianWordInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 class RussianWordRepository extends ServiceEntityRepository
@@ -29,26 +31,26 @@ class RussianWordRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param int $id
-     * @return RussianWordInterface
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return Pagerfanta|RussianWordInterface[]
      */
-    public function getOne(int $id): RussianWordInterface
+    public function findWithTranslationsAsPaginator(int $page, int $maxPerPage = 10): Pagerfanta
     {
-        return $this
-            ->createQueryBuilder('w')
-            ->select(['w', 't'])
-            ->leftJoin('w.translations', 't')
-            ->where('w.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getSingleResult();
+        $query = $this
+            ->createQueryBuilder('rw')
+            ->select(['rw', 't', 'cw'])
+            ->join('rw.translations', 't')
+            ->join('t.czechWord', 'cw')
+            ->orderBy('rw.content', 'ASC')
+            ->getQuery();
+
+        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
+        $paginator->setMaxPerPage($maxPerPage);
+        $paginator->setCurrentPage($page);
+
+        return $paginator;
     }
 
     /**
-     * @param RussianWordInterface $word
-     * @return RussianWordInterface|null
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function findOnePrev(RussianWordInterface $word): ?RussianWordInterface
@@ -66,8 +68,6 @@ class RussianWordRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param RussianWordInterface $word
-     * @return RussianWordInterface|null
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function findOneNext(RussianWordInterface $word): ?RussianWordInterface
@@ -82,18 +82,5 @@ class RussianWordRepository extends ServiceEntityRepository
             ->orderBy('w.content', 'ASC')
             ->getQuery()
             ->getOneOrNullResult();
-    }
-
-    /**
-     * @return int
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
-    public function getCount(): int
-    {
-        return $this
-            ->createQueryBuilder('w')
-            ->select('COUNT(w)')
-            ->getQuery()
-            ->getSingleScalarResult();
     }
 }

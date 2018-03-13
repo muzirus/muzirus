@@ -4,10 +4,10 @@ namespace App\Controller;
 
 abstract class AbstractController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
 {
-    protected const FLASH_TYPE_INFO = 'info';
-    protected const FLASH_TYPE_SUCCESS = 'success';
-    protected const FLASH_TYPE_WARNING = 'warning';
-    protected const FLASH_TYPE_DANGER = 'danger';
+    private const FLASH_TYPE_INFO = 'info';
+    private const FLASH_TYPE_SUCCESS = 'success';
+    private const FLASH_TYPE_WARNING = 'warning';
+    private const FLASH_TYPE_DANGER = 'danger';
 
     protected function addFlashInfo(string $message): void
     {

@@ -1,0 +1,11 @@
+{% macro wordStatus(statusId) %}
+    {% if statusId == 1 %}
+        <span class="label label-danger">Not processed</span>
+    {% elseif statusId == 2 %}
+        <span class="label label-warning">Need work</span>
+    {% elseif statusId == 3 %}
+        <span class="label label-success">Ready</span>
+    {% else %}
+        <span class="label label-default">Unknown</span>
+    {% endif %}
+{% endmacro %}

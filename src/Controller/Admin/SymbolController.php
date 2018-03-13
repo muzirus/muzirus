@@ -71,20 +71,6 @@ class SymbolController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin.symbol.view", requirements={"id": "\d+"})
-     * @Method("GET")
-     */
-    public function view(Symbol $symbol): Response
-    {
-        return $this->render(
-            'admin/symbol/view.html.twig',
-            [
-                'symbol' => $symbol,
-            ]
-        );
-    }
-
-    /**
      * @Route("/{id}/edit", name="admin.symbol.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */

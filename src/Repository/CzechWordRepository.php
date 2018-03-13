@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Entity\CzechWord;
 use App\Entity\CzechWordInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 class CzechWordRepository extends ServiceEntityRepository
@@ -22,28 +24,30 @@ class CzechWordRepository extends ServiceEntityRepository
         return $this
             ->createQueryBuilder('w')
             ->select(['w', 't'])
-            ->leftJoin('w.translations', 't')
+            ->join('w.translations', 't')
             ->orderBy('w.content', 'ASC')
             ->getQuery()
             ->getResult();
     }
 
     /**
-     * @param int $id
-     * @return CzechWordInterface
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return Pagerfanta|CzechWordInterface[]
      */
-    public function getOne(int $id): CzechWordInterface
+    public function findWithTranslationsAsPaginator(int $page, int $maxPerPage = 10): Pagerfanta
     {
-        return $this
-            ->createQueryBuilder('w')
-            ->select(['w', 't'])
-            ->leftJoin('w.translations', 't')
-            ->where('w.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getSingleResult();
+        $query = $this->createQueryBuilder('cw')
+            ->select(['cw', 't', 'rw'])
+            ->join('cw.translations', 't')
+            ->join('t.russianWord', 'rw')
+            ->orderBy('cw.content', 'ASC')
+            ->getQuery();
+
+
+        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
+        $paginator->setMaxPerPage($maxPerPage);
+        $paginator->setCurrentPage($page);
+
+        return $paginator;
     }
 
     /**
@@ -82,18 +86,5 @@ class CzechWordRepository extends ServiceEntityRepository
             ->orderBy('w.content', 'ASC')
             ->getQuery()
             ->getOneOrNullResult();
-    }
-
-    /**
-     * @return int
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
-    public function getCount(): int
-    {
-        return $this
-            ->createQueryBuilder('w')
-            ->select('COUNT(w)')
-            ->getQuery()
-            ->getSingleScalarResult();
     }
 }

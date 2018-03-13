@@ -7,18 +7,16 @@
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>
-        <div class="navbar-custom-menu">
+        <div class="navbar-custom-menu hidden-xs">
             <ul class="nav navbar-nav">
-                {#
                 <li>
-                    <a href="#">
-                        <span class="hidden-xs">Profile</span>
+                    <a href="{{ path('app.index') }}">
+                        <i class="fa fa-home"></i> Visit site
                     </a>
                 </li>
-                #}
                 <li>
                     <a href="{{ path('logout') }}" onclick="return confirm('Are you sure?');">
-                        <span class="hidden-xs">Sign out</span>
+                        <i class="fa fa-sign-out"></i> Sign out
                     </a>
                 </li>
             </ul>

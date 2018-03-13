@@ -71,20 +71,6 @@ class AbbreviationController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin.abbreviation.view", requirements={"id": "\d+"})
-     * @Method("GET")
-     */
-    public function view(Abbreviation $abbreviation): Response
-    {
-        return $this->render(
-            'admin/abbreviation/view.html.twig',
-            [
-                'abbreviation' => $abbreviation,
-            ]
-        );
-    }
-
-    /**
      * @Route("/{id}/edit", name="admin.abbreviation.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */

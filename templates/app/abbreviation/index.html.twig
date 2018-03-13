@@ -1,0 +1,24 @@
+{% extends 'app/layout.html.twig' %}
+
+{% block title 'Seznam zkratek' %}
+
+{% block content %}
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Zkratka</th>
+                <th>Význam</th>
+                <th>Poznámka</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for abbreviation in abbreviations %}
+                <tr>
+                    <td><em>{{ abbreviation.content }}</em></td>
+                    <td>{{ abbreviation.title }}</td>
+                    <td>{{ abbreviation.description }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

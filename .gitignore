@@ -10,6 +10,7 @@
 ###> symfony/webpack-encore-pack ###
 /node_modules/
 /public/build/
+yarn-error.log
 ###< symfony/webpack-encore-pack ###
 
 ###> symfony/phpunit-bridge ###

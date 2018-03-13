@@ -1,0 +1,30 @@
+{% extends 'app/layout.html.twig' %}
+
+{% block title 'Ruské slovo' %}
+
+{% block content %}
+    <h3>{{ word }}</h3>
+    <ol>
+        {% for translation in word.translations %}
+            <li>
+                <div>
+                    <a href="{{ path('app.word.russian_to_czech.detail', { id: word.id }) }}">{{ word }}</a>
+                    &equals;&gt;
+                    <a href="{{ path('app.word.czech_to_russian.detail', { id: translation.czechWord.id }) }}">
+                        {{ translation.czechWord }}
+                    </a>
+                </div>
+                <div>
+                    <em>Ukázky:</em>
+                    <ol>
+                        {% for example in translation.examples %}
+                            <li>
+                                {{ example.russianWordSentence }} &equals;&gt; {{ example.czechWordSentence }}
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock %}
