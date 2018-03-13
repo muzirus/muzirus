@@ -8,9 +8,9 @@
         {% for translation in word.translations %}
             <li>
                 <div>
-                    <a href="{{ path('app.word.russian_to_czech.detail', { id: word.id }) }}">{{ word }}</a>
+                    <a href="{{ path('app.russian_to_czech.detail', { id: word.id }) }}">{{ word }}</a>
                     &equals;&gt;
-                    <a href="{{ path('app.word.czech_to_russian.detail', { id: translation.czechWord.id }) }}">
+                    <a href="{{ path('app.czech_to_russian.detail', { id: translation.czechWord.id }) }}">
                         {{ translation.czechWord }}
                     </a>
                 </div>
