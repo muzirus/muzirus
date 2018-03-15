@@ -13,17 +13,17 @@
 
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{ path('app.russian_to_czech') }}">Ruská slova</a></li>
-                <li><a href="{{ path('app.czech_to_russian') }}">Česká slova</a></li>
+                <li><a href="{{ path('app.russian_to_czech') }}">Ruský heslář</a></li>
+                <li><a href="{{ path('app.czech_to_russian') }}">Český heslář</a></li>
                 <li><a href="{{ path('app.abbreviation') }}">Zkratky</a></li>
                 <li><a href="{{ path('app.about') }}">O projektu</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if app.user %}
-                    <li><a href="{{ path('admin.dashboard') }}"><i class="fa fa-cog"></i>&nbsp;Admin</a></li>
-                    <li><a href="{{ path('logout') }}"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>
+                    <li><a href="{{ path('admin.dashboard') }}"><i class="fa fa-cog"></i>&nbsp;Administrace</a></li>
+                    <li><a href="{{ path('logout') }}"><i class="fa fa-sign-out"></i>&nbsp;Odhlásit</a></li>
                 {% else %}
-                    <li><a href="{{ path('login') }}"><i class="fa fa-sign-in"></i>&nbsp;Log in</a></li>
+                    <li><a href="{{ path('login') }}"><i class="fa fa-sign-in"></i>&nbsp;Přihlásit</a></li>
                 {% endif %}
             </ul>
         </div>

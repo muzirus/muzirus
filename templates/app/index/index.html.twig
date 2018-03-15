@@ -1,13 +1,31 @@
 {% extends 'app/layout.html.twig' %}
 
-{% block title 'Hey bro!' %}
-
 {% block content %}
     <div class="form-group">
         <input class="form-control" type="text" title="" placeholder="Začněte psát...">
     </div>
     <hr>
     <div class="well">
-        some words
+        <p>
+            Slovník je dílem studentky Ostravské univerzity a překladatelky Jany Melčákové, pro kterou
+            absence slovníku takového typu byla spíš než překážkou výzvou k jeho zpracování.
+        </p>
+        <p>Proč je slovník atraktivní?</p>
+        <ul>
+            <li>
+                Slovník hudebních pojmů online je obousměrný, tj. rusko-český i česko-ruský.
+            </li>
+            <li>
+                Všechna hesla jsou opatřena popisným aparátem a postupně obohacována o užitečné příklady
+                užití.
+            </li>
+            <li>
+                Hesla jsou postupně zařazována do tematických okruhů.
+            </li>
+            <li>
+                Ruská i česká hesla jsou vypracovávána zvlášť, nejde pouze o inverzní překlopení.
+            </li>
+        </ul>
     </div>
+    <div class="alert alert-info">Slovník je dosud ve výstavbě, další hesla budou zveřejňována kontinuálně.</div>
 {% endblock %}
