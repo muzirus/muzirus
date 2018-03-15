@@ -25,16 +25,29 @@ cd dictionary
 ### Install PHP dependencies
 
 ```bash
-composer install
+composer prod
 ```
 
-### Install JS dependencies
+### Install JS dependencies and build them
 
 ```bash
 yarn install
+yarn run build
 ```
 
 ## Dev server
+
+Install PHP dependencies with dev dependencies
+
+```bash
+composer dev
+```
+
+Install JS dependencies and build them
+
+```bash
+yarn run dev
+```
 
 Start server
 
