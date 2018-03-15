@@ -2,11 +2,9 @@
 
 namespace App\Entity;
 
-use App\Entity\Able\Approvable;
-use App\Entity\Able\Refusable;
 use App\Entity\Able\Timestampable;
 
-interface TranslationInterface extends Timestampable, Approvable, Refusable
+interface TranslationInterface extends Timestampable
 {
     public function getId(): int;
 

@@ -23,12 +23,10 @@ class TranslationRepository extends ServiceEntityRepository
     {
         return $this
             ->createQueryBuilder('t')
-            ->select(['t', 'te', 'rw', 'cw', 'a', 'r'])
+            ->select(['t', 'te', 'rw', 'cw'])
             ->leftJoin('t.translationExamples', 'te')
             ->leftJoin('t.russianWord', 'rw')
             ->leftJoin('t.czechWord', 'cw')
-            ->leftJoin('t.approvals', 'a')
-            ->leftJoin('t.refusals', 'r')
             ->getQuery()
             ->getResult();
     }
