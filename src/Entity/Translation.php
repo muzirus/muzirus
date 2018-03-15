@@ -66,30 +66,6 @@ class Translation implements TranslationInterface
      */
     private $translationExamples;
 
-    /**
-     * Owning side.
-     * @ORM\ManyToMany(targetEntity="User", fetch="EXTRA_LAZY")
-     * @ORM\JoinTable(
-     *     name="translations_approvals",
-     *     joinColumns={@ORM\JoinColumn(name="translation_id", referencedColumnName="id")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")}
-     * )
-     * @var ArrayCollection
-     */
-    private $approvals;
-
-    /**
-     * Owning side.
-     * @ORM\ManyToMany(targetEntity="User", fetch="EXTRA_LAZY")
-     * @ORM\JoinTable(
-     *     name="translations_refusals",
-     *     joinColumns={@ORM\JoinColumn(name="translation_id", referencedColumnName="id")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")}
-     * )
-     * @var ArrayCollection
-     */
-    private $refusals;
-
     //-------------------------------------------------------------------------
 
     public function __construct(RussianWordInterface $russianWord, CzechWordInterface $czechWord)
@@ -97,8 +73,6 @@ class Translation implements TranslationInterface
         $this->russianWord = $russianWord;
         $this->czechWord = $czechWord;
         $this->translationExamples = new ArrayCollection();
-        $this->approvals = new ArrayCollection();
-        $this->refusals = new ArrayCollection();
     }
 
     //-------------------------------------------------------------------------
@@ -169,71 +143,5 @@ class Translation implements TranslationInterface
     public function getExamplesCount(): int
     {
         return $this->translationExamples->count();
-    }
-
-    /**
-     * @return UserInterface[]
-     */
-    public function getUsersThatApproved(): array
-    {
-        return $this->approvals->toArray();
-    }
-
-    public function countUsersThatApproved(): int
-    {
-        return $this->approvals->count();
-    }
-
-    public function hasApprovalFromUser(UserInterface $user): bool
-    {
-        return $this->approvals->contains($user);
-    }
-
-    public function addApprovalFromUser(UserInterface $user): void
-    {
-        $this->removeRefusalFromUser($user);
-        if (!$this->approvals->contains($user)) {
-            $this->approvals->add($user);
-        }
-    }
-
-    public function removeApprovalFromUser(UserInterface $user): void
-    {
-        if ($this->hasApprovalFromUser($user)) {
-            $this->approvals->removeElement($user);
-        }
-    }
-
-    /**
-     * @return UserInterface[]
-     */
-    public function getUsersThatRefused(): array
-    {
-        return $this->refusals->toArray();
-    }
-
-    public function countUsersThatRefused(): int
-    {
-        return $this->refusals->count();
-    }
-
-    public function hasRefusalFromUser(UserInterface $user): bool
-    {
-        return $this->refusals->contains($user);
-    }
-
-    public function addRefusalFromUser(UserInterface $user): void
-    {
-        $this->removeApprovalFromUser($user);
-        if (!$this->refusals->contains($user)) {
-            $this->refusals->add($user);
-        }
-    }
-
-    public function removeRefusalFromUser(UserInterface $user): void
-    {
-        if ($this->hasRefusalFromUser($user)) {
-            $this->refusals->removeElement($user);
-        }
     }
 }
