@@ -4,12 +4,15 @@ namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
 use App\Entity\Source;
+use App\Event\SourceEvent;
+use App\Events;
 use App\Facade\SourceFacade;
 use App\Form\Source\SourceForm;
 use App\Form\Source\SourceFormData;
 use App\Repository\SourceRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,16 +22,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class SourceController extends AbstractController
 {
-    /**
-     * @var SourceFacade
-     */
-    private $sourceFacade;
-
-    public function __construct(SourceFacade $sourceFacade)
-    {
-        $this->sourceFacade = $sourceFacade;
-    }
-
     /**
      * @Route("", name="admin.source")
      * @Method("GET")
@@ -47,7 +40,7 @@ class SourceController extends AbstractController
      * @Route("/add", name="admin.source.add")
      * @Method({"GET", "POST"})
      */
-    public function add(Request $request): Response
+    public function add(Request $request, SourceFacade $sourceFacade, EventDispatcherInterface $dispatcher): Response
     {
         $formData = new SourceFormData();
 
@@ -55,7 +48,12 @@ class SourceController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->sourceFacade->createSource($formData);
+            $source = $sourceFacade->createSource($formData);
+
+            $dispatcher->dispatch(
+                Events::SOURCE_CREATED,
+                new SourceEvent($this->getUser(), $source)
+            );
 
             $this->addFlashSuccess('source.created_successfully');
 
@@ -74,15 +72,24 @@ class SourceController extends AbstractController
      * @Route("/{id}/edit", name="admin.source.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, Source $source): Response
-    {
+    public function edit(
+        Request $request,
+        Source $source,
+        SourceFacade $sourceFacade,
+        EventDispatcherInterface $dispatcher
+    ): Response {
         $formData = SourceFormData::createFromSource($source);
 
         $form = $this->createForm(SourceForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->sourceFacade->updateSource($source, $formData);
+            $sourceFacade->updateSource($source, $formData);
+
+            $dispatcher->dispatch(
+                Events::SOURCE_UPDATED,
+                new SourceEvent($this->getUser(), $source)
+            );
 
             $this->addFlashSuccess('source.update_successfully');
 
@@ -102,9 +109,9 @@ class SourceController extends AbstractController
      * @Route("/{id}/remove", name="admin.source.remove", requirements={"id": "\d+"})
      * @Method("POST")
      */
-    public function remove(Source $source): RedirectResponse
+    public function remove(Source $source, SourceFacade $sourceFacade): RedirectResponse
     {
-        $this->sourceFacade->deleteSource($source);
+        $sourceFacade->deleteSource($source);
 
         $this->addFlashSuccess('source.deleted_successfully');
 

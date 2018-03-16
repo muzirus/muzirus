@@ -6,6 +6,10 @@ use App\Controller\AbstractController;
 use App\Entity\CzechWord;
 use App\Entity\Translation;
 use App\Entity\TranslationExample;
+use App\Event\CzechWordEvent;
+use App\Event\TranslationEvent;
+use App\Event\TranslationExampleEvent;
+use App\Events;
 use App\Facade\CzechWordFacade;
 use App\Facade\TranslationExampleFacade;
 use App\Facade\TranslationFacade;
@@ -21,6 +25,7 @@ use App\Repository\CzechWordRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -48,8 +53,11 @@ class CzechWordController extends AbstractController
      * @Route("/add", name="admin.czech-word.add")
      * @Method({"GET", "POST"})
      */
-    public function add(Request $request, CzechWordFacade $czechWordFacade): Response
-    {
+    public function add(
+        Request $request,
+        CzechWordFacade $czechWordFacade,
+        EventDispatcherInterface $dispatcher
+    ): Response {
         $formData = new CzechWordFormData();
 
         $form = $this->createForm(CzechWordForm::class, $formData);
@@ -57,6 +65,11 @@ class CzechWordController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $word = $czechWordFacade->createWord($formData);
+
+            $dispatcher->dispatch(
+                Events::CZECH_WORD_CREATED,
+                new CzechWordEvent($this->getUser(), $word)
+            );
 
             $this->addFlashSuccess('czech-word.created_successfully');
 
@@ -79,7 +92,8 @@ class CzechWordController extends AbstractController
         Request $request,
         CzechWord $word,
         CzechWordFacade $czechWordFacade,
-        CzechWordRepository $czechWordRepository
+        CzechWordRepository $czechWordRepository,
+        EventDispatcherInterface $dispatcher
     ): Response {
         $formData = CzechWordFormData::createFromWord($word);
 
@@ -88,6 +102,11 @@ class CzechWordController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $czechWordFacade->updateWord($word, $formData);
+
+            $dispatcher->dispatch(
+                Events::CZECH_WORD_UPDATED,
+                new CzechWordEvent($this->getUser(), $word)
+            );
 
             $this->addFlashSuccess('czech-word.updated_successfully');
 
@@ -126,14 +145,20 @@ class CzechWordController extends AbstractController
         Request $request,
         CzechWord $word,
         TranslationFacade $translationFacade,
-        CzechWordRepository $czechWordRepository
+        CzechWordRepository $czechWordRepository,
+        EventDispatcherInterface $dispatcher
     ): Response {
         $formData = new CreateRussianTranslationFormData($word);
         $form = $this->createForm(CreateRussianTranslationForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $translationFacade->createTranslation($formData);
+            $translation = $translationFacade->createTranslation($formData);
+
+            $dispatcher->dispatch(
+                Events::TRANSLATION_CREATED,
+                new TranslationEvent($this->getUser(), $translation)
+            );
 
             $this->addFlashSuccess('translation.created_successfully');
 
@@ -164,7 +189,8 @@ class CzechWordController extends AbstractController
         Request $request,
         CzechWord $word,
         Translation $translation,
-        TranslationFacade $translationFacade
+        TranslationFacade $translationFacade,
+        EventDispatcherInterface $dispatcher
     ): Response {
         $formData = UpdateTranslationFormData::fromTranslation($translation);
 
@@ -173,6 +199,11 @@ class CzechWordController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $translationFacade->updateTranslation($translation, $formData);
+
+            $dispatcher->dispatch(
+                Events::TRANSLATION_UPDATED,
+                new TranslationEvent($this->getUser(), $translation)
+            );
 
             $this->addFlashSuccess('translation.updated_successfully');
 
@@ -231,14 +262,20 @@ class CzechWordController extends AbstractController
         Request $request,
         CzechWord $word,
         Translation $translation,
-        TranslationExampleFacade $translationExampleFacade
+        TranslationExampleFacade $translationExampleFacade,
+        EventDispatcherInterface $dispatcher
     ): Response {
         $formData = new TranslationExampleFormData($translation);
         $form = $this->createForm(TranslationExampleForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $translationExampleFacade->createTranslationExample($formData);
+            $translationExample = $translationExampleFacade->createTranslationExample($formData);
+
+            $dispatcher->dispatch(
+                Events::TRANSLATION_EXAMPLE_CREATED,
+                new TranslationExampleEvent($this->getUser(), $translationExample)
+            );
 
             $this->addFlashSuccess('translation_example.created_successfully');
 
@@ -276,7 +313,8 @@ class CzechWordController extends AbstractController
         CzechWord $word,
         Translation $translation,
         TranslationExample $translationExample,
-        TranslationExampleFacade $translationExampleFacade
+        TranslationExampleFacade $translationExampleFacade,
+        EventDispatcherInterface $dispatcher
     ): Response {
         $formData = TranslationExampleFormData::fromTranslationExample($translationExample);
 
@@ -285,6 +323,11 @@ class CzechWordController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $translationExampleFacade->updateTranslationExample($translationExample, $formData);
+
+            $dispatcher->dispatch(
+                Events::TRANSLATION_EXAMPLE_UPDATED,
+                new TranslationExampleEvent($this->getUser(), $translationExample)
+            );
 
             $this->addFlashSuccess('translation_example.updated_successfully');
 
