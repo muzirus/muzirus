@@ -1,6 +1,6 @@
 {% extends 'admin/layout.html.twig' %}
 
-{% block title 'Exemplifikace' %}
+{% block title 'admin.translation_examples'|trans %}
 
 {% block content %}
     <div class="box">
@@ -8,12 +8,12 @@
             <table class="table table-striped table-hover js-data-table">
                 <thead>
                     <tr>
-                        <th>Russian</th>
-                        <th>Czech</th>
-                        <th>Examples</th>
-                        <th>Note RU</th>
-                        <th>Note CS</th>
-                        <th>Action</th>
+                        <th>{{ 'admin.russian'|trans }}</th>
+                        <th>{{ 'admin.czech'|trans }}</th>
+                        <th>{{ 'admin.examples'|trans }}</th>
+                        <th>{{ 'admin.russian_note'|trans }}</th>
+                        <th>{{ 'admin.czech_note'|trans }}</th>
+                        <th>{{ 'admin.actions'|trans }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +40,7 @@
                             <td>
                                 <a href="{{ path('admin.translation.edit', {id: translation.id}) }}"
                                    class="btn btn-primary btn-xs">
-                                    Edit
+                                    {{ 'admin.button.edit'|trans }}
                                 </a>
                             </td>
                         </tr>
@@ -48,12 +48,12 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>Russian</th>
-                        <th>Czech</th>
-                        <th>Examples</th>
-                        <th>Note RU</th>
-                        <th>Note CS</th>
-                        <th>Action</th>
+                        <th>{{ 'admin.russian'|trans }}</th>
+                        <th>{{ 'admin.czech'|trans }}</th>
+                        <th>{{ 'admin.examples'|trans }}</th>
+                        <th>{{ 'admin.russian_note'|trans }}</th>
+                        <th>{{ 'admin.czech_note'|trans }}</th>
+                        <th>{{ 'admin.actions'|trans }}</th>
                     </tr>
                 </tfoot>
             </table>

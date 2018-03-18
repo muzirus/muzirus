@@ -1,7 +1,7 @@
 {% extends 'admin/layout.html.twig' %}
 {% import 'admin/_macros/modals.html.twig' as modals %}
 
-{% block title 'Česká slova' %}
+{% block title 'admin.czech_words'|trans %}
 
 {% form_theme form 'bootstrap_3_layout.html.twig' %}
 
@@ -9,7 +9,9 @@
     <div class="box">
         {{ form_start(form) }}
         <div class="box-header with-border">
-            <h3 class="box-title">Edit</h3>
+            <h3 class="box-title">
+                {{ 'admin.box.title.edit'|trans }}
+            </h3>
         </div>
         <div class="box-body">
             <div class="row">
@@ -40,16 +42,16 @@
         <div class="box-footer clearfix">
             <div class="pull-left">
                 <button class="btn btn-primary">
-                    Save
+                    {{ 'admin.button.save'|trans }}
                 </button>
                 <a href="{{ path('admin.czech-word.translations', { 'id': word.id }) }}"
                    class="btn btn-default">
-                    Back to list
+                    {{ 'admin.button.back_to_list'|trans }}
                 </a>
             </div>
             <div class="pull-right">
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#js-modal-remove">
-                    Remove
+                    {{ 'admin.button.remove'|trans }}
                 </button>
             </div>
         </div>

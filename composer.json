@@ -27,6 +27,7 @@
         "symfony/security-bundle": "^4.0",
         "symfony/serializer-pack": "*",
         "symfony/swiftmailer-bundle": "^3.1",
+        "symfony/translation": "^4.0",
         "symfony/validator": "^4.0",
         "symfony/web-link": "^4.0",
         "symfony/webpack-encore-pack": "*",
@@ -78,14 +79,18 @@
         ],
         "prod": [
             "@composer install --no-dev --optimize-autoloader",
-            "@composer clear-cache",
-            "yarn install"
+            "@composer clear-cache"
         ],
         "dev": [
-            "@composer install",
-            "yarn install"
+            "@composer install"
         ],
-        "phpunit": "./vendor/bin/simple-phpunit"
+        "phpunit": "./vendor/bin/simple-phpunit",
+        "translation-cs-yml": "@php bin/console translation:update --dump-messages --force --clean --output-format=yml cs",
+        "translation-cs-xlf": "@php bin/console translation:update --dump-messages --force --clean --output-format=xlf cs",
+        "translation-en-yml": "@php bin/console translation:update --dump-messages --force --clean --output-format=yml en",
+        "translation-en-xlf": "@php bin/console translation:update --dump-messages --force --clean --output-format=xlf en",
+        "translation-ru-yml": "@php bin/console translation:update --dump-messages --force --clean --output-format=yml ru",
+        "translation-ru-xlf": "@php bin/console translation:update --dump-messages --force --clean --output-format=xlf ru"
     },
     "conflict": {
         "symfony/symfony": "*"

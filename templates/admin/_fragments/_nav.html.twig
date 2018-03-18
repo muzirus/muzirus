@@ -11,12 +11,12 @@
             <ul class="nav navbar-nav">
                 <li>
                     <a href="{{ path('app.index') }}">
-                        <i class="fa fa-home"></i> Visit site
+                        <i class="fa fa-home"></i> {{ 'admin.visit_site'|trans }}
                     </a>
                 </li>
                 <li>
                     <a href="{{ path('logout') }}" onclick="return confirm('Are you sure?');">
-                        <i class="fa fa-sign-out"></i> Sign out
+                        <i class="fa fa-sign-out"></i> {{ 'admin.sign_out'|trans }}
                     </a>
                 </li>
             </ul>

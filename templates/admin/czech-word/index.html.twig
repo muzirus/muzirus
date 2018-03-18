@@ -2,7 +2,7 @@
 
 {% import 'admin/_macros/labels.html.twig' as labels %}
 
-{% block title 'Česká slova' %}
+{% block title 'admin.czech_words'|trans %}
 
 {% block content %}
     <div class="box">
@@ -10,13 +10,13 @@
             <table class="table table-striped table-hover js-data-table">
                 <thead>
                     <tr>
-                        <th>Word</th>
-                        <th>Translations</th>
-                        <th>Inflection</th>
-                        <th>Gender</th>
-                        <th>Created</th>
-                        <th>Updated</th>
-                        <th>Status</th>
+                        <th>{{ 'admin.word'|trans }}</th>
+                        <th>{{ 'admin.translations'|trans }}</th>
+                        <th>{{ 'admin.inflection'|trans }}</th>
+                        <th>{{ 'admin.gender'|trans }}</th>
+                        <th>{{ 'admin.created'|trans }}</th>
+                        <th>{{ 'admin.updated'|trans }}</th>
+                        <th>{{ 'admin.status'|trans }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,20 +52,20 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>Word</th>
-                        <th>Translations</th>
-                        <th>Inflection</th>
-                        <th>Gender</th>
-                        <th>Created</th>
-                        <th>Updated</th>
-                        <th>Status</th>
+                        <th>{{ 'admin.word'|trans }}</th>
+                        <th>{{ 'admin.translations'|trans }}</th>
+                        <th>{{ 'admin.inflection'|trans }}</th>
+                        <th>{{ 'admin.gender'|trans }}</th>
+                        <th>{{ 'admin.created'|trans }}</th>
+                        <th>{{ 'admin.updated'|trans }}</th>
+                        <th>{{ 'admin.status'|trans }}</th>
                     </tr>
                 </tfoot>
             </table>
         </div>
         <div class="box-footer">
             <a href="{{ path('admin.czech-word.add') }}" class="btn btn-primary">
-                Add word
+                {{ 'admin.button.add_word'|trans }}
             </a>
         </div>
     </div>

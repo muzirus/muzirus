@@ -1,0 +1,77 @@
+app.title: 'Rusko-český, česko-ruský slovník hudebních pojmů online'
+admin.abbreviations: Zkratky
+admin.actions: Akce
+admin.approved: Schváleno
+admin.authors: Autoři
+admin.box.title.add: Přidat
+admin.box.title.edit: Upravit
+admin.button.add_abbreviation: 'Přidat zkratku'
+admin.button.add_category: 'Přidat kategorii'
+admin.button.add_exemplification: 'Přidat exemplifikaci'
+admin.button.add_new: 'Přidat nové'
+admin.button.add_source: 'Přidat zdroj'
+admin.button.add_source_type: 'Přidat typ zdroje'
+admin.button.add_symbol: 'Přidat symbol'
+admin.button.add_word: 'Přidat slovo'
+admin.button.back_to_list: 'Zpět na seznam'
+admin.button.back_to_translations: 'Zpět na překlady'
+admin.button.back_to_translation_examples: 'Zpět na ukázky překladů'
+admin.button.edit: Upravit
+admin.button.remove: Odstranit
+admin.button.save: Uložit
+admin.button.save_and_new: 'Uložit a nové'
+admin.categories: Kategorie
+admin.category: Kategorie
+admin.created: Vytvořeno
+admin.czech: České
+admin.czech_note: 'Česká poznámka'
+admin.czech_sentence: 'Česká věta'
+admin.czech_word: 'České slovo'
+admin.czech_words: 'Česká slova'
+admin.dashboard: Nástěnka
+admin.deleted: Smazáno
+admin.description: Popis
+admin.examples: Ukázky
+admin.example_sentences: 'Ukázkové věty'
+admin.explanation: Vysvětlení
+admin.gender: Rod
+admin.hidden: Schováno
+admin.home: Domů
+admin.inflection: Skloňování
+admin.language_note: 'Jazyková poznámka'
+admin.news: Novinky
+admin.no: Ne
+admin.no_news_yet: 'Zatím žádne novinky'
+admin.original_database: 'Původní databáze'
+admin.other: Ostatní
+admin.pages_count: 'Počet stran'
+admin.published_date: 'Datum vydání'
+admin.published_place: 'Místo vydání'
+admin.publisher: Vydavatel
+admin.russian: Ruské
+admin.russian_words: 'Ruská slova'
+admin.russian_note: 'Ruská poznámka'
+admin.russian_sentence: 'Ruská věta'
+admin.russian_word: 'Ruské slovo'
+admin.sign_out: Odhlásit
+admin.source: Zdroj
+admin.sources: Zdroje
+admin.source_types: 'Typy zdrojů'
+admin.status: Stav
+admin.symbols: Symboly
+admin.system: Systém
+admin.tab.edit: Upravit
+admin.tab.exemplifications: Exemplifikace
+admin.title: Název
+admin.translation: Překlad
+admin.translations: Překlady
+admin.type: Typ
+admin.translation_examples: Exemplifikace
+admin.updated: Aktualizováno
+admin.users: Uživatelé
+admin.value: Hodnota
+admin.visit_site: 'Zobrazit stránku'
+admin.word: Slovo
+admin.words: Slova
+admin.word_with_accent: 'Slovo s akcentem'
+admin.yes: Ano

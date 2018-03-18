@@ -1,7 +1,9 @@
 <div class="box">
     {{ form_start(form) }}
     <div class="box-header with-border">
-        <h3 class="box-title">Add example</h3>
+        <h3 class="box-title">
+            {{ 'admin.box.title.add'|trans }}
+        </h3>
     </div>
     <div class="box-body">
         <div class="row">
@@ -23,7 +25,7 @@
     </div>
     <div class="box-footer">
         <button class="btn btn-primary">
-            Add example
+            {{ 'admin.button.save'|trans }}
         </button>
     </div>
     {{ form_end(form) }}

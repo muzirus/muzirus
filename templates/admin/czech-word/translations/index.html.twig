@@ -1,7 +1,7 @@
 {% extends 'admin/layout.html.twig' %}
 {% import 'admin/_macros/buttons.html.twig' as buttons %}
 
-{% block title 'Česká slova' %}
+{% block title 'admin.czech_words'|trans %}
 
 {% form_theme form 'bootstrap_3_layout.html.twig' %}
 
@@ -10,12 +10,12 @@
         <ul class="nav nav-tabs clearfix">
             <li>
                 <a href="{{ path('admin.czech-word.edit', {id: word.id}) }}">
-                    Edit
+                    {{ 'admin.tab.edit'|trans }}
                 </a>
             </li>
             <li class="active">
                 <a href="{{ path('admin.czech-word.translations', {id: word.id}) }}">
-                    Exemplifications
+                    {{ 'admin.tab.exemplifications'|trans }}
                 </a>
             </li>
             <li class="pull-right">
@@ -34,12 +34,12 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>Czech word</th>
-                            <th>Russian word</th>
-                            <th>Examples</th>
-                            <th>Note RU</th>
-                            <th>Note CS</th>
-                            <th>Actions</th>
+                            <th>{{ 'admin.czech_word'|trans }}</th>
+                            <th>{{ 'admin.russian_word'|trans }}</th>
+                            <th>{{ 'admin.examples'|trans }}</th>
+                            <th>{{ 'admin.russian_note'|trans }}</th>
+                            <th>{{ 'admin.czech_note'|trans }}</th>
+                            <th>{{ 'admin.actions'|trans }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -75,7 +75,7 @@
                                         translationId: translation.id
                                     }) }}"
                                        class="btn btn-primary btn-xs">
-                                        Edit
+                                        {{ 'admin.button.edit'|trans }}
                                     </a>
                                 </td>
                             </tr>
@@ -83,12 +83,12 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th>Czech word</th>
-                            <th>Russian word</th>
-                            <th>Examples</th>
-                            <th>Note RU</th>
-                            <th>Note CS</th>
-                            <th>Actions</th>
+                            <th>{{ 'admin.czech_word'|trans }}</th>
+                            <th>{{ 'admin.russian_word'|trans }}</th>
+                            <th>{{ 'admin.examples'|trans }}</th>
+                            <th>{{ 'admin.russian_note'|trans }}</th>
+                            <th>{{ 'admin.czech_note'|trans }}</th>
+                            <th>{{ 'admin.actions'|trans }}</th>
                         </tr>
                     </tfoot>
                 </table>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <button class="btn btn-primary">
-                    Add exemplification
+                    {{ 'admin.button.add_exemplification'|trans }}
                 </button>
                 {{ form_end(form) }}
             </div>

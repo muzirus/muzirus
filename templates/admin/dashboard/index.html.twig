@@ -1,6 +1,6 @@
 {% extends 'admin/layout.html.twig' %}
 
-{% block title 'Dashboard' %}
+{% block title 'admin.dashboard'|trans %}
 
 {% block content %}
     <div class="row">
@@ -8,7 +8,7 @@
             <div class="info-box">
                 <span class="info-box-icon bg-aqua"><i class="fa fa-book"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Czech words</span>
+                    <span class="info-box-text">{{ 'admin.czech_words'|trans }}</span>
                     <span class="info-box-number">{{ count_czech_words() }}</span>
                 </div>
             </div>
@@ -17,7 +17,7 @@
             <div class="info-box">
                 <span class="info-box-icon bg-red"><i class="fa fa-book"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Russian words</span>
+                    <span class="info-box-text">{{ 'admin.russian_words'|trans }}</span>
                     <span class="info-box-number">{{ count_russian_words() }}</span>
                 </div>
             </div>
@@ -29,7 +29,7 @@
             <div class="info-box">
                 <span class="info-box-icon bg-green"><i class="fa fa-book"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Translations</span>
+                    <span class="info-box-text">{{ 'admin.translations'|trans }}</span>
                     <span class="info-box-number">{{ count_translations() }}</span>
                 </div>
             </div>
@@ -38,7 +38,7 @@
             <div class="info-box">
                 <span class="info-box-icon bg-yellow"><i class="fa fa-book"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Examples</span>
+                    <span class="info-box-text">{{ 'admin.example_sentences'|trans }}</span>
                     <span class="info-box-number">{{ count_translation_examples() }}</span>
                 </div>
             </div>
@@ -50,10 +50,10 @@
     <div class="box box-default">
         <div class="box-header with-border">
             <i class="fa fa-bullhorn"></i>
-            <h3 class="box-title">News</h3>
+            <h3 class="box-title">{{ 'admin.news'|trans }}</h3>
         </div>
         <div class="box-body">
-            There are no news yet.
+            {{ 'admin.no_news_yet'|trans }}
         </div>
     </div>
 {% endblock %}

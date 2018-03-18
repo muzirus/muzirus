@@ -71,20 +71,6 @@ class SourceTypeController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin.source-type.view", requirements={"id": "\d+"})
-     * @Method("GET")
-     */
-    public function view(SourceType $sourceType): Response
-    {
-        return $this->render(
-            'admin/source-type/view.html.twig',
-            [
-                'sourceType' => $sourceType,
-            ]
-        );
-    }
-
-    /**
      * @Route("/{id}/edit", name="admin.source-type.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */

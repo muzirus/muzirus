@@ -1,84 +1,84 @@
 {% extends 'admin/layout.html.twig' %}
 
-{% block title 'Původní databáze' %}
+{% block title 'admin.original_database'|trans %}
 
 {% block content %}
     <div class="box">
         <div class="box-body">
             <table class="table table-striped table-hover js-data-table">
                 <thead>
-                <tr>
-                    <th>Word</th>
-                    <th>Category</th>
-                    <th>Language note</th>
-                    <th>Translation</th>
-                    <th>Explanation</th>
-                    <th>Source</th>
-                    <th>Status</th>
-                </tr>
+                    <tr>
+                        <th>{{ 'admin.word'|trans }}</th>
+                        <th>{{ 'admin.category'|trans }}</th>
+                        <th>{{ 'admin.language_note'|trans }}</th>
+                        <th>{{ 'admin.translation'|trans }}</th>
+                        <th>{{ 'admin.explanation'|trans }}</th>
+                        <th>{{ 'admin.source'|trans }}</th>
+                        <th>{{ 'admin.status'|trans }}</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {% for word in words %}
-                    <tr>
-                        <td>
-                            <a href="{{ path('admin.legacy_word.view', {'id': word.id}) }}">
-                                {{ word.original }}
-                            </a>
-                        </td>
-                        <td>
-                            {{ word.category }}
-                        </td>
-                        <td>
-                            {% if word.hasLanguageNote() %}
-                                <span class="label label-success">Yes</span>
-                            {% else %}
-                                <span class="label label-danger">No</span>
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if word.hasTranslation() %}
-                                <span class="label label-success">Yes</span>
-                            {% else %}
-                                <span class="label label-danger">No</span>
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if word.hasExplanation() %}
-                                <span class="label label-success">Yes</span>
-                            {% else %}
-                                <span class="label label-danger">No</span>
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if word.hasSource() %}
-                                <span class="label label-success">Yes</span>
-                            {% else %}
-                                <span class="label label-danger">No</span>
-                            {% endif %}
-                        </td>
-                        <td>
+                    {% for word in words %}
+                        <tr>
+                            <td>
+                                <a href="{{ path('admin.legacy_word.view', {'id': word.id}) }}">
+                                    {{ word.original }}
+                                </a>
+                            </td>
+                            <td>
+                                {{ word.category }}
+                            </td>
+                            <td>
+                                {% if word.hasLanguageNote() %}
+                                    <span class="label label-success">{{ 'admin.yes'|trans }}</span>
+                                {% else %}
+                                    <span class="label label-danger">{{ 'admin.no'|trans }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if word.hasTranslation() %}
+                                    <span class="label label-success">{{ 'admin.yes'|trans }}</span>
+                                {% else %}
+                                    <span class="label label-danger">{{ 'admin.no'|trans }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if word.hasExplanation() %}
+                                    <span class="label label-success">{{ 'admin.yes'|trans }}</span>
+                                {% else %}
+                                    <span class="label label-danger">{{ 'admin.no'|trans }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if word.hasSource() %}
+                                    <span class="label label-success">{{ 'admin.yes'|trans }}</span>
+                                {% else %}
+                                    <span class="label label-danger">{{ 'admin.no'|trans }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
 
-                            {% if word.isDeleted() %}
-                                <span class="label label-danger">Deleted</span>
-                            {% elseif word.isHidden() %}
-                                <span class="label label-danger">Hidden</span>
-                            {% else %}
-                                <span class="label label-success">OK</span>
-                            {% endif %}
-                        </td>
-                    </tr>
-                {% endfor %}
+                                {% if word.isDeleted() %}
+                                    <span class="label label-danger">{{ 'admin.deleted'|trans }}</span>
+                                {% elseif word.isHidden() %}
+                                    <span class="label label-danger">{{ 'admin.hidden'|trans }}</span>
+                                {% else %}
+                                    <span class="label label-success">OK</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
                 <tfoot>
-                <tr>
-                    <th>Word</th>
-                    <th>Category</th>
-                    <th>Language note</th>
-                    <th>Translation</th>
-                    <th>Explanation</th>
-                    <th>Source</th>
-                    <th>Status</th>
-                </tr>
+                    <tr>
+                        <th>{{ 'admin.word'|trans }}</th>
+                        <th>{{ 'admin.category'|trans }}</th>
+                        <th>{{ 'admin.language_note'|trans }}</th>
+                        <th>{{ 'admin.translation'|trans }}</th>
+                        <th>{{ 'admin.explanation'|trans }}</th>
+                        <th>{{ 'admin.source'|trans }}</th>
+                        <th>{{ 'admin.status'|trans }}</th>
+                    </tr>
                 </tfoot>
             </table>
         </div>

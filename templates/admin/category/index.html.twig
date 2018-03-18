@@ -1,37 +1,37 @@
 {% extends 'admin/layout.html.twig' %}
 
-{% block title 'Tematické kategorie' %}
+{% block title 'admin.categories'|trans %}
 
 {% block content %}
     <div class="box">
         <div class="box-body">
             <table class="table table-striped table-hover js-data-table">
                 <thead>
-                <tr>
-                    <th>Title</th>
-                </tr>
+                    <tr>
+                        <th>{{ 'admin.title'|trans }}</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {% for category in categories %}
-                    <tr>
-                        <td>
-                            <a href="{{ path('admin.category.edit', {id: category.id}) }}">
-                                {{ category.title }}
-                            </a>
-                        </td>
-                    </tr>
-                {% endfor %}
+                    {% for category in categories %}
+                        <tr>
+                            <td>
+                                <a href="{{ path('admin.category.edit', {id: category.id}) }}">
+                                    {{ category.title }}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
                 <tfoot>
-                <tr>
-                    <th>Title</th>
-                </tr>
+                    <tr>
+                        <th>{{ 'admin.title'|trans }}</th>
+                    </tr>
                 </tfoot>
             </table>
         </div>
         <div class="box-footer">
             <a href="{{ path('admin.category.add') }}" class="btn btn-primary">
-                <i class="fa fa-plus"></i> Add category
+                <i class="fa fa-plus"></i> {{ 'admin.button.add_category'|trans }}
             </a>
         </div>
     </div>

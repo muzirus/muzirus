@@ -13,39 +13,41 @@
         </form>
         #}
         <ul class="sidebar-menu">
-            <li class="header">Home</li>
+            <li class="header">{{ 'admin.home'|trans }}</li>
             <li>
                 <a href="{{ path('admin.dashboard') }}">
                     <i class="fa fa-dashboard"></i>
-                    <span>Dashboard</span>
+                    <span>{{ 'admin.dashboard'|trans }}</span>
                 </a>
             </li>
-            <li class="header">Words</li>
+            <li class="header">{{ 'admin.words'|trans }}</li>
             <li>
                 <a href="{{ path('admin.russian-word') }}">
                     <i class="fa fa-book"></i>
-                    <span>Russian words</span>
-                    <span class="pull-right-container"><small class="text-muted pull-right">{{ count_russian_words() }}</small></span>
+                    <span>{{ 'admin.russian_words'|trans }}</span>
+                    <span class="pull-right-container"><small
+                                class="text-muted pull-right">{{ count_russian_words() }}</small></span>
                 </a>
             </li>
             <li>
                 <a href="{{ path('admin.czech-word') }}">
                     <i class="fa fa-book"></i>
-                    <span>Czech words</span>
-                    <span class="pull-right-container"><small class="text-muted pull-right">{{ count_czech_words() }}</small></span>
+                    <span>{{ 'admin.czech_words'|trans }}</span>
+                    <span class="pull-right-container"><small
+                                class="text-muted pull-right">{{ count_czech_words() }}</small></span>
                 </a>
             </li>
             <li>
                 <a href="{{ path('admin.legacy_word') }}">
                     <i class="fa fa-bookmark"></i>
-                    <span>Původní databáze</span>
+                    <span>{{ 'admin.original_database'|trans }}</span>
                 </a>
             </li>
-            <li class="header">Translations</li>
+            <li class="header">{{ 'admin.translations'|trans }}</li>
             <li>
                 <a href="{{ path('admin.translation') }}">
                     <i class="fa fa-book"></i>
-                    <span>Translations</span>
+                    <span>{{ 'admin.translations'|trans }}</span>
                     <span class="pull-right-container">
                         <small class="text-muted pull-right">{{ count_translations() }}</small>
                     </span>
@@ -54,57 +56,57 @@
             <li>
                 <a href="{{ path('admin.translation-example') }}">
                     <i class="fa fa-book"></i>
-                    <span>Example sentences</span>
+                    <span>{{ 'admin.example_sentences'|trans }}</span>
                     <span class="pull-right-container">
                         <small class="text-muted pull-right">{{ count_translation_examples() }}</small>
                     </span>
                 </a>
             </li>
-            <li class="header">Sources</li>
+            <li class="header">{{ 'admin.sources'|trans }}</li>
             <li>
                 <a href="{{ path('admin.source') }}">
                     <i class="fa fa-book"></i>
-                    <span>Sources</span>
+                    <span>{{ 'admin.sources'|trans }}</span>
                 </a>
             </li>
             <li>
                 <a href="{{ path('admin.source-type') }}">
                     <i class="fa fa-book"></i>
-                    <span>Source types</span>
+                    <span>{{ 'admin.source_types'|trans }}</span>
                 </a>
             </li>
-            <li class="header">Other</li>
+            <li class="header">{{ 'admin.other'|trans }}</li>
             <li>
                 <a href="{{ path('admin.symbol') }}">
                     <i class="fa fa-book"></i>
-                    <span>Symbols</span>
+                    <span>{{ 'admin.symbols'|trans }}</span>
                 </a>
             </li>
             <li>
                 <a href="{{ path('admin.abbreviation') }}">
                     <i class="fa fa-book"></i>
-                    <span>Abbreviations</span>
+                    <span>{{ 'admin.abbreviations'|trans }}</span>
                 </a>
             </li>
             <li>
                 <a href="{{ path('admin.category') }}">
                     <i class="fa fa-book"></i>
-                    <span>Word categories</span>
+                    <span>{{ 'admin.categories'|trans }}</span>
                 </a>
             </li>
-            <li class="header">System</li>
+            <li class="header">{{ 'admin.system'|trans }}</li>
             {% if is_granted('ROLE_SUPER_ADMIN') %}
                 <li>
                     <a href="#">
                         <i class="fa fa-users"></i>
-                        <span>Users</span>
+                        <span>{{ 'admin.users'|trans }}</span>
                     </a>
                 </li>
             {% endif %}
             <li>
                 <a href="{{ path('logout') }}">
                     <i class="fa fa-lock"></i>
-                    <span>Sign out</span>
+                    <span>{{ 'admin.sign_out'|trans }}</span>
                 </a>
             </li>
         </ul>

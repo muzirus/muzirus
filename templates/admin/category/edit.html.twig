@@ -2,7 +2,7 @@
 
 {% import 'admin/_macros/modals.html.twig' as modals %}
 
-{% block title 'Tematické kategorie' %}
+{% block title 'admin.categories'|trans %}
 
 {% form_theme form 'bootstrap_3_layout.html.twig' %}
 
@@ -10,7 +10,7 @@
     <div class="box">
         {{ form_start(form) }}
         <div class="box-header with-border">
-            Edit
+            {{ 'admin.box.title.edit'|trans }}
         </div>
         <div class="box-body">
             <div class="form-group">
@@ -22,15 +22,15 @@
         <div class="box-footer clearfix">
             <div class="pull-left">
                 <button class="btn btn-primary">
-                    Save
+                    {{ 'admin.button.save'|trans }}
                 </button>
                 <a href="{{ path('admin.category') }}" class="btn btn-default">
-                    Back to list
+                    {{ 'admin.button.back_to_list'|trans }}
                 </a>
             </div>
             <div class="pull-right">
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#js-modal-remove">
-                    Remove
+                    {{ 'admin.button.remove'|trans }}
                 </button>
             </div>
         </div>

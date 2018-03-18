@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Rusko-český, česko-ruský slovník hudebních pojmů online{% endblock %}</title>
+    <title>{% block title %}{{ 'app.title'|trans }}{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
 </head>
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">

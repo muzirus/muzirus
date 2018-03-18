@@ -1,6 +1,6 @@
 {% extends 'admin/layout.html.twig' %}
 
-{% block title 'Symboly' %}
+{% block title 'admin.symbols'|trans %}
 
 {% form_theme form 'bootstrap_3_layout.html.twig' %}
 
@@ -8,7 +8,9 @@
     <div class="box">
         {{ form_start(form) }}
         <div class="box-header with-border">
-            <h3 class="box-title">Add</h3>
+            <h3 class="box-title">
+                {{ 'admin.box.title.add'|trans }}
+            </h3>
         </div>
         <div class="box-body">
             <div class="form-group">
@@ -29,10 +31,10 @@
         </div>
         <div class="box-footer">
             <button class="btn btn-primary">
-                Save
+                {{ 'admin.button.save'|trans }}
             </button>
             <a href="{{ path('admin.symbol') }}" class="btn btn-default">
-                Back to list
+                {{ 'admin.button.back_to_list'|trans }}
             </a>
         </div>
         {{ form_end(form) }}

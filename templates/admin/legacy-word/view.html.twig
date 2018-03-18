@@ -1,44 +1,44 @@
 {% extends 'admin/layout.html.twig' %}
 
-{% block title 'Původní databáze' %}
+{% block title 'admin.original_database'|trans %}
 
 {% block content %}
     <div class="box">
         <div class="box-body">
             <div class="form-group">
-                <label class="form-label">Word</label>
+                <label class="form-label">{{ 'admin.word'|trans }}</label>
                 <div class="form-control">{{ word.original }}</div>
             </div>
             <div class="form-group">
-                <label class="form-label">Language note</label>
+                <label class="form-label">{{ 'admin.language_note'|trans }}</label>
                 <div class="form-control">{{ word.languageNote }}</div>
             </div>
             <div class="form-group">
-                <label class="form-label">Source</label>
+                <label class="form-label">{{ 'admin.source'|trans }}</label>
                 <div class="form-control">{{ word.source }}</div>
             </div>
             <div class="form-group">
-                <label class="form-label">Translation</label>
+                <label class="form-label">{{ 'admin.translation'|trans }}</label>
                 <div class="form-control">{{ word.translation }}</div>
             </div>
             <div class="form-group">
-                <label class="form-label">Category</label>
+                <label class="form-label">{{ 'admin.category'|trans }}</label>
                 <div class="form-control">{{ word.category }}</div>
             </div>
             <div class="form-group">
-                <label class="form-label">Explanation</label>
+                <label class="form-label">{{ 'admin.explanation'|trans }}</label>
                 <div class="form-control">{{ word.explanation }}</div>
             </div>
             <div class="form-group">
-                <label class="form-label">Deleted</label>
+                <label class="form-label">{{ 'admin.deleted'|trans }}</label>
                 <div class="form-control">{{ word.deleted ? 'yes' : 'no' }}</div>
             </div>
             <div class="form-group">
-                <label class="form-label">Hidden</label>
+                <label class="form-label">{{ 'admin.hidden'|trans }}</label>
                 <div class="form-control">{{ word.hidden ? 'yes' : 'no' }}</div>
             </div>
             <div class="form-group">
-                <label class="form-label">Approved?</label>
+                <label class="form-label">{{ 'admin.approved'|trans }}</label>
                 <div class="form-control">1: {{ word.approved1 ? 'yes' : 'no' }}</div>
                 <div class="form-control">2: {{ word.approved2 ? 'yes' : 'no' }}</div>
                 <div class="form-control">3: {{ word.approved3 ? 'yes' : 'no' }}</div>
@@ -47,7 +47,7 @@
         </div>
         <div class="box-footer">
             <a href="{{ path('admin.legacy_word') }}" class="btn btn-primary">
-                Back to list
+                {{ 'admin.button.back_to_list'|trans }}
             </a>
         </div>
     </div>
