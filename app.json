@@ -3,7 +3,7 @@
     "repository": "https://github.com/petrofcikmatus/dictionary",
     "success_url": "/",
     "scripts": {
-        "postdeploy": "php bin/console doctrine:migrations:migrate -n"
+        "postdeploy": "php bin/console doctrine:migrations:migrate --quiet --allow-no-migration"
     },
     "image": "heroku/php",
     "buildpacks": [
