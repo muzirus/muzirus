@@ -75,3 +75,41 @@ admin.word: Slovo
 admin.words: Slova
 admin.word_with_accent: 'Slovo s akcentem'
 admin.yes: Ano
+label.title: Název
+label.value: Hodnota
+label.description: Popis
+label.note: Poznámka
+label.status: Stav
+label.categories: Kategorie
+label.sources: Zdroje
+label.source_type: 'Typ zdroje'
+label.language_note.pronunciation: 'Jazyková poznámka - výslovnost'
+label.language_note.inflection: 'Jazyková poznámka - skloňování'
+label.language_note.exception_to_inflection: 'Jazyková poznámka - výjimka ve skloňování'
+label.language_note.gender: 'Jazyková poznámka - rod'
+label.language_note.other: 'Jazyková poznámka - ostatní'
+label.explanation: Výklad
+label.explanation_source_info: 'Zdroj výkladu'
+label.explanation_source_date: 'Datum výkladu'
+label.name_of_author: 'Jméno autora'
+label.name_of_publisher: 'Jmého vydavatele'
+label.date_of_release: 'Datum vydání'
+label.place_of_release: 'Místo vydání'
+label.pages_count: 'Počet stran'
+label.code_of_publication: 'Kód ISBN/ISSN'
+label.word: Slovo
+label.word_with_accent: 'Slovo s akcentem'
+label.gender.masculine: Mužský
+label.gender.feminine: Ženský
+label.gender.neuter: Střední
+label.gender.not_applicable: Neaplikovatelné
+label.status.ready: Připraveno
+label.status.needs_work: 'Potřebuje úpravu'
+label.status.not_processed: Nespracováno
+label.status.unknown: Neznámý
+label.czech_sentence: 'Česká věta'
+label.russian_sentence: 'Ruská věta'
+label.czech_word: 'České slovo'
+label.czech_note: 'Česká poznámka'
+label.russian_word: 'Ruské slovo'
+label.russian_note: 'Ruská poznámka'

@@ -13,45 +13,69 @@
             </h3>
         </div>
         <div class="box-body">
-            <div class="form-group">
-                {{ form_label(form.title) }}
-                {{ form_widget(form.title) }}
-                {{ form_errors(form.title) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.title) }}
+                        {{ form_widget(form.title) }}
+                        {{ form_errors(form.title) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.type) }}
+                        {{ form_widget(form.type) }}
+                        {{ form_errors(form.type) }}
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                {{ form_label(form.type) }}
-                {{ form_widget(form.type) }}
-                {{ form_errors(form.type) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.nameOfAuthor) }}
+                        {{ form_widget(form.nameOfAuthor) }}
+                        {{ form_errors(form.nameOfAuthor) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.nameOfPublisher) }}
+                        {{ form_widget(form.nameOfPublisher) }}
+                        {{ form_errors(form.nameOfPublisher) }}
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                {{ form_label(form.nameOfAuthor) }}
-                {{ form_widget(form.nameOfAuthor) }}
-                {{ form_errors(form.nameOfAuthor) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.dateOfRelease) }}
+                        {{ form_widget(form.dateOfRelease) }}
+                        {{ form_errors(form.dateOfRelease) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.placeOfRelease) }}
+                        {{ form_widget(form.placeOfRelease) }}
+                        {{ form_errors(form.placeOfRelease) }}
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                {{ form_label(form.nameOfPublisher) }}
-                {{ form_widget(form.nameOfPublisher) }}
-                {{ form_errors(form.nameOfPublisher) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.dateOfRelease) }}
-                {{ form_widget(form.dateOfRelease) }}
-                {{ form_errors(form.dateOfRelease) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.placeOfRelease) }}
-                {{ form_widget(form.placeOfRelease) }}
-                {{ form_errors(form.placeOfRelease) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.pagesCount) }}
-                {{ form_widget(form.pagesCount) }}
-                {{ form_errors(form.pagesCount) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.isbnCode) }}
-                {{ form_widget(form.isbnCode) }}
-                {{ form_errors(form.isbnCode) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.pagesCount) }}
+                        {{ form_widget(form.pagesCount) }}
+                        {{ form_errors(form.pagesCount) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.isbnCode) }}
+                        {{ form_widget(form.isbnCode) }}
+                        {{ form_errors(form.isbnCode) }}
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 {{ form_label(form.note) }}
@@ -63,7 +87,7 @@
             <button class="btn btn-primary">
                 {{ 'admin.button.save'|trans }}
             </button>
-            <a href="{{ path('admin.source-type') }}" class="btn btn-default">
+            <a href="{{ path('admin.source') }}" class="btn btn-default">
                 {{ 'admin.button.back_to_list'|trans }}
             </a>
         </div>

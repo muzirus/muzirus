@@ -12,6 +12,7 @@ class RussianWordForm extends CzechWordForm
         parent::buildForm($builder, $options);
 
         $builder->add('contentWithAccent', TextType::class, [
+            'label' => 'label.word_with_accent',
             'required' => false,
             'empty_data' => '',
         ]);

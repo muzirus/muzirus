@@ -98,11 +98,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <div class="form-control">{{ word.content }}</div>
+                            <label class="control-label">{{ 'label.czech_word'|trans }}</label>
+                            <input class="form-control" value="{{ word.content }}" title="" disabled />
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
+                            {{ form_label(form.czechWordNote) }}
                             {{ form_widget(form.czechWordNote) }}
                             {{ form_errors(form.czechWordNote) }}
                         </div>
@@ -111,12 +113,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
+                            {{ form_label(form.russianWord) }}
                             {{ form_widget(form.russianWord) }}
                             {{ form_errors(form.russianWord) }}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
+                            {{ form_label(form.russianWordNote) }}
                             {{ form_widget(form.russianWordNote) }}
                             {{ form_errors(form.russianWordNote) }}
                         </div>

@@ -12,10 +12,12 @@ class UpdateTranslationForm extends AbstractType
     {
         $builder
             ->add('russianWordNote', TextType::class, [
+                'label' => 'label.russian_note',
                 'empty_data' => '',
                 'required' => false,
             ])
             ->add('czechWordNote', TextType::class, [
+                'label' => 'label.czech_note',
                 'empty_data' => '',
                 'required' => false,
             ]);

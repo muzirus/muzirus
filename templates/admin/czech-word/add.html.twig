@@ -18,35 +18,53 @@
                 {{ form_widget(form.content) }}
                 {{ form_errors(form.content) }}
             </div>
-            <div class="form-group">
-                {{ form_label(form.languageNotePronunciation) }}
-                {{ form_widget(form.languageNotePronunciation) }}
-                {{ form_errors(form.languageNotePronunciation) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.languageNotePronunciation) }}
+                        {{ form_widget(form.languageNotePronunciation) }}
+                        {{ form_errors(form.languageNotePronunciation) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.languageNoteInflection) }}
+                        {{ form_widget(form.languageNoteInflection) }}
+                        {{ form_errors(form.languageNoteInflection) }}
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                {{ form_label(form.languageNoteInflection) }}
-                {{ form_widget(form.languageNoteInflection) }}
-                {{ form_errors(form.languageNoteInflection) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.languageNoteExceptionToInflection) }}
+                        {{ form_widget(form.languageNoteExceptionToInflection) }}
+                        {{ form_errors(form.languageNoteExceptionToInflection) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.languageNoteGender) }}
+                        {{ form_widget(form.languageNoteGender) }}
+                        {{ form_errors(form.languageNoteGender) }}
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                {{ form_label(form.languageNoteExceptionToInflection) }}
-                {{ form_widget(form.languageNoteExceptionToInflection) }}
-                {{ form_errors(form.languageNoteExceptionToInflection) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.languageNoteGender) }}
-                {{ form_widget(form.languageNoteGender) }}
-                {{ form_errors(form.languageNoteGender) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.languageNoteOther) }}
-                {{ form_widget(form.languageNoteOther) }}
-                {{ form_errors(form.languageNoteOther) }}
-            </div>
-            <div class="form-group">
-                {{ form_label(form.explanation) }}
-                {{ form_widget(form.explanation) }}
-                {{ form_errors(form.explanation) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.languageNoteOther) }}
+                        {{ form_widget(form.languageNoteOther) }}
+                        {{ form_errors(form.languageNoteOther) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.explanation) }}
+                        {{ form_widget(form.explanation) }}
+                        {{ form_errors(form.explanation) }}
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-6">

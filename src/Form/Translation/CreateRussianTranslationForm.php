@@ -14,6 +14,7 @@ class CreateRussianTranslationForm extends AbstractType
     {
         $builder
             ->add('russianWord', Entitytype::class, [
+                'label' => 'admin.russian_word',
                 'class' => RussianWord::class,
                 'choice_label' => 'content',
                 'attr' => [
@@ -21,10 +22,12 @@ class CreateRussianTranslationForm extends AbstractType
                 ],
             ])
             ->add('russianWordNote', TextType::class, [
+                'label' => 'label.russian_note',
                 'empty_data' => '',
                 'required' => false,
             ])
             ->add('czechWordNote', TextType::class, [
+                'label' => 'label.czech_note',
                 'empty_data' => '',
                 'required' => false,
             ]);

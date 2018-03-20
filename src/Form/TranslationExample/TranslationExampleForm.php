@@ -12,9 +12,11 @@ class TranslationExampleForm extends AbstractType
     {
         $builder
             ->add('czechWordSentence', TextType::class, [
+                'label' => 'label.czech_sentence',
                 'empty_data' => '',
             ])
             ->add('russianWordSentence', TextType::class, [
+                'label' => 'label.russian_sentence',
                 'empty_data' => '',
             ]);
     }
