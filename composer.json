@@ -85,12 +85,12 @@
             "@composer install"
         ],
         "phpunit": "./vendor/bin/simple-phpunit",
-        "translation-cs-yml": "@php bin/console translation:update --dump-messages --force --output-format=yml cs",
-        "translation-cs-xlf": "@php bin/console translation:update --dump-messages --force --output-format=xlf cs",
-        "translation-en-yml": "@php bin/console translation:update --dump-messages --force --output-format=yml en",
-        "translation-en-xlf": "@php bin/console translation:update --dump-messages --force --output-format=xlf en",
-        "translation-ru-yml": "@php bin/console translation:update --dump-messages --force --output-format=yml ru",
-        "translation-ru-xlf": "@php bin/console translation:update --dump-messages --force --output-format=xlf ru"
+        "translation-cs-yml": "@php bin/console translation:update --force --clean --domain=messages --output-format=yml cs",
+        "translation-cs-xlf": "@php bin/console translation:update --force --clean --domain=messages --output-format=xlf cs",
+        "translation-en-yml": "@php bin/console translation:update --force --clean --domain=messages --output-format=yml en",
+        "translation-en-xlf": "@php bin/console translation:update --force --clean --domain=messages --output-format=xlf en",
+        "translation-ru-yml": "@php bin/console translation:update --force --clean --domain=messages --output-format=yml ru",
+        "translation-ru-xlf": "@php bin/console translation:update --force --clean --domain=messages --output-format=xlf ru"
     },
     "conflict": {
         "symfony/symfony": "*"

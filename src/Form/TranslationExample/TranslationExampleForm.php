@@ -5,6 +5,7 @@ namespace App\Form\TranslationExample;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class TranslationExampleForm extends AbstractType
 {
@@ -19,5 +20,10 @@ class TranslationExampleForm extends AbstractType
                 'label' => 'label.russian_sentence',
                 'empty_data' => '',
             ]);
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefault('translation_domain', 'forms');
     }
 }

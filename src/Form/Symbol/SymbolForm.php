@@ -5,6 +5,7 @@ namespace App\Form\Symbol;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class SymbolForm extends AbstractType
 {
@@ -27,5 +28,10 @@ class SymbolForm extends AbstractType
                 'empty_data' => '',
                 'required' => false,
             ]);
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefault('translation_domain', 'forms');
     }
 }

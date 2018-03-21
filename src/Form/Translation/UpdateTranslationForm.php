@@ -5,6 +5,7 @@ namespace App\Form\Translation;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class UpdateTranslationForm extends AbstractType
 {
@@ -21,5 +22,10 @@ class UpdateTranslationForm extends AbstractType
                 'empty_data' => '',
                 'required' => false,
             ]);
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefault('translation_domain', 'forms');
     }
 }
