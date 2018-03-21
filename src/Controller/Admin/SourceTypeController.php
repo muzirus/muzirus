@@ -4,12 +4,15 @@ namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
 use App\Entity\SourceType;
+use App\Event\SourceTypeEvent;
+use App\Events;
 use App\Facade\SourceTypeFacade;
 use App\Form\SourceType\SourceTypeForm;
 use App\Form\SourceType\SourceTypeFormData;
 use App\Repository\SourceTypeRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,16 +22,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class SourceTypeController extends AbstractController
 {
-    /**
-     * @var SourceTypeFacade
-     */
-    private $sourceTypeFacade;
-
-    public function __construct(SourceTypeFacade $sourceTypeFacade)
-    {
-        $this->sourceTypeFacade = $sourceTypeFacade;
-    }
-
     /**
      * @Route("", name="admin.source-type")
      * @Method("GET")
@@ -47,15 +40,23 @@ class SourceTypeController extends AbstractController
      * @Route("/add", name="admin.source-type.add")
      * @Method({"GET", "POST"})
      */
-    public function add(Request $request): Response
-    {
+    public function add(
+        Request $request,
+        SourceTypeFacade $sourceTypeFacade,
+        EventDispatcherInterface $dispatcher
+    ): Response {
         $formData = new SourceTypeFormData();
 
         $form = $this->createForm(SourceTypeForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->sourceTypeFacade->createSourceType($formData);
+            $sourceType = $sourceTypeFacade->createSourceType($formData);
+
+            $dispatcher->dispatch(
+                Events::SOURCE_TYPE_CREATED,
+                new SourceTypeEvent($this->getUser(), $sourceType)
+            );
 
             $this->addFlashSuccess('source-type.created_successfully');
 
@@ -74,15 +75,24 @@ class SourceTypeController extends AbstractController
      * @Route("/{id}/edit", name="admin.source-type.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, SourceType $sourceType): Response
-    {
+    public function edit(
+        Request $request,
+        SourceType $sourceType,
+        SourceTypeFacade $sourceTypeFacade,
+        EventDispatcherInterface $dispatcher
+    ): Response {
         $formData = SourceTypeFormData::createFromSourceType($sourceType);
 
         $form = $this->createForm(SourceTypeForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->sourceTypeFacade->updateSourceType($sourceType, $formData);
+            $sourceTypeFacade->updateSourceType($sourceType, $formData);
+
+            $dispatcher->dispatch(
+                Events::SOURCE_TYPE_UPDATED,
+                new SourceTypeEvent($this->getUser(), $sourceType)
+            );
 
             $this->addFlashSuccess('source-type.updated_successfully');
 
@@ -102,9 +112,9 @@ class SourceTypeController extends AbstractController
      * @Route("/{id}/remove", name="admin.source-type.remove", requirements={"id": "\d+"})
      * @Method("POST")
      */
-    public function remove(SourceType $sourceType): RedirectResponse
+    public function remove(SourceType $sourceType, SourceTypeFacade $sourceTypeFacade): RedirectResponse
     {
-        $this->sourceTypeFacade->deleteSourceType($sourceType);
+        $sourceTypeFacade->deleteSourceType($sourceType);
 
         $this->addFlashSuccess('source-type.deleted_successfully');
 

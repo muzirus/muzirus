@@ -20,16 +20,6 @@ use Symfony\Component\HttpFoundation\Response;
 class AbbreviationController extends AbstractController
 {
     /**
-     * @var AbbreviationFacade
-     */
-    private $abbreviationFacade;
-
-    public function __construct(AbbreviationFacade $abbreviationFacade)
-    {
-        $this->abbreviationFacade = $abbreviationFacade;
-    }
-
-    /**
      * @Route("", name="admin.abbreviation")
      * @Method("GET")
      */
@@ -47,7 +37,7 @@ class AbbreviationController extends AbstractController
      * @Route("/add", name="admin.abbreviation.add")
      * @Method({"GET", "POST"})
      */
-    public function add(Request $request): Response
+    public function add(Request $request, AbbreviationFacade $abbreviationFacade): Response
     {
         $abbreviationFormData = new AbbreviationFormData();
 
@@ -55,7 +45,7 @@ class AbbreviationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->abbreviationFacade->createAbbreviation($abbreviationFormData);
+            $abbreviationFacade->createAbbreviation($abbreviationFormData);
 
             $this->addFlashSuccess('abbreviation.created_successfully');
 
@@ -74,7 +64,7 @@ class AbbreviationController extends AbstractController
      * @Route("/{id}/edit", name="admin.abbreviation.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, Abbreviation $abbreviation): Response
+    public function edit(Request $request, Abbreviation $abbreviation, AbbreviationFacade $abbreviationFacade): Response
     {
         $abbreviationFormData = AbbreviationFormData::fromAbbreviation($abbreviation);
 
@@ -82,7 +72,7 @@ class AbbreviationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->abbreviationFacade->updateAbbreviation($abbreviation, $abbreviationFormData);
+            $abbreviationFacade->updateAbbreviation($abbreviation, $abbreviationFormData);
 
             $this->addFlashSuccess('abbreviation.updated_successfully');
 
@@ -102,9 +92,9 @@ class AbbreviationController extends AbstractController
      * @Route("/{id}/remove", name="admin.abbreviation.remove", requirements={"id": "\d+"})
      * @Method("POST")
      */
-    public function remove(Abbreviation $abbreviation): RedirectResponse
+    public function remove(Abbreviation $abbreviation, AbbreviationFacade $abbreviationFacade): RedirectResponse
     {
-        $this->abbreviationFacade->deleteAbbreviation($abbreviation);
+        $abbreviationFacade->deleteAbbreviation($abbreviation);
 
         $this->addFlashSuccess('abbreviation.deleted_successfully');
 

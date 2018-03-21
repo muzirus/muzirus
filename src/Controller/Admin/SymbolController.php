@@ -20,16 +20,6 @@ use Symfony\Component\HttpFoundation\Response;
 class SymbolController extends AbstractController
 {
     /**
-     * @var SymbolFacade
-     */
-    private $symbolFacade;
-
-    public function __construct(SymbolFacade $symbolFacade)
-    {
-        $this->symbolFacade = $symbolFacade;
-    }
-
-    /**
      * @Route("", name="admin.symbol")
      * @Method("GET")
      */
@@ -47,7 +37,7 @@ class SymbolController extends AbstractController
      * @Route("/add", name="admin.symbol.add")
      * @Method({"GET", "POST"})
      */
-    public function add(Request $request): Response
+    public function add(Request $request, SymbolFacade $symbolFacade): Response
     {
         $formData = new SymbolFormData();
 
@@ -55,7 +45,7 @@ class SymbolController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->symbolFacade->createSymbol($formData);
+            $symbolFacade->createSymbol($formData);
 
             $this->addFlashSuccess('symbol.created_successfully');
 
@@ -74,7 +64,7 @@ class SymbolController extends AbstractController
      * @Route("/{id}/edit", name="admin.symbol.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, Symbol $symbol): Response
+    public function edit(Request $request, Symbol $symbol, SymbolFacade $symbolFacade): Response
     {
         $formData = SymbolFormData::createFromSymbol($symbol);
 
@@ -82,7 +72,7 @@ class SymbolController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->symbolFacade->updateSymbol($symbol, $formData);
+            $symbolFacade->updateSymbol($symbol, $formData);
 
             $this->addFlashSuccess('symbol.updated_successfully');
 
@@ -102,9 +92,9 @@ class SymbolController extends AbstractController
      * @Route("/{id}/remove", name="admin.symbol.remove", requirements={"id": "\d+"})
      * @Method("POST")
      */
-    public function remove(Symbol $symbol): RedirectResponse
+    public function remove(Symbol $symbol, SymbolFacade $symbolFacade): RedirectResponse
     {
-        $this->symbolFacade->deleteSymbol($symbol);
+        $symbolFacade->deleteSymbol($symbol);
 
         $this->addFlashSuccess('symbol.deleted_successfully');
 

@@ -4,12 +4,15 @@ namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
 use App\Entity\WordCategory;
+use App\Event\CategoryEvent;
+use App\Events;
 use App\Facade\CategoryFacade;
 use App\Form\Category\CategoryForm;
 use App\Form\Category\CategoryFormData;
 use App\Repository\WordCategoryRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,16 +22,6 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CategoryController extends AbstractController
 {
-    /**
-     * @var CategoryFacade
-     */
-    private $categoryFacade;
-
-    public function __construct(CategoryFacade $categoryFacade)
-    {
-        $this->categoryFacade = $categoryFacade;
-    }
-
     /**
      * @Route("", name="admin.category")
      * @Method("GET")
@@ -47,15 +40,23 @@ class CategoryController extends AbstractController
      * @Route("/add", name="admin.category.add")
      * @Method({"GET", "POST"})
      */
-    public function add(Request $request): Response
-    {
+    public function add(
+        Request $request,
+        CategoryFacade $categoryFacade,
+        EventDispatcherInterface $dispatcher
+    ): Response {
         $formData = new CategoryFormData();
 
         $form = $this->createForm(CategoryForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->categoryFacade->createCategory($formData);
+            $category = $categoryFacade->createCategory($formData);
+
+            $dispatcher->dispatch(
+                Events::CATEGORY_CREATED,
+                new CategoryEvent($this->getUser(), $category)
+            );
 
             $this->addFlashSuccess('category.created_successfully');
 
@@ -74,15 +75,24 @@ class CategoryController extends AbstractController
      * @Route("/{id}/edit", name="admin.category.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, WordCategory $category): Response
-    {
+    public function edit(
+        Request $request,
+        WordCategory $category,
+        CategoryFacade $categoryFacade,
+        EventDispatcherInterface $dispatcher
+    ): Response {
         $formData = CategoryFormData::createFromWordCategory($category);
 
         $form = $this->createForm(CategoryForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->categoryFacade->updateCategory($category, $formData);
+            $categoryFacade->updateCategory($category, $formData);
+
+            $dispatcher->dispatch(
+                Events::CATEGORY_UPDATED,
+                new CategoryEvent($this->getUser(), $category)
+            );
 
             $this->addFlashSuccess('category.update_successfully');
 
@@ -102,9 +112,9 @@ class CategoryController extends AbstractController
      * @Route("/{id}/remove", name="admin.category.remove", requirements={"id": "\d+"})
      * @Method("POST")
      */
-    public function remove(WordCategory $category): RedirectResponse
+    public function remove(WordCategory $category, CategoryFacade $categoryFacade): RedirectResponse
     {
-        $this->categoryFacade->deleteCategory($category);
+        $categoryFacade->deleteCategory($category);
 
         $this->addFlashSuccess('category.deleted_successfully');
 

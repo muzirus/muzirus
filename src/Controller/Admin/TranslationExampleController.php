@@ -4,12 +4,15 @@ namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
 use App\Entity\TranslationExample;
+use App\Event\TranslationExampleEvent;
+use App\Events;
 use App\Facade\TranslationExampleFacade;
 use App\Form\TranslationExample\TranslationExampleForm;
 use App\Form\TranslationExample\TranslationExampleFormData;
 use App\Repository\TranslationExampleRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -40,7 +43,8 @@ class TranslationExampleController extends AbstractController
     public function edit(
         Request $request,
         TranslationExample $translationExample,
-        TranslationExampleFacade $translationExampleFacade
+        TranslationExampleFacade $translationExampleFacade,
+        EventDispatcherInterface $dispatcher
     ): Response {
         $formData = TranslationExampleFormData::fromTranslationExample($translationExample);
 
@@ -49,6 +53,11 @@ class TranslationExampleController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $translationExampleFacade->updateTranslationExample($translationExample, $formData);
+
+            $dispatcher->dispatch(
+                Events::TRANSLATION_EXAMPLE_UPDATED,
+                new TranslationExampleEvent($this->getUser(), $translationExample)
+            );
 
             $this->addFlashSuccess('translation_example.updated_successfully');
 
