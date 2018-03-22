@@ -3,7 +3,7 @@
 namespace App\Form\TranslationExample;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -12,13 +12,21 @@ class TranslationExampleForm extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('czechWordSentence', TextType::class, [
+            ->add('czechWordSentence', TextareaType::class, [
                 'label' => 'label.czech_sentence',
                 'empty_data' => '',
+                'attr' => [
+                    'style' => 'resize: vertical;',
+                    'rows' => 4,
+                ],
             ])
-            ->add('russianWordSentence', TextType::class, [
+            ->add('russianWordSentence', TextareaType::class, [
                 'label' => 'label.russian_sentence',
                 'empty_data' => '',
+                'attr' => [
+                    'style' => 'resize: vertical;',
+                    'rows' => 4,
+                ],
             ]);
     }
 
