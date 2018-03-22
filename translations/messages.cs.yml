@@ -61,7 +61,6 @@ admin.status: Stav
 admin.symbols: Symboly
 admin.system: Systém
 admin.tab.edit: Upravit
-admin.tab.exemplifications: Exemplifikace
 admin.title: Název
 admin.translation: Překlad
 admin.translations: Překlady
@@ -79,3 +78,4 @@ admin.not_processed: Nezpracováno
 admin.equivalents_not_found: 'Nalezeny ekvivalenty'
 admin.examples_added: 'Vloženy ukázky'
 admin.checked: Zkontrolováno
+admin.tab.equivalents: Ekvivalenty
