@@ -1,11 +1,11 @@
 {% macro wordStatus(statusId) %}
     {% if statusId == 1 %}
-        <span class="label label-danger">Not processed</span>
+        <span class="label label-danger">{{ 'admin.equivalents_not_found'|trans }}</span>
     {% elseif statusId == 2 %}
-        <span class="label label-warning">Need work</span>
+        <span class="label label-warning">{{ 'admin.examples_added'|trans }}</span>
     {% elseif statusId == 3 %}
-        <span class="label label-success">Ready</span>
+        <span class="label label-success">{{ 'admin.checked'|trans }}</span>
     {% else %}
-        <span class="label label-default">Unknown</span>
+        <span class="label label-default">{{ 'admin.not_processed'|trans }}</span>
     {% endif %}
 {% endmacro %}

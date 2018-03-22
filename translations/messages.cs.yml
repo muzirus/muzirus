@@ -75,3 +75,7 @@ admin.word: Slovo
 admin.words: Slova
 admin.word_with_accent: 'Slovo s akcentem'
 admin.yes: Ano
+admin.not_processed: Nezpracováno
+admin.equivalents_not_found: 'Nalezeny ekvivalenty'
+admin.examples_added: 'Vloženy ukázky'
+admin.checked: Zkontrolováno

@@ -92,7 +92,7 @@ abstract class AbstractWordFormData
      * @Assert\Type("integer")
      * @var int
      */
-    private $statusLight = AbstractWordInterface::STATUS_LIGHT_UNKNOWN;
+    private $statusLight = AbstractWordInterface::STATUS_LIGHT_NOT_PROCESSED;
 
     //-------------------------------------------------------------------------
 

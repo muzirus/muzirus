@@ -107,13 +107,13 @@ class CzechWordForm extends AbstractType
             ->add('statusLight', ChoiceType::class, [
                 'label' => 'label.status',
                 'choices' => [
-                    'label.status.ready' => AbstractWordInterface::STATUS_LIGHT_GREEN,
-                    'label.status.needs_work' => AbstractWordInterface::STATUS_LIGHT_YELLOW,
-                    'label.status.not_processed' => AbstractWordInterface::STATUS_LIGHT_RED,
-                    'label.status.unknown' => AbstractWordInterface::STATUS_LIGHT_UNKNOWN,
+                    'label.status.checked' => AbstractWordInterface::STATUS_LIGHT_CHECKED,
+                    'label.status.examples_added' => AbstractWordInterface::STATUS_LIGHT_EXAMPLES_FOUND,
+                    'label.status.equivalents_not_found' => AbstractWordInterface::STATUS_LIGHT_EQUIVALENTS_NOT_FOUND,
+                    'label.status.not_processed' => AbstractWordInterface::STATUS_LIGHT_NOT_PROCESSED,
                 ],
                 'expanded' => true,
-                'empty_data' => AbstractWordInterface::STATUS_LIGHT_UNKNOWN,
+                'empty_data' => AbstractWordInterface::STATUS_LIGHT_NOT_PROCESSED,
             ]);
     }
 

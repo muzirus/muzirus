@@ -25,17 +25,17 @@ abstract class AbstractWord implements AbstractWordInterface
     //-------------------------------------------------------------------------
 
     public const GENDERS = [
-        self::GENDER_UNKNOWN => 'Unknown',
-        self::GENDER_MASCULINE => 'Masculine',
-        self::GENDER_FEMININE => 'Feminine',
-        self::GENDER_NEUTER => 'Neuter',
+        self::GENDER_UNKNOWN,
+        self::GENDER_MASCULINE,
+        self::GENDER_FEMININE,
+        self::GENDER_NEUTER,
     ];
 
     public const STATUS_LIGHTS = [
-        self::STATUS_LIGHT_UNKNOWN => 'Unknown',
-        self::STATUS_LIGHT_RED => 'Red',
-        self::STATUS_LIGHT_YELLOW => 'Yellow',
-        self::STATUS_LIGHT_GREEN => 'Green',
+        self::STATUS_LIGHT_NOT_PROCESSED,
+        self::STATUS_LIGHT_EQUIVALENTS_NOT_FOUND,
+        self::STATUS_LIGHT_EXAMPLES_FOUND,
+        self::STATUS_LIGHT_CHECKED,
     ];
 
     //-------------------------------------------------------------------------
@@ -119,7 +119,7 @@ abstract class AbstractWord implements AbstractWordInterface
      * @ORM\Column(type="integer", name="status_light")
      * @var int
      */
-    protected $statusLight = self::STATUS_LIGHT_UNKNOWN;
+    protected $statusLight = self::STATUS_LIGHT_NOT_PROCESSED;
 
     /**
      * @ORM\Column(type="boolean", name="imported", options={"default":false})

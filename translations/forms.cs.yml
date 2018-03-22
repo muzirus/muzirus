@@ -26,13 +26,13 @@ label.gender.masculine: Mužský
 label.gender.feminine: Ženský
 label.gender.neuter: Střední
 label.gender.not_applicable: Neaplikovatelné
-label.status.ready: Připraveno
-label.status.needs_work: 'Potřebuje úpravu'
-label.status.not_processed: Nespracováno
-label.status.unknown: Neznámý
 label.czech_sentence: 'Česká věta'
 label.russian_sentence: 'Ruská věta'
 label.czech_word: 'České slovo'
 label.czech_note: 'Česká poznámka'
 label.russian_word: 'Ruské slovo'
 label.russian_note: 'Ruská poznámka'
+label.status.not_processed: Nezpracováno
+label.status.equivalents_not_found: 'Nalezeny ekvivalenty'
+label.status.examples_added: 'Vloženy ukázky'
+label.status.checked: Zkontrolováno

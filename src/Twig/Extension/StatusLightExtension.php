@@ -21,13 +21,13 @@ class StatusLightExtension extends \Twig_Extension
     private function getStatusLightCode(int $status): string
     {
         switch ($status) {
-            case AbstractWordInterface::STATUS_LIGHT_RED:
+            case AbstractWordInterface::STATUS_LIGHT_EQUIVALENTS_NOT_FOUND:
                 return '<i class="fa fa-times-circle text-red"></i>';
-            case AbstractWordInterface::STATUS_LIGHT_YELLOW:
+            case AbstractWordInterface::STATUS_LIGHT_EXAMPLES_FOUND:
                 return '<i class="fa fa-circle text-yellow"></i>';
-            case AbstractWordInterface::STATUS_LIGHT_GREEN:
+            case AbstractWordInterface::STATUS_LIGHT_CHECKED:
                 return '<i class="fa fa-check-circle text-green"></i>';
-            case AbstractWordInterface::STATUS_LIGHT_UNKNOWN:
+            case AbstractWordInterface::STATUS_LIGHT_NOT_PROCESSED:
             default:
                 return '<i class="fa fa-question-circle text-gray"></i>';
         }
@@ -36,14 +36,14 @@ class StatusLightExtension extends \Twig_Extension
     private function getStatusLightClass(int $status): string
     {
         switch ($status) {
-            case AbstractWordInterface::STATUS_LIGHT_RED:
+            case AbstractWordInterface::STATUS_LIGHT_EQUIVALENTS_NOT_FOUND:
                 //return 'danger';
                 return '';
-            case AbstractWordInterface::STATUS_LIGHT_YELLOW:
+            case AbstractWordInterface::STATUS_LIGHT_EXAMPLES_FOUND:
                 return 'warning';
-            case AbstractWordInterface::STATUS_LIGHT_GREEN:
+            case AbstractWordInterface::STATUS_LIGHT_CHECKED:
                 return 'success';
-            case AbstractWordInterface::STATUS_LIGHT_UNKNOWN:
+            case AbstractWordInterface::STATUS_LIGHT_NOT_PROCESSED:
             default:
                 return '';
         }
