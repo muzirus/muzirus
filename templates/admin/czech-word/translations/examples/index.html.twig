@@ -10,10 +10,10 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>{{ 'admin.russian_word'|trans }}</th>
-                        <th>{{ 'admin.russian_sentence'|trans }}</th>
-                        <th>{{ 'admin.czech_sentence'|trans }}</th>
                         <th>{{ 'admin.czech_word'|trans }}</th>
+                        <th>{{ 'admin.czech_sentence'|trans }}</th>
+                        <th>{{ 'admin.russian_sentence'|trans }}</th>
+                        <th>{{ 'admin.russian_word'|trans }}</th>
                         <th>{{ 'admin.actions'|trans }}</th>
                     </tr>
                 </thead>
@@ -21,19 +21,19 @@
                     {% for example in translation.examples %}
                         <tr>
                             <td>
-                                <a href="{{ path('admin.russian-word.edit', {id: example.translation.russianWord.id}) }}">
-                                    {{ example.translation.russianWord.content }}
+                                <a href="{{ path('admin.czech-word.edit', {id: example.translation.czechWord.id}) }}">
+                                    {{ example.translation.czechWord.content }}
                                 </a>
-                            </td>
-                            <td>
-                                {{ example.russianWordSentence }}
                             </td>
                             <td>
                                 {{ example.czechWordSentence }}
                             </td>
                             <td>
-                                <a href="{{ path('admin.czech-word.edit', {id: example.translation.czechWord.id}) }}">
-                                    {{ example.translation.czechWord.content }}
+                                {{ example.russianWordSentence }}
+                            </td>
+                            <td>
+                                <a href="{{ path('admin.russian-word.edit', {id: example.translation.russianWord.id}) }}">
+                                    {{ example.translation.russianWord.content }}
                                 </a>
                             </td>
                             <td>
@@ -50,10 +50,10 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>{{ 'admin.russian_word'|trans }}</th>
-                        <th>{{ 'admin.russian_sentence'|trans }}</th>
-                        <th>{{ 'admin.czech_sentence'|trans }}</th>
                         <th>{{ 'admin.czech_word'|trans }}</th>
+                        <th>{{ 'admin.czech_sentence'|trans }}</th>
+                        <th>{{ 'admin.russian_sentence'|trans }}</th>
+                        <th>{{ 'admin.russian_word'|trans }}</th>
                         <th>{{ 'admin.actions'|trans }}</th>
                     </tr>
                 </tfoot>
@@ -66,5 +66,36 @@
         </div>
     </div>
 
-    {{ include('admin/_fragments/box/translation_example_add.html.twig') }}
+    <div class="box">
+        {{ form_start(form) }}
+        <div class="box-header with-border">
+            <h3 class="box-title">
+                {{ 'admin.box.title.add'|trans }}
+            </h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.czechWordSentence) }}
+                        {{ form_widget(form.czechWordSentence) }}
+                        {{ form_errors(form.czechWordSentence) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.russianWordSentence) }}
+                        {{ form_widget(form.russianWordSentence) }}
+                        {{ form_errors(form.russianWordSentence) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <button class="btn btn-primary">
+                {{ 'admin.button.save'|trans }}
+            </button>
+        </div>
+        {{ form_end(form) }}
+    </div>
 {% endblock %}
