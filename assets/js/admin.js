@@ -16,7 +16,7 @@
         $('[data-select="select2"]').select2();
 
         // jquery.are-you-sure
-        $('.js-are-you-sure').areYouSure();
+        $('form').areYouSure();
 
         //$('[data-toggle="popover"]').popover();
         //$('[data-toggle="tooltip"]').tooltip();
