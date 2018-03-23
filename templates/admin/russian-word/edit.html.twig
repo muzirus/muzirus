@@ -50,9 +50,13 @@
                             {{ form_widget(form.contentWithAccent) }}
                             {{ form_errors(form.contentWithAccent) }}
                             <div class="help-block">
-                                {{ word.contentWithAccent|escape|highlight_latin|raw }}
-                                -
-                                {{ word.contentWithAccent|escape|highlight_accent|raw }}
+                                {% if word.contentWithAccent is empty %}
+                                    <span class="text-danger">{{ 'admin.word_with_accent_is_missing'|trans }}</span>
+                                {% else %}
+                                    {{ word.contentWithAccent|escape|highlight_latin|raw }}
+                                    -
+                                    {{ word.contentWithAccent|escape|highlight_accent|raw }}
+                                {% endif %}
                             </div>
                         </div>
                     </div>

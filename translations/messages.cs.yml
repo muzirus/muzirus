@@ -74,6 +74,7 @@ admin.visit_site: 'Zobrazit stránku'
 admin.word: Slovo
 admin.words: Slova
 admin.word_with_accent: 'Slovo s akcentem'
+admin.word_with_accent_is_missing: 'Chybí slovo s akcentem (uložte formulář)'
 admin.yes: Ano
 admin.not_processed: Nezpracováno
 admin.equivalents_not_found: 'Nalezeny ekvivalenty'
