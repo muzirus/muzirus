@@ -44,7 +44,7 @@ class CzechWordController extends AbstractController
         return $this->render(
             'admin/czech-word/index.html.twig',
             [
-                'words' => $czechWordRepository->getAll(),
+                'words' => $czechWordRepository->findAllOptimizedForAdminWordList(),
             ]
         );
     }

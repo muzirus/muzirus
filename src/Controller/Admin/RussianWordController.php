@@ -44,7 +44,7 @@ class RussianWordController extends AbstractController
         return $this->render(
             'admin/russian-word/index.html.twig',
             [
-                'words' => $russianWordRepository->getAll(),
+                'words' => $russianWordRepository->findAllOptimizedForAdminWordList(),
             ]
         );
     }

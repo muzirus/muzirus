@@ -19,11 +19,14 @@ class CzechWordRepository extends ServiceEntityRepository
     /**
      * @return CzechWordInterface[]
      */
-    public function getAll(): array
+    public function findAllOptimizedForAdminWordList(): array
     {
         return $this
             ->createQueryBuilder('w')
-            ->select(['w', 't'])
+            ->select([
+                'partial w.{id, content, languageNoteExceptionToInflection, languageNoteGender, statusLight, imported, createdAt, updatedAt}',
+                'partial t.{id}',
+            ])
             ->join('w.translations', 't')
             ->orderBy('w.content', 'ASC')
             ->getQuery()

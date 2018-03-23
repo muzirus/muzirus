@@ -19,11 +19,14 @@ class RussianWordRepository extends ServiceEntityRepository
     /**
      * @return RussianWordInterface[]
      */
-    public function getAll(): array
+    public function findAllOptimizedForAdminWordList(): array
     {
         return $this
             ->createQueryBuilder('w')
-            ->select(['w', 't'])
+            ->select([
+                'partial w.{id, content, contentWithAccent, languageNoteExceptionToInflection, languageNoteGender, statusLight, imported, createdAt, updatedAt}',
+                'partial t.{id}',
+            ])
             ->leftJoin('w.translations', 't')
             ->orderBy('w.content', 'ASC')
             ->getQuery()

@@ -90,7 +90,6 @@ abstract class AbstractWord implements AbstractWordInterface
      */
     protected $languageNoteOther = '';
 
-
     /**
      * @ORM\Column(type="text", name="explanation")
      * @var string
