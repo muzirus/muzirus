@@ -6,6 +6,8 @@ use App\Entity\Able\Timestampable;
 
 interface TranslationInterface extends Timestampable
 {
+    public function __toString(): string;
+
     public function getId(): int;
 
     public function getRussianWord(): RussianWordInterface;

@@ -75,6 +75,11 @@ class Translation implements TranslationInterface
         $this->translationExamples = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return sprintf('%s - %s', $this->getRussianWord(), $this->getCzechWord());
+    }
+
     //-------------------------------------------------------------------------
 
     public function getId(): int

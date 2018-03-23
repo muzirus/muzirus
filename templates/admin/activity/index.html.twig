@@ -1,0 +1,28 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block title 'admin.activities'|trans %}
+
+{% block content %}
+    <ul class="timeline">
+        {% for logEntry in logEntries %}
+            <li>
+                {{ getLogEntryIcon(logEntry) }}
+                <div class="timeline-item">
+                    <span class="time"><i class="fa fa-clock-o"></i> {{ logEntry.createdAtFormat }}</span>
+                    <h3 class="timeline-header">
+                        {{ getLogEntryTitle(logEntry) }}
+                    </h3>
+
+                    <div class="timeline-body">
+                        {{ getLogEntryBody(logEntry) }}
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if logEntries.haveToPaginate %}
+        <div class="navigation text-center">
+            {{ pagerfanta(logEntries, 'twitter_bootstrap3', { routeName: 'admin.activity.paginated' }) }}
+        </div>
+    {% endif %}
+{% endblock %}

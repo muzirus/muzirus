@@ -56,6 +56,11 @@ class TranslationExample implements TranslationExampleInterface
         $this->czechWordSentence = $czechWordSentence;
     }
 
+    public function __toString(): string
+    {
+        return sprintf('%s - %s', $this->russianWordSentence, $this->czechWordSentence);
+    }
+
     //-------------------------------------------------------------------------
 
     public function getId(): int
