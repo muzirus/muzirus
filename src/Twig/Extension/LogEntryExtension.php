@@ -24,7 +24,9 @@ class LogEntryExtension extends \Twig_Extension
                     return $this->getLogEntryIcon($logEntry);
                 },
                 [
-                    'is_safe' => ['html'],
+                    'is_safe' => [
+                        'html',
+                    ],
                 ]
             ),
             new \Twig_SimpleFunction(
@@ -39,7 +41,9 @@ class LogEntryExtension extends \Twig_Extension
                     return $this->getLogEntryBody($logEntry);
                 },
                 [
-                    'is_safe' => ['html'],
+                    'is_safe' => [
+                        'html',
+                    ],
                 ]
             ),
         ];

@@ -27,7 +27,7 @@
                                 <div class="clearfix">
                                     <div class="pull-left">
                                         <a href="{{ path('admin.russian-word.edit', {id: word.id}) }}">
-                                            {{ word.content|escape|highlight_latin|raw }}
+                                            {{ word.content|highlight_latin }}
                                         </a>
                                     </div>
                                     <div class="pull-right">
@@ -39,7 +39,7 @@
                                 </div>
                             </td>
                             <td>
-                                {{ word.contentWithAccent|escape|highlight_accent|raw }}
+                                {{ word.contentWithAccent|highlight_accent }}
                             </td>
                             <td>
                                 <a href="{{ path('admin.russian-word.translations', {id: word.id}) }}">

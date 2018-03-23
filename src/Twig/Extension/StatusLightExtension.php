@@ -9,12 +9,23 @@ class StatusLightExtension extends \Twig_Extension
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter('convert_status_code_to_icon', function (int $status) {
-                return $this->getStatusLightCode($status);
-            }),
-            new \Twig_SimpleFilter('convert_status_code_to_class', function (int $status) {
-                return $this->getStatusLightClass($status);
-            }),
+            new \Twig_SimpleFilter(
+                'convert_status_code_to_icon',
+                function (int $status) {
+                    return $this->getStatusLightCode($status);
+                },
+                [
+                    'is_safe' => [
+                        'html',
+                    ],
+                ]
+            ),
+            new \Twig_SimpleFilter(
+                'convert_status_code_to_class',
+                function (int $status) {
+                    return $this->getStatusLightClass($status);
+                }
+            ),
         ];
     }
 

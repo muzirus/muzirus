@@ -7,15 +7,42 @@ class HighlightExtension extends \Twig_Extension
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter('highlight_accent', function (string $text) {
-                return $this->highlightAccent($text);
-            }),
-            new \Twig_SimpleFilter('highlight_cyrillic', function (string $text) {
-                return $this->highlightCyrillic($text);
-            }),
-            new \Twig_SimpleFilter('highlight_latin', function (string $text) {
-                return $this->highlightLatin($text);
-            }),
+            new \Twig_SimpleFilter(
+                'highlight_accent',
+                function (string $text) {
+                    return $this->highlightAccent($text);
+                },
+                [
+                    'pre_escape' => 'html',
+                    'is_safe' => [
+                        'html',
+                    ],
+                ]
+            ),
+            new \Twig_SimpleFilter(
+                'highlight_cyrillic',
+                function (string $text) {
+                    return $this->highlightCyrillic($text);
+                },
+                [
+                    'pre_escape' => 'html',
+                    'is_safe' => [
+                        'html',
+                    ],
+                ]
+            ),
+            new \Twig_SimpleFilter(
+                'highlight_latin',
+                function (string $text) {
+                    return $this->highlightLatin($text);
+                },
+                [
+                    'pre_escape' => 'html',
+                    'is_safe' => [
+                        'html',
+                    ],
+                ]
+            ),
         ];
     }
 
