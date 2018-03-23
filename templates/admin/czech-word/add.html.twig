@@ -42,7 +42,14 @@
                         {{ form_errors(form.languageNoteExceptionToInflection) }}
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{ form_label(form.languageNoteType) }}
+                        {{ form_widget(form.languageNoteType) }}
+                        {{ form_errors(form.languageNoteType) }}
+                    </div>
+                </div>
+                <div class="col-md-3">
                     <div class="form-group">
                         {{ form_label(form.languageNoteGender) }}
                         {{ form_widget(form.languageNoteGender) }}

@@ -54,6 +54,12 @@ abstract class AbstractWordFormData
      * @Assert\Type("integer")
      * @var int
      */
+    private $languageNoteType = AbstractWordInterface::TYPE_UNKNOWN;
+
+    /**
+     * @Assert\Type("integer")
+     * @var int
+     */
     private $languageNoteGender = AbstractWordInterface::GENDER_UNKNOWN;
 
     /**
@@ -168,6 +174,16 @@ abstract class AbstractWordFormData
         $this->languageNoteExceptionToInflection = $languageNoteExceptionToInflection;
     }
 
+    public function getLanguageNoteType(): int
+    {
+        return $this->languageNoteType;
+    }
+
+    public function setLanguageNoteType(int $languageNoteType)
+    {
+        $this->languageNoteType = $languageNoteType;
+    }
+
     public function getLanguageNoteGender(): int
     {
         return $this->languageNoteGender;
@@ -246,6 +262,7 @@ abstract class AbstractWordFormData
         $this->setLanguageNotePronunciation($word->getLanguageNotePronunciation());
         $this->setLanguageNoteInflection($word->getLanguageNoteInflection());
         $this->setLanguageNoteExceptionToInflection($word->getLanguageNoteExceptionToInflection());
+        $this->setLanguageNoteType($word->getLanguageNoteType());
         $this->setLanguageNoteGender($word->getLanguageNoteGender());
         $this->setLanguageNoteOther($word->getLanguageNoteOther());
         $this->setExplanation($word->getExplanation());
