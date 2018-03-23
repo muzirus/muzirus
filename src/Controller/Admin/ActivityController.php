@@ -27,7 +27,7 @@ class ActivityController extends AbstractController
         return $this->render(
             'admin/activity/index.html.twig',
             [
-                'logEntries' => $logEntryRepository->findAsPaginator($page),
+                'logEntries' => $logEntryRepository->findAsPaginatorOptimizedForAdminActivityTimeline($page),
             ]
         );
     }

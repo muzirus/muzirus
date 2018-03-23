@@ -19,11 +19,20 @@ class LogEntryRepository extends ServiceEntityRepository
     /**
      * @return Pagerfanta|LogEntryInterface[]
      */
-    public function findAsPaginator(int $page, int $maxPerPage = 10): Pagerfanta
+    public function findAsPaginatorOptimizedForAdminActivityTimeline(int $page, int $maxPerPage = 10): Pagerfanta
     {
         $query = $this
             ->createQueryBuilder('le')
-            ->select('le, c, cw, rw, s, st, t, te')
+            ->select([
+                'le',
+                'partial c.{id, title}',
+                'partial cw.{id, content}',
+                'partial rw.{id, content}',
+                'partial s.{id, title}',
+                'partial st.{id, title}',
+                'partial t.{id, czechWord, russianWord}',
+                'partial te.{id, czechWordSentence, russianWordSentence}',
+            ])
             ->leftJoin('le.category', 'c')
             ->leftJoin('le.czechWord', 'cw')
             ->leftJoin('le.russianWord', 'rw')
