@@ -24,6 +24,20 @@ abstract class AbstractWord implements AbstractWordInterface
 
     //-------------------------------------------------------------------------
 
+    public const TYPES = [
+        self::TYPE_UNKNOWN,
+        self::TYPE_NOUN,
+        self::TYPE_VERB,
+        self::TYPE_ADJECTIVE,
+        self::TYPE_PRONOUN,
+        self::TYPE_NUMERAL,
+        self::TYPE_ADVERB,
+        self::TYPE_PREPOSITION,
+        self::TYPE_CONJUNCTION,
+        self::TYPE_PARTICLE,
+        self::TYPE_INTERJECTION,
+    ];
+
     public const GENDERS = [
         self::GENDER_UNKNOWN,
         self::GENDER_MASCULINE,
@@ -79,7 +93,13 @@ abstract class AbstractWord implements AbstractWordInterface
     protected $languageNoteExceptionToInflection = '';
 
     /**
-     * @ORM\Column(type="integer", name="language_note_gender")
+     * @ORM\Column(type="integer", name="language_note_type", options={"default":0})
+     * @var int
+     */
+    protected $languageNoteType = self::TYPE_UNKNOWN;
+
+    /**
+     * @ORM\Column(type="integer", name="language_note_gender", options={"default":0})
      * @var int
      */
     protected $languageNoteGender = self::GENDER_UNKNOWN;
@@ -115,7 +135,7 @@ abstract class AbstractWord implements AbstractWordInterface
     protected $note = '';
 
     /**
-     * @ORM\Column(type="integer", name="status_light")
+     * @ORM\Column(type="integer", name="status_light", options={"default":0})
      * @var int
      */
     protected $statusLight = self::STATUS_LIGHT_NOT_PROCESSED;
@@ -130,8 +150,8 @@ abstract class AbstractWord implements AbstractWordInterface
      * Owning side.
      * @ORM\ManyToMany(targetEntity="WordCategory")
      * @ORM\JoinTable(name="words_categories",
-     *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="cascade")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="cascade")}
+     *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="CASCADE")}
      * )
      * @var ArrayCollection
      */
@@ -141,8 +161,8 @@ abstract class AbstractWord implements AbstractWordInterface
      * Owning side.
      * @ORM\ManyToMany(targetEntity="Source")
      * @ORM\JoinTable(name="words_sources",
-     *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="cascade")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="source_id", referencedColumnName="id", onDelete="cascade")}
+     *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="source_id", referencedColumnName="id", onDelete="CASCADE")}
      * )
      * @var ArrayCollection
      */
@@ -223,6 +243,18 @@ abstract class AbstractWord implements AbstractWordInterface
     public function setLanguageNoteExceptionToInflection(string $languageNoteExceptionToInflection): void
     {
         $this->languageNoteExceptionToInflection = $languageNoteExceptionToInflection;
+    }
+
+    public function getLanguageNoteType(): int
+    {
+        return $this->languageNoteType;
+    }
+
+    public function setLanguageNoteType(int $languageNoteType): void
+    {
+        if (array_key_exists($languageNoteType, self::TYPES)) {
+            $this->languageNoteType = $languageNoteType;
+        }
     }
 
     public function getLanguageNoteGender(): int

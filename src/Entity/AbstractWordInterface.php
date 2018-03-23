@@ -6,6 +6,18 @@ use App\Entity\Able\Timestampable;
 
 interface AbstractWordInterface extends Timestampable
 {
+    public const TYPE_UNKNOWN = 0;
+    public const TYPE_NOUN = 1;          // podstatná jména (Substantiva)
+    public const TYPE_VERB = 2;          // slovesa (Verba)
+    public const TYPE_ADJECTIVE = 3;     // přídavná jména (Adjektiva)
+    public const TYPE_PRONOUN = 4;       // zájmena (Pronomina)
+    public const TYPE_NUMERAL = 5;       // číslovky (Numeralia)
+    public const TYPE_ADVERB = 6;        // příslovce (Adverbia)
+    public const TYPE_PREPOSITION = 7;   // předložky (Prepozice)
+    public const TYPE_CONJUNCTION = 8;   // spojky (Konjunkce)
+    public const TYPE_PARTICLE = 9;      // částice (Partikule)
+    public const TYPE_INTERJECTION = 10; // citoslovce (Interjekce)
+
     public const GENDER_UNKNOWN = 0;
     public const GENDER_MASCULINE = 1;
     public const GENDER_FEMININE = 2;
@@ -39,6 +51,10 @@ interface AbstractWordInterface extends Timestampable
     public function getLanguageNoteExceptionToInflection(): string;
 
     public function setLanguageNoteExceptionToInflection(string $languageNoteExceptionToInflection): void;
+
+    public function getLanguageNoteType(): int;
+
+    public function setLanguageNoteType(int $languageNoteType): void;
 
     public function getLanguageNoteGender(): int;
 
