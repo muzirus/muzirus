@@ -38,6 +38,23 @@ class CzechWordForm extends AbstractType
                 'required' => false,
                 'empty_data' => '',
             ])
+            ->add('languageNoteType', ChoiceType::class, [
+                'label' => 'label.language_note.type',
+                'choices' => [
+                    'label.type.unknown' => AbstractWordInterface::TYPE_UNKNOWN,
+                    'label.type.noun' => AbstractWordInterface::TYPE_NOUN,
+                    'label.type.verb' => AbstractWordInterface::TYPE_VERB,
+                    'label.type.adjective' => AbstractWordInterface::TYPE_ADJECTIVE,
+                    'label.type.pronoun' => AbstractWordInterface::TYPE_PRONOUN,
+                    'label.type.numeral' => AbstractWordInterface::TYPE_NUMERAL,
+                    'label.type.adverb' => AbstractWordInterface::TYPE_ADVERB,
+                    'label.type.preposition' => AbstractWordInterface::TYPE_PREPOSITION,
+                    'label.type.conjunction' => AbstractWordInterface::TYPE_CONJUNCTION,
+                    'label.type.particle' => AbstractWordInterface::TYPE_PARTICLE,
+                    'label.type.interjection' => AbstractWordInterface::TYPE_INTERJECTION,
+                ],
+                'empty_data' => AbstractWordInterface::TYPE_UNKNOWN,
+            ])
             ->add('languageNoteGender', ChoiceType::class, [
                 'label' => 'label.language_note.gender',
                 'choices' => [

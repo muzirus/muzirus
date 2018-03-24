@@ -52,6 +52,7 @@ class CzechWordFacade
         $word->setLanguageNotePronunciation($formData->getLanguageNotePronunciation());
         $word->setLanguageNoteInflection($formData->getLanguageNoteInflection());
         $word->setLanguageNoteExceptionToInflection($formData->getLanguageNoteExceptionToInflection());
+        $word->setLanguageNoteType($formData->getLanguageNoteType());
         $word->setLanguageNoteGender($formData->getLanguageNoteGender());
         $word->setLanguageNoteOther($formData->getLanguageNoteOther());
         $word->setExplanation($formData->getExplanation());
