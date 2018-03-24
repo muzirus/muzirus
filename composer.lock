@@ -2859,16 +2859,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.0.75",
+            "version": "v1.0.76",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "3da0134564f59ffbd060db8f3406e9f3e78df64e"
+                "reference": "202c981673b255a41bac4076cb82629a0b8481cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/3da0134564f59ffbd060db8f3406e9f3e78df64e",
-                "reference": "3da0134564f59ffbd060db8f3406e9f3e78df64e",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/202c981673b255a41bac4076cb82629a0b8481cb",
+                "reference": "202c981673b255a41bac4076cb82629a0b8481cb",
                 "shasum": ""
             },
             "require": {
@@ -2901,7 +2901,7 @@
                     "email": "fabien.potencier@gmail.com"
                 }
             ],
-            "time": "2018-03-20T07:32:02+00:00"
+            "time": "2018-03-23T16:30:50+00:00"
         },
         {
             "name": "symfony/form",
@@ -3462,16 +3462,16 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "60df153a907b187cc3fd050dd6de7746ddc833b7"
+                "reference": "c936864823ac60508e37d8fb1d9bc6a02d03ffa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/60df153a907b187cc3fd050dd6de7746ddc833b7",
-                "reference": "60df153a907b187cc3fd050dd6de7746ddc833b7",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/c936864823ac60508e37d8fb1d9bc6a02d03ffa7",
+                "reference": "c936864823ac60508e37d8fb1d9bc6a02d03ffa7",
                 "shasum": ""
             },
             "require": {
@@ -3523,7 +3523,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2018-03-17T19:51:02+00:00"
+            "time": "2018-03-21T13:40:46+00:00"
         },
         {
             "name": "symfony/monolog-bridge",
@@ -5535,16 +5535,16 @@
     "packages-dev": [
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v132",
+            "version": "v133",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "dd950a605fb0c5e50ab71774e299fa26c9093f80"
+                "reference": "f4f15fda108cdc9af04d380fc4005ebf977e1eb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/dd950a605fb0c5e50ab71774e299fa26c9093f80",
-                "reference": "dd950a605fb0c5e50ab71774e299fa26c9093f80",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/f4f15fda108cdc9af04d380fc4005ebf977e1eb8",
+                "reference": "f4f15fda108cdc9af04d380fc4005ebf977e1eb8",
                 "shasum": ""
             },
             "bin": [
@@ -5575,7 +5575,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2018-03-02T17:10:10+00:00"
+            "time": "2018-03-21T18:15:15+00:00"
         },
         {
             "name": "symfony/browser-kit",
