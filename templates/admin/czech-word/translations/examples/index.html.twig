@@ -14,6 +14,7 @@
                         <th>{{ 'admin.czech_sentence'|trans }}</th>
                         <th>{{ 'admin.russian_sentence'|trans }}</th>
                         <th>{{ 'admin.russian_word'|trans }}</th>
+                        <th>{{ 'admin.hidden'|trans }}</th>
                         <th>{{ 'admin.actions'|trans }}</th>
                     </tr>
                 </thead>
@@ -37,6 +38,13 @@
                                 </a>
                             </td>
                             <td>
+                                {% if example.hidden %}
+                                    <span class="label label-danger">{{ 'admin.yes'|trans }}</span>
+                                {% else %}
+                                    <span class="label label-success">{{ 'admin.no'|trans }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
                                 <a href="{{ path('admin.czech-word.translations.examples.edit', {
                                     id: word.id,
                                     translationId: translation.id,
@@ -54,6 +62,7 @@
                         <th>{{ 'admin.czech_sentence'|trans }}</th>
                         <th>{{ 'admin.russian_sentence'|trans }}</th>
                         <th>{{ 'admin.russian_word'|trans }}</th>
+                        <th>{{ 'admin.hidden'|trans }}</th>
                         <th>{{ 'admin.actions'|trans }}</th>
                     </tr>
                 </tfoot>
