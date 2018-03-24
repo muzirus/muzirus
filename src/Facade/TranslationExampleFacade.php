@@ -24,7 +24,8 @@ class TranslationExampleFacade
         $translationExample = new TranslationExample(
             $formData->getTranslation(),
             $formData->getRussianWordSentence(),
-            $formData->getCzechWordSentence()
+            $formData->getCzechWordSentence(),
+            $formData->isHidden()
         );
 
         $this->entityManager->persist($translationExample);
@@ -39,6 +40,12 @@ class TranslationExampleFacade
     ): void {
         $translationExample->setRussianWordSentence($formData->getRussianWordSentence());
         $translationExample->setCzechWordSentence($formData->getCzechWordSentence());
+
+        if ($formData->isHidden()) {
+            $translationExample->markHidden();
+        } else {
+            $translationExample->markVisible();
+        }
 
         $this->entityManager->flush();
     }

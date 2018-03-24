@@ -13,18 +13,25 @@
         </div>
         <div class="box-body">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="form-group">
                         {{ form_label(form.czechWordSentence) }}
                         {{ form_widget(form.czechWordSentence) }}
                         {{ form_errors(form.czechWordSentence) }}
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="form-group">
                         {{ form_label(form.russianWordSentence) }}
                         {{ form_widget(form.russianWordSentence) }}
                         {{ form_errors(form.russianWordSentence) }}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        {{ form_label(form.hidden) }}
+                        {{ form_widget(form.hidden) }}
+                        {{ form_errors(form.hidden) }}
                     </div>
                 </div>
             </div>

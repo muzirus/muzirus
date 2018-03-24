@@ -8,14 +8,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class TranslationExampleFormData
 {
-
     /**
      * @var TranslationInterface
      */
     private $translation;
 
     /**
-     * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
      * @var string
@@ -23,12 +21,17 @@ class TranslationExampleFormData
     private $czechWordSentence = '';
 
     /**
-     * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
      * @var string
      */
     private $russianWordSentence = '';
+
+    /**
+     * @Assert\Type("boolean")
+     * @var bool
+     */
+    private $hidden = false;
 
     //-------------------------------------------------------------------------
 
@@ -64,6 +67,16 @@ class TranslationExampleFormData
         $this->russianWordSentence = $russianWordSentence;
     }
 
+    public function isHidden(): bool
+    {
+        return $this->hidden;
+    }
+
+    public function setHidden(bool $hidden): void
+    {
+        $this->hidden = $hidden;
+    }
+
     //-------------------------------------------------------------------------
 
     public static function fromTranslationExample(TranslationExampleInterface $translationExample): self
@@ -72,6 +85,7 @@ class TranslationExampleFormData
 
         $formData->setCzechWordSentence($translationExample->getCzechWordSentence());
         $formData->setRussianWordSentence($translationExample->getRussianWordSentence());
+        $formData->setHidden($translationExample->isHidden());
 
         return $formData;
     }

@@ -55,11 +55,13 @@ class TranslationExample implements TranslationExampleInterface
     public function __construct(
         TranslationInterface $translation,
         string $russianWordSentence,
-        string $czechWordSentence
+        string $czechWordSentence,
+        bool $hidden
     ) {
         $this->translation = $translation;
         $this->russianWordSentence = $russianWordSentence;
         $this->czechWordSentence = $czechWordSentence;
+        $this->hidden = $hidden;
     }
 
     public function __toString(): string
