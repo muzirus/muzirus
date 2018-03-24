@@ -84,6 +84,9 @@
         "dev": [
             "@composer install"
         ],
+        "compile": [
+            "@php bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration"
+        ],
         "phpunit": "./vendor/bin/simple-phpunit",
         "translation-cs-yml": "@php bin/console translation:update --force --clean --domain=messages --output-format=yml cs",
         "translation-cs-xlf": "@php bin/console translation:update --force --clean --domain=messages --output-format=xlf cs",
