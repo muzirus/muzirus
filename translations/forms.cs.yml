@@ -48,3 +48,6 @@ label.type.preposition: 'Předložky (Prepozice)'
 label.type.conjunction: 'Spojky (Konjunkce)'
 label.type.particle: 'Částice (Partikule)'
 label.type.interjection: 'Citoslovce (Interjekce)'
+label.yes: Ano
+label.no: Ne
+label.hidden: Schováno

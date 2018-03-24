@@ -3,6 +3,7 @@
 namespace App\Form\TranslationExample;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -15,6 +16,7 @@ class TranslationExampleForm extends AbstractType
             ->add('czechWordSentence', TextareaType::class, [
                 'label' => 'label.czech_sentence',
                 'empty_data' => '',
+                'required' => false,
                 'attr' => [
                     'style' => 'resize: vertical;',
                     'rows' => 4,
@@ -23,10 +25,20 @@ class TranslationExampleForm extends AbstractType
             ->add('russianWordSentence', TextareaType::class, [
                 'label' => 'label.russian_sentence',
                 'empty_data' => '',
+                'required' => false,
                 'attr' => [
                     'style' => 'resize: vertical;',
                     'rows' => 4,
                 ],
+            ])
+            ->add('hidden', ChoiceType::class, [
+                'label' => 'label.hidden',
+                'choices' => [
+                    'label.yes' => true,
+                    'label.no' => false,
+                ],
+                'expanded' => true,
+                'empty_data' => false,
             ]);
     }
 

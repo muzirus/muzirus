@@ -44,16 +44,24 @@ class TranslationExample implements TranslationExampleInterface
      */
     private $czechWordSentence = '';
 
+    /**
+     * @ORM\Column(type="boolean", name="hidden", options={"default":false})
+     * @var bool
+     */
+    private $hidden = false;
+
     //-------------------------------------------------------------------------
 
     public function __construct(
         TranslationInterface $translation,
         string $russianWordSentence,
-        string $czechWordSentence
+        string $czechWordSentence,
+        bool $hidden
     ) {
         $this->translation = $translation;
         $this->russianWordSentence = $russianWordSentence;
         $this->czechWordSentence = $czechWordSentence;
+        $this->hidden = $hidden;
     }
 
     public function __toString(): string
@@ -91,5 +99,25 @@ class TranslationExample implements TranslationExampleInterface
     public function setCzechWordSentence(string $czechWordSentence): void
     {
         $this->czechWordSentence = $czechWordSentence;
+    }
+
+    public function markHidden(): void
+    {
+        $this->hidden = true;
+    }
+
+    public function isHidden(): bool
+    {
+        return $this->hidden;
+    }
+
+    public function markVisible(): void
+    {
+        $this->hidden = false;
+    }
+
+    public function isVisible(): bool
+    {
+        return !$this->hidden;
     }
 }
