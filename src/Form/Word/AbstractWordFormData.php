@@ -179,7 +179,7 @@ abstract class AbstractWordFormData
         return $this->languageNoteType;
     }
 
-    public function setLanguageNoteType(int $languageNoteType)
+    public function setLanguageNoteType(int $languageNoteType): void
     {
         $this->languageNoteType = $languageNoteType;
     }
