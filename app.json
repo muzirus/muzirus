@@ -3,11 +3,6 @@
     "repository": "https://github.com/petrofcikmatus/dictionary",
     "success_url": "/",
     "image": "heroku/php",
-    "buildpacks": [
-        {
-            "url": "heroku/nodejs"
-        }
-    ],
     "env": {
         "APP_ENV": {
             "value": "prod"
