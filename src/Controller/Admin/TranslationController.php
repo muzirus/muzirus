@@ -7,8 +7,8 @@ use App\Entity\Translation;
 use App\Event\TranslationEvent;
 use App\Events;
 use App\Facade\TranslationFacade;
+use App\Form\Translation\TranslationFormData;
 use App\Form\Translation\UpdateTranslationForm;
-use App\Form\Translation\UpdateTranslationFormData;
 use App\Repository\TranslationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -46,7 +46,7 @@ class TranslationController extends AbstractController
         TranslationFacade $translationFacade,
         EventDispatcherInterface $dispatcher
     ): Response {
-        $formData = UpdateTranslationFormData::fromTranslation($translation);
+        $formData = TranslationFormData::createFromTranslation($translation);
 
         $form = $this->createForm(UpdateTranslationForm::class, $formData);
         $form->handleRequest($request);

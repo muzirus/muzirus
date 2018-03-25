@@ -17,24 +17,32 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <div class="form-control" disabled="true">{{ translation.czechWord.content }}</div>
+                        {{ form_label(form.czechWord) }}
+                        {{ form_widget(form.czechWord) }}
+                        {{ form_errors(form.czechWord) }}
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
+                        {{ form_label(form.czechWordNote) }}
                         {{ form_widget(form.czechWordNote) }}
+                        {{ form_errors(form.czechWordNote) }}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <div class="form-control" disabled="true">{{ translation.russianWord.content }}</div>
+                        {{ form_label(form.russianWord) }}
+                        {{ form_widget(form.russianWord) }}
+                        {{ form_errors(form.russianWord) }}
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
+                        {{ form_label(form.russianWordNote) }}
                         {{ form_widget(form.russianWordNote) }}
+                        {{ form_errors(form.russianWordNote) }}
                     </div>
                 </div>
             </div>
