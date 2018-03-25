@@ -59,7 +59,7 @@ class TranslationController extends AbstractController
                 new TranslationEvent($this->getUser(), $translation)
             );
 
-            $this->addFlashSuccess('translation.updated_successfully');
+            $this->addFlashSuccess('admin.translation.updated');
 
             return $this->redirectToRoute('admin.translation.edit', ['id' => $translation->getId()]);
         }
@@ -81,7 +81,7 @@ class TranslationController extends AbstractController
     {
         $translationFacade->deleteTranslation($translation);
 
-        $this->addFlashSuccess('translation.deleted_successfully');
+        $this->addFlashSuccess('admin.translation.deleted');
 
         return $this->redirectToRoute('admin.translation');
     }

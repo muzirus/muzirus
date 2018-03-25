@@ -58,7 +58,7 @@ class CategoryController extends AbstractController
                 new CategoryEvent($this->getUser(), $category)
             );
 
-            $this->addFlashSuccess('category.created_successfully');
+            $this->addFlashSuccess('admin.category.created');
 
             return $this->redirectToRoute('admin.category');
         }
@@ -94,7 +94,7 @@ class CategoryController extends AbstractController
                 new CategoryEvent($this->getUser(), $category)
             );
 
-            $this->addFlashSuccess('category.update_successfully');
+            $this->addFlashSuccess('admin.category.update');
 
             return $this->redirectToRoute('admin.category');
         }
@@ -116,7 +116,7 @@ class CategoryController extends AbstractController
     {
         $categoryFacade->deleteCategory($category);
 
-        $this->addFlashSuccess('category.deleted_successfully');
+        $this->addFlashSuccess('admin.category.deleted');
 
         return $this->redirectToRoute('admin.category');
     }

@@ -58,7 +58,7 @@ class SourceTypeController extends AbstractController
                 new SourceTypeEvent($this->getUser(), $sourceType)
             );
 
-            $this->addFlashSuccess('source-type.created_successfully');
+            $this->addFlashSuccess('admin.source_type.created');
 
             return $this->redirectToRoute('admin.source-type');
         }
@@ -94,7 +94,7 @@ class SourceTypeController extends AbstractController
                 new SourceTypeEvent($this->getUser(), $sourceType)
             );
 
-            $this->addFlashSuccess('source-type.updated_successfully');
+            $this->addFlashSuccess('admin.source_type.updated');
 
             return $this->redirectToRoute('admin.source-type');
         }
@@ -116,7 +116,7 @@ class SourceTypeController extends AbstractController
     {
         $sourceTypeFacade->deleteSourceType($sourceType);
 
-        $this->addFlashSuccess('source-type.deleted_successfully');
+        $this->addFlashSuccess('admin.source_type.deleted');
 
         return $this->redirectToRoute('admin.source-type');
     }

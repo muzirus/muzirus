@@ -59,7 +59,7 @@ class TranslationExampleController extends AbstractController
                 new TranslationExampleEvent($this->getUser(), $translationExample)
             );
 
-            $this->addFlashSuccess('translation_example.updated_successfully');
+            $this->addFlashSuccess('admin.translation_example.updated');
 
             return $this->redirectToRoute(
                 'admin.translation-example.edit',
@@ -88,7 +88,7 @@ class TranslationExampleController extends AbstractController
     ): RedirectResponse {
         $translationExampleFacade->deleteTranslationExample($translationExample);
 
-        $this->addFlashSuccess('translation_example.deleted_successfully');
+        $this->addFlashSuccess('admin.translation_example.deleted');
 
         return $this->redirectToRoute('admin.translation-example');
     }

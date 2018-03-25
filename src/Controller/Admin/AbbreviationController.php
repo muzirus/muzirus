@@ -47,7 +47,7 @@ class AbbreviationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $abbreviationFacade->createAbbreviation($abbreviationFormData);
 
-            $this->addFlashSuccess('abbreviation.created_successfully');
+            $this->addFlashSuccess('admin.abbreviation.created');
 
             return $this->redirectToRoute('admin.abbreviation');
         }
@@ -74,7 +74,7 @@ class AbbreviationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $abbreviationFacade->updateAbbreviation($abbreviation, $abbreviationFormData);
 
-            $this->addFlashSuccess('abbreviation.updated_successfully');
+            $this->addFlashSuccess('admin.abbreviation.updated');
 
             return $this->redirectToRoute('admin.abbreviation');
         }
@@ -96,7 +96,7 @@ class AbbreviationController extends AbstractController
     {
         $abbreviationFacade->deleteAbbreviation($abbreviation);
 
-        $this->addFlashSuccess('abbreviation.deleted_successfully');
+        $this->addFlashSuccess('admin.abbreviation.deleted');
 
         return $this->redirectToRoute('admin.abbreviation');
     }

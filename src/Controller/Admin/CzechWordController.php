@@ -70,7 +70,7 @@ class CzechWordController extends AbstractController
                 new CzechWordEvent($this->getUser(), $word)
             );
 
-            $this->addFlashSuccess('czech-word.created_successfully');
+            $this->addFlashSuccess('admin.word.created');
 
             return $this->redirectToRoute('admin.czech-word.edit', ['id' => $word->getId()]);
         }
@@ -107,7 +107,7 @@ class CzechWordController extends AbstractController
                 new CzechWordEvent($this->getUser(), $word)
             );
 
-            $this->addFlashSuccess('czech-word.updated_successfully');
+            $this->addFlashSuccess('admin.word.updated');
 
             return $this->redirectToRoute('admin.czech-word.edit', ['id' => $word->getId()]);
         }
@@ -131,7 +131,7 @@ class CzechWordController extends AbstractController
     {
         $czechWordFacade->deleteWord($word);
 
-        $this->addFlashSuccess('czech-word.deleted_successfully');
+        $this->addFlashSuccess('admin.word.deleted');
 
         return $this->redirectToRoute('admin.czech-word');
     }
@@ -160,7 +160,7 @@ class CzechWordController extends AbstractController
                 new TranslationEvent($this->getUser(), $translation)
             );
 
-            $this->addFlashSuccess('translation.created_successfully');
+            $this->addFlashSuccess('admin.translation.created');
 
             return $this->redirectToRoute('admin.czech-word.translations', ['id' => $word->getId()]);
         }
@@ -205,7 +205,7 @@ class CzechWordController extends AbstractController
                 new TranslationEvent($this->getUser(), $translation)
             );
 
-            $this->addFlashSuccess('translation.updated_successfully');
+            $this->addFlashSuccess('admin.translation.updated');
 
             return $this->redirectToRoute(
                 'admin.czech-word.translations.edit',
@@ -244,7 +244,7 @@ class CzechWordController extends AbstractController
 
         $translationFacade->deleteTranslation($translation);
 
-        $this->addFlashSuccess('translation.deleted_successfully');
+        $this->addFlashSuccess('admin.translation.deleted');
 
         return $this->redirectToRoute('admin.czech-word.translations', ['id' => $word->getId()]);
     }
@@ -277,7 +277,7 @@ class CzechWordController extends AbstractController
                 new TranslationExampleEvent($this->getUser(), $translationExample)
             );
 
-            $this->addFlashSuccess('translation_example.created_successfully');
+            $this->addFlashSuccess('admin.translation_example.created');
 
             return $this->redirectToRoute(
                 'admin.czech-word.translations.examples',
@@ -329,7 +329,7 @@ class CzechWordController extends AbstractController
                 new TranslationExampleEvent($this->getUser(), $translationExample)
             );
 
-            $this->addFlashSuccess('translation_example.updated_successfully');
+            $this->addFlashSuccess('admin.translation_example.updated');
 
             return $this->redirectToRoute(
                 'admin.czech-word.translations.examples.edit',
@@ -372,7 +372,7 @@ class CzechWordController extends AbstractController
 
         $translationExampleFacade->deleteTranslationExample($translationExample);
 
-        $this->addFlashSuccess('translation_example.deleted_successfully');
+        $this->addFlashSuccess('admin.translation_example.deleted');
 
         return $this->redirectToRoute(
             'admin.czech-word.translations.examples',

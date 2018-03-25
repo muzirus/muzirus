@@ -47,7 +47,7 @@ class SymbolController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $symbolFacade->createSymbol($formData);
 
-            $this->addFlashSuccess('symbol.created_successfully');
+            $this->addFlashSuccess('admin.symbol.created');
 
             return $this->redirectToRoute('admin.symbol');
         }
@@ -74,7 +74,7 @@ class SymbolController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $symbolFacade->updateSymbol($symbol, $formData);
 
-            $this->addFlashSuccess('symbol.updated_successfully');
+            $this->addFlashSuccess('admin.symbol.updated');
 
             return $this->redirectToRoute('admin.symbol');
         }
@@ -96,7 +96,7 @@ class SymbolController extends AbstractController
     {
         $symbolFacade->deleteSymbol($symbol);
 
-        $this->addFlashSuccess('symbol.deleted_successfully');
+        $this->addFlashSuccess('admin.symbol.deleted');
 
         return $this->redirectToRoute('admin.symbol');
     }

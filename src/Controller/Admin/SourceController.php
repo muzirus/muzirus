@@ -55,7 +55,7 @@ class SourceController extends AbstractController
                 new SourceEvent($this->getUser(), $source)
             );
 
-            $this->addFlashSuccess('source.created_successfully');
+            $this->addFlashSuccess('admin.source.created');
 
             return $this->redirectToRoute('admin.source');
         }
@@ -91,7 +91,7 @@ class SourceController extends AbstractController
                 new SourceEvent($this->getUser(), $source)
             );
 
-            $this->addFlashSuccess('source.update_successfully');
+            $this->addFlashSuccess('admin.source.update');
 
             return $this->redirectToRoute('admin.source');
         }
@@ -113,7 +113,7 @@ class SourceController extends AbstractController
     {
         $sourceFacade->deleteSource($source);
 
-        $this->addFlashSuccess('source.deleted_successfully');
+        $this->addFlashSuccess('admin.source.deleted');
 
         return $this->redirectToRoute('admin.source');
     }
