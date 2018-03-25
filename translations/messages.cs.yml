@@ -8,7 +8,7 @@ admin.box.title.add: Přidat
 admin.box.title.edit: Upravit
 admin.button.add_abbreviation: 'Přidat zkratku'
 admin.button.add_category: 'Přidat kategorii'
-admin.button.add_exemplification: 'Přidat exemplifikaci'
+admin.button.add_equivalent: 'Přidat ekvivalent'
 admin.button.add_new: 'Přidat nové'
 admin.button.add_source: 'Přidat zdroj'
 admin.button.add_source_type: 'Přidat typ zdroje'

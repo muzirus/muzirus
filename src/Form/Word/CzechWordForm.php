@@ -58,10 +58,10 @@ class CzechWordForm extends AbstractType
             ->add('languageNoteGender', ChoiceType::class, [
                 'label' => 'label.language_note.gender',
                 'choices' => [
+                    'label.gender.unknown' => AbstractWordInterface::GENDER_UNKNOWN,
                     'label.gender.masculine' => AbstractWordInterface::GENDER_MASCULINE,
                     'label.gender.feminine' => AbstractWordInterface::GENDER_FEMININE,
                     'label.gender.neuter' => AbstractWordInterface::GENDER_NEUTER,
-                    'label.gender.not_applicable' => AbstractWordInterface::GENDER_UNKNOWN,
                 ],
                 'empty_data' => AbstractWordInterface::GENDER_UNKNOWN,
             ])
