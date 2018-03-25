@@ -13,10 +13,9 @@ use App\Events;
 use App\Facade\CzechWordFacade;
 use App\Facade\TranslationExampleFacade;
 use App\Facade\TranslationFacade;
-use App\Form\Translation\CreateRussianTranslationForm;
-use App\Form\Translation\CreateRussianTranslationFormData;
+use App\Form\Translation\CreateCzechWordTranslationForm;
+use App\Form\Translation\TranslationFormData;
 use App\Form\Translation\UpdateTranslationForm;
-use App\Form\Translation\UpdateTranslationFormData;
 use App\Form\TranslationExample\TranslationExampleForm;
 use App\Form\TranslationExample\TranslationExampleFormData;
 use App\Form\Word\CzechWordForm;
@@ -148,8 +147,9 @@ class CzechWordController extends AbstractController
         CzechWordRepository $czechWordRepository,
         EventDispatcherInterface $dispatcher
     ): Response {
-        $formData = new CreateRussianTranslationFormData($word);
-        $form = $this->createForm(CreateRussianTranslationForm::class, $formData);
+        $formData = TranslationFormData::createFromCzechWord($word);
+
+        $form = $this->createForm(CreateCzechWordTranslationForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -192,7 +192,7 @@ class CzechWordController extends AbstractController
         TranslationFacade $translationFacade,
         EventDispatcherInterface $dispatcher
     ): Response {
-        $formData = UpdateTranslationFormData::fromTranslation($translation);
+        $formData = TranslationFormData::createFromTranslation($translation);
 
         $form = $this->createForm(UpdateTranslationForm::class, $formData);
         $form->handleRequest($request);
@@ -210,7 +210,7 @@ class CzechWordController extends AbstractController
             return $this->redirectToRoute(
                 'admin.czech-word.translations.edit',
                 [
-                    'id' => $word->getId(),
+                    'id' => $translation->getCzechWord()->getId(),
                     'translationId' => $translation->getId(),
                 ]
             );

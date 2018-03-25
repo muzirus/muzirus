@@ -2,8 +2,8 @@
 
 namespace App\Facade;
 
-use App\Entity\TranslationExample;
 use App\Entity\TranslationExampleInterface;
+use App\Factory\TranslationExampleFactory;
 use App\Form\TranslationExample\TranslationExampleFormData;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -14,19 +14,20 @@ class TranslationExampleFacade
      */
     private $entityManager;
 
-    public function __construct(EntityManagerInterface $entityManager)
-    {
+    /** @var TranslationExampleFactory */
+    private $translationExampleFactory;
+
+    public function __construct(
+        EntityManagerInterface $entityManager,
+        TranslationExampleFactory $translationExampleFactory
+    ) {
         $this->entityManager = $entityManager;
+        $this->translationExampleFactory = $translationExampleFactory;
     }
 
     public function createTranslationExample(TranslationExampleFormData $formData): TranslationExampleInterface
     {
-        $translationExample = new TranslationExample(
-            $formData->getTranslation(),
-            $formData->getRussianWordSentence(),
-            $formData->getCzechWordSentence(),
-            $formData->isHidden()
-        );
+        $translationExample = $this->translationExampleFactory->createFromFormData($formData);
 
         $this->entityManager->persist($translationExample);
         $this->entityManager->flush();

@@ -13,10 +13,9 @@ use App\Events;
 use App\Facade\RussianWordFacade;
 use App\Facade\TranslationExampleFacade;
 use App\Facade\TranslationFacade;
-use App\Form\Translation\CreateCzechTranslationForm;
-use App\Form\Translation\CreateCzechTranslationFormData;
+use App\Form\Translation\CreateRussianWordTranslationForm;
+use App\Form\Translation\TranslationFormData;
 use App\Form\Translation\UpdateTranslationForm;
-use App\Form\Translation\UpdateTranslationFormData;
 use App\Form\TranslationExample\TranslationExampleForm;
 use App\Form\TranslationExample\TranslationExampleFormData;
 use App\Form\Word\RussianWordForm;
@@ -148,8 +147,9 @@ class RussianWordController extends AbstractController
         RussianWordRepository $russianWordRepository,
         EventDispatcherInterface $dispatcher
     ): Response {
-        $formData = new CreateCzechTranslationFormData($word);
-        $form = $this->createForm(CreateCzechTranslationForm::class, $formData);
+        $formData = TranslationFormData::createFromRussianWord($word);
+
+        $form = $this->createForm(CreateRussianWordTranslationForm::class, $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -192,7 +192,7 @@ class RussianWordController extends AbstractController
         TranslationFacade $translationFacade,
         EventDispatcherInterface $dispatcher
     ): Response {
-        $formData = UpdateTranslationFormData::fromTranslation($translation);
+        $formData = TranslationFormData::createFromTranslation($translation);
 
         $form = $this->createForm(UpdateTranslationForm::class, $formData);
         $form->handleRequest($request);
@@ -210,7 +210,7 @@ class RussianWordController extends AbstractController
             return $this->redirectToRoute(
                 'admin.russian-word.translations.edit',
                 [
-                    'id' => $word->getId(),
+                    'id' => $translation->getRussianWord()->getId(),
                     'translationId' => $translation->getId(),
                 ]
             );
