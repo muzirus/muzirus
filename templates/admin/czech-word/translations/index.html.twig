@@ -79,6 +79,12 @@
                                     </a>
                                 </td>
                             </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="6">
+                                    <div class="text-center">{{ 'admin.no_content'|trans }}</div>
+                                </td>
+                            </tr>
                         {% endfor %}
                     </tbody>
                     <tfoot>

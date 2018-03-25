@@ -81,3 +81,4 @@ admin.equivalents_not_found: 'Nalezeny ekvivalenty'
 admin.examples_added: 'Vloženy ukázky'
 admin.checked: Zkontrolováno
 admin.tab.equivalents: Ekvivalenty
+admin.no_content: 'Žádný obsah'
