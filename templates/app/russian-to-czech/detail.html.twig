@@ -1,30 +1,107 @@
 {% extends 'app/layout.html.twig' %}
 
-{% block heading 'Ruský heslář' %}
+{% block container %}
 
-{% block content %}
-    <h3>{{ word }}</h3>
-    <ol>
-        {% for translation in word.translations %}
-            <li>
-                <div>
-                    <a href="{{ path('app.russian_to_czech.detail', { id: word.id }) }}">{{ word }}</a>
-                    &equals;&gt;
-                    <a href="{{ path('app.czech_to_russian.detail', { id: translation.czechWord.id }) }}">
-                        {{ translation.czechWord }}
-                    </a>
+    <h1 class="text-center">
+        {{ word.contentWithAccent|highlight_accent }}
+        {% if word.languageNotePronunciation is not empty %}
+            <small>
+                {{ word.languageNotePronunciation|highlight_accent }}
+            </small>
+        {% endif %}
+    </h1>
+    <h3 class="text-center">
+        {% spaceless %}
+            {%- if word.languageNoteType != 1 -%}
+                <em class="text-success">{{ word.languageNoteType|type_as_string }}</em>
+            {%- else -%}
+                <em class="text-success">{{ word.languageNoteGender|gender_as_string }}</em>
+            {%- endif -%}
+            {%- if word.languageNoteInflection is not empty -%}
+                &comma; {{ word.languageNoteInflection|highlight_accent }}
+            {%- endif %}
+            {%- if word.languageNoteExceptionToInflection is not empty -%}
+                &comma; {{ word.languageNoteExceptionToInflection|highlight_accent }}
+            {%- endif -%}
+            {%- if word.languageNoteOther is not empty -%}
+                &comma; <em data-toggle="tooltip" data-placement="top" data-original-title="Stylistická poznámka"
+                            title="">{{ word.languageNoteOther }}</em>
+            {%- endif -%}
+        {% endspaceless %}
+    </h3>
+
+    {% if word.explanation is not empty %}
+        <div class="text-center">
+            <strong>{{ word.explanation }}</strong>
+            <div class="text-center text-muted">
+                <cite title="Source Title">{{ word.explanationSourceInfo }}</cite>
+                {% if word.explanationSourceDate is not empty %}
+                    [cit. {{ word.explanationSourceDate }}]
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% for translation in word.translations %}
+        <hr>
+        <h3 class="text-center">
+            <em>
+                {% if translation.czechWord.languageNoteOther is not empty %}
+                    <small>{{ translation.czechWord.languageNoteOther }}</small>
+                {% endif %}
+                {% if translation.russianWordNote is not empty %}
+                    <small class="text-primary">{{ translation.russianWordNote }}</small>
+                {% endif %}
+            </em>
+            <a href="{{ path('app.czech_to_russian.detail', { id: translation.czechWord.id }) }}">
+                <strong>{{ translation.czechWord }}</strong>
+            </a>
+            <small>
+                {%- if translation.czechWord.languageNotePronunciation is not empty -%}
+                    {{ translation.czechWord.languageNotePronunciation }}
+                {%- endif -%}
+                {%- if translation.czechWord.languageNoteType != 1 -%}
+                    &comma; <em>{{ translation.czechWord.languageNoteType|type_as_string }}</em>
+                {%- else -%}
+                    &comma; <em>{{ translation.czechWord.languageNoteGender|gender_as_string }}</em>
+                {%- endif -%}
+            </small>
+        </h3>
+
+        {% if translation.czechWord.explanation is not empty %}
+            <p class="text-center">
+                <strong>{{ translation.czechWord.explanation }}</strong>
+                <br>
+                <span class="text-center text-muted">
+                    {{ word.explanationSourceInfo }}
+                    {% if translation.czechWord.explanationSourceDate is not empty %}
+                        [cit. {{ translation.czechWord.explanationSourceDate }}]
+                    {% endif %}
+                </span>
+            </p>
+        {% endif %}
+
+        {% for example in translation.examples %}
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="text-right" style="color: #002389;">{{ example.russianWordSentence }}</p>
                 </div>
-                <div>
-                    <em>Ukázky:</em>
-                    <ol>
-                        {% for example in translation.examples %}
-                            <li>
-                                {{ example.russianWordSentence }} &equals;&gt; {{ example.czechWordSentence }}
-                            </li>
-                        {% endfor %}
-                    </ol>
+                <div class="col-sm-6">
+                    <p>{{ example.czechWordSentence }}</p>
                 </div>
-            </li>
+            </div>
         {% endfor %}
-    </ol>
+
+    {% endfor %}
+
+    <hr>
+    <p class="text-center text-muted">
+        Datum poslední změny: {{ word.updatedAtFormat('j.n.Y') }}
+
+        {% if app.user %}
+            <a href="{{ path('admin.russian-word.edit', {id: word.id}) }}">
+                <i class="fa fa-edit"></i>
+            </a>
+        {% endif %}
+    </p>
 {% endblock %}

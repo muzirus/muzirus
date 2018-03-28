@@ -15,3 +15,7 @@ $navbar-border-radius: 0;
 @import '~lato-font/scss/public-api';
 @include lato-include-font('normal');
 @include lato-include-font('bold');
+
+.highlight-accent {
+  color: $brand-danger;
+}

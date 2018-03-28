@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Twig\Extension;
+
+use App\Entity\AbstractWordInterface;
+
+class WordTypeExtension extends \Twig_Extension
+{
+    public function getFilters(): array
+    {
+        return [
+            new \Twig_SimpleFilter('type_as_string', function (int $type) {
+                return $this->convertTypeIdToString($type);
+            }),
+        ];
+    }
+
+    private function convertTypeIdToString(int $type): string
+    {
+        switch ($type) {
+            case AbstractWordInterface::TYPE_NOUN:
+                return 'podst. jm.'; // nezobrazujeme podstatné jména
+            case AbstractWordInterface::TYPE_VERB:
+                return 'slov.';
+            case AbstractWordInterface::TYPE_ADJECTIVE:
+                return 'příd. jm.';
+            case AbstractWordInterface::TYPE_PRONOUN:
+                return 'zájm.';
+            case AbstractWordInterface::TYPE_NUMERAL:
+                return 'čísl.';
+            case AbstractWordInterface::TYPE_ADVERB:
+                return 'přísl.';
+            case AbstractWordInterface::TYPE_PREPOSITION:
+                return 'předl.';
+            case AbstractWordInterface::TYPE_CONJUNCTION:
+                return 'spoj.';
+            case AbstractWordInterface::TYPE_PARTICLE:
+                return 'část.';
+            case AbstractWordInterface::TYPE_INTERJECTION:
+                return 'cit.';
+            case AbstractWordInterface::TYPE_UNKNOWN:
+            default:
+                return '';
+        }
+    }
+}
