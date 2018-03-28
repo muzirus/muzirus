@@ -2,6 +2,8 @@
 
 {% block title 'admin.russian_words'|trans %}
 
+{% block heading_small word.statusLight|convert_status_code_to_icon %}
+
 {% form_theme form 'bootstrap_3_layout.html.twig' %}
 
 {% block content %}
