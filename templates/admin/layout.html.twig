@@ -19,7 +19,8 @@
         <div class="content-wrapper">
             <section class="content-header">
                 <h1>
-                    {% block title 'No heading' %}
+                    {% block title %}{% endblock %}
+                    <small>{% block heading_small %}{% endblock %}</small>
                 </h1>
             </section>
             <section class="content">

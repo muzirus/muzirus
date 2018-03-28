@@ -4,6 +4,8 @@
 
 {% block title 'admin.czech_words'|trans %}
 
+{% block heading_small word.statusLight|convert_status_code_to_icon %}
+
 {% form_theme form 'bootstrap_3_layout.html.twig' %}
 
 {% block content %}
