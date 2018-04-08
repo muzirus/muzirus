@@ -67,10 +67,12 @@ class RussianToCzechController extends AbstractController
      * @Route("/detail/{id}", name="app.russian_to_czech.detail", requirements={"id": "\d+"})
      * @Method("GET")
      */
-    public function detail(RussianWord $word): Response
+    public function detail(RussianWord $word, RussianWordRepository $wordRepository): Response
     {
         return $this->render('app/russian-to-czech/detail.html.twig', [
             'word' => $word,
+            'wordNext' => $wordRepository->findOneNextWithTranslation($word),
+            'wordPrev' => $wordRepository->findOnePrevWithTranslation($word),
         ]);
     }
 }

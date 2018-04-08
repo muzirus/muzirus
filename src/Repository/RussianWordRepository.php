@@ -37,11 +37,12 @@ class RussianWordRepository extends ServiceEntityRepository
     public function findStartingWith(string $startsWith): array
     {
         return $this
-            ->createQueryBuilder('rw')
-            ->join('rw.translations', 't')
-            ->where('rw.content LIKE :startsWith')
+            ->createQueryBuilder('w')
+            ->select(['w', 't'])
+            ->join('w.translations', 't')
+            ->where('w.content LIKE :startsWith')
             ->setParameter('startsWith', $startsWith . '%')
-            ->orderBy('rw.content', 'ASC')
+            ->orderBy('w.content', 'ASC')
             ->getQuery()
             ->getResult();
     }
@@ -54,7 +55,25 @@ class RussianWordRepository extends ServiceEntityRepository
         return $this
             ->createQueryBuilder('w')
             ->select('w')
-            ->andWhere('w.content < :content')
+            ->where('w.content < :content')
+            ->setParameter('content', $word->getContent())
+            ->setFirstResult(0)
+            ->setMaxResults(1)
+            ->orderBy('w.content', 'DESC')
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
+    /**
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function findOnePrevWithTranslation(RussianWordInterface $word): ?RussianWordInterface
+    {
+        return $this
+            ->createQueryBuilder('w')
+            ->select(['w', 't'])
+            ->join('w.translations', 't')
+            ->where('w.content < :content')
             ->setParameter('content', $word->getContent())
             ->setFirstResult(0)
             ->setMaxResults(1)
@@ -71,7 +90,25 @@ class RussianWordRepository extends ServiceEntityRepository
         return $this
             ->createQueryBuilder('w')
             ->select('w')
-            ->andWhere('w.content > :content')
+            ->where('w.content > :content')
+            ->setParameter('content', $word->getContent())
+            ->setFirstResult(0)
+            ->setMaxResults(1)
+            ->orderBy('w.content', 'ASC')
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
+    /**
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function findOneNextWithTranslation(RussianWordInterface $word): ?RussianWordInterface
+    {
+        return $this
+            ->createQueryBuilder('w')
+            ->select(['w', 't'])
+            ->join('w.translations', 't')
+            ->where('w.content > :content')
             ->setParameter('content', $word->getContent())
             ->setFirstResult(0)
             ->setMaxResults(1)

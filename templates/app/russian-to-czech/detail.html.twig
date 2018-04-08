@@ -1,6 +1,22 @@
 {% extends 'app/layout.html.twig' %}
 
 {% block container %}
+    <div class="clearfix">
+        {% if wordPrev is not empty %}
+            <a class="btn btn-default btn-sm pull-left"
+               href="{{ path('app.russian_to_czech.detail', {id: wordPrev.id}) }}">
+                <i class="fa fa-arrow-left"></i>
+                {{ wordPrev }}
+            </a>
+        {% endif %}
+        {% if wordNext is not empty %}
+            <a class="btn btn-default btn-sm pull-right"
+               href="{{ path('app.russian_to_czech.detail', {id: wordNext.id}) }}">
+                {{ wordNext }}
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        {% endif %}
+    </div>
 
     <h1 class="text-center">
         {{ word.contentWithAccent|highlight_accent }}
@@ -10,19 +26,23 @@
             </small>
         {% endif %}
     </h1>
+
     <h3 class="text-center">
         {% spaceless %}
-            {%- if word.languageNoteType != 1 -%}
-                <em class="text-success">{{ word.languageNoteType|type_as_string }}</em>
-            {%- else -%}
-                <em class="text-success">{{ word.languageNoteGender|gender_as_string }}</em>
-            {%- endif -%}
             {%- if word.languageNoteInflection is not empty -%}
-                &comma; {{ word.languageNoteInflection|highlight_accent }}
+                {{ word.languageNoteInflection|highlight_accent }}
             {%- endif %}
+
             {%- if word.languageNoteExceptionToInflection is not empty -%}
                 &comma; {{ word.languageNoteExceptionToInflection|highlight_accent }}
             {%- endif -%}
+
+            {%- if word.languageNoteType != 1 -%}
+                &comma; <em class="text-muted">{{ word.languageNoteType|type_as_string }}</em>
+            {%- else -%}
+                &comma; <em class="text-muted">{{ word.languageNoteGender|gender_as_string }}</em>
+            {%- endif -%}
+
             {%- if word.languageNoteOther is not empty -%}
                 &comma; <em data-toggle="tooltip" data-placement="top" data-original-title="Stylistická poznámka"
                             title="">{{ word.languageNoteOther }}</em>
@@ -67,19 +87,6 @@
                 {%- endif -%}
             </small>
         </h3>
-
-        {% if translation.czechWord.explanation is not empty %}
-            <p class="text-center">
-                <strong>{{ translation.czechWord.explanation }}</strong>
-                <br>
-                <span class="text-center text-muted">
-                    {{ word.explanationSourceInfo }}
-                    {% if translation.czechWord.explanationSourceDate is not empty %}
-                        [cit. {{ translation.czechWord.explanationSourceDate }}]
-                    {% endif %}
-                </span>
-            </p>
-        {% endif %}
 
         {% for example in translation.examples %}
             <div class="row">
