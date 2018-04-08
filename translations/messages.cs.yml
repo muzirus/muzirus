@@ -33,7 +33,6 @@ admin.dashboard: Nástěnka
 admin.deleted: Smazáno
 admin.description: Popis
 admin.examples: Ukázky
-admin.example_sentences: 'Ukázkové věty'
 admin.explanation: Vysvětlení
 admin.gender: Rod
 admin.hidden: Schováno
@@ -66,7 +65,6 @@ admin.title: Název
 admin.translation: Překlad
 admin.translations: Překlady
 admin.type: Typ
-admin.translation_examples: Exemplifikace
 admin.updated: Aktualizováno
 admin.users: Uživatelé
 admin.value: Hodnota
@@ -82,3 +80,5 @@ admin.examples_added: 'Vloženy ukázky'
 admin.checked: Zkontrolováno
 admin.tab.equivalents: Ekvivalenty
 admin.no_content: 'Žádný obsah'
+admin.equivalents: Ekvivalenty
+admin.exemplifications: Exemplifikace
