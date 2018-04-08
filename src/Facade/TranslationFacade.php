@@ -41,6 +41,7 @@ class TranslationFacade
         $translation->setRussianWordNote($formData->getRussianWordNote());
         $translation->setCzechWord($formData->getCzechWord());
         $translation->setCzechWordNote($formData->getCzechWordNote());
+        $translation->setLink($formData->getLink());
 
         $this->entityManager->flush();
     }

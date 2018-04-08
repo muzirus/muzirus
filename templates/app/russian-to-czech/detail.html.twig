@@ -92,6 +92,15 @@
             </div>
         {% endfor %}
 
+        {% if translation.link is not empty %}
+            <p class="text-center">
+                <a href="https://kontext.korpus.cz/{{ translation.link }}" target="_blank">
+                    <i class="fa fa-link"></i>
+                    Odkaz na heslo v korpusech InterCorp
+                </a>
+            </p>
+        {% endif %}
+
     {% endfor %}
 
     {% if word.categories is not empty %}

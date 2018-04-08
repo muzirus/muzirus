@@ -17,6 +17,7 @@ class TranslationFactory
 
         $translation->setCzechWordNote($formData->getCzechWordNote());
         $translation->setRussianWordNote($formData->getRussianWordNote());
+        $translation->setLink($formData->getLink());
 
         return $translation;
     }

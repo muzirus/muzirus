@@ -48,6 +48,14 @@
                     </div>
                 </div>
             </div>
+            <div class="form-group">
+                {{ form_label(form.link) }}
+                <div class="input-group">
+                    <span class="input-group-addon">https://kontext.korpus.cz/</span>
+                    {{ form_widget(form.link) }}
+                </div>
+                {{ form_errors(form.link) }}
+            </div>
         </div>
         <div class="box-footer clearfix">
             <div class="pull-left">

@@ -13,13 +13,17 @@ interface TranslationFormDataInterface
 
     public function getRussianWordNote(): string;
 
-    public function setRussianWordNote(string $russianWordNote);
+    public function setRussianWordNote(string $russianWordNote): void;
 
     public function getCzechWord(): ?CzechWordInterface;
 
-    public function setCzechWord(?CzechWordInterface $czechWord);
+    public function setCzechWord(?CzechWordInterface $czechWord): void;
 
     public function getCzechWordNote(): string;
 
-    public function setCzechWordNote(string $czechWordNote);
+    public function setCzechWordNote(string $czechWordNote): void;
+
+    public function getLink(): string;
+
+    public function setLink(string $link): void;
 }

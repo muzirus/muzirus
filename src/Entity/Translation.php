@@ -54,6 +54,12 @@ class Translation implements TranslationInterface
     private $czechWordNote = '';
 
     /**
+     * @ORM\Column(type="string", name="link")
+     * @var string
+     */
+    private $link = '';
+
+    /**
      * @ORM\Column(type="integer", name="position", options={"default":0})
      * @var int
      */
@@ -125,6 +131,16 @@ class Translation implements TranslationInterface
     public function setCzechWordNote(string $czechWordNote): void
     {
         $this->czechWordNote = $czechWordNote;
+    }
+
+    public function getLink(): string
+    {
+        return $this->link;
+    }
+
+    public function setLink(string $link): void
+    {
+        $this->link = $link;
     }
 
     public function getPosition(): int

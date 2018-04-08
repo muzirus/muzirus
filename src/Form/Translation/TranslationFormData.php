@@ -37,6 +37,13 @@ class TranslationFormData implements TranslationFormDataInterface
      */
     private $czechWordNote = '';
 
+    /**
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
+     * @var string
+     */
+    private $link = '';
+
     //-------------------------------------------------------------------------
 
     public function getRussianWord(): ?RussianWordInterface
@@ -54,7 +61,7 @@ class TranslationFormData implements TranslationFormDataInterface
         return $this->russianWordNote;
     }
 
-    public function setRussianWordNote(string $russianWordNote)
+    public function setRussianWordNote(string $russianWordNote): void
     {
         $this->russianWordNote = $russianWordNote;
     }
@@ -64,7 +71,7 @@ class TranslationFormData implements TranslationFormDataInterface
         return $this->czechWord;
     }
 
-    public function setCzechWord(?CzechWordInterface $czechWord)
+    public function setCzechWord(?CzechWordInterface $czechWord): void
     {
         $this->czechWord = $czechWord;
     }
@@ -74,9 +81,19 @@ class TranslationFormData implements TranslationFormDataInterface
         return $this->czechWordNote;
     }
 
-    public function setCzechWordNote(string $czechWordNote)
+    public function setCzechWordNote(string $czechWordNote): void
     {
         $this->czechWordNote = $czechWordNote;
+    }
+
+    public function getLink(): string
+    {
+        return $this->link;
+    }
+
+    public function setLink(string $link): void
+    {
+        $this->link = $link;
     }
 
     //-------------------------------------------------------------------------
@@ -104,6 +121,7 @@ class TranslationFormData implements TranslationFormDataInterface
         $formData->setRussianWordNote($translation->getRussianWordNote());
         $formData->setCzechWord($translation->getCzechWord());
         $formData->setCzechWordNote($translation->getCzechWordNote());
+        $formData->setLink($translation->getLink());
 
         return $formData;
     }

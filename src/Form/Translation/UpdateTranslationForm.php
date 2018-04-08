@@ -17,6 +17,7 @@ class UpdateTranslationForm extends AbstractType
     public const FIELD_RUSSIAN_WORD_NOTE = 'russianWordNote';
     public const FIELD_CZECH_WORD = 'czechWord';
     public const FIELD_CZECH_WORD_NOTE = 'czechWordNote';
+    public const FIELD_LINK = 'link';
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -66,6 +67,18 @@ class UpdateTranslationForm extends AbstractType
                 'label' => 'label.czech_note',
                 'empty_data' => '',
                 'required' => false,
+            ]
+        );
+        $builder->add(
+            self::FIELD_LINK,
+            TextType::class,
+            [
+                'label' => 'label.link',
+                'empty_data' => '',
+                'required' => false,
+                'attr' => [
+                    'placeholder' => 'view?...',
+                ],
             ]
         );
     }

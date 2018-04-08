@@ -26,6 +26,10 @@ interface TranslationInterface extends Timestampable
 
     public function setCzechWordNote(string $czechWordNote): void;
 
+    public function setLink(string $link): void;
+
+    public function getLink(): string;
+
     public function getPosition(): int;
 
     public function setPosition(int $position): void;
