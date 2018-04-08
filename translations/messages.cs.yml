@@ -41,7 +41,7 @@ admin.inflection: Skloňování
 admin.language_note: 'Jazyková poznámka'
 admin.news: Novinky
 admin.no: Ne
-admin.no_news_yet: 'Zatím žádne novinky'
+admin.no_news_yet: 'Zatím žádné novinky'
 admin.original_database: 'Původní databáze'
 admin.other: Ostatní
 admin.pages_count: 'Počet stran'
