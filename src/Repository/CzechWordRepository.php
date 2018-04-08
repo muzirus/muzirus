@@ -24,7 +24,7 @@ class CzechWordRepository extends ServiceEntityRepository
         return $this
             ->createQueryBuilder('w')
             ->select([
-                'partial w.{id, content, languageNoteExceptionToInflection, languageNoteGender, statusLight, imported, createdAt, updatedAt}',
+                'partial w.{id, content, languageNoteInflection, languageNoteExceptionToInflection, languageNoteGender, statusLight, imported, createdAt, updatedAt}',
                 'partial t.{id}',
             ])
             ->join('w.translations', 't')

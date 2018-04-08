@@ -13,6 +13,7 @@
                         <th>{{ 'admin.word'|trans }}</th>
                         <th>{{ 'admin.equivalents'|trans }}</th>
                         <th>{{ 'admin.inflection'|trans }}</th>
+                        <th>{{ 'admin.exception_to_inflection'|trans }}</th>
                         <th>{{ 'admin.gender'|trans }}</th>
                         <th>{{ 'admin.created'|trans }}</th>
                         <th>{{ 'admin.updated'|trans }}</th>
@@ -42,6 +43,7 @@
                                     <span class="label label-default">{{ word.translationsCount }}</span>
                                 </a>
                             </td>
+                            <td>{{ word.languageNoteInflection }}</td>
                             <td>{{ word.languageNoteExceptionToInflection }}</td>
                             <td>{{ word.languageNoteGender|gender_as_string }}</td>
                             <td>{{ word.createdAtFormat('Y-m-d') }}</td>
@@ -55,6 +57,7 @@
                         <th>{{ 'admin.word'|trans }}</th>
                         <th>{{ 'admin.equivalents'|trans }}</th>
                         <th>{{ 'admin.inflection'|trans }}</th>
+                        <th>{{ 'admin.exception_to_inflection'|trans }}</th>
                         <th>{{ 'admin.gender'|trans }}</th>
                         <th>{{ 'admin.created'|trans }}</th>
                         <th>{{ 'admin.updated'|trans }}</th>

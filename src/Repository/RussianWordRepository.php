@@ -24,7 +24,7 @@ class RussianWordRepository extends ServiceEntityRepository
         return $this
             ->createQueryBuilder('w')
             ->select([
-                'partial w.{id, content, contentWithAccent, languageNoteExceptionToInflection, languageNoteGender, statusLight, imported, createdAt, updatedAt}',
+                'partial w.{id, content, contentWithAccent, languageNoteInflection, languageNoteExceptionToInflection, languageNoteGender, statusLight, imported, createdAt, updatedAt}',
                 'partial t.{id}',
             ])
             ->leftJoin('w.translations', 't')
