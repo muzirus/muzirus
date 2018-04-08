@@ -19,14 +19,14 @@ class WordGenderExtension extends \Twig_Extension
     {
         switch ($gender) {
             case AbstractWordInterface::GENDER_MASCULINE:
-                return 'mužský rod';
+                return 'm';
             case AbstractWordInterface::GENDER_FEMININE:
-                return 'ženský rod';
+                return 'ž';
             case AbstractWordInterface::GENDER_NEUTER:
-                return 'střední rod';
+                return 's';
             case AbstractWordInterface::GENDER_UNKNOWN:
             default:
-                return '???';
+                return '';
         }
     }
 }
