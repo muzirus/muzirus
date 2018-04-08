@@ -5,26 +5,45 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <div class="modal-title"><i class="fa fa-warning"></i> Info!</div>
+                <div class="modal-title">
+                    <i class="fa fa-star"></i>
+                    Navrhnout zlepšení
+                </div>
             </div>
             <div class="modal-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolore doloremque illo itaque iusto
-                labore maiores mollitia numquam optio possimus quae quaerat quis, reiciendis velit voluptate!
-                Impedit molestias provident sequi!
-
-
+                <p>
+                    Nenašli jste, co jste hledali, nebo byste rádi něčím přispěli?
+                    <strong>Napište nám!</strong>
+                </p>
                 <div class="form-group">
-                    <label for="textArea" class="control-label">Textarea</label>
-                    <textarea class="form-control" rows="3" id="textArea"></textarea>
-                    <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    <label for="message" class="control-label">Vaše návrhy na zlepšení</label>
+                    <textarea class="form-control" rows="5" id="message"></textarea>
+                    <div class="help-block">
+                        Pošlete nám své připomínky nebo tipy na nová hesla, která bychom podle Vás měli zpracovat.
+                        Můžete navrhnout ruská i česká hesla, přidat vysvětlivku nebo informační zdroj, který stojí za
+                        prostudování.
+                    </div>
                 </div>
+                <div class="form-group">
+                    <label for="email" class="control-label">
+                        Váš email <span class="text-muted">(nepovinný)</span>
+                    </label>
+                    <input class="form-control" type="email" id="email">
+                    <div class="help-block">
+                        Pokud uvedete svůj kontaktní e-mail, budeme Vás o zveřejnění Vámi
+                        navrženého hesla informovat.
+                    </div>
+                </div>
+                <p>
+                    Děkujeme Vám!
+                </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">
-                    Cancel
+                    Zavřít
                 </button>
-                <button type="submit" class="btn btn-outline">
-                    Send!
+                <button type="submit" class="btn btn-success">
+                    Odeslat!
                 </button>
             </div>
         </form>
