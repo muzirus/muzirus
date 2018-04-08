@@ -1,0 +1,21 @@
+{% macro links(path, letters) %}
+    {% import _self as filter %}
+
+    <div class="btn-group btn-group-sm">
+        {% for letter in letters %}
+            {{ filter.link(path, letter) }}
+        {% endfor %}
+    </div>
+
+{% endmacro %}
+
+{% macro link(path, letter) %}
+    {% if app.request.query.get('startsWith') == letter %}
+        {% set btnClass = 'success' %}
+    {% else %}
+        {% set btnClass = 'primary' %}
+    {% endif %}
+
+    <a class="btn btn-{{ btnClass }}" href="{{ path(path, {startsWith: letter}) }}">{{ letter }}</a>
+
+{% endmacro %}

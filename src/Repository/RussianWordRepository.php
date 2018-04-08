@@ -5,8 +5,6 @@ namespace App\Repository;
 use App\Entity\RussianWord;
 use App\Entity\RussianWordInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Pagerfanta\Adapter\DoctrineORMAdapter;
-use Pagerfanta\Pagerfanta;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 class RussianWordRepository extends ServiceEntityRepository
@@ -34,23 +32,18 @@ class RussianWordRepository extends ServiceEntityRepository
     }
 
     /**
-     * @return Pagerfanta|RussianWordInterface[]
+     * @return RussianWordInterface[]
      */
-    public function findWithTranslationsAsPaginator(int $page, int $maxPerPage = 10): Pagerfanta
+    public function findStartingWith(string $startsWith): array
     {
-        $query = $this
+        return $this
             ->createQueryBuilder('rw')
-            ->select(['rw', 't', 'cw'])
             ->join('rw.translations', 't')
-            ->join('t.czechWord', 'cw')
+            ->where('rw.content LIKE :startsWith')
+            ->setParameter('startsWith', $startsWith . '%')
             ->orderBy('rw.content', 'ASC')
-            ->getQuery();
-
-        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
-        $paginator->setMaxPerPage($maxPerPage);
-        $paginator->setCurrentPage($page);
-
-        return $paginator;
+            ->getQuery()
+            ->getResult();
     }
 
     /**

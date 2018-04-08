@@ -6,6 +6,7 @@ use App\Entity\CzechWord;
 use App\Repository\CzechWordRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -13,20 +14,48 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CzechToRussianController extends AbstractController
 {
+    private const LETTERS = [
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+        'f',
+        'g',
+        'h',
+        'ch',
+        'i',
+        'j',
+        'k',
+        'l',
+        'm',
+        'n',
+        'o',
+        'p',
+        'q',
+        'r',
+        's',
+        't',
+        'u',
+        'v',
+        'w',
+        'x',
+        'y',
+        'z',
+    ];
+    private const FIRST_LETTER = self::LETTERS[0];
+
     /**
-     * @Route("", name="app.czech_to_russian", defaults={"page": 1})
-     * @Route(
-     *     "/page/{page}",
-     *     name="app.czech_to_russian.paginated",
-     *     defaults={"page": 1},
-     *     requirements={"page": "[1-9]\d*"}
-     * )
+     * @Route("", name="app.czech_to_russian")
      * @Method("GET")
      */
-    public function index(int $page, CzechWordRepository $wordRepository): Response
+    public function index(Request $request, CzechWordRepository $wordRepository): Response
     {
+        $startsWith = $request->get('startsWith', self::FIRST_LETTER);
+
         return $this->render('app/czech-to-russian/index.html.twig', [
-            'words' => $wordRepository->findWithTranslationsAsPaginator($page),
+            'words' => $wordRepository->findStartingWith($startsWith),
+            'letters' => self::LETTERS,
         ]);
     }
 

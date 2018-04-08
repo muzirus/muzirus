@@ -5,8 +5,6 @@ namespace App\Repository;
 use App\Entity\CzechWord;
 use App\Entity\CzechWordInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Pagerfanta\Adapter\DoctrineORMAdapter;
-use Pagerfanta\Pagerfanta;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 class CzechWordRepository extends ServiceEntityRepository
@@ -34,23 +32,26 @@ class CzechWordRepository extends ServiceEntityRepository
     }
 
     /**
-     * @return Pagerfanta|CzechWordInterface[]
+     * @return CzechWordInterface[]
      */
-    public function findWithTranslationsAsPaginator(int $page, int $maxPerPage = 10): Pagerfanta
+    public function findStartingWith(string $startsWith): array
     {
-        $query = $this->createQueryBuilder('cw')
-            ->select(['cw', 't', 'rw'])
+        $queryBuilder = $this->createQueryBuilder('cw');
+
+        $queryBuilder
             ->join('cw.translations', 't')
-            ->join('t.russianWord', 'rw')
-            ->orderBy('cw.content', 'ASC')
-            ->getQuery();
+            ->where('cw.content LIKE :like')
+            ->setParameter('like', "${startsWith}%")
+            ->orderBy('cw.content', 'ASC');
 
+        if ($startsWith === 'c') {
+            $queryBuilder
+                ->andWhere('cw.content NOT LIKE :notLike')
+                ->setParameter('notLike', 'ch%');
+        }
 
-        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
-        $paginator->setMaxPerPage($maxPerPage);
-        $paginator->setCurrentPage($page);
-
-        return $paginator;
+        return $queryBuilder->getQuery()
+            ->getResult();
     }
 
     /**

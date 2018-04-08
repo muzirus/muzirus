@@ -1,25 +1,18 @@
 {% extends 'app/layout.html.twig' %}
+{% import 'app/_macros/filter.html.twig' as filter %}
 
 {% block heading 'Český heslář' %}
 
 {% block content %}
+
+    <div class="text-center">
+        {{ filter.links('app.czech_to_russian', letters) }}
+    </div>
+
     {% for word in words %}
         <h3>
             <a href="{{ path('app.czech_to_russian.detail', { id: word.id }) }}">{{ word }}</a>
         </h3>
-        <ol>
-            {% for translation in word.translations %}
-                <li>
-                    {{ word }} &equals;&gt; {{ translation.russianWord }}
-                </li>
-            {% endfor %}
-        </ol>
         <hr>
     {% endfor %}
-
-    {% if words.haveToPaginate %}
-        <div class="navigation text-center">
-            {{ pagerfanta(words, 'twitter_bootstrap3', { routeName: 'app.czech_to_russian.paginated' }) }}
-        </div>
-    {% endif %}
 {% endblock %}

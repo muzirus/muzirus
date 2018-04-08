@@ -94,6 +94,18 @@
 
     {% endfor %}
 
+    {% if word.categories is not empty %}
+        <hr>
+        <div class="text-center">
+            <h4>Tematické okruhy</h4>
+            <p>
+                {% for category in word.categories %}
+                    <a class="btn btn-default btn-xs" href="#">{{ category.title }}</a>
+                {% endfor %}
+            </p>
+        </div>
+    {% endif %}
+
     <hr>
     <p class="text-center text-muted">
         Datum poslední změny: {{ word.updatedAtFormat('j.n.Y') }}
