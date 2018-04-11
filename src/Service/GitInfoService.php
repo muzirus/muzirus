@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Service;
 
@@ -19,7 +19,7 @@ class GitInfoService
     public function getHash(): string
     {
         if ($this->isExecAvailable()) {
-            if (null === $this->commitHash) {
+            if ($this->commitHash === null) {
                 $this->commitHash = $this->getCommitHash();
             }
 
@@ -32,7 +32,7 @@ class GitInfoService
     public function getDate(): string
     {
         if ($this->isExecAvailable()) {
-            if (null === $this->commitDate) {
+            if ($this->commitDate === null) {
                 $this->commitDate = $this->getCommitDate();
             }
 
@@ -53,7 +53,7 @@ class GitInfoService
     {
         $result = trim(exec('git log -1 --format=%ci --date=local'));
 
-        if (null === $format) {
+        if ($format === null) {
             return $result;
         }
 
@@ -79,12 +79,12 @@ class GitInfoService
 
     private function isSafeModeEnabled(): bool
     {
-        return in_array(strtolower(ini_get('safe_mode')), ['on', '1'], true);
+        return in_array(mb_strtolower(ini_get('safe_mode')), ['on', '1'], true);
     }
 
     private function isExecDisabled(): bool
     {
-        return in_array('exec', explode(',', ini_get('disable_functions')));
+        return in_array('exec', explode(',', ini_get('disable_functions')), true);
     }
 
     private function execDoesNotExist(): bool

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -15,9 +15,9 @@ class UserRepository extends ServiceEntityRepository
 
     /**
      * @param int $id
-     * @return User
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return User
      */
     public function getOneById(int $id): User
     {
@@ -30,9 +30,9 @@ class UserRepository extends ServiceEntityRepository
 
     /**
      * @param string $email
-     * @return User
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return User
      */
     public function getOneByEmail(string $email): User
     {
@@ -46,9 +46,9 @@ class UserRepository extends ServiceEntityRepository
     /**
      * @param string $email
      * @param string $passwordRecoveryKey
-     * @return User
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return User
      */
     public function getOneByEmailAndPasswordRecoveryKey(string $email, string $passwordRecoveryKey): User
     {

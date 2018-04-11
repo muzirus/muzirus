@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -26,6 +26,7 @@ class TranslationExample implements TranslationExampleInterface
 
     /**
      * Owning side.
+     *
      * @ORM\ManyToOne(targetEntity="Translation", inversedBy="translationExamples")
      * @ORM\JoinColumn(name="translation_id", referencedColumnName="id", onDelete="cascade")
      * @var Translation

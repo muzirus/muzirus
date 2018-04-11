@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -27,9 +27,9 @@ class SymbolRepository extends ServiceEntityRepository
 
     /**
      * @param int $id
-     * @return Symbol
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return Symbol
      */
     public function getOneById(int $id): Symbol
     {

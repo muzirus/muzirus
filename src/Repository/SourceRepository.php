@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -43,9 +43,9 @@ class SourceRepository extends ServiceEntityRepository
 
     /**
      * @param int $id
-     * @return Source
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return Source
      */
     public function getOneById(int $id): Source
     {

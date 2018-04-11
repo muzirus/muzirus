@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -26,9 +26,9 @@ class AbbreviationRepository extends ServiceEntityRepository
 
     /**
      * @param int $id
-     * @return Abbreviation
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return Abbreviation
      */
     public function getOneById(int $id): Abbreviation
     {

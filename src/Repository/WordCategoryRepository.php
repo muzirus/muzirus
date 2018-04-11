@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -41,9 +41,9 @@ class WordCategoryRepository extends ServiceEntityRepository
 
     /**
      * @param int $id
-     * @return WordCategory
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return WordCategory
      */
     public function getOneById(int $id): WordCategory
     {

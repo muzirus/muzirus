@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -32,6 +32,7 @@ class Source implements SourceInterface
 
     /**
      * Owning side.
+     *
      * @ORM\ManyToOne(targetEntity="SourceType")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id", nullable=false)
      * @var SourceType

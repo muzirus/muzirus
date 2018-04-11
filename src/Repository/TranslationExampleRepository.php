@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -30,9 +30,9 @@ class TranslationExampleRepository extends ServiceEntityRepository
 
     /**
      * @param int $id
-     * @return TranslationExample
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return TranslationExample
      */
     public function getOne(int $id): TranslationExample
     {

@@ -7,7 +7,7 @@ use Doctrine\DBAL\Schema\Schema;
 
 class Version20180321213414 extends AbstractMigration
 {
-    public function up(Schema $schema)
+    public function up(Schema $schema): void
     {
         try {
             $this->connection->beginTransaction();
@@ -23,13 +23,13 @@ class Version20180321213414 extends AbstractMigration
             $this->addSql('ALTER TABLE log_entries ADD CONSTRAINT FK_15358B52D18F76D1 FOREIGN KEY (translation_example_id) REFERENCES translation_examples (id) ON DELETE CASCADE');
 
             $this->connection->commit();
-        } catch (\Exception $exception) {
+        } catch (\Throwable $exception) {
             $this->connection->rollBack();
             throw $exception;
         }
     }
 
-    public function down(Schema $schema)
+    public function down(Schema $schema): void
     {
     }
 }

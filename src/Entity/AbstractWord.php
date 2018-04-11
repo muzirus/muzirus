@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -148,6 +148,7 @@ abstract class AbstractWord implements AbstractWordInterface
 
     /**
      * Owning side.
+     *
      * @ORM\ManyToMany(targetEntity="WordCategory")
      * @ORM\JoinTable(name="words_categories",
      *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},
@@ -159,6 +160,7 @@ abstract class AbstractWord implements AbstractWordInterface
 
     /**
      * Owning side.
+     *
      * @ORM\ManyToMany(targetEntity="Source")
      * @ORM\JoinTable(name="words_sources",
      *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},

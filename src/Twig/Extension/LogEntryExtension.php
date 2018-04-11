@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Twig\Extension;
 
@@ -114,7 +114,6 @@ class LogEntryExtension extends \Twig_Extension
         $userName = $logEntry->hasUser() ? $logEntry->getUser()->getName() : 'Nobody';
 
         switch ($logEntry->getName()) {
-
             case LogEntry::NAME_CATEGORY_CREATED:
                 $category = $logEntry->getCategory();
 
@@ -135,7 +134,8 @@ class LogEntryExtension extends \Twig_Extension
                     $userName,
                     $czechWord,
                     $this->urlGenerator->generate(
-                        'admin.czech-word.edit', [
+                        'admin.czech-word.edit',
+                        [
                             'id' => $czechWord->getId(),
                         ]
                     )

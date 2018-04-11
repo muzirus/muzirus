@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -13,6 +13,7 @@ class RussianWord extends AbstractWord implements RussianWordInterface
 {
     /**
      * Inverse side.
+     *
      * @ORM\OneToMany(targetEntity="Translation", mappedBy="russianWord", cascade={"remove"})
      * @var ArrayCollection
      */

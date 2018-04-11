@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -23,9 +23,9 @@ class NoteRepository extends ServiceEntityRepository
 
     /**
      * @param int $id
-     * @return Note
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return Note
      */
     public function getOneById(int $id): Note
     {

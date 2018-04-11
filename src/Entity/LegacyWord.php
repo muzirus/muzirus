@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -127,7 +127,7 @@ class LegacyWord
 
     public function hasCategory(): bool
     {
-        return false === empty($this->category);
+        return empty($this->category) === false;
     }
 
     public function getCategory(): string
@@ -152,7 +152,7 @@ class LegacyWord
 
     public function hasExplanation(): bool
     {
-        return false === empty($this->explanation);
+        return empty($this->explanation) === false;
     }
 
     public function getExplanation(): string
@@ -167,7 +167,7 @@ class LegacyWord
 
     public function hasLanguageNote(): bool
     {
-        return false === empty($this->languageNote);
+        return empty($this->languageNote) === false;
     }
 
     public function getLanguageNote(): string
@@ -182,7 +182,7 @@ class LegacyWord
 
     public function hasTranslation(): bool
     {
-        return false === empty($this->translation);
+        return empty($this->translation) === false;
     }
 
     public function getTranslation(): string
@@ -197,7 +197,7 @@ class LegacyWord
 
     public function hasSource(): bool
     {
-        return false === empty($this->source);
+        return empty($this->source) === false;
     }
 
     public function getSource(): string

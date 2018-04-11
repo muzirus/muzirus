@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -42,7 +42,6 @@ class TranslationRepository extends ServiceEntityRepository
             ->join('t.russianWord', 'rw')
             ->join('t.czechWord', 'cw')
             ->getQuery();
-
 
         $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
         $paginator->setMaxPerPage($maxPerPage);
