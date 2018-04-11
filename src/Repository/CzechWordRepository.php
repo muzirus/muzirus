@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -56,8 +56,8 @@ class CzechWordRepository extends ServiceEntityRepository
 
     /**
      * @param CzechWordInterface $word
-     * @return CzechWordInterface|null
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return CzechWordInterface|null
      */
     public function findOnePrev(CzechWordInterface $word): ?CzechWordInterface
     {
@@ -75,8 +75,8 @@ class CzechWordRepository extends ServiceEntityRepository
 
     /**
      * @param CzechWordInterface $word
-     * @return CzechWordInterface|null
      * @throws \Doctrine\ORM\NonUniqueResultException
+     * @return CzechWordInterface|null
      */
     public function findOneNext(CzechWordInterface $word): ?CzechWordInterface
     {

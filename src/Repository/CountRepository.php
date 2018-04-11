@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -35,28 +35,28 @@ class CountRepository
     {
         $this->load();
 
-        return $this->data[self::KEY_RUSSIAN_WORDS_COUNT];
+        return (int) $this->data[self::KEY_RUSSIAN_WORDS_COUNT];
     }
 
     public function countCzechWords(): int
     {
         $this->load();
 
-        return $this->data[self::KEY_CZECH_WORDS_COUNT];
+        return (int) $this->data[self::KEY_CZECH_WORDS_COUNT];
     }
 
     public function countTranslations(): int
     {
         $this->load();
 
-        return $this->data[self::KEY_TRANSLATIONS_COUNT];
+        return (int) $this->data[self::KEY_TRANSLATIONS_COUNT];
     }
 
     public function countTranslationExamples(): int
     {
         $this->load();
 
-        return $this->data[self::KEY_TRANSLATION_EXAMPLES_COUNT];
+        return (int) $this->data[self::KEY_TRANSLATION_EXAMPLES_COUNT];
     }
 
     //-------------------------------------------------------------------------

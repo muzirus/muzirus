@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -13,6 +13,7 @@ class CzechWord extends AbstractWord implements CzechWordInterface
 {
     /**
      * Inverse side.
+     *
      * @ORM\OneToMany(targetEntity="Translation", mappedBy="czechWord", cascade={"remove"})
      * @var ArrayCollection
      */

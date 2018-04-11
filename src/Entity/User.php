@@ -1,11 +1,11 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Entity()
  * @ORM\Table(name="users")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -28,7 +28,7 @@ class User implements UserInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     private $id;
 
@@ -111,7 +111,7 @@ class User implements UserInterface
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
@@ -256,6 +256,7 @@ class User implements UserInterface
 
     /**
      * String representation of object
+     *
      * @link http://php.net/manual/en/serializable.serialize.php
      * @return string the string representation of the object or null
      * @since 5.1.0
@@ -271,20 +272,20 @@ class User implements UserInterface
 
     /**
      * Constructs the object
+     *
      * @link http://php.net/manual/en/serializable.unserialize.php
      * @param string $serialized <p>
      * The string representation of the object.
      * </p>
-     * @return void
      * @since 5.1.0
      */
     public function unserialize($serialized): void
     {
-        list (
+        [
             $this->id,
             $this->email,
             $this->passwordHash,
-            ) = unserialize($serialized);
+        ] = unserialize($serialized);
     }
 
     /**

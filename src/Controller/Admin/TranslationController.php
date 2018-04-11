@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
@@ -31,7 +31,7 @@ class TranslationController extends AbstractController
         return $this->render(
             'admin/translation/index.html.twig',
             [
-                'translations' => $translationRepository->getAll(),
+                'translations' => $translationRepository->findAllWithTranslationExamplesAndWords(),
             ]
         );
     }

@@ -7,7 +7,7 @@ use Doctrine\DBAL\Schema\Schema;
 
 class Version20180315180928 extends AbstractMigration
 {
-    public function up(Schema $schema)
+    public function up(Schema $schema): void
     {
         $this->addSql('DROP TABLE translation_examples_approvals');
         $this->addSql('DROP TABLE translation_examples_refusals');
@@ -15,7 +15,7 @@ class Version20180315180928 extends AbstractMigration
         $this->addSql('DROP TABLE translations_refusals');
     }
 
-    public function down(Schema $schema)
+    public function down(Schema $schema): void
     {
     }
 }

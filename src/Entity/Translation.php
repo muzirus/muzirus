@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -21,12 +21,13 @@ class Translation implements TranslationInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     private $id;
 
     /**
      * Owning side.
+     *
      * @ORM\ManyToOne(targetEntity="RussianWord", inversedBy="translations")
      * @ORM\JoinColumn(name="first_word_id", referencedColumnName="id", nullable=false)
      * @var RussianWord
@@ -41,6 +42,7 @@ class Translation implements TranslationInterface
 
     /**
      * Owning side.
+     *
      * @ORM\ManyToOne(targetEntity="CzechWord", inversedBy="translations")
      * @ORM\JoinColumn(name="second_word_id", referencedColumnName="id", nullable=false)
      * @var CzechWord
@@ -67,6 +69,7 @@ class Translation implements TranslationInterface
 
     /**
      * Inverse side.
+     *
      * @ORM\OneToMany(targetEntity="TranslationExample", mappedBy="translation")
      * @var ArrayCollection
      */
@@ -88,7 +91,7 @@ class Translation implements TranslationInterface
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }

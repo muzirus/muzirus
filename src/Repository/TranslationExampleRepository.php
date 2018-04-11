@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -16,7 +16,7 @@ class TranslationExampleRepository extends ServiceEntityRepository
     /**
      * @return TranslationExample[]
      */
-    public function getAll(): array
+    public function findAllWithTranslationAndWords(): array
     {
         return $this
             ->createQueryBuilder('te')
@@ -26,21 +26,5 @@ class TranslationExampleRepository extends ServiceEntityRepository
             ->join('t.czechWord', 'cw')
             ->getQuery()
             ->getResult();
-    }
-
-    /**
-     * @param int $id
-     * @return TranslationExample
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
-    public function getOne(int $id): TranslationExample
-    {
-        return $this->createQueryBuilder('te')
-            ->select('te')
-            ->where('te.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getSingleResult();
     }
 }

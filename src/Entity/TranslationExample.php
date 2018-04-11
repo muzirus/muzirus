@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -20,12 +20,13 @@ class TranslationExample implements TranslationExampleInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     private $id;
 
     /**
      * Owning side.
+     *
      * @ORM\ManyToOne(targetEntity="Translation", inversedBy="translationExamples")
      * @ORM\JoinColumn(name="translation_id", referencedColumnName="id", onDelete="cascade")
      * @var Translation
@@ -71,7 +72,7 @@ class TranslationExample implements TranslationExampleInterface
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }

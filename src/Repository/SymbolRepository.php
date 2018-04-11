@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -16,28 +16,12 @@ class SymbolRepository extends ServiceEntityRepository
     /**
      * @return Symbol[]
      */
-    public function getAll(): array
+    public function findAllInAscendingOrder(): array
     {
         return $this
             ->createQueryBuilder('s')
             ->orderBy('s.title', 'ASC')
             ->getQuery()
             ->getResult();
-    }
-
-    /**
-     * @param int $id
-     * @return Symbol
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
-    public function getOneById(int $id): Symbol
-    {
-        return $this
-            ->createQueryBuilder('s')
-            ->where('s.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getSingleResult();
     }
 }

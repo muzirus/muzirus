@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
@@ -31,7 +31,7 @@ class SourceController extends AbstractController
         return $this->render(
             'admin/source/index.html.twig',
             [
-                'sources' => $sourceRepository->getAll(),
+                'sources' => $sourceRepository->findAllWithSourceTypes(),
             ]
         );
     }

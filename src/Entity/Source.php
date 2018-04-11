@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -20,7 +20,7 @@ class Source implements SourceInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     private $id;
 
@@ -32,6 +32,7 @@ class Source implements SourceInterface
 
     /**
      * Owning side.
+     *
      * @ORM\ManyToOne(targetEntity="SourceType")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id", nullable=false)
      * @var SourceType
@@ -95,7 +96,7 @@ class Source implements SourceInterface
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }

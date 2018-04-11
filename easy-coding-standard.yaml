@@ -1,0 +1,9 @@
+imports:
+    - { resource: 'vendor/lmc/coding-standard/easy-coding-standard.yaml' }
+
+parameters:
+    exclude_checkers:
+        - 'Symplify\CodingStandard\Sniffs\Naming\InterfaceNameSniff'
+        - 'Symplify\CodingStandard\Sniffs\Naming\TraitNameSniff'
+    exclude_files:
+        - 'src/Kernel.php'

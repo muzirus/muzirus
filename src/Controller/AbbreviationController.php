@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Controller;
 
@@ -16,7 +16,7 @@ class AbbreviationController extends AbstractController
     public function index(AbbreviationRepository $abbreviationRepository): Response
     {
         return $this->render('app/abbreviation/index.html.twig', [
-            'abbreviations' => $abbreviationRepository->getAll(),
+            'abbreviations' => $abbreviationRepository->findAllInAscendingOrder(),
         ]);
     }
 }

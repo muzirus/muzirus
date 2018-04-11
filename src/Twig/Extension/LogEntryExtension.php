@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Twig\Extension;
 
@@ -114,13 +114,12 @@ class LogEntryExtension extends \Twig_Extension
         $userName = $logEntry->hasUser() ? $logEntry->getUser()->getName() : 'Nobody';
 
         switch ($logEntry->getName()) {
-
             case LogEntry::NAME_CATEGORY_CREATED:
                 $category = $logEntry->getCategory();
 
                 return $this->getTextCreated(
                     $userName,
-                    $category,
+                    $category->getTitle(),
                     $this->urlGenerator->generate(
                         'admin.category.edit',
                         [
@@ -133,9 +132,10 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextCreated(
                     $userName,
-                    $czechWord,
+                    $czechWord->getContent(),
                     $this->urlGenerator->generate(
-                        'admin.czech-word.edit', [
+                        'admin.czech-word.edit',
+                        [
                             'id' => $czechWord->getId(),
                         ]
                     )
@@ -145,7 +145,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextCreated(
                     $userName,
-                    $russianWord,
+                    $russianWord->getContent(),
                     $this->urlGenerator->generate(
                         'admin.russian-word.edit',
                         [
@@ -158,7 +158,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextCreated(
                     $userName,
-                    $source,
+                    $source->getTitle(),
                     $this->urlGenerator->generate(
                         'admin.source.edit',
                         [
@@ -171,7 +171,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextCreated(
                     $userName,
-                    $sourceType,
+                    $sourceType->getTitle(),
                     $this->urlGenerator->generate(
                         'admin.source-type.edit',
                         [
@@ -184,7 +184,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextCreated(
                     $userName,
-                    $translation,
+                    $translation->__toString(),
                     $this->urlGenerator->generate(
                         'admin.translation.edit',
                         [
@@ -197,7 +197,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextCreated(
                     $userName,
-                    $translationExample,
+                    $translationExample->__toString(),
                     $this->urlGenerator->generate(
                         'admin.translation-example.edit',
                         [
@@ -210,7 +210,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextUpdated(
                     $userName,
-                    $category,
+                    $category->getTitle(),
                     $this->urlGenerator->generate(
                         'admin.category.edit',
                         [
@@ -223,7 +223,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextUpdated(
                     $userName,
-                    $czechWord,
+                    $czechWord->getContent(),
                     $this->urlGenerator->generate(
                         'admin.czech-word.edit',
                         [
@@ -236,7 +236,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextUpdated(
                     $userName,
-                    $russianWord,
+                    $russianWord->getContent(),
                     $this->urlGenerator->generate(
                         'admin.russian-word.edit',
                         [
@@ -249,7 +249,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextUpdated(
                     $userName,
-                    $source,
+                    $source->getTitle(),
                     $this->urlGenerator->generate(
                         'admin.source.edit',
                         [
@@ -262,7 +262,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextUpdated(
                     $userName,
-                    $sourceType,
+                    $sourceType->getTitle(),
                     $this->urlGenerator->generate(
                         'admin.source-type.edit',
                         [
@@ -275,7 +275,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextUpdated(
                     $userName,
-                    $translation,
+                    $translation->__toString(),
                     $this->urlGenerator->generate(
                         'admin.translation.edit',
                         [
@@ -288,7 +288,7 @@ class LogEntryExtension extends \Twig_Extension
 
                 return $this->getTextUpdated(
                     $userName,
-                    $translationExample,
+                    $translationExample->__toString(),
                     $this->urlGenerator->generate(
                         'admin.translation-example.edit',
                         [

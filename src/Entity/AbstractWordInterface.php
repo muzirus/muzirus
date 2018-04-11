@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -30,7 +30,7 @@ interface AbstractWordInterface extends Timestampable
 
     public function __toString(): string;
 
-    public function getId(): int;
+    public function getId(): string;
 
     public function getContent(): string;
 
