@@ -28,7 +28,7 @@ class SymbolController extends AbstractController
         return $this->render(
             'admin/symbol/index.html.twig',
             [
-                'symbols' => $symbolRepository->getAll(),
+                'symbols' => $symbolRepository->findAllInAscendingOrder(),
             ]
         );
     }

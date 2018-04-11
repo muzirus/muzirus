@@ -16,27 +16,11 @@ class AbbreviationRepository extends ServiceEntityRepository
     /**
      * @return Abbreviation[]
      */
-    public function getAll(): array
+    public function findAllInAscendingOrder(): array
     {
         return $this->createQueryBuilder('a')
             ->orderBy('a.content', 'ASC')
             ->getQuery()
             ->getResult();
-    }
-
-    /**
-     * @param int $id
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     * @return Abbreviation
-     */
-    public function getOneById(int $id): Abbreviation
-    {
-        return $this
-            ->createQueryBuilder('a')
-            ->where('a.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getSingleResult();
     }
 }

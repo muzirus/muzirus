@@ -28,7 +28,7 @@ class AbbreviationController extends AbstractController
         return $this->render(
             'admin/abbreviation/index.html.twig',
             [
-                'abbreviations' => $abbreviationRepository->getAll(),
+                'abbreviations' => $abbreviationRepository->findAllInAscendingOrder(),
             ]
         );
     }

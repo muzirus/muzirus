@@ -18,23 +18,9 @@ class SourceTypeRepository extends ServiceEntityRepository
      */
     public function getAll(): array
     {
-        $qb = $this->createQueryBuilder('st');
-        $qb->orderBy('st.title', 'ASC');
-
-        return $qb->getQuery()->getResult();
-    }
-
-    /**
-     * @param int $id
-     * @throws \Doctrine\ORM\NoResultException
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     * @return SourceType
-     */
-    public function getOneById(int $id): SourceType
-    {
-        $qb = $this->createQueryBuilder('st');
-        $qb->where('st.id = :id')->setParameter('id', $id);
-
-        return $qb->getQuery()->getSingleResult();
+        return $this->createQueryBuilder('st')
+            ->orderBy('st.title', 'ASC')
+            ->getQuery()
+            ->getResult();
     }
 }

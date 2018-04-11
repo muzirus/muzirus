@@ -31,7 +31,7 @@ class TranslationController extends AbstractController
         return $this->render(
             'admin/translation/index.html.twig',
             [
-                'translations' => $translationRepository->getAll(),
+                'translations' => $translationRepository->findAllWithTranslationExamplesAndWords(),
             ]
         );
     }

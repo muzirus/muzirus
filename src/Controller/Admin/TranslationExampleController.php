@@ -31,7 +31,7 @@ class TranslationExampleController extends AbstractController
         return $this->render(
             'admin/translation-example/index.html.twig',
             [
-                'examples' => $translationExampleRepository->getAll(),
+                'examples' => $translationExampleRepository->findAllWithTranslationAndWords(),
             ]
         );
     }
