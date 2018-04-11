@@ -16,7 +16,7 @@ class WordCategoryRepository extends ServiceEntityRepository
     /**
      * @return WordCategory[]
      */
-    public function getAll(): array
+    public function findAllInAscendingOrder(): array
     {
         return $this->createQueryBuilder('wc')
             ->orderBy('wc.title', 'ASC')

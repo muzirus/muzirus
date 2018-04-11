@@ -31,7 +31,7 @@ class CategoryController extends AbstractController
         return $this->render(
             'admin/category/index.html.twig',
             [
-                'categories' => $categoryRepository->getAll(),
+                'categories' => $categoryRepository->findAllInAscendingOrder(),
             ]
         );
     }
