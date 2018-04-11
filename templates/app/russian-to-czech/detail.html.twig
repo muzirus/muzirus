@@ -112,7 +112,7 @@
             <h4>{{ 'app.topics'|trans }}</h4>
             <p>
                 {% for category in word.categories %}
-                    <a class="btn btn-default btn-xs" href="#">{{ category.title }}</a>
+                    <a class="btn btn-default btn-xs" href="{{ path('app.topics') }}">{{ category.title }}</a>
                 {% endfor %}
             </p>
         </div>
