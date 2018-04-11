@@ -173,6 +173,9 @@
                     <a href="{{ path('admin.russian-word') }}" class="btn btn-default">
                         {{ 'admin.button.back_to_list'|trans }}
                     </a>
+                    <a href="{{ path('app.russian_to_czech.detail', {id: word.id}) }}" class="btn btn-default">
+                        {{ 'admin.button.preview'|trans }}
+                    </a>
                 </div>
                 <div class="pull-right">
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#js-modal-remove">
