@@ -1,13 +1,13 @@
 {% extends 'app/layout.html.twig' %}
 
-{% block heading 'Zkratky' %}
+{% block heading 'app.title.abbreviations'|trans %}
 
 {% block content %}
     <table class="table table-striped table-hover table-bordered">
         <thead>
             <tr>
-                <th>Zkratka</th>
-                <th>Význam</th>
+                <th>{{ 'app.abbreviation'|trans }}</th>
+                <th>{{ 'app.meaning'|trans }}</th>
             </tr>
         </thead>
         <tbody>

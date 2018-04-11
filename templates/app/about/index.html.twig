@@ -1,25 +1,14 @@
 {% extends 'app/layout.html.twig' %}
 
-{% block heading 'O projektu' %}
+{% block heading 'app.title.about_project'|trans %}
 
 {% block content %}
-    <h2>Lorem impsum?</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam asperiores consequuntur dignissimos dolore
-        earum, eum fugiat hic, ipsa iste maiores nulla optio provident repellat tenetur velit veniam veritatis
-        voluptatem!
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda at consequatur distinctio hic
-        impedit, iusto libero magnam minima natus nemo numquam odio possimus quisquam sed similique temporibus tenetur
-        voluptatum!
-    </p>
-    <h2>Autoři</h2>
+    <h2>{{ 'app.authors'|trans }}</h2>
     <ul>
         <li>Jana Melčáková</li>
         <li>Matúš Petrofčík</li>
     </ul>
-    <h2>Kontakt</h2>
+    <h2>{{ 'app.contact'|trans }}</h2>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis illum itaque nam optio provident
         quaerat quis. Ab at debitis deleniti ducimus eum ipsam officiis quis quos soluta totam?

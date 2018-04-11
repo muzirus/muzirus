@@ -1,4 +1,3 @@
-app.title: 'Rusko-český, česko-ruský slovník hudebních pojmů online'
 admin.abbreviations: Zkratky
 admin.actions: Akce
 admin.activities: Aktivity
@@ -83,3 +82,20 @@ admin.exemplifications: Exemplifikace
 admin.exception_to_inflection: Výjimky
 admin.topics: 'Tematické okruhy'
 admin.topic: 'Tematický okruh'
+app.title: 'Rusko-český, česko-ruský slovník hudebních pojmů online'
+app.title.topics: 'Tematické okruhy'
+app.title.vocabulary_russian: 'Ruský heslář'
+app.title.vocabulary_czech: 'Český heslář'
+app.title.abbreviations: Zkratky
+app.title.notations: Notace
+app.title.proccessing_of_words: 'Zpracování hesel'
+app.title.suggest_improvement: 'Navrhnout zlepšení'
+app.updated_at: 'Datum poslední změny:'
+app.link.intercorp: 'Odkaz na heslo v korpusech InterCorp'
+app.alert.info.under_construction: 'Slovník je dosud ve výstavbě, další hesla budou zveřejňována kontinuálně.'
+app.abbreviation: Zkratka
+app.meaning: Význam
+app.title.about_project: 'O projektu'
+app.authors: Autoři
+app.contact: Kontakt
+app.topics: 'Tematické okruhy'

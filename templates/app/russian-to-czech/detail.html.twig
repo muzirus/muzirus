@@ -44,8 +44,7 @@
             {%- endif -%}
 
             {%- if word.languageNoteOther is not empty -%}
-                &comma; <em data-toggle="tooltip" data-placement="top" data-original-title="Stylistická poznámka"
-                            title="">{{ word.languageNoteOther }}</em>
+                &comma; <em>{{ word.languageNoteOther }}</em>
             {%- endif -%}
         {% endspaceless %}
     </h3>
@@ -100,7 +99,7 @@
             <p class="text-center">
                 <a href="https://kontext.korpus.cz/{{ translation.link }}" target="_blank">
                     <i class="fa fa-link"></i>
-                    Odkaz na heslo v korpusech InterCorp
+                    {{ 'app.link.intercorp'|trans }}
                 </a>
             </p>
         {% endif %}
@@ -110,7 +109,7 @@
     {% if word.categories is not empty %}
         <hr>
         <div class="text-center">
-            <h4>Tematické okruhy</h4>
+            <h4>{{ 'app.topics'|trans }}</h4>
             <p>
                 {% for category in word.categories %}
                     <a class="btn btn-default btn-xs" href="#">{{ category.title }}</a>
@@ -121,7 +120,7 @@
 
     <hr>
     <p class="text-center text-muted">
-        Datum poslední změny: {{ word.updatedAtFormat('j.n.Y') }}
+        {{ 'app.updated_at'|trans }} {{ word.updatedAtFormat('j.n.Y') }}
 
         {% if app.user %}
             <a href="{{ path('admin.russian-word.edit', {id: word.id}) }}">
