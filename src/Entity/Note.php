@@ -15,7 +15,7 @@ class Note implements NoteInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     private $id;
 
@@ -64,7 +64,7 @@ class Note implements NoteInterface
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }

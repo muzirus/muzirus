@@ -30,7 +30,7 @@ interface AbstractWordInterface extends Timestampable
 
     public function __toString(): string;
 
-    public function getId(): int;
+    public function getId(): string;
 
     public function getContent(): string;
 

@@ -9,7 +9,7 @@ interface TranslationExampleInterface extends Timestampable, Hideable
 {
     public function __toString(): string;
 
-    public function getId(): int;
+    public function getId(): string;
 
     public function getTranslation(): TranslationInterface;
 

@@ -28,7 +28,7 @@ class User implements UserInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     private $id;
 
@@ -111,7 +111,7 @@ class User implements UserInterface
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
@@ -285,7 +285,7 @@ class User implements UserInterface
             $this->id,
             $this->email,
             $this->passwordHash,
-            ] = unserialize($serialized);
+        ] = unserialize($serialized);
     }
 
     /**

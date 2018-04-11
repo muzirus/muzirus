@@ -20,7 +20,7 @@ class LegacyWord
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     private $id;
 
@@ -110,7 +110,7 @@ class LegacyWord
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }

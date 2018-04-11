@@ -9,7 +9,7 @@ interface UserInterface extends \Serializable, SymfonyUserInterface, Timestampab
 {
     public function __toString(): string;
 
-    public function getId(): int;
+    public function getId(): string;
 
     public function getName(): string;
 

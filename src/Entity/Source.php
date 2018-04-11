@@ -20,7 +20,7 @@ class Source implements SourceInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     private $id;
 
@@ -96,7 +96,7 @@ class Source implements SourceInterface
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }

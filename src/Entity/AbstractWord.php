@@ -58,7 +58,7 @@ abstract class AbstractWord implements AbstractWordInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var int
+     * @var string
      */
     protected $id;
 
@@ -192,7 +192,7 @@ abstract class AbstractWord implements AbstractWordInterface
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
