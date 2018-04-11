@@ -77,11 +77,8 @@
                 <strong>{{ translation.czechWord }}</strong>
             </a>
             <small>
-                {%- if translation.czechWord.languageNotePronunciation is not empty -%}
-                    {{ translation.czechWord.languageNotePronunciation }}
-                {%- endif -%}
                 {%- if translation.czechWord.languageNoteType != 1 -%}
-                    &comma; <em>{{ translation.czechWord.languageNoteType|type_as_string }}</em>
+                    <em>{{ translation.czechWord.languageNoteType|type_as_string }}</em>
                 {%- else -%}
                     &comma; <em>{{ translation.czechWord.languageNoteGender|gender_as_string }}</em>
                 {%- endif -%}
