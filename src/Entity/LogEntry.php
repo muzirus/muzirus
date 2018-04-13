@@ -128,7 +128,7 @@ class LogEntry implements LogEntryInterface
         return $this->user instanceof UserInterface;
     }
 
-    public function getUser(): ?UserInterface
+    public function getUser(): UserInterface
     {
         return $this->user;
     }
@@ -143,7 +143,7 @@ class LogEntry implements LogEntryInterface
         return $this->russianWord instanceof RussianWordInterface;
     }
 
-    public function getRussianWord(): ?RussianWordInterface
+    public function getRussianWord(): RussianWordInterface
     {
         return $this->russianWord;
     }
@@ -158,7 +158,7 @@ class LogEntry implements LogEntryInterface
         return $this->czechWord instanceof CzechWordInterface;
     }
 
-    public function getCzechWord(): ?CzechWordInterface
+    public function getCzechWord(): CzechWordInterface
     {
         return $this->czechWord;
     }
@@ -173,7 +173,7 @@ class LogEntry implements LogEntryInterface
         return $this->category instanceof WordCategoryInterface;
     }
 
-    public function getCategory(): ?WordCategoryInterface
+    public function getCategory(): WordCategoryInterface
     {
         return $this->category;
     }
@@ -188,7 +188,7 @@ class LogEntry implements LogEntryInterface
         return $this->source instanceof SourceInterface;
     }
 
-    public function getSource(): ?SourceInterface
+    public function getSource(): SourceInterface
     {
         return $this->source;
     }
@@ -203,7 +203,7 @@ class LogEntry implements LogEntryInterface
         return $this->sourceType instanceof SourceTypeInterface;
     }
 
-    public function getSourceType(): ?SourceTypeInterface
+    public function getSourceType(): SourceTypeInterface
     {
         return $this->sourceType;
     }
@@ -218,7 +218,7 @@ class LogEntry implements LogEntryInterface
         return $this->translation instanceof TranslationInterface;
     }
 
-    public function getTranslation(): ?TranslationInterface
+    public function getTranslation(): TranslationInterface
     {
         return $this->translation;
     }
@@ -233,7 +233,7 @@ class LogEntry implements LogEntryInterface
         return $this->translationExample instanceof TranslationExampleInterface;
     }
 
-    public function getTranslationExample(): ?TranslationExampleInterface
+    public function getTranslationExample(): TranslationExampleInterface
     {
         return $this->translationExample;
     }
