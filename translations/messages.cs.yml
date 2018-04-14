@@ -109,3 +109,4 @@ admin.button.add_announcement: 'Přidat oznámení'
 admin.posts: Články
 admin.slug: Slug
 admin.button.add_post: 'Přidat článek'
+admin.position: Pozice

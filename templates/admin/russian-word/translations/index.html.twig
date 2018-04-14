@@ -41,6 +41,7 @@
                             <th>{{ 'admin.examples'|trans }}</th>
                             <th>{{ 'admin.russian_note'|trans }}</th>
                             <th>{{ 'admin.czech_note'|trans }}</th>
+                            <th>{{ 'admin.position'|trans }}</th>
                             <th>{{ 'admin.actions'|trans }}</th>
                         </tr>
                     </thead>
@@ -72,6 +73,19 @@
                                     {{ translation.czechWordNote }}
                                 </td>
                                 <td>
+                                    <div class="btn-group btn-group-xs">
+                                        <a href="{{ path('admin.russian-word.translations.position.up', {
+                                            id: word.id,
+                                            translationId: translation.id
+                                        }) }}" class="btn btn-default"><i class="fa fa-arrow-up"></i></a>
+                                        <span class="btn btn-default">{{ translation.position }}</span>
+                                        <a href="{{ path('admin.russian-word.translations.position.down', {
+                                            id: word.id,
+                                            translationId: translation.id
+                                        }) }}" class="btn btn-default"><i class="fa fa-arrow-down"></i></a>
+                                    </div>
+                                </td>
+                                <td>
                                     <a href="{{ path('admin.russian-word.translations.edit', {
                                         id: word.id,
                                         translationId: translation.id
@@ -96,6 +110,7 @@
                             <th>{{ 'admin.examples'|trans }}</th>
                             <th>{{ 'admin.russian_note'|trans }}</th>
                             <th>{{ 'admin.czech_note'|trans }}</th>
+                            <th>{{ 'admin.position'|trans }}</th>
                             <th>{{ 'admin.actions'|trans }}</th>
                         </tr>
                     </tfoot>

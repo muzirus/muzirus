@@ -1,4 +1,7 @@
 {
+    "behat/transliterator": {
+        "version": "v1.2.0"
+    },
     "cocur/slugify": {
         "version": "v3.1"
     },
@@ -95,6 +98,9 @@
             "ref": "81dee417d2cc60cd1c9d6208dff2ec22a1103e93"
         }
     },
+    "gedmo/doctrine-extensions": {
+        "version": "v2.4.33"
+    },
     "heroku/heroku-buildpack-php": {
         "version": "v132"
     },
@@ -181,6 +187,15 @@
     },
     "squizlabs/php_codesniffer": {
         "version": "3.2.3"
+    },
+    "stof/doctrine-extensions-bundle": {
+        "version": "1.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.2",
+            "ref": "6c1ceb662f8997085f739cd089bfbef67f245983"
+        }
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.0.2"

@@ -251,6 +251,42 @@ class RussianWordController extends AbstractController
 
     /**
      * @Route(
+     *     "/{id}/translations/{translationId}/position/up",
+     *     name="admin.russian-word.translations.position.up",
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     defaults={"position": "up"}
+     * )
+     * @Route(
+     *     "/{id}/translations/{translationId}/position/down",
+     *     name="admin.russian-word.translations.position.down",
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     defaults={"position": "down"}
+     * )
+     * @ParamConverter("translation", options={"id": "translationId"})
+     * @Method({"GET"})
+     */
+    public function translationsPosition(
+        RussianWord $word,
+        Translation $translation,
+        TranslationFacade $translationFacade,
+        string $position
+    ): RedirectResponse {
+        // todo: check that translation belongs to that word
+
+        $translationFacade->updateTranslationPosition($translation, $position);
+
+        $this->addFlashSuccess('admin.translation.updated');
+
+        return $this->redirectToRoute(
+            'admin.russian-word.translations',
+            [
+                'id' => $word->getId(),
+            ]
+        );
+    }
+
+    /**
+     * @Route(
      *     "/{id}/translations/{translationId}/examples",
      *     name="admin.russian-word.translations.examples",
      *     requirements={"id": "\d+", "translationId": "\d+"}

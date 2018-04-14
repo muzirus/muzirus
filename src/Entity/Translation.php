@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\EntityTrait\Timestamps;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TranslationRepository")
@@ -30,6 +31,7 @@ class Translation implements TranslationInterface
      *
      * @ORM\ManyToOne(targetEntity="RussianWord", inversedBy="translations")
      * @ORM\JoinColumn(name="first_word_id", referencedColumnName="id", nullable=false)
+     * @Gedmo\SortableGroup()
      * @var RussianWord
      */
     private $russianWord;
@@ -63,6 +65,7 @@ class Translation implements TranslationInterface
 
     /**
      * @ORM\Column(type="integer", name="position", options={"default":0})
+     * @Gedmo\SortablePosition()
      * @var int
      */
     private $position = 0;

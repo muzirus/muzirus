@@ -46,6 +46,30 @@ class TranslationFacade
         $this->entityManager->flush();
     }
 
+    public function updateTranslationPosition(TranslationInterface $translation, string $move): void
+    {
+        $position = $translation->getPosition();
+
+        switch ($move) {
+            case 'up':
+                $position--;
+                break;
+            case 'down':
+                $position++;
+                break;
+            default:
+                return;
+        }
+
+        if ($position < 0) {
+            $position = 0;
+        }
+
+        $translation->setPosition($position);
+
+        $this->entityManager->flush();
+    }
+
     public function deleteTranslation(TranslationInterface $translation): void
     {
         $this->entityManager->remove($translation);
