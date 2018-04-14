@@ -13,6 +13,7 @@ admin.button.add_source: 'Přidat zdroj'
 admin.button.add_source_type: 'Přidat typ zdroje'
 admin.button.add_symbol: 'Přidat symbol'
 admin.button.add_word: 'Přidat slovo'
+admin.button.add_user: 'Přidat uživatele'
 admin.button.back_to_list: 'Zpět na seznam'
 admin.button.back_to_translations: 'Zpět na překlady'
 admin.button.back_to_translation_examples: 'Zpět na ukázky překladů'
@@ -100,3 +101,5 @@ app.authors: Autoři
 app.contact: Kontakt
 app.topics: 'Tematické okruhy'
 admin.button.preview: 'Zobrazit ukázku'
+admin.name: Jméno
+admin.email: Email
