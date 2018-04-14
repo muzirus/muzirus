@@ -9,6 +9,7 @@
         "ext-iconv": "*",
         "ext-intl": "*",
         "ext-mbstring": "*",
+        "cebe/markdown": "^1.2",
         "sensio/framework-extra-bundle": "^5.1",
         "sensiolabs/security-checker": "^4.1",
         "symfony/apache-pack": "^1.0",
@@ -88,10 +89,17 @@
         "compile": [
             "@php bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration"
         ],
-        "analyze": [
+        "cs": [
             "vendor/bin/ecs check src/ tests/ --ansi"
         ],
+        "cs-fix": [
+            "vendor/bin/ecs check src/ tests/ --ansi --fix"
+        ],
         "phpunit": "./vendor/bin/simple-phpunit",
+        "analyze": [
+            "@composer cs",
+            "@composer phpunit"
+        ],
         "translation-cs-yml": "@php bin/console translation:update --force --clean --domain=messages --output-format=yml cs",
         "translation-cs-xlf": "@php bin/console translation:update --force --clean --domain=messages --output-format=xlf cs",
         "translation-en-yml": "@php bin/console translation:update --force --clean --domain=messages --output-format=yml en",

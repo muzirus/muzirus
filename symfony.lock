@@ -1,4 +1,7 @@
 {
+    "cebe/markdown": {
+        "version": "1.2.1"
+    },
     "composer/ca-bundle": {
         "version": "1.1.0"
     },
