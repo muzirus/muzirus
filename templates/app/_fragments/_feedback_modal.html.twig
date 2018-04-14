@@ -1,6 +1,6 @@
 <div class="modal modal-primary fade" id="js-modal-feedback">
     <div class="modal-dialog">
-        <form class="modal-content" action="#" method="post">
+        <form class="modal-content" action="{{ path('app.feedback') }}" method="post">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -17,7 +17,7 @@
                 </p>
                 <div class="form-group">
                     <label for="message" class="control-label">Vaše návrhy na zlepšení</label>
-                    <textarea class="form-control" rows="5" id="message"></textarea>
+                    <textarea class="form-control" rows="5" id="message" name="feedback_form[content]"></textarea>
                     <div class="help-block">
                         Pošlete nám své připomínky nebo tipy na nová hesla, která bychom podle Vás měli zpracovat.
                         Můžete navrhnout ruská i česká hesla, přidat vysvětlivku nebo informační zdroj, který stojí za
@@ -28,7 +28,7 @@
                     <label for="email" class="control-label">
                         Váš email <span class="text-muted">(nepovinný)</span>
                     </label>
-                    <input class="form-control" type="email" id="email">
+                    <input class="form-control" type="email" id="email" name="feedback_form[email]">
                     <div class="help-block">
                         Pokud uvedete svůj kontaktní e-mail, budeme Vás o zveřejnění Vámi
                         navrženého hesla informovat.
@@ -40,10 +40,11 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">
-                    Zavřít
+                    {{ 'app.button.close'|trans }}
                 </button>
-                <button type="submit" class="btn btn-success">
-                    Odeslat!
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-paper-plane"></i>
+                    {{ 'app.button.send'|trans }}
                 </button>
             </div>
         </form>

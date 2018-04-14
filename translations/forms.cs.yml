@@ -54,3 +54,5 @@ label.hidden: Schováno
 label.link: 'Odkaz na heslo v korpusech InterCorp'
 label.content: Obsah
 label.slug: 'Slug (link)'
+label.feedback_content: 'Vaše návrhy na zlepšení'
+label.feedback_email: 'Váš email (nepovinný)'

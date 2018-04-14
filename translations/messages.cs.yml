@@ -93,12 +93,9 @@ app.title.proccessing_of_words: 'Zpracování hesel'
 app.title.suggest_improvement: 'Navrhnout zlepšení'
 app.updated_at: 'Datum poslední změny:'
 app.link.intercorp: 'Odkaz na heslo v korpusech InterCorp'
-app.alert.info.under_construction: 'Slovník je dosud ve výstavbě, další hesla budou zveřejňována kontinuálně.'
 app.abbreviation: Zkratka
 app.meaning: Význam
 app.title.about_project: 'O projektu'
-app.authors: Autoři
-app.contact: Kontakt
 app.topics: 'Tematické okruhy'
 admin.button.preview: 'Zobrazit ukázku'
 admin.name: Jméno
@@ -110,3 +107,8 @@ admin.posts: Články
 admin.slug: Slug
 admin.button.add_post: 'Přidat článek'
 admin.position: Pozice
+admin.messages: Zprávy
+app.title.feedback: 'Navrhnout zlepšení'
+app.button.close: Zavřít
+app.button.send: Odeslat
+admin.content: Obsah

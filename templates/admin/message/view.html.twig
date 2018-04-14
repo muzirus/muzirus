@@ -1,0 +1,16 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block title 'admin.messages'|trans %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-body">
+            <h2>Obsah</h2>
+            <p>{{ message.content|nl2br }}</p>
+            <h2>Email</h2>
+            <p>{{ message.email }}</p>
+            <h2>Vytvořeno</h2>
+            <p>{{ message.createdAtFormat }}</p>
+        </div>
+    </div>
+{% endblock %}

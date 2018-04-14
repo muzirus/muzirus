@@ -1,0 +1,37 @@
+{% extends 'app/layout.html.twig' %}
+
+{% block heading 'app.title.feedback'|trans %}
+
+{% block content %}
+    {% include 'app/_fragments/_flash_messages.html.twig' %}
+    <p>
+        Nenašli jste, co jste hledali, nebo byste rádi něčím přispěli? <strong>Napište nám!</strong>
+    </p>
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_label(form.content) }}
+        {{ form_widget(form.content) }}
+        {{ form_errors(form.content) }}
+        <div class="help-block">
+            Pošlete nám své připomínky nebo tipy na nová hesla, která bychom podle Vás měli zpracovat.
+            Můžete navrhnout ruská i česká hesla, přidat vysvětlivku nebo informační zdroj, který stojí za
+            prostudování.
+        </div>
+    </div>
+    <div class="form-group">
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email) }}
+        {{ form_errors(form.email) }}
+        <div class="help-block">
+            Pokud uvedete svůj kontaktní e-mail, budeme Vás o zveřejnění Vámi navrženého hesla informovat.
+        </div>
+    </div>
+    <p>
+        Děkujeme Vám!
+    </p>
+    <button class="btn btn-primary">
+        <i class="fa fa-paper-plane"></i>
+        {{ 'app.button.send'|trans }}
+    </button>
+    {{ form_end(form) }}
+{% endblock %}
