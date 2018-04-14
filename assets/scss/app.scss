@@ -19,3 +19,13 @@ $navbar-border-radius: 0;
 .highlight-accent {
   color: $brand-danger;
 }
+
+.navbar-brand {
+  padding: 0;
+
+  .logo {
+    height: 100%;
+    padding: 13px;
+    width: auto;
+  }
+}
