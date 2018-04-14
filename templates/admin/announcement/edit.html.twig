@@ -1,0 +1,37 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block title 'admin.announcements'|trans %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block content %}
+    <div class="box">
+        {{ form_start(form) }}
+        <div class="box-header with-border">
+            <h3 class="box-title">
+                {{ 'admin.box.title.edit'|trans }}
+            </h3>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title) }}
+                {{ form_errors(form.title) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.content) }}
+                {{ form_widget(form.content) }}
+                {{ form_errors(form.content) }}
+            </div>
+        </div>
+        <div class="box-footer">
+            <button class="btn btn-primary">
+                {{ 'admin.button.save'|trans }}
+            </button>
+            <a href="{{ path('admin.announcement') }}" class="btn btn-default">
+                {{ 'admin.button.back_to_list'|trans }}
+            </a>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

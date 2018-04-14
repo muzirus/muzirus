@@ -103,3 +103,6 @@ app.topics: 'Tematické okruhy'
 admin.button.preview: 'Zobrazit ukázku'
 admin.name: Jméno
 admin.email: Email
+admin.announcements: Oznámení
+admin.author: Autor
+admin.button.add_announcement: Přidat oznámení

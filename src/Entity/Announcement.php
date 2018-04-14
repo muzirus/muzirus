@@ -6,7 +6,7 @@ use App\EntityTrait\Timestamps;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="App\Repository\AnnouncementRepository")
  * @ORM\Table(name="announcements")
  * @ORM\HasLifecycleCallbacks()
  */
