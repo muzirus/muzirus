@@ -15,14 +15,16 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: ~
+            # this firewall applies to all URLs
+            pattern: ^/
+            anonymous: true
             form_login:
                 login_path: login
                 check_path: login
             logout:
                 path: /logout
-                target: /
+                target: index
             provider: my_db_provider # just name matching first provider in providers above
     access_control:
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/(%app_locales%)/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/(%app_locales%)/admin, roles: ROLE_ADMIN }
