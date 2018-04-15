@@ -1,0 +1,102 @@
+admin.abbreviations: Сокращения
+admin.actions: Действие
+admin.activities: Деятельность
+admin.approved: Одобрено
+admin.authors: Авторы
+admin.box.title.add: Добавить
+admin.box.title.edit: Отредактировать
+admin.button.add_abbreviation: 'Добавить сокращение'
+admin.button.add_category: 'Добавить категорию'
+admin.button.add_equivalent: 'Добавить эквивалент'
+admin.button.add_new: 'Добавить новый'
+admin.button.add_source: 'Добавить источник'
+admin.button.add_source_type: 'Добавить тип источника'
+admin.button.add_symbol: 'Добавить символ'
+admin.button.add_word: 'Добавить слово'
+admin.button.back_to_list: 'Обратно к списку'
+admin.button.back_to_translations: 'Обратно к переводам'
+admin.button.back_to_translation_examples: 'Обратно к показам эквивалентов'
+admin.button.edit: Отредактировать
+admin.button.remove: Удалить
+admin.button.save: Сохранить
+admin.button.save_and_new: 'Сохранить и добавить новое'
+admin.created: Создано
+admin.czech: Чешские
+admin.czech_note: 'Чешское примечание'
+admin.czech_sentence: 'Чешское предложение'
+admin.czech_word: 'Чешское слово'
+admin.czech_words: 'Чешские слова'
+admin.dashboard: 'Лента новостей'
+admin.deleted: Удалено
+admin.description: Описание
+admin.examples: 'Примеры использования'
+admin.explanation: Объяснение
+admin.gender: род
+admin.hidden: Скрыто
+admin.home: 'Домашняя страница'
+admin.inflection: Склонение
+admin.language_note: 'Языковая помета'
+admin.news: Новости
+admin.no: Нет
+admin.no_news_yet: 'Пока нет новостей'
+admin.original_database: 'Прежняя база данных'
+admin.other: Остальные
+admin.pages_count: 'Число страниц'
+admin.published_date: 'Дата издания'
+admin.published_place: 'Место издания'
+admin.publisher: Издатель
+admin.russian: Русские
+admin.russian_words: 'Русские слова'
+admin.russian_note: 'Русское примечание'
+admin.russian_sentence: 'Русское предложение'
+admin.russian_word: 'Русское слово'
+admin.sign_out: Выйти
+admin.source: Источник
+admin.sources: Источники
+admin.source_types: 'Типы источников'
+admin.status: Состояние
+admin.symbols: Символы
+admin.system: Система
+admin.tab.edit: Отредактировать
+admin.title: Название
+admin.translation: Перевод
+admin.translations: Переводы
+admin.type: Тип
+admin.updated: Обновлено
+admin.users: Пользователи
+admin.value: Значение
+admin.visit_site: 'Показать страницу'
+admin.word: Слово
+admin.words: Слова
+admin.word_with_accent: 'Слово с ударением'
+admin.word_with_accent_is_missing: 'Не хватает слова с ударением (сохраните изменения)'
+admin.yes: Да
+admin.not_processed: 'Не обработано'
+admin.equivalents_not_found: 'Эквиваленты сохранены'
+admin.examples_added: 'Примеры использования сохранены'
+admin.checked: Отредактировано
+admin.tab.equivalents: Эквиваленты
+admin.no_content: 'Содержание не вложено'
+admin.equivalents: Эквиваленты
+admin.exemplifications: Экземплификации
+admin.exception_to_inflection: Исключения
+admin.topics: 'Тематические категории'
+admin.topic: 'Тематическая категория'
+app.title: 'Русско-чешский словарь музыкальных понятий онлайн'
+app.title.topics: 'Тематические категории'
+app.title.vocabulary_russian: 'Русский словник'
+app.title.vocabulary_czech: 'Чешский словник'
+app.title.abbreviations: Сокращения
+app.title.notations: Нотация
+app.title.proccessing_of_words: 'Обработка словарных статей'
+app.title.suggest_improvement: 'Предложить улучшения'
+app.updated_at: 'Дата последнего изменения'
+app.link.intercorp: 'Ссылка на слово в корпусах InterCorp'
+app.alert.info.under_construction: 'Словарь до сих пор в разработке. Следующие словарные статьи буду опубликованы в дальнейшем.'
+app.abbreviation: Сокращение
+app.meaning: Толкование
+app.title.about_project: 'О проекте'
+app.authors: Авторы
+app.contact: 'Контактные данные'
+app.topics: 'Тематические категории'
+admin.button.preview: 'Показать примеры использования'
