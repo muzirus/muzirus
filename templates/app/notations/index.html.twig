@@ -1,0 +1,519 @@
+{% extends 'app/layout.html.twig' %}
+
+{% block heading 'app.title.notations'|trans %}
+
+{% block content %}
+    <h2>Glosář hudební notace</h2>
+    <h2>Noty</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>hlavička</td>
+                <td>головка</td>
+            </tr>
+            <tr>
+                <td>nožka</td>
+                <td>штиль</td>
+            </tr>
+            <tr>
+                <td>praporek</td>
+                <td>флажок/хвост</td>
+            </tr>
+            <tr>
+                <td>trámec</td>
+                <td>ребро</td>
+            </tr>
+            <tr>
+                <td>tečka</td>
+                <td>точка</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>C</td>
+                <td>до</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>ре</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>ми</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>фа</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>соль</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>ля</td>
+            </tr>
+            <tr>
+                <td>H</td>
+                <td>си</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>nota brevis, dvoucelá nota</td>
+                <td>нота бревис, двойная целая нота</td>
+            </tr>
+            <tr>
+                <td>celá nota</td>
+                <td>целая нота</td>
+            </tr>
+            <tr>
+                <td>půlová nota</td>
+                <td>половинная нота</td>
+            </tr>
+            <tr>
+                <td>čtvrťová nota</td>
+                <td>четвертная нота</td>
+            </tr>
+            <tr>
+                <td>osminová nota</td>
+                <td>восьмая нота</td>
+            </tr>
+            <tr>
+                <td>šestnáctinová nota</td>
+                <td>шестнадцатая нота</td>
+            </tr>
+            <tr>
+                <td>dvaatřicetinová nota</td>
+                <td>тридцать вторая нота</td>
+            </tr>
+            <tr>
+                <td>čtyřiašedesátinová nota</td>
+                <td>шестьдесят четвёртая</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>duola</td>
+                <td>дуоль</td>
+            </tr>
+            <tr>
+                <td>triola</td>
+                <td>триоль</td>
+            </tr>
+            <tr>
+                <td>kvartola</td>
+                <td>квартоль</td>
+            </tr>
+            <tr>
+                <td>kvintola</td>
+                <td>квинтоль</td>
+            </tr>
+            <tr>
+                <td>sextola</td>
+                <td>секстоль</td>
+            </tr>
+            <tr>
+                <td>septola</td>
+                <td>септоль</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Klíče</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>houslový klíč</td>
+                <td>скрипичный ключ</td>
+            </tr>
+            <tr>
+                <td>basový klíč</td>
+                <td>басовый ключ</td>
+            </tr>
+            <tr>
+                <td>altový klíč</td>
+                <td>альтовый ключ</td>
+            </tr>
+            <tr>
+                <td>tenorový klíč</td>
+                <td>теноровый ключ</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Pomlky</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>celá pomlka</td>
+                <td>целая пауза</td>
+            </tr>
+            <tr>
+                <td>půlová pomlka</td>
+                <td>половинная пауза</td>
+            </tr>
+            <tr>
+                <td>čtvrťová pomlka</td>
+                <td>четвертная пауза</td>
+            </tr>
+            <tr>
+                <td>osminová pomlka</td>
+                <td>восьмая пауза</td>
+            </tr>
+            <tr>
+                <td>šestnáctinová pomlka</td>
+                <td>шестнадцатая паузаа</td>
+            </tr>
+            <tr>
+                <td>dvaatřicetinová pomlka</td>
+                <td>тридцать вторая пауза</td>
+            </tr>
+            <tr>
+                <td>čtyřiašedesátinová pomlka</td>
+                <td>шестьдесят четвёртая пауза</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Posuvky</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>křížek</td>
+                <td>диез</td>
+            </tr>
+            <tr>
+                <td>dvojkřížek</td>
+                <td>дубль-диез</td>
+            </tr>
+            <tr>
+                <td>bé</td>
+                <td>бемоль</td>
+            </tr>
+            <tr>
+                <td>dvojité bé</td>
+                <td>дубль-бемоль</td>
+            </tr>
+            <tr>
+                <td>odrážka</td>
+                <td>бекар</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Křížky</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>Fis</td>
+                <td>фа-диез</td>
+            </tr>
+            <tr>
+                <td>Cis</td>
+                <td>до-диез</td>
+            </tr>
+            <tr>
+                <td>Gis</td>
+                <td>соль-диез</td>
+            </tr>
+            <tr>
+                <td>Dis</td>
+                <td>ре-диез</td>
+            </tr>
+            <tr>
+                <td>Ais</td>
+                <td>ля-диез</td>
+            </tr>
+            <tr>
+                <td>Eis</td>
+                <td>ми-диез</td>
+            </tr>
+            <tr>
+                <td>His</td>
+                <td>си-диез</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Dvojkřížky</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>Fisis</td>
+                <td>фа-дубль-диез</td>
+            </tr>
+            <tr>
+                <td>Cisis</td>
+                <td>до-дубль-диез</td>
+            </tr>
+            <tr>
+                <td>Gisis</td>
+                <td>соль-дубль-диез</td>
+            </tr>
+            <tr>
+                <td>Disis</td>
+                <td>ре-дубль-диез</td>
+            </tr>
+            <tr>
+                <td>Aisis</td>
+                <td>ля-дубль-диез</td>
+            </tr>
+            <tr>
+                <td>Eisis</td>
+                <td>ми-дубль-диез</td>
+            </tr>
+            <tr>
+                <td>Hisis</td>
+                <td>си-дубль-диез</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Bé/béčka</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>B</td>
+                <td>си-бемоль</td>
+            </tr>
+            <tr>
+                <td>Es</td>
+                <td>ми-бемоль</td>
+            </tr>
+            <tr>
+                <td>As</td>
+                <td>ля-бемоль</td>
+            </tr>
+            <tr>
+                <td>Des</td>
+                <td>ре-бемоль</td>
+            </tr>
+            <tr>
+                <td>Ges</td>
+                <td>соль-бемоль</td>
+            </tr>
+            <tr>
+                <td>Ces</td>
+                <td>до-бемоль</td>
+            </tr>
+            <tr>
+                <td>Fes</td>
+                <td>фа-бемоль</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Dvojitá bé</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>Heses</td>
+                <td>си-дубль-бемоль</td>
+            </tr>
+            <tr>
+                <td>Eses</td>
+                <td>ми-дубль-бемоль</td>
+            </tr>
+            <tr>
+                <td>Ases</td>
+                <td>ля-дубль-бемоль</td>
+            </tr>
+            <tr>
+                <td>Deses</td>
+                <td>ре-дубль-бемоль</td>
+            </tr>
+            <tr>
+                <td>Geses</td>
+                <td>соль-дубль-бемоль</td>
+            </tr>
+            <tr>
+                <td>Ceses</td>
+                <td>до-дубль-бемоль</td>
+            </tr>
+            <tr>
+                <td>Feses</td>
+                <td>фа-дубль-бемоль</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Takty</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>taktová čára</td>
+                <td>тактовая черта</td>
+            </tr>
+            <tr>
+                <td>dvojitá taktová čára</td>
+                <td>двойная тактовая черта</td>
+            </tr>
+            <tr>
+                <td>tečkovaná taktová čára</td>
+                <td>пунктирная тактовая черта</td>
+            </tr>
+            <tr>
+                <td>takt</td>
+                <td>такт</td>
+            </tr>
+            <tr>
+                <td>svorka</td>
+                <td>акколада, скобка</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Tónina, stupnice</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>stupnice mollоvá/durová – přirozená</td>
+                <td>минорный/мажорный лад натуральный</td>
+            </tr>
+            <tr>
+                <td>stupnice mollová/durová – melodická</td>
+                <td>минуроный/мажорный лад мелодический</td>
+            </tr>
+            <tr>
+                <td>klesající</td>
+                <td>нисходящий</td>
+            </tr>
+            <tr>
+                <td>stoupající</td>
+                <td>восходящий</td>
+            </tr>
+            <tr>
+                <td>stupnice mollová/durová harmonická</td>
+                <td>минорный/мажорный лад гармонический</td>
+            </tr>
+            <tr>
+                <td>chromatická stupnice</td>
+                <td>хроматическая гамма / хроматический звукоряд</td>
+            </tr>
+            <tr>
+                <td>celotónová stupnice</td>
+                <td>целотоновый лад, целотонный лад, звукоряд, гамма</td>
+            </tr>
+            <tr>
+                <td>pentatonická (pětitónová) stupnice</td>
+                <td>пятитонная гамма</td>
+            </tr>
+            <tr>
+                <td>cikánská stupnice – durová s velkou tercií</td>
+                <td>цыганская/венгерская гамма – мажорная с большой терцией</td>
+            </tr>
+            <tr>
+                <td>cikánská stupnice – mollová s malou tercií</td>
+                <td>цыганская/венгерская гамма – минорная с большой терцией</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Stupnice</h2>
+    <table class="table table-striped table-hover table-bordered">
+        <tbody>
+            <tr>
+                <td>C dur</td>
+                <td>До мажор</td>
+            </tr>
+            <tr>
+                <td>G dur</td>
+                <td>Соль мажор</td>
+            </tr>
+            <tr>
+                <td>D dur</td>
+                <td>Ре мажор</td>
+            </tr>
+            <tr>
+                <td>A dur</td>
+                <td>Ля мажор</td>
+            </tr>
+            <tr>
+                <td>E dur</td>
+                <td>Ми мажор</td>
+            </tr>
+            <tr>
+                <td>H dur</td>
+                <td>Си мажор</td>
+            </tr>
+            <tr>
+                <td>Fis dur</td>
+                <td>Фа-диез мажор</td>
+            </tr>
+            <tr>
+                <td>Cis dur</td>
+                <td>До-диез мажор</td>
+            </tr>
+            <tr>
+                <td>F dur</td>
+                <td>Фа мажор</td>
+            </tr>
+            <tr>
+                <td>B dur</td>
+                <td>Си-бемоль мажор</td>
+            </tr>
+            <tr>
+                <td>Es dur</td>
+                <td>Ми-бемоль мажор</td>
+            </tr>
+            <tr>
+                <td>As dur</td>
+                <td>Ля-бемоль мажор</td>
+            </tr>
+            <tr>
+                <td>Des dur</td>
+                <td>Ре-бемоль мажор</td>
+            </tr>
+            <tr>
+                <td>Ges dur</td>
+                <td>Соль-бемоль мажор</td>
+            </tr>
+            <tr>
+                <td>Ces dur</td>
+                <td>До-бемоль мажор</td>
+            </tr>
+            <tr>
+                <td>a moll</td>
+                <td>ля минор</td>
+            </tr>
+            <tr>
+                <td>e moll</td>
+                <td>ми минор</td>
+            </tr>
+            <tr>
+                <td>h moll</td>
+                <td>си минор</td>
+            </tr>
+            <tr>
+                <td>fis moll</td>
+                <td>фа-диез минор</td>
+            </tr>
+            <tr>
+                <td>cis moll</td>
+                <td>до-диез минор</td>
+            </tr>
+            <tr>
+                <td>gis moll</td>
+                <td>соль-диез минор</td>
+            </tr>
+            <tr>
+                <td>dis moll</td>
+                <td>ре-диез минор</td>
+            </tr>
+            <tr>
+                <td>ais moll</td>
+                <td>ля-диез минор</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+{% endblock %}

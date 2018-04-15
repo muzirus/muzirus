@@ -7,13 +7,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
-/**
- * @Route("/topics")
- */
 class TopicsController extends AbstractController
 {
     /**
-     * @Route("", name="app.topics")
+     * @Route("/topics", name="app.topics")
      * @Method("GET")
      */
     public function index(WordCategoryRepository $categoryRepository): Response
