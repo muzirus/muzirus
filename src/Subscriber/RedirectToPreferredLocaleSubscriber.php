@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Subscriber;
 
@@ -36,8 +36,13 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
         $this->defaultLocale = $defaultLocale ?: $this->locales[0];
 
         if (!in_array($this->defaultLocale, $this->locales, true)) {
-            throw new \UnexpectedValueException(sprintf('The default locale ("%s") must be one of "%s".',
-                $this->defaultLocale, $locales));
+            throw new \UnexpectedValueException(
+                sprintf(
+                    'The default locale ("%s") must be one of "%s".',
+                    $this->defaultLocale,
+                    $locales
+                )
+            );
         }
 
         // Add the default locale at the first position of the array,
@@ -59,12 +64,16 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
         $request = $event->getRequest();
 
         // Ignore sub-requests and all URLs but the homepage
-        if (!$event->isMasterRequest() || '/' !== $request->getPathInfo()) {
+        if (!$event->isMasterRequest() || $request->getPathInfo() !== '/') {
             return;
         }
+
         // Ignore requests from referrers with the same HTTP host in order to prevent
         // changing language for users who possibly already selected it for this application.
-        if (0 === mb_stripos($request->headers->get('referer'), $request->getSchemeAndHttpHost())) {
+
+        $referer = $request->headers->get('referer', '');
+
+        if (mb_stripos($referer, $request->getSchemeAndHttpHost()) === 0) {
             return;
         }
 
