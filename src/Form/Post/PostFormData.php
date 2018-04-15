@@ -17,6 +17,14 @@ class PostFormData
 
     /**
      * @Assert\NotBlank()
+     * @Assert\Length(min="1", max="255")
+     * @Assert\Type("string")
+     * @var string
+     */
+    private $slug = '';
+
+    /**
+     * @Assert\NotBlank()
      * @Assert\Type("string")
      * @var string
      */
@@ -27,6 +35,7 @@ class PostFormData
     public static function fromPost(PostInterface $post): self
     {
         $formData = new self();
+        $formData->setSlug($post->getSlug());
         $formData->setTitle($post->getTitle());
         $formData->setContent($post->getContent());
 
@@ -43,6 +52,16 @@ class PostFormData
     public function setTitle(string $title): void
     {
         $this->title = $title;
+    }
+
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): void
+    {
+        $this->slug = $slug;
     }
 
     public function getContent(): string

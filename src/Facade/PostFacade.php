@@ -24,7 +24,7 @@ class PostFacade
         $slugify = new Slugify();
 
         $post = new Post(
-            $slugify->slugify($formData->getTitle()),
+            $slugify->slugify($formData->getSlug()),
             $formData->getTitle(),
             $formData->getContent(),
             $author

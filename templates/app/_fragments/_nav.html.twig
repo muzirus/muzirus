@@ -14,13 +14,13 @@
         </div>
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{ path('app.notations') }}">{{ 'app.title.notations'|trans }}</a></li>
+                <li><a href="{{ path('app.page', {slug: 'notations'}) }}">{{ 'app.title.notations'|trans }}</a></li>
                 <li><a href="{{ path('app.russian_to_czech') }}">{{ 'app.title.vocabulary_russian'|trans }}</a></li>
                 <li><a href="{{ path('app.czech_to_russian') }}">{{ 'app.title.vocabulary_czech'|trans }}</a></li>
                 <li><a href="{{ path('app.topics') }}">{{ 'app.title.topics'|trans }}</a></li>
                 <li><a href="{{ path('app.abbreviation') }}">{{ 'app.title.abbreviations'|trans }}</a></li>
                 <li><a href="#">{{ 'app.title.proccessing_of_words'|trans }}</a></li>
-                <li><a href="{{ path('app.about') }}">{{ 'app.title.about_project'|trans }}</a></li>
+                <li><a href="{{ path('app.page', {slug: 'about'}) }}">{{ 'app.title.about_project'|trans }}</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>

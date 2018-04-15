@@ -14,10 +14,24 @@
             </h3>
         </div>
         <div class="box-body">
-            <div class="form-group">
-                {{ form_label(form.title) }}
-                {{ form_widget(form.title) }}
-                {{ form_errors(form.title) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.title) }}
+                        {{ form_widget(form.title) }}
+                        {{ form_errors(form.title) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form_label(form.slug) }}
+                        <div class="input-group">
+                            <span class="input-group-addon">http://www.muzirus.cz/cs/page/</span>
+                            {{ form_widget(form.slug) }}
+                        </div>
+                        {{ form_errors(form.slug) }}
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 {{ form_label(form.content) }}

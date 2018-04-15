@@ -1,0 +1,9 @@
+{% extends 'app/layout.html.twig' %}
+
+{% block heading %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    {{ post.content|md2html }}
+{% endblock %}

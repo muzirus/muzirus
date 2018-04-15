@@ -20,6 +20,10 @@ class PostForm extends AbstractType
                     'autofocus' => true,
                 ],
             ])
+            ->add('slug', TextType::class, [
+                'label' => 'label.slug',
+                'empty_data' => '',
+            ])
             ->add('content', TextareaType::class, [
                 'label' => 'label.content',
                 'empty_data' => '',
