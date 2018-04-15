@@ -3,11 +3,10 @@
 namespace App\Entity;
 
 use App\EntityTrait\Timestamps;
-use Cocur\Slugify\Slugify;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
  * @ORM\Table(name="posts")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -24,7 +23,7 @@ class Post implements PostInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", name="slug")
+     * @ORM\Column(type="string", name="slug", unique=true)
      * @var string
      */
     private $slug;
@@ -48,8 +47,9 @@ class Post implements PostInterface
      */
     private $author;
 
-    public function __construct(string $title, string $content, ?UserInterface $author = null)
+    public function __construct(string $slug, string $title, string $content, ?UserInterface $author = null)
     {
+        $this->slug = $slug;
         $this->setTitle($title);
         $this->setContent($content);
         $this->author = $author;
@@ -73,7 +73,6 @@ class Post implements PostInterface
     public function setTitle(string $title): void
     {
         $this->title = $title;
-        $this->slug = (new Slugify())->slugify($title);
     }
 
     public function getContent(): string

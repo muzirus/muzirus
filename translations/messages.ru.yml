@@ -100,9 +100,5 @@ app.authors: Авторы
 app.contact: 'Контактные данные'
 app.topics: 'Тематические категории'
 admin.button.preview: 'Показать примеры использования'
-admin.announcements: __admin.announcements
 admin.author: Автор
-admin.button.add_announcement: __admin.button.add_announcement
 admin.name: Имя
-admin.email: __admin.email
-admin.button.add_user: __admin.button.add_user

@@ -105,4 +105,7 @@ admin.name: Jméno
 admin.email: Email
 admin.announcements: Oznámení
 admin.author: Autor
-admin.button.add_announcement: Přidat oznámení
+admin.button.add_announcement: 'Přidat oznámení'
+admin.posts: Články
+admin.slug: Slug
+admin.button.add_post: 'Přidat článek'
