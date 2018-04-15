@@ -91,4 +91,44 @@ class CzechWordRepository extends ServiceEntityRepository
             ->getQuery()
             ->getOneOrNullResult();
     }
+
+    /**
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function findOnePrevWithTranslation(CzechWordInterface $word): ?CzechWordInterface
+    {
+        return $this
+            ->createQueryBuilder('w')
+            ->select([
+                'partial w.{id, content}',
+            ])
+            ->join('w.translations', 't')
+            ->where('w.content < :content')
+            ->setParameter('content', $word->getContent())
+            ->setFirstResult(0)
+            ->setMaxResults(1)
+            ->orderBy('w.content', 'DESC')
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
+    /**
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function findOneNextWithTranslation(CzechWordInterface $word): ?CzechWordInterface
+    {
+        return $this
+            ->createQueryBuilder('w')
+            ->select([
+                'partial w.{id, content}',
+            ])
+            ->join('w.translations', 't')
+            ->where('w.content > :content')
+            ->setParameter('content', $word->getContent())
+            ->setFirstResult(0)
+            ->setMaxResults(1)
+            ->orderBy('w.content', 'ASC')
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 }
