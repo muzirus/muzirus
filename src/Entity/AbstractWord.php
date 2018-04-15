@@ -227,6 +227,11 @@ abstract class AbstractWord implements AbstractWordInterface
         $this->languageNotePronunciation = $languageNotePronunciation;
     }
 
+    public function hasLanguageNoteInflection(): bool
+    {
+        return mb_strlen($this->languageNoteInflection) > 0;
+    }
+
     public function getLanguageNoteInflection(): string
     {
         return $this->languageNoteInflection;
@@ -235,6 +240,11 @@ abstract class AbstractWord implements AbstractWordInterface
     public function setLanguageNoteInflection(string $languageNoteInflection): void
     {
         $this->languageNoteInflection = $languageNoteInflection;
+    }
+
+    public function hasLanguageNoteExceptionToInflection(): bool
+    {
+        return mb_strlen($this->languageNoteExceptionToInflection) > 0;
     }
 
     public function getLanguageNoteExceptionToInflection(): string
@@ -269,6 +279,11 @@ abstract class AbstractWord implements AbstractWordInterface
         if (array_key_exists($languageNoteGender, self::GENDERS)) {
             $this->languageNoteGender = $languageNoteGender;
         }
+    }
+
+    public function hasLanguageNoteOther(): bool
+    {
+        return mb_strlen($this->languageNoteOther) > 0;
     }
 
     public function getLanguageNoteOther(): string

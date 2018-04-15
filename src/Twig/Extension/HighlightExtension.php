@@ -46,7 +46,7 @@ class HighlightExtension extends \Twig_Extension
         ];
     }
 
-    private function highlightAccent(string $text): string
+    public function highlightAccent(string $text): string
     {
         return preg_replace(
             '/\((.)\)/u',

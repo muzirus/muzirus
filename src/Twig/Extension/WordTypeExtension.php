@@ -15,11 +15,11 @@ class WordTypeExtension extends \Twig_Extension
         ];
     }
 
-    private function convertTypeIdToString(int $type): string
+    public function convertTypeIdToString(int $type): string
     {
         switch ($type) {
             case AbstractWordInterface::TYPE_NOUN:
-                return 'podst. jm.'; // nezobrazujeme podstatné jména
+                return 'podst. jm.';
             case AbstractWordInterface::TYPE_VERB:
                 return 'slov.';
             case AbstractWordInterface::TYPE_ADJECTIVE:

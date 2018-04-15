@@ -15,7 +15,7 @@ class WordGenderExtension extends \Twig_Extension
         ];
     }
 
-    private function convertGenderIdToString(int $gender): string
+    public function convertGenderIdToString(int $gender): string
     {
         switch ($gender) {
             case AbstractWordInterface::GENDER_MASCULINE:

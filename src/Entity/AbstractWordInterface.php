@@ -44,9 +44,13 @@ interface AbstractWordInterface extends Timestampable
 
     public function setLanguageNotePronunciation(string $languageNotePronunciation): void;
 
+    public function hasLanguageNoteInflection(): bool;
+
     public function getLanguageNoteInflection(): string;
 
     public function setLanguageNoteInflection(string $languageNoteInflection): void;
+
+    public function hasLanguageNoteExceptionToInflection(): bool;
 
     public function getLanguageNoteExceptionToInflection(): string;
 
@@ -59,6 +63,8 @@ interface AbstractWordInterface extends Timestampable
     public function getLanguageNoteGender(): int;
 
     public function setLanguageNoteGender(int $languageNoteGender): void;
+
+    public function hasLanguageNoteOther(): bool;
 
     public function getLanguageNoteOther(): string;
 
