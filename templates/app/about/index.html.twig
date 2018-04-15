@@ -3,14 +3,7 @@
 {% block heading 'app.title.about_project'|trans %}
 
 {% block content %}
-    <h2>{{ 'app.authors'|trans }}</h2>
-    <ul>
-        <li>Jana Melčáková</li>
-        <li>Matúš Petrofčík</li>
-    </ul>
-    <h2>{{ 'app.contact'|trans }}</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis illum itaque nam optio provident
-        quaerat quis. Ab at debitis deleniti ducimus eum ipsam officiis quis quos soluta totam?
-    </p>
+    {% if about is not empty %}
+        {{ about.content|md2html }}
+    {% endif %}
 {% endblock %}
