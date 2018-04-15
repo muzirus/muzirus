@@ -28,6 +28,31 @@
                         {{ 'app.title.suggest_improvement'|trans }}
                     </a>
                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+                       id="locales">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <span class="caret"></span>
+                        <span class="sr-only">{{ 'app.menu.choose_language'|trans }}</span>
+                    </a>
+                    <ul class="dropdown-menu locales" role="menu" aria-labelledby="locales">
+                        {% for locale in get_locales() %}
+                            {% if app.request.locale == locale.code %}
+                                {% set attributes = 'aria-checked="true" class="active"' %}
+                            {% else %}
+                                {% set attributes = 'aria-checked="false"' %}
+                            {% endif %}
+                            <li {{ attributes|raw }} role="menuitem">
+                                <a href="{{ path(
+                                    app.request.get('_route', 'app.index'),
+                                    app.request.get('_route_params', [])|merge({_locale: locale.code})
+                                ) }}">
+                                    {{ locale.name|capitalize }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

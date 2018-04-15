@@ -1,14 +1,10 @@
 index:
     path: /
-    controller: App\Controller\IndexController::index
-    defaults:
-        _locale: '%locale%'
+    controller: App\Controller\IndexController::indexWithoutLocale
 app:
     prefix: /{_locale}
     resource: '../src/Controller'
     requirements:
         _locale: '%app_locales%'
-    defaults:
-        _locale: '%locale%'
 logout:
     path: /logout
