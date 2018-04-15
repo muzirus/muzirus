@@ -1,1 +1,9 @@
 {% extends 'app/layout.html.twig' %}
+
+{% block heading 'app.title.notations'|trans %}
+
+{% block content %}
+    {% if post is not empty %}
+        {{ post.content|md2html }}
+    {% endif %}
+{% endblock %}

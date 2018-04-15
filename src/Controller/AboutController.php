@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class AboutController extends AbstractController
 {
-    private const ABOUT_US_POST_SLUG = 'about-us';
+    private const ABOUT_US_POST_SLUG = 'about';
 
     /**
      * @Route("", name="app.about")
@@ -23,7 +23,7 @@ class AboutController extends AbstractController
         return $this->render(
             'app/about/index.html.twig',
             [
-                'about' => $postRepository->findOneBySlug(self::ABOUT_US_POST_SLUG),
+                'post' => $postRepository->findOneBySlug(self::ABOUT_US_POST_SLUG),
             ]
         );
     }

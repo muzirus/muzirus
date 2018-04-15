@@ -3,7 +3,7 @@
 {% block heading 'app.title.about_project'|trans %}
 
 {% block content %}
-    {% if about is not empty %}
-        {{ about.content|md2html }}
+    {% if post is not empty %}
+        {{ post.content|md2html }}
     {% endif %}
 {% endblock %}

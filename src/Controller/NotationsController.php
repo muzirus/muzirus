@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\PostRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,12 +12,19 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class NotationsController extends AbstractController
 {
+    private const NOTATIONS_SLUG = 'notations';
+
     /**
      * @Route("", name="app.notations")
      * @Method("GET")
      */
-    public function index(): Response
+    public function index(PostRepository $postRepository): Response
     {
-        return $this->render('app/notations/index.html.twig');
+        return $this->render(
+            'app/notations/index.html.twig',
+            [
+                'post' => $postRepository->findOneBySlug(self::NOTATIONS_SLUG),
+            ]
+        );
     }
 }
