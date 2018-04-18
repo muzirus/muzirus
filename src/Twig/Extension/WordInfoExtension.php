@@ -75,17 +75,17 @@ class WordInfoExtension extends \Twig_Extension
         }
 
         if ($word->getLanguageNoteType() === AbstractWordInterface::TYPE_NOUN) {
-            $properties[] = sprintf(
-                '<em class="text-muted">%s</em>',
-                $this->wordGenderExtension->convertGenderIdToString($word->getLanguageNoteGender())
-            );
-        } else {
             if ($word->getLanguageNoteGender() !== AbstractWordInterface::GENDER_UNKNOWN) {
                 $properties[] = sprintf(
-                    '<em class="text-muted">%s</em>',
-                    $this->wordTypeExtension->convertTypeIdToString($word->getLanguageNoteType())
+                    '<em>%s</em>',
+                    $this->wordGenderExtension->convertGenderIdToString($word->getLanguageNoteGender())
                 );
             }
+        } else {
+            $properties[] = sprintf(
+                '<em>%s</em>',
+                $this->wordTypeExtension->convertTypeIdToString($word->getLanguageNoteType())
+            );
         }
 
         if ($word->hasLanguageNoteOther()) {
@@ -100,17 +100,17 @@ class WordInfoExtension extends \Twig_Extension
         $properties = [];
 
         if ($word->getLanguageNoteType() === AbstractWordInterface::TYPE_NOUN) {
-            $properties[] = sprintf(
-                '<em>%s</em>',
-                $this->wordGenderExtension->convertGenderIdToString($word->getLanguageNoteGender())
-            );
-        } else {
             if ($word->getLanguageNoteGender() !== AbstractWordInterface::GENDER_UNKNOWN) {
                 $properties[] = sprintf(
                     '<em>%s</em>',
-                    $this->wordTypeExtension->convertTypeIdToString($word->getLanguageNoteType())
+                    $this->wordGenderExtension->convertGenderIdToString($word->getLanguageNoteGender())
                 );
             }
+        } else {
+            $properties[] = sprintf(
+                '<em>%s</em>',
+                $this->wordTypeExtension->convertTypeIdToString($word->getLanguageNoteType())
+            );
         }
 
         return sprintf('<small>%s</small>', implode(', ', $properties));
