@@ -20,18 +20,6 @@
                     <span>{{ 'admin.dashboard'|trans }}</span>
                 </a>
             </li>
-            <li>
-                <a href="{{ path('admin.announcement') }}">
-                    <i class="fa fa-bullhorn"></i>
-                    <span>{{ 'admin.announcements'|trans }}</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ path('admin.post') }}">
-                    <i class="fa fa-file"></i>
-                    <span>{{ 'admin.posts'|trans }}</span>
-                </a>
-            </li>
             <li class="header">{{ 'admin.words'|trans }}</li>
             <li>
                 <a href="{{ path('admin.russian-word') }}">
@@ -104,6 +92,25 @@
                 <a href="{{ path('admin.category') }}">
                     <i class="fa fa-book"></i>
                     <span>{{ 'admin.topics'|trans }}</span>
+                </a>
+            </li>
+            <li class="header">{{ 'admin.content'|trans }}</li>
+            <li>
+                <a href="{{ path('admin.announcement') }}">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>{{ 'admin.announcements'|trans }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('admin.post') }}">
+                    <i class="fa fa-file"></i>
+                    <span>{{ 'admin.posts'|trans }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('admin.message') }}">
+                    <i class="fa fa-envelope"></i>
+                    <span>{{ 'admin.messages'|trans }}</span>
                 </a>
             </li>
             <li class="header">{{ 'admin.system'|trans }}</li>
