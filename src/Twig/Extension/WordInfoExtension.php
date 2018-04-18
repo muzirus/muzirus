@@ -99,6 +99,17 @@ class WordInfoExtension extends \Twig_Extension
     {
         $properties = [];
 
+        if ($word->hasLanguageNotePronunciation()) {
+            $properties[] = sprintf(
+                '<em>%s</em>',
+                $this->highlightExtension->highlightAccent(
+                    $this->escapeHtml(
+                        $word->getLanguageNotePronunciation()
+                    )
+                )
+            );
+        }
+
         if ($word->getLanguageNoteType() === AbstractWordInterface::TYPE_NOUN) {
             if ($word->getLanguageNoteGender() !== AbstractWordInterface::GENDER_UNKNOWN) {
                 $properties[] = sprintf(

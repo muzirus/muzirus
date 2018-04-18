@@ -217,6 +217,11 @@ abstract class AbstractWord implements AbstractWordInterface
         $this->contentWithAccent = $contentWithAccent;
     }
 
+    public function hasLanguageNotePronunciation(): bool
+    {
+        return mb_strlen($this->languageNotePronunciation) > 0;
+    }
+
     public function getLanguageNotePronunciation(): string
     {
         return $this->languageNotePronunciation;

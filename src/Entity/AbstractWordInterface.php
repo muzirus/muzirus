@@ -40,6 +40,8 @@ interface AbstractWordInterface extends Timestampable
 
     public function setContentWithAccent(string $contentWithAccent): void;
 
+    public function hasLanguageNotePronunciation(): bool;
+
     public function getLanguageNotePronunciation(): string;
 
     public function setLanguageNotePronunciation(string $languageNotePronunciation): void;
