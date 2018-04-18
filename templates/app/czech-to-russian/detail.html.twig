@@ -58,7 +58,11 @@
             </em>
             {% spaceless %}
                 <a href="{{ path('app.russian_to_czech.detail', { id: translation.russianWord.id }) }}">
-                    <strong>{{ translation.russianWord.content }}</strong>
+                    {% if (translation.russianWord.contentWithAccent is not empty) %}
+                        <strong>{{ translation.russianWord.contentWithAccent|highlight_accent }}</strong>
+                    {% else %}
+                        <strong>{{ translation.russianWord.content }}</strong>
+                    {% endif %}
                 </a>
             {% endspaceless %}
             {{ translation.russianWord|word_info_after }}
