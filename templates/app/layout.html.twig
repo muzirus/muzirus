@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {{ include('app/_fragments/_nav.html.twig') }}
+    {% include 'app/_fragments/_nav.html.twig' %}
     <div class="container">
         {% block container %}
             <h1 class="text-center">
@@ -14,8 +14,7 @@
             {% endblock %}
         {% endblock %}
     </div>
-    {{ include('app/_fragments/_footer.html.twig') }}
-    {{ include('app/_fragments/_feedback_modal.html.twig') }}
+    {% include 'app/_fragments/_footer.html.twig' %}
 {% endblock %}
 
 {% block stylesheets %}
