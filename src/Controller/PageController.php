@@ -12,7 +12,7 @@ class PageController extends AbstractController
 {
     /**
      * @Route("/page/{slug}", name="app.page", requirements={"slug": "[a-z0-9][a-z0-9-]*"})
-     * @ParamConverter("post", options={"id": "slug", "repository_method": "findOneBySlug"})
+     * @ParamConverter("post", options={"id": "slug", "repository_method": "findOneBySlugWithAuthorAndRevisions"})
      * @Method("GET")
      */
     public function index(Post $post): Response

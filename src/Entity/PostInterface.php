@@ -20,5 +20,5 @@ interface PostInterface extends Timestampable
 
     public function getAuthor(): UserInterface;
 
-    public function addRevision(PostRevisionInterface $revision): void;
+    public function getLastRevision(): PostRevisionInterface;
 }

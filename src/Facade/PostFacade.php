@@ -4,6 +4,7 @@ namespace App\Facade;
 
 use App\Entity\Post;
 use App\Entity\PostInterface;
+use App\Entity\PostRevision;
 use App\Entity\UserInterface;
 use App\Form\Post\PostFormData;
 use Cocur\Slugify\Slugify;
@@ -23,14 +24,11 @@ class PostFacade
     {
         $slugify = new Slugify();
 
-        $post = new Post(
-            $slugify->slugify($formData->getSlug()),
-            $formData->getTitle(),
-            $formData->getContent(),
-            $author
-        );
+        $post = new Post($slugify->slugify($formData->getSlug()), $formData->getTitle(), $author);
+        $postRevision = new PostRevision($post, $formData->getContent());
 
         $this->entityManager->persist($post);
+        $this->entityManager->persist($postRevision);
         $this->entityManager->flush();
 
         return $post;
@@ -39,14 +37,10 @@ class PostFacade
     public function update(PostInterface $post, PostFormData $formData): void
     {
         $post->setTitle($formData->getTitle());
-        $post->setContent($formData->getContent());
 
-        $this->entityManager->flush();
-    }
+        $postRevision = new PostRevision($post, $formData->getContent());
 
-    public function delete(PostInterface $post): void
-    {
-        $this->entityManager->remove($post);
+        $this->entityManager->persist($postRevision);
         $this->entityManager->flush();
     }
 }

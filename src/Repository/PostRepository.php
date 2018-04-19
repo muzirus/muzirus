@@ -28,11 +28,12 @@ class PostRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
-    public function findOneBySlugWithAuthor(string $slug): ?PostInterface
+    public function findOneBySlugWithAuthorAndRevisions(string $slug): ?PostInterface
     {
         return $this->createQueryBuilder('p')
-            ->select('p', 'au')
+            ->select('p', 'au', 'r')
             ->leftJoin('p.author', 'au')
+            ->join('p.revisions', 'r')
             ->where('p.slug = :slug')
             ->setParameter('slug', $slug)
             ->getQuery()

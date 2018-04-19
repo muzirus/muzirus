@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\EntityTrait\Timestamps;
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -51,7 +50,8 @@ class Post implements PostInterface
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\PostRevision", mappedBy="post")
-     * @var Collection|PostRevisionInterface[]
+     * @ORM\OrderBy({"createdAt": "ASC"})
+     * @var ArrayCollection|PostRevisionInterface[]
      */
     private $revisions;
 
@@ -85,7 +85,7 @@ class Post implements PostInterface
 
     public function getContent(): string
     {
-        return $this->content;
+        return $this->getLastRevision()->getContent();
     }
 
     public function hasAuthor(): bool
@@ -98,12 +98,8 @@ class Post implements PostInterface
         return $this->author;
     }
 
-    public function addRevision(PostRevisionInterface $revision): void
+    public function getLastRevision(): PostRevisionInterface
     {
-        if ($this->revisions->contains($revision)) {
-            return;
-        }
-
-        $this->revisions->add($revision);
+        return $this->revisions->last();
     }
 }

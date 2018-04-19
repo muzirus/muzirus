@@ -37,7 +37,7 @@ class PostFormData
         $formData = new self();
         $formData->setSlug($post->getSlug());
         $formData->setTitle($post->getTitle());
-        $formData->setContent($post->getContent());
+        $formData->setContent($post->getLastRevision()->getContent());
 
         return $formData;
     }
