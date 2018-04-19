@@ -36,12 +36,6 @@ class Post implements PostInterface
     private $title;
 
     /**
-     * @ORM\Column(type="text", name="content")
-     * @var string
-     */
-    private $content;
-
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", onDelete="SET NULL")
      * @var UserInterface|null
