@@ -1,4 +1,4 @@
-# Dictionary
+# Muzirus
 
 ## Requirements
 
@@ -13,26 +13,19 @@
 ### Clone repository
 
 ```bash
-git clone git@github.com:petrofcikmatus/dictionary.git dictionary
+git clone git@github.com:muzirus/muzirus.git dictionary
 ```
 
 ### Go to project folder
 
 ```bash
-cd dictionary
+cd muzirus
 ```
 
 ### Install PHP dependencies
 
 ```bash
 composer prod
-```
-
-### Install JS dependencies and build them
-
-```bash
-yarn install
-yarn run build
 ```
 
 ## Dev server
@@ -46,7 +39,7 @@ composer dev
 Install JS dependencies and build them
 
 ```bash
-yarn run dev
+yarn install
 ```
 
 Start server
