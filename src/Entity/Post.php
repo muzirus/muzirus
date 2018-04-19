@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\EntityTrait\Timestamps;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -47,12 +49,18 @@ class Post implements PostInterface
      */
     private $author;
 
-    public function __construct(string $slug, string $title, string $content, ?UserInterface $author = null)
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\PostRevision", mappedBy="post")
+     * @var Collection|PostRevisionInterface[]
+     */
+    private $revisions;
+
+    public function __construct(string $slug, string $title, ?UserInterface $author = null)
     {
         $this->slug = $slug;
         $this->setTitle($title);
-        $this->setContent($content);
         $this->author = $author;
+        $this->revisions = new ArrayCollection();
     }
 
     public function getId(): string
@@ -80,11 +88,6 @@ class Post implements PostInterface
         return $this->content;
     }
 
-    public function setContent(string $content): void
-    {
-        $this->content = $content;
-    }
-
     public function hasAuthor(): bool
     {
         return $this->author instanceof UserInterface;
@@ -93,5 +96,14 @@ class Post implements PostInterface
     public function getAuthor(): UserInterface
     {
         return $this->author;
+    }
+
+    public function addRevision(PostRevisionInterface $revision): void
+    {
+        if ($this->revisions->contains($revision)) {
+            return;
+        }
+
+        $this->revisions->add($revision);
     }
 }
