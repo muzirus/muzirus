@@ -1,6 +1,6 @@
 {
-    "name": "Dictionary",
-    "repository": "https://github.com/petrofcikmatus/dictionary",
+    "name": "muzirus",
+    "repository": "https://github.com/muzirus/muzirus",
     "success_url": "/",
     "image": "heroku/php",
     "env": {
