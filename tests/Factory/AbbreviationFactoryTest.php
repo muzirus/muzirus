@@ -21,12 +21,12 @@ class AbbreviationFactoryTest extends TestCase
         $value = 'value';
         $title = 'title';
         $description = 'description';
-        $symbolFormData = new AbbreviationFormData();
-        $symbolFormData->setContent($value);
-        $symbolFormData->setTitle($title);
-        $symbolFormData->setDescription($description);
+        $abbreviationFormData = new AbbreviationFormData();
+        $abbreviationFormData->setContent($value);
+        $abbreviationFormData->setTitle($title);
+        $abbreviationFormData->setDescription($description);
 
-        $abbreviation = $this->abbreviationFactory->createFromFormData($symbolFormData);
+        $abbreviation = $this->abbreviationFactory->createFromFormData($abbreviationFormData);
 
         $this->assertSame($value, $abbreviation->getContent());
         $this->assertSame($title, $abbreviation->getTitle());
