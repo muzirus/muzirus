@@ -13,7 +13,7 @@
 ### Clone repository
 
 ```bash
-git clone git@github.com:muzirus/muzirus.git dictionary
+git clone git@github.com:muzirus/muzirus.git muzirus
 ```
 
 ### Go to project folder
