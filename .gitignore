@@ -1,4 +1,6 @@
-/.idea/
+.idea
+phpunit.phar
+composer.phar
 
 ###> symfony/framework-bundle ###
 .env
