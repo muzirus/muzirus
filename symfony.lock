@@ -101,6 +101,9 @@
     "gedmo/doctrine-extensions": {
         "version": "v2.4.33"
     },
+    "hamcrest/hamcrest-php": {
+        "version": "v2.0.0"
+    },
     "heroku/heroku-buildpack-php": {
         "version": "v132"
     },
@@ -112,6 +115,9 @@
     },
     "lmc/coding-standard": {
         "version": "1.0.1"
+    },
+    "mockery/mockery": {
+        "version": "1.0"
     },
     "monolog/monolog": {
         "version": "1.23.0"

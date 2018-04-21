@@ -20,6 +20,7 @@
         "cocur/slugify": "^3.1",
         "erusev/parsedown": "^1.7",
         "ezyang/htmlpurifier": "^4.10",
+        "mockery/mockery": "^1.0",
         "sensio/framework-extra-bundle": "^5.1",
         "sensiolabs/security-checker": "^4.1",
         "stof/doctrine-extensions-bundle": "^1.3",
