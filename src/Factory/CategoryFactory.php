@@ -8,7 +8,7 @@ use App\Form\Category\CategoryFormData;
 
 class CategoryFactory
 {
-    public function createCategoryFromFormData(CategoryFormData $formData): WordCategoryInterface
+    public function createFromFormData(CategoryFormData $formData): WordCategoryInterface
     {
         return new WordCategory($formData->getTitle());
     }

@@ -27,7 +27,7 @@ class CategoryFacade
 
     public function createCategory(CategoryFormData $formData): WordCategoryInterface
     {
-        $category = $this->categoryFactory->createCategoryFromFormData($formData);
+        $category = $this->categoryFactory->createFromFormData($formData);
 
         $this->entityManager->persist($category);
         $this->entityManager->flush();
