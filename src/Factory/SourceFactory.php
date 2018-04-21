@@ -5,21 +5,10 @@ namespace App\Factory;
 use App\Entity\Source;
 use App\Entity\SourceInterface;
 use App\Form\Source\SourceFormData;
-use App\Repository\SourceTypeRepository;
 
 class SourceFactory
 {
-    /**
-     * @var SourceTypeRepository
-     */
-    private $sourceTypeRepository;
-
-    public function __construct(SourceTypeRepository $sourceTypeRepository)
-    {
-        $this->sourceTypeRepository = $sourceTypeRepository;
-    }
-
-    public function createSourceFromFormData(SourceFormData $formData): SourceInterface
+    public function createFromFormData(SourceFormData $formData): SourceInterface
     {
         $source = new Source($formData->getTitle(), $formData->getType());
 
