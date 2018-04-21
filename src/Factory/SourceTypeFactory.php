@@ -8,7 +8,7 @@ use App\Form\SourceType\SourceTypeFormData;
 
 class SourceTypeFactory
 {
-    public function createSourceTypeFromFormData(SourceTypeFormData $formData): SourceTypeInterface
+    public function createFromFormData(SourceTypeFormData $formData): SourceTypeInterface
     {
         return new SourceType($formData->getTitle());
     }

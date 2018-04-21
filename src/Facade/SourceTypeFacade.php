@@ -27,7 +27,7 @@ class SourceTypeFacade
 
     public function createSourceType(SourceTypeFormData $formData): SourceTypeInterface
     {
-        $sourceType = $this->sourceTypeFactory->createSourceTypeFromFormData($formData);
+        $sourceType = $this->sourceTypeFactory->createFromFormData($formData);
 
         $this->entityManager->persist($sourceType);
         $this->entityManager->flush();
