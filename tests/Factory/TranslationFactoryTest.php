@@ -34,12 +34,12 @@ class TranslationFactoryTest extends TestCase
         $translationFormData->setRussianWordNote($russianWordNote);
         $translationFormData->setLink($link);
 
-        $symbol = $this->translationFactory->createFromFormData($translationFormData);
+        $translation = $this->translationFactory->createFromFormData($translationFormData);
 
-        $this->assertSame($czechWord, $symbol->getCzechWord());
-        $this->assertSame($russianWord, $symbol->getRussianWord());
-        $this->assertSame($czechWordNote, $symbol->getCzechWordNote());
-        $this->assertSame($russianWordNote, $symbol->getRussianWordNote());
-        $this->assertSame($link, $symbol->getLink());
+        $this->assertSame($czechWord, $translation->getCzechWord());
+        $this->assertSame($russianWord, $translation->getRussianWord());
+        $this->assertSame($czechWordNote, $translation->getCzechWordNote());
+        $this->assertSame($russianWordNote, $translation->getRussianWordNote());
+        $this->assertSame($link, $translation->getLink());
     }
 }
