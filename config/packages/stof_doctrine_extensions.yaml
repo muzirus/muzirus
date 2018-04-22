@@ -1,6 +1,0 @@
-# Read the documentation: https://symfony.com/doc/current/bundles/StofDoctrineExtensionsBundle/index.html
-stof_doctrine_extensions:
-    default_locale: en_US
-    orm:
-        default:
-            sortable: true
