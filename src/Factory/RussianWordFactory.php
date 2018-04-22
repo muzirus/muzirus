@@ -20,12 +20,6 @@ class RussianWordFactory
             $word->addSource($source);
         }
 
-        if (empty($word->getContentWithAccent())) {
-            $formData->setContentWithAccent($word->getContent());
-        } else {
-            $formData->setContentWithAccent($word->getContentWithAccent());
-        }
-
         $word->setContentWithAccent($formData->getContentWithAccent());
         $word->setLanguageNotePronunciation($formData->getLanguageNotePronunciation());
         $word->setLanguageNoteInflection($formData->getLanguageNoteInflection());
