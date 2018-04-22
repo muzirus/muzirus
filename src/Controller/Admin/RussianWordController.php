@@ -273,7 +273,7 @@ class RussianWordController extends AbstractController
     ): RedirectResponse {
         // todo: check that translation belongs to that word
 
-        $translationFacade->updateTranslationPosition($translation, $position);
+        $translationFacade->updateTranslationPositionInRussianWordDetail($translation, $position);
 
         $this->addFlashSuccess('admin.translation.updated');
 

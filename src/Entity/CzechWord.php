@@ -15,7 +15,7 @@ class CzechWord extends AbstractWord implements CzechWordInterface
      * Inverse side.
      *
      * @ORM\OneToMany(targetEntity="Translation", mappedBy="czechWord", cascade={"remove"})
-     * @ORM\OrderBy({"position": "ASC"})
+     * @ORM\OrderBy({"positionInCzechWordDetail": "ASC"})
      * @var ArrayCollection
      */
     protected $translations;

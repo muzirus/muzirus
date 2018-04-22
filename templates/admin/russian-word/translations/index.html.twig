@@ -78,7 +78,7 @@
                                             id: word.id,
                                             translationId: translation.id
                                         }) }}" class="btn btn-default"><i class="fa fa-arrow-up"></i></a>
-                                        <span class="btn btn-default">{{ translation.position }}</span>
+                                        <span class="btn btn-default">{{ translation.positionInRussianWordDetail }}</span>
                                         <a href="{{ path('admin.russian-word.translations.position.down', {
                                             id: word.id,
                                             translationId: translation.id
@@ -97,7 +97,7 @@
                             </tr>
                         {% else %}
                             <tr>
-                                <td colspan="6">
+                                <td colspan="7">
                                     <div class="text-center">{{ 'admin.no_content'|trans }}</div>
                                 </td>
                             </tr>

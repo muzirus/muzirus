@@ -251,6 +251,42 @@ class CzechWordController extends AbstractController
 
     /**
      * @Route(
+     *     "/{id}/translations/{translationId}/position/up",
+     *     name="admin.czech-word.translations.position.up",
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     defaults={"position": "up"}
+     * )
+     * @Route(
+     *     "/{id}/translations/{translationId}/position/down",
+     *     name="admin.czech-word.translations.position.down",
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     defaults={"position": "down"}
+     * )
+     * @ParamConverter("translation", options={"id": "translationId"})
+     * @Method({"GET"})
+     */
+    public function translationsPosition(
+        CzechWord $word,
+        Translation $translation,
+        TranslationFacade $translationFacade,
+        string $position
+    ): RedirectResponse {
+        // todo: check that translation belongs to that word
+
+        $translationFacade->updateTranslationPositionInCzechWordDetail($translation, $position);
+
+        $this->addFlashSuccess('admin.translation.updated');
+
+        return $this->redirectToRoute(
+            'admin.czech-word.translations',
+            [
+                'id' => $word->getId(),
+            ]
+        );
+    }
+
+    /**
+     * @Route(
      *     "/{id}/translations/{translationId}/examples",
      *     name="admin.czech-word.translations.examples",
      *     requirements={"id": "\d+", "translationId": "\d+"}

@@ -30,11 +30,17 @@ interface TranslationInterface extends Timestampable
 
     public function getLink(): string;
 
-    public function getPosition(): int;
+    public function getPositionInRussianWordDetail(): int;
 
-    public function increasePosition(): void;
+    public function increasePositionInRussianWordDetail(): void;
 
-    public function decreasePosition(): void;
+    public function decreasePositionInRussianWordDetail(): void;
+
+    public function getPositionInCzechWordDetail(): int;
+
+    public function increasePositionInCzechWordDetail(): void;
+
+    public function decreasePositionInCzechWordDetail(): void;
 
     /**
      * @return TranslationExampleInterface[]

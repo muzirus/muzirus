@@ -65,7 +65,13 @@ class Translation implements TranslationInterface
      * @ORM\Column(type="integer", name="position", options={"default":0})
      * @var int
      */
-    private $position = 0;
+    private $positionInRussianWordDetail = 0;
+
+    /**
+     * @ORM\Column(type="integer", name="position_in_czech_word_detail", options={"default":0})
+     * @var int
+     */
+    private $positionInCzechWordDetail = 0;
 
     /**
      * Inverse side.
@@ -146,23 +152,42 @@ class Translation implements TranslationInterface
         $this->link = $link;
     }
 
-    public function getPosition(): int
+    public function getPositionInRussianWordDetail(): int
     {
-        return $this->position;
+        return $this->positionInRussianWordDetail;
     }
 
-    public function increasePosition(): void
+    public function increasePositionInRussianWordDetail(): void
     {
-        $this->position++;
+        $this->positionInRussianWordDetail++;
     }
 
-    public function decreasePosition(): void
+    public function decreasePositionInRussianWordDetail(): void
     {
-        if ($this->position === 0) {
+        if ($this->positionInRussianWordDetail === 0) {
             return;
         }
 
-        $this->position--;
+        $this->positionInRussianWordDetail--;
+    }
+
+    public function getPositionInCzechWordDetail(): int
+    {
+        return $this->positionInCzechWordDetail;
+    }
+
+    public function increasePositionInCzechWordDetail(): void
+    {
+        $this->positionInCzechWordDetail++;
+    }
+
+    public function decreasePositionInCzechWordDetail(): void
+    {
+        if ($this->positionInCzechWordDetail === 0) {
+            return;
+        }
+
+        $this->positionInCzechWordDetail--;
     }
 
     /**

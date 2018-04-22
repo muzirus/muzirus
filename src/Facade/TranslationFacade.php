@@ -46,14 +46,30 @@ class TranslationFacade
         $this->entityManager->flush();
     }
 
-    public function updateTranslationPosition(TranslationInterface $translation, string $move): void
+    public function updateTranslationPositionInRussianWordDetail(TranslationInterface $translation, string $move): void
     {
         switch ($move) {
             case 'up':
-                $translation->decreasePosition();
+                $translation->decreasePositionInRussianWordDetail();
                 break;
             case 'down':
-                $translation->increasePosition();
+                $translation->increasePositionInRussianWordDetail();
+                break;
+            default:
+                return;
+        }
+
+        $this->entityManager->flush();
+    }
+
+    public function updateTranslationPositionInCzechWordDetail(TranslationInterface $translation, string $move): void
+    {
+        switch ($move) {
+            case 'up':
+                $translation->decreasePositionInCzechWordDetail();
+                break;
+            case 'down':
+                $translation->increasePositionInCzechWordDetail();
                 break;
             default:
                 return;
