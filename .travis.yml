@@ -22,7 +22,7 @@ install:
   - ./vendor/bin/simple-phpunit install
 script:
   - ./vendor/bin/simple-phpunit
-  - ./vendor/bin/ecs check src/ tests/
+  #- ./vendor/bin/ecs check src/ tests/
   - ./bin/console lint:yaml config
   - ./bin/console lint:twig templates
   #- ./bin/console lint:xliff translations
