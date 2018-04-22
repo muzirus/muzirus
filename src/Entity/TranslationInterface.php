@@ -32,7 +32,9 @@ interface TranslationInterface extends Timestampable
 
     public function getPosition(): int;
 
-    public function setPosition(int $position): void;
+    public function increasePosition(): void;
+
+    public function decreasePosition(): void;
 
     /**
      * @return TranslationExampleInterface[]

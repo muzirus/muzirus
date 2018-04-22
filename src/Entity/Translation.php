@@ -151,9 +151,18 @@ class Translation implements TranslationInterface
         return $this->position;
     }
 
-    public function setPosition(int $position): void
+    public function increasePosition(): void
     {
-        $this->position = $position;
+        $this->position++;
+    }
+
+    public function decreasePosition(): void
+    {
+        if ($this->position === 0) {
+            return;
+        }
+
+        $this->position--;
     }
 
     /**

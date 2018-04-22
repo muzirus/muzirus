@@ -48,24 +48,16 @@ class TranslationFacade
 
     public function updateTranslationPosition(TranslationInterface $translation, string $move): void
     {
-        $position = $translation->getPosition();
-
         switch ($move) {
             case 'up':
-                $position--;
+                $translation->decreasePosition();
                 break;
             case 'down':
-                $position++;
+                $translation->increasePosition();
                 break;
             default:
                 return;
         }
-
-        if ($position < 0) {
-            $position = 0;
-        }
-
-        $translation->setPosition($position);
 
         $this->entityManager->flush();
     }
