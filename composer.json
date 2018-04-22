@@ -107,8 +107,11 @@
         "phpunit": "@php vendor/bin/simple-phpunit",
         "analyze": [
             "@composer cs",
-            "@composer phpunit"
+            "@composer phpunit",
+            "@php bin/console lint:yaml config",
+            "@php bin/console lint:twig templates"
         ],
+        "lock": "@composer update --lock",
         "translation-cs-yml": "@php bin/console translation:update --force --clean --domain=messages --output-format=yml cs",
         "translation-cs-xlf": "@php bin/console translation:update --force --clean --domain=messages --output-format=xlf cs",
         "translation-en-yml": "@php bin/console translation:update --force --clean --domain=messages --output-format=yml en",
