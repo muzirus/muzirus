@@ -290,9 +290,9 @@
         <source>admin.word_with_accent</source>
         <target xml:lang="ru" state="translated">Слово с ударением</target>
       </trans-unit>
-      <trans-unit id="admin.word_with_accent_is_missing">
+      <trans-unit id="admin.word_with_accent_is_missing" approved="yes">
         <source>admin.word_with_accent_is_missing</source>
-        <target xml:lang="ru" state="translated">Не хватает слова с ударением (сохраните изменения)</target>
+        <target xml:lang="ru">Не хватает слова с ударением (сохраните изменения)</target>
       </trans-unit>
       <trans-unit id="admin.yes">
         <source>admin.yes</source>
@@ -326,9 +326,9 @@
         <source>admin.equivalents</source>
         <target xml:lang="ru" state="translated">Эквиваленты</target>
       </trans-unit>
-      <trans-unit id="admin.exemplifications">
+      <trans-unit id="admin.exemplifications" approved="yes">
         <source>admin.exemplifications</source>
-        <target xml:lang="ru" state="translated">Экземплификации</target>
+        <target xml:lang="ru">Экземплификации</target>
       </trans-unit>
       <trans-unit id="admin.exception_to_inflection">
         <source>admin.exception_to_inflection</source>
@@ -378,9 +378,9 @@
         <source>app.updated_at</source>
         <target xml:lang="ru" state="translated">Дата последнего изменения</target>
       </trans-unit>
-      <trans-unit id="app.link.intercorp">
+      <trans-unit id="app.link.intercorp" approved="yes">
         <source>app.link.intercorp</source>
-        <target xml:lang="ru" state="translated">Ссылка на слово в корпусах InterCorp</target>
+        <target xml:lang="ru">Ссылка на слово в корпусах InterCorp</target>
       </trans-unit>
       <trans-unit id="app.abbreviation">
         <source>app.abbreviation</source>
