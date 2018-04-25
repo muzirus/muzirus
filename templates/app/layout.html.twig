@@ -22,6 +22,7 @@
 {% endblock %}
 
 {% block javascripts %}
+    {% include 'app/_fragments/_gtag.html.twig' %}
     {{ parent() }}
     <script src="{{ asset('build/js/app.js') }}"></script>
 {% endblock %}
