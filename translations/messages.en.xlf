@@ -4,39 +4,39 @@
     <body>
       <trans-unit id="admin.abbreviations">
         <source>admin.abbreviations</source>
-        <target xml:lang="en" state="needs-translation">admin.abbreviations</target>
+        <target xml:lang="en" state="translated">Abbreviations</target>
       </trans-unit>
       <trans-unit id="admin.actions">
         <source>admin.actions</source>
-        <target xml:lang="en" state="needs-translation">admin.actions</target>
+        <target xml:lang="en" state="translated">Actions</target>
       </trans-unit>
       <trans-unit id="admin.activities">
         <source>admin.activities</source>
-        <target xml:lang="en" state="needs-translation">admin.activities</target>
+        <target xml:lang="en" state="translated">Activities</target>
       </trans-unit>
       <trans-unit id="admin.approved">
         <source>admin.approved</source>
-        <target xml:lang="en" state="needs-translation">admin.approved</target>
+        <target xml:lang="en" state="translated">Approved</target>
       </trans-unit>
       <trans-unit id="admin.authors">
         <source>admin.authors</source>
-        <target xml:lang="en" state="needs-translation">admin.authors</target>
+        <target xml:lang="en" state="translated">Authors</target>
       </trans-unit>
       <trans-unit id="admin.box.title.add">
         <source>admin.box.title.add</source>
-        <target xml:lang="en" state="needs-translation">admin.box.title.add</target>
+        <target xml:lang="en" state="translated">Add</target>
       </trans-unit>
       <trans-unit id="admin.box.title.edit">
         <source>admin.box.title.edit</source>
-        <target xml:lang="en" state="needs-translation">admin.box.title.edit</target>
+        <target xml:lang="en" state="translated">Edit</target>
       </trans-unit>
       <trans-unit id="admin.button.add_abbreviation">
         <source>admin.button.add_abbreviation</source>
-        <target xml:lang="en" state="needs-translation">admin.button.add_abbreviation</target>
+        <target xml:lang="en" state="translated">Add abbreviation</target>
       </trans-unit>
       <trans-unit id="admin.button.add_category">
         <source>admin.button.add_category</source>
-        <target xml:lang="en" state="needs-translation">admin.button.add_category</target>
+        <target xml:lang="en" state="translated">Add category</target>
       </trans-unit>
       <trans-unit id="admin.button.add_equivalent">
         <source>admin.button.add_equivalent</source>
