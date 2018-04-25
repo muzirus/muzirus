@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="zu" target-language="zu" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="admin.abbreviations">
+        <source>admin.abbreviations</source>
+      </trans-unit>
+      <trans-unit id="admin.actions">
+        <source>admin.actions</source>
+      </trans-unit>
+      <trans-unit id="admin.activities">
+        <source>admin.activities</source>
+      </trans-unit>
+      <trans-unit id="admin.approved">
+        <source>admin.approved</source>
+      </trans-unit>
+      <trans-unit id="admin.authors">
+        <source>admin.authors</source>
+      </trans-unit>
+      <trans-unit id="admin.box.title.add">
+        <source>admin.box.title.add</source>
+      </trans-unit>
+      <trans-unit id="admin.box.title.edit">
+        <source>admin.box.title.edit</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_abbreviation">
+        <source>admin.button.add_abbreviation</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_category">
+        <source>admin.button.add_category</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_equivalent">
+        <source>admin.button.add_equivalent</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_new">
+        <source>admin.button.add_new</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_source">
+        <source>admin.button.add_source</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_source_type">
+        <source>admin.button.add_source_type</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_symbol">
+        <source>admin.button.add_symbol</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_word">
+        <source>admin.button.add_word</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_user">
+        <source>admin.button.add_user</source>
+      </trans-unit>
+      <trans-unit id="admin.button.back_to_list">
+        <source>admin.button.back_to_list</source>
+      </trans-unit>
+      <trans-unit id="admin.button.back_to_translations">
+        <source>admin.button.back_to_translations</source>
+      </trans-unit>
+      <trans-unit id="admin.button.back_to_translation_examples">
+        <source>admin.button.back_to_translation_examples</source>
+      </trans-unit>
+      <trans-unit id="admin.button.edit">
+        <source>admin.button.edit</source>
+      </trans-unit>
+      <trans-unit id="admin.button.remove">
+        <source>admin.button.remove</source>
+      </trans-unit>
+      <trans-unit id="admin.button.save">
+        <source>admin.button.save</source>
+      </trans-unit>
+      <trans-unit id="admin.button.save_and_new">
+        <source>admin.button.save_and_new</source>
+      </trans-unit>
+      <trans-unit id="admin.created">
+        <source>admin.created</source>
+      </trans-unit>
+      <trans-unit id="admin.czech">
+        <source>admin.czech</source>
+      </trans-unit>
+      <trans-unit id="admin.czech_note">
+        <source>admin.czech_note</source>
+      </trans-unit>
+      <trans-unit id="admin.czech_sentence">
+        <source>admin.czech_sentence</source>
+      </trans-unit>
+      <trans-unit id="admin.czech_word">
+        <source>admin.czech_word</source>
+      </trans-unit>
+      <trans-unit id="admin.czech_words">
+        <source>admin.czech_words</source>
+      </trans-unit>
+      <trans-unit id="admin.dashboard">
+        <source>admin.dashboard</source>
+      </trans-unit>
+      <trans-unit id="admin.deleted">
+        <source>admin.deleted</source>
+      </trans-unit>
+      <trans-unit id="admin.description">
+        <source>admin.description</source>
+      </trans-unit>
+      <trans-unit id="admin.examples">
+        <source>admin.examples</source>
+      </trans-unit>
+      <trans-unit id="admin.explanation">
+        <source>admin.explanation</source>
+      </trans-unit>
+      <trans-unit id="admin.gender">
+        <source>admin.gender</source>
+      </trans-unit>
+      <trans-unit id="admin.hidden">
+        <source>admin.hidden</source>
+      </trans-unit>
+      <trans-unit id="admin.home">
+        <source>admin.home</source>
+      </trans-unit>
+      <trans-unit id="admin.inflection">
+        <source>admin.inflection</source>
+      </trans-unit>
+      <trans-unit id="admin.language_note">
+        <source>admin.language_note</source>
+      </trans-unit>
+      <trans-unit id="admin.news">
+        <source>admin.news</source>
+      </trans-unit>
+      <trans-unit id="admin.no">
+        <source>admin.no</source>
+      </trans-unit>
+      <trans-unit id="admin.no_news_yet">
+        <source>admin.no_news_yet</source>
+      </trans-unit>
+      <trans-unit id="admin.original_database">
+        <source>admin.original_database</source>
+      </trans-unit>
+      <trans-unit id="admin.other">
+        <source>admin.other</source>
+      </trans-unit>
+      <trans-unit id="admin.pages_count">
+        <source>admin.pages_count</source>
+      </trans-unit>
+      <trans-unit id="admin.published_date">
+        <source>admin.published_date</source>
+      </trans-unit>
+      <trans-unit id="admin.published_place">
+        <source>admin.published_place</source>
+      </trans-unit>
+      <trans-unit id="admin.publisher">
+        <source>admin.publisher</source>
+      </trans-unit>
+      <trans-unit id="admin.russian">
+        <source>admin.russian</source>
+      </trans-unit>
+      <trans-unit id="admin.russian_words">
+        <source>admin.russian_words</source>
+      </trans-unit>
+      <trans-unit id="admin.russian_note">
+        <source>admin.russian_note</source>
+      </trans-unit>
+      <trans-unit id="admin.russian_sentence">
+        <source>admin.russian_sentence</source>
+      </trans-unit>
+      <trans-unit id="admin.russian_word">
+        <source>admin.russian_word</source>
+      </trans-unit>
+      <trans-unit id="admin.sign_out">
+        <source>admin.sign_out</source>
+      </trans-unit>
+      <trans-unit id="admin.source">
+        <source>admin.source</source>
+      </trans-unit>
+      <trans-unit id="admin.sources">
+        <source>admin.sources</source>
+      </trans-unit>
+      <trans-unit id="admin.source_types">
+        <source>admin.source_types</source>
+      </trans-unit>
+      <trans-unit id="admin.status">
+        <source>admin.status</source>
+      </trans-unit>
+      <trans-unit id="admin.symbols">
+        <source>admin.symbols</source>
+      </trans-unit>
+      <trans-unit id="admin.system">
+        <source>admin.system</source>
+      </trans-unit>
+      <trans-unit id="admin.tab.edit">
+        <source>admin.tab.edit</source>
+      </trans-unit>
+      <trans-unit id="admin.title">
+        <source>admin.title</source>
+      </trans-unit>
+      <trans-unit id="admin.translation">
+        <source>admin.translation</source>
+      </trans-unit>
+      <trans-unit id="admin.translations">
+        <source>admin.translations</source>
+      </trans-unit>
+      <trans-unit id="admin.type">
+        <source>admin.type</source>
+      </trans-unit>
+      <trans-unit id="admin.updated">
+        <source>admin.updated</source>
+      </trans-unit>
+      <trans-unit id="admin.users">
+        <source>admin.users</source>
+      </trans-unit>
+      <trans-unit id="admin.value">
+        <source>admin.value</source>
+      </trans-unit>
+      <trans-unit id="admin.visit_site">
+        <source>admin.visit_site</source>
+      </trans-unit>
+      <trans-unit id="admin.word">
+        <source>admin.word</source>
+      </trans-unit>
+      <trans-unit id="admin.words">
+        <source>admin.words</source>
+      </trans-unit>
+      <trans-unit id="admin.word_with_accent">
+        <source>admin.word_with_accent</source>
+      </trans-unit>
+      <trans-unit id="admin.word_with_accent_is_missing">
+        <source>admin.word_with_accent_is_missing</source>
+      </trans-unit>
+      <trans-unit id="admin.yes">
+        <source>admin.yes</source>
+      </trans-unit>
+      <trans-unit id="admin.not_processed">
+        <source>admin.not_processed</source>
+      </trans-unit>
+      <trans-unit id="admin.equivalents_not_found">
+        <source>admin.equivalents_not_found</source>
+      </trans-unit>
+      <trans-unit id="admin.examples_added">
+        <source>admin.examples_added</source>
+      </trans-unit>
+      <trans-unit id="admin.checked">
+        <source>admin.checked</source>
+      </trans-unit>
+      <trans-unit id="admin.tab.equivalents">
+        <source>admin.tab.equivalents</source>
+      </trans-unit>
+      <trans-unit id="admin.no_content">
+        <source>admin.no_content</source>
+      </trans-unit>
+      <trans-unit id="admin.equivalents">
+        <source>admin.equivalents</source>
+      </trans-unit>
+      <trans-unit id="admin.exemplifications">
+        <source>admin.exemplifications</source>
+      </trans-unit>
+      <trans-unit id="admin.exception_to_inflection">
+        <source>admin.exception_to_inflection</source>
+      </trans-unit>
+      <trans-unit id="admin.topics">
+        <source>admin.topics</source>
+      </trans-unit>
+      <trans-unit id="admin.topic">
+        <source>admin.topic</source>
+      </trans-unit>
+      <trans-unit id="app.title">
+        <source>app.title</source>
+      </trans-unit>
+      <trans-unit id="app.title.topics">
+        <source>app.title.topics</source>
+      </trans-unit>
+      <trans-unit id="app.title.vocabulary_russian">
+        <source>app.title.vocabulary_russian</source>
+      </trans-unit>
+      <trans-unit id="app.title.vocabulary_czech">
+        <source>app.title.vocabulary_czech</source>
+      </trans-unit>
+      <trans-unit id="app.title.abbreviations">
+        <source>app.title.abbreviations</source>
+      </trans-unit>
+      <trans-unit id="app.title.notations">
+        <source>app.title.notations</source>
+      </trans-unit>
+      <trans-unit id="app.title.proccessing_of_words">
+        <source>app.title.proccessing_of_words</source>
+      </trans-unit>
+      <trans-unit id="app.title.suggest_improvement">
+        <source>app.title.suggest_improvement</source>
+      </trans-unit>
+      <trans-unit id="app.updated_at">
+        <source>app.updated_at</source>
+      </trans-unit>
+      <trans-unit id="app.link.intercorp">
+        <source>app.link.intercorp</source>
+      </trans-unit>
+      <trans-unit id="app.abbreviation">
+        <source>app.abbreviation</source>
+      </trans-unit>
+      <trans-unit id="app.meaning">
+        <source>app.meaning</source>
+      </trans-unit>
+      <trans-unit id="app.title.about_project">
+        <source>app.title.about_project</source>
+      </trans-unit>
+      <trans-unit id="app.topics">
+        <source>app.topics</source>
+      </trans-unit>
+      <trans-unit id="admin.button.preview">
+        <source>admin.button.preview</source>
+      </trans-unit>
+      <trans-unit id="admin.name">
+        <source>admin.name</source>
+      </trans-unit>
+      <trans-unit id="admin.email">
+        <source>admin.email</source>
+      </trans-unit>
+      <trans-unit id="admin.announcements">
+        <source>admin.announcements</source>
+      </trans-unit>
+      <trans-unit id="admin.author">
+        <source>admin.author</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_announcement">
+        <source>admin.button.add_announcement</source>
+      </trans-unit>
+      <trans-unit id="admin.posts">
+        <source>admin.posts</source>
+      </trans-unit>
+      <trans-unit id="admin.slug">
+        <source>admin.slug</source>
+      </trans-unit>
+      <trans-unit id="admin.button.add_post">
+        <source>admin.button.add_post</source>
+      </trans-unit>
+      <trans-unit id="admin.position">
+        <source>admin.position</source>
+      </trans-unit>
+      <trans-unit id="admin.messages">
+        <source>admin.messages</source>
+      </trans-unit>
+      <trans-unit id="app.title.feedback">
+        <source>app.title.feedback</source>
+      </trans-unit>
+      <trans-unit id="app.button.close">
+        <source>app.button.close</source>
+      </trans-unit>
+      <trans-unit id="app.button.send">
+        <source>app.button.send</source>
+      </trans-unit>
+      <trans-unit id="admin.content">
+        <source>admin.content</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

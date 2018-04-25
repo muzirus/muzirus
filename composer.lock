@@ -6803,6 +6803,7 @@
                 "MIT"
             ],
             "description": "Slim wrapper around phpdocumentor/reflection-docblock with better DX and simpler API.",
+            "abandoned": "symplify/better-phpdoc-parser",
             "time": "2018-04-08T22:58:47+00:00"
         },
         {
