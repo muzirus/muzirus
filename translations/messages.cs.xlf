@@ -290,9 +290,9 @@
         <source>admin.word_with_accent</source>
         <target xml:lang="cs" state="translated">Slovo s akcentem</target>
       </trans-unit>
-      <trans-unit id="admin.word_with_accent_is_missing">
+      <trans-unit id="admin.word_with_accent_is_missing" approved="yes">
         <source>admin.word_with_accent_is_missing</source>
-        <target xml:lang="cs" state="translated">Chybí slovo s akcentem (uložte formulář)</target>
+        <target xml:lang="cs">Chybí slovo s akcentem (uložte formulář)</target>
       </trans-unit>
       <trans-unit id="admin.yes">
         <source>admin.yes</source>
@@ -342,9 +342,9 @@
         <source>admin.topic</source>
         <target xml:lang="cs" state="translated">Tematický okruh</target>
       </trans-unit>
-      <trans-unit id="app.title">
+      <trans-unit id="app.title" approved="yes">
         <source>app.title</source>
-        <target xml:lang="cs" state="translated">Rusko-český, česko-ruský slovník hudebních pojmů online</target>
+        <target xml:lang="cs">Rusko-český, česko-ruský slovník hudebních pojmů online</target>
       </trans-unit>
       <trans-unit id="app.title.topics">
         <source>app.title.topics</source>
@@ -374,13 +374,13 @@
         <source>app.title.suggest_improvement</source>
         <target xml:lang="cs" state="translated">Navrhnout zlepšení</target>
       </trans-unit>
-      <trans-unit id="app.updated_at">
+      <trans-unit id="app.updated_at" approved="yes">
         <source>app.updated_at</source>
-        <target xml:lang="cs" state="translated">Datum poslední změny:</target>
+        <target xml:lang="cs">Datum poslední změny:</target>
       </trans-unit>
-      <trans-unit id="app.link.intercorp">
+      <trans-unit id="app.link.intercorp" approved="yes">
         <source>app.link.intercorp</source>
-        <target xml:lang="cs" state="translated">Odkaz na heslo v korpusech InterCorp</target>
+        <target xml:lang="cs">Odkaz na heslo v korpusech InterCorp</target>
       </trans-unit>
       <trans-unit id="app.abbreviation">
         <source>app.abbreviation</source>
@@ -426,9 +426,9 @@
         <source>admin.posts</source>
         <target xml:lang="cs" state="translated">Články</target>
       </trans-unit>
-      <trans-unit id="admin.slug">
+      <trans-unit id="admin.slug" approved="yes">
         <source>admin.slug</source>
-        <target xml:lang="cs" state="translated">Slug</target>
+        <target xml:lang="cs">Slug</target>
       </trans-unit>
       <trans-unit id="admin.button.add_post">
         <source>admin.button.add_post</source>
