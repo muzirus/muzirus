@@ -4,15 +4,15 @@
     <body>
       <trans-unit id="admin.abbreviations">
         <source>admin.abbreviations</source>
-        <target xml:lang="en" state="needs-translation">admin.abbreviations</target>
+        <target xml:lang="en" state="translated">Abbreviations</target>
       </trans-unit>
       <trans-unit id="admin.actions">
         <source>admin.actions</source>
-        <target xml:lang="en" state="needs-translation">admin.actions</target>
+        <target xml:lang="en" state="translated">Actions</target>
       </trans-unit>
       <trans-unit id="admin.activities">
         <source>admin.activities</source>
-        <target xml:lang="en" state="needs-translation">admin.activities</target>
+        <target xml:lang="en" state="translated">Activities</target>
       </trans-unit>
       <trans-unit id="admin.approved">
         <source>admin.approved</source>
