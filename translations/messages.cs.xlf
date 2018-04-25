@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="zu" target-language="cs" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="admin.abbreviations">
+        <source>admin.abbreviations</source>
+        <target xml:lang="cs" state="translated">Zkratky</target>
+      </trans-unit>
+      <trans-unit id="admin.actions">
+        <source>admin.actions</source>
+        <target xml:lang="cs" state="translated">Akce</target>
+      </trans-unit>
+      <trans-unit id="admin.activities">
+        <source>admin.activities</source>
+        <target xml:lang="cs" state="translated">Aktivity</target>
+      </trans-unit>
+      <trans-unit id="admin.approved">
+        <source>admin.approved</source>
+        <target xml:lang="cs" state="translated">Schváleno</target>
+      </trans-unit>
+      <trans-unit id="admin.authors">
+        <source>admin.authors</source>
+        <target xml:lang="cs" state="translated">Autoři</target>
+      </trans-unit>
+      <trans-unit id="admin.box.title.add">
+        <source>admin.box.title.add</source>
+        <target xml:lang="cs" state="translated">Přidat</target>
+      </trans-unit>
+      <trans-unit id="admin.box.title.edit">
+        <source>admin.box.title.edit</source>
+        <target xml:lang="cs" state="translated">Upravit</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_abbreviation">
+        <source>admin.button.add_abbreviation</source>
+        <target xml:lang="cs" state="translated">Přidat zkratku</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_category">
+        <source>admin.button.add_category</source>
+        <target xml:lang="cs" state="translated">Přidat kategorii</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_equivalent">
+        <source>admin.button.add_equivalent</source>
+        <target xml:lang="cs" state="translated">Přidat ekvivalent</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_new">
+        <source>admin.button.add_new</source>
+        <target xml:lang="cs" state="translated">Přidat nové</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_source">
+        <source>admin.button.add_source</source>
+        <target xml:lang="cs" state="translated">Přidat zdroj</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_source_type">
+        <source>admin.button.add_source_type</source>
+        <target xml:lang="cs" state="translated">Přidat typ zdroje</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_symbol">
+        <source>admin.button.add_symbol</source>
+        <target xml:lang="cs" state="translated">Přidat symbol</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_word">
+        <source>admin.button.add_word</source>
+        <target xml:lang="cs" state="translated">Přidat slovo</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_user">
+        <source>admin.button.add_user</source>
+        <target xml:lang="cs" state="translated">Přidat uživatele</target>
+      </trans-unit>
+      <trans-unit id="admin.button.back_to_list">
+        <source>admin.button.back_to_list</source>
+        <target xml:lang="cs" state="translated">Zpět na seznam</target>
+      </trans-unit>
+      <trans-unit id="admin.button.back_to_translations">
+        <source>admin.button.back_to_translations</source>
+        <target xml:lang="cs" state="translated">Zpět na překlady</target>
+      </trans-unit>
+      <trans-unit id="admin.button.back_to_translation_examples">
+        <source>admin.button.back_to_translation_examples</source>
+        <target xml:lang="cs" state="translated">Zpět na ukázky překladů</target>
+      </trans-unit>
+      <trans-unit id="admin.button.edit">
+        <source>admin.button.edit</source>
+        <target xml:lang="cs" state="translated">Upravit</target>
+      </trans-unit>
+      <trans-unit id="admin.button.remove">
+        <source>admin.button.remove</source>
+        <target xml:lang="cs" state="translated">Odstranit</target>
+      </trans-unit>
+      <trans-unit id="admin.button.save">
+        <source>admin.button.save</source>
+        <target xml:lang="cs" state="translated">Uložit</target>
+      </trans-unit>
+      <trans-unit id="admin.button.save_and_new">
+        <source>admin.button.save_and_new</source>
+        <target xml:lang="cs" state="translated">Uložit a nové</target>
+      </trans-unit>
+      <trans-unit id="admin.created">
+        <source>admin.created</source>
+        <target xml:lang="cs" state="translated">Vytvořeno</target>
+      </trans-unit>
+      <trans-unit id="admin.czech">
+        <source>admin.czech</source>
+        <target xml:lang="cs" state="translated">České</target>
+      </trans-unit>
+      <trans-unit id="admin.czech_note">
+        <source>admin.czech_note</source>
+        <target xml:lang="cs" state="translated">Česká poznámka</target>
+      </trans-unit>
+      <trans-unit id="admin.czech_sentence">
+        <source>admin.czech_sentence</source>
+        <target xml:lang="cs" state="translated">Česká věta</target>
+      </trans-unit>
+      <trans-unit id="admin.czech_word">
+        <source>admin.czech_word</source>
+        <target xml:lang="cs" state="translated">České slovo</target>
+      </trans-unit>
+      <trans-unit id="admin.czech_words">
+        <source>admin.czech_words</source>
+        <target xml:lang="cs" state="translated">Česká slova</target>
+      </trans-unit>
+      <trans-unit id="admin.dashboard">
+        <source>admin.dashboard</source>
+        <target xml:lang="cs" state="translated">Nástěnka</target>
+      </trans-unit>
+      <trans-unit id="admin.deleted">
+        <source>admin.deleted</source>
+        <target xml:lang="cs" state="translated">Smazáno</target>
+      </trans-unit>
+      <trans-unit id="admin.description">
+        <source>admin.description</source>
+        <target xml:lang="cs" state="translated">Popis</target>
+      </trans-unit>
+      <trans-unit id="admin.examples">
+        <source>admin.examples</source>
+        <target xml:lang="cs" state="translated">Ukázky</target>
+      </trans-unit>
+      <trans-unit id="admin.explanation">
+        <source>admin.explanation</source>
+        <target xml:lang="cs" state="translated">Vysvětlení</target>
+      </trans-unit>
+      <trans-unit id="admin.gender">
+        <source>admin.gender</source>
+        <target xml:lang="cs" state="translated">Rod</target>
+      </trans-unit>
+      <trans-unit id="admin.hidden">
+        <source>admin.hidden</source>
+        <target xml:lang="cs" state="translated">Schováno</target>
+      </trans-unit>
+      <trans-unit id="admin.home">
+        <source>admin.home</source>
+        <target xml:lang="cs" state="translated">Domů</target>
+      </trans-unit>
+      <trans-unit id="admin.inflection">
+        <source>admin.inflection</source>
+        <target xml:lang="cs" state="translated">Skloňování</target>
+      </trans-unit>
+      <trans-unit id="admin.language_note">
+        <source>admin.language_note</source>
+        <target xml:lang="cs" state="translated">Jazyková poznámka</target>
+      </trans-unit>
+      <trans-unit id="admin.news">
+        <source>admin.news</source>
+        <target xml:lang="cs" state="translated">Novinky</target>
+      </trans-unit>
+      <trans-unit id="admin.no">
+        <source>admin.no</source>
+        <target xml:lang="cs" state="translated">Ne</target>
+      </trans-unit>
+      <trans-unit id="admin.no_news_yet">
+        <source>admin.no_news_yet</source>
+        <target xml:lang="cs" state="translated">Zatím žádné novinky</target>
+      </trans-unit>
+      <trans-unit id="admin.original_database">
+        <source>admin.original_database</source>
+        <target xml:lang="cs" state="translated">Původní databáze</target>
+      </trans-unit>
+      <trans-unit id="admin.other">
+        <source>admin.other</source>
+        <target xml:lang="cs" state="translated">Ostatní</target>
+      </trans-unit>
+      <trans-unit id="admin.pages_count">
+        <source>admin.pages_count</source>
+        <target xml:lang="cs" state="translated">Počet stran</target>
+      </trans-unit>
+      <trans-unit id="admin.published_date">
+        <source>admin.published_date</source>
+        <target xml:lang="cs" state="translated">Datum vydání</target>
+      </trans-unit>
+      <trans-unit id="admin.published_place">
+        <source>admin.published_place</source>
+        <target xml:lang="cs" state="translated">Místo vydání</target>
+      </trans-unit>
+      <trans-unit id="admin.publisher">
+        <source>admin.publisher</source>
+        <target xml:lang="cs" state="translated">Vydavatel</target>
+      </trans-unit>
+      <trans-unit id="admin.russian">
+        <source>admin.russian</source>
+        <target xml:lang="cs" state="translated">Ruské</target>
+      </trans-unit>
+      <trans-unit id="admin.russian_words">
+        <source>admin.russian_words</source>
+        <target xml:lang="cs" state="translated">Ruská slova</target>
+      </trans-unit>
+      <trans-unit id="admin.russian_note">
+        <source>admin.russian_note</source>
+        <target xml:lang="cs" state="translated">Ruská poznámka</target>
+      </trans-unit>
+      <trans-unit id="admin.russian_sentence">
+        <source>admin.russian_sentence</source>
+        <target xml:lang="cs" state="translated">Ruská věta</target>
+      </trans-unit>
+      <trans-unit id="admin.russian_word">
+        <source>admin.russian_word</source>
+        <target xml:lang="cs" state="translated">Ruské slovo</target>
+      </trans-unit>
+      <trans-unit id="admin.sign_out">
+        <source>admin.sign_out</source>
+        <target xml:lang="cs" state="translated">Odhlásit</target>
+      </trans-unit>
+      <trans-unit id="admin.source">
+        <source>admin.source</source>
+        <target xml:lang="cs" state="translated">Zdroj</target>
+      </trans-unit>
+      <trans-unit id="admin.sources">
+        <source>admin.sources</source>
+        <target xml:lang="cs" state="translated">Zdroje</target>
+      </trans-unit>
+      <trans-unit id="admin.source_types">
+        <source>admin.source_types</source>
+        <target xml:lang="cs" state="translated">Typy zdrojů</target>
+      </trans-unit>
+      <trans-unit id="admin.status">
+        <source>admin.status</source>
+        <target xml:lang="cs" state="translated">Stav</target>
+      </trans-unit>
+      <trans-unit id="admin.symbols">
+        <source>admin.symbols</source>
+        <target xml:lang="cs" state="translated">Symboly</target>
+      </trans-unit>
+      <trans-unit id="admin.system">
+        <source>admin.system</source>
+        <target xml:lang="cs" state="translated">Systém</target>
+      </trans-unit>
+      <trans-unit id="admin.tab.edit">
+        <source>admin.tab.edit</source>
+        <target xml:lang="cs" state="translated">Upravit</target>
+      </trans-unit>
+      <trans-unit id="admin.title">
+        <source>admin.title</source>
+        <target xml:lang="cs" state="translated">Název</target>
+      </trans-unit>
+      <trans-unit id="admin.translation">
+        <source>admin.translation</source>
+        <target xml:lang="cs" state="translated">Překlad</target>
+      </trans-unit>
+      <trans-unit id="admin.translations">
+        <source>admin.translations</source>
+        <target xml:lang="cs" state="translated">Překlady</target>
+      </trans-unit>
+      <trans-unit id="admin.type">
+        <source>admin.type</source>
+        <target xml:lang="cs" state="translated">Typ</target>
+      </trans-unit>
+      <trans-unit id="admin.updated">
+        <source>admin.updated</source>
+        <target xml:lang="cs" state="translated">Aktualizováno</target>
+      </trans-unit>
+      <trans-unit id="admin.users">
+        <source>admin.users</source>
+        <target xml:lang="cs" state="translated">Uživatelé</target>
+      </trans-unit>
+      <trans-unit id="admin.value">
+        <source>admin.value</source>
+        <target xml:lang="cs" state="translated">Hodnota</target>
+      </trans-unit>
+      <trans-unit id="admin.visit_site">
+        <source>admin.visit_site</source>
+        <target xml:lang="cs" state="translated">Zobrazit stránku</target>
+      </trans-unit>
+      <trans-unit id="admin.word">
+        <source>admin.word</source>
+        <target xml:lang="cs" state="translated">Slovo</target>
+      </trans-unit>
+      <trans-unit id="admin.words">
+        <source>admin.words</source>
+        <target xml:lang="cs" state="translated">Slova</target>
+      </trans-unit>
+      <trans-unit id="admin.word_with_accent">
+        <source>admin.word_with_accent</source>
+        <target xml:lang="cs" state="translated">Slovo s akcentem</target>
+      </trans-unit>
+      <trans-unit id="admin.word_with_accent_is_missing">
+        <source>admin.word_with_accent_is_missing</source>
+        <target xml:lang="cs" state="translated">Chybí slovo s akcentem (uložte formulář)</target>
+      </trans-unit>
+      <trans-unit id="admin.yes">
+        <source>admin.yes</source>
+        <target xml:lang="cs" state="translated">Ano</target>
+      </trans-unit>
+      <trans-unit id="admin.not_processed">
+        <source>admin.not_processed</source>
+        <target xml:lang="cs" state="translated">Nezpracováno</target>
+      </trans-unit>
+      <trans-unit id="admin.equivalents_not_found">
+        <source>admin.equivalents_not_found</source>
+        <target xml:lang="cs" state="translated">Nalezeny ekvivalenty</target>
+      </trans-unit>
+      <trans-unit id="admin.examples_added">
+        <source>admin.examples_added</source>
+        <target xml:lang="cs" state="translated">Vloženy ukázky</target>
+      </trans-unit>
+      <trans-unit id="admin.checked">
+        <source>admin.checked</source>
+        <target xml:lang="cs" state="translated">Zkontrolováno</target>
+      </trans-unit>
+      <trans-unit id="admin.tab.equivalents">
+        <source>admin.tab.equivalents</source>
+        <target xml:lang="cs" state="translated">Ekvivalenty</target>
+      </trans-unit>
+      <trans-unit id="admin.no_content">
+        <source>admin.no_content</source>
+        <target xml:lang="cs" state="translated">Žádný obsah</target>
+      </trans-unit>
+      <trans-unit id="admin.equivalents">
+        <source>admin.equivalents</source>
+        <target xml:lang="cs" state="translated">Ekvivalenty</target>
+      </trans-unit>
+      <trans-unit id="admin.exemplifications">
+        <source>admin.exemplifications</source>
+        <target xml:lang="cs" state="translated">Exemplifikace</target>
+      </trans-unit>
+      <trans-unit id="admin.exception_to_inflection">
+        <source>admin.exception_to_inflection</source>
+        <target xml:lang="cs" state="translated">Výjimky</target>
+      </trans-unit>
+      <trans-unit id="admin.topics">
+        <source>admin.topics</source>
+        <target xml:lang="cs" state="translated">Tematické okruhy</target>
+      </trans-unit>
+      <trans-unit id="admin.topic">
+        <source>admin.topic</source>
+        <target xml:lang="cs" state="translated">Tematický okruh</target>
+      </trans-unit>
+      <trans-unit id="app.title">
+        <source>app.title</source>
+        <target xml:lang="cs" state="translated">Rusko-český, česko-ruský slovník hudebních pojmů online</target>
+      </trans-unit>
+      <trans-unit id="app.title.topics">
+        <source>app.title.topics</source>
+        <target xml:lang="cs" state="translated">Tematické okruhy</target>
+      </trans-unit>
+      <trans-unit id="app.title.vocabulary_russian">
+        <source>app.title.vocabulary_russian</source>
+        <target xml:lang="cs" state="translated">Ruský heslář</target>
+      </trans-unit>
+      <trans-unit id="app.title.vocabulary_czech">
+        <source>app.title.vocabulary_czech</source>
+        <target xml:lang="cs" state="translated">Český heslář</target>
+      </trans-unit>
+      <trans-unit id="app.title.abbreviations">
+        <source>app.title.abbreviations</source>
+        <target xml:lang="cs" state="translated">Zkratky</target>
+      </trans-unit>
+      <trans-unit id="app.title.notations">
+        <source>app.title.notations</source>
+        <target xml:lang="cs" state="translated">Notace</target>
+      </trans-unit>
+      <trans-unit id="app.title.proccessing_of_words">
+        <source>app.title.proccessing_of_words</source>
+        <target xml:lang="cs" state="translated">Zpracování hesel</target>
+      </trans-unit>
+      <trans-unit id="app.title.suggest_improvement">
+        <source>app.title.suggest_improvement</source>
+        <target xml:lang="cs" state="translated">Navrhnout zlepšení</target>
+      </trans-unit>
+      <trans-unit id="app.updated_at">
+        <source>app.updated_at</source>
+        <target xml:lang="cs" state="translated">Datum poslední změny:</target>
+      </trans-unit>
+      <trans-unit id="app.link.intercorp">
+        <source>app.link.intercorp</source>
+        <target xml:lang="cs" state="translated">Odkaz na heslo v korpusech InterCorp</target>
+      </trans-unit>
+      <trans-unit id="app.abbreviation">
+        <source>app.abbreviation</source>
+        <target xml:lang="cs" state="translated">Zkratka</target>
+      </trans-unit>
+      <trans-unit id="app.meaning">
+        <source>app.meaning</source>
+        <target xml:lang="cs" state="translated">Význam</target>
+      </trans-unit>
+      <trans-unit id="app.title.about_project">
+        <source>app.title.about_project</source>
+        <target xml:lang="cs" state="translated">O projektu</target>
+      </trans-unit>
+      <trans-unit id="app.topics">
+        <source>app.topics</source>
+        <target xml:lang="cs" state="translated">Tematické okruhy</target>
+      </trans-unit>
+      <trans-unit id="admin.button.preview">
+        <source>admin.button.preview</source>
+        <target xml:lang="cs" state="translated">Zobrazit ukázku</target>
+      </trans-unit>
+      <trans-unit id="admin.name">
+        <source>admin.name</source>
+        <target xml:lang="cs" state="translated">Jméno</target>
+      </trans-unit>
+      <trans-unit id="admin.email">
+        <source>admin.email</source>
+        <target xml:lang="cs" state="translated">Email</target>
+      </trans-unit>
+      <trans-unit id="admin.announcements">
+        <source>admin.announcements</source>
+        <target xml:lang="cs" state="translated">Oznámení</target>
+      </trans-unit>
+      <trans-unit id="admin.author">
+        <source>admin.author</source>
+        <target xml:lang="cs" state="translated">Autor</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_announcement">
+        <source>admin.button.add_announcement</source>
+        <target xml:lang="cs" state="translated">Přidat oznámení</target>
+      </trans-unit>
+      <trans-unit id="admin.posts">
+        <source>admin.posts</source>
+        <target xml:lang="cs" state="translated">Články</target>
+      </trans-unit>
+      <trans-unit id="admin.slug">
+        <source>admin.slug</source>
+        <target xml:lang="cs" state="translated">Slug</target>
+      </trans-unit>
+      <trans-unit id="admin.button.add_post">
+        <source>admin.button.add_post</source>
+        <target xml:lang="cs" state="translated">Přidat článek</target>
+      </trans-unit>
+      <trans-unit id="admin.position">
+        <source>admin.position</source>
+        <target xml:lang="cs" state="translated">Pozice</target>
+      </trans-unit>
+      <trans-unit id="admin.messages">
+        <source>admin.messages</source>
+        <target xml:lang="cs" state="translated">Zprávy</target>
+      </trans-unit>
+      <trans-unit id="app.title.feedback">
+        <source>app.title.feedback</source>
+        <target xml:lang="cs" state="translated">Navrhnout zlepšení</target>
+      </trans-unit>
+      <trans-unit id="app.button.close">
+        <source>app.button.close</source>
+        <target xml:lang="cs" state="translated">Zavřít</target>
+      </trans-unit>
+      <trans-unit id="app.button.send">
+        <source>app.button.send</source>
+        <target xml:lang="cs" state="translated">Odeslat</target>
+      </trans-unit>
+      <trans-unit id="admin.content">
+        <source>admin.content</source>
+        <target xml:lang="cs" state="translated">Obsah</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
