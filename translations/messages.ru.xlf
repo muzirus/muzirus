@@ -64,7 +64,7 @@
       </trans-unit>
       <trans-unit id="admin.button.add_user">
         <source>admin.button.add_user</source>
-        <target xml:lang="ru" state="translated">__admin.button.add_user</target>
+        <target xml:lang="ru" state="needs-translation">admin.button.add_user</target>
       </trans-unit>
       <trans-unit id="admin.button.back_to_list">
         <source>admin.button.back_to_list</source>
@@ -408,11 +408,11 @@
       </trans-unit>
       <trans-unit id="admin.email">
         <source>admin.email</source>
-        <target xml:lang="ru" state="translated">__admin.email</target>
+        <target xml:lang="ru" state="needs-translation">admin.email</target>
       </trans-unit>
       <trans-unit id="admin.announcements">
         <source>admin.announcements</source>
-        <target xml:lang="ru" state="translated">__admin.announcements</target>
+        <target xml:lang="ru" state="needs-translation">admin.announcements</target>
       </trans-unit>
       <trans-unit id="admin.author">
         <source>admin.author</source>
@@ -420,27 +420,27 @@
       </trans-unit>
       <trans-unit id="admin.button.add_announcement">
         <source>admin.button.add_announcement</source>
-        <target xml:lang="ru" state="translated">__admin.button.add_announcement</target>
+        <target xml:lang="ru" state="needs-translation">admin.button.add_announcement</target>
       </trans-unit>
       <trans-unit id="admin.posts">
         <source>admin.posts</source>
-        <target xml:lang="ru" state="translated">__admin.posts</target>
+        <target xml:lang="ru" state="needs-translation">admin.posts</target>
       </trans-unit>
       <trans-unit id="admin.slug">
         <source>admin.slug</source>
-        <target xml:lang="ru" state="translated">__admin.slug</target>
+        <target xml:lang="ru" state="needs-translation">admin.slug</target>
       </trans-unit>
       <trans-unit id="admin.button.add_post">
         <source>admin.button.add_post</source>
-        <target xml:lang="ru" state="translated">__admin.button.add_post</target>
+        <target xml:lang="ru" state="needs-translation">admin.button.add_post</target>
       </trans-unit>
       <trans-unit id="admin.position">
         <source>admin.position</source>
-        <target xml:lang="ru" state="translated">__admin.position</target>
+        <target xml:lang="ru" state="needs-translation">admin.position</target>
       </trans-unit>
       <trans-unit id="admin.messages">
         <source>admin.messages</source>
-        <target xml:lang="ru" state="translated">__admin.messages</target>
+        <target xml:lang="ru" state="needs-translation">admin.messages</target>
       </trans-unit>
       <trans-unit id="app.title.feedback">
         <source>app.title.feedback</source>
@@ -456,7 +456,7 @@
       </trans-unit>
       <trans-unit id="admin.content">
         <source>admin.content</source>
-        <target xml:lang="ru" state="translated">__admin.content</target>
+        <target xml:lang="ru" state="needs-translation">admin.content</target>
       </trans-unit>
     </body>
   </file>
