@@ -40,23 +40,23 @@
       </trans-unit>
       <trans-unit id="admin.button.add_equivalent">
         <source>admin.button.add_equivalent</source>
-        <target xml:lang="en" state="needs-translation">admin.button.add_equivalent</target>
+        <target xml:lang="en" state="translated">Add equivalent</target>
       </trans-unit>
       <trans-unit id="admin.button.add_new">
         <source>admin.button.add_new</source>
-        <target xml:lang="en" state="needs-translation">admin.button.add_new</target>
+        <target xml:lang="en" state="translated">Add new</target>
       </trans-unit>
       <trans-unit id="admin.button.add_source">
         <source>admin.button.add_source</source>
-        <target xml:lang="en" state="needs-translation">admin.button.add_source</target>
+        <target xml:lang="en" state="translated">Add source</target>
       </trans-unit>
       <trans-unit id="admin.button.add_source_type">
         <source>admin.button.add_source_type</source>
-        <target xml:lang="en" state="needs-translation">admin.button.add_source_type</target>
+        <target xml:lang="en" state="translated">Add source type</target>
       </trans-unit>
       <trans-unit id="admin.button.add_symbol">
         <source>admin.button.add_symbol</source>
-        <target xml:lang="en" state="needs-translation">admin.button.add_symbol</target>
+        <target xml:lang="en" state="translated">Add symbol</target>
       </trans-unit>
       <trans-unit id="admin.button.add_word">
         <source>admin.button.add_word</source>
