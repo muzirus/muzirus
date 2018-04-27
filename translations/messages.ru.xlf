@@ -7,483 +7,483 @@
     <body>
       <trans-unit id="CGzZr97" resname="admin.abbreviations">
         <source>admin.abbreviations</source>
-        <target state="translated">Сокращения</target>
+        <target xml:lang="ru" state="translated">Сокращения</target>
       </trans-unit>
       <trans-unit id="sbhZQg4" resname="admin.actions">
         <source>admin.actions</source>
-        <target state="translated">Действие</target>
+        <target xml:lang="ru" state="translated">Действие</target>
       </trans-unit>
       <trans-unit id="pi9wrKg" resname="admin.activities">
         <source>admin.activities</source>
-        <target state="translated">Деятельность</target>
+        <target xml:lang="ru" state="translated">Деятельность</target>
       </trans-unit>
       <trans-unit id="ZV9LX17" resname="admin.approved">
         <source>admin.approved</source>
-        <target state="translated">Одобрено</target>
+        <target xml:lang="ru" state="translated">Одобрено</target>
       </trans-unit>
       <trans-unit id="P.Hnfjo" resname="admin.authors">
         <source>admin.authors</source>
-        <target state="translated">Авторы</target>
+        <target xml:lang="ru" state="translated">Авторы</target>
       </trans-unit>
       <trans-unit id="4BclTtg" resname="admin.box.title.add">
         <source>admin.box.title.add</source>
-        <target state="translated">Добавить</target>
+        <target xml:lang="ru" state="translated">Добавить</target>
       </trans-unit>
       <trans-unit id="Ksz0Zf3" resname="admin.box.title.edit">
         <source>admin.box.title.edit</source>
-        <target state="translated">Отредактировать</target>
+        <target xml:lang="ru" state="translated">Отредактировать</target>
       </trans-unit>
       <trans-unit id="Ey5h7lv" resname="admin.button.add_abbreviation">
         <source>admin.button.add_abbreviation</source>
-        <target state="translated">Добавить сокращение</target>
+        <target xml:lang="ru" state="translated">Добавить сокращение</target>
       </trans-unit>
       <trans-unit id="C.SnTPc" resname="admin.button.add_category">
         <source>admin.button.add_category</source>
-        <target state="translated">Добавить категорию</target>
+        <target xml:lang="ru" state="translated">Добавить категорию</target>
       </trans-unit>
       <trans-unit id="QoqVREI" resname="admin.button.add_equivalent">
         <source>admin.button.add_equivalent</source>
-        <target state="translated">Добавить эквивалент</target>
+        <target xml:lang="ru" state="translated">Добавить эквивалент</target>
       </trans-unit>
       <trans-unit id="DlJl4e5" resname="admin.button.add_new">
         <source>admin.button.add_new</source>
-        <target state="translated">Добавить новый</target>
+        <target xml:lang="ru" state="translated">Добавить новый</target>
       </trans-unit>
       <trans-unit id="fGgNoTe" resname="admin.button.add_source">
         <source>admin.button.add_source</source>
-        <target state="translated">Добавить источник</target>
+        <target xml:lang="ru" state="translated">Добавить источник</target>
       </trans-unit>
       <trans-unit id="0TR5Jf5" resname="admin.button.add_source_type">
         <source>admin.button.add_source_type</source>
-        <target state="translated">Добавить тип источника</target>
+        <target xml:lang="ru" state="translated">Добавить тип источника</target>
       </trans-unit>
       <trans-unit id="n917io5" resname="admin.button.add_symbol">
         <source>admin.button.add_symbol</source>
-        <target state="translated">Добавить символ</target>
+        <target xml:lang="ru" state="translated">Добавить символ</target>
       </trans-unit>
       <trans-unit id="WU8OgUk" resname="admin.button.add_word">
         <source>admin.button.add_word</source>
-        <target state="translated">Добавить слово</target>
+        <target xml:lang="ru" state="translated">Добавить слово</target>
       </trans-unit>
       <trans-unit id="TVLcjT8" resname="admin.button.add_user">
         <source>admin.button.add_user</source>
-        <target state="needs-translation">admin.button.add_user</target>
+        <target xml:lang="ru" state="needs-translation">admin.button.add_user</target>
       </trans-unit>
       <trans-unit id="yXBGMRp" resname="admin.button.back_to_list">
         <source>admin.button.back_to_list</source>
-        <target state="translated">Обратно к списку</target>
+        <target xml:lang="ru" state="translated">Обратно к списку</target>
       </trans-unit>
       <trans-unit id="ZLMhXCg" resname="admin.button.back_to_translations">
         <source>admin.button.back_to_translations</source>
-        <target state="translated">Обратно к переводам</target>
+        <target xml:lang="ru" state="translated">Обратно к переводам</target>
       </trans-unit>
       <trans-unit id="2eOpgs4" resname="admin.button.back_to_translation_examples">
         <source>admin.button.back_to_translation_examples</source>
-        <target state="translated">Обратно к показам эквивалентов</target>
+        <target xml:lang="ru" state="translated">Обратно к показам эквивалентов</target>
       </trans-unit>
       <trans-unit id="YvRfkVZ" resname="admin.button.edit">
         <source>admin.button.edit</source>
-        <target state="translated">Отредактировать</target>
+        <target xml:lang="ru" state="translated">Отредактировать</target>
       </trans-unit>
       <trans-unit id="EFinykD" resname="admin.button.remove">
         <source>admin.button.remove</source>
-        <target state="translated">Удалить</target>
+        <target xml:lang="ru" state="translated">Удалить</target>
       </trans-unit>
       <trans-unit id="VJnpThW" resname="admin.button.save">
         <source>admin.button.save</source>
-        <target state="translated">Сохранить</target>
+        <target xml:lang="ru" state="translated">Сохранить</target>
       </trans-unit>
       <trans-unit id="TsqB94w" resname="admin.button.save_and_new">
         <source>admin.button.save_and_new</source>
-        <target state="translated">Сохранить и добавить новое</target>
+        <target xml:lang="ru" state="translated">Сохранить и добавить новое</target>
       </trans-unit>
       <trans-unit id="wxCfZlI" resname="admin.created">
         <source>admin.created</source>
-        <target state="translated">Создано</target>
+        <target xml:lang="ru" state="translated">Создано</target>
       </trans-unit>
       <trans-unit id="SMA_Ggq" resname="admin.czech">
         <source>admin.czech</source>
-        <target state="translated">Чешские</target>
+        <target xml:lang="ru" state="translated">Чешские</target>
       </trans-unit>
       <trans-unit id="7wvN45X" resname="admin.czech_note">
         <source>admin.czech_note</source>
-        <target state="translated">Чешское примечание</target>
+        <target xml:lang="ru" state="translated">Чешское примечание</target>
       </trans-unit>
       <trans-unit id="uNVn6wf" resname="admin.czech_sentence">
         <source>admin.czech_sentence</source>
-        <target state="translated">Чешское предложение</target>
+        <target xml:lang="ru" state="translated">Чешское предложение</target>
       </trans-unit>
       <trans-unit id="erA_SSh" resname="admin.czech_word">
         <source>admin.czech_word</source>
-        <target state="translated">Чешское слово</target>
+        <target xml:lang="ru" state="translated">Чешское слово</target>
       </trans-unit>
       <trans-unit id="QUx_B.1" resname="admin.czech_words">
         <source>admin.czech_words</source>
-        <target state="translated">Чешские слова</target>
+        <target xml:lang="ru" state="translated">Чешские слова</target>
       </trans-unit>
       <trans-unit id="540R2gg" resname="admin.dashboard">
         <source>admin.dashboard</source>
-        <target state="translated">Лента новостей</target>
+        <target xml:lang="ru" state="translated">Лента новостей</target>
       </trans-unit>
       <trans-unit id="cGC_Rml" resname="admin.deleted">
         <source>admin.deleted</source>
-        <target state="translated">Удалено</target>
+        <target xml:lang="ru" state="translated">Удалено</target>
       </trans-unit>
       <trans-unit id="QTO0aOj" resname="admin.description">
         <source>admin.description</source>
-        <target state="translated">Описание</target>
+        <target xml:lang="ru" state="translated">Описание</target>
       </trans-unit>
       <trans-unit id="CBbI8g4" resname="admin.examples">
         <source>admin.examples</source>
-        <target state="translated">Примеры использования</target>
+        <target xml:lang="ru" state="translated">Примеры использования</target>
       </trans-unit>
       <trans-unit id="H1Z5Hld" resname="admin.explanation">
         <source>admin.explanation</source>
-        <target state="translated">Объяснение</target>
+        <target xml:lang="ru" state="translated">Объяснение</target>
       </trans-unit>
       <trans-unit id="q.FI9Wn" resname="admin.gender">
         <source>admin.gender</source>
-        <target state="translated">род</target>
+        <target xml:lang="ru" state="translated">род</target>
       </trans-unit>
       <trans-unit id=".dE4hhi" resname="admin.hidden">
         <source>admin.hidden</source>
-        <target state="translated">Скрыто</target>
+        <target xml:lang="ru" state="translated">Скрыто</target>
       </trans-unit>
       <trans-unit id="bNf4bJZ" resname="admin.home">
         <source>admin.home</source>
-        <target state="translated">Домашняя страница</target>
+        <target xml:lang="ru" state="translated">Домашняя страница</target>
       </trans-unit>
       <trans-unit id="dzNyV0R" resname="admin.inflection">
         <source>admin.inflection</source>
-        <target state="translated">Склонение</target>
+        <target xml:lang="ru" state="translated">Склонение</target>
       </trans-unit>
       <trans-unit id="zTvnmsO" resname="admin.language_note">
         <source>admin.language_note</source>
-        <target state="translated">Языковая помета</target>
+        <target xml:lang="ru" state="translated">Языковая помета</target>
       </trans-unit>
       <trans-unit id="VnaTAPO" resname="admin.news">
         <source>admin.news</source>
-        <target state="translated">Новости</target>
+        <target xml:lang="ru" state="translated">Новости</target>
       </trans-unit>
       <trans-unit id="8Kxt.xW" resname="admin.no">
         <source>admin.no</source>
-        <target state="translated">Нет</target>
+        <target xml:lang="ru" state="translated">Нет</target>
       </trans-unit>
       <trans-unit id="tb6FviE" resname="admin.no_news_yet">
         <source>admin.no_news_yet</source>
-        <target state="translated">Пока нет новостей</target>
+        <target xml:lang="ru" state="translated">Пока нет новостей</target>
       </trans-unit>
       <trans-unit id="8AyOkeC" resname="admin.original_database">
         <source>admin.original_database</source>
-        <target state="translated">Прежняя база данных</target>
+        <target xml:lang="ru" state="translated">Прежняя база данных</target>
       </trans-unit>
       <trans-unit id="o59YO88" resname="admin.other">
         <source>admin.other</source>
-        <target state="translated">Остальные</target>
+        <target xml:lang="ru" state="translated">Остальные</target>
       </trans-unit>
       <trans-unit id="1Z2K2C0" resname="admin.pages_count">
         <source>admin.pages_count</source>
-        <target state="translated">Число страниц</target>
+        <target xml:lang="ru" state="translated">Число страниц</target>
       </trans-unit>
       <trans-unit id="lcCLsWy" resname="admin.published_date">
         <source>admin.published_date</source>
-        <target state="translated">Дата издания</target>
+        <target xml:lang="ru" state="translated">Дата издания</target>
       </trans-unit>
       <trans-unit id="6SLpLKU" resname="admin.published_place">
         <source>admin.published_place</source>
-        <target state="translated">Место издания</target>
+        <target xml:lang="ru" state="translated">Место издания</target>
       </trans-unit>
       <trans-unit id="sFSIpnn" resname="admin.publisher">
         <source>admin.publisher</source>
-        <target state="translated">Издатель</target>
+        <target xml:lang="ru" state="translated">Издатель</target>
       </trans-unit>
       <trans-unit id="6kA8Ada" resname="admin.russian">
         <source>admin.russian</source>
-        <target state="translated">Русские</target>
+        <target xml:lang="ru" state="translated">Русские</target>
       </trans-unit>
       <trans-unit id="absP7S7" resname="admin.russian_words">
         <source>admin.russian_words</source>
-        <target state="translated">Русские слова</target>
+        <target xml:lang="ru" state="translated">Русские слова</target>
       </trans-unit>
       <trans-unit id=".lIOZ8u" resname="admin.russian_note">
         <source>admin.russian_note</source>
-        <target state="translated">Русское примечание</target>
+        <target xml:lang="ru" state="translated">Русское примечание</target>
       </trans-unit>
       <trans-unit id="EcLZZCv" resname="admin.russian_sentence">
         <source>admin.russian_sentence</source>
-        <target state="translated">Русское предложение</target>
+        <target xml:lang="ru" state="translated">Русское предложение</target>
       </trans-unit>
       <trans-unit id="EPxSfQm" resname="admin.russian_word">
         <source>admin.russian_word</source>
-        <target state="translated">Русское слово</target>
+        <target xml:lang="ru" state="translated">Русское слово</target>
       </trans-unit>
       <trans-unit id="4z_BI3K" resname="admin.sign_out">
         <source>admin.sign_out</source>
-        <target state="translated">Выйти</target>
+        <target xml:lang="ru" state="translated">Выйти</target>
       </trans-unit>
       <trans-unit id="_UEiBP." resname="admin.source">
         <source>admin.source</source>
-        <target state="translated">Источник</target>
+        <target xml:lang="ru" state="translated">Источник</target>
       </trans-unit>
       <trans-unit id="5OVojhB" resname="admin.sources">
         <source>admin.sources</source>
-        <target state="translated">Источники</target>
+        <target xml:lang="ru" state="translated">Источники</target>
       </trans-unit>
       <trans-unit id="mY5YSB." resname="admin.source_types">
         <source>admin.source_types</source>
-        <target state="translated">Типы источников</target>
+        <target xml:lang="ru" state="translated">Типы источников</target>
       </trans-unit>
       <trans-unit id="I0kHNHG" resname="admin.status">
         <source>admin.status</source>
-        <target state="translated">Состояние</target>
+        <target xml:lang="ru" state="translated">Состояние</target>
       </trans-unit>
       <trans-unit id="iAVdTlr" resname="admin.symbols">
         <source>admin.symbols</source>
-        <target state="translated">Символы</target>
+        <target xml:lang="ru" state="translated">Символы</target>
       </trans-unit>
       <trans-unit id="cuJvME7" resname="admin.system">
         <source>admin.system</source>
-        <target state="translated">Система</target>
+        <target xml:lang="ru" state="translated">Система</target>
       </trans-unit>
       <trans-unit id="ioIKL10" resname="admin.tab.edit">
         <source>admin.tab.edit</source>
-        <target state="translated">Отредактировать</target>
+        <target xml:lang="ru" state="translated">Отредактировать</target>
       </trans-unit>
       <trans-unit id="XneOvFD" resname="admin.title">
         <source>admin.title</source>
-        <target state="translated">Название</target>
+        <target xml:lang="ru" state="translated">Название</target>
       </trans-unit>
       <trans-unit id="BWcOky8" resname="admin.translation">
         <source>admin.translation</source>
-        <target state="translated">Перевод</target>
+        <target xml:lang="ru" state="translated">Перевод</target>
       </trans-unit>
       <trans-unit id="4kkJ2qk" resname="admin.translations">
         <source>admin.translations</source>
-        <target state="translated">Переводы</target>
+        <target xml:lang="ru" state="translated">Переводы</target>
       </trans-unit>
       <trans-unit id="JNZM.Hg" resname="admin.type">
         <source>admin.type</source>
-        <target state="translated">Тип</target>
+        <target xml:lang="ru" state="translated">Тип</target>
       </trans-unit>
       <trans-unit id="IuwmOhz" resname="admin.updated">
         <source>admin.updated</source>
-        <target state="translated">Обновлено</target>
+        <target xml:lang="ru" state="translated">Обновлено</target>
       </trans-unit>
       <trans-unit id=".6JML1a" resname="admin.users">
         <source>admin.users</source>
-        <target state="translated">Пользователи</target>
+        <target xml:lang="ru" state="translated">Пользователи</target>
       </trans-unit>
       <trans-unit id="b7wqUw4" resname="admin.value">
         <source>admin.value</source>
-        <target state="translated">Значение</target>
+        <target xml:lang="ru" state="translated">Значение</target>
       </trans-unit>
       <trans-unit id="vxRh7G0" resname="admin.visit_site">
         <source>admin.visit_site</source>
-        <target state="translated">Показать страницу</target>
+        <target xml:lang="ru" state="translated">Показать страницу</target>
       </trans-unit>
       <trans-unit id="X62KUAn" resname="admin.word">
         <source>admin.word</source>
-        <target state="translated">Слово</target>
+        <target xml:lang="ru" state="translated">Слово</target>
       </trans-unit>
       <trans-unit id="FJHBYMQ" resname="admin.words">
         <source>admin.words</source>
-        <target state="translated">Слова</target>
+        <target xml:lang="ru" state="translated">Слова</target>
       </trans-unit>
       <trans-unit id="gyPtWlL" resname="admin.word_with_accent">
         <source>admin.word_with_accent</source>
-        <target state="translated">Слово с ударением</target>
+        <target xml:lang="ru" state="translated">Слово с ударением</target>
       </trans-unit>
       <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing">
         <source>admin.word_with_accent_is_missing</source>
-        <target>Не хватает слова с ударением (сохраните изменения)</target>
+        <target xml:lang="ru" state="translated">Не хватает слова с ударением (сохраните изменения)</target>
       </trans-unit>
       <trans-unit id="AVWkXBb" resname="admin.yes">
         <source>admin.yes</source>
-        <target state="translated">Да</target>
+        <target xml:lang="ru" state="translated">Да</target>
       </trans-unit>
       <trans-unit id="V52jnON" resname="admin.not_processed">
         <source>admin.not_processed</source>
-        <target state="translated">Не обработано</target>
+        <target xml:lang="ru" state="translated">Не обработано</target>
       </trans-unit>
       <trans-unit id="iC4gpUW" resname="admin.equivalents_not_found">
         <source>admin.equivalents_not_found</source>
-        <target state="translated">Эквиваленты сохранены</target>
+        <target xml:lang="ru" state="translated">Эквиваленты сохранены</target>
       </trans-unit>
       <trans-unit id="zqkxrpL" resname="admin.examples_added">
         <source>admin.examples_added</source>
-        <target state="translated">Примеры использования сохранены</target>
+        <target xml:lang="ru" state="translated">Примеры использования сохранены</target>
       </trans-unit>
       <trans-unit id="UDMqpcw" resname="admin.checked">
         <source>admin.checked</source>
-        <target state="translated">Отредактировано</target>
+        <target xml:lang="ru" state="translated">Отредактировано</target>
       </trans-unit>
       <trans-unit id="2aLfPGw" resname="admin.tab.equivalents">
         <source>admin.tab.equivalents</source>
-        <target state="translated">Эквиваленты</target>
+        <target xml:lang="ru" state="translated">Эквиваленты</target>
       </trans-unit>
       <trans-unit id="41JKWc7" resname="admin.no_content">
         <source>admin.no_content</source>
-        <target state="translated">Содержание не вложено</target>
+        <target xml:lang="ru" state="translated">Содержание не вложено</target>
       </trans-unit>
       <trans-unit id="oR01ae2" resname="admin.equivalents">
         <source>admin.equivalents</source>
-        <target state="translated">Эквиваленты</target>
+        <target xml:lang="ru" state="translated">Эквиваленты</target>
       </trans-unit>
       <trans-unit id="JDP_UTo" resname="admin.exemplifications">
         <source>admin.exemplifications</source>
-        <target>Экземплификации</target>
+        <target xml:lang="ru" state="translated">Экземплификации</target>
       </trans-unit>
       <trans-unit id="nz0pECm" resname="admin.exception_to_inflection">
         <source>admin.exception_to_inflection</source>
-        <target state="translated">Исключения</target>
+        <target xml:lang="ru" state="translated">Исключения</target>
       </trans-unit>
       <trans-unit id="Rd_ge0k" resname="admin.topics">
         <source>admin.topics</source>
-        <target state="translated">Тематические категории</target>
+        <target xml:lang="ru" state="translated">Тематические категории</target>
       </trans-unit>
       <trans-unit id="DSKNpQJ" resname="admin.topic">
         <source>admin.topic</source>
-        <target state="translated">Тематическая категория</target>
+        <target xml:lang="ru" state="translated">Тематическая категория</target>
       </trans-unit>
       <trans-unit id="rujVJ3G" resname="app.title">
         <source>app.title</source>
-        <target state="translated">Русско-чешский словарь музыкальных понятий онлайн</target>
+        <target xml:lang="ru" state="translated">Русско-чешский словарь музыкальных понятий онлайн</target>
       </trans-unit>
       <trans-unit id="66McrTq" resname="app.title.topics">
         <source>app.title.topics</source>
-        <target state="translated">Тематические категории</target>
+        <target xml:lang="ru" state="translated">Тематические категории</target>
       </trans-unit>
       <trans-unit id="9QsvAMc" resname="app.title.vocabulary_russian">
         <source>app.title.vocabulary_russian</source>
-        <target state="translated">Русский словник</target>
+        <target xml:lang="ru" state="translated">Русский словник</target>
       </trans-unit>
       <trans-unit id="oPuW94E" resname="app.title.vocabulary_czech">
         <source>app.title.vocabulary_czech</source>
-        <target state="translated">Чешский словник</target>
+        <target xml:lang="ru" state="translated">Чешский словник</target>
       </trans-unit>
       <trans-unit id="wevQNDx" resname="app.title.abbreviations">
         <source>app.title.abbreviations</source>
-        <target state="translated">Сокращения</target>
-      </trans-unit>
-      <trans-unit id="05k5L1N" resname="app.menu.notations">
-        <source>app.menu.notations</source>
-        <target state="translated">Нотация</target>
+        <target xml:lang="ru" state="translated">Сокращения</target>
       </trans-unit>
       <trans-unit id="G5Nl4Le" resname="app.title.notations">
         <source>app.title.notations</source>
-        <target state="translated">Нотация</target>
+        <target xml:lang="ru" state="translated">Нотация</target>
       </trans-unit>
       <trans-unit id="2Rx6JsF" resname="app.title.proccessing_of_words">
         <source>app.title.proccessing_of_words</source>
-        <target state="translated">Обработка словарных статей</target>
+        <target xml:lang="ru" state="translated">Обработка словарных статей</target>
       </trans-unit>
       <trans-unit id="sG537mo" resname="app.title.suggest_improvement">
         <source>app.title.suggest_improvement</source>
-        <target state="translated">Предложить улучшения</target>
+        <target xml:lang="ru" state="translated">Предложить улучшения</target>
       </trans-unit>
       <trans-unit id="Dvk5L9V" resname="app.updated_at">
         <source>app.updated_at</source>
-        <target state="translated">Дата последнего изменения</target>
+        <target xml:lang="ru" state="translated">Дата последнего изменения</target>
       </trans-unit>
       <trans-unit id="xNrkv18" resname="app.link.intercorp">
         <source>app.link.intercorp</source>
-        <target>Ссылка на слово в корпусах InterCorp</target>
+        <target xml:lang="ru" state="translated">Ссылка на слово в корпусах InterCorp</target>
       </trans-unit>
       <trans-unit id="_BqshM0" resname="app.abbreviation">
         <source>app.abbreviation</source>
-        <target state="translated">Сокращение</target>
+        <target xml:lang="ru" state="translated">Сокращение</target>
       </trans-unit>
       <trans-unit id="8NE67Z5" resname="app.meaning">
         <source>app.meaning</source>
-        <target state="translated">Толкование</target>
+        <target xml:lang="ru" state="translated">Толкование</target>
       </trans-unit>
       <trans-unit id="O9Z.97Q" resname="app.title.about_project">
         <source>app.title.about_project</source>
-        <target state="translated">О проекте</target>
+        <target xml:lang="ru" state="translated">О проекте</target>
       </trans-unit>
       <trans-unit id="gpMRAR9" resname="app.topics">
         <source>app.topics</source>
-        <target state="translated">Тематические категории</target>
+        <target xml:lang="ru" state="translated">Тематические категории</target>
       </trans-unit>
       <trans-unit id="Rcf1s3M" resname="admin.button.preview">
         <source>admin.button.preview</source>
-        <target state="translated">Показать примеры использования</target>
+        <target xml:lang="ru" state="translated">Показать примеры использования</target>
       </trans-unit>
       <trans-unit id="Aqplk4J" resname="admin.name">
         <source>admin.name</source>
-        <target state="translated">Имя</target>
+        <target xml:lang="ru" state="translated">Имя</target>
       </trans-unit>
       <trans-unit id="_a8huP6" resname="admin.email">
         <source>admin.email</source>
-        <target state="needs-translation">admin.email</target>
+        <target xml:lang="ru" state="needs-translation">admin.email</target>
       </trans-unit>
       <trans-unit id="c07P7Xs" resname="admin.announcements">
         <source>admin.announcements</source>
-        <target state="needs-translation">admin.announcements</target>
+        <target xml:lang="ru" state="needs-translation">admin.announcements</target>
       </trans-unit>
       <trans-unit id="elpuZOz" resname="admin.author">
         <source>admin.author</source>
-        <target state="translated">Автор</target>
+        <target xml:lang="ru" state="translated">Автор</target>
       </trans-unit>
       <trans-unit id="Bc_YkQZ" resname="admin.button.add_announcement">
         <source>admin.button.add_announcement</source>
-        <target state="needs-translation">admin.button.add_announcement</target>
+        <target xml:lang="ru" state="needs-translation">admin.button.add_announcement</target>
       </trans-unit>
       <trans-unit id="WDOKSsr" resname="admin.posts">
         <source>admin.posts</source>
-        <target state="needs-translation">admin.posts</target>
+        <target xml:lang="ru" state="needs-translation">admin.posts</target>
       </trans-unit>
       <trans-unit id="iDIKEkQ" resname="admin.slug">
         <source>admin.slug</source>
-        <target state="needs-translation">admin.slug</target>
+        <target xml:lang="ru" state="needs-translation">admin.slug</target>
       </trans-unit>
       <trans-unit id="lF1PyIx" resname="admin.button.add_post">
         <source>admin.button.add_post</source>
-        <target state="needs-translation">admin.button.add_post</target>
+        <target xml:lang="ru" state="needs-translation">admin.button.add_post</target>
       </trans-unit>
       <trans-unit id="KNvZX6B" resname="admin.position">
         <source>admin.position</source>
-        <target state="needs-translation">admin.position</target>
+        <target xml:lang="ru" state="needs-translation">admin.position</target>
       </trans-unit>
       <trans-unit id="YgtsFut" resname="admin.messages">
         <source>admin.messages</source>
-        <target state="needs-translation">admin.messages</target>
+        <target xml:lang="ru" state="needs-translation">admin.messages</target>
       </trans-unit>
       <trans-unit id="07gHh4v" resname="app.title.feedback">
         <source>app.title.feedback</source>
-        <target state="translated">Предложить улучшения</target>
+        <target xml:lang="ru" state="translated">Предложить улучшения</target>
       </trans-unit>
       <trans-unit id="_iBE.pS" resname="app.button.close">
         <source>app.button.close</source>
-        <target state="needs-translation">app.button.close</target>
+        <target xml:lang="ru" state="translated">Закрыть</target>
       </trans-unit>
       <trans-unit id="offSCMJ" resname="app.button.send">
         <source>app.button.send</source>
-        <target state="translated">Отправить</target>
+        <target xml:lang="ru" state="translated">Отправить</target>
       </trans-unit>
       <trans-unit id="qlqlV3d" resname="admin.content">
         <source>admin.content</source>
-        <target state="needs-translation">admin.content</target>
+        <target xml:lang="ru" state="needs-translation">admin.content</target>
+      </trans-unit>
+      <trans-unit id="05k5L1N" resname="app.menu.notations">
+        <source>app.menu.notations</source>
+        <target xml:lang="ru" state="translated">Нотация</target>
       </trans-unit>
       <trans-unit id="9FFoFcf" resname="app.feedback_intro">
         <source>app.feedback_intro</source>
-        <target state="translated">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
+        <target xml:lang="ru" state="translated">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
       </trans-unit>
       <trans-unit id="QsL30Os" resname="app.write_us">
         <source>app.write_us</source>
-        <target state="translated">Свяжитесь с нами!</target>
+        <target xml:lang="ru" state="translated">Свяжитесь с нами!</target>
       </trans-unit>
       <trans-unit id="1kT3pVy" resname="app.thank_you">
         <source>app.thank_you</source>
-        <target state="translated">Благодарим Вас за содействие!</target>
+        <target xml:lang="ru" state="translated">Благодарим Вас за содействие!</target>
       </trans-unit>
       <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text">
         <source>app.feedback.content.help_text</source>
-        <target state="translated">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
+        <target xml:lang="ru" state="translated">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
       </trans-unit>
       <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text">
         <source>app.feedback.email.help_text</source>
-        <target state="translated">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
+        <target xml:lang="ru" state="translated">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
       </trans-unit>
     </body>
   </file>
