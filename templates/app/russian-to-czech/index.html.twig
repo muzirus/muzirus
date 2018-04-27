@@ -4,11 +4,11 @@
 {% block heading 'app.title.vocabulary_russian'|trans %}
 
 {% block content %}
-    <div class="text-center">
+    <div class="text-center mb-3">
         {{ filter.links('app.russian_to_czech', letters) }}
     </div>
     {% for wordsInRow in words|batch(12) %}
-        <div class="col">
+        <div class="row">
             {% for word in wordsInRow %}
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <h3>
