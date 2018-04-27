@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="zu" target-language="zu" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="label.title">
+        <source>label.title</source>
+      </trans-unit>
+      <trans-unit id="label.value">
+        <source>label.value</source>
+      </trans-unit>
+      <trans-unit id="label.description">
+        <source>label.description</source>
+      </trans-unit>
+      <trans-unit id="label.note">
+        <source>label.note</source>
+      </trans-unit>
+      <trans-unit id="label.status">
+        <source>label.status</source>
+      </trans-unit>
+      <trans-unit id="label.categories">
+        <source>label.categories</source>
+      </trans-unit>
+      <trans-unit id="label.sources">
+        <source>label.sources</source>
+      </trans-unit>
+      <trans-unit id="label.source_type">
+        <source>label.source_type</source>
+      </trans-unit>
+      <trans-unit id="label.language_note.pronunciation">
+        <source>label.language_note.pronunciation</source>
+      </trans-unit>
+      <trans-unit id="label.language_note.inflection">
+        <source>label.language_note.inflection</source>
+      </trans-unit>
+      <trans-unit id="label.language_note.exception_to_inflection">
+        <source>label.language_note.exception_to_inflection</source>
+      </trans-unit>
+      <trans-unit id="label.language_note.type">
+        <source>label.language_note.type</source>
+      </trans-unit>
+      <trans-unit id="label.language_note.gender">
+        <source>label.language_note.gender</source>
+      </trans-unit>
+      <trans-unit id="label.language_note.other">
+        <source>label.language_note.other</source>
+      </trans-unit>
+      <trans-unit id="label.explanation">
+        <source>label.explanation</source>
+      </trans-unit>
+      <trans-unit id="label.explanation_source_info">
+        <source>label.explanation_source_info</source>
+      </trans-unit>
+      <trans-unit id="label.explanation_source_date">
+        <source>label.explanation_source_date</source>
+      </trans-unit>
+      <trans-unit id="label.name_of_author">
+        <source>label.name_of_author</source>
+      </trans-unit>
+      <trans-unit id="label.name_of_publisher">
+        <source>label.name_of_publisher</source>
+      </trans-unit>
+      <trans-unit id="label.date_of_release">
+        <source>label.date_of_release</source>
+      </trans-unit>
+      <trans-unit id="label.place_of_release">
+        <source>label.place_of_release</source>
+      </trans-unit>
+      <trans-unit id="label.pages_count">
+        <source>label.pages_count</source>
+      </trans-unit>
+      <trans-unit id="label.code_of_publication">
+        <source>label.code_of_publication</source>
+      </trans-unit>
+      <trans-unit id="label.word">
+        <source>label.word</source>
+      </trans-unit>
+      <trans-unit id="label.word_with_accent">
+        <source>label.word_with_accent</source>
+      </trans-unit>
+      <trans-unit id="label.gender.unknown">
+        <source>label.gender.unknown</source>
+      </trans-unit>
+      <trans-unit id="label.gender.masculine">
+        <source>label.gender.masculine</source>
+      </trans-unit>
+      <trans-unit id="label.gender.feminine">
+        <source>label.gender.feminine</source>
+      </trans-unit>
+      <trans-unit id="label.gender.neuter">
+        <source>label.gender.neuter</source>
+      </trans-unit>
+      <trans-unit id="label.czech_sentence">
+        <source>label.czech_sentence</source>
+      </trans-unit>
+      <trans-unit id="label.russian_sentence">
+        <source>label.russian_sentence</source>
+      </trans-unit>
+      <trans-unit id="label.czech_word">
+        <source>label.czech_word</source>
+      </trans-unit>
+      <trans-unit id="label.czech_note">
+        <source>label.czech_note</source>
+      </trans-unit>
+      <trans-unit id="label.russian_word">
+        <source>label.russian_word</source>
+      </trans-unit>
+      <trans-unit id="label.russian_note">
+        <source>label.russian_note</source>
+      </trans-unit>
+      <trans-unit id="label.status.not_processed">
+        <source>label.status.not_processed</source>
+      </trans-unit>
+      <trans-unit id="label.status.equivalents_not_found">
+        <source>label.status.equivalents_not_found</source>
+      </trans-unit>
+      <trans-unit id="label.status.examples_added">
+        <source>label.status.examples_added</source>
+      </trans-unit>
+      <trans-unit id="label.status.checked">
+        <source>label.status.checked</source>
+      </trans-unit>
+      <trans-unit id="label.type.unknown">
+        <source>label.type.unknown</source>
+      </trans-unit>
+      <trans-unit id="label.type.noun">
+        <source>label.type.noun</source>
+      </trans-unit>
+      <trans-unit id="label.type.verb">
+        <source>label.type.verb</source>
+      </trans-unit>
+      <trans-unit id="label.type.adjective">
+        <source>label.type.adjective</source>
+      </trans-unit>
+      <trans-unit id="label.type.pronoun">
+        <source>label.type.pronoun</source>
+      </trans-unit>
+      <trans-unit id="label.type.numeral">
+        <source>label.type.numeral</source>
+      </trans-unit>
+      <trans-unit id="label.type.adverb">
+        <source>label.type.adverb</source>
+      </trans-unit>
+      <trans-unit id="label.type.preposition">
+        <source>label.type.preposition</source>
+      </trans-unit>
+      <trans-unit id="label.type.conjunction">
+        <source>label.type.conjunction</source>
+      </trans-unit>
+      <trans-unit id="label.type.particle">
+        <source>label.type.particle</source>
+      </trans-unit>
+      <trans-unit id="label.type.interjection">
+        <source>label.type.interjection</source>
+      </trans-unit>
+      <trans-unit id="label.yes">
+        <source>label.yes</source>
+      </trans-unit>
+      <trans-unit id="label.no">
+        <source>label.no</source>
+      </trans-unit>
+      <trans-unit id="label.hidden">
+        <source>label.hidden</source>
+      </trans-unit>
+      <trans-unit id="label.link">
+        <source>label.link</source>
+      </trans-unit>
+      <trans-unit id="label.content">
+        <source>label.content</source>
+      </trans-unit>
+      <trans-unit id="label.slug">
+        <source>label.slug</source>
+      </trans-unit>
+      <trans-unit id="label.feedback_content">
+        <source>label.feedback_content</source>
+      </trans-unit>
+      <trans-unit id="label.feedback_email">
+        <source>label.feedback_email</source>
+      </trans-unit>
+      <trans-unit id="label.title_in_russian">
+        <source>label.title_in_russian</source>
+      </trans-unit>
+      <trans-unit id="label.content_in_russian">
+        <source>label.content_in_russian</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

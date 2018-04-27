@@ -1,15 +1,5 @@
-{% extends 'app/layout.html.twig' %}
+{% extends 'app/page/index.html.twig' %}
 
-{% block content %}
-    {#
-    <div class="form-group">
-        <input class="form-control" type="text" title="" placeholder="Začněte psát...">
-    </div>
-    <hr>
-    #}
-    {% if page is not null %}
-        <div>
-            {{ page.content|md2html }}
-        </div>
-    {% endif %}
+{% block heading %}
+    {{ 'app.title'|trans }}
 {% endblock %}

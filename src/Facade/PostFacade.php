@@ -24,8 +24,13 @@ class PostFacade
     {
         $slugify = new Slugify();
 
-        $post = new Post($slugify->slugify($formData->getSlug()), $formData->getTitle(), $author);
-        $postRevision = new PostRevision($post, $formData->getContent());
+        $post = new Post(
+            $slugify->slugify($formData->getSlug()),
+            $formData->getTitle(),
+            $formData->getTitleInRussian(),
+            $author
+        );
+        $postRevision = new PostRevision($post, $formData->getContent(), $formData->getContentInRussian());
 
         $this->entityManager->persist($post);
         $this->entityManager->persist($postRevision);
@@ -37,8 +42,9 @@ class PostFacade
     public function update(PostInterface $post, PostFormData $formData): void
     {
         $post->setTitle($formData->getTitle());
+        $post->setTitleInRussian($formData->getTitleInRussian());
 
-        $postRevision = new PostRevision($post, $formData->getContent());
+        $postRevision = new PostRevision($post, $formData->getContent(), $formData->getContentInRussian());
 
         $this->entityManager->persist($postRevision);
         $this->entityManager->flush();

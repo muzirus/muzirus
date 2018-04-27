@@ -14,7 +14,13 @@ interface PostInterface extends Timestampable
 
     public function setTitle(string $title): void;
 
+    public function getTitleInRussian(): string;
+
+    public function setTitleInRussian(string $titleInRussian): void;
+
     public function getContent(): string;
+
+    public function getContentInRussian(): string;
 
     public function hasAuthor(): bool;
 

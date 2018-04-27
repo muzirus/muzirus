@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="zu" target-language="cs" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="label.title">
+        <source>label.title</source>
+        <target xml:lang="cs" state="translated">Název</target>
+      </trans-unit>
+      <trans-unit id="label.value">
+        <source>label.value</source>
+        <target xml:lang="cs" state="translated">Hodnota</target>
+      </trans-unit>
+      <trans-unit id="label.description">
+        <source>label.description</source>
+        <target xml:lang="cs" state="translated">Popis</target>
+      </trans-unit>
+      <trans-unit id="label.note">
+        <source>label.note</source>
+        <target xml:lang="cs" state="translated">Poznámka</target>
+      </trans-unit>
+      <trans-unit id="label.status">
+        <source>label.status</source>
+        <target xml:lang="cs" state="translated">Stav</target>
+      </trans-unit>
+      <trans-unit id="label.categories">
+        <source>label.categories</source>
+        <target xml:lang="cs" state="translated">Kategorie</target>
+      </trans-unit>
+      <trans-unit id="label.sources">
+        <source>label.sources</source>
+        <target xml:lang="cs" state="translated">Zdroje</target>
+      </trans-unit>
+      <trans-unit id="label.source_type">
+        <source>label.source_type</source>
+        <target xml:lang="cs" state="translated">Typ zdroje</target>
+      </trans-unit>
+      <trans-unit id="label.language_note.pronunciation">
+        <source>label.language_note.pronunciation</source>
+        <target xml:lang="cs" state="translated">Jazyková poznámka - výslovnost</target>
+      </trans-unit>
+      <trans-unit id="label.language_note.inflection">
+        <source>label.language_note.inflection</source>
+        <target xml:lang="cs" state="translated">Jazyková poznámka - skloňování a časování</target>
+      </trans-unit>
+      <trans-unit id="label.language_note.exception_to_inflection">
+        <source>label.language_note.exception_to_inflection</source>
+        <target xml:lang="cs" state="translated">Jazyková poznámka - výjimka při skloňování a časování</target>
+      </trans-unit>
+      <trans-unit id="label.language_note.type">
+        <source>label.language_note.type</source>
+        <target xml:lang="cs" state="translated">Jazyková poznámka - slovní druh</target>
+      </trans-unit>
+      <trans-unit id="label.language_note.gender">
+        <source>label.language_note.gender</source>
+        <target xml:lang="cs" state="translated">Jazyková poznámka - rod</target>
+      </trans-unit>
+      <trans-unit id="label.language_note.other">
+        <source>label.language_note.other</source>
+        <target xml:lang="cs" state="translated">Jazyková poznámka - ostatní</target>
+      </trans-unit>
+      <trans-unit id="label.explanation">
+        <source>label.explanation</source>
+        <target xml:lang="cs" state="translated">Výklad</target>
+      </trans-unit>
+      <trans-unit id="label.explanation_source_info">
+        <source>label.explanation_source_info</source>
+        <target xml:lang="cs" state="translated">Zdroj výkladu</target>
+      </trans-unit>
+      <trans-unit id="label.explanation_source_date">
+        <source>label.explanation_source_date</source>
+        <target xml:lang="cs" state="translated">Datum výkladu</target>
+      </trans-unit>
+      <trans-unit id="label.name_of_author">
+        <source>label.name_of_author</source>
+        <target xml:lang="cs" state="translated">Jméno autora</target>
+      </trans-unit>
+      <trans-unit id="label.name_of_publisher">
+        <source>label.name_of_publisher</source>
+        <target xml:lang="cs" state="translated">Jmého vydavatele</target>
+      </trans-unit>
+      <trans-unit id="label.date_of_release">
+        <source>label.date_of_release</source>
+        <target xml:lang="cs" state="translated">Datum vydání</target>
+      </trans-unit>
+      <trans-unit id="label.place_of_release">
+        <source>label.place_of_release</source>
+        <target xml:lang="cs" state="translated">Místo vydání</target>
+      </trans-unit>
+      <trans-unit id="label.pages_count">
+        <source>label.pages_count</source>
+        <target xml:lang="cs" state="translated">Počet stran</target>
+      </trans-unit>
+      <trans-unit id="label.code_of_publication">
+        <source>label.code_of_publication</source>
+        <target xml:lang="cs" state="translated">Kód ISBN/ISSN</target>
+      </trans-unit>
+      <trans-unit id="label.word">
+        <source>label.word</source>
+        <target xml:lang="cs" state="translated">Slovo</target>
+      </trans-unit>
+      <trans-unit id="label.word_with_accent">
+        <source>label.word_with_accent</source>
+        <target xml:lang="cs" state="translated">Slovo s akcentem</target>
+      </trans-unit>
+      <trans-unit id="label.gender.unknown">
+        <source>label.gender.unknown</source>
+        <target xml:lang="cs" state="translated">Neznámý (nevyplněn)</target>
+      </trans-unit>
+      <trans-unit id="label.gender.masculine">
+        <source>label.gender.masculine</source>
+        <target xml:lang="cs" state="translated">Mužský</target>
+      </trans-unit>
+      <trans-unit id="label.gender.feminine">
+        <source>label.gender.feminine</source>
+        <target xml:lang="cs" state="translated">Ženský</target>
+      </trans-unit>
+      <trans-unit id="label.gender.neuter">
+        <source>label.gender.neuter</source>
+        <target xml:lang="cs" state="translated">Střední</target>
+      </trans-unit>
+      <trans-unit id="label.czech_sentence">
+        <source>label.czech_sentence</source>
+        <target xml:lang="cs" state="translated">Česká věta</target>
+      </trans-unit>
+      <trans-unit id="label.russian_sentence">
+        <source>label.russian_sentence</source>
+        <target xml:lang="cs" state="translated">Ruská věta</target>
+      </trans-unit>
+      <trans-unit id="label.czech_word">
+        <source>label.czech_word</source>
+        <target xml:lang="cs" state="translated">České slovo</target>
+      </trans-unit>
+      <trans-unit id="label.czech_note">
+        <source>label.czech_note</source>
+        <target xml:lang="cs" state="translated">Česká poznámka</target>
+      </trans-unit>
+      <trans-unit id="label.russian_word">
+        <source>label.russian_word</source>
+        <target xml:lang="cs" state="translated">Ruské slovo</target>
+      </trans-unit>
+      <trans-unit id="label.russian_note">
+        <source>label.russian_note</source>
+        <target xml:lang="cs" state="translated">Ruská poznámka</target>
+      </trans-unit>
+      <trans-unit id="label.status.not_processed">
+        <source>label.status.not_processed</source>
+        <target xml:lang="cs" state="translated">Nezpracováno</target>
+      </trans-unit>
+      <trans-unit id="label.status.equivalents_not_found">
+        <source>label.status.equivalents_not_found</source>
+        <target xml:lang="cs" state="translated">Nalezeny ekvivalenty</target>
+      </trans-unit>
+      <trans-unit id="label.status.examples_added">
+        <source>label.status.examples_added</source>
+        <target xml:lang="cs" state="translated">Vloženy ukázky</target>
+      </trans-unit>
+      <trans-unit id="label.status.checked">
+        <source>label.status.checked</source>
+        <target xml:lang="cs" state="translated">Zkontrolováno</target>
+      </trans-unit>
+      <trans-unit id="label.type.unknown">
+        <source>label.type.unknown</source>
+        <target xml:lang="cs" state="translated">Neznámý (nevyplněn)</target>
+      </trans-unit>
+      <trans-unit id="label.type.noun">
+        <source>label.type.noun</source>
+        <target xml:lang="cs" state="translated">Podstatná jména (Substantiva)</target>
+      </trans-unit>
+      <trans-unit id="label.type.verb">
+        <source>label.type.verb</source>
+        <target xml:lang="cs" state="translated">Slovesa (Verba)</target>
+      </trans-unit>
+      <trans-unit id="label.type.adjective">
+        <source>label.type.adjective</source>
+        <target xml:lang="cs" state="translated">Přídavná jména (Adjektiva)</target>
+      </trans-unit>
+      <trans-unit id="label.type.pronoun">
+        <source>label.type.pronoun</source>
+        <target xml:lang="cs" state="translated">Zájmena (Pronomina)</target>
+      </trans-unit>
+      <trans-unit id="label.type.numeral">
+        <source>label.type.numeral</source>
+        <target xml:lang="cs" state="translated">Číslovky (Numeralia)</target>
+      </trans-unit>
+      <trans-unit id="label.type.adverb">
+        <source>label.type.adverb</source>
+        <target xml:lang="cs" state="translated">Příslovce (Adverbia)</target>
+      </trans-unit>
+      <trans-unit id="label.type.preposition">
+        <source>label.type.preposition</source>
+        <target xml:lang="cs" state="translated">Předložky (Prepozice)</target>
+      </trans-unit>
+      <trans-unit id="label.type.conjunction">
+        <source>label.type.conjunction</source>
+        <target xml:lang="cs" state="translated">Spojky (Konjunkce)</target>
+      </trans-unit>
+      <trans-unit id="label.type.particle">
+        <source>label.type.particle</source>
+        <target xml:lang="cs" state="translated">Částice (Partikule)</target>
+      </trans-unit>
+      <trans-unit id="label.type.interjection">
+        <source>label.type.interjection</source>
+        <target xml:lang="cs" state="translated">Citoslovce (Interjekce)</target>
+      </trans-unit>
+      <trans-unit id="label.yes">
+        <source>label.yes</source>
+        <target xml:lang="cs" state="translated">Ano</target>
+      </trans-unit>
+      <trans-unit id="label.no">
+        <source>label.no</source>
+        <target xml:lang="cs" state="translated">Ne</target>
+      </trans-unit>
+      <trans-unit id="label.hidden">
+        <source>label.hidden</source>
+        <target xml:lang="cs" state="translated">Schováno</target>
+      </trans-unit>
+      <trans-unit id="label.link">
+        <source>label.link</source>
+        <target xml:lang="cs" state="translated">Odkaz na heslo v korpusech InterCorp</target>
+      </trans-unit>
+      <trans-unit id="label.content">
+        <source>label.content</source>
+        <target xml:lang="cs" state="translated">Obsah</target>
+      </trans-unit>
+      <trans-unit id="label.slug">
+        <source>label.slug</source>
+        <target xml:lang="cs" state="translated">Slug (link)</target>
+      </trans-unit>
+      <trans-unit id="label.feedback_content">
+        <source>label.feedback_content</source>
+        <target xml:lang="cs" state="translated">Vaše návrhy na zlepšení</target>
+      </trans-unit>
+      <trans-unit id="label.feedback_email">
+        <source>label.feedback_email</source>
+        <target xml:lang="cs" state="translated">Váš email (nepovinný)</target>
+      </trans-unit>
+      <trans-unit id="label.title_in_russian">
+        <source>label.title_in_russian</source>
+        <target xml:lang="cs" state="translated">Název v ruštině</target>
+      </trans-unit>
+      <trans-unit id="label.content_in_russian">
+        <source>label.content_in_russian</source>
+        <target xml:lang="cs" state="translated">Obsah v ruštině</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,9 +1,17 @@
 {% extends 'app/layout.html.twig' %}
 
 {% block heading %}
-    {{ post.title }}
+    {% if app.request.locale == 'ru' %}
+        {{ post.titleInRussian }}
+    {% else %}
+        {{ post.title }}
+    {% endif %}
 {% endblock %}
 
 {% block content %}
-    {{ post.content|md2html }}
+    {% if app.request.locale == 'ru' %}
+        {{ post.contentInRussian|md2html }}
+    {% else %}
+        {{ post.content|md2html }}
+    {% endif %}
 {% endblock %}

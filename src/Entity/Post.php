@@ -36,6 +36,12 @@ class Post implements PostInterface
     private $title;
 
     /**
+     * @ORM\Column(type="string", name="title_in_russian")
+     * @var string
+     */
+    private $titleInRussian;
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", onDelete="SET NULL")
      * @var UserInterface|null
@@ -49,10 +55,11 @@ class Post implements PostInterface
      */
     private $revisions;
 
-    public function __construct(string $slug, string $title, ?UserInterface $author = null)
+    public function __construct(string $slug, string $title, string $titleInRussian, ?UserInterface $author = null)
     {
         $this->slug = $slug;
         $this->setTitle($title);
+        $this->setTitleInRussian($titleInRussian);
         $this->author = $author;
         $this->revisions = new ArrayCollection();
     }
@@ -77,9 +84,24 @@ class Post implements PostInterface
         $this->title = $title;
     }
 
+    public function getTitleInRussian(): string
+    {
+        return $this->titleInRussian;
+    }
+
+    public function setTitleInRussian(string $titleInRussian): void
+    {
+        $this->titleInRussian = $titleInRussian;
+    }
+
     public function getContent(): string
     {
         return $this->getLastRevision()->getContent();
+    }
+
+    public function getContentInRussian(): string
+    {
+        return $this->getLastRevision()->getContentInRussian();
     }
 
     public function hasAuthor(): bool

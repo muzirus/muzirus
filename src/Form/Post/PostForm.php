@@ -20,12 +20,23 @@ class PostForm extends AbstractType
                     'autofocus' => true,
                 ],
             ])
+            ->add('title_in_russian', TextType::class, [
+                'label' => 'label.title_in_russian',
+                'empty_data' => '',
+            ])
             ->add('slug', TextType::class, [
                 'label' => 'label.slug',
                 'empty_data' => '',
             ])
             ->add('content', TextareaType::class, [
                 'label' => 'label.content',
+                'empty_data' => '',
+                'attr' => [
+                    'rows' => 10,
+                ],
+            ])
+            ->add('content_in_russian', TextareaType::class, [
+                'label' => 'label.content_in_russian',
                 'empty_data' => '',
                 'attr' => [
                     'rows' => 10,

@@ -9,4 +9,6 @@ interface PostRevisionInterface extends Timestampable
     public function getId(): string;
 
     public function getContent(): string;
+
+    public function getContentInRussian(): string;
 }

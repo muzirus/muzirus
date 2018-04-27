@@ -35,10 +35,17 @@ class PostRevision implements PostRevisionInterface
      */
     private $content;
 
-    public function __construct(PostInterface $post, string $content)
+    /**
+     * @ORM\Column(type="text", name="content_in_russian")
+     * @var string
+     */
+    private $contentInRussian;
+
+    public function __construct(PostInterface $post, string $content, string $contentInRussian)
     {
         $this->post = $post;
         $this->content = $content;
+        $this->contentInRussian = $contentInRussian;
     }
 
     public function getId(): string
@@ -49,5 +56,10 @@ class PostRevision implements PostRevisionInterface
     public function getContent(): string
     {
         return $this->content;
+    }
+
+    public function getContentInRussian(): string
+    {
+        return $this->contentInRussian;
     }
 }

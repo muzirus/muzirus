@@ -19,7 +19,7 @@ class IndexController extends AbstractController
         return $this->render(
             'app/index/index.html.twig',
             [
-                'page' => $postRepository->findOneBySlugWithAuthorAndRevisions(self::TITLE_PAGE_SLUG),
+                'post' => $postRepository->findOneBySlugWithAuthorAndRevisions(self::TITLE_PAGE_SLUG),
             ]
         );
     }
