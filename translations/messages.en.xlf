@@ -458,6 +458,10 @@
         <source>admin.content</source>
         <target xml:lang="en" state="needs-translation">admin.content</target>
       </trans-unit>
+      <trans-unit id="app.menu.notations">
+        <source>app.menu.notations</source>
+        <target xml:lang="en" state="needs-translation">app.menu.notations</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
