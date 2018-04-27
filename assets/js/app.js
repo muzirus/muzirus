@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 (function ($) {
     $(function () {
         //$('[data-toggle="popover"]').popover();

@@ -1,3 +1,11 @@
+import 'bootstrap-sass';
+import 'jquery-slimscroll';
+import 'datatables.net';
+import 'datatables.net-bs';
+import 'jquery.are-you-sure';
+import '../../node_modules/select2/dist/js/select2.min';
+import 'admin-lte';
+
 (function ($) {
     $(function () {
         // defaults for dataTable
