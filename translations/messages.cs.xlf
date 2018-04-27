@@ -460,7 +460,27 @@
       </trans-unit>
       <trans-unit id="app.menu.notations">
         <source>app.menu.notations</source>
-        <target xml:lang="cs" state="needs-translation">app.menu.notations</target>
+        <target xml:lang="cs" state="translated">Notace</target>
+      </trans-unit>
+      <trans-unit id="app.feedback_intro">
+        <source>app.feedback_intro</source>
+        <target xml:lang="cs" state="needs-translation">app.feedback_intro</target>
+      </trans-unit>
+      <trans-unit id="app.write_us">
+        <source>app.write_us</source>
+        <target xml:lang="cs" state="needs-translation">app.write_us</target>
+      </trans-unit>
+      <trans-unit id="app.thank_you">
+        <source>app.thank_you</source>
+        <target xml:lang="cs" state="needs-translation">app.thank_you</target>
+      </trans-unit>
+      <trans-unit id="app.feedback.content.help_text">
+        <source>app.feedback.content.help_text</source>
+        <target xml:lang="cs" state="needs-translation">app.feedback.content.help_text</target>
+      </trans-unit>
+      <trans-unit id="app.feedback.email.help_text">
+        <source>app.feedback.email.help_text</source>
+        <target xml:lang="cs" state="needs-translation">app.feedback.email.help_text</target>
       </trans-unit>
     </body>
   </file>
