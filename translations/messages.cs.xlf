@@ -364,6 +364,10 @@
       </trans-unit>
       <trans-unit id="app.title.notations">
         <source>app.title.notations</source>
+        <target xml:lang="cs" state="translated">Glosář hudební notace</target>
+      </trans-unit>
+      <trans-unit id="app.menu.notations">
+        <source>app.menu.notations</source>
         <target xml:lang="cs" state="translated">Notace</target>
       </trans-unit>
       <trans-unit id="app.title.proccessing_of_words">

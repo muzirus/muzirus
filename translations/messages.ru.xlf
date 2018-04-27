@@ -362,6 +362,10 @@
         <source>app.title.abbreviations</source>
         <target xml:lang="ru" state="translated">Сокращения</target>
       </trans-unit>
+      <trans-unit id="app.menu.notations">
+        <source>app.menu.notations</source>
+        <target xml:lang="ru" state="translated">Нотация</target>
+      </trans-unit>
       <trans-unit id="app.title.notations">
         <source>app.title.notations</source>
         <target xml:lang="ru" state="translated">Нотация</target>

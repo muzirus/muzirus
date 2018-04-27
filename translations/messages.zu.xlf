@@ -344,6 +344,9 @@
       <trans-unit id="admin.content">
         <source>admin.content</source>
       </trans-unit>
+      <trans-unit id="app.menu.notations">
+        <source>app.menu.notations</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>
