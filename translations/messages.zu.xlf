@@ -347,6 +347,21 @@
       <trans-unit id="app.menu.notations">
         <source>app.menu.notations</source>
       </trans-unit>
+      <trans-unit id="app.feedback_intro">
+        <source>app.feedback_intro</source>
+      </trans-unit>
+      <trans-unit id="app.write_us">
+        <source>app.write_us</source>
+      </trans-unit>
+      <trans-unit id="app.thank_you">
+        <source>app.thank_you</source>
+      </trans-unit>
+      <trans-unit id="app.feedback.content.help_text">
+        <source>app.feedback.content.help_text</source>
+      </trans-unit>
+      <trans-unit id="app.feedback.email.help_text">
+        <source>app.feedback.email.help_text</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

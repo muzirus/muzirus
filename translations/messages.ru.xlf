@@ -448,19 +448,39 @@
       </trans-unit>
       <trans-unit id="app.title.feedback">
         <source>app.title.feedback</source>
-        <target xml:lang="ru" state="translated">__app.title.feedback</target>
+        <target xml:lang="ru" state="translated">Предложить улучшения</target>
       </trans-unit>
       <trans-unit id="app.button.close">
         <source>app.button.close</source>
-        <target xml:lang="ru" state="translated">__app.button.close</target>
+        <target xml:lang="ru" state="needs-translation">app.button.close</target>
       </trans-unit>
       <trans-unit id="app.button.send">
         <source>app.button.send</source>
-        <target xml:lang="ru" state="translated">__app.button.send</target>
+        <target xml:lang="ru" state="translated">Отправить</target>
       </trans-unit>
       <trans-unit id="admin.content">
         <source>admin.content</source>
         <target xml:lang="ru" state="needs-translation">admin.content</target>
+      </trans-unit>
+      <trans-unit id="app.feedback_intro">
+        <source>app.feedback_intro</source>
+        <target xml:lang="ru" state="translated">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
+      </trans-unit>
+      <trans-unit id="app.write_us">
+        <source>app.write_us</source>
+        <target xml:lang="ru" state="translated">Свяжитесь с нами!</target>
+      </trans-unit>
+      <trans-unit id="app.thank_you">
+        <source>app.thank_you</source>
+        <target xml:lang="ru" state="translated">Благодарим Вас за содействие!</target>
+      </trans-unit>
+      <trans-unit id="app.feedback.content.help_text">
+        <source>app.feedback.content.help_text</source>
+        <target xml:lang="ru" state="translated">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
+      </trans-unit>
+      <trans-unit id="app.feedback.email.help_text">
+        <source>app.feedback.email.help_text</source>
+        <target xml:lang="ru" state="translated">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
       </trans-unit>
     </body>
   </file>

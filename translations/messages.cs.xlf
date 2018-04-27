@@ -462,6 +462,26 @@
         <source>admin.content</source>
         <target xml:lang="cs" state="translated">Obsah</target>
       </trans-unit>
+      <trans-unit id="app.feedback_intro">
+        <source>app.feedback_intro</source>
+        <target xml:lang="cs" state="translated">Nenašli jste, co jste hledali, nebo byste rádi něčím přispěli?</target>
+      </trans-unit>
+      <trans-unit id="app.write_us">
+        <source>app.write_us</source>
+        <target xml:lang="cs" state="translated">Napište nám!</target>
+      </trans-unit>
+      <trans-unit id="app.thank_you">
+        <source>app.thank_you</source>
+        <target xml:lang="cs" state="translated">Děkujeme Vám!</target>
+      </trans-unit>
+      <trans-unit id="app.feedback.content.help_text">
+        <source>app.feedback.content.help_text</source>
+        <target xml:lang="cs" state="translated">Pošlete nám své připomínky nebo tipy na nová hesla, která bychom podle Vás měli zpracovat. Můžete navrhnout ruská i česká hesla, přidat vysvětlivku nebo informační zdroj, který stojí za prostudování.</target>
+      </trans-unit>
+      <trans-unit id="app.feedback.email.help_text">
+        <source>app.feedback.email.help_text</source>
+        <target xml:lang="cs" state="translated">Pokud uvedete svůj kontaktní e-mail, budeme Vás o zveřejnění Vámi navrženého hesla informovat.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

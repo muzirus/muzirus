@@ -228,11 +228,11 @@
       </trans-unit>
       <trans-unit id="label.feedback_content">
         <source>label.feedback_content</source>
-        <target xml:lang="ru" state="needs-translation">label.feedback_content</target>
+        <target xml:lang="ru" state="translated">Ваши предложения на улучшение</target>
       </trans-unit>
       <trans-unit id="label.feedback_email">
         <source>label.feedback_email</source>
-        <target xml:lang="ru" state="needs-translation">label.feedback_email</target>
+        <target xml:lang="ru" state="translated">Ваш адрес электронной почты (необязательный)</target>
       </trans-unit>
       <trans-unit id="label.title_in_russian">
         <source>label.title_in_russian</source>
