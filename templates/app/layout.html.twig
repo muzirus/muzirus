@@ -4,14 +4,10 @@
     {% include 'app/_fragments/_nav.html.twig' %}
     <div class="container">
         {% block container %}
-            <h1 class="text-center">
+            <h1 class="text-center pt-3">
                 {% block heading %}{{ 'app.title'|trans }}{% endblock %}
             </h1>
-            {% block content %}
-                <div class="well">
-                    <h1>Hi there! General Kenobi...</h1>
-                </div>
-            {% endblock %}
+            {% block content %}{% endblock %}
         {% endblock %}
     </div>
     {% include 'app/_fragments/_footer.html.twig' %}
