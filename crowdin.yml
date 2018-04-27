@@ -1,3 +1,6 @@
+project_identifier: muzirus
 files:
   - source: /translations/messages.zu.xlf
     translation: /translations/messages.%two_letters_code%.xlf
+  - source: /translations/forms.zu.xlf
+    translation: /translations/forms.%two_letters_code%.xlf
