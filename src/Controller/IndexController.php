@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
-    private const TITLE_PAGE_SLUG = 'http-www-muzirus-cz-cs';
+    private const TITLE_PAGE_SLUG = 'index';
 
     /**
      * @Route("", name="app.index")
