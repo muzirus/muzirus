@@ -5,4 +5,4 @@ files:
   - source: /translations/forms.zu.xlf
     translation: /translations/forms.%two_letters_code%.xlf
   - source: /translations/flashes.zu.xlf
-    translation: /translations/flashes.%locale%.xlf
+    translation: /translations/flashes.%two_letters_code%.xlf
