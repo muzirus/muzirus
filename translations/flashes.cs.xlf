@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="zu" target-language="cs" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="G3cnDyL" resname="admin.abbreviation.created">
+        <source>admin.abbreviation.created</source>
+        <target state="translated">Vytvoření zkratky proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="erm3Y3W" resname="admin.abbreviation.updated">
+        <source>admin.abbreviation.updated</source>
+        <target state="translated">Upravení zkratky proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="KYFq_La" resname="admin.abbreviation.deleted">
+        <source>admin.abbreviation.deleted</source>
+        <target state="translated">Smazání zkratky proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="UwNIHmX" resname="admin.category.created">
+        <source>admin.category.created</source>
+        <target state="translated">Vytvoření kategorie proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="TL30csv" resname="admin.category.updated">
+        <source>admin.category.updated</source>
+        <target state="translated">Upravení kategorie proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="OLOKQ9U" resname="admin.category.deleted">
+        <source>admin.category.deleted</source>
+        <target state="translated">Smazání kategorie proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="gJmcYAB" resname="admin.source.created">
+        <source>admin.source.created</source>
+        <target state="translated">Vytvoření zdroje proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="jvNas2Y" resname="admin.source.updated">
+        <source>admin.source.updated</source>
+        <target state="translated">Upravení zdroje proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="YUFKLWb" resname="admin.source.deleted">
+        <source>admin.source.deleted</source>
+        <target state="translated">Smazání zdroje proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="aU_2nN5" resname="admin.source_type.created">
+        <source>admin.source_type.created</source>
+        <target state="translated">Vytvoření typu zdroje proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="c.uYEpO" resname="admin.source_type.updated">
+        <source>admin.source_type.updated</source>
+        <target state="translated">Upravení typu zdroje proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="nlj3hq9" resname="admin.source_type.deleted">
+        <source>admin.source_type.deleted</source>
+        <target state="translated">Smazání typu zdroje proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="mIy5kA8" resname="admin.symbol.created">
+        <source>admin.symbol.created</source>
+        <target state="translated">Vytvoření symbolu proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="sZKa2QR" resname="admin.symbol.updated">
+        <source>admin.symbol.updated</source>
+        <target state="translated">Upravení symbolu proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="iBIB6_u" resname="admin.symbol.deleted">
+        <source>admin.symbol.deleted</source>
+        <target state="translated">Smazání symbolu proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="Mot6m6I" resname="admin.translation.created">
+        <source>admin.translation.created</source>
+        <target state="translated">Vytvoření ekvivalentu proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="zQ3p9mY" resname="admin.translation.updated">
+        <source>admin.translation.updated</source>
+        <target state="translated">Upravení ekvivalentu proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="qddKbUt" resname="admin.translation.deleted">
+        <source>admin.translation.deleted</source>
+        <target state="translated">Smazání ekvivalentu proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="blW99I0" resname="admin.translation_example.created">
+        <source>admin.translation_example.created</source>
+        <target state="translated">Vytvoření exemplifikace proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="ydLhrDE" resname="admin.translation_example.updated">
+        <source>admin.translation_example.updated</source>
+        <target state="translated">Upravení exemplifikace proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="odoNrm6" resname="admin.translation_example.deleted">
+        <source>admin.translation_example.deleted</source>
+        <target state="translated">Smazání exemplifikace proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="TfvTC0X" resname="admin.word.created">
+        <source>admin.word.created</source>
+        <target state="translated">Vytvoření slova proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="ZSYkpmV" resname="admin.word.updated">
+        <source>admin.word.updated</source>
+        <target state="translated">Upravení slova proběhlo úspěšně.</target>
+      </trans-unit>
+      <trans-unit id="EacBDv5" resname="admin.word.deleted">
+        <source>admin.word.deleted</source>
+        <target state="translated">Smazání slova proběhlo úspěšně.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

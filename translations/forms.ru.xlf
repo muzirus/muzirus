@@ -1,246 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file source-language="zu" target-language="ru" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
     <body>
-      <trans-unit id="label.title">
+      <trans-unit id="UrRn8xj" resname="label.title">
         <source>label.title</source>
-        <target xml:lang="ru" state="needs-translation">label.title</target>
+        <target state="needs-translation">label.title</target>
       </trans-unit>
-      <trans-unit id="label.value">
+      <trans-unit id="szWUC0C" resname="label.value">
         <source>label.value</source>
-        <target xml:lang="ru" state="needs-translation">label.value</target>
+        <target state="needs-translation">label.value</target>
       </trans-unit>
-      <trans-unit id="label.description">
+      <trans-unit id="4cEApe1" resname="label.description">
         <source>label.description</source>
-        <target xml:lang="ru" state="needs-translation">label.description</target>
+        <target state="needs-translation">label.description</target>
       </trans-unit>
-      <trans-unit id="label.note">
+      <trans-unit id="mQs59HX" resname="label.note">
         <source>label.note</source>
-        <target xml:lang="ru" state="needs-translation">label.note</target>
+        <target state="needs-translation">label.note</target>
       </trans-unit>
-      <trans-unit id="label.status">
+      <trans-unit id="hzhzbqw" resname="label.status">
         <source>label.status</source>
-        <target xml:lang="ru" state="needs-translation">label.status</target>
+        <target state="needs-translation">label.status</target>
       </trans-unit>
-      <trans-unit id="label.categories">
+      <trans-unit id="eH8yxtn" resname="label.categories">
         <source>label.categories</source>
-        <target xml:lang="ru" state="needs-translation">label.categories</target>
+        <target state="needs-translation">label.categories</target>
       </trans-unit>
-      <trans-unit id="label.sources">
+      <trans-unit id="ACwJHah" resname="label.sources">
         <source>label.sources</source>
-        <target xml:lang="ru" state="needs-translation">label.sources</target>
+        <target state="needs-translation">label.sources</target>
       </trans-unit>
-      <trans-unit id="label.source_type">
+      <trans-unit id="LtYcT7g" resname="label.source_type">
         <source>label.source_type</source>
-        <target xml:lang="ru" state="needs-translation">label.source_type</target>
+        <target state="needs-translation">label.source_type</target>
       </trans-unit>
-      <trans-unit id="label.language_note.pronunciation">
+      <trans-unit id="D0AAVMV" resname="label.language_note.pronunciation">
         <source>label.language_note.pronunciation</source>
-        <target xml:lang="ru" state="needs-translation">label.language_note.pronunciation</target>
+        <target state="needs-translation">label.language_note.pronunciation</target>
       </trans-unit>
-      <trans-unit id="label.language_note.inflection">
+      <trans-unit id="e7z3rtA" resname="label.language_note.inflection">
         <source>label.language_note.inflection</source>
-        <target xml:lang="ru" state="needs-translation">label.language_note.inflection</target>
+        <target state="needs-translation">label.language_note.inflection</target>
       </trans-unit>
-      <trans-unit id="label.language_note.exception_to_inflection">
+      <trans-unit id="gWEZnDm" resname="label.language_note.exception_to_inflection">
         <source>label.language_note.exception_to_inflection</source>
-        <target xml:lang="ru" state="needs-translation">label.language_note.exception_to_inflection</target>
+        <target state="needs-translation">label.language_note.exception_to_inflection</target>
       </trans-unit>
-      <trans-unit id="label.language_note.type">
+      <trans-unit id="S64wP45" resname="label.language_note.type">
         <source>label.language_note.type</source>
-        <target xml:lang="ru" state="needs-translation">label.language_note.type</target>
+        <target state="needs-translation">label.language_note.type</target>
       </trans-unit>
-      <trans-unit id="label.language_note.gender">
+      <trans-unit id="oD2tg8Q" resname="label.language_note.gender">
         <source>label.language_note.gender</source>
-        <target xml:lang="ru" state="needs-translation">label.language_note.gender</target>
+        <target state="needs-translation">label.language_note.gender</target>
       </trans-unit>
-      <trans-unit id="label.language_note.other">
+      <trans-unit id="lEry.2l" resname="label.language_note.other">
         <source>label.language_note.other</source>
-        <target xml:lang="ru" state="needs-translation">label.language_note.other</target>
+        <target state="needs-translation">label.language_note.other</target>
       </trans-unit>
-      <trans-unit id="label.explanation">
+      <trans-unit id="RINRxkA" resname="label.explanation">
         <source>label.explanation</source>
-        <target xml:lang="ru" state="needs-translation">label.explanation</target>
+        <target state="needs-translation">label.explanation</target>
       </trans-unit>
-      <trans-unit id="label.explanation_source_info">
+      <trans-unit id="nWb6Ivb" resname="label.explanation_source_info">
         <source>label.explanation_source_info</source>
-        <target xml:lang="ru" state="needs-translation">label.explanation_source_info</target>
+        <target state="needs-translation">label.explanation_source_info</target>
       </trans-unit>
-      <trans-unit id="label.explanation_source_date">
+      <trans-unit id="LvvKMxR" resname="label.explanation_source_date">
         <source>label.explanation_source_date</source>
-        <target xml:lang="ru" state="needs-translation">label.explanation_source_date</target>
+        <target state="needs-translation">label.explanation_source_date</target>
       </trans-unit>
-      <trans-unit id="label.name_of_author">
+      <trans-unit id="PucUOw0" resname="label.name_of_author">
         <source>label.name_of_author</source>
-        <target xml:lang="ru" state="needs-translation">label.name_of_author</target>
+        <target state="needs-translation">label.name_of_author</target>
       </trans-unit>
-      <trans-unit id="label.name_of_publisher">
+      <trans-unit id="W5b2C2o" resname="label.name_of_publisher">
         <source>label.name_of_publisher</source>
-        <target xml:lang="ru" state="needs-translation">label.name_of_publisher</target>
+        <target state="needs-translation">label.name_of_publisher</target>
       </trans-unit>
-      <trans-unit id="label.date_of_release">
+      <trans-unit id="RCcd8sh" resname="label.date_of_release">
         <source>label.date_of_release</source>
-        <target xml:lang="ru" state="needs-translation">label.date_of_release</target>
+        <target state="needs-translation">label.date_of_release</target>
       </trans-unit>
-      <trans-unit id="label.place_of_release">
+      <trans-unit id="7E99SOX" resname="label.place_of_release">
         <source>label.place_of_release</source>
-        <target xml:lang="ru" state="needs-translation">label.place_of_release</target>
+        <target state="needs-translation">label.place_of_release</target>
       </trans-unit>
-      <trans-unit id="label.pages_count">
+      <trans-unit id="kLExILX" resname="label.pages_count">
         <source>label.pages_count</source>
-        <target xml:lang="ru" state="needs-translation">label.pages_count</target>
+        <target state="needs-translation">label.pages_count</target>
       </trans-unit>
-      <trans-unit id="label.code_of_publication">
+      <trans-unit id="hhQprcA" resname="label.code_of_publication">
         <source>label.code_of_publication</source>
-        <target xml:lang="ru" state="needs-translation">label.code_of_publication</target>
+        <target state="needs-translation">label.code_of_publication</target>
       </trans-unit>
-      <trans-unit id="label.word">
+      <trans-unit id="5Vda1JD" resname="label.word">
         <source>label.word</source>
-        <target xml:lang="ru" state="needs-translation">label.word</target>
+        <target state="needs-translation">label.word</target>
       </trans-unit>
-      <trans-unit id="label.word_with_accent">
+      <trans-unit id="GTVmCHx" resname="label.word_with_accent">
         <source>label.word_with_accent</source>
-        <target xml:lang="ru" state="needs-translation">label.word_with_accent</target>
+        <target state="needs-translation">label.word_with_accent</target>
       </trans-unit>
-      <trans-unit id="label.gender.unknown">
+      <trans-unit id="iDa0ulB" resname="label.gender.unknown">
         <source>label.gender.unknown</source>
-        <target xml:lang="ru" state="needs-translation">label.gender.unknown</target>
+        <target state="needs-translation">label.gender.unknown</target>
       </trans-unit>
-      <trans-unit id="label.gender.masculine">
+      <trans-unit id="ABs4BLG" resname="label.gender.masculine">
         <source>label.gender.masculine</source>
-        <target xml:lang="ru" state="needs-translation">label.gender.masculine</target>
+        <target state="needs-translation">label.gender.masculine</target>
       </trans-unit>
-      <trans-unit id="label.gender.feminine">
+      <trans-unit id="fMrrg7g" resname="label.gender.feminine">
         <source>label.gender.feminine</source>
-        <target xml:lang="ru" state="needs-translation">label.gender.feminine</target>
+        <target state="needs-translation">label.gender.feminine</target>
       </trans-unit>
-      <trans-unit id="label.gender.neuter">
+      <trans-unit id="Srl3f6I" resname="label.gender.neuter">
         <source>label.gender.neuter</source>
-        <target xml:lang="ru" state="needs-translation">label.gender.neuter</target>
+        <target state="needs-translation">label.gender.neuter</target>
       </trans-unit>
-      <trans-unit id="label.czech_sentence">
+      <trans-unit id="ASVxPBQ" resname="label.czech_sentence">
         <source>label.czech_sentence</source>
-        <target xml:lang="ru" state="needs-translation">label.czech_sentence</target>
+        <target state="needs-translation">label.czech_sentence</target>
       </trans-unit>
-      <trans-unit id="label.russian_sentence">
+      <trans-unit id="HtfZD6G" resname="label.russian_sentence">
         <source>label.russian_sentence</source>
-        <target xml:lang="ru" state="needs-translation">label.russian_sentence</target>
+        <target state="needs-translation">label.russian_sentence</target>
       </trans-unit>
-      <trans-unit id="label.czech_word">
+      <trans-unit id="BDxAouf" resname="label.czech_word">
         <source>label.czech_word</source>
-        <target xml:lang="ru" state="needs-translation">label.czech_word</target>
+        <target state="needs-translation">label.czech_word</target>
       </trans-unit>
-      <trans-unit id="label.czech_note">
+      <trans-unit id="_wdlW3y" resname="label.czech_note">
         <source>label.czech_note</source>
-        <target xml:lang="ru" state="needs-translation">label.czech_note</target>
+        <target state="needs-translation">label.czech_note</target>
       </trans-unit>
-      <trans-unit id="label.russian_word">
+      <trans-unit id="c998tqP" resname="label.russian_word">
         <source>label.russian_word</source>
-        <target xml:lang="ru" state="needs-translation">label.russian_word</target>
+        <target state="needs-translation">label.russian_word</target>
       </trans-unit>
-      <trans-unit id="label.russian_note">
+      <trans-unit id="l8bjJU0" resname="label.russian_note">
         <source>label.russian_note</source>
-        <target xml:lang="ru" state="needs-translation">label.russian_note</target>
+        <target state="needs-translation">label.russian_note</target>
       </trans-unit>
-      <trans-unit id="label.status.not_processed">
+      <trans-unit id="C_E9YjQ" resname="label.status.not_processed">
         <source>label.status.not_processed</source>
-        <target xml:lang="ru" state="needs-translation">label.status.not_processed</target>
+        <target state="needs-translation">label.status.not_processed</target>
       </trans-unit>
-      <trans-unit id="label.status.equivalents_not_found">
+      <trans-unit id="Vc9iHcE" resname="label.status.equivalents_not_found">
         <source>label.status.equivalents_not_found</source>
-        <target xml:lang="ru" state="needs-translation">label.status.equivalents_not_found</target>
+        <target state="needs-translation">label.status.equivalents_not_found</target>
       </trans-unit>
-      <trans-unit id="label.status.examples_added">
+      <trans-unit id="6l2T3aO" resname="label.status.examples_added">
         <source>label.status.examples_added</source>
-        <target xml:lang="ru" state="needs-translation">label.status.examples_added</target>
+        <target state="needs-translation">label.status.examples_added</target>
       </trans-unit>
-      <trans-unit id="label.status.checked">
+      <trans-unit id="kzDM5JW" resname="label.status.checked">
         <source>label.status.checked</source>
-        <target xml:lang="ru" state="needs-translation">label.status.checked</target>
+        <target state="needs-translation">label.status.checked</target>
       </trans-unit>
-      <trans-unit id="label.type.unknown">
+      <trans-unit id="GOmG_mh" resname="label.type.unknown">
         <source>label.type.unknown</source>
-        <target xml:lang="ru" state="needs-translation">label.type.unknown</target>
+        <target state="needs-translation">label.type.unknown</target>
       </trans-unit>
-      <trans-unit id="label.type.noun">
+      <trans-unit id="TRhzwgx" resname="label.type.noun">
         <source>label.type.noun</source>
-        <target xml:lang="ru" state="needs-translation">label.type.noun</target>
+        <target state="needs-translation">label.type.noun</target>
       </trans-unit>
-      <trans-unit id="label.type.verb">
+      <trans-unit id="H1Q.0iP" resname="label.type.verb">
         <source>label.type.verb</source>
-        <target xml:lang="ru" state="needs-translation">label.type.verb</target>
+        <target state="needs-translation">label.type.verb</target>
       </trans-unit>
-      <trans-unit id="label.type.adjective">
+      <trans-unit id="9XJVmv3" resname="label.type.adjective">
         <source>label.type.adjective</source>
-        <target xml:lang="ru" state="needs-translation">label.type.adjective</target>
+        <target state="needs-translation">label.type.adjective</target>
       </trans-unit>
-      <trans-unit id="label.type.pronoun">
+      <trans-unit id="9PEphfJ" resname="label.type.pronoun">
         <source>label.type.pronoun</source>
-        <target xml:lang="ru" state="needs-translation">label.type.pronoun</target>
+        <target state="needs-translation">label.type.pronoun</target>
       </trans-unit>
-      <trans-unit id="label.type.numeral">
+      <trans-unit id="ai4JPLn" resname="label.type.numeral">
         <source>label.type.numeral</source>
-        <target xml:lang="ru" state="needs-translation">label.type.numeral</target>
+        <target state="needs-translation">label.type.numeral</target>
       </trans-unit>
-      <trans-unit id="label.type.adverb">
+      <trans-unit id="jKPgxjA" resname="label.type.adverb">
         <source>label.type.adverb</source>
-        <target xml:lang="ru" state="needs-translation">label.type.adverb</target>
+        <target state="needs-translation">label.type.adverb</target>
       </trans-unit>
-      <trans-unit id="label.type.preposition">
+      <trans-unit id="xUA.s6v" resname="label.type.preposition">
         <source>label.type.preposition</source>
-        <target xml:lang="ru" state="needs-translation">label.type.preposition</target>
+        <target state="needs-translation">label.type.preposition</target>
       </trans-unit>
-      <trans-unit id="label.type.conjunction">
+      <trans-unit id="Uw5v1lg" resname="label.type.conjunction">
         <source>label.type.conjunction</source>
-        <target xml:lang="ru" state="needs-translation">label.type.conjunction</target>
+        <target state="needs-translation">label.type.conjunction</target>
       </trans-unit>
-      <trans-unit id="label.type.particle">
+      <trans-unit id="6mz98VL" resname="label.type.particle">
         <source>label.type.particle</source>
-        <target xml:lang="ru" state="needs-translation">label.type.particle</target>
+        <target state="needs-translation">label.type.particle</target>
       </trans-unit>
-      <trans-unit id="label.type.interjection">
+      <trans-unit id="1cmY3Bj" resname="label.type.interjection">
         <source>label.type.interjection</source>
-        <target xml:lang="ru" state="needs-translation">label.type.interjection</target>
+        <target state="needs-translation">label.type.interjection</target>
       </trans-unit>
-      <trans-unit id="label.yes">
+      <trans-unit id="S_Vw6L1" resname="label.yes">
         <source>label.yes</source>
-        <target xml:lang="ru" state="needs-translation">label.yes</target>
+        <target state="needs-translation">label.yes</target>
       </trans-unit>
-      <trans-unit id="label.no">
+      <trans-unit id="bdYD32t" resname="label.no">
         <source>label.no</source>
-        <target xml:lang="ru" state="needs-translation">label.no</target>
+        <target state="needs-translation">label.no</target>
       </trans-unit>
-      <trans-unit id="label.hidden">
+      <trans-unit id="wKXsZRA" resname="label.hidden">
         <source>label.hidden</source>
-        <target xml:lang="ru" state="needs-translation">label.hidden</target>
+        <target state="needs-translation">label.hidden</target>
       </trans-unit>
-      <trans-unit id="label.link">
+      <trans-unit id="jbdcgnz" resname="label.link">
         <source>label.link</source>
-        <target xml:lang="ru" state="needs-translation">label.link</target>
+        <target state="needs-translation">label.link</target>
       </trans-unit>
-      <trans-unit id="label.content">
+      <trans-unit id="qqpGLJl" resname="label.content">
         <source>label.content</source>
-        <target xml:lang="ru" state="needs-translation">label.content</target>
+        <target state="needs-translation">label.content</target>
       </trans-unit>
-      <trans-unit id="label.slug">
+      <trans-unit id="a2klMSd" resname="label.slug">
         <source>label.slug</source>
-        <target xml:lang="ru" state="needs-translation">label.slug</target>
+        <target state="needs-translation">label.slug</target>
       </trans-unit>
-      <trans-unit id="label.feedback_content">
+      <trans-unit id="6WLYQgT" resname="label.feedback_content">
         <source>label.feedback_content</source>
-        <target xml:lang="ru" state="translated">Ваши предложения на улучшение</target>
+        <target state="translated">Ваши предложения на улучшение</target>
       </trans-unit>
-      <trans-unit id="label.feedback_email">
+      <trans-unit id="qS_918I" resname="label.feedback_email">
         <source>label.feedback_email</source>
-        <target xml:lang="ru" state="translated">Ваш адрес электронной почты (необязательный)</target>
+        <target state="translated">Ваш адрес электронной почты (необязательный)</target>
       </trans-unit>
-      <trans-unit id="label.title_in_russian">
+      <trans-unit id="lxKCuFm" resname="label.title_in_russian">
         <source>label.title_in_russian</source>
-        <target xml:lang="ru" state="needs-translation">label.title_in_russian</target>
+        <target state="needs-translation">label.title_in_russian</target>
       </trans-unit>
-      <trans-unit id="label.content_in_russian">
+      <trans-unit id="hVqU4gg" resname="label.content_in_russian">
         <source>label.content_in_russian</source>
-        <target xml:lang="ru" state="needs-translation">label.content_in_russian</target>
+        <target state="needs-translation">label.content_in_russian</target>
       </trans-unit>
     </body>
   </file>
