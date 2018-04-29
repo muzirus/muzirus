@@ -5,6 +5,7 @@ namespace App\Facade;
 use App\Entity\RussianWordInterface;
 use App\Factory\RussianWordFactory;
 use App\Form\Word\RussianWordFormData;
+use App\Service\RussianWordUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
 class RussianWordFacade
@@ -15,10 +16,17 @@ class RussianWordFacade
     /** @var RussianWordFactory */
     private $russianWordFactory;
 
-    public function __construct(EntityManagerInterface $entityManager, RussianWordFactory $russianWordFactory)
-    {
+    /** @var RussianWordUpdater */
+    private $russianWordUpdater;
+
+    public function __construct(
+        EntityManagerInterface $entityManager,
+        RussianWordFactory $russianWordFactory,
+        RussianWordUpdater $russianWordUpdater
+    ) {
         $this->entityManager = $entityManager;
         $this->russianWordFactory = $russianWordFactory;
+        $this->russianWordUpdater = $russianWordUpdater;
     }
 
     public function createWord(RussianWordFormData $formData): RussianWordInterface
@@ -33,30 +41,7 @@ class RussianWordFacade
 
     public function updateWord(RussianWordInterface $word, RussianWordFormData $formData): void
     {
-        $word->setContent($formData->getContent());
-
-        $word->removeCategories();
-        foreach ($formData->getCategories() as $category) {
-            $word->addCategory($category);
-        }
-
-        $word->removeSources();
-        foreach ($formData->getSources() as $source) {
-            $word->addSource($source);
-        }
-
-        $word->setContentWithAccent($formData->getContentWithAccent());
-        $word->setLanguageNotePronunciation($formData->getLanguageNotePronunciation());
-        $word->setLanguageNoteInflection($formData->getLanguageNoteInflection());
-        $word->setLanguageNoteExceptionToInflection($formData->getLanguageNoteExceptionToInflection());
-        $word->setLanguageNoteType($formData->getLanguageNoteType());
-        $word->setLanguageNoteGender($formData->getLanguageNoteGender());
-        $word->setLanguageNoteOther($formData->getLanguageNoteOther());
-        $word->setExplanation($formData->getExplanation());
-        $word->setExplanationSourceInfo($formData->getExplanationSourceInfo());
-        $word->setExplanationSourceDate($formData->getExplanationSourceDate());
-        $word->setNote($formData->getNote());
-        $word->setStatusLight($formData->getStatusLight());
+        $this->russianWordUpdater->updateRussianWord($word, $formData);
 
         $this->entityManager->flush();
     }
