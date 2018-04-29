@@ -2,8 +2,8 @@
 
 namespace App\Facade;
 
-use App\Entity\Announcement;
 use App\Entity\AnnouncementInterface;
+use App\Factory\AnnouncementFactory;
 use App\Form\Announcement\AnnouncementFormData;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -14,17 +14,18 @@ class AnnouncementFacade
      */
     private $entityManager;
 
-    public function __construct(EntityManagerInterface $entityManager)
+    /** @var AnnouncementFactory */
+    private $announcementFactory;
+
+    public function __construct(EntityManagerInterface $entityManager, AnnouncementFactory $announcementFactory)
     {
         $this->entityManager = $entityManager;
+        $this->announcementFactory = $announcementFactory;
     }
 
     public function createAnnouncement(AnnouncementFormData $formData): AnnouncementInterface
     {
-        $announcement = new Announcement(
-            $formData->getTitle(),
-            $formData->getContent()
-        );
+        $announcement = $this->announcementFactory->createFromFormData($formData);
 
         $this->entityManager->persist($announcement);
         $this->entityManager->flush();
