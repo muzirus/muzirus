@@ -5,6 +5,7 @@ namespace App\Facade;
 use App\Entity\TranslationExampleInterface;
 use App\Factory\TranslationExampleFactory;
 use App\Form\TranslationExample\TranslationExampleFormData;
+use App\Service\TranslationExampleUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
 class TranslationExampleFacade
@@ -15,12 +16,17 @@ class TranslationExampleFacade
     /** @var TranslationExampleFactory */
     private $translationExampleFactory;
 
+    /** @var TranslationExampleUpdater */
+    private $translationExampleUpdater;
+
     public function __construct(
         EntityManagerInterface $entityManager,
-        TranslationExampleFactory $translationExampleFactory
+        TranslationExampleFactory $translationExampleFactory,
+        TranslationExampleUpdater $translationExampleUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->translationExampleFactory = $translationExampleFactory;
+        $this->translationExampleUpdater = $translationExampleUpdater;
     }
 
     public function createTranslationExample(TranslationExampleFormData $formData): TranslationExampleInterface
@@ -37,14 +43,7 @@ class TranslationExampleFacade
         TranslationExampleInterface $translationExample,
         TranslationExampleFormData $formData
     ): void {
-        $translationExample->setRussianWordSentence($formData->getRussianWordSentence());
-        $translationExample->setCzechWordSentence($formData->getCzechWordSentence());
-
-        if ($formData->isHidden()) {
-            $translationExample->markHidden();
-        } else {
-            $translationExample->markVisible();
-        }
+        $this->translationExampleUpdater->updateTranslationExample($translationExample, $formData);
 
         $this->entityManager->flush();
     }
