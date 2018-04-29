@@ -5,6 +5,7 @@ namespace App\Facade;
 use App\Entity\TranslationInterface;
 use App\Factory\TranslationFactory;
 use App\Form\Translation\TranslationFormDataInterface;
+use App\Service\TranslationUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
 class TranslationFacade
@@ -15,10 +16,17 @@ class TranslationFacade
     /** @var TranslationFactory */
     private $translationFactory;
 
-    public function __construct(EntityManagerInterface $entityManager, TranslationFactory $translationFactory)
-    {
+    /** @var TranslationUpdater */
+    private $translationUpdater;
+
+    public function __construct(
+        EntityManagerInterface $entityManager,
+        TranslationFactory $translationFactory,
+        TranslationUpdater $translationUpdater
+    ) {
         $this->entityManager = $entityManager;
         $this->translationFactory = $translationFactory;
+        $this->translationUpdater = $translationUpdater;
     }
 
     public function createTranslation(TranslationFormDataInterface $formData): TranslationInterface
@@ -33,11 +41,7 @@ class TranslationFacade
 
     public function updateTranslation(TranslationInterface $translation, TranslationFormDataInterface $formData): void
     {
-        $translation->setRussianWord($formData->getRussianWord());
-        $translation->setRussianWordNote($formData->getRussianWordNote());
-        $translation->setCzechWord($formData->getCzechWord());
-        $translation->setCzechWordNote($formData->getCzechWordNote());
-        $translation->setLink($formData->getLink());
+        $this->translationUpdater->updateTranslation($translation, $formData);
 
         $this->entityManager->flush();
     }
