@@ -384,9 +384,9 @@
         <source>app.updated_at</source>
         <target xml:lang="en">Updated at</target>
       </trans-unit>
-      <trans-unit id="xNrkv18" resname="app.link.intercorp">
+      <trans-unit id="xNrkv18" resname="app.link.intercorp" approved="yes">
         <source>app.link.intercorp</source>
-        <target xml:lang="en" state="translated">InterCorp</target>
+        <target xml:lang="en">InterCorp</target>
       </trans-unit>
       <trans-unit id="_BqshM0" resname="app.abbreviation" approved="yes">
         <source>app.abbreviation</source>
