@@ -17,9 +17,8 @@ class AbbreviationUpdaterTest extends TestCase
         $this->abbreviationUpdater = new AbbreviationUpdater();
     }
 
-    public function testCreateFromFormData(): void
+    public function testUpdateFromFormData(): void
     {
-        $abbreviation = new Abbreviation('bla', 'ble', 'blu');
         $value = 'value';
         $title = 'title';
         $description = 'description';
@@ -27,6 +26,7 @@ class AbbreviationUpdaterTest extends TestCase
         $formData->setContent($value);
         $formData->setTitle($title);
         $formData->setDescription($description);
+        $abbreviation = new Abbreviation('bla', 'ble', 'blu');
 
         $this->abbreviationUpdater->updateAbbreviation($abbreviation, $formData);
 
