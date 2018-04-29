@@ -7,11 +7,11 @@
     <body>
       <trans-unit id="G3cnDyL" resname="admin.abbreviation.created">
         <source>admin.abbreviation.created</source>
-        <target xml:lang="en" state="needs-translation">admin.abbreviation.created</target>
+        <target xml:lang="en" state="translated">Abbreviation has been created.</target>
       </trans-unit>
       <trans-unit id="erm3Y3W" resname="admin.abbreviation.updated">
         <source>admin.abbreviation.updated</source>
-        <target xml:lang="en" state="needs-translation">admin.abbreviation.updated</target>
+        <target xml:lang="en" state="translated">Abbreviation has been updated.</target>
       </trans-unit>
       <trans-unit id="KYFq_La" resname="admin.abbreviation.deleted">
         <source>admin.abbreviation.deleted</source>
@@ -19,11 +19,11 @@
       </trans-unit>
       <trans-unit id="UwNIHmX" resname="admin.category.created">
         <source>admin.category.created</source>
-        <target xml:lang="en" state="needs-translation">admin.category.created</target>
+        <target xml:lang="en" state="translated">Category has been created.</target>
       </trans-unit>
       <trans-unit id="TL30csv" resname="admin.category.updated">
         <source>admin.category.updated</source>
-        <target xml:lang="en" state="needs-translation">admin.category.updated</target>
+        <target xml:lang="en" state="translated">Category has been updated.</target>
       </trans-unit>
       <trans-unit id="OLOKQ9U" resname="admin.category.deleted">
         <source>admin.category.deleted</source>
@@ -31,11 +31,11 @@
       </trans-unit>
       <trans-unit id="gJmcYAB" resname="admin.source.created">
         <source>admin.source.created</source>
-        <target xml:lang="en" state="needs-translation">admin.source.created</target>
+        <target xml:lang="en" state="translated">Source has been created.</target>
       </trans-unit>
       <trans-unit id="jvNas2Y" resname="admin.source.updated">
         <source>admin.source.updated</source>
-        <target xml:lang="en" state="needs-translation">admin.source.updated</target>
+        <target xml:lang="en" state="translated">Source has been updated.</target>
       </trans-unit>
       <trans-unit id="YUFKLWb" resname="admin.source.deleted">
         <source>admin.source.deleted</source>
@@ -43,11 +43,11 @@
       </trans-unit>
       <trans-unit id="aU_2nN5" resname="admin.source_type.created">
         <source>admin.source_type.created</source>
-        <target xml:lang="en" state="needs-translation">admin.source_type.created</target>
+        <target xml:lang="en" state="translated">Source type has been created.</target>
       </trans-unit>
       <trans-unit id="c.uYEpO" resname="admin.source_type.updated">
         <source>admin.source_type.updated</source>
-        <target xml:lang="en" state="needs-translation">admin.source_type.updated</target>
+        <target xml:lang="en" state="translated">Source type has been updated.</target>
       </trans-unit>
       <trans-unit id="nlj3hq9" resname="admin.source_type.deleted">
         <source>admin.source_type.deleted</source>
@@ -55,11 +55,11 @@
       </trans-unit>
       <trans-unit id="mIy5kA8" resname="admin.symbol.created">
         <source>admin.symbol.created</source>
-        <target xml:lang="en" state="needs-translation">admin.symbol.created</target>
+        <target xml:lang="en" state="translated">Source has been created.</target>
       </trans-unit>
       <trans-unit id="sZKa2QR" resname="admin.symbol.updated">
         <source>admin.symbol.updated</source>
-        <target xml:lang="en" state="needs-translation">admin.symbol.updated</target>
+        <target xml:lang="en" state="translated">Symbol has been updated.</target>
       </trans-unit>
       <trans-unit id="iBIB6_u" resname="admin.symbol.deleted">
         <source>admin.symbol.deleted</source>
@@ -71,7 +71,7 @@
       </trans-unit>
       <trans-unit id="zQ3p9mY" resname="admin.translation.updated">
         <source>admin.translation.updated</source>
-        <target xml:lang="en" state="needs-translation">admin.translation.updated</target>
+        <target xml:lang="en" state="translated">Translation has been updated.</target>
       </trans-unit>
       <trans-unit id="qddKbUt" resname="admin.translation.deleted">
         <source>admin.translation.deleted</source>
@@ -83,7 +83,7 @@
       </trans-unit>
       <trans-unit id="ydLhrDE" resname="admin.translation_example.updated">
         <source>admin.translation_example.updated</source>
-        <target xml:lang="en" state="needs-translation">admin.translation_example.updated</target>
+        <target xml:lang="en" state="translated">Translation example has been updated.</target>
       </trans-unit>
       <trans-unit id="odoNrm6" resname="admin.translation_example.deleted">
         <source>admin.translation_example.deleted</source>
@@ -95,7 +95,7 @@
       </trans-unit>
       <trans-unit id="ZSYkpmV" resname="admin.word.updated">
         <source>admin.word.updated</source>
-        <target xml:lang="en" state="needs-translation">admin.word.updated</target>
+        <target xml:lang="en" state="translated">Word has been updated.</target>
       </trans-unit>
       <trans-unit id="EacBDv5" resname="admin.word.deleted">
         <source>admin.word.deleted</source>
