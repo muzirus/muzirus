@@ -233,9 +233,9 @@
         <source>label.feedback_content</source>
         <target xml:lang="ru" state="translated">Ваши предложения на улучшение</target>
       </trans-unit>
-      <trans-unit id="qS_918I" resname="label.feedback_email">
+      <trans-unit id="qS_918I" resname="label.feedback_email" approved="yes">
         <source>label.feedback_email</source>
-        <target xml:lang="ru" state="translated">Ваш адрес электронной почты (необязательный)</target>
+        <target xml:lang="ru">Ваш адрес электронной почты (необязательный)</target>
       </trans-unit>
       <trans-unit id="lxKCuFm" resname="label.title_in_russian">
         <source>label.title_in_russian</source>
