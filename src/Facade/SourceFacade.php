@@ -5,6 +5,7 @@ namespace App\Facade;
 use App\Entity\SourceInterface;
 use App\Factory\SourceFactory;
 use App\Form\Source\SourceFormData;
+use App\Service\SourceUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
 class SourceFacade
@@ -15,10 +16,17 @@ class SourceFacade
     /** @var SourceFactory */
     private $sourceFactory;
 
-    public function __construct(EntityManagerInterface $entityManager, SourceFactory $sourceFactory)
-    {
+    /** @var SourceUpdater */
+    private $sourceUpdater;
+
+    public function __construct(
+        EntityManagerInterface $entityManager,
+        SourceFactory $sourceFactory,
+        SourceUpdater $sourceUpdater
+    ) {
         $this->entityManager = $entityManager;
         $this->sourceFactory = $sourceFactory;
+        $this->sourceUpdater = $sourceUpdater;
     }
 
     public function createSource(SourceFormData $formData): SourceInterface
@@ -33,15 +41,7 @@ class SourceFacade
 
     public function updateSource(SourceInterface $source, SourceFormData $formData): void
     {
-        $source->setTitle($formData->getTitle());
-        $source->setType($formData->getType());
-        $source->setNameOfAuthor($formData->getNameOfAuthor());
-        $source->setNameOfPublisher($formData->getNameOfPublisher());
-        $source->setDateOfRelease($formData->getDateOfRelease());
-        $source->setPlaceOfRelease($formData->getPlaceOfRelease());
-        $source->setPagesCount($formData->getPagesCount());
-        $source->setIsbnCode($formData->getIsbnCode());
-        $source->setNote($formData->getNote());
+        $this->sourceUpdater->updateSource($source, $formData);
 
         $this->entityManager->flush();
     }
