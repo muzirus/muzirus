@@ -5,6 +5,7 @@ namespace App\Facade;
 use App\Entity\WordCategoryInterface;
 use App\Factory\CategoryFactory;
 use App\Form\Category\CategoryFormData;
+use App\Service\CategoryUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
 class CategoryFacade
@@ -19,10 +20,17 @@ class CategoryFacade
      */
     private $categoryFactory;
 
-    public function __construct(EntityManagerInterface $entityManager, CategoryFactory $categoryFactory)
-    {
+    /** @var CategoryUpdater */
+    private $categoryUpdater;
+
+    public function __construct(
+        EntityManagerInterface $entityManager,
+        CategoryFactory $categoryFactory,
+        CategoryUpdater $categoryUpdater
+    ) {
         $this->entityManager = $entityManager;
         $this->categoryFactory = $categoryFactory;
+        $this->categoryUpdater = $categoryUpdater;
     }
 
     public function createCategory(CategoryFormData $formData): WordCategoryInterface
@@ -37,7 +45,7 @@ class CategoryFacade
 
     public function updateCategory(WordCategoryInterface $category, CategoryFormData $formData): void
     {
-        $category->setTitle($formData->getTitle());
+        $this->categoryUpdater->updateCategory($category, $formData);
 
         $this->entityManager->flush();
     }
