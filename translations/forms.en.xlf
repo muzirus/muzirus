@@ -31,75 +31,75 @@
       </trans-unit>
       <trans-unit id="ACwJHah" resname="label.sources">
         <source>label.sources</source>
-        <target xml:lang="en" state="needs-translation">label.sources</target>
+        <target xml:lang="en" state="translated">Sources</target>
       </trans-unit>
       <trans-unit id="LtYcT7g" resname="label.source_type">
         <source>label.source_type</source>
-        <target xml:lang="en" state="needs-translation">label.source_type</target>
+        <target xml:lang="en" state="translated">Source type</target>
       </trans-unit>
       <trans-unit id="D0AAVMV" resname="label.language_note.pronunciation">
         <source>label.language_note.pronunciation</source>
-        <target xml:lang="en" state="needs-translation">label.language_note.pronunciation</target>
+        <target xml:lang="en" state="translated">Language note - pronunciation</target>
       </trans-unit>
       <trans-unit id="e7z3rtA" resname="label.language_note.inflection">
         <source>label.language_note.inflection</source>
-        <target xml:lang="en" state="needs-translation">label.language_note.inflection</target>
+        <target xml:lang="en" state="translated">Language note - inflection</target>
       </trans-unit>
       <trans-unit id="gWEZnDm" resname="label.language_note.exception_to_inflection">
         <source>label.language_note.exception_to_inflection</source>
-        <target xml:lang="en" state="needs-translation">label.language_note.exception_to_inflection</target>
+        <target xml:lang="en" state="translated">Language note - exception to inflection</target>
       </trans-unit>
       <trans-unit id="S64wP45" resname="label.language_note.type">
         <source>label.language_note.type</source>
-        <target xml:lang="en" state="needs-translation">label.language_note.type</target>
+        <target xml:lang="en" state="translated">Language note - type</target>
       </trans-unit>
       <trans-unit id="oD2tg8Q" resname="label.language_note.gender">
         <source>label.language_note.gender</source>
-        <target xml:lang="en" state="needs-translation">label.language_note.gender</target>
+        <target xml:lang="en" state="translated">Language note - gender</target>
       </trans-unit>
       <trans-unit id="lEry.2l" resname="label.language_note.other">
         <source>label.language_note.other</source>
-        <target xml:lang="en" state="needs-translation">label.language_note.other</target>
+        <target xml:lang="en" state="translated">Language note - other</target>
       </trans-unit>
       <trans-unit id="RINRxkA" resname="label.explanation">
         <source>label.explanation</source>
-        <target xml:lang="en" state="needs-translation">label.explanation</target>
+        <target xml:lang="en" state="translated">Explanation</target>
       </trans-unit>
       <trans-unit id="nWb6Ivb" resname="label.explanation_source_info">
         <source>label.explanation_source_info</source>
-        <target xml:lang="en" state="needs-translation">label.explanation_source_info</target>
+        <target xml:lang="en" state="translated">Explanation - source info</target>
       </trans-unit>
       <trans-unit id="LvvKMxR" resname="label.explanation_source_date">
         <source>label.explanation_source_date</source>
-        <target xml:lang="en" state="needs-translation">label.explanation_source_date</target>
+        <target xml:lang="en" state="translated">Explanation - source date</target>
       </trans-unit>
       <trans-unit id="PucUOw0" resname="label.name_of_author">
         <source>label.name_of_author</source>
-        <target xml:lang="en" state="needs-translation">label.name_of_author</target>
+        <target xml:lang="en" state="translated">Name of author</target>
       </trans-unit>
       <trans-unit id="W5b2C2o" resname="label.name_of_publisher">
         <source>label.name_of_publisher</source>
-        <target xml:lang="en" state="needs-translation">label.name_of_publisher</target>
+        <target xml:lang="en" state="translated">Name of publisher</target>
       </trans-unit>
       <trans-unit id="RCcd8sh" resname="label.date_of_release">
         <source>label.date_of_release</source>
-        <target xml:lang="en" state="needs-translation">label.date_of_release</target>
+        <target xml:lang="en" state="translated">Date of release</target>
       </trans-unit>
       <trans-unit id="7E99SOX" resname="label.place_of_release">
         <source>label.place_of_release</source>
-        <target xml:lang="en" state="needs-translation">label.place_of_release</target>
+        <target xml:lang="en" state="translated">Place of release</target>
       </trans-unit>
       <trans-unit id="kLExILX" resname="label.pages_count">
         <source>label.pages_count</source>
-        <target xml:lang="en" state="needs-translation">label.pages_count</target>
+        <target xml:lang="en" state="translated">Pages count</target>
       </trans-unit>
       <trans-unit id="hhQprcA" resname="label.code_of_publication">
         <source>label.code_of_publication</source>
-        <target xml:lang="en" state="needs-translation">label.code_of_publication</target>
+        <target xml:lang="en" state="translated">Code of publication</target>
       </trans-unit>
       <trans-unit id="5Vda1JD" resname="label.word">
         <source>label.word</source>
-        <target xml:lang="en" state="needs-translation">label.word</target>
+        <target xml:lang="en" state="translated">Word</target>
       </trans-unit>
       <trans-unit id="GTVmCHx" resname="label.word_with_accent">
         <source>label.word_with_accent</source>
