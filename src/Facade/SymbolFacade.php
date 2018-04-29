@@ -10,14 +10,10 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class SymbolFacade
 {
-    /**
-     * @var EntityManagerInterface
-     */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
-    /**
-     * @var SymbolFactory
-     */
+    /** @var SymbolFactory */
     private $symbolFactory;
 
     /** @var SymbolUpdater */

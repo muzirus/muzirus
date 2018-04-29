@@ -9,9 +9,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class TranslationExampleFacade
 {
-    /**
-     * @var EntityManagerInterface
-     */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
     /** @var TranslationExampleFactory */

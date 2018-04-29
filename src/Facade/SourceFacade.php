@@ -9,14 +9,10 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class SourceFacade
 {
-    /**
-     * @var EntityManagerInterface
-     */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
-    /**
-     * @var SourceFactory
-     */
+    /** @var SourceFactory */
     private $sourceFactory;
 
     public function __construct(EntityManagerInterface $entityManager, SourceFactory $sourceFactory)

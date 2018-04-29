@@ -10,14 +10,10 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class SourceTypeFacade
 {
-    /**
-     * @var EntityManagerInterface
-     */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
-    /**
-     * @var SourceTypeFactory
-     */
+    /** @var SourceTypeFactory */
     private $sourceTypeFactory;
 
     /** @var SourceTypeUpdater */

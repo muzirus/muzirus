@@ -10,14 +10,10 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class CategoryFacade
 {
-    /**
-     * @var EntityManagerInterface
-     */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
-    /**
-     * @var CategoryFactory
-     */
+    /** @var CategoryFactory */
     private $categoryFactory;
 
     /** @var CategoryUpdater */

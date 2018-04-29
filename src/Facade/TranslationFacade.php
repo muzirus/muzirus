@@ -9,14 +9,10 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class TranslationFacade
 {
-    /**
-     * @var EntityManagerInterface
-     */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
-    /**
-     * @var TranslationFactory
-     */
+    /** @var TranslationFactory */
     private $translationFactory;
 
     public function __construct(EntityManagerInterface $entityManager, TranslationFactory $translationFactory)

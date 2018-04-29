@@ -9,14 +9,10 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class CzechWordFacade
 {
-    /**
-     * @var EntityManagerInterface
-     */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
-    /**
-     * @var CzechWordFactory
-     */
+    /** @var CzechWordFactory */
     private $czechWordFactory;
 
     public function __construct(EntityManagerInterface $entityManager, CzechWordFactory $czechWordFactory)

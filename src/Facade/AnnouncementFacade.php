@@ -10,9 +10,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class AnnouncementFacade
 {
-    /**
-     * @var EntityManagerInterface
-     */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
     /** @var AnnouncementFactory */
