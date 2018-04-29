@@ -5,6 +5,7 @@ namespace App\Facade;
 use App\Entity\CzechWordInterface;
 use App\Factory\CzechWordFactory;
 use App\Form\Word\CzechWordFormData;
+use App\Service\CzechWordUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
 class CzechWordFacade
@@ -15,10 +16,17 @@ class CzechWordFacade
     /** @var CzechWordFactory */
     private $czechWordFactory;
 
-    public function __construct(EntityManagerInterface $entityManager, CzechWordFactory $czechWordFactory)
-    {
+    /** @var CzechWordUpdater */
+    private $czechWordUpdater;
+
+    public function __construct(
+        EntityManagerInterface $entityManager,
+        CzechWordFactory $czechWordFactory,
+        CzechWordUpdater $czechWordUpdater
+    ) {
         $this->entityManager = $entityManager;
         $this->czechWordFactory = $czechWordFactory;
+        $this->czechWordUpdater = $czechWordUpdater;
     }
 
     public function createWord(CzechWordFormData $formData): CzechWordInterface
@@ -33,29 +41,7 @@ class CzechWordFacade
 
     public function updateWord(CzechWordInterface $word, CzechWordFormData $formData): void
     {
-        $word->setContent($formData->getContent());
-
-        $word->removeCategories();
-        foreach ($formData->getCategories() as $category) {
-            $word->addCategory($category);
-        }
-
-        $word->removeSources();
-        foreach ($formData->getSources() as $source) {
-            $word->addSource($source);
-        }
-
-        $word->setLanguageNotePronunciation($formData->getLanguageNotePronunciation());
-        $word->setLanguageNoteInflection($formData->getLanguageNoteInflection());
-        $word->setLanguageNoteExceptionToInflection($formData->getLanguageNoteExceptionToInflection());
-        $word->setLanguageNoteType($formData->getLanguageNoteType());
-        $word->setLanguageNoteGender($formData->getLanguageNoteGender());
-        $word->setLanguageNoteOther($formData->getLanguageNoteOther());
-        $word->setExplanation($formData->getExplanation());
-        $word->setExplanationSourceInfo($formData->getExplanationSourceInfo());
-        $word->setExplanationSourceDate($formData->getExplanationSourceDate());
-        $word->setNote($formData->getNote());
-        $word->setStatusLight($formData->getStatusLight());
+        $this->czechWordUpdater->updateCzechWord($word, $formData);
 
         $this->entityManager->flush();
     }
