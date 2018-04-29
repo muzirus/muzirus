@@ -293,9 +293,9 @@
         <source>admin.word_with_accent</source>
         <target xml:lang="ru" state="translated">Слово с ударением</target>
       </trans-unit>
-      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing">
+      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing" approved="yes">
         <source>admin.word_with_accent_is_missing</source>
-        <target xml:lang="ru" state="translated">Не хватает слова с ударением (сохраните изменения)</target>
+        <target xml:lang="ru">Не хватает слова с ударением (сохраните изменения)</target>
       </trans-unit>
       <trans-unit id="AVWkXBb" resname="admin.yes">
         <source>admin.yes</source>
@@ -329,9 +329,9 @@
         <source>admin.equivalents</source>
         <target xml:lang="ru" state="translated">Эквиваленты</target>
       </trans-unit>
-      <trans-unit id="JDP_UTo" resname="admin.exemplifications">
+      <trans-unit id="JDP_UTo" resname="admin.exemplifications" approved="yes">
         <source>admin.exemplifications</source>
-        <target xml:lang="ru" state="translated">Экземплификации</target>
+        <target xml:lang="ru">Экземплификации</target>
       </trans-unit>
       <trans-unit id="nz0pECm" resname="admin.exception_to_inflection">
         <source>admin.exception_to_inflection</source>
@@ -381,9 +381,9 @@
         <source>app.updated_at</source>
         <target xml:lang="ru" state="translated">Дата последнего изменения</target>
       </trans-unit>
-      <trans-unit id="xNrkv18" resname="app.link.intercorp">
+      <trans-unit id="xNrkv18" resname="app.link.intercorp" approved="yes">
         <source>app.link.intercorp</source>
-        <target xml:lang="ru" state="translated">Ссылка на слово в корпусах InterCorp</target>
+        <target xml:lang="ru">Ссылка на слово в корпусах InterCorp</target>
       </trans-unit>
       <trans-unit id="_BqshM0" resname="app.abbreviation">
         <source>app.abbreviation</source>
@@ -465,25 +465,25 @@
         <source>app.menu.notations</source>
         <target xml:lang="ru" state="translated">Нотация</target>
       </trans-unit>
-      <trans-unit id="9FFoFcf" resname="app.feedback_intro">
+      <trans-unit id="9FFoFcf" resname="app.feedback_intro" approved="yes">
         <source>app.feedback_intro</source>
-        <target xml:lang="ru" state="translated">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
+        <target xml:lang="ru">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
       </trans-unit>
-      <trans-unit id="QsL30Os" resname="app.write_us">
+      <trans-unit id="QsL30Os" resname="app.write_us" approved="yes">
         <source>app.write_us</source>
-        <target xml:lang="ru" state="translated">Свяжитесь с нами!</target>
+        <target xml:lang="ru">Свяжитесь с нами!</target>
       </trans-unit>
-      <trans-unit id="1kT3pVy" resname="app.thank_you">
+      <trans-unit id="1kT3pVy" resname="app.thank_you" approved="yes">
         <source>app.thank_you</source>
-        <target xml:lang="ru" state="translated">Благодарим Вас за содействие!</target>
+        <target xml:lang="ru">Благодарим Вас за содействие!</target>
       </trans-unit>
-      <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text">
+      <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text" approved="yes">
         <source>app.feedback.content.help_text</source>
-        <target xml:lang="ru" state="translated">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
+        <target xml:lang="ru">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
       </trans-unit>
-      <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text">
+      <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text" approved="yes">
         <source>app.feedback.email.help_text</source>
-        <target xml:lang="ru" state="translated">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
+        <target xml:lang="ru">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
       </trans-unit>
     </body>
   </file>
