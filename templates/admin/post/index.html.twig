@@ -23,13 +23,16 @@
                                 </a>
                             </td>
                             <td>
-                                {{ post.slug }}
+                                <a href="{{ path('app.page', {slug: post.slug}) }}" target="_blank">
+                                    {{ post.slug }}
+                                    <sup><i class="fa fa-external-link"></i></sup>
+                                </a>
                             </td>
                             <td class="text-nowrap">
                                 {{ post.createdAtFormat }}
                             </td>
                             <td>
-                                <a href="{{ path('admin.post.edit', {id: post.id}) }}">
+                                <a href="{{ path('admin.post.edit', {id: post.id}) }}" class="btn btn-primary btn-xs">
                                     {{ 'admin.button.edit'|trans }}
                                 </a>
                             </td>
