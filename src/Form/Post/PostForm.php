@@ -20,7 +20,7 @@ class PostForm extends AbstractType
                     'autofocus' => true,
                 ],
             ])
-            ->add('title_in_russian', TextType::class, [
+            ->add('titleInRussian', TextType::class, [
                 'label' => 'label.title_in_russian',
                 'empty_data' => '',
             ])
@@ -35,7 +35,7 @@ class PostForm extends AbstractType
                     'rows' => 10,
                 ],
             ])
-            ->add('content_in_russian', TextareaType::class, [
+            ->add('contentInRussian', TextareaType::class, [
                 'label' => 'label.content_in_russian',
                 'empty_data' => '',
                 'attr' => [
