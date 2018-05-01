@@ -4,8 +4,15 @@ namespace App\Service;
 
 class MarkdownParser
 {
+    private const PURIFIER_CONFIG = [
+        'Cache.DefinitionImpl' => null, // Disable caching
+    ];
+
     /** @var \Parsedown */
     private $parsedown;
+
+    /** @var \HTMLPurifier_Config */
+    private $purifierConfig;
 
     /** @var \HTMLPurifier */
     private $purifier;
@@ -14,15 +21,15 @@ class MarkdownParser
     {
         $this->parsedown = new \Parsedown();
 
-        $purifierConfig = \HTMLPurifier_Config::create([
-            'Cache.DefinitionImpl' => null, // Disable caching
-        ]);
-        $this->purifier = new \HTMLPurifier($purifierConfig);
+        $this->purifierConfig = \HTMLPurifier_Config::create(self::PURIFIER_CONFIG);
+
+        $this->purifier = new \HTMLPurifier($this->purifierConfig);
     }
 
     public function parseToHtml(string $text): string
     {
         $html = $this->parsedown->text($text);
+
         $safeHtml = $this->purifier->purify($html);
 
         return $safeHtml;
