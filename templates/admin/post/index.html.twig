@@ -11,6 +11,7 @@
                         <th>{{ 'admin.title'|trans }}</th>
                         <th>{{ 'admin.slug'|trans }}</th>
                         <th>{{ 'admin.created'|trans }}</th>
+                        <th>{{ 'admin.actions'|trans }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,8 +25,13 @@
                             <td>
                                 {{ post.slug }}
                             </td>
-                            <td>
+                            <td class="text-nowrap">
                                 {{ post.createdAtFormat }}
+                            </td>
+                            <td>
+                                <a href="{{ path('admin.post.edit', {id: post.id}) }}">
+                                    {{ 'admin.button.edit'|trans }}
+                                </a>
                             </td>
                         </tr>
                     {% endfor %}
@@ -35,6 +41,7 @@
                         <th>{{ 'admin.title'|trans }}</th>
                         <th>{{ 'admin.slug'|trans }}</th>
                         <th>{{ 'admin.created'|trans }}</th>
+                        <th>{{ 'admin.actions'|trans }}</th>
                     </tr>
                 </tfoot>
             </table>
