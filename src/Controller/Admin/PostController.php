@@ -96,4 +96,18 @@ class PostController extends AbstractController
             ]
         );
     }
+
+    /**
+     * @Route("/{id}", name="admin.post.view", requirements={"id": "\d+"})
+     * @Method("GET")
+     */
+    public function view(Post $post): Response
+    {
+        return $this->render(
+            'admin/post/view.html.twig',
+            [
+                'post' => $post,
+            ]
+        );
+    }
 }

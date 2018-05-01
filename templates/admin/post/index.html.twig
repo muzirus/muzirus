@@ -18,7 +18,7 @@
                     {% for post in posts %}
                         <tr>
                             <td>
-                                <a href="{{ path('admin.post.edit', {id: post.id}) }}">
+                                <a href="{{ path('admin.post.view', {id: post.id}) }}">
                                     {{ post.title }}
                                 </a>
                             </td>

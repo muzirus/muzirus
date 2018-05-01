@@ -1,0 +1,23 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block title 'admin.posts'|trans %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-body">
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.content|md2html }}</p>
+            <hr>
+            <h1>{{ post.titleInRussian }}</h1>
+            <p>{{ post.contentInRussian|md2html }}</p>
+        </div>
+        <div class="box-footer">
+            <a href="{{ path('admin.post.edit', { id: post.id }) }}" class="btn btn-primary">
+                {{ 'admin.button.edit'|trans }}
+            </a>
+            <a href="{{ path('admin.post') }}" class="btn btn-default">
+                {{ 'admin.button.back_to_list'|trans }}
+            </a>
+        </div>
+    </div>
+{% endblock %}
