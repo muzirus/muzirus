@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
-    private const TITLE_PAGE_SLUG = 'index';
+    private const SLUG_INDEX = 'index';
 
     /**
      * @Route("", name="app.index")
@@ -19,7 +19,7 @@ class IndexController extends AbstractController
         return $this->render(
             'app/index/index.html.twig',
             [
-                'post' => $postRepository->findOneBySlugWithAuthorAndRevisions(self::TITLE_PAGE_SLUG),
+                'post' => $postRepository->findOneBySlugWithAuthorAndRevisions(self::SLUG_INDEX),
             ]
         );
     }

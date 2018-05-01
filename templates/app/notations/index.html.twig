@@ -1,44 +1,19 @@
 {% extends 'app/layout.html.twig' %}
 
-{% block heading 'app.title.notations'|trans %}
+{% block heading %}
+    {% if app.request.locale == 'ru' %}
+        {{ post.titleInRussian }}
+    {% else %}
+        {{ post.title }}
+    {% endif %}
+{% endblock %}
 
 {% block content %}
     {% if app.request.locale == 'ru' %}
-        <p>
-            Для записи музыки используется графический код, так называемый, <strong>музыкальная нотация</strong> или
-            <strong>нотное письмо</strong>. Речь идет о наборе специальных <em>знаков</em> и <em>символов</em>,
-            посредством которых записываются отдельные звуки, т.е. тона, графически представляемые нотами в
-            <strong>такты</strong> на <strong>нотном стане</strong> (нотоносце), а также перерывы в звучании,
-            графически обозначемые <strong>паузами</strong>. Таким образом образуется <strong>нотная запись</strong>,
-            упращенно ноты.
-        </p>
-        <p>
-            Для изображения способа исполнения и многих прочих музыкальных явлений используются
-            <strong>другие графические обозначения</strong>, например, <em>итальянская терминология</em>.
-        </p>
-        <p>
-            Ниже приводим <strong>очерк основных 113 понятий из музыкальной нотации</strong> с их условными
-            обозначениями на русском и чешском языках.
-        </p>
-
+        {{ post.contentInRussian|md2html }}
     {% else %}
-        <p>
-            K zápisu hudby používáme grafický kód nazývaný <strong><em>hudební notace</em></strong> nebo též
-            <strong><em>notopis</em></strong>. Jde o souhrn <em>speciálních značek</em> a <em>symbolů</em>, kterými
-            zapisujeme zvuky, tj. tóny graficky znázorňované <strong>notami</strong> do <strong>taktů</strong> na
-            <strong>notové osnově</strong>, ale i pauzy, odmlčení, graficky znázorňované <strong>pomlkami</strong>.
-            Takovým způsobem vzniká notové písmo, zjednodušeně noty.
-        </p>
-        <p>
-            K vyjádření způsobu přednesu a mnoha dalších hudebních jevů používáme
-            <strong>jiná grafická označení</strong>, například <em>italské názvosloví</em> a z něj utvořené zkratky.
-        </p>
-        <p>
-            Níže uvádíme <strong>soubor 113 základních pojmů z hudební notace</strong> s jejich českými i ruskými
-            označeními.
-        </p>
+        {{ post.content|md2html }}
     {% endif %}
-
     <h2>Noty</h2>
     <table class="table table-striped table-hover table-bordered">
         <tbody>
@@ -550,5 +525,4 @@
             </tr>
         </tbody>
     </table>
-    <hr>
 {% endblock %}
