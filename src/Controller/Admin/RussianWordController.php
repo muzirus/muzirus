@@ -87,6 +87,7 @@ class RussianWordController extends AbstractController
     /**
      * @Route("/{id}/edit", name="admin.russian-word.edit", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function edit(
         Request $request,
@@ -140,6 +141,7 @@ class RussianWordController extends AbstractController
     /**
      * @Route("/{id}/translations", name="admin.russian-word.translations", requirements={"id": "\d+"})
      * @Method({"GET", "POST"})
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function translations(
         Request $request,
