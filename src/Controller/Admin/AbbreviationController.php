@@ -9,7 +9,6 @@ use App\Facade\AbbreviationFacade;
 use App\Form\Abbreviation\AbbreviationForm;
 use App\Form\Abbreviation\AbbreviationFormData;
 use App\Repository\AbbreviationRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,8 +20,7 @@ use Symfony\Component\HttpFoundation\Response;
 class AbbreviationController extends AbstractController
 {
     /**
-     * @Route("", name="admin.abbreviation")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.abbreviation")
      */
     public function index(AbbreviationRepository $abbreviationRepository): Response
     {
@@ -35,8 +33,7 @@ class AbbreviationController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="admin.abbreviation.add")
-     * @Method({"GET", "POST"})
+     * @Route("/add", methods={"GET", "POST"}, name="admin.abbreviation.add")
      */
     public function add(Request $request, AbbreviationFacade $abbreviationFacade): Response
     {
@@ -62,8 +59,7 @@ class AbbreviationController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.abbreviation.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.abbreviation.edit")
      */
     public function edit(Request $request, Abbreviation $abbreviation, AbbreviationFacade $abbreviationFacade): Response
     {
@@ -90,8 +86,7 @@ class AbbreviationController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/remove", name="admin.abbreviation.remove", requirements={"id": "\d+"})
-     * @Method("POST")
+     * @Route("/{id}/remove", methods={"POST"}, requirements={"id": "\d+"}, name="admin.abbreviation.remove")
      */
     public function remove(Abbreviation $abbreviation, AbbreviationFacade $abbreviationFacade): RedirectResponse
     {

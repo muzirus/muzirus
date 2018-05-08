@@ -12,7 +12,6 @@ use App\Event\TranslationExampleEvent;
 use App\Facade\TranslationExampleFacade;
 use App\Form\TranslationExample\TranslationExampleForm;
 use App\Form\TranslationExample\TranslationExampleFormData;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -28,11 +27,11 @@ class CzechWordTranslationExampleController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/examples",
-     *     name="admin.czech-word.translations.examples",
-     *     requirements={"id": "\d+", "translationId": "\d+"}
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     methods={"GET", "POST"},
+     *     name="admin.czech-word.translations.examples"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
-     * @Method({"GET", "POST"})
      */
     public function translationExamples(
         Request $request,
@@ -77,12 +76,12 @@ class CzechWordTranslationExampleController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/examples/{translationExampleId}/edit",
-     *     name="admin.czech-word.translations.examples.edit",
-     *     requirements={"id": "\d+", "translationId": "\d+", "translationExampleId": "\d+"}
+     *     requirements={"id": "\d+", "translationId": "\d+", "translationExampleId": "\d+"},
+     *     methods={"GET", "POST"},
+     *     name="admin.czech-word.translations.examples.edit"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
      * @ParamConverter("translationExample", options={"id": "translationExampleId"})
-     * @Method({"GET", "POST"})
      */
     public function translationExamplesEdit(
         Request $request,
@@ -131,12 +130,12 @@ class CzechWordTranslationExampleController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/examples/{translationExampleId}/remove",
-     *     name="admin.czech-word.translations.examples.remove",
-     *     requirements={"id": "\d+", "translationId": "\d+", "translationExampleId": "\d+"}
+     *     requirements={"id": "\d+", "translationId": "\d+", "translationExampleId": "\d+"},
+     *     methods={"POST"},
+     *     name="admin.czech-word.translations.examples.remove"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
      * @ParamConverter("translationExample", options={"id": "translationExampleId"})
-     * @Method("POST")
      */
     public function translationExamplesRemove(
         CzechWord $word,

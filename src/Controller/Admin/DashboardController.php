@@ -3,7 +3,6 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -13,8 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 class DashboardController extends AbstractController
 {
     /**
-     * @Route("", name="admin.dashboard")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.dashboard")
      */
     public function index(): Response
     {

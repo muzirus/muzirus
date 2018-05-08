@@ -4,7 +4,6 @@ namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
 use App\Repository\UserRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -14,8 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 class UserController extends AbstractController
 {
     /**
-     * @Route("", name="admin.user")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.user")
      */
     public function index(UserRepository $userRepository): Response
     {

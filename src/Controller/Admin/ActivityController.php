@@ -4,7 +4,6 @@ namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
 use App\Repository\LogEntryRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -14,13 +13,13 @@ use Symfony\Component\HttpFoundation\Response;
 class ActivityController extends AbstractController
 {
     /**
-     * @Route("", name="admin.activity", defaults={"page": 1})
+     * @Route("", methods={"GET"}, defaults={"page": 1}, name="admin.activity")
      * @Route(
      *     "/page/{page}",
-     *     name="admin.activity.paginated",
-     *     requirements={"page": "[1-9]\d*"}
+     *     requirements={"page": "[1-9]\d*"},
+     *     methods={"GET"},
+     *     name="admin.activity.paginated"
      * )
-     * @Method("GET")
      */
     public function index(int $page, LogEntryRepository $logEntryRepository): Response
     {

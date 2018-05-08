@@ -3,15 +3,13 @@
 namespace App\Controller;
 
 use App\Repository\WordCategoryRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class TopicsController extends AbstractController
 {
     /**
-     * @Route("/topics", name="app.topics")
-     * @Method("GET")
+     * @Route("/topics", methods={"GET"}, name="app.topics")
      */
     public function index(WordCategoryRepository $categoryRepository): Response
     {

@@ -11,7 +11,6 @@ use App\Facade\SourceTypeFacade;
 use App\Form\SourceType\SourceTypeForm;
 use App\Form\SourceType\SourceTypeFormData;
 use App\Repository\SourceTypeRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -24,8 +23,7 @@ use Symfony\Component\HttpFoundation\Response;
 class SourceTypeController extends AbstractController
 {
     /**
-     * @Route("", name="admin.source-type")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.source-type")
      */
     public function index(SourceTypeRepository $sourceTypeRepository): Response
     {
@@ -38,8 +36,7 @@ class SourceTypeController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="admin.source-type.add")
-     * @Method({"GET", "POST"})
+     * @Route("/add", methods={"GET", "POST"}, name="admin.source-type.add")
      */
     public function add(
         Request $request,
@@ -73,8 +70,7 @@ class SourceTypeController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.source-type.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.source-type.edit")
      */
     public function edit(
         Request $request,
@@ -110,8 +106,7 @@ class SourceTypeController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/remove", name="admin.source-type.remove", requirements={"id": "\d+"})
-     * @Method("POST")
+     * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.source-type.remove")
      */
     public function remove(SourceType $sourceType, SourceTypeFacade $sourceTypeFacade): RedirectResponse
     {

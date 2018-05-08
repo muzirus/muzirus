@@ -9,7 +9,6 @@ use App\Facade\PostFacade;
 use App\Form\Post\PostForm;
 use App\Form\Post\PostFormData;
 use App\Repository\PostRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,8 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 class PostController extends AbstractController
 {
     /**
-     * @Route("", name="admin.post")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.post")
      */
     public function index(PostRepository $postRepository): Response
     {
@@ -34,8 +32,7 @@ class PostController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="admin.post.add")
-     * @Method({"GET", "POST"})
+     * @Route("/add", methods={"GET", "POST"}, name="admin.post.add")
      */
     public function add(Request $request, PostFacade $postFacade): Response
     {
@@ -66,8 +63,7 @@ class PostController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.post.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.post.edit")
      */
     public function edit(Request $request, Post $post, PostFacade $postFacade): Response
     {
@@ -99,8 +95,7 @@ class PostController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin.post.view", requirements={"id": "\d+"})
-     * @Method("GET")
+     * @Route("/{id}", requirements={"id": "\d+"}, methods={"GET"}, name="admin.post.view")
      */
     public function view(Post $post): Response
     {

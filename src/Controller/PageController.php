@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Post;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,9 +10,8 @@ use Symfony\Component\HttpFoundation\Response;
 class PageController extends AbstractController
 {
     /**
-     * @Route("/page/{slug}", name="app.page", requirements={"slug": "[a-z0-9][a-z0-9-]*"})
+     * @Route("/page/{slug}", requirements={"slug": "[a-z0-9][a-z0-9-]*"}, methods={"GET"}, name="app.page")
      * @ParamConverter("post", options={"id": "slug", "repository_method": "findOneBySlugWithAuthorAndRevisions"})
-     * @Method("GET")
      */
     public function index(Post $post): Response
     {

@@ -11,7 +11,6 @@ use App\Facade\CategoryFacade;
 use App\Form\Category\CategoryForm;
 use App\Form\Category\CategoryFormData;
 use App\Repository\WordCategoryRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -24,8 +23,7 @@ use Symfony\Component\HttpFoundation\Response;
 class CategoryController extends AbstractController
 {
     /**
-     * @Route("", name="admin.category")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.category")
      */
     public function index(WordCategoryRepository $categoryRepository): Response
     {
@@ -38,8 +36,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="admin.category.add")
-     * @Method({"GET", "POST"})
+     * @Route("/add", methods={"GET", "POST"}, name="admin.category.add")
      */
     public function add(
         Request $request,
@@ -73,8 +70,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.category.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.category.edit")
      */
     public function edit(
         Request $request,
@@ -110,8 +106,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/remove", name="admin.category.remove", requirements={"id": "\d+"})
-     * @Method("POST")
+     * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.category.remove")
      */
     public function remove(WordCategory $category, CategoryFacade $categoryFacade): RedirectResponse
     {

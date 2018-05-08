@@ -9,7 +9,6 @@ use App\Facade\AnnouncementFacade;
 use App\Form\Announcement\AnnouncementForm;
 use App\Form\Announcement\AnnouncementFormData;
 use App\Repository\AnnouncementRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,8 +20,7 @@ use Symfony\Component\HttpFoundation\Response;
 class AnnouncementController extends AbstractController
 {
     /**
-     * @Route("", name="admin.announcement")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.announcement")
      */
     public function index(AnnouncementRepository $announcementRepository): Response
     {
@@ -35,8 +33,7 @@ class AnnouncementController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="admin.announcement.add")
-     * @Method({"GET", "POST"})
+     * @Route("/add", methods={"GET", "POST"}, name="admin.announcement.add")
      */
     public function add(Request $request, AnnouncementFacade $announcementFacade): Response
     {
@@ -67,8 +64,7 @@ class AnnouncementController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.announcement.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.announcement.edit")
      */
     public function edit(Request $request, Announcement $announcement, AnnouncementFacade $announcementFacade): Response
     {
@@ -100,8 +96,7 @@ class AnnouncementController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/remove", name="admin.announcement.remove", requirements={"id": "\d+"})
-     * @Method("POST")
+     * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.announcement.remove")
      */
     public function remove(Announcement $announcement, AnnouncementFacade $announcementFacade): RedirectResponse
     {

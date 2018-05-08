@@ -11,7 +11,6 @@ use App\Facade\CzechWordFacade;
 use App\Form\Word\CzechWordForm;
 use App\Form\Word\CzechWordFormData;
 use App\Repository\CzechWordRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -24,8 +23,7 @@ use Symfony\Component\HttpFoundation\Response;
 class CzechWordController extends AbstractController
 {
     /**
-     * @Route("", name="admin.czech-word")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.czech-word")
      */
     public function index(CzechWordRepository $czechWordRepository): Response
     {
@@ -38,8 +36,7 @@ class CzechWordController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="admin.czech-word.add")
-     * @Method({"GET", "POST"})
+     * @Route("/add", methods={"GET", "POST"}, name="admin.czech-word.add")
      */
     public function add(
         Request $request,
@@ -73,8 +70,7 @@ class CzechWordController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.czech-word.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.czech-word.edit")
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function edit(
@@ -114,8 +110,7 @@ class CzechWordController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/remove", name="admin.czech-word.remove", requirements={"id": "\d+"})
-     * @Method("POST")
+     * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.czech-word.remove")
      */
     public function remove(CzechWord $word, CzechWordFacade $czechWordFacade): RedirectResponse
     {
