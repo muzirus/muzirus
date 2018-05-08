@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\CzechWord;
@@ -10,7 +11,6 @@ use App\Entity\TranslationExample;
 use App\Event\CzechWordEvent;
 use App\Event\TranslationEvent;
 use App\Event\TranslationExampleEvent;
-use App\Events;
 use App\Facade\CzechWordFacade;
 use App\Facade\TranslationExampleFacade;
 use App\Facade\TranslationFacade;

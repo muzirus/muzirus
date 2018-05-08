@@ -2,6 +2,7 @@
 
 namespace App\Subscriber;
 
+use App\Constant\Events;
 use App\Entity\LogEntry;
 use App\Event\CategoryEvent;
 use App\Event\CzechWordEvent;
@@ -10,7 +11,6 @@ use App\Event\SourceEvent;
 use App\Event\SourceTypeEvent;
 use App\Event\TranslationEvent;
 use App\Event\TranslationExampleEvent;
-use App\Events;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 

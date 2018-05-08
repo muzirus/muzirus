@@ -2,11 +2,11 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\TranslationExample;
 use App\Event\TranslationExampleEvent;
-use App\Events;
 use App\Facade\TranslationExampleFacade;
 use App\Form\TranslationExample\TranslationExampleForm;
 use App\Form\TranslationExample\TranslationExampleFormData;

@@ -2,11 +2,11 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\SourceType;
 use App\Event\SourceTypeEvent;
-use App\Events;
 use App\Facade\SourceTypeFacade;
 use App\Form\SourceType\SourceTypeForm;
 use App\Form\SourceType\SourceTypeFormData;

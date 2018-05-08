@@ -2,11 +2,11 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\WordCategory;
 use App\Event\CategoryEvent;
-use App\Events;
 use App\Facade\CategoryFacade;
 use App\Form\Category\CategoryForm;
 use App\Form\Category\CategoryFormData;
