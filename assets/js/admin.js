@@ -1,3 +1,4 @@
+import 'jquery';
 import 'bootstrap-sass';
 import 'jquery-slimscroll';
 import 'datatables.net';
