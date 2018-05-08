@@ -66,6 +66,7 @@ class RussianToCzechController extends AbstractController
     /**
      * @Route("/detail/{id}", name="app.russian_to_czech.detail", requirements={"id": "\d+"})
      * @Method("GET")
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function detail(RussianWord $word, RussianWordRepository $wordRepository): Response
     {
