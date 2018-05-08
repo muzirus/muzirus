@@ -47,4 +47,8 @@ final class Flashes
     public const WORD_CREATED = 'admin.word.created';
     public const WORD_UPDATED = 'admin.word.updated';
     public const WORD_DELETED = 'admin.word.deleted';
+
+    private function __construct()
+    {
+    }
 }
