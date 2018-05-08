@@ -11,7 +11,6 @@ use App\Facade\TranslationExampleFacade;
 use App\Form\TranslationExample\TranslationExampleForm;
 use App\Form\TranslationExample\TranslationExampleFormData;
 use App\Repository\TranslationExampleRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -24,8 +23,7 @@ use Symfony\Component\HttpFoundation\Response;
 class TranslationExampleController extends AbstractController
 {
     /**
-     * @Route("", name="admin.translation-example")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.translation-example")
      */
     public function index(TranslationExampleRepository $translationExampleRepository): Response
     {
@@ -38,8 +36,7 @@ class TranslationExampleController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.translation-example.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.translation-example.edit")
      */
     public function edit(
         Request $request,
@@ -80,8 +77,7 @@ class TranslationExampleController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/remove", name="admin.translation-example.remove", requirements={"id": "\d+"})
-     * @Method("POST")
+     * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.translation-example.remove")
      */
     public function remove(
         TranslationExample $translationExample,

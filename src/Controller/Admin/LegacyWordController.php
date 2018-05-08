@@ -5,7 +5,6 @@ namespace App\Controller\Admin;
 use App\Controller\AbstractController;
 use App\Entity\LegacyWord;
 use App\Repository\LegacyWordRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -15,8 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class LegacyWordController extends AbstractController
 {
     /**
-     * @Route(name="admin.legacy_word")
-     * @Method("GET")
+     * @Route(methods={"GET"}, name="admin.legacy_word")
      */
     public function index(LegacyWordRepository $legacyWordRepository): Response
     {
@@ -29,8 +27,7 @@ class LegacyWordController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="admin.legacy_word.view", requirements={"id": "\d+"})
-     * @Method("GET")
+     * @Route("/{id}", requirements={"id": "\d+"}, methods={"GET"}, name="admin.legacy_word.view")
      */
     public function view(LegacyWord $word): Response
     {

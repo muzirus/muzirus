@@ -3,7 +3,6 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -13,8 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 class IndexController extends AbstractController
 {
     /**
-     * @Route("", name="admin")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin")
      */
     public function index(): Response
     {

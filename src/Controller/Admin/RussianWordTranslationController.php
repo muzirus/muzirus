@@ -13,7 +13,6 @@ use App\Form\Translation\CreateRussianWordTranslationForm;
 use App\Form\Translation\TranslationFormData;
 use App\Form\Translation\UpdateTranslationForm;
 use App\Repository\RussianWordRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -27,8 +26,12 @@ use Symfony\Component\HttpFoundation\Response;
 class RussianWordTranslationController extends AbstractController
 {
     /**
-     * @Route("/{id}/translations", name="admin.russian-word.translations", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route(
+     *     "/{id}/translations",
+     *     requirements={"id": "\d+"},
+     *     methods={"GET", "POST"},
+     *     name="admin.russian-word.translations"
+     * )
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function translations(
@@ -70,11 +73,11 @@ class RussianWordTranslationController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/edit",
-     *     name="admin.russian-word.translations.edit",
-     *     requirements={"id": "\d+", "translationId": "\d+"}
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     methods={"GET", "POST"},
+     *     name="admin.russian-word.translations.edit"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
-     * @Method({"GET", "POST"})
      */
     public function translationsEdit(
         Request $request,
@@ -120,11 +123,11 @@ class RussianWordTranslationController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/remove",
-     *     name="admin.russian-word.translations.remove",
-     *     requirements={"id": "\d+", "translationId": "\d+"}
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     methods={"POST"},
+     *     name="admin.russian-word.translations.remove"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
-     * @Method("POST")
      */
     public function translationsRemove(
         RussianWord $word,
@@ -143,18 +146,19 @@ class RussianWordTranslationController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/position/up",
-     *     name="admin.russian-word.translations.position.up",
      *     requirements={"id": "\d+", "translationId": "\d+"},
-     *     defaults={"position": "up"}
+     *     defaults={"position": "up"},
+     *     methods={"GET"},
+     *     name="admin.russian-word.translations.position.up"
      * )
      * @Route(
      *     "/{id}/translations/{translationId}/position/down",
-     *     name="admin.russian-word.translations.position.down",
      *     requirements={"id": "\d+", "translationId": "\d+"},
-     *     defaults={"position": "down"}
+     *     defaults={"position": "down"},
+     *     methods={"GET"},
+     *     name="admin.russian-word.translations.position.down"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
-     * @Method({"GET"})
      */
     public function translationsPosition(
         RussianWord $word,

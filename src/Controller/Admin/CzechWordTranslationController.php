@@ -13,7 +13,6 @@ use App\Form\Translation\CreateCzechWordTranslationForm;
 use App\Form\Translation\TranslationFormData;
 use App\Form\Translation\UpdateTranslationForm;
 use App\Repository\CzechWordRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -27,8 +26,12 @@ use Symfony\Component\HttpFoundation\Response;
 class CzechWordTranslationController extends AbstractController
 {
     /**
-     * @Route("/{id}/translations", name="admin.czech-word.translations", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route(
+     *     "/{id}/translations",
+     *     requirements={"id": "\d+"},
+     *     methods={"GET", "POST"},
+     *     name="admin.czech-word.translations"
+     * )
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function translations(
@@ -70,11 +73,11 @@ class CzechWordTranslationController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/edit",
-     *     name="admin.czech-word.translations.edit",
-     *     requirements={"id": "\d+", "translationId": "\d+"}
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     methods={"GET", "POST"},
+     *     name="admin.czech-word.translations.edit"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
-     * @Method({"GET", "POST"})
      */
     public function translationsEdit(
         Request $request,
@@ -120,11 +123,11 @@ class CzechWordTranslationController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/remove",
-     *     name="admin.czech-word.translations.remove",
-     *     requirements={"id": "\d+", "translationId": "\d+"}
+     *     requirements={"id": "\d+", "translationId": "\d+"},
+     *     methods={"POST"},
+     *     name="admin.czech-word.translations.remove"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
-     * @Method("POST")
      */
     public function translationsRemove(
         CzechWord $word,
@@ -143,18 +146,19 @@ class CzechWordTranslationController extends AbstractController
     /**
      * @Route(
      *     "/{id}/translations/{translationId}/position/up",
-     *     name="admin.czech-word.translations.position.up",
      *     requirements={"id": "\d+", "translationId": "\d+"},
-     *     defaults={"position": "up"}
+     *     defaults={"position": "up"},
+     *     methods={"GET"},
+     *     name="admin.czech-word.translations.position.up"
      * )
      * @Route(
      *     "/{id}/translations/{translationId}/position/down",
-     *     name="admin.czech-word.translations.position.down",
      *     requirements={"id": "\d+", "translationId": "\d+"},
-     *     defaults={"position": "down"}
+     *     defaults={"position": "down"},
+     *     methods={"GET"},
+     *     name="admin.czech-word.translations.position.down"
      * )
      * @ParamConverter("translation", options={"id": "translationId"})
-     * @Method({"GET"})
      */
     public function translationsPosition(
         CzechWord $word,

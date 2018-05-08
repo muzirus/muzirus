@@ -9,7 +9,6 @@ use App\Facade\SymbolFacade;
 use App\Form\Symbol\SymbolForm;
 use App\Form\Symbol\SymbolFormData;
 use App\Repository\SymbolRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,8 +20,7 @@ use Symfony\Component\HttpFoundation\Response;
 class SymbolController extends AbstractController
 {
     /**
-     * @Route("", name="admin.symbol")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.symbol")
      */
     public function index(SymbolRepository $symbolRepository): Response
     {
@@ -35,8 +33,7 @@ class SymbolController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="admin.symbol.add")
-     * @Method({"GET", "POST"})
+     * @Route("/add", methods={"GET", "POST"}, name="admin.symbol.add")
      */
     public function add(Request $request, SymbolFacade $symbolFacade): Response
     {
@@ -62,8 +59,7 @@ class SymbolController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.symbol.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.symbol.edit")
      */
     public function edit(Request $request, Symbol $symbol, SymbolFacade $symbolFacade): Response
     {
@@ -90,8 +86,7 @@ class SymbolController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/remove", name="admin.symbol.remove", requirements={"id": "\d+"})
-     * @Method("POST")
+     * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.symbol.remove")
      */
     public function remove(Symbol $symbol, SymbolFacade $symbolFacade): RedirectResponse
     {

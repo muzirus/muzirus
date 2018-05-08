@@ -5,15 +5,13 @@ namespace App\Controller\Admin;
 use App\Controller\AbstractController;
 use App\Entity\Message;
 use App\Repository\MessageRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class MessageController extends AbstractController
 {
     /**
-     * @Route("admin/message", name="admin.message")
-     * @Method({"GET"})
+     * @Route("admin/message", methods={"GET"}, name="admin.message")
      */
     public function index(MessageRepository $messageRepository): Response
     {
@@ -26,8 +24,7 @@ class MessageController extends AbstractController
     }
 
     /**
-     * @Route("admin/message/{id}", name="admin.message.view")
-     * @Method({"GET"})
+     * @Route("admin/message/{id}", methods={"GET"}, name="admin.message.view")
      */
     public function view(Message $message): Response
     {

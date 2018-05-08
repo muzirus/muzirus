@@ -11,7 +11,6 @@ use App\Facade\SourceFacade;
 use App\Form\Source\SourceForm;
 use App\Form\Source\SourceFormData;
 use App\Repository\SourceRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -24,8 +23,7 @@ use Symfony\Component\HttpFoundation\Response;
 class SourceController extends AbstractController
 {
     /**
-     * @Route("", name="admin.source")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="admin.source")
      */
     public function index(SourceRepository $sourceRepository): Response
     {
@@ -38,8 +36,7 @@ class SourceController extends AbstractController
     }
 
     /**
-     * @Route("/add", name="admin.source.add")
-     * @Method({"GET", "POST"})
+     * @Route("/add", methods={"GET", "POST"}, name="admin.source.add")
      */
     public function add(Request $request, SourceFacade $sourceFacade, EventDispatcherInterface $dispatcher): Response
     {
@@ -70,8 +67,7 @@ class SourceController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="admin.source.edit", requirements={"id": "\d+"})
-     * @Method({"GET", "POST"})
+     * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.source.edit")
      */
     public function edit(
         Request $request,
@@ -107,8 +103,7 @@ class SourceController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/remove", name="admin.source.remove", requirements={"id": "\d+"})
-     * @Method("POST")
+     * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.source.remove")
      */
     public function remove(Source $source, SourceFacade $sourceFacade): RedirectResponse
     {
