@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Post;
 use App\Facade\PostFacade;
@@ -46,7 +47,7 @@ class PostController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $post = $postFacade->create($formData);
 
-            $this->addFlashSuccess('admin.post.created');
+            $this->addFlashSuccess(Flashes::POST_CREATED);
 
             return $this->redirectToRoute(
                 'admin.post.edit',
@@ -78,7 +79,7 @@ class PostController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $postFacade->update($post, $formData);
 
-            $this->addFlashSuccess('admin.post.updated');
+            $this->addFlashSuccess(Flashes::POST_UPDATED);
 
             return $this->redirectToRoute(
                 'admin.post.edit',

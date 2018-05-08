@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Source;
 use App\Event\SourceEvent;
@@ -55,7 +56,7 @@ class SourceController extends AbstractController
                 new SourceEvent($this->getUser(), $source)
             );
 
-            $this->addFlashSuccess('admin.source.created');
+            $this->addFlashSuccess(Flashes::SOURCE_CREATED);
 
             return $this->redirectToRoute('admin.source');
         }
@@ -91,7 +92,7 @@ class SourceController extends AbstractController
                 new SourceEvent($this->getUser(), $source)
             );
 
-            $this->addFlashSuccess('admin.source.update');
+            $this->addFlashSuccess(Flashes::SOURCE_UPDATED);
 
             return $this->redirectToRoute('admin.source');
         }
@@ -113,7 +114,7 @@ class SourceController extends AbstractController
     {
         $sourceFacade->deleteSource($source);
 
-        $this->addFlashSuccess('admin.source.deleted');
+        $this->addFlashSuccess(Flashes::SOURCE_DELETED);
 
         return $this->redirectToRoute('admin.source');
     }

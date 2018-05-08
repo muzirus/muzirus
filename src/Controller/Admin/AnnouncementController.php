@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Announcement;
 use App\Facade\AnnouncementFacade;
@@ -47,7 +48,7 @@ class AnnouncementController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $announcement = $announcementFacade->createAnnouncement($formData);
 
-            $this->addFlashSuccess('admin.announcement.created');
+            $this->addFlashSuccess(Flashes::ANNOUNCEMENT_CREATED);
 
             return $this->redirectToRoute(
                 'admin.announcement.edit',
@@ -79,7 +80,7 @@ class AnnouncementController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $announcementFacade->updateAnnouncement($announcement, $formData);
 
-            $this->addFlashSuccess('admin.announcement.updated');
+            $this->addFlashSuccess(Flashes::ANNOUNCEMENT_UPDATED);
 
             return $this->redirectToRoute(
                 'admin.announcement.edit',
@@ -106,7 +107,7 @@ class AnnouncementController extends AbstractController
     {
         $announcementFacade->deleteAnnouncement($announcement);
 
-        $this->addFlashSuccess('admin.announcement.deleted');
+        $this->addFlashSuccess(Flashes::ANNOUNCEMENT_DELETED);
 
         return $this->redirectToRoute('admin.announcement');
     }

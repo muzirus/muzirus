@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\RussianWord;
 use App\Entity\Translation;
@@ -70,7 +71,7 @@ class RussianWordController extends AbstractController
                 new RussianWordEvent($this->getUser(), $word)
             );
 
-            $this->addFlashSuccess('admin.word.created');
+            $this->addFlashSuccess(Flashes::WORD_CREATED);
 
             return $this->redirectToRoute('admin.russian-word.edit', ['id' => $word->getId()]);
         }
@@ -107,7 +108,7 @@ class RussianWordController extends AbstractController
                 new RussianWordEvent($this->getUser(), $word)
             );
 
-            $this->addFlashSuccess('admin.word.updated');
+            $this->addFlashSuccess(Flashes::WORD_UPDATED);
 
             return $this->redirectToRoute('admin.russian-word.edit', ['id' => $word->getId()]);
         }
@@ -133,7 +134,7 @@ class RussianWordController extends AbstractController
 
         $this->addFlashSuccess('admin.word.deleted');
 
-        return $this->redirectToRoute('admin.russian-word');
+        return $this->redirectToRoute(Flashes::WORD_DELETED);
     }
 
     /**
@@ -160,7 +161,7 @@ class RussianWordController extends AbstractController
                 new TranslationEvent($this->getUser(), $translation)
             );
 
-            $this->addFlashSuccess('admin.translation.created');
+            $this->addFlashSuccess(Flashes::TRANSLATION_CREATED);
 
             return $this->redirectToRoute('admin.russian-word.translations', ['id' => $word->getId()]);
         }
@@ -205,7 +206,7 @@ class RussianWordController extends AbstractController
                 new TranslationEvent($this->getUser(), $translation)
             );
 
-            $this->addFlashSuccess('admin.translation.updated');
+            $this->addFlashSuccess(Flashes::TRANSLATION_UPDATED);
 
             return $this->redirectToRoute(
                 'admin.russian-word.translations.edit',
@@ -244,7 +245,7 @@ class RussianWordController extends AbstractController
 
         $translationFacade->deleteTranslation($translation);
 
-        $this->addFlashSuccess('admin.translation.deleted');
+        $this->addFlashSuccess(Flashes::TRANSLATION_DELETED);
 
         return $this->redirectToRoute('admin.russian-word.translations', ['id' => $word->getId()]);
     }
@@ -275,7 +276,7 @@ class RussianWordController extends AbstractController
 
         $translationFacade->updateTranslationPositionInRussianWordDetail($translation, $position);
 
-        $this->addFlashSuccess('admin.translation.updated');
+        $this->addFlashSuccess(Flashes::TRANSLATION_UPDATED);
 
         return $this->redirectToRoute(
             'admin.russian-word.translations',
@@ -313,7 +314,7 @@ class RussianWordController extends AbstractController
                 new TranslationExampleEvent($this->getUser(), $translationExample)
             );
 
-            $this->addFlashSuccess('admin.translation_example.created');
+            $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_CREATED);
 
             return $this->redirectToRoute(
                 'admin.russian-word.translations.examples',
@@ -365,7 +366,7 @@ class RussianWordController extends AbstractController
                 new TranslationExampleEvent($this->getUser(), $translationExample)
             );
 
-            $this->addFlashSuccess('admin.translation_example.updated');
+            $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_UPDATED);
 
             return $this->redirectToRoute(
                 'admin.russian-word.translations.examples.edit',
@@ -408,7 +409,7 @@ class RussianWordController extends AbstractController
 
         $translationExampleFacade->deleteTranslationExample($translationExample);
 
-        $this->addFlashSuccess('admin.translation_example.deleted');
+        $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_DELETED);
 
         return $this->redirectToRoute(
             'admin.russian-word.translations.examples',

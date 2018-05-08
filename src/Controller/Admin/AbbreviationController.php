@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Abbreviation;
 use App\Facade\AbbreviationFacade;
@@ -47,7 +48,7 @@ class AbbreviationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $abbreviationFacade->createAbbreviation($abbreviationFormData);
 
-            $this->addFlashSuccess('admin.abbreviation.created');
+            $this->addFlashSuccess(Flashes::ABBREVIATION_CREATED);
 
             return $this->redirectToRoute('admin.abbreviation');
         }
@@ -74,7 +75,7 @@ class AbbreviationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $abbreviationFacade->updateAbbreviation($abbreviation, $abbreviationFormData);
 
-            $this->addFlashSuccess('admin.abbreviation.updated');
+            $this->addFlashSuccess(Flashes::ABBREVIATION_UPDATED);
 
             return $this->redirectToRoute('admin.abbreviation');
         }
@@ -96,7 +97,7 @@ class AbbreviationController extends AbstractController
     {
         $abbreviationFacade->deleteAbbreviation($abbreviation);
 
-        $this->addFlashSuccess('admin.abbreviation.deleted');
+        $this->addFlashSuccess(Flashes::ABBREVIATION_DELETED);
 
         return $this->redirectToRoute('admin.abbreviation');
     }

@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\TranslationExample;
 use App\Event\TranslationExampleEvent;
@@ -59,7 +60,7 @@ class TranslationExampleController extends AbstractController
                 new TranslationExampleEvent($this->getUser(), $translationExample)
             );
 
-            $this->addFlashSuccess('admin.translation_example.updated');
+            $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_UPDATED);
 
             return $this->redirectToRoute(
                 'admin.translation-example.edit',
@@ -88,7 +89,7 @@ class TranslationExampleController extends AbstractController
     ): RedirectResponse {
         $translationExampleFacade->deleteTranslationExample($translationExample);
 
-        $this->addFlashSuccess('admin.translation_example.deleted');
+        $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_DELETED);
 
         return $this->redirectToRoute('admin.translation-example');
     }

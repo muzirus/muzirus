@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\SourceType;
 use App\Event\SourceTypeEvent;
@@ -58,7 +59,7 @@ class SourceTypeController extends AbstractController
                 new SourceTypeEvent($this->getUser(), $sourceType)
             );
 
-            $this->addFlashSuccess('admin.source_type.created');
+            $this->addFlashSuccess(Flashes::SOURCE_TYPE_CREATED);
 
             return $this->redirectToRoute('admin.source-type');
         }
@@ -94,7 +95,7 @@ class SourceTypeController extends AbstractController
                 new SourceTypeEvent($this->getUser(), $sourceType)
             );
 
-            $this->addFlashSuccess('admin.source_type.updated');
+            $this->addFlashSuccess(Flashes::SOURCE_TYPE_UPDATED);
 
             return $this->redirectToRoute('admin.source-type');
         }
@@ -116,7 +117,7 @@ class SourceTypeController extends AbstractController
     {
         $sourceTypeFacade->deleteSourceType($sourceType);
 
-        $this->addFlashSuccess('admin.source_type.deleted');
+        $this->addFlashSuccess(Flashes::SOURCE_TYPE_DELETED);
 
         return $this->redirectToRoute('admin.source-type');
     }

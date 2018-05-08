@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\WordCategory;
 use App\Event\CategoryEvent;
@@ -58,7 +59,7 @@ class CategoryController extends AbstractController
                 new CategoryEvent($this->getUser(), $category)
             );
 
-            $this->addFlashSuccess('admin.category.created');
+            $this->addFlashSuccess(Flashes::CATEGORY_CREATED);
 
             return $this->redirectToRoute('admin.category');
         }
@@ -94,7 +95,7 @@ class CategoryController extends AbstractController
                 new CategoryEvent($this->getUser(), $category)
             );
 
-            $this->addFlashSuccess('admin.category.update');
+            $this->addFlashSuccess(Flashes::CATEGORY_UPDATED);
 
             return $this->redirectToRoute('admin.category');
         }
@@ -116,7 +117,7 @@ class CategoryController extends AbstractController
     {
         $categoryFacade->deleteCategory($category);
 
-        $this->addFlashSuccess('admin.category.deleted');
+        $this->addFlashSuccess(Flashes::CATEGORY_DELETED);
 
         return $this->redirectToRoute('admin.category');
     }

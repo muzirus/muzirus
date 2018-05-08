@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Symbol;
 use App\Facade\SymbolFacade;
@@ -47,7 +48,7 @@ class SymbolController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $symbolFacade->createSymbol($formData);
 
-            $this->addFlashSuccess('admin.symbol.created');
+            $this->addFlashSuccess(Flashes::SYMBOL_CREATED);
 
             return $this->redirectToRoute('admin.symbol');
         }
@@ -74,7 +75,7 @@ class SymbolController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $symbolFacade->updateSymbol($symbol, $formData);
 
-            $this->addFlashSuccess('admin.symbol.updated');
+            $this->addFlashSuccess(Flashes::SYMBOL_UPDATED);
 
             return $this->redirectToRoute('admin.symbol');
         }
@@ -96,7 +97,7 @@ class SymbolController extends AbstractController
     {
         $symbolFacade->deleteSymbol($symbol);
 
-        $this->addFlashSuccess('admin.symbol.deleted');
+        $this->addFlashSuccess(Flashes::SYMBOL_DELETED);
 
         return $this->redirectToRoute('admin.symbol');
     }
