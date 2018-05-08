@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
-abstract class AbstractController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as SymfonyAbstractController;
+
+abstract class AbstractController extends SymfonyAbstractController
 {
     private const FLASH_TYPE_INFO = 'info';
     private const FLASH_TYPE_SUCCESS = 'success';

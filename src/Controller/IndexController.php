@@ -12,7 +12,7 @@ class IndexController extends AbstractController
     private const SLUG_INDEX = 'index';
 
     /**
-     * @Route("", name="app.index")
+     * @Route("", methods={"GET"}, name="app.index")
      */
     public function index(PostRepository $postRepository): Response
     {

@@ -11,7 +11,7 @@ class NotationsController extends AbstractController
     private const SLUG_NOTATIONS = 'notations';
 
     /**
-     * @Route("/notations", name="app.notations", methods={"GET"})
+     * @Route("/notations", methods={"GET"}, name="app.notations")
      */
     public function index(PostRepository $postRepository): Response
     {

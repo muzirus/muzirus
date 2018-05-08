@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Facade\MessageFacade;
 use App\Form\Feedback\FeedbackForm;
 use App\Form\Feedback\FeedbackFormData;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,8 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 class FeedbackController extends AbstractController
 {
     /**
-     * @Route("feedback", name="app.feedback")
-     * @Method({"GET", "POST"})
+     * @Route("feedback", methods={"GET", "POST"}, name="app.feedback")
      */
     public function index(Request $request, MessageFacade $messageFacade): Response
     {

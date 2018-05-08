@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\CzechWord;
 use App\Repository\CzechWordRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use App\Service\Provider\CzechAlphabetProvider;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,54 +14,21 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CzechToRussianController extends AbstractController
 {
-    private const LETTERS = [
-        'a',
-        'b',
-        'c',
-        'd',
-        'e',
-        'f',
-        'g',
-        'h',
-        'ch',
-        'i',
-        'j',
-        'k',
-        'l',
-        'm',
-        'n',
-        'o',
-        'p',
-        'q',
-        'r',
-        's',
-        't',
-        'u',
-        'v',
-        'w',
-        'x',
-        'y',
-        'z',
-    ];
-    private const FIRST_LETTER = self::LETTERS[0];
-
     /**
-     * @Route("", name="app.czech_to_russian")
-     * @Method("GET")
+     * @Route("", methods={"GET"}, name="app.czech_to_russian")
      */
     public function index(Request $request, CzechWordRepository $wordRepository): Response
     {
-        $startsWith = $request->get('startsWith', self::FIRST_LETTER);
+        $startsWith = $request->get('startsWith', CzechAlphabetProvider::getFirstCzechLetter());
 
         return $this->render('app/czech-to-russian/index.html.twig', [
             'words' => $wordRepository->findStartingWith($startsWith),
-            'letters' => self::LETTERS,
+            'letters' => CzechAlphabetProvider::getCzechLetters(),
         ]);
     }
 
     /**
-     * @Route("/detail/{id}", name="app.czech_to_russian.detail", requirements={"id": "\d+"})
-     * @Method("GET")
+     * @Route("/detail/{id}", requirements={"id": "\d+"}, methods={"GET"}, name="app.czech_to_russian.detail")
      * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function detail(CzechWord $word, CzechWordRepository $wordRepository): Response

@@ -3,15 +3,13 @@
 namespace App\Controller;
 
 use App\Repository\AbbreviationRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class AbbreviationController extends AbstractController
 {
     /**
-     * @Route("abbreviation", name="app.abbreviation")
-     * @Method("GET")
+     * @Route("abbreviation", methods={"GET"}, name="app.abbreviation")
      */
     public function index(AbbreviationRepository $abbreviationRepository): Response
     {
