@@ -2,9 +2,11 @@
     "dependencies": {
         "@symfony/webpack-encore": "^0.17.0",
         "admin-lte": "^2.4.2",
+        "autoprefixer": "^8.3.0",
+        "bootstrap": "^4.1.0",
         "bootstrap-sass": "^3.3.7",
         "bootstrap-toggle": "^2.2.2",
-        "bootswatch": "^3.3.7",
+        "bootswatch": "^4.1.0",
         "datatables.net": "^1.10.16",
         "datatables.net-bs": "^1.10.16",
         "font-awesome": "^4.7.0",
@@ -13,6 +15,8 @@
         "jquery.are-you-sure": "^1.9.0",
         "lato-font": "^3.0.0",
         "node-sass": "^4.7.2",
+        "popper.js": "^1.14.3",
+        "postcss-loader": "^2.1.4",
         "sass-loader": "^6.0.6"
     },
     "license": "MIT",

@@ -13,9 +13,6 @@
 </head>
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
     {% block body %}{% endblock %}
-    {% block javascripts %}
-        <script src="{{ asset('build/manifest.js') }}"></script>
-        <script src="{{ asset('build/js/common.js') }}"></script>
-    {% endblock %}
+    {% block javascripts %}{% endblock %}
 </body>
 </html>

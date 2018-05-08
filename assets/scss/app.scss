@@ -3,29 +3,20 @@
 // see https://github.com/thomaspark/bootswatch/issues/55#issuecomment-298093182
 $web-font-path: 'data:text/css;base64,';
 
-// this will fix bug border radius on full width navbar
-$navbar-border-radius: 0;
-
-@import "~bootswatch/flatly/variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "~bootswatch/flatly/bootswatch";
-@import "~font-awesome/scss/font-awesome.scss";
-
-// pick the Lato fonts individually to avoid importing the entire font family
-@import '~lato-font/scss/public-api';
-@include lato-include-font('normal');
-@include lato-include-font('bold');
+@import "~bootswatch/dist/flatly/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/flatly/bootswatch";
+@import "~font-awesome/scss/font-awesome";
 
 .highlight-accent {
-  color: $brand-danger;
+  color: $danger;
 }
 
 .navbar-brand {
   padding: 0;
 
   .logo {
-    height: 100%;
-    padding: 13px;
+    max-height: 38.5px;
     width: auto;
   }
 }

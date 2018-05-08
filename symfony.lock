@@ -455,8 +455,8 @@
     "symfony/yaml": {
         "version": "v4.0.4"
     },
-    "symplify/better-reflection-docblock": {
-        "version": "v4.0.4"
+    "symplify/better-phpdoc-parser": {
+        "version": "v4.1.2"
     },
     "symplify/coding-standard": {
         "version": "v4.0.4"

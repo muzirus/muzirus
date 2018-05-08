@@ -1,31 +1,43 @@
 {% extends 'app/layout.html.twig' %}
 
 {% block container %}
-    <div class="clearfix">
-        {% if wordPrev is not empty %}
-            <a class="btn btn-default btn-sm pull-left"
-               href="{{ path('app.russian_to_czech.detail', {id: wordPrev.id}) }}">
-                <i class="fa fa-arrow-left"></i>
-                {{ wordPrev }}
-            </a>
-        {% endif %}
-        {% if wordNext is not empty %}
-            <a class="btn btn-default btn-sm pull-right"
-               href="{{ path('app.russian_to_czech.detail', {id: wordNext.id}) }}">
-                {{ wordNext }}
-                <i class="fa fa-arrow-right"></i>
-            </a>
-        {% endif %}
-    </div>
 
-    <h1 class="text-center">
-        {{ word.contentWithAccent|highlight_accent }}
-        {% if word.languageNotePronunciation is not empty %}
-            <small>
-                {{ word.languageNotePronunciation|highlight_accent }}
-            </small>
-        {% endif %}
-    </h1>
+    <div class="row">
+        <div class="col">
+            {% if wordPrev is not empty %}
+                <a class="btn btn-primary btn-sm"
+                   href="{{ path('app.russian_to_czech.detail', {id: wordPrev.id}) }}">
+                    <i class="fa fa-arrow-left"></i>
+                    {{ wordPrev.content }}
+                </a>
+            {% endif %}
+        </div>
+
+        <div class="col text-center">
+            <h1>
+                {% if word.contentWithAccent is not empty %}
+                    {{ word.contentWithAccent|highlight_accent }}
+                {% else %}
+                    {{ word.content }}
+                {% endif %}
+                {% if word.languageNotePronunciation is not empty %}
+                    <small>
+                        {{ word.languageNotePronunciation|highlight_accent }}
+                    </small>
+                {% endif %}
+            </h1>
+        </div>
+
+        <div class="col text-right">
+            {% if wordNext is not empty %}
+                <a class="btn btn-primary btn-sm"
+                   href="{{ path('app.russian_to_czech.detail', {id: wordNext.id}) }}">
+                    {{ wordNext.content }}
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
 
     <h3 class="text-center">
         {{ word|word_info_under }}
@@ -90,7 +102,7 @@
             <h4>{{ 'app.topics'|trans }}</h4>
             <p>
                 {% for category in word.categories %}
-                    <a class="btn btn-default btn-xs" href="{{ path('app.topics') }}">{{ category.title }}</a>
+                    <a class="btn btn-outline-primary btn-sm" href="{{ path('app.topics') }}">{{ category.title }}</a>
                 {% endfor %}
             </p>
         </div>

@@ -3,31 +3,38 @@
 {% block heading 'app.title.vocabulary_czech'|trans %}
 
 {% block container %}
-    <div class="clearfix">
-        {% if wordPrev is not empty %}
-            <a class="btn btn-default btn-sm pull-left"
-               href="{{ path('app.czech_to_russian.detail', {id: wordPrev.id}) }}">
-                <i class="fa fa-arrow-left"></i>
-                {{ wordPrev.content }}
-            </a>
-        {% endif %}
-        {% if wordNext is not empty %}
-            <a class="btn btn-default btn-sm pull-right"
-               href="{{ path('app.czech_to_russian.detail', {id: wordNext.id}) }}">
-                {{ wordNext.content }}
-                <i class="fa fa-arrow-right"></i>
-            </a>
-        {% endif %}
-    </div>
+    <div class="row">
+        <div class="col">
+            {% if wordPrev is not empty %}
+                <a class="btn btn-primary btn-sm"
+                   href="{{ path('app.czech_to_russian.detail', {id: wordPrev.id}) }}">
+                    <i class="fa fa-arrow-left"></i>
+                    {{ wordPrev.content }}
+                </a>
+            {% endif %}
+        </div>
 
-    <h1 class="text-center">
-        {{ word.content }}
-        {% if word.languageNotePronunciation is not empty %}
-            <small>
-                {{ word.languageNotePronunciation }}
-            </small>
-        {% endif %}
-    </h1>
+        <div class="col text-center">
+            <h1>
+                {{ word.content }}
+                {% if word.languageNotePronunciation is not empty %}
+                    <small>
+                        {{ word.languageNotePronunciation }}
+                    </small>
+                {% endif %}
+            </h1>
+        </div>
+
+        <div class="col text-right">
+            {% if wordNext is not empty %}
+                <a class="btn btn-primary btn-sm"
+                   href="{{ path('app.czech_to_russian.detail', {id: wordNext.id}) }}">
+                    {{ wordNext.content }}
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
 
     <h3 class="text-center">
         {{ word|word_info_under }}
@@ -96,7 +103,7 @@
             <h4>{{ 'app.topics'|trans }}</h4>
             <p>
                 {% for category in word.categories %}
-                    <a class="btn btn-default btn-xs" href="{{ path('app.topics') }}">{{ category.title }}</a>
+                    <a class="btn btn-outline-primary btn-sm" href="{{ path('app.topics') }}">{{ category.title }}</a>
                 {% endfor %}
             </p>
         </div>
