@@ -1,12 +1,10 @@
 {% macro word_czech(word, wordPrev, wordNext) %}
+    {% import 'app/_macros/buttons.html.twig' as buttons %}
+
     <div class="row">
         <div class="col">
             {% if wordPrev is not empty %}
-                <a class="btn btn-primary btn-sm"
-                   href="{{ path('app.czech_to_russian.detail', {id: wordPrev.id}) }}">
-                    <i class="fa fa-arrow-left"></i>
-                    {{ wordPrev.content }}
-                </a>
+                {{ buttons.buttonPrev(wordPrev.content, path('app.czech_to_russian.detail', {id: wordPrev.id})) }}
             {% endif %}
         </div>
 
@@ -23,11 +21,7 @@
 
         <div class="col text-right">
             {% if wordNext is not empty %}
-                <a class="btn btn-primary btn-sm"
-                   href="{{ path('app.czech_to_russian.detail', {id: wordNext.id}) }}">
-                    {{ wordNext.content }}
-                    <i class="fa fa-arrow-right"></i>
-                </a>
+                {{ buttons.buttonNext(wordNext.content, path('app.czech_to_russian.detail', {id: wordNext.id})) }}
             {% endif %}
         </div>
     </div>
@@ -118,14 +112,12 @@
 {% endmacro %}
 
 {% macro word_russian(word, wordPrev, wordNext) %}
+    {% import 'app/_macros/buttons.html.twig' as buttons %}
+
     <div class="row">
         <div class="col">
             {% if wordPrev is not empty %}
-                <a class="btn btn-primary btn-sm"
-                   href="{{ path('app.russian_to_czech.detail', {id: wordPrev.id}) }}">
-                    <i class="fa fa-arrow-left"></i>
-                    {{ wordPrev.content }}
-                </a>
+                {{ buttons.buttonPrev(wordPrev.content, path('app.russian_to_czech.detail', {id: wordPrev.id})) }}
             {% endif %}
         </div>
 
@@ -146,11 +138,7 @@
 
         <div class="col text-right">
             {% if wordNext is not empty %}
-                <a class="btn btn-primary btn-sm"
-                   href="{{ path('app.russian_to_czech.detail', {id: wordNext.id}) }}">
-                    {{ wordNext.content }}
-                    <i class="fa fa-arrow-right"></i>
-                </a>
+                {{ buttons.buttonNext(wordNext.content, path('app.russian_to_czech.detail', {id: wordNext.id})) }}
             {% endif %}
         </div>
     </div>

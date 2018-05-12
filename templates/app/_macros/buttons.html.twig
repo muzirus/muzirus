@@ -1,0 +1,13 @@
+{% macro buttonPrev(text, href) %}
+    <a class="btn btn-primary btn-sm" href="{{ href }}">
+        <i class="fa fa-arrow-left"></i>
+        {{ text }}
+    </a>
+{% endmacro %}
+
+{% macro buttonNext(text, href) %}
+    <a class="btn btn-primary btn-sm" href="{{ href }}">
+        {{ text }}
+        <i class="fa fa-arrow-right"></i>
+    </a>
+{% endmacro %}
