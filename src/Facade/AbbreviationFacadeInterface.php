@@ -1,18 +1,18 @@
 <?php declare(strict_types=1);
 
-namespace App\Service;
+namespace App\Facade;
 
 use App\Entity\AbbreviationInterface;
 use App\Form\Abbreviation\AbbreviationFormDataInterface;
 
-class AbbreviationUpdater
+interface AbbreviationFacadeInterface
 {
+    public function createAbbreviation(AbbreviationFormDataInterface $formData): AbbreviationInterface;
+
     public function updateAbbreviation(
         AbbreviationInterface $abbreviation,
         AbbreviationFormDataInterface $formData
-    ): void {
-        $abbreviation->setTitle($formData->getTitle());
-        $abbreviation->setContent($formData->getContent());
-        $abbreviation->setDescription($formData->getDescription());
-    }
+    ): void;
+
+    public function deleteAbbreviation(AbbreviationInterface $abbreviation): void;
 }
