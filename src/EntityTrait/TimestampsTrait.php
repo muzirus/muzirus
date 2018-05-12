@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\HasLifecycleCallbacks()
  */
-trait Timestamps
+trait TimestampsTrait
 {
     /**
      * @ORM\Column(type="datetime", name="created_at", options={"default":"CURRENT_TIMESTAMP"})

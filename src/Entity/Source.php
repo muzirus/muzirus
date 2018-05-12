@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\EntityTrait\Timestamps;
+use App\EntityTrait\TimestampsTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Source implements SourceInterface
 {
-    use Timestamps;
+    use TimestampsTrait;
 
     //-------------------------------------------------------------------------
 
