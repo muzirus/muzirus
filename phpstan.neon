@@ -1,0 +1,4 @@
+parameters:
+    tmpDir: %currentWorkingDirectory%/var/phpstan
+    excludes_analyse:
+        - %currentWorkingDirectory%/src/Migrations/*
