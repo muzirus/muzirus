@@ -2,7 +2,7 @@
 
 namespace App\Entity\Able;
 
-interface Timestampable
+interface TimestampableInterface
 {
     public function getCreatedAt(): \DateTime;
 

@@ -2,9 +2,9 @@
 
 namespace App\Entity;
 
-use App\Entity\Able\Timestampable;
+use App\Entity\Able\TimestampableInterface;
 
-interface WordCategoryInterface extends Timestampable
+interface WordCategoryInterface extends TimestampableInterface
 {
     public function __toString(): string;
 

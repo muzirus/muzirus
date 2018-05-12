@@ -2,9 +2,9 @@
 
 namespace App\Entity;
 
-use App\Entity\Able\Timestampable;
+use App\Entity\Able\TimestampableInterface;
 
-interface LogEntryInterface extends Timestampable
+interface LogEntryInterface extends TimestampableInterface
 {
     public function getId(): int;
 

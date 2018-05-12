@@ -2,9 +2,9 @@
 
 namespace App\Entity;
 
-use App\Entity\Able\Timestampable;
+use App\Entity\Able\TimestampableInterface;
 
-interface AbstractWordInterface extends Timestampable
+interface AbstractWordInterface extends TimestampableInterface
 {
     public const TYPE_UNKNOWN = 0;
     public const TYPE_NOUN = 1;          // podstatná jména (Substantiva)

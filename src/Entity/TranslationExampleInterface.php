@@ -3,9 +3,9 @@
 namespace App\Entity;
 
 use App\Entity\Able\HideableInterface;
-use App\Entity\Able\Timestampable;
+use App\Entity\Able\TimestampableInterface;
 
-interface TranslationExampleInterface extends Timestampable, HideableInterface
+interface TranslationExampleInterface extends TimestampableInterface, HideableInterface
 {
     public function __toString(): string;
 
