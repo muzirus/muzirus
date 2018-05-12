@@ -3,11 +3,11 @@
 namespace App\Service;
 
 use App\Entity\SymbolInterface;
-use App\Form\Symbol\SymbolFormData;
+use App\Form\Symbol\SymbolFormDataInterface;
 
 class SymbolUpdater
 {
-    public function updateSymbol(SymbolInterface $symbol, SymbolFormData $formData): void
+    public function updateSymbol(SymbolInterface $symbol, SymbolFormDataInterface $formData): void
     {
         $symbol->setTitle($formData->getTitle());
         $symbol->setContent($formData->getContent());
