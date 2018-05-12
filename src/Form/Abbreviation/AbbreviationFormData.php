@@ -5,7 +5,7 @@ namespace App\Form\Abbreviation;
 use App\Entity\AbbreviationInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class AbbreviationFormData
+class AbbreviationFormData implements AbbreviationFormDataInterface
 {
     /**
      * @Assert\NotBlank()

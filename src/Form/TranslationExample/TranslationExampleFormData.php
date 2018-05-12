@@ -6,7 +6,7 @@ use App\Entity\TranslationExampleInterface;
 use App\Entity\TranslationInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class TranslationExampleFormData
+class TranslationExampleFormData implements TranslationExampleFormDataInterface
 {
     /**
      * @var TranslationInterface

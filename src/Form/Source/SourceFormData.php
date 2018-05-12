@@ -6,7 +6,7 @@ use App\Entity\SourceInterface;
 use App\Entity\SourceTypeInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class SourceFormData
+class SourceFormData implements SourceFormDataInterface
 {
     /**
      * @Assert\NotBlank()

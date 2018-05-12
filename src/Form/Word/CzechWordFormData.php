@@ -4,7 +4,7 @@ namespace App\Form\Word;
 
 use App\Entity\CzechWordInterface;
 
-class CzechWordFormData extends AbstractWordFormData
+class CzechWordFormData extends AbstractWordFormData implements CzechWordFormDataInterface
 {
     public static function createFromWord(CzechWordInterface $word): self
     {

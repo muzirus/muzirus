@@ -5,7 +5,7 @@ namespace App\Form\Post;
 use App\Entity\PostInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class PostFormData
+class PostFormData implements PostFormDataInterface
 {
     /**
      * @Assert\NotBlank()

@@ -5,7 +5,7 @@ namespace App\Form\Category;
 use App\Entity\WordCategory;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class CategoryFormData
+class CategoryFormData implements CategoryFormDataInterface
 {
     /**
      * @Assert\NotBlank()

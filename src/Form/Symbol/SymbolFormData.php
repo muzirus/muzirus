@@ -5,7 +5,7 @@ namespace App\Form\Symbol;
 use App\Entity\Symbol;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class SymbolFormData
+class SymbolFormData implements SymbolFormDataInterface
 {
     /**
      * @Assert\NotBlank()

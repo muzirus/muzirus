@@ -7,7 +7,7 @@ use App\Entity\Source;
 use App\Entity\WordCategory;
 use Symfony\Component\Validator\Constraints as Assert;
 
-abstract class AbstractWordFormData
+abstract class AbstractWordFormData implements AbstractWordFormDataInterface
 {
     /**
      * @Assert\NotBlank()

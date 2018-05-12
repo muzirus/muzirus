@@ -4,7 +4,7 @@ namespace App\Form\Feedback;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
-class FeedbackFormData
+class FeedbackFormData implements FeedbackFormDataInterface
 {
     /**
      * @Assert\Length(max="255")

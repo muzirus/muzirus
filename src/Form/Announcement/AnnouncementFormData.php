@@ -5,7 +5,7 @@ namespace App\Form\Announcement;
 use App\Entity\AnnouncementInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class AnnouncementFormData
+class AnnouncementFormData implements AnnouncementFormDataInterface
 {
     /**
      * @Assert\NotBlank()

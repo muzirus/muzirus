@@ -5,7 +5,7 @@ namespace App\Form\Word;
 use App\Entity\RussianWordInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class RussianWordFormData extends AbstractWordFormData
+class RussianWordFormData extends AbstractWordFormData implements RussianWordFormDataInterface
 {
     /**
      * @Assert\Length(max="255")
