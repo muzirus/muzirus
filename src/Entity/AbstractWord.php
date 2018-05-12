@@ -408,7 +408,7 @@ abstract class AbstractWord implements AbstractWordInterface
     }
 
     /**
-     * @return Translation[]
+     * @return TranslationInterface[]
      */
     public function getTranslations(): array
     {

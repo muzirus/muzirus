@@ -115,7 +115,7 @@ interface AbstractWordInterface extends TimestampableInterface
     public function removeCategories(): void;
 
     /**
-     * @return Translation[]
+     * @return TranslationInterface[]
      */
     public function getTranslations(): array;
 
