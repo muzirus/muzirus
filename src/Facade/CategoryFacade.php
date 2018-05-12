@@ -2,13 +2,13 @@
 
 namespace App\Facade;
 
-use App\Entity\WordCategoryInterface;
+use App\Entity\WordCategoryInterface as CategoryInterface;
 use App\Factory\CategoryFactory;
-use App\Form\Category\CategoryFormData;
+use App\Form\Category\CategoryFormDataInterface;
 use App\Service\CategoryUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
-class CategoryFacade
+class CategoryFacade implements CategoryFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -29,7 +29,7 @@ class CategoryFacade
         $this->categoryUpdater = $categoryUpdater;
     }
 
-    public function createCategory(CategoryFormData $formData): WordCategoryInterface
+    public function createCategory(CategoryFormDataInterface $formData): CategoryInterface
     {
         $category = $this->categoryFactory->createFromFormData($formData);
 
@@ -39,14 +39,14 @@ class CategoryFacade
         return $category;
     }
 
-    public function updateCategory(WordCategoryInterface $category, CategoryFormData $formData): void
+    public function updateCategory(CategoryInterface $category, CategoryFormDataInterface $formData): void
     {
         $this->categoryUpdater->updateCategory($category, $formData);
 
         $this->entityManager->flush();
     }
 
-    public function deleteCategory(WordCategoryInterface $category): void
+    public function deleteCategory(CategoryInterface $category): void
     {
         $this->entityManager->remove($category);
         $this->entityManager->flush();

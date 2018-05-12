@@ -3,11 +3,11 @@
 namespace App\Service;
 
 use App\Entity\WordCategoryInterface;
-use App\Form\Category\CategoryFormData;
+use App\Form\Category\CategoryFormDataInterface;
 
 class CategoryUpdater
 {
-    public function updateCategory(WordCategoryInterface $category, CategoryFormData $formData): void
+    public function updateCategory(WordCategoryInterface $category, CategoryFormDataInterface $formData): void
     {
         $category->setTitle($formData->getTitle());
     }
