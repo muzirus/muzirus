@@ -4,11 +4,11 @@ namespace App\Factory;
 
 use App\Entity\TranslationExample;
 use App\Entity\TranslationExampleInterface;
-use App\Form\TranslationExample\TranslationExampleFormData;
+use App\Form\TranslationExample\TranslationExampleFormDataInterface;
 
 class TranslationExampleFactory
 {
-    public function createFromFormData(TranslationExampleFormData $formData): TranslationExampleInterface
+    public function createFromFormData(TranslationExampleFormDataInterface $formData): TranslationExampleInterface
     {
         return new TranslationExample(
             $formData->getTranslation(),

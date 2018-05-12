@@ -4,11 +4,11 @@ namespace App\Facade;
 
 use App\Entity\TranslationExampleInterface;
 use App\Factory\TranslationExampleFactory;
-use App\Form\TranslationExample\TranslationExampleFormData;
+use App\Form\TranslationExample\TranslationExampleFormDataInterface;
 use App\Service\TranslationExampleUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
-class TranslationExampleFacade
+class TranslationExampleFacade implements TranslationExampleFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -29,7 +29,7 @@ class TranslationExampleFacade
         $this->translationExampleUpdater = $translationExampleUpdater;
     }
 
-    public function createTranslationExample(TranslationExampleFormData $formData): TranslationExampleInterface
+    public function createTranslationExample(TranslationExampleFormDataInterface $formData): TranslationExampleInterface
     {
         $translationExample = $this->translationExampleFactory->createFromFormData($formData);
 
@@ -41,7 +41,7 @@ class TranslationExampleFacade
 
     public function updateTranslationExample(
         TranslationExampleInterface $translationExample,
-        TranslationExampleFormData $formData
+        TranslationExampleFormDataInterface $formData
     ): void {
         $this->translationExampleUpdater->updateTranslationExample($translationExample, $formData);
 
