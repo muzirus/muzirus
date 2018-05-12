@@ -4,6 +4,5 @@ imports:
 parameters:
     exclude_checkers:
         - 'Symplify\CodingStandard\Sniffs\Naming\InterfaceNameSniff'
-        - 'Symplify\CodingStandard\Sniffs\Naming\TraitNameSniff'
     exclude_files:
         - 'src/Kernel.php'
