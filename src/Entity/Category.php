@@ -6,11 +6,11 @@ use App\EntityTrait\TimestampsTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\WordCategoryRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
  * @ORM\Table(name="word_categories")
  * @ORM\HasLifecycleCallbacks()
  */
-class WordCategory implements WordCategoryInterface
+class Category implements CategoryInterface
 {
     use TimestampsTrait;
 

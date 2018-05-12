@@ -3,8 +3,8 @@
 namespace App\Form\Word;
 
 use App\Entity\AbstractWordInterface;
+use App\Entity\Category;
 use App\Entity\Source;
-use App\Entity\WordCategory;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -101,7 +101,7 @@ class CzechWordForm extends AbstractType
             ])
             ->add('categories', EntityType::class, [
                 'label' => 'label.categories',
-                'class' => WordCategory::class,
+                'class' => Category::class,
                 'choice_label' => 'title',
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('wc')->orderBy('wc.title', 'ASC');

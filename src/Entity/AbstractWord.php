@@ -149,7 +149,7 @@ abstract class AbstractWord implements AbstractWordInterface
     /**
      * Owning side.
      *
-     * @ORM\ManyToMany(targetEntity="WordCategory")
+     * @ORM\ManyToMany(targetEntity="Category")
      * @ORM\JoinTable(name="words_categories",
      *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},
      *     inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="CASCADE")}
@@ -380,14 +380,14 @@ abstract class AbstractWord implements AbstractWordInterface
         $this->sources->clear();
     }
 
-    public function addCategory(WordCategoryInterface $category): void
+    public function addCategory(CategoryInterface $category): void
     {
         if (!$this->categories->contains($category)) {
             $this->categories->add($category);
         }
     }
 
-    public function removeCategory(WordCategoryInterface $category): void
+    public function removeCategory(CategoryInterface $category): void
     {
         if ($this->categories->contains($category)) {
             $this->categories->removeElement($category);
@@ -395,7 +395,7 @@ abstract class AbstractWord implements AbstractWordInterface
     }
 
     /**
-     * @return WordCategoryInterface[]
+     * @return CategoryInterface[]
      */
     public function getCategories(): array
     {

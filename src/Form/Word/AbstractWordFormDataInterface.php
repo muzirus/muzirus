@@ -3,8 +3,8 @@
 namespace App\Form\Word;
 
 use App\Entity\AbstractWordInterface;
+use App\Entity\CategoryInterface;
 use App\Entity\SourceInterface;
-use App\Entity\WordCategoryInterface as CategoryInterface;
 
 interface AbstractWordFormDataInterface
 {

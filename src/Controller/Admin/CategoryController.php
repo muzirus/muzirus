@@ -5,12 +5,12 @@ namespace App\Controller\Admin;
 use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
-use App\Entity\WordCategory;
+use App\Entity\Category;
 use App\Event\CategoryEvent;
 use App\Facade\CategoryFacade;
 use App\Form\Category\CategoryForm;
 use App\Form\Category\CategoryFormData;
-use App\Repository\WordCategoryRepository;
+use App\Repository\CategoryRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -25,7 +25,7 @@ class CategoryController extends AbstractController
     /**
      * @Route("", methods={"GET"}, name="admin.category")
      */
-    public function index(WordCategoryRepository $categoryRepository): Response
+    public function index(CategoryRepository $categoryRepository): Response
     {
         return $this->render(
             'admin/category/index.html.twig',
@@ -74,11 +74,11 @@ class CategoryController extends AbstractController
      */
     public function edit(
         Request $request,
-        WordCategory $category,
+        Category $category,
         CategoryFacade $categoryFacade,
         EventDispatcherInterface $dispatcher
     ): Response {
-        $formData = CategoryFormData::createFromWordCategory($category);
+        $formData = CategoryFormData::createFromCategory($category);
 
         $form = $this->createForm(CategoryForm::class, $formData);
         $form->handleRequest($request);
@@ -108,7 +108,7 @@ class CategoryController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.category.remove")
      */
-    public function remove(WordCategory $category, CategoryFacade $categoryFacade): RedirectResponse
+    public function remove(Category $category, CategoryFacade $categoryFacade): RedirectResponse
     {
         $categoryFacade->deleteCategory($category);
 

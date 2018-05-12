@@ -2,14 +2,14 @@
 
 namespace App\Factory;
 
-use App\Entity\WordCategory;
-use App\Entity\WordCategoryInterface;
+use App\Entity\Category;
+use App\Entity\CategoryInterface;
 use App\Form\Category\CategoryFormDataInterface;
 
 class CategoryFactory implements CategoryFactoryInterface
 {
-    public function createFromFormData(CategoryFormDataInterface $formData): WordCategoryInterface
+    public function createFromFormData(CategoryFormDataInterface $formData): CategoryInterface
     {
-        return new WordCategory($formData->getTitle());
+        return new Category($formData->getTitle());
     }
 }

@@ -2,9 +2,9 @@
 
 namespace App\Tests\Factory;
 
+use App\Entity\Category;
 use App\Entity\CzechWord;
 use App\Entity\Source;
-use App\Entity\WordCategory;
 use App\Factory\CzechWordFactory;
 use App\Form\Word\CzechWordFormData;
 use Mockery;
@@ -24,8 +24,8 @@ class CzechWordFactoryTest extends TestCase
     {
         $content = 'content';
         $categories = [
-            Mockery::mock(WordCategory::class),
-            Mockery::mock(WordCategory::class),
+            Mockery::mock(Category::class),
+            Mockery::mock(Category::class),
         ];
         $sources = [
             Mockery::mock(Source::class),

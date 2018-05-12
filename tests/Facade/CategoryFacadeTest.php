@@ -2,7 +2,7 @@
 
 namespace App\Tests\Facade;
 
-use App\Entity\WordCategory;
+use App\Entity\Category;
 use App\Facade\CategoryFacade;
 use App\Factory\CategoryFactory;
 use App\Form\Category\CategoryFormData;
@@ -41,7 +41,7 @@ class CategoryFacadeTest extends TestCase
     public function testShouldCreateCategory(): void
     {
         $formData = m::mock(CategoryFormData::class);
-        $category = m::mock(WordCategory::class);
+        $category = m::mock(Category::class);
 
         $this->categoryFactory->shouldReceive('createFromFormData')
             ->once()
@@ -50,7 +50,7 @@ class CategoryFacadeTest extends TestCase
 
         $result = $this->categoryFacade->createCategory($formData);
 
-        $this->assertInstanceOf(WordCategory::class, $result);
+        $this->assertInstanceOf(Category::class, $result);
         $this->entityManager->shouldHaveReceived('persist')
             ->with($category)
             ->once();
@@ -62,7 +62,7 @@ class CategoryFacadeTest extends TestCase
     public function testShouldUpdateCategory(): void
     {
         $formData = m::mock(CategoryFormData::class);
-        $category = m::mock(WordCategory::class);
+        $category = m::mock(Category::class);
 
         $this->categoryFacade->updateCategory($category, $formData);
 
@@ -76,7 +76,7 @@ class CategoryFacadeTest extends TestCase
 
     public function testShouldDeleteCategory(): void
     {
-        $category = m::mock(WordCategory::class);
+        $category = m::mock(Category::class);
 
         $this->categoryFacade->deleteCategory($category);
 

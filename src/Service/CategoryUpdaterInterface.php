@@ -2,10 +2,10 @@
 
 namespace App\Service;
 
-use App\Entity\WordCategoryInterface;
+use App\Entity\CategoryInterface;
 use App\Form\Category\CategoryFormDataInterface;
 
 interface CategoryUpdaterInterface
 {
-    public function updateCategory(WordCategoryInterface $category, CategoryFormDataInterface $formData): void;
+    public function updateCategory(CategoryInterface $category, CategoryFormDataInterface $formData): void;
 }

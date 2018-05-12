@@ -103,12 +103,12 @@ interface AbstractWordInterface extends TimestampableInterface
 
     public function removeSources(): void;
 
-    public function addCategory(WordCategoryInterface $category): void;
+    public function addCategory(CategoryInterface $category): void;
 
-    public function removeCategory(WordCategoryInterface $category): void;
+    public function removeCategory(CategoryInterface $category): void;
 
     /**
-     * @return WordCategoryInterface[]
+     * @return CategoryInterface[]
      */
     public function getCategories(): array;
 

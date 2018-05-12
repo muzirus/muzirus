@@ -69,9 +69,9 @@ class LogEntry implements LogEntryInterface
     private $czechWord;
 
     /**
-     * @ORM\ManyToOne(targetEntity="WordCategory")
+     * @ORM\ManyToOne(targetEntity="Category")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="CASCADE")
-     * @var WordCategoryInterface
+     * @var CategoryInterface
      */
     private $category;
 
@@ -163,17 +163,17 @@ class LogEntry implements LogEntryInterface
         return $this->czechWord;
     }
 
-    public function setCategory(WordCategoryInterface $category): void
+    public function setCategory(CategoryInterface $category): void
     {
         $this->category = $category;
     }
 
     public function hasCategory(): bool
     {
-        return $this->category instanceof WordCategoryInterface;
+        return $this->category instanceof CategoryInterface;
     }
 
-    public function getCategory(): WordCategoryInterface
+    public function getCategory(): CategoryInterface
     {
         return $this->category;
     }

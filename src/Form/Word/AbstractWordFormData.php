@@ -3,8 +3,8 @@
 namespace App\Form\Word;
 
 use App\Entity\AbstractWordInterface;
+use App\Entity\CategoryInterface;
 use App\Entity\SourceInterface;
-use App\Entity\WordCategoryInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 abstract class AbstractWordFormData implements AbstractWordFormDataInterface
@@ -19,7 +19,7 @@ abstract class AbstractWordFormData implements AbstractWordFormDataInterface
 
     /**
      * @Assert\Type("array")
-     * @var WordCategoryInterface[]
+     * @var CategoryInterface[]
      */
     private $categories = [];
 
@@ -113,7 +113,7 @@ abstract class AbstractWordFormData implements AbstractWordFormDataInterface
     }
 
     /**
-     * @return WordCategoryInterface[]
+     * @return CategoryInterface[]
      */
     public function getCategories(): array
     {
@@ -121,7 +121,7 @@ abstract class AbstractWordFormData implements AbstractWordFormDataInterface
     }
 
     /**
-     * @param WordCategoryInterface[] $categories
+     * @param CategoryInterface[] $categories
      */
     public function setCategories(array $categories): void
     {
