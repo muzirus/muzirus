@@ -4,10 +4,10 @@ namespace App\Facade;
 
 use App\Entity\Message;
 use App\Entity\MessageInterface;
-use App\Form\Feedback\FeedbackFormData;
+use App\Form\Feedback\FeedbackFormDataInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
-class MessageFacade
+class MessageFacade implements MessageFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -17,7 +17,7 @@ class MessageFacade
         $this->entityManager = $entityManager;
     }
 
-    public function createFeedback(FeedbackFormData $formData): MessageInterface
+    public function createFeedback(FeedbackFormDataInterface $formData): MessageInterface
     {
         $message = new Message($formData->getEmail(), $formData->getContent());
 
