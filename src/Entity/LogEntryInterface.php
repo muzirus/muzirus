@@ -26,11 +26,11 @@ interface LogEntryInterface extends TimestampableInterface
 
     public function getCzechWord(): CzechWordInterface;
 
-    public function setCategory(WordCategoryInterface $category): void;
+    public function setCategory(CategoryInterface $category): void;
 
     public function hasCategory(): bool;
 
-    public function getCategory(): WordCategoryInterface;
+    public function getCategory(): CategoryInterface;
 
     public function setSource(SourceInterface $source): void;
 

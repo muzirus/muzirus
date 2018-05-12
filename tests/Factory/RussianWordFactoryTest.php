@@ -2,9 +2,9 @@
 
 namespace App\Tests\Factory;
 
+use App\Entity\Category;
 use App\Entity\RussianWord;
 use App\Entity\Source;
-use App\Entity\WordCategory;
 use App\Factory\RussianWordFactory;
 use App\Form\Word\RussianWordFormData;
 use Mockery;
@@ -24,8 +24,8 @@ class RussianWordFactoryTest extends TestCase
     {
         $content = 'content';
         $categories = [
-            Mockery::mock(WordCategory::class),
-            Mockery::mock(WordCategory::class),
+            Mockery::mock(Category::class),
+            Mockery::mock(Category::class),
         ];
         $sources = [
             Mockery::mock(Source::class),

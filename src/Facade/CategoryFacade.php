@@ -2,7 +2,7 @@
 
 namespace App\Facade;
 
-use App\Entity\WordCategoryInterface as CategoryInterface;
+use App\Entity\CategoryInterface;
 use App\Factory\CategoryFactory;
 use App\Form\Category\CategoryFormDataInterface;
 use App\Service\CategoryUpdater;

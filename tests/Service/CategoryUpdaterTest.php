@@ -2,7 +2,7 @@
 
 namespace App\Tests\Factory;
 
-use App\Entity\WordCategory;
+use App\Entity\Category;
 use App\Form\Category\CategoryFormData;
 use App\Service\CategoryUpdater;
 use PHPUnit\Framework\TestCase;
@@ -22,7 +22,7 @@ class CategoryUpdaterTest extends TestCase
         $title = 'title';
         $formData = new CategoryFormData();
         $formData->setTitle($title);
-        $category = new WordCategory('bla');
+        $category = new Category('bla');
 
         $this->categoryUpdater->updateCategory($category, $formData);
 

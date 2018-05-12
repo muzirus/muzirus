@@ -2,7 +2,7 @@
 
 namespace App\Form\Category;
 
-use App\Entity\WordCategory;
+use App\Entity\Category;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class CategoryFormData implements CategoryFormDataInterface
@@ -17,11 +17,11 @@ class CategoryFormData implements CategoryFormDataInterface
 
     //-------------------------------------------------------------------------
 
-    public static function createFromWordCategory(WordCategory $wordCategory): self
+    public static function createFromCategory(Category $category): self
     {
         $formData = new self();
 
-        $formData->setTitle($wordCategory->getTitle());
+        $formData->setTitle($category->getTitle());
 
         return $formData;
     }
