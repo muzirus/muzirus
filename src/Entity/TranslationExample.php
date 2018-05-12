@@ -29,7 +29,7 @@ class TranslationExample implements TranslationExampleInterface
      *
      * @ORM\ManyToOne(targetEntity="Translation", inversedBy="translationExamples")
      * @ORM\JoinColumn(name="translation_id", referencedColumnName="id", onDelete="cascade")
-     * @var Translation
+     * @var TranslationInterface
      */
     private $translation;
 

@@ -35,7 +35,7 @@ class Source implements SourceInterface
      *
      * @ORM\ManyToOne(targetEntity="SourceType")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id", nullable=false)
-     * @var SourceType
+     * @var SourceTypeInterface
      */
     private $type;
 

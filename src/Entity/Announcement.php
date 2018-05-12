@@ -37,7 +37,7 @@ class Announcement implements AnnouncementInterface
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", onDelete="SET NULL")
-     * @var UserInterface
+     * @var UserInterface|null
      */
     private $author;
 
