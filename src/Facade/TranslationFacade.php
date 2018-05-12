@@ -8,7 +8,7 @@ use App\Form\Translation\TranslationFormDataInterface;
 use App\Service\TranslationUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
-class TranslationFacade
+class TranslationFacade implements TranslationFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;

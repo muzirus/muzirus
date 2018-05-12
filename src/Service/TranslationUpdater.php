@@ -3,11 +3,11 @@
 namespace App\Service;
 
 use App\Entity\TranslationInterface;
-use App\Form\Translation\TranslationFormData;
+use App\Form\Translation\TranslationFormDataInterface;
 
 class TranslationUpdater
 {
-    public function updateTranslation(TranslationInterface $translation, TranslationFormData $formData): void
+    public function updateTranslation(TranslationInterface $translation, TranslationFormDataInterface $formData): void
     {
         $translation->setRussianWord($formData->getRussianWord());
         $translation->setRussianWordNote($formData->getRussianWordNote());
