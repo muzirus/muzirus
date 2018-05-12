@@ -49,7 +49,7 @@ class CzechWordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $word = $czechWordFacade->createWord($formData);
+            $word = $czechWordFacade->createCzechWord($formData);
 
             $dispatcher->dispatch(
                 Events::CZECH_WORD_CREATED,
@@ -86,7 +86,7 @@ class CzechWordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $czechWordFacade->updateWord($word, $formData);
+            $czechWordFacade->updateCzechWord($word, $formData);
 
             $dispatcher->dispatch(
                 Events::CZECH_WORD_UPDATED,
@@ -114,7 +114,7 @@ class CzechWordController extends AbstractController
      */
     public function remove(CzechWord $word, CzechWordFacade $czechWordFacade): RedirectResponse
     {
-        $czechWordFacade->deleteWord($word);
+        $czechWordFacade->deleteCzechWord($word);
 
         $this->addFlashSuccess(Flashes::WORD_DELETED);
 

@@ -92,20 +92,20 @@ interface AbstractWordInterface extends Timestampable
 
     public function setStatusLight(int $statusLight): void;
 
-    public function addSource(Source $source): void;
+    public function addSource(SourceInterface $source): void;
 
-    public function removeSource(Source $source): void;
+    public function removeSource(SourceInterface $source): void;
 
     /**
-     * @return Source[]
+     * @return SourceInterface[]
      */
     public function getSources(): array;
 
     public function removeSources(): void;
 
-    public function addCategory(WordCategory $category): void;
+    public function addCategory(WordCategoryInterface $category): void;
 
-    public function removeCategory(WordCategory $category): void;
+    public function removeCategory(WordCategoryInterface $category): void;
 
     /**
      * @return WordCategoryInterface[]

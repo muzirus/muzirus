@@ -353,14 +353,14 @@ abstract class AbstractWord implements AbstractWordInterface
         }
     }
 
-    public function addSource(Source $source): void
+    public function addSource(SourceInterface $source): void
     {
         if (!$this->sources->contains($source)) {
             $this->sources->add($source);
         }
     }
 
-    public function removeSource(Source $source): void
+    public function removeSource(SourceInterface $source): void
     {
         if ($this->sources->contains($source)) {
             $this->sources->removeElement($source);
@@ -368,7 +368,7 @@ abstract class AbstractWord implements AbstractWordInterface
     }
 
     /**
-     * @return Source[]
+     * @return SourceInterface[]
      */
     public function getSources(): array
     {
@@ -380,14 +380,14 @@ abstract class AbstractWord implements AbstractWordInterface
         $this->sources->clear();
     }
 
-    public function addCategory(WordCategory $category): void
+    public function addCategory(WordCategoryInterface $category): void
     {
         if (!$this->categories->contains($category)) {
             $this->categories->add($category);
         }
     }
 
-    public function removeCategory(WordCategory $category): void
+    public function removeCategory(WordCategoryInterface $category): void
     {
         if ($this->categories->contains($category)) {
             $this->categories->removeElement($category);
@@ -395,7 +395,7 @@ abstract class AbstractWord implements AbstractWordInterface
     }
 
     /**
-     * @return WordCategory[]
+     * @return WordCategoryInterface[]
      */
     public function getCategories(): array
     {

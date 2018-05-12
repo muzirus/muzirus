@@ -4,11 +4,11 @@ namespace App\Factory;
 
 use App\Entity\CzechWord;
 use App\Entity\CzechWordInterface;
-use App\Form\Word\CzechWordFormData;
+use App\Form\Word\CzechWordFormDataInterface;
 
 class CzechWordFactory
 {
-    public function createFromFormData(CzechWordFormData $formData): CzechWordInterface
+    public function createFromFormData(CzechWordFormDataInterface $formData): CzechWordInterface
     {
         $word = new CzechWord($formData->getContent());
 

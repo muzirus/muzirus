@@ -4,11 +4,11 @@ namespace App\Facade;
 
 use App\Entity\CzechWordInterface;
 use App\Factory\CzechWordFactory;
-use App\Form\Word\CzechWordFormData;
+use App\Form\Word\CzechWordFormDataInterface;
 use App\Service\CzechWordUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
-class CzechWordFacade
+class CzechWordFacade implements CzechWordFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -29,7 +29,7 @@ class CzechWordFacade
         $this->czechWordUpdater = $czechWordUpdater;
     }
 
-    public function createWord(CzechWordFormData $formData): CzechWordInterface
+    public function createCzechWord(CzechWordFormDataInterface $formData): CzechWordInterface
     {
         $word = $this->czechWordFactory->createFromFormData($formData);
 
@@ -39,14 +39,14 @@ class CzechWordFacade
         return $word;
     }
 
-    public function updateWord(CzechWordInterface $word, CzechWordFormData $formData): void
+    public function updateCzechWord(CzechWordInterface $word, CzechWordFormDataInterface $formData): void
     {
         $this->czechWordUpdater->updateCzechWord($word, $formData);
 
         $this->entityManager->flush();
     }
 
-    public function deleteWord(CzechWordInterface $word): void
+    public function deleteCzechWord(CzechWordInterface $word): void
     {
         $this->entityManager->remove($word);
         $this->entityManager->flush();

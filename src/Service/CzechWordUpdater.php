@@ -3,11 +3,11 @@
 namespace App\Service;
 
 use App\Entity\CzechWordInterface;
-use App\Form\Word\CzechWordFormData;
+use App\Form\Word\CzechWordFormDataInterface;
 
 class CzechWordUpdater
 {
-    public function updateCzechWord(CzechWordInterface $word, CzechWordFormData $formData): void
+    public function updateCzechWord(CzechWordInterface $word, CzechWordFormDataInterface $formData): void
     {
         $word->setContent($formData->getContent());
 
