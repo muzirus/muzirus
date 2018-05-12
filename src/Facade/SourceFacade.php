@@ -4,11 +4,11 @@ namespace App\Facade;
 
 use App\Entity\SourceInterface;
 use App\Factory\SourceFactory;
-use App\Form\Source\SourceFormData;
+use App\Form\Source\SourceFormDataInterface;
 use App\Service\SourceUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
-class SourceFacade
+class SourceFacade implements SourceFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -29,7 +29,7 @@ class SourceFacade
         $this->sourceUpdater = $sourceUpdater;
     }
 
-    public function createSource(SourceFormData $formData): SourceInterface
+    public function createSource(SourceFormDataInterface $formData): SourceInterface
     {
         $source = $this->sourceFactory->createFromFormData($formData);
 
@@ -39,7 +39,7 @@ class SourceFacade
         return $source;
     }
 
-    public function updateSource(SourceInterface $source, SourceFormData $formData): void
+    public function updateSource(SourceInterface $source, SourceFormDataInterface $formData): void
     {
         $this->sourceUpdater->updateSource($source, $formData);
 
