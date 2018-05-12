@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\EntityTrait\TimestampsTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -11,16 +12,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User implements UserInterface
 {
+    use TimestampsTrait;
+
     public const ROLE_USER = 'ROLE_USER';
     public const ROLE_ADMIN = 'ROLE_ADMIN';
     public const ROLE_SUPER_ADMIN = 'ROLE_SUPER_ADMIN';
-
-    public const LOCALES = [
-        'cs_CZ' => 'Česky',
-        'en_GB' => 'English',
-        'ru_RU' => 'Русский',
-        'sk_SK' => 'Slovensky',
-    ];
 
     //-------------------------------------------------------------------------
 
@@ -62,36 +58,6 @@ class User implements UserInterface
      */
     private $banned = false;
 
-    /**
-     * @ORM\Column(type="string", name="locale")
-     * @var string
-     */
-    private $locale = 'cs_CZ';
-
-    /**
-     * @ORM\Column(type="string", name="password_recovery_key", nullable=true)
-     * @var string|null
-     */
-    private $passwordRecoveryKey = null;
-
-    /**
-     * @ORM\Column(type="datetime", name="password_recovery_key_expire_dt", nullable=true)
-     * @var \DateTime|null
-     */
-    private $passwordRecoveryKeyExpireDT = null;
-
-    /**
-     * @ORM\Column(type="datetime", name="created_at", options={"default":"CURRENT_TIMESTAMP"})
-     * @var \DateTime
-     */
-    private $createdAt;
-
-    /**
-     * @ORM\Column(type="datetime", name="updated_at", options={"default":"CURRENT_TIMESTAMP"})
-     * @var \DateTime
-     */
-    private $updatedAt;
-
     //-------------------------------------------------------------------------
 
     public function __construct(string $name, string $email, bool $admin = false)
@@ -99,9 +65,6 @@ class User implements UserInterface
         $this->setName($name);
         $this->setEmail($email);
         $this->setAdmin($admin);
-
-        $this->createdAt = new \DateTime();
-        $this->updatedAt = new \DateTime();
     }
 
     public function __toString(): string
@@ -178,78 +141,6 @@ class User implements UserInterface
     public function setBanned(bool $banned): void
     {
         $this->banned = $banned;
-    }
-
-    public function getLocale(): string
-    {
-        return $this->locale;
-    }
-
-    public function setLocale(string $locale): void
-    {
-        if (array_key_exists($locale, self::LOCALES)) {
-            $this->locale = $locale;
-        }
-    }
-
-    public function getPasswordRecoveryKey(): ?string
-    {
-        return $this->passwordRecoveryKey;
-    }
-
-    public function setPasswordRecoveryKey(string $passwordRecoveryKey = null): void
-    {
-        $this->passwordRecoveryKey = $passwordRecoveryKey;
-    }
-
-    public function removePasswordRecoveryKey(): void
-    {
-        $this->passwordRecoveryKey = null;
-    }
-
-    public function getPasswordRecoveryKeyExpireDT(): ?\DateTime
-    {
-        return $this->passwordRecoveryKeyExpireDT;
-    }
-
-    public function setPasswordRecoveryKeyExpireDT(\DateTime $passwordRecoveryKeyExpireDT = null): void
-    {
-        $this->passwordRecoveryKeyExpireDT = $passwordRecoveryKeyExpireDT;
-    }
-
-    public function removePasswordRecoveryKeyExpireDT(): void
-    {
-        $this->passwordRecoveryKeyExpireDT = null;
-    }
-
-    public function getCreatedAt(): \DateTime
-    {
-        return $this->createdAt;
-    }
-
-    public function getCreatedAtFormat(string $format = 'Y-m-d H:i'): string
-    {
-        return $this->getCreatedAt()->format($format);
-    }
-
-    public function getUpdatedAt(): \DateTime
-    {
-        return $this->updatedAt;
-    }
-
-    public function getUpdatedAtFormat(string $format = 'Y-m-d H:i'): string
-    {
-        return $this->getUpdatedAt()->format($format);
-    }
-
-    //-------------------------------------------------------------------------
-
-    /**
-     * @ORM\PreUpdate()
-     */
-    public function _timestampsPreUpdate(): void
-    {
-        $this->updatedAt = new \DateTime();
     }
 
     //-------------------------------------------------------------------------

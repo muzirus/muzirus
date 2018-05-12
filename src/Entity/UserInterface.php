@@ -34,20 +34,4 @@ interface UserInterface extends \Serializable, SymfonyUserInterface, Timestampab
     public function isBanned(): bool;
 
     public function setBanned(bool $banned): void;
-
-    public function getLocale(): string;
-
-    public function setLocale(string $locale): void;
-
-    public function getPasswordRecoveryKey(): ?string;
-
-    public function setPasswordRecoveryKey(string $passwordRecoveryKey = null): void;
-
-    public function removePasswordRecoveryKey(): void;
-
-    public function getPasswordRecoveryKeyExpireDT(): ?\DateTime;
-
-    public function setPasswordRecoveryKeyExpireDT(\DateTime $passwordRecoveryKeyExpireDT = null): void;
-
-    public function removePasswordRecoveryKeyExpireDT(): void;
 }
