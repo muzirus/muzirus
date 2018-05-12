@@ -116,14 +116,29 @@
     "monolog/monolog": {
         "version": "1.23.0"
     },
+    "nette/bootstrap": {
+        "version": "v2.4.5"
+    },
+    "nette/di": {
+        "version": "v2.4.11"
+    },
     "nette/finder": {
         "version": "v2.4.1"
+    },
+    "nette/neon": {
+        "version": "v2.4.2"
+    },
+    "nette/php-generator": {
+        "version": "v3.0.4"
     },
     "nette/robot-loader": {
         "version": "v3.0.3"
     },
     "nette/utils": {
         "version": "v2.5.1"
+    },
+    "nikic/php-parser": {
+        "version": "v3.1.5"
     },
     "ocramius/proxy-manager": {
         "version": "2.2.0"
@@ -145,6 +160,9 @@
     },
     "phpstan/phpdoc-parser": {
         "version": "0.2"
+    },
+    "phpstan/phpstan": {
+        "version": "0.9.2"
     },
     "psr/cache": {
         "version": "1.0.1"
