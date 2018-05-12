@@ -4,11 +4,11 @@ namespace App\Factory;
 
 use App\Entity\SourceType;
 use App\Entity\SourceTypeInterface;
-use App\Form\SourceType\SourceTypeFormData;
+use App\Form\SourceType\SourceTypeFormDataInterface;
 
 class SourceTypeFactory
 {
-    public function createFromFormData(SourceTypeFormData $formData): SourceTypeInterface
+    public function createFromFormData(SourceTypeFormDataInterface $formData): SourceTypeInterface
     {
         return new SourceType($formData->getTitle());
     }

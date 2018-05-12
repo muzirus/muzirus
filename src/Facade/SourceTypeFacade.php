@@ -4,11 +4,11 @@ namespace App\Facade;
 
 use App\Entity\SourceTypeInterface;
 use App\Factory\SourceTypeFactory;
-use App\Form\SourceType\SourceTypeFormData;
+use App\Form\SourceType\SourceTypeFormDataInterface;
 use App\Service\SourceTypeUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
-class SourceTypeFacade
+class SourceTypeFacade implements SourceTypeFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -29,7 +29,7 @@ class SourceTypeFacade
         $this->sourceTypeUpdater = $sourceTypeUpdater;
     }
 
-    public function createSourceType(SourceTypeFormData $formData): SourceTypeInterface
+    public function createSourceType(SourceTypeFormDataInterface $formData): SourceTypeInterface
     {
         $sourceType = $this->sourceTypeFactory->createFromFormData($formData);
 
@@ -39,7 +39,7 @@ class SourceTypeFacade
         return $sourceType;
     }
 
-    public function updateSourceType(SourceTypeInterface $sourceType, SourceTypeFormData $formData): void
+    public function updateSourceType(SourceTypeInterface $sourceType, SourceTypeFormDataInterface $formData): void
     {
         $this->sourceTypeUpdater->updateSourceType($sourceType, $formData);
 

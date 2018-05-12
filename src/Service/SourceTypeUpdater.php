@@ -3,11 +3,11 @@
 namespace App\Service;
 
 use App\Entity\SourceTypeInterface;
-use App\Form\SourceType\SourceTypeFormData;
+use App\Form\SourceType\SourceTypeFormDataInterface;
 
 class SourceTypeUpdater
 {
-    public function updateSourceType(SourceTypeInterface $sourceType, SourceTypeFormData $formData): void
+    public function updateSourceType(SourceTypeInterface $sourceType, SourceTypeFormDataInterface $formData): void
     {
         $sourceType->setTitle($formData->getTitle());
     }
