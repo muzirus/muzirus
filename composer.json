@@ -31,7 +31,6 @@
         "symfony/form": "^4.0",
         "symfony/framework-bundle": "^4.0",
         "symfony/lts": "^4@dev",
-        "symfony/maker-bundle": "^1.0",
         "symfony/monolog-bundle": "^3.1",
         "symfony/orm-pack": "^1.0",
         "symfony/process": "^4.0",
@@ -48,6 +47,7 @@
     "require-dev": {
         "heroku/heroku-buildpack-php": "*",
         "lmc/coding-standard": "^1.0",
+        "phpstan/phpstan": "^0.9.2",
         "symfony/browser-kit": "^4.0",
         "symfony/css-selector": "^4.0",
         "symfony/dotenv": "^4.0",
@@ -111,6 +111,7 @@
             "@php bin/console lint:yaml config",
             "@php bin/console lint:twig templates"
         ],
+        "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon -l 7 src",
         "lock": "@composer update --lock"
     },
     "conflict": {

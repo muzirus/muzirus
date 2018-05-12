@@ -30,7 +30,7 @@ class Translation implements TranslationInterface
      *
      * @ORM\ManyToOne(targetEntity="RussianWord", inversedBy="translations")
      * @ORM\JoinColumn(name="first_word_id", referencedColumnName="id", nullable=false)
-     * @var RussianWord
+     * @var RussianWordInterface
      */
     private $russianWord;
 
@@ -45,7 +45,7 @@ class Translation implements TranslationInterface
      *
      * @ORM\ManyToOne(targetEntity="CzechWord", inversedBy="translations")
      * @ORM\JoinColumn(name="second_word_id", referencedColumnName="id", nullable=false)
-     * @var CzechWord
+     * @var CzechWordInterface
      */
     private $czechWord;
 
