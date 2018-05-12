@@ -6,11 +6,11 @@ use App\Entity\Post;
 use App\Entity\PostInterface;
 use App\Entity\PostRevision;
 use App\Entity\UserInterface;
-use App\Form\Post\PostFormData;
+use App\Form\Post\PostFormDataInterface;
 use Cocur\Slugify\Slugify;
 use Doctrine\ORM\EntityManagerInterface;
 
-class PostFacade
+class PostFacade implements PostFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -20,7 +20,7 @@ class PostFacade
         $this->entityManager = $entityManager;
     }
 
-    public function create(PostFormData $formData, ?UserInterface $author = null): PostInterface
+    public function createPost(PostFormDataInterface $formData, ?UserInterface $author = null): PostInterface
     {
         $slugify = new Slugify();
 
@@ -39,7 +39,7 @@ class PostFacade
         return $post;
     }
 
-    public function update(PostInterface $post, PostFormData $formData): void
+    public function updatePost(PostInterface $post, PostFormDataInterface $formData): void
     {
         $post->setTitle($formData->getTitle());
         $post->setTitleInRussian($formData->getTitleInRussian());

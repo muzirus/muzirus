@@ -42,7 +42,7 @@ class PostController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $post = $postFacade->create($formData);
+            $post = $postFacade->createPost($formData);
 
             $this->addFlashSuccess(Flashes::POST_CREATED);
 
@@ -73,7 +73,7 @@ class PostController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $postFacade->update($post, $formData);
+            $postFacade->updatePost($post, $formData);
 
             $this->addFlashSuccess(Flashes::POST_UPDATED);
 
