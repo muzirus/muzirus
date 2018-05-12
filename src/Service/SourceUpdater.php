@@ -5,7 +5,7 @@ namespace App\Service;
 use App\Entity\SourceInterface;
 use App\Form\Source\SourceFormDataInterface;
 
-class SourceUpdater
+class SourceUpdater implements SourceUpdaterInterface
 {
     public function updateSource(SourceInterface $source, SourceFormDataInterface $formData): void
     {

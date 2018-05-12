@@ -5,7 +5,7 @@ namespace App\Service;
 use App\Entity\WordCategoryInterface;
 use App\Form\Category\CategoryFormDataInterface;
 
-class CategoryUpdater
+class CategoryUpdater implements CategoryUpdaterInterface
 {
     public function updateCategory(WordCategoryInterface $category, CategoryFormDataInterface $formData): void
     {

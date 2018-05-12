@@ -5,7 +5,7 @@ namespace App\Service;
 use App\Entity\CzechWordInterface;
 use App\Form\Word\CzechWordFormDataInterface;
 
-class CzechWordUpdater
+class CzechWordUpdater implements CzechWordUpdaterInterface
 {
     public function updateCzechWord(CzechWordInterface $word, CzechWordFormDataInterface $formData): void
     {

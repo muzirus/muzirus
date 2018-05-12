@@ -5,7 +5,7 @@ namespace App\Service;
 use App\Entity\SymbolInterface;
 use App\Form\Symbol\SymbolFormDataInterface;
 
-class SymbolUpdater
+class SymbolUpdater implements SymbolUpdaterInterface
 {
     public function updateSymbol(SymbolInterface $symbol, SymbolFormDataInterface $formData): void
     {

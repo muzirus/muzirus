@@ -5,7 +5,7 @@ namespace App\Service;
 use App\Entity\TranslationExampleInterface;
 use App\Form\TranslationExample\TranslationExampleFormDataInterface;
 
-class TranslationExampleUpdater
+class TranslationExampleUpdater implements TranslationExampleUpdaterInterface
 {
     public function updateTranslationExample(
         TranslationExampleInterface $translationExample,

@@ -5,7 +5,7 @@ namespace App\Service;
 use App\Entity\RussianWordInterface;
 use App\Form\Word\RussianWordFormDataInterface;
 
-class RussianWordUpdater
+class RussianWordUpdater implements RussianWordUpdaterInterface
 {
     public function updateRussianWord(RussianWordInterface $word, RussianWordFormDataInterface $formData): void
     {

@@ -2,7 +2,7 @@
 
 namespace App\Service;
 
-class MarkdownParser
+class MarkdownParser implements MarkdownParserInterface
 {
     private const PURIFIER_CONFIG = [
         'Cache.DefinitionImpl' => null, // Disable caching
