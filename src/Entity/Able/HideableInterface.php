@@ -5,7 +5,7 @@ namespace App\Entity\Able;
 /**
  * Capable of being hidden.
  */
-interface Hideable
+interface HideableInterface
 {
     public function markHidden(): void;
 
