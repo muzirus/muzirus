@@ -4,11 +4,11 @@ namespace App\Factory;
 
 use App\Entity\RussianWord;
 use App\Entity\RussianWordInterface;
-use App\Form\Word\RussianWordFormData;
+use App\Form\Word\RussianWordFormDataInterface;
 
 class RussianWordFactory
 {
-    public function createFromFormData(RussianWordFormData $formData): RussianWordInterface
+    public function createFromFormData(RussianWordFormDataInterface $formData): RussianWordInterface
     {
         $word = new RussianWord($formData->getContent());
 

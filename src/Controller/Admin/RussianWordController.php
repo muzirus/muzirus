@@ -49,7 +49,7 @@ class RussianWordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $word = $russianWordFacade->createWord($formData);
+            $word = $russianWordFacade->createRussianWord($formData);
 
             $dispatcher->dispatch(
                 Events::RUSSIAN_WORD_CREATED,
@@ -86,7 +86,7 @@ class RussianWordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $russianWordFacade->updateWord($word, $formData);
+            $russianWordFacade->updateRussianWord($word, $formData);
 
             $dispatcher->dispatch(
                 Events::RUSSIAN_WORD_UPDATED,
@@ -114,7 +114,7 @@ class RussianWordController extends AbstractController
      */
     public function remove(RussianWord $word, RussianWordFacade $russianWordFacade): RedirectResponse
     {
-        $russianWordFacade->deleteWord($word);
+        $russianWordFacade->deleteRussianWord($word);
 
         $this->addFlashSuccess('admin.word.deleted');
 

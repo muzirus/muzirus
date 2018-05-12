@@ -4,11 +4,11 @@ namespace App\Facade;
 
 use App\Entity\RussianWordInterface;
 use App\Factory\RussianWordFactory;
-use App\Form\Word\RussianWordFormData;
+use App\Form\Word\RussianWordFormDataInterface;
 use App\Service\RussianWordUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
-class RussianWordFacade
+class RussianWordFacade implements RussianWordFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -29,7 +29,7 @@ class RussianWordFacade
         $this->russianWordUpdater = $russianWordUpdater;
     }
 
-    public function createWord(RussianWordFormData $formData): RussianWordInterface
+    public function createRussianWord(RussianWordFormDataInterface $formData): RussianWordInterface
     {
         $word = $this->russianWordFactory->createFromFormData($formData);
 
@@ -39,14 +39,14 @@ class RussianWordFacade
         return $word;
     }
 
-    public function updateWord(RussianWordInterface $word, RussianWordFormData $formData): void
+    public function updateRussianWord(RussianWordInterface $word, RussianWordFormDataInterface $formData): void
     {
         $this->russianWordUpdater->updateRussianWord($word, $formData);
 
         $this->entityManager->flush();
     }
 
-    public function deleteWord(RussianWordInterface $word): void
+    public function deleteRussianWord(RussianWordInterface $word): void
     {
         $this->entityManager->remove($word);
         $this->entityManager->flush();

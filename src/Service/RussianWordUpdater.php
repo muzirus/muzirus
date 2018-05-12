@@ -3,11 +3,11 @@
 namespace App\Service;
 
 use App\Entity\RussianWordInterface;
-use App\Form\Word\RussianWordFormData;
+use App\Form\Word\RussianWordFormDataInterface;
 
 class RussianWordUpdater
 {
-    public function updateRussianWord(RussianWordInterface $word, RussianWordFormData $formData): void
+    public function updateRussianWord(RussianWordInterface $word, RussianWordFormDataInterface $formData): void
     {
         $word->setContent($formData->getContent());
 
