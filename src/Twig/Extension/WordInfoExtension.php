@@ -77,13 +77,13 @@ class WordInfoExtension extends \Twig_Extension
         if ($word->getLanguageNoteType() === AbstractWordInterface::TYPE_NOUN) {
             if ($word->getLanguageNoteGender() !== AbstractWordInterface::GENDER_UNKNOWN) {
                 $properties[] = sprintf(
-                    '<em>%s</em>',
+                    '<em class="text-muted">%s</em>',
                     $this->wordGenderExtension->convertGenderIdToString($word->getLanguageNoteGender())
                 );
             }
         } else {
             $properties[] = sprintf(
-                '<em>%s</em>',
+                '<em class="text-muted">%s</em>',
                 $this->wordTypeExtension->convertTypeIdToString($word->getLanguageNoteType())
             );
         }
@@ -113,13 +113,13 @@ class WordInfoExtension extends \Twig_Extension
         if ($word->getLanguageNoteType() === AbstractWordInterface::TYPE_NOUN) {
             if ($word->getLanguageNoteGender() !== AbstractWordInterface::GENDER_UNKNOWN) {
                 $properties[] = sprintf(
-                    '<em>%s</em>',
+                    '<em class="text-muted">%s</em>',
                     $this->wordGenderExtension->convertGenderIdToString($word->getLanguageNoteGender())
                 );
             }
         } else {
             $properties[] = sprintf(
-                '<em>%s</em>',
+                '<em class="text-muted">%s</em>',
                 $this->wordTypeExtension->convertTypeIdToString($word->getLanguageNoteType())
             );
         }
@@ -129,6 +129,7 @@ class WordInfoExtension extends \Twig_Extension
 
     private function escapeHtml(string $string): string
     {
+        /** @noinspection PhpUnhandledExceptionInspection */
         return twig_escape_filter($this->twigEnvironment, $string);
     }
 }
