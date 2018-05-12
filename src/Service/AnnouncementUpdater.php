@@ -3,12 +3,14 @@
 namespace App\Service;
 
 use App\Entity\AnnouncementInterface;
-use App\Form\Announcement\AnnouncementFormData;
+use App\Form\Announcement\AnnouncementFormDataInterface;
 
 class AnnouncementUpdater
 {
-    public function updateAnnouncement(AnnouncementInterface $abbreviation, AnnouncementFormData $formData): void
-    {
+    public function updateAnnouncement(
+        AnnouncementInterface $abbreviation,
+        AnnouncementFormDataInterface $formData
+    ): void {
         $abbreviation->setTitle($formData->getTitle());
         $abbreviation->setContent($formData->getContent());
     }

@@ -4,11 +4,11 @@ namespace App\Facade;
 
 use App\Entity\AnnouncementInterface;
 use App\Factory\AnnouncementFactory;
-use App\Form\Announcement\AnnouncementFormData;
+use App\Form\Announcement\AnnouncementFormDataInterface;
 use App\Service\AnnouncementUpdater;
 use Doctrine\ORM\EntityManagerInterface;
 
-class AnnouncementFacade
+class AnnouncementFacade implements AnnouncementFacadeInterface
 {
     /** @var EntityManagerInterface */
     private $entityManager;
@@ -29,7 +29,7 @@ class AnnouncementFacade
         $this->announcementUpdater = $announcementUpdater;
     }
 
-    public function createAnnouncement(AnnouncementFormData $formData): AnnouncementInterface
+    public function createAnnouncement(AnnouncementFormDataInterface $formData): AnnouncementInterface
     {
         $announcement = $this->announcementFactory->createFromFormData($formData);
 
@@ -39,8 +39,10 @@ class AnnouncementFacade
         return $announcement;
     }
 
-    public function updateAnnouncement(AnnouncementInterface $announcement, AnnouncementFormData $formData): void
-    {
+    public function updateAnnouncement(
+        AnnouncementInterface $announcement,
+        AnnouncementFormDataInterface $formData
+    ): void {
         $this->announcementUpdater->updateAnnouncement($announcement, $formData);
 
         $this->entityManager->flush();
