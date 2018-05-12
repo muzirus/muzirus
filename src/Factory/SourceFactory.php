@@ -6,7 +6,7 @@ use App\Entity\Source;
 use App\Entity\SourceInterface;
 use App\Form\Source\SourceFormDataInterface;
 
-class SourceFactory
+class SourceFactory implements SourceFactoryInterface
 {
     public function createFromFormData(SourceFormDataInterface $formData): SourceInterface
     {

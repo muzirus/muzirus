@@ -6,7 +6,7 @@ use App\Entity\Abbreviation;
 use App\Entity\AbbreviationInterface;
 use App\Form\Abbreviation\AbbreviationFormDataInterface;
 
-class AbbreviationFactory
+class AbbreviationFactory implements AbbreviationFactoryInterface
 {
     public function createFromFormData(AbbreviationFormDataInterface $formData): AbbreviationInterface
     {

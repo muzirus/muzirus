@@ -6,7 +6,7 @@ use App\Entity\CzechWord;
 use App\Entity\CzechWordInterface;
 use App\Form\Word\CzechWordFormDataInterface;
 
-class CzechWordFactory
+class CzechWordFactory implements CzechWordFactoryInterface
 {
     public function createFromFormData(CzechWordFormDataInterface $formData): CzechWordInterface
     {

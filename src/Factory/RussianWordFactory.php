@@ -6,7 +6,7 @@ use App\Entity\RussianWord;
 use App\Entity\RussianWordInterface;
 use App\Form\Word\RussianWordFormDataInterface;
 
-class RussianWordFactory
+class RussianWordFactory implements RussianWordFactoryInterface
 {
     public function createFromFormData(RussianWordFormDataInterface $formData): RussianWordInterface
     {

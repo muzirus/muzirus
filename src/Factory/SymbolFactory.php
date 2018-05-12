@@ -6,7 +6,7 @@ use App\Entity\Symbol;
 use App\Entity\SymbolInterface;
 use App\Form\Symbol\SymbolFormDataInterface;
 
-class SymbolFactory
+class SymbolFactory implements SymbolFactoryInterface
 {
     public function createFromFormData(SymbolFormDataInterface $formData): SymbolInterface
     {

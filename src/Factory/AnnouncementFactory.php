@@ -6,7 +6,7 @@ use App\Entity\Announcement;
 use App\Entity\AnnouncementInterface;
 use App\Form\Announcement\AnnouncementFormDataInterface;
 
-class AnnouncementFactory
+class AnnouncementFactory implements AnnouncementFactoryInterface
 {
     public function createFromFormData(AnnouncementFormDataInterface $formData): AnnouncementInterface
     {

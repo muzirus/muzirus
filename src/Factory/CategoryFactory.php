@@ -6,7 +6,7 @@ use App\Entity\WordCategory;
 use App\Entity\WordCategoryInterface;
 use App\Form\Category\CategoryFormDataInterface;
 
-class CategoryFactory
+class CategoryFactory implements CategoryFactoryInterface
 {
     public function createFromFormData(CategoryFormDataInterface $formData): WordCategoryInterface
     {

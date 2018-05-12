@@ -6,7 +6,7 @@ use App\Entity\Translation;
 use App\Entity\TranslationInterface;
 use App\Form\Translation\TranslationFormDataInterface;
 
-class TranslationFactory
+class TranslationFactory implements TranslationFactoryInterface
 {
     public function createFromFormData(TranslationFormDataInterface $formData): TranslationInterface
     {
