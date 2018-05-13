@@ -3,10 +3,7 @@ import 'bootstrap';
 
 (function ($) {
     $(function () {
-        //$('[data-toggle="popover"]').popover();
-        //$('[data-toggle="tooltip"]').tooltip();
-        $('body').tooltip({
-            selector: '[data-toggle="tooltip"]'
-        });
+        $('[data-toggle="popover"]').popover();
+        $('[data-toggle="tooltip"]').tooltip();
     });
 })(jQuery);

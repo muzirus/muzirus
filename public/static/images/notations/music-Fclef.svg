@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   width="600"
+   height="300"
+   sodipodi:docname="Music-Fclef.png">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1142"
+     inkscape:window-height="703"
+     id="namedview4"
+     showgrid="false"
+     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="true"
+     inkscape:zoom="1"
+     inkscape:cx="68.141319"
+     inkscape:cy="194.89243"
+     inkscape:window-x="224"
+     inkscape:window-y="52"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3602"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <g
+     id="g3614"
+     transform="matrix(3,0,0,3,15,-150)">
+    <path
+       sodipodi:nodetypes="cssssssssssc"
+       id="path2820"
+       d="m 62.511677,127.84048 c 0,-0.83977 4.041963,-4.29526 8.982141,-7.67885 10.621365,-7.27471 18.291956,-15.2339 22.753427,-23.609504 10.231245,-19.207279 6.990215,-39.234197 -6.645392,-41.063116 -7.541825,-1.01157 -17.090176,4.491435 -17.090176,9.84959 0,1.98778 0.508501,2.147884 6.037438,1.900912 6.764925,-0.302182 11.341654,6.282702 7.680759,11.050886 -5.784567,7.53419 -19.718197,3.205925 -19.718197,-6.12515 0,-8.178104 4.976735,-14.686661 13.736031,-17.963933 18.744999,-7.013402 36.588252,5.915889 35.025872,25.379878 -1.28058,15.953347 -15.170703,30.852697 -42.135847,45.197347 -6.39814,3.40362 -8.626056,4.19445 -8.626056,3.06194 z"
+       style="fill:#000000" />
+    <path
+       transform="matrix(0.8552381,0,0,0.8552381,13.155357,9.9952378)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="path3598"
+       sodipodi:cx="128.4375"
+       sodipodi:cy="65.625"
+       sodipodi:rx="6.5625"
+       sodipodi:ry="6.875"
+       d="m 135,65.625 c 0,3.796958 -2.93813,6.875 -6.5625,6.875 -3.62437,0 -6.5625,-3.078042 -6.5625,-6.875 0,-3.796958 2.93813,-6.875 6.5625,-6.875 3.62437,0 6.5625,3.078042 6.5625,6.875 z" />
+    <path
+       d="m 135,65.625 c 0,3.796958 -2.93813,6.875 -6.5625,6.875 -3.62437,0 -6.5625,-3.078042 -6.5625,-6.875 0,-3.796958 2.93813,-6.875 6.5625,-6.875 3.62437,0 6.5625,3.078042 6.5625,6.875 z"
+       sodipodi:ry="6.875"
+       sodipodi:rx="6.5625"
+       sodipodi:cy="65.625"
+       sodipodi:cx="128.4375"
+       id="path3600"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       sodipodi:type="arc"
+       transform="matrix(0.8552381,0,0,0.8552381,13.542857,29.875)" />
+    <rect
+       y="50"
+       x="-5"
+       height="4"
+       width="200"
+       id="rect3604"
+       style="opacity:0.3;fill:#000000;fill-opacity:1;stroke:none" />
+    <rect
+       style="opacity:0.3;fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3606"
+       width="200"
+       height="4"
+       x="-5"
+       y="73.405113" />
+    <rect
+       y="97.693497"
+       x="-5"
+       height="4"
+       width="200"
+       id="rect3608"
+       style="opacity:0.3;fill:#000000;fill-opacity:1;stroke:none" />
+    <rect
+       style="opacity:0.3;fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3610"
+       width="200"
+       height="4"
+       x="-5"
+       y="121" />
+    <rect
+       y="146"
+       x="-5"
+       height="4"
+       width="200"
+       id="rect3612"
+       style="opacity:0.3;fill:#000000;fill-opacity:1;stroke:none" />
+  </g>
+</svg>
