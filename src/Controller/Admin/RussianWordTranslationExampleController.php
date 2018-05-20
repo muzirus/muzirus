@@ -18,6 +18,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Webmozart\Assert\Assert;
 
 /**
  * @Route("admin/russian-word")
@@ -143,7 +144,8 @@ class RussianWordTranslationExampleController extends AbstractController
         TranslationExample $translationExample,
         TranslationExampleFacade $translationExampleFacade
     ): RedirectResponse {
-        // todo: check that translation example belongs to that word and that translation
+        Assert::same($word, $translation->getRussianWord());
+        Assert::same($translation, $translationExample->getTranslation());
 
         $translationExampleFacade->deleteTranslationExample($translationExample);
 

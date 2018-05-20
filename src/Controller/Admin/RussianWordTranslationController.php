@@ -19,6 +19,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Webmozart\Assert\Assert;
 
 /**
  * @Route("admin/russian-word")
@@ -134,7 +135,7 @@ class RussianWordTranslationController extends AbstractController
         Translation $translation,
         TranslationFacade $translationFacade
     ): RedirectResponse {
-        // todo: check that translation belongs to that word
+        Assert::same($word, $translation->getRussianWord());
 
         $translationFacade->deleteTranslation($translation);
 
@@ -166,7 +167,7 @@ class RussianWordTranslationController extends AbstractController
         TranslationFacade $translationFacade,
         string $position
     ): RedirectResponse {
-        // todo: check that translation belongs to that word
+        Assert::same($word, $translation->getRussianWord());
 
         $translationFacade->updateTranslationPositionInRussianWordDetail($translation, $position);
 
