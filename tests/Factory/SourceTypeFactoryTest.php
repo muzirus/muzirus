@@ -11,7 +11,7 @@ class SourceTypeFactoryTest extends TestCase
     /** @var SourceTypeFactory */
     private $sourceTypeFactory;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->sourceTypeFactory = new SourceTypeFactory();
     }

@@ -12,7 +12,7 @@ class AbbreviationUpdaterTest extends TestCase
     /** @var AbbreviationUpdater */
     private $abbreviationUpdater;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->abbreviationUpdater = new AbbreviationUpdater();
     }

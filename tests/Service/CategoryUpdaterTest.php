@@ -12,7 +12,7 @@ class CategoryUpdaterTest extends TestCase
     /** @var CategoryUpdater */
     private $categoryUpdater;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->categoryUpdater = new CategoryUpdater();
     }

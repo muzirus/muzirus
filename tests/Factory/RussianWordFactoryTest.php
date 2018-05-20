@@ -15,7 +15,7 @@ class RussianWordFactoryTest extends TestCase
     /** @var RussianWordFactory */
     private $russianWordFactory;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->russianWordFactory = new RussianWordFactory();
     }

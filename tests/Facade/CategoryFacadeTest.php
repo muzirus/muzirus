@@ -25,7 +25,7 @@ class CategoryFacadeTest extends TestCase
     /** @var CategoryUpdater|m\Mock */
     private $categoryUpdater;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->entityManager = m::spy(EntityManagerInterface::class);
         $this->categoryFactory = m::spy(CategoryFactory::class);

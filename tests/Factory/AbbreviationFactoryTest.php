@@ -11,7 +11,7 @@ class AbbreviationFactoryTest extends TestCase
     /** @var AbbreviationFactory */
     private $abbreviationFactory;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->abbreviationFactory = new AbbreviationFactory();
     }

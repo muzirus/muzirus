@@ -12,7 +12,7 @@ class SourceTypeUpdaterTest extends TestCase
     /** @var SourceTypeUpdater */
     private $sourceTypeUpdater;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->sourceTypeUpdater = new SourceTypeUpdater();
     }

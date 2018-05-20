@@ -25,7 +25,7 @@ class AbbreviationFacadeTest extends TestCase
     /** @var AbbreviationUpdater|m\Mock */
     private $abbreviationUpdater;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->entityManager = m::spy(EntityManagerInterface::class);
         $this->abbreviationFactory = m::spy(AbbreviationFactory::class);

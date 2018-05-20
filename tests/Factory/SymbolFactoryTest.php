@@ -11,7 +11,7 @@ class SymbolFactoryTest extends TestCase
     /** @var SymbolFactory */
     private $symbolFactory;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->symbolFactory = new SymbolFactory();
     }

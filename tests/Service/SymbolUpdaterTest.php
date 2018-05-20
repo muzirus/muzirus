@@ -12,7 +12,7 @@ class SymbolUpdaterTest extends TestCase
     /** @var SymbolUpdater */
     private $symbolUpdater;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->symbolUpdater = new SymbolUpdater();
     }

@@ -25,7 +25,7 @@ class SymbolFacadeTest extends TestCase
     /** @var SymbolUpdater|m\Mock */
     private $symbolUpdater;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->entityManager = m::spy(EntityManagerInterface::class);
         $this->symbolFactory = m::spy(SymbolFactory::class);

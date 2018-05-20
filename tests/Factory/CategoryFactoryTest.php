@@ -11,7 +11,7 @@ class CategoryFactoryTest extends TestCase
     /** @var CategoryFactory */
     private $categoryFactory;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->categoryFactory = new CategoryFactory();
     }

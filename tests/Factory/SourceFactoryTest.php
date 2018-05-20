@@ -12,7 +12,7 @@ class SourceFactoryTest extends TestCase
     /** @var SourceFactory */
     private $sourceFactory;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->sourceFactory = new SourceFactory();
     }

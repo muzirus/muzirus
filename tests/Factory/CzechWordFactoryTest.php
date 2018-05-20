@@ -15,7 +15,7 @@ class CzechWordFactoryTest extends TestCase
     /** @var CzechWordFactory */
     private $czechWordFactory;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->czechWordFactory = new CzechWordFactory();
     }

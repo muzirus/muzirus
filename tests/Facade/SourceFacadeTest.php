@@ -25,7 +25,7 @@ class SourceFacadeTest extends TestCase
     /** @var SourceUpdater|m\Mock */
     private $sourceUpdater;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->entityManager = m::spy(EntityManagerInterface::class);
         $this->sourceFactory = m::spy(SourceFactory::class);
