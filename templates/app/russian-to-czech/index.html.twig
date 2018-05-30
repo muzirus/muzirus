@@ -1,5 +1,6 @@
 {% extends 'app/layout.html.twig' %}
 {% import 'app/_macros/filter.html.twig' as filter %}
+{% import 'app/_macros/list.html.twig' as list %}
 
 {% block heading 'app.title.vocabulary_russian'|trans %}
 
@@ -7,15 +8,5 @@
     <div class="text-center mb-3">
         {{ filter.links('app.russian_to_czech', letters) }}
     </div>
-    {% for wordsInRow in words|batch(12) %}
-        <div class="row">
-            {% for word in wordsInRow %}
-                <div class="col-lg-4 col-md-6">
-                    <h3>
-                        <a href="{{ path('app.russian_to_czech.detail', { id: word.id }) }}">{{ word }}</a>
-                    </h3>
-                </div>
-            {% endfor %}
-        </div>
-    {% endfor %}
+    {{ list.listOfWords(words) }}
 {% endblock %}
