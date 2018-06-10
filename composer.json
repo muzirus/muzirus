@@ -17,6 +17,7 @@
         "ext-iconv": "*",
         "ext-intl": "*",
         "ext-mbstring": "*",
+        "ext-pdo": "*",
         "cocur/slugify": "^3.2",
         "enumag/no-thanks": "^0.1.0",
         "erusev/parsedown": "^1.7",
