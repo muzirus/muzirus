@@ -1,15 +1,13 @@
 {% extends 'app/layout.html.twig' %}
 
-{% block heading 'app.title.topics'|trans %}
+{% block heading %}
+    {{ 'app.title.topics'|trans }}
+{% endblock %}
 
 {% block content %}
-    <table class="table table-striped table-hover table-bordered">
-        <tbody>
-            {% for category in categories %}
-                <tr>
-                    <td>{{ category.title }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% for category in categories %}
+        <h3>
+            <a href="{{ path('app.topic', { id: category.id }) }}">{{ category.title }}</a>
+        </h3>
+    {% endfor %}
 {% endblock %}
