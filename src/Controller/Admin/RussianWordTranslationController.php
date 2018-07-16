@@ -14,11 +14,11 @@ use App\Form\Translation\TranslationFormData;
 use App\Form\Translation\UpdateTranslationForm;
 use App\Repository\RussianWordRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 use Webmozart\Assert\Assert;
 
 /**

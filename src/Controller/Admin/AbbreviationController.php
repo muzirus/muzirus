@@ -9,10 +9,10 @@ use App\Facade\AbbreviationFacade;
 use App\Form\Abbreviation\AbbreviationForm;
 use App\Form\Abbreviation\AbbreviationFormData;
 use App\Repository\AbbreviationRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("admin/abbreviation")

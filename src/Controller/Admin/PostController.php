@@ -9,9 +9,9 @@ use App\Facade\PostFacade;
 use App\Form\Post\PostForm;
 use App\Form\Post\PostFormData;
 use App\Repository\PostRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("admin/post")

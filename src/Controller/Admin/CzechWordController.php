@@ -11,11 +11,11 @@ use App\Facade\CzechWordFacade;
 use App\Form\Word\CzechWordForm;
 use App\Form\Word\CzechWordFormData;
 use App\Repository\CzechWordRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("admin/czech-word")

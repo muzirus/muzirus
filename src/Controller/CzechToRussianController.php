@@ -5,9 +5,9 @@ namespace App\Controller;
 use App\Entity\CzechWord;
 use App\Repository\CzechWordRepository;
 use App\Service\Provider\CzechAlphabetProvider;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("czech-to-russian")

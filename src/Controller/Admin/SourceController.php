@@ -11,11 +11,11 @@ use App\Facade\SourceFacade;
 use App\Form\Source\SourceForm;
 use App\Form\Source\SourceFormData;
 use App\Repository\SourceRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("admin/source")

@@ -4,8 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Controller\AbstractController;
 use App\Repository\UserRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("admin/user")

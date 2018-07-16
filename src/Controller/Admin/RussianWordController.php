@@ -11,11 +11,11 @@ use App\Facade\RussianWordFacade;
 use App\Form\Word\RussianWordForm;
 use App\Form\Word\RussianWordFormData;
 use App\Repository\RussianWordRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("admin/russian-word")

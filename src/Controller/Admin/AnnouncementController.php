@@ -9,10 +9,10 @@ use App\Facade\AnnouncementFacade;
 use App\Form\Announcement\AnnouncementForm;
 use App\Form\Announcement\AnnouncementFormData;
 use App\Repository\AnnouncementRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("admin/announcement")
