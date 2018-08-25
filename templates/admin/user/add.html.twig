@@ -1,0 +1,30 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block title 'admin.users'|trans %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block content %}
+    <div class="box">
+        {{ form_start(form) }}
+        <div class="box-header with-border">
+            <h3 class="box-title">{{ 'admin.box.title.add'|trans }}</h3>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title) }}
+                {{ form_errors(form.title) }}
+            </div>
+        </div>
+        <div class="box-footer">
+            <button class="btn btn-primary">
+                {{ 'admin.button.save'|trans }}
+            </button>
+            <a href="{{ path('admin.user') }}" class="btn btn-default">
+                {{ 'admin.button.back_to_list'|trans }}
+            </a>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
