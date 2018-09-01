@@ -4,11 +4,11 @@ namespace App\Tests\Facade;
 
 use App\Entity\Abbreviation;
 use App\Facade\AbbreviationFacade;
-use App\Factory\AbbreviationFactory;
+use App\Factory\AbbreviationFactoryInterface;
 use App\Form\Abbreviation\AbbreviationFormData;
-use App\Service\AbbreviationUpdater;
+use App\Service\AbbreviationUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
-use Mockery as m;
+use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class AbbreviationFacadeTest extends TestCase
@@ -16,20 +16,20 @@ class AbbreviationFacadeTest extends TestCase
     /** @var AbbreviationFacade */
     private $abbreviationFacade;
 
-    /** @var EntityManagerInterface|m\Mock */
+    /** @var EntityManagerInterface|Mockery\MockInterface */
     private $entityManager;
 
-    /** @var AbbreviationFactory|m\Mock */
+    /** @var AbbreviationFactoryInterface|Mockery\MockInterface */
     private $abbreviationFactory;
 
-    /** @var AbbreviationUpdater|m\Mock */
+    /** @var AbbreviationUpdaterInterface|Mockery\MockInterface */
     private $abbreviationUpdater;
 
     protected function setUp(): void
     {
-        $this->entityManager = m::spy(EntityManagerInterface::class);
-        $this->abbreviationFactory = m::spy(AbbreviationFactory::class);
-        $this->abbreviationUpdater = m::spy(AbbreviationUpdater::class);
+        $this->entityManager = Mockery::spy(EntityManagerInterface::class);
+        $this->abbreviationFactory = Mockery::spy(AbbreviationFactoryInterface::class);
+        $this->abbreviationUpdater = Mockery::spy(AbbreviationUpdaterInterface::class);
 
         $this->abbreviationFacade = new AbbreviationFacade(
             $this->entityManager,
@@ -40,8 +40,8 @@ class AbbreviationFacadeTest extends TestCase
 
     public function testShouldCreateAbbreviation(): void
     {
-        $formData = m::mock(AbbreviationFormData::class);
-        $abbreviation = m::mock(Abbreviation::class);
+        $formData = Mockery::mock(AbbreviationFormData::class);
+        $abbreviation = Mockery::mock(Abbreviation::class);
 
         $this->abbreviationFactory->shouldReceive('createFromFormData')
             ->once()
@@ -61,8 +61,8 @@ class AbbreviationFacadeTest extends TestCase
 
     public function testShouldUpdateAbbreviation(): void
     {
-        $formData = m::mock(AbbreviationFormData::class);
-        $abbreviation = m::mock(Abbreviation::class);
+        $formData = Mockery::mock(AbbreviationFormData::class);
+        $abbreviation = Mockery::mock(Abbreviation::class);
 
         $this->abbreviationFacade->updateAbbreviation($abbreviation, $formData);
 
@@ -76,7 +76,7 @@ class AbbreviationFacadeTest extends TestCase
 
     public function testShouldDeleteAbbreviation(): void
     {
-        $abbreviation = m::mock(Abbreviation::class);
+        $abbreviation = Mockery::mock(Abbreviation::class);
 
         $this->abbreviationFacade->deleteAbbreviation($abbreviation);
 

@@ -3,9 +3,9 @@
 namespace App\Facade;
 
 use App\Entity\SymbolInterface;
-use App\Factory\SymbolFactory;
+use App\Factory\SymbolFactoryInterface;
 use App\Form\Symbol\SymbolFormDataInterface;
-use App\Service\SymbolUpdater;
+use App\Service\SymbolUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class SymbolFacade implements SymbolFacadeInterface
@@ -13,16 +13,16 @@ class SymbolFacade implements SymbolFacadeInterface
     /** @var EntityManagerInterface */
     private $entityManager;
 
-    /** @var SymbolFactory */
+    /** @var SymbolFactoryInterface */
     private $symbolFactory;
 
-    /** @var SymbolUpdater */
+    /** @var SymbolUpdaterInterface */
     private $symbolUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        SymbolFactory $symbolFactory,
-        SymbolUpdater $symbolUpdater
+        SymbolFactoryInterface $symbolFactory,
+        SymbolUpdaterInterface $symbolUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->symbolFactory = $symbolFactory;

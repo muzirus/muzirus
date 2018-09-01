@@ -4,11 +4,11 @@ namespace App\Tests\Facade;
 
 use App\Entity\Category;
 use App\Facade\CategoryFacade;
-use App\Factory\CategoryFactory;
+use App\Factory\CategoryFactoryInterface;
 use App\Form\Category\CategoryFormData;
-use App\Service\CategoryUpdater;
+use App\Service\CategoryUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
-use Mockery as m;
+use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class CategoryFacadeTest extends TestCase
@@ -16,20 +16,20 @@ class CategoryFacadeTest extends TestCase
     /** @var CategoryFacade */
     private $categoryFacade;
 
-    /** @var EntityManagerInterface|m\Mock */
+    /** @var EntityManagerInterface|Mockery\MockInterface */
     private $entityManager;
 
-    /** @var CategoryFactory|m\Mock */
+    /** @var CategoryFactoryInterface|Mockery\MockInterface */
     private $categoryFactory;
 
-    /** @var CategoryUpdater|m\Mock */
+    /** @var CategoryUpdaterInterface|Mockery\MockInterface */
     private $categoryUpdater;
 
     protected function setUp(): void
     {
-        $this->entityManager = m::spy(EntityManagerInterface::class);
-        $this->categoryFactory = m::spy(CategoryFactory::class);
-        $this->categoryUpdater = m::spy(CategoryUpdater::class);
+        $this->entityManager = Mockery::spy(EntityManagerInterface::class);
+        $this->categoryFactory = Mockery::spy(CategoryFactoryInterface::class);
+        $this->categoryUpdater = Mockery::spy(CategoryUpdaterInterface::class);
 
         $this->categoryFacade = new CategoryFacade(
             $this->entityManager,
@@ -40,8 +40,8 @@ class CategoryFacadeTest extends TestCase
 
     public function testShouldCreateCategory(): void
     {
-        $formData = m::mock(CategoryFormData::class);
-        $category = m::mock(Category::class);
+        $formData = Mockery::mock(CategoryFormData::class);
+        $category = Mockery::mock(Category::class);
 
         $this->categoryFactory->shouldReceive('createFromFormData')
             ->once()
@@ -61,8 +61,8 @@ class CategoryFacadeTest extends TestCase
 
     public function testShouldUpdateCategory(): void
     {
-        $formData = m::mock(CategoryFormData::class);
-        $category = m::mock(Category::class);
+        $formData = Mockery::mock(CategoryFormData::class);
+        $category = Mockery::mock(Category::class);
 
         $this->categoryFacade->updateCategory($category, $formData);
 
@@ -76,7 +76,7 @@ class CategoryFacadeTest extends TestCase
 
     public function testShouldDeleteCategory(): void
     {
-        $category = m::mock(Category::class);
+        $category = Mockery::mock(Category::class);
 
         $this->categoryFacade->deleteCategory($category);
 

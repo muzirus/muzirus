@@ -3,9 +3,9 @@
 namespace App\Facade;
 
 use App\Entity\SourceInterface;
-use App\Factory\SourceFactory;
+use App\Factory\SourceFactoryInterface;
 use App\Form\Source\SourceFormDataInterface;
-use App\Service\SourceUpdater;
+use App\Service\SourceUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class SourceFacade implements SourceFacadeInterface
@@ -13,16 +13,16 @@ class SourceFacade implements SourceFacadeInterface
     /** @var EntityManagerInterface */
     private $entityManager;
 
-    /** @var SourceFactory */
+    /** @var SourceFactoryInterface */
     private $sourceFactory;
 
-    /** @var SourceUpdater */
+    /** @var SourceUpdaterInterface */
     private $sourceUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        SourceFactory $sourceFactory,
-        SourceUpdater $sourceUpdater
+        SourceFactoryInterface $sourceFactory,
+        SourceUpdaterInterface $sourceUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->sourceFactory = $sourceFactory;

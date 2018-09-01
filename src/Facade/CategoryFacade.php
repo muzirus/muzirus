@@ -3,9 +3,9 @@
 namespace App\Facade;
 
 use App\Entity\CategoryInterface;
-use App\Factory\CategoryFactory;
+use App\Factory\CategoryFactoryInterface;
 use App\Form\Category\CategoryFormDataInterface;
-use App\Service\CategoryUpdater;
+use App\Service\CategoryUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class CategoryFacade implements CategoryFacadeInterface
@@ -13,16 +13,16 @@ class CategoryFacade implements CategoryFacadeInterface
     /** @var EntityManagerInterface */
     private $entityManager;
 
-    /** @var CategoryFactory */
+    /** @var CategoryFactoryInterface */
     private $categoryFactory;
 
-    /** @var CategoryUpdater */
+    /** @var CategoryUpdaterInterface */
     private $categoryUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        CategoryFactory $categoryFactory,
-        CategoryUpdater $categoryUpdater
+        CategoryFactoryInterface $categoryFactory,
+        CategoryUpdaterInterface $categoryUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->categoryFactory = $categoryFactory;

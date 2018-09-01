@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\Tests\Factory;
+namespace App\Tests\Service;
 
 use App\Entity\Category;
 use App\Form\Category\CategoryFormData;
