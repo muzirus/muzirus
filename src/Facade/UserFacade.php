@@ -5,6 +5,7 @@ namespace App\Facade;
 use App\Entity\UserInterface;
 use App\Factory\UserFactory;
 use App\Form\User\UserFormDataInterface;
+use App\Service\UserUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class UserFacade implements UserFacadeInterface
@@ -15,12 +16,17 @@ class UserFacade implements UserFacadeInterface
     /** @var UserFactory */
     private $userFactory;
 
+    /** @var UserUpdaterInterface */
+    private $userUpdater;
+
     public function __construct(
         EntityManagerInterface $entityManager,
-        UserFactory $userFactory
+        UserFactory $userFactory,
+        UserUpdaterInterface $userUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->userFactory = $userFactory;
+        $this->userUpdater = $userUpdater;
     }
 
     public function createUser(UserFormDataInterface $formData): UserInterface
@@ -35,7 +41,8 @@ class UserFacade implements UserFacadeInterface
 
     public function updateUser(UserInterface $user, UserFormDataInterface $formData): void
     {
-        // TODO: Implement updateUser() method.
+        $this->userUpdater->updateUser($user, $formData);
+        $this->entityManager->flush();
     }
 
     public function deleteUser(UserInterface $user): void
