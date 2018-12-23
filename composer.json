@@ -57,6 +57,7 @@
         "symfony/web-server-bundle": "^4.0"
     },
     "config": {
+        "optimize-autoloader": true,
         "platform": {
             "php": "7.2.13"
         },
@@ -94,7 +95,7 @@
             "@auto-scripts"
         ],
         "prod": [
-            "@composer install --no-dev --optimize-autoloader"
+            "@composer install --no-dev"
         ],
         "dev": [
             "@composer install"
