@@ -79,6 +79,7 @@
     "replace": {
         "symfony/polyfill-iconv": "*",
         "symfony/polyfill-intl-icu": "*",
+        "symfony/polyfill-mbstring": "*",
         "symfony/polyfill-php72": "*",
         "symfony/polyfill-php71": "*",
         "symfony/polyfill-php70": "*",
