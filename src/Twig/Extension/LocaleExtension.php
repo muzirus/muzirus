@@ -8,11 +8,13 @@ use Twig\TwigFunction;
 
 class LocaleExtension extends AbstractExtension
 {
+    /** @var string[] */
     private $localeCodes;
 
+    /** @var string[]|null */
     private $locales;
 
-    public function __construct($locales)
+    public function __construct(string $locales)
     {
         $this->localeCodes = explode('|', $locales);
     }

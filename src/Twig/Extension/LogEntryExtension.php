@@ -2,7 +2,14 @@
 
 namespace App\Twig\Extension;
 
+use App\Entity\CategoryInterface;
+use App\Entity\CzechWordInterface;
 use App\Entity\LogEntry;
+use App\Entity\RussianWordInterface;
+use App\Entity\SourceInterface;
+use App\Entity\SourceTypeInterface;
+use App\Entity\TranslationExampleInterface;
+use App\Entity\TranslationInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class LogEntryExtension extends \Twig_Extension
@@ -111,11 +118,19 @@ class LogEntryExtension extends \Twig_Extension
 
     private function getLogEntryBody(LogEntry $logEntry): string
     {
-        $userName = $logEntry->hasUser() ? $logEntry->getUser()->getName() : 'Nobody';
+        $user = $logEntry->getUser();
+        $userName = $user !== null ? $user->getName() : 'Nobody';
 
         switch ($logEntry->getName()) {
             case LogEntry::NAME_CATEGORY_CREATED:
                 $category = $logEntry->getCategory();
+
+                if ($category === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        CategoryInterface::class
+                    ));
+                }
 
                 return $this->getTextCreated(
                     $userName,
@@ -130,6 +145,13 @@ class LogEntryExtension extends \Twig_Extension
             case LogEntry::NAME_CZECH_WORD_CREATED:
                 $czechWord = $logEntry->getCzechWord();
 
+                if ($czechWord === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        CzechWordInterface::class
+                    ));
+                }
+
                 return $this->getTextCreated(
                     $userName,
                     $czechWord->getContent(),
@@ -142,6 +164,13 @@ class LogEntryExtension extends \Twig_Extension
                 );
             case LogEntry::NAME_RUSSIAN_WORD_CREATED:
                 $russianWord = $logEntry->getRussianWord();
+
+                if ($russianWord === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        RussianWordInterface::class
+                    ));
+                }
 
                 return $this->getTextCreated(
                     $userName,
@@ -156,6 +185,13 @@ class LogEntryExtension extends \Twig_Extension
             case LogEntry::NAME_SOURCE_CREATED:
                 $source = $logEntry->getSource();
 
+                if ($source === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        SourceInterface::class
+                    ));
+                }
+
                 return $this->getTextCreated(
                     $userName,
                     $source->getTitle(),
@@ -168,6 +204,13 @@ class LogEntryExtension extends \Twig_Extension
                 );
             case LogEntry::NAME_SOURCE_TYPE_CREATED:
                 $sourceType = $logEntry->getSourceType();
+
+                if ($sourceType === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        SourceTypeInterface::class
+                    ));
+                }
 
                 return $this->getTextCreated(
                     $userName,
@@ -182,6 +225,13 @@ class LogEntryExtension extends \Twig_Extension
             case LogEntry::NAME_TRANSLATION_CREATED:
                 $translation = $logEntry->getTranslation();
 
+                if ($translation === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        TranslationInterface::class
+                    ));
+                }
+
                 return $this->getTextCreated(
                     $userName,
                     $translation->__toString(),
@@ -194,6 +244,13 @@ class LogEntryExtension extends \Twig_Extension
                 );
             case LogEntry::NAME_TRANSLATION_EXAMPLE_CREATED:
                 $translationExample = $logEntry->getTranslationExample();
+
+                if ($translationExample === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        TranslationExampleInterface::class
+                    ));
+                }
 
                 return $this->getTextCreated(
                     $userName,
@@ -208,6 +265,13 @@ class LogEntryExtension extends \Twig_Extension
             case LogEntry::NAME_CATEGORY_UPDATED:
                 $category = $logEntry->getCategory();
 
+                if ($category === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        CategoryInterface::class
+                    ));
+                }
+
                 return $this->getTextUpdated(
                     $userName,
                     $category->getTitle(),
@@ -220,6 +284,13 @@ class LogEntryExtension extends \Twig_Extension
                 );
             case LogEntry::NAME_CZECH_WORD_UPDATED:
                 $czechWord = $logEntry->getCzechWord();
+
+                if ($czechWord === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        CzechWordInterface::class
+                    ));
+                }
 
                 return $this->getTextUpdated(
                     $userName,
@@ -234,6 +305,13 @@ class LogEntryExtension extends \Twig_Extension
             case LogEntry::NAME_RUSSIAN_WORD_UPDATED:
                 $russianWord = $logEntry->getRussianWord();
 
+                if ($russianWord === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        RussianWordInterface::class
+                    ));
+                }
+
                 return $this->getTextUpdated(
                     $userName,
                     $russianWord->getContent(),
@@ -246,6 +324,13 @@ class LogEntryExtension extends \Twig_Extension
                 );
             case LogEntry::NAME_SOURCE_UPDATED:
                 $source = $logEntry->getSource();
+
+                if ($source === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        SourceInterface::class
+                    ));
+                }
 
                 return $this->getTextUpdated(
                     $userName,
@@ -260,6 +345,13 @@ class LogEntryExtension extends \Twig_Extension
             case LogEntry::NAME_SOURCE_TYPE_UPDATED:
                 $sourceType = $logEntry->getSourceType();
 
+                if ($sourceType === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        SourceTypeInterface::class
+                    ));
+                }
+
                 return $this->getTextUpdated(
                     $userName,
                     $sourceType->getTitle(),
@@ -273,6 +365,13 @@ class LogEntryExtension extends \Twig_Extension
             case LogEntry::NAME_TRANSLATION_UPDATED:
                 $translation = $logEntry->getTranslation();
 
+                if ($translation === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        TranslationInterface::class
+                    ));
+                }
+
                 return $this->getTextUpdated(
                     $userName,
                     $translation->__toString(),
@@ -285,6 +384,13 @@ class LogEntryExtension extends \Twig_Extension
                 );
             case LogEntry::NAME_TRANSLATION_EXAMPLE_UPDATED:
                 $translationExample = $logEntry->getTranslationExample();
+
+                if ($translationExample === null) {
+                    throw new \LogicException(sprintf(
+                        'Log entry is missing "%s" entity',
+                        TranslationExampleInterface::class
+                    ));
+                }
 
                 return $this->getTextUpdated(
                     $userName,

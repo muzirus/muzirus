@@ -1,7 +1,8 @@
 includes:
-    - vendor/phpstan/phpstan-symfony/extension.neon
     - vendor/phpstan/phpstan-deprecation-rules/rules.neon
     - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
     - vendor/phpstan/phpstan-webmozart-assert/extension.neon
 parameters:
     tmpDir: %currentWorkingDirectory%/var/phpstan

@@ -127,7 +127,7 @@ class LegacyWord
 
     public function hasCategory(): bool
     {
-        return empty($this->category) === false;
+        return $this->category !== null && $this->category !== '';
     }
 
     public function getCategory(): string
@@ -152,7 +152,7 @@ class LegacyWord
 
     public function hasExplanation(): bool
     {
-        return empty($this->explanation) === false;
+        return $this->explanation !== null && $this->explanation !== '';
     }
 
     public function getExplanation(): string
@@ -167,7 +167,7 @@ class LegacyWord
 
     public function hasLanguageNote(): bool
     {
-        return empty($this->languageNote) === false;
+        return $this->languageNote !== null && $this->languageNote !== '';
     }
 
     public function getLanguageNote(): string
@@ -182,7 +182,7 @@ class LegacyWord
 
     public function hasTranslation(): bool
     {
-        return empty($this->translation) === false;
+        return $this->translation !== null && $this->translation !== '';
     }
 
     public function getTranslation(): string
@@ -197,7 +197,7 @@ class LegacyWord
 
     public function hasSource(): bool
     {
-        return empty($this->source) === false;
+        return $this->source !== null && $this->source !== '';
     }
 
     public function getSource(): string
