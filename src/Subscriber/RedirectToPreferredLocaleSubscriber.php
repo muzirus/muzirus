@@ -18,21 +18,25 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
  */
 class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
 {
+    /** @var UrlGeneratorInterface */
     private $urlGenerator;
 
+    /** @var array */
     private $locales;
 
+    /** @var string */
     private $defaultLocale;
 
     public function __construct(UrlGeneratorInterface $urlGenerator, string $locales, string $defaultLocale = null)
     {
         $this->urlGenerator = $urlGenerator;
 
-        $this->locales = explode('|', trim($locales));
-        if (empty($this->locales)) {
+        $localesAsArray = explode('|', trim($locales));
+        if ($localesAsArray === []) {
             throw new \UnexpectedValueException('The list of supported locales must not be empty.');
         }
 
+        $this->locales = $localesAsArray;
         $this->defaultLocale = $defaultLocale ?: $this->locales[0];
 
         if (!in_array($this->defaultLocale, $this->locales, true)) {
@@ -71,7 +75,8 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
         // Ignore requests from referrers with the same HTTP host in order to prevent
         // changing language for users who possibly already selected it for this application.
 
-        $referer = $request->headers->get('referer', '');
+        /** @var string $referer */
+        $referer = $request->headers->get('referer', '', true);
 
         if (mb_stripos($referer, $request->getSchemeAndHttpHost()) === 0) {
             return;

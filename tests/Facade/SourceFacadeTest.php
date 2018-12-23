@@ -4,11 +4,11 @@ namespace App\Tests\Facade;
 
 use App\Entity\SourceInterface;
 use App\Facade\SourceFacade;
-use App\Factory\SourceFactory;
-use App\Form\Source\SourceFormData;
-use App\Service\SourceUpdater;
+use App\Factory\SourceFactoryInterface;
+use App\Form\Source\SourceFormDataInterface;
+use App\Service\SourceUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
-use Mockery as m;
+use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class SourceFacadeTest extends TestCase
@@ -16,20 +16,20 @@ class SourceFacadeTest extends TestCase
     /** @var SourceFacade */
     private $sourceFacade;
 
-    /** @var EntityManagerInterface|m\Mock */
+    /** @var EntityManagerInterface|Mockery\MockInterface */
     private $entityManager;
 
-    /** @var SourceFactory|m\Mock */
+    /** @var SourceFactoryInterface|Mockery\MockInterface */
     private $sourceFactory;
 
-    /** @var SourceUpdater|m\Mock */
+    /** @var SourceUpdaterInterface|Mockery\MockInterface */
     private $sourceUpdater;
 
     protected function setUp(): void
     {
-        $this->entityManager = m::spy(EntityManagerInterface::class);
-        $this->sourceFactory = m::spy(SourceFactory::class);
-        $this->sourceUpdater = m::spy(SourceUpdater::class);
+        $this->entityManager = Mockery::spy(EntityManagerInterface::class);
+        $this->sourceFactory = Mockery::spy(SourceFactoryInterface::class);
+        $this->sourceUpdater = Mockery::spy(SourceUpdaterInterface::class);
 
         $this->sourceFacade = new SourceFacade(
             $this->entityManager,
@@ -40,8 +40,8 @@ class SourceFacadeTest extends TestCase
 
     public function testShouldCreateSource(): void
     {
-        $formData = m::mock(SourceFormData::class);
-        $source = m::mock(SourceInterface::class);
+        $formData = Mockery::mock(SourceFormDataInterface::class);
+        $source = Mockery::mock(SourceInterface::class);
 
         $this->sourceFactory->shouldReceive('createFromFormData')
             ->once()
@@ -61,8 +61,8 @@ class SourceFacadeTest extends TestCase
 
     public function testShouldUpdateSource(): void
     {
-        $formData = m::mock(SourceFormData::class);
-        $source = m::mock(SourceInterface::class);
+        $formData = Mockery::mock(SourceFormDataInterface::class);
+        $source = Mockery::mock(SourceInterface::class);
 
         $this->sourceFacade->updateSource($source, $formData);
 
@@ -76,7 +76,7 @@ class SourceFacadeTest extends TestCase
 
     public function testShouldDeleteSource(): void
     {
-        $source = m::mock(SourceInterface::class);
+        $source = Mockery::mock(SourceInterface::class);
 
         $this->sourceFacade->deleteSource($source);
 

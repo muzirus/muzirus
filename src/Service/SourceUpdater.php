@@ -3,12 +3,16 @@
 namespace App\Service;
 
 use App\Entity\SourceInterface;
+use App\Entity\SourceTypeInterface;
 use App\Form\Source\SourceFormDataInterface;
+use Webmozart\Assert\Assert;
 
 class SourceUpdater implements SourceUpdaterInterface
 {
     public function updateSource(SourceInterface $source, SourceFormDataInterface $formData): void
     {
+        Assert::isInstanceOf($formData->getType(), SourceTypeInterface::class);
+
         $source->setTitle($formData->getTitle());
         $source->setType($formData->getType());
         $source->setNameOfAuthor($formData->getNameOfAuthor());

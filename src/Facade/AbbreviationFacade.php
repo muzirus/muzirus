@@ -3,9 +3,9 @@
 namespace App\Facade;
 
 use App\Entity\AbbreviationInterface;
-use App\Factory\AbbreviationFactory;
+use App\Factory\AbbreviationFactoryInterface;
 use App\Form\Abbreviation\AbbreviationFormDataInterface;
-use App\Service\AbbreviationUpdater;
+use App\Service\AbbreviationUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class AbbreviationFacade implements AbbreviationFacadeInterface
@@ -13,16 +13,16 @@ class AbbreviationFacade implements AbbreviationFacadeInterface
     /** @var EntityManagerInterface */
     private $entityManager;
 
-    /** @var AbbreviationFactory */
+    /** @var AbbreviationFactoryInterface */
     private $abbreviationFactory;
 
-    /** @var AbbreviationUpdater */
+    /** @var AbbreviationUpdaterInterface */
     private $abbreviationUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        AbbreviationFactory $abbreviationFactory,
-        AbbreviationUpdater $abbreviationUpdater
+        AbbreviationFactoryInterface $abbreviationFactory,
+        AbbreviationUpdaterInterface $abbreviationUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->abbreviationFactory = $abbreviationFactory;

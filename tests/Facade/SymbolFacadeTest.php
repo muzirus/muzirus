@@ -2,13 +2,13 @@
 
 namespace App\Tests\Facade;
 
-use App\Entity\Symbol;
+use App\Entity\SymbolInterface;
 use App\Facade\SymbolFacade;
-use App\Factory\SymbolFactory;
-use App\Form\Symbol\SymbolFormData;
-use App\Service\SymbolUpdater;
+use App\Factory\SymbolFactoryInterface;
+use App\Form\Symbol\SymbolFormDataInterface;
+use App\Service\SymbolUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
-use Mockery as m;
+use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class SymbolFacadeTest extends TestCase
@@ -16,20 +16,20 @@ class SymbolFacadeTest extends TestCase
     /** @var SymbolFacade */
     private $symbolFacade;
 
-    /** @var EntityManagerInterface|m\Mock */
+    /** @var EntityManagerInterface|Mockery\MockInterface */
     private $entityManager;
 
-    /** @var SymbolFactory|m\Mock */
+    /** @var SymbolFactoryInterface|Mockery\MockInterface */
     private $symbolFactory;
 
-    /** @var SymbolUpdater|m\Mock */
+    /** @var SymbolUpdaterInterface|Mockery\MockInterface */
     private $symbolUpdater;
 
     protected function setUp(): void
     {
-        $this->entityManager = m::spy(EntityManagerInterface::class);
-        $this->symbolFactory = m::spy(SymbolFactory::class);
-        $this->symbolUpdater = m::spy(SymbolUpdater::class);
+        $this->entityManager = Mockery::spy(EntityManagerInterface::class);
+        $this->symbolFactory = Mockery::spy(SymbolFactoryInterface::class);
+        $this->symbolUpdater = Mockery::spy(SymbolUpdaterInterface::class);
 
         $this->symbolFacade = new SymbolFacade(
             $this->entityManager,
@@ -40,8 +40,8 @@ class SymbolFacadeTest extends TestCase
 
     public function testShouldCreateSymbol(): void
     {
-        $formData = m::mock(SymbolFormData::class);
-        $symbol = m::mock(Symbol::class);
+        $formData = Mockery::mock(SymbolFormDataInterface::class);
+        $symbol = Mockery::mock(SymbolInterface::class);
 
         $this->symbolFactory->shouldReceive('createFromFormData')
             ->once()
@@ -50,7 +50,7 @@ class SymbolFacadeTest extends TestCase
 
         $result = $this->symbolFacade->createSymbol($formData);
 
-        $this->assertInstanceOf(Symbol::class, $result);
+        $this->assertInstanceOf(SymbolInterface::class, $result);
         $this->entityManager->shouldHaveReceived('persist')
             ->with($symbol)
             ->once();
@@ -61,8 +61,8 @@ class SymbolFacadeTest extends TestCase
 
     public function testShouldUpdateSymbol(): void
     {
-        $formData = m::mock(SymbolFormData::class);
-        $symbol = m::mock(Symbol::class);
+        $formData = Mockery::mock(SymbolFormDataInterface::class);
+        $symbol = Mockery::mock(SymbolInterface::class);
 
         $this->symbolFacade->updateSymbol($symbol, $formData);
 
@@ -76,7 +76,7 @@ class SymbolFacadeTest extends TestCase
 
     public function testShouldDeleteSymbol(): void
     {
-        $symbol = m::mock(Symbol::class);
+        $symbol = Mockery::mock(SymbolInterface::class);
 
         $this->symbolFacade->deleteSymbol($symbol);
 

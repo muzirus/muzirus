@@ -113,7 +113,7 @@ class User implements UserInterface
     {
         $options = ['cost' => $cost];
 
-        $passwordHash = password_hash($password, PASSWORD_BCRYPT, $options);
+        $passwordHash = (string) password_hash($password, PASSWORD_BCRYPT, $options);
 
         $this->setPasswordHash($passwordHash);
     }
@@ -193,7 +193,7 @@ class User implements UserInterface
      * and populated in any number of different ways when the user object
      * is created.
      *
-     * @return (Role|string)[] The user roles
+     * @return string[] The user roles
      */
     public function getRoles(): array
     {

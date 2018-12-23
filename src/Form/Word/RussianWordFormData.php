@@ -22,7 +22,7 @@ class RussianWordFormData extends AbstractWordFormData implements RussianWordFor
 
         $formData->populate($word);
 
-        if (!empty($word->getContentWithAccent())) {
+        if ($word->getContentWithAccent() !== '') {
             $formData->setContentWithAccent($word->getContentWithAccent());
         } else {
             $formData->setContentWithAccent($word->getContent());

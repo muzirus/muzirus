@@ -48,7 +48,7 @@ class HighlightExtension extends \Twig_Extension
 
     public function highlightAccent(string $text): string
     {
-        return preg_replace(
+        return (string) preg_replace(
             '/\((.)\)/u',
             '<span class="highlight-accent">$1</span>',
             $text
@@ -57,7 +57,7 @@ class HighlightExtension extends \Twig_Extension
 
     private function highlightCyrillic(string $text): string
     {
-        return preg_replace(
+        return (string) preg_replace(
             '/([\p{Cyrillic}]+)/u',
             '<span class="highlight-cyrillic">$1</span>',
             $text
@@ -66,7 +66,7 @@ class HighlightExtension extends \Twig_Extension
 
     private function highlightLatin(string $text): string
     {
-        return preg_replace(
+        return (string) preg_replace(
             '/([\p{Latin}]+)/u',
             '<span class="highlight-latin">$1</span>',
             $text
