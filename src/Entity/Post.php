@@ -109,7 +109,7 @@ class Post implements PostInterface
         return $this->author instanceof UserInterface;
     }
 
-    public function getAuthor(): UserInterface
+    public function getAuthor(): ?UserInterface
     {
         return $this->author;
     }

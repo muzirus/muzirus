@@ -24,7 +24,7 @@ interface PostInterface extends TimestampableInterface
 
     public function hasAuthor(): bool;
 
-    public function getAuthor(): UserInterface;
+    public function getAuthor(): ?UserInterface;
 
     public function getLastRevision(): PostRevisionInterface;
 }
