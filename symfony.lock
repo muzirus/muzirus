@@ -182,6 +182,9 @@
     "phpstan/phpstan-symfony": {
         "version": "0.10.2"
     },
+    "phpstan/phpstan-webmozart-assert": {
+        "version": "0.10"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
