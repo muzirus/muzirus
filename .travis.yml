@@ -1,31 +1,16 @@
-branches:
-  only:
-    - master
-    - develop
-    - travis
+platform: linux
 sudo: false
 language: php
 php:
-  - '7.2'
+    - '7.2'
+    - '7.3'
 cache:
-  directories:
-    - $HOME/.composer/cache/files
-    - $HOME/symfony-bridge/.phpunit
-env:
-  global:
-    - SYMFONY_PHPUNIT_DIR="$HOME/symfony-bridge/.phpunit"
-    - SYMFONY_PHPUNIT_VERSION="6.3"
+    directories:
+        - $HOME/.composer/cache/files
+        - ./bin/.phpunit
 install:
-  - composer install
-  - ./vendor/bin/simple-phpunit install
+    - composer install
 script:
-  - ./vendor/bin/simple-phpunit
-  #- ./vendor/bin/ecs check src/ tests/
-  - ./bin/console lint:yaml config
-  - ./bin/console lint:twig templates
-  #- ./bin/console lint:xliff translations
-  #- ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
-  #- composer validate --strict
-  - ./bin/console doctrine:schema:validate --skip-sync -vvv --no-interaction
+    - composer test
 notifications:
-  email: false
+    email: false
