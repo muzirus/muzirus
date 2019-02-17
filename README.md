@@ -2,8 +2,7 @@
 
 Source code of dictionary Muzirus.cz
 
-[![Build Status Master](https://travis-ci.org/muzirus/muzirus.svg?branch=master)](https://travis-ci.org/muzirus/muzirus)
-[![Build Status Develop](https://travis-ci.org/muzirus/muzirus.svg?branch=develop)](https://travis-ci.org/muzirus/muzirus)
+[![Build Status Master](https://travis-ci.com/muzirus/muzirus.svg?branch=master)](https://travis-ci.com/muzirus/muzirus)
 
 ## Requirements
 
