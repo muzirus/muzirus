@@ -2,8 +2,8 @@
 
 namespace DoctrineMigrations;
 
-use Doctrine\DBAL\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
+use Doctrine\Migrations\AbstractMigration;
 
 final class Version20180512212838 extends AbstractMigration
 {
