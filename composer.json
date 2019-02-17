@@ -11,12 +11,14 @@
             "role": "Developer"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
-        "php": "^7.2.0",
+        "php": "^7.2",
         "ext-iconv": "*",
         "ext-intl": "*",
         "ext-mbstring": "*",
-        "cocur/slugify": "^3.1",
+        "cocur/slugify": "^3.2",
+        "enumag/no-thanks": "^0.1.0",
         "erusev/parsedown": "^1.7",
         "ezyang/htmlpurifier": "^4.10",
         "mockery/mockery": "^1.2",
@@ -41,13 +43,12 @@
         "symfony/web-link": "^4.2",
         "symfony/webpack-encore-pack": "^1.0",
         "symfony/yaml": "^4.2",
-        "webmozart/assert": "^1.3",
+        "webmozart/assert": "^1.4",
         "white-october/pagerfanta-bundle": "^1.2"
     },
     "require-dev": {
-        "heroku/heroku-buildpack-php": "*",
-        "lmc/coding-standard": "^1.2",
-        "phpstan/phpstan": "^0.10.6",
+        "lmc/coding-standard": "^1.3",
+        "phpstan/phpstan": "^0.10.8",
         "phpstan/phpstan-deprecation-rules": "^0.10.2",
         "phpstan/phpstan-doctrine": "^0.10.0",
         "phpstan/phpstan-strict-rules": "^0.10.1",
@@ -62,8 +63,9 @@
     },
     "config": {
         "optimize-autoloader": true,
+        "classmap-authoritative": true,
         "platform": {
-            "php": "7.2.13"
+            "php": "7.2.15"
         },
         "preferred-install": {
             "*": "dist"
@@ -81,13 +83,10 @@
         }
     },
     "replace": {
-        "symfony/polyfill-iconv": "*",
         "symfony/polyfill-intl-icu": "*",
         "symfony/polyfill-mbstring": "*",
-        "symfony/polyfill-php72": "*",
-        "symfony/polyfill-php71": "*",
         "symfony/polyfill-php70": "*",
-        "symfony/polyfill-php56": "*"
+        "symfony/polyfill-php72": "*"
     },
     "scripts": {
         "auto-scripts": {
@@ -95,35 +94,29 @@
             "cache:warmup": "symfony-cmd",
             "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
         },
-        "post-install-cmd": [
-            "@auto-scripts"
+        "post-install-cmd": "@auto-scripts",
+        "post-update-cmd": "@auto-scripts",
+        "compile": "@php bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration",
+        "ecs": "@php vendor/bin/ecs check src/ tests/ --ansi",
+        "ecs-fix": "@php vendor/bin/ecs check src/ tests/ --ansi --fix",
+        "lint-configuration": "@php bin/console lint:yaml config/",
+        "lint-templates": "@php bin/console lint:twig templates/",
+        "lint-translations": "@php bin/console lint:xliff translations/",
+        "phpunit": "@php bin/phpunit",
+        "phpstan": "@php vendor/bin/phpstan analyse src/ --level max --configuration phpstan.neon",
+        "composer-schema-validate": "@composer validate --strict",
+        "doctrine-schema-validate": "@php bin/console doctrine:schema:validate --skip-sync --no-interaction",
+        "test": [
+            "@lint-configuration",
+            "@lint-templates",
+            "@lint-translations",
+            "@ecs",
+            "@phpunit",
+            "@phpstan",
+            "@composer-schema-validate",
+            "@doctrine-schema-validate"
         ],
-        "post-update-cmd": [
-            "@auto-scripts"
-        ],
-        "prod": [
-            "@composer install --no-dev"
-        ],
-        "dev": [
-            "@composer install"
-        ],
-        "compile": [
-            "@php bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration"
-        ],
-        "cs": [
-            "@php vendor/bin/ecs check src/ tests/ --ansi"
-        ],
-        "cs-fix": [
-            "@php vendor/bin/ecs check src/ tests/ --ansi --fix"
-        ],
-        "phpunit": "@php vendor/bin/simple-phpunit",
-        "analyze": [
-            "@composer cs",
-            "@composer phpunit",
-            "@php bin/console lint:yaml config",
-            "@php bin/console lint:twig templates"
-        ],
-        "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon -l 7 src",
+        "prod": "@composer install --no-dev",
         "lock": "@composer update --lock"
     },
     "conflict": {
@@ -132,7 +125,8 @@
     "extra": {
         "symfony": {
             "id": "01C5H95BKEGJF8VQ5H9F02MXM5",
-            "allow-contrib": false
+            "allow-contrib": false,
+            "require": "4.2.*"
         }
     }
 }
