@@ -11,8 +11,10 @@ use App\Entity\SourceTypeInterface;
 use App\Entity\TranslationExampleInterface;
 use App\Entity\TranslationInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class LogEntryExtension extends \Twig_Extension
+class LogEntryExtension extends AbstractExtension
 {
     /** @var UrlGeneratorInterface */
     private $urlGenerator;
@@ -25,7 +27,7 @@ class LogEntryExtension extends \Twig_Extension
     public function getFunctions(): array
     {
         return [
-            new \Twig_SimpleFunction(
+            new TwigFunction(
                 'getLogEntryIcon',
                 function (LogEntry $logEntry) {
                     return $this->getLogEntryIcon($logEntry);
@@ -36,13 +38,13 @@ class LogEntryExtension extends \Twig_Extension
                     ],
                 ]
             ),
-            new \Twig_SimpleFunction(
+            new TwigFunction(
                 'getLogEntryTitle',
                 function (LogEntry $logEntry) {
                     return $this->getLogEntryTitle($logEntry);
                 }
             ),
-            new \Twig_SimpleFunction(
+            new TwigFunction(
                 'getLogEntryBody',
                 function (LogEntry $logEntry) {
                     return $this->getLogEntryBody($logEntry);

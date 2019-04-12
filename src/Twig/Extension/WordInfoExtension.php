@@ -3,11 +3,14 @@
 namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class WordInfoExtension extends \Twig_Extension
+class WordInfoExtension extends AbstractExtension
 {
-    /** @var \Twig_Environment */
-    private $twigEnvironment;
+    /** @var Environment */
+    private $environment;
 
     /** @var HighlightExtension */
     private $highlightExtension;
@@ -19,12 +22,12 @@ class WordInfoExtension extends \Twig_Extension
     private $wordGenderExtension;
 
     public function __construct(
-        \Twig_Environment $twigEnvironment,
+        Environment $environment,
         HighlightExtension $highlightExtension,
         WordTypeExtension $wordTypeExtension,
         WordGenderExtension $wordGenderExtension
     ) {
-        $this->twigEnvironment = $twigEnvironment;
+        $this->environment = $environment;
         $this->highlightExtension = $highlightExtension;
         $this->wordTypeExtension = $wordTypeExtension;
         $this->wordGenderExtension = $wordGenderExtension;
@@ -33,7 +36,7 @@ class WordInfoExtension extends \Twig_Extension
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'word_info_under',
                 function (AbstractWordInterface $word) {
                     return $this->getInfoUnder($word);
@@ -42,7 +45,7 @@ class WordInfoExtension extends \Twig_Extension
                     'is_safe' => ['html'],
                 ]
             ),
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'word_info_after',
                 function (AbstractWordInterface $word) {
                     return $this->getInfoAfter($word);
@@ -130,6 +133,6 @@ class WordInfoExtension extends \Twig_Extension
     private function escapeHtml(string $string): string
     {
         /** @noinspection PhpUnhandledExceptionInspection */
-        return twig_escape_filter($this->twigEnvironment, $string);
+        return twig_escape_filter($this->environment, $string);
     }
 }

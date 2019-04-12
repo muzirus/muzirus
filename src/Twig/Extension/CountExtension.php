@@ -3,8 +3,10 @@
 namespace App\Twig\Extension;
 
 use App\Repository\CountRepository;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class CountExtension extends \Twig_Extension
+class CountExtension extends AbstractExtension
 {
     /**
      * @var CountRepository
@@ -19,16 +21,16 @@ class CountExtension extends \Twig_Extension
     public function getFunctions(): array
     {
         return [
-            new \Twig_SimpleFunction('count_translations', function () {
+            new TwigFunction('count_translations', function () {
                 return $this->countRepository->countTranslations();
             }),
-            new \Twig_SimpleFunction('count_translation_examples', function () {
+            new TwigFunction('count_translation_examples', function () {
                 return $this->countRepository->countTranslationExamples();
             }),
-            new \Twig_SimpleFunction('count_czech_words', function () {
+            new TwigFunction('count_czech_words', function () {
                 return $this->countRepository->countCzechWords();
             }),
-            new \Twig_SimpleFunction('count_russian_words', function () {
+            new TwigFunction('count_russian_words', function () {
                 return $this->countRepository->countRussianWords();
             }),
         ];
