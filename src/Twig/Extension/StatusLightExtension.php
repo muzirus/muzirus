@@ -4,13 +4,14 @@ namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
 class StatusLightExtension extends AbstractExtension
 {
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'convert_status_code_to_icon',
                 function (int $status) {
                     return $this->getStatusLightCode($status);
@@ -21,7 +22,7 @@ class StatusLightExtension extends AbstractExtension
                     ],
                 ]
             ),
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'convert_status_code_to_class',
                 function (int $status) {
                     return $this->getStatusLightClass($status);

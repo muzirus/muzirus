@@ -4,13 +4,14 @@ namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
 class WordGenderExtension extends AbstractExtension
 {
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter('gender_as_string', function (int $gender) {
+            new TwigFilter('gender_as_string', function (int $gender) {
                 return $this->convertGenderIdToString($gender);
             }),
         ];

@@ -4,6 +4,7 @@ namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
 class WordInfoExtension extends AbstractExtension
 {
@@ -34,7 +35,7 @@ class WordInfoExtension extends AbstractExtension
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'word_info_under',
                 function (AbstractWordInterface $word) {
                     return $this->getInfoUnder($word);
@@ -43,7 +44,7 @@ class WordInfoExtension extends AbstractExtension
                     'is_safe' => ['html'],
                 ]
             ),
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'word_info_after',
                 function (AbstractWordInterface $word) {
                     return $this->getInfoAfter($word);

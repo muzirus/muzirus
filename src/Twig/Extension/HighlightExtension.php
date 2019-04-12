@@ -3,13 +3,14 @@
 namespace App\Twig\Extension;
 
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
 class HighlightExtension extends AbstractExtension
 {
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'highlight_accent',
                 function (string $text) {
                     return $this->highlightAccent($text);
@@ -21,7 +22,7 @@ class HighlightExtension extends AbstractExtension
                     ],
                 ]
             ),
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'highlight_cyrillic',
                 function (string $text) {
                     return $this->highlightCyrillic($text);
@@ -33,7 +34,7 @@ class HighlightExtension extends AbstractExtension
                     ],
                 ]
             ),
-            new \Twig_SimpleFilter(
+            new TwigFilter(
                 'highlight_latin',
                 function (string $text) {
                     return $this->highlightLatin($text);

@@ -4,13 +4,14 @@ namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
 class WordTypeExtension extends AbstractExtension
 {
     public function getFilters(): array
     {
         return [
-            new \Twig_SimpleFilter('type_as_string', function (int $type) {
+            new TwigFilter('type_as_string', function (int $type) {
                 return $this->convertTypeIdToString($type);
             }),
         ];
