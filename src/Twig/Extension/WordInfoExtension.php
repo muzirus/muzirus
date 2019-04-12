@@ -3,13 +3,14 @@
 namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
+use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 
 class WordInfoExtension extends AbstractExtension
 {
-    /** @var \Twig_Environment */
-    private $twigEnvironment;
+    /** @var Environment */
+    private $environment;
 
     /** @var HighlightExtension */
     private $highlightExtension;
@@ -21,12 +22,12 @@ class WordInfoExtension extends AbstractExtension
     private $wordGenderExtension;
 
     public function __construct(
-        \Twig_Environment $twigEnvironment,
+        Environment $environment,
         HighlightExtension $highlightExtension,
         WordTypeExtension $wordTypeExtension,
         WordGenderExtension $wordGenderExtension
     ) {
-        $this->twigEnvironment = $twigEnvironment;
+        $this->environment = $environment;
         $this->highlightExtension = $highlightExtension;
         $this->wordTypeExtension = $wordTypeExtension;
         $this->wordGenderExtension = $wordGenderExtension;
@@ -132,6 +133,6 @@ class WordInfoExtension extends AbstractExtension
     private function escapeHtml(string $string): string
     {
         /** @noinspection PhpUnhandledExceptionInspection */
-        return twig_escape_filter($this->twigEnvironment, $string);
+        return twig_escape_filter($this->environment, $string);
     }
 }
