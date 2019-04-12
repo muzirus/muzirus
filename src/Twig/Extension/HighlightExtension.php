@@ -2,7 +2,9 @@
 
 namespace App\Twig\Extension;
 
-class HighlightExtension extends \Twig_Extension
+use Twig\Extension\AbstractExtension;
+
+class HighlightExtension extends AbstractExtension
 {
     public function getFilters(): array
     {

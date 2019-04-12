@@ -3,8 +3,9 @@
 namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
+use Twig\Extension\AbstractExtension;
 
-class StatusLightExtension extends \Twig_Extension
+class StatusLightExtension extends AbstractExtension
 {
     public function getFilters(): array
     {

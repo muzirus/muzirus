@@ -3,8 +3,9 @@
 namespace App\Twig\Extension;
 
 use App\Repository\CountRepository;
+use Twig\Extension\AbstractExtension;
 
-class CountExtension extends \Twig_Extension
+class CountExtension extends AbstractExtension
 {
     /**
      * @var CountRepository

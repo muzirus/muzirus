@@ -3,8 +3,9 @@
 namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
+use Twig\Extension\AbstractExtension;
 
-class WordTypeExtension extends \Twig_Extension
+class WordTypeExtension extends AbstractExtension
 {
     public function getFilters(): array
     {

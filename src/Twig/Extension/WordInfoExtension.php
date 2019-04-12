@@ -3,8 +3,9 @@
 namespace App\Twig\Extension;
 
 use App\Entity\AbstractWordInterface;
+use Twig\Extension\AbstractExtension;
 
-class WordInfoExtension extends \Twig_Extension
+class WordInfoExtension extends AbstractExtension
 {
     /** @var \Twig_Environment */
     private $twigEnvironment;

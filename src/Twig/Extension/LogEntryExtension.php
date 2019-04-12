@@ -11,8 +11,9 @@ use App\Entity\SourceTypeInterface;
 use App\Entity\TranslationExampleInterface;
 use App\Entity\TranslationInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Twig\Extension\AbstractExtension;
 
-class LogEntryExtension extends \Twig_Extension
+class LogEntryExtension extends AbstractExtension
 {
     /** @var UrlGeneratorInterface */
     private $urlGenerator;
