@@ -65,7 +65,7 @@
         "optimize-autoloader": true,
         "classmap-authoritative": true,
         "platform": {
-            "php": "7.2.15"
+            "php": "7.2.17"
         },
         "preferred-install": {
             "*": "dist"

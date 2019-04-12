@@ -113,6 +113,12 @@
     "hamcrest/hamcrest-php": {
         "version": "v2.0.0"
     },
+    "illuminate/contracts": {
+        "version": "v5.8.11"
+    },
+    "illuminate/support": {
+        "version": "v5.8.11"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -127,6 +133,9 @@
     },
     "monolog/monolog": {
         "version": "1.23.0"
+    },
+    "nesbot/carbon": {
+        "version": "2.16.3"
     },
     "nette/bootstrap": {
         "version": "v2.4.6"
@@ -374,6 +383,12 @@
     "symfony/polyfill-ctype": {
         "version": "v1.8.0"
     },
+    "symfony/polyfill-iconv": {
+        "version": "v1.11.0"
+    },
+    "symfony/polyfill-intl-idn": {
+        "version": "v1.11.0"
+    },
     "symfony/process": {
         "version": "v4.0.4"
     },
@@ -507,9 +522,6 @@
         "version": "v4.0.4"
     },
     "symplify/package-builder": {
-        "version": "v4.0.4"
-    },
-    "symplify/token-runner": {
         "version": "v4.0.4"
     },
     "twig/twig": {
