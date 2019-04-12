@@ -6,7 +6,7 @@ Source code of dictionary Muzirus.cz
 
 ## Requirements
 
-- [PHP 7.1+](https://launchpad.net/~ondrej/+archive/ubuntu/php)
+- [PHP 7.2+](https://launchpad.net/~ondrej/+archive/ubuntu/php)
 - [Composer](https://getcomposer.org/download/)
 - [Node](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 - [Yarn](https://yarnpkg.com/en/docs/install#linux-tab)
