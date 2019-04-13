@@ -233,6 +233,22 @@
             "ref": "e65a105bf4cd5b1b79012ba029954927f05922e8"
         }
     },
+    "sentry/sentry": {
+        "version": "1.10.0"
+    },
+    "sentry/sentry-symfony": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "fa1a2dfc020798cd7076b5419596e72dca07047a"
+        },
+        "files": [
+            "config/packages/prod/sentry.yaml",
+            "config/packages/sentry.yaml"
+        ]
+    },
     "slam/php-cs-fixer-extensions": {
         "version": "v1.17.0"
     },

@@ -24,6 +24,7 @@
         "mockery/mockery": "^1.2",
         "sensio/framework-extra-bundle": "^5.2",
         "sensiolabs/security-checker": "^4.1",
+        "sentry/sentry-symfony": "^2.3",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "^4.2",
         "symfony/console": "^4.2",
