@@ -485,6 +485,10 @@
         <source>app.feedback.email.help_text</source>
         <target state="translated">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
       </trans-unit>
+      <trans-unit id="sB.hsgu" resname="admin.title_in_russian">
+        <source>admin.title_in_russian</source>
+        <target state="needs-translation">admin.title_in_russian</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
