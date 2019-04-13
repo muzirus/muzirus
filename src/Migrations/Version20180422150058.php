@@ -5,7 +5,7 @@ namespace DoctrineMigrations;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
-class Version20180422150058 extends AbstractMigration
+final class Version20180422150058 extends AbstractMigration
 {
     private const TYPE = 2;
     private const CATEGORY_ID = 21;
