@@ -485,6 +485,10 @@
         <source>app.feedback.email.help_text</source>
         <target state="translated">Pokud uvedete svůj kontaktní e-mail, budeme Vás o zveřejnění Vámi navrženého hesla informovat.</target>
       </trans-unit>
+      <trans-unit id="sB.hsgu" resname="admin.title_in_russian">
+        <source>admin.title_in_russian</source>
+        <target state="needs-translation">admin.title_in_russian</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
