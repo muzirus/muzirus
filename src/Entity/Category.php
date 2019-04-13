@@ -31,7 +31,7 @@ class Category implements CategoryInterface
     private $title = '';
 
     /**
-     * @ORM\Column(type="string", name="title_in_russian", options={"default": ""})
+     * @ORM\Column(type="string", name="title_in_russian")
      * @var string
      */
     private $titleInRussian = '';
