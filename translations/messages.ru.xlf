@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="cs" target-language="ru" datatype="plaintext" original="file.ext">
+  <file source-language="zu" target-language="ru" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
@@ -293,9 +293,9 @@
         <source>admin.word_with_accent</source>
         <target state="translated">Слово с ударением</target>
       </trans-unit>
-      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing">
+      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing" approved="yes">
         <source>admin.word_with_accent_is_missing</source>
-        <target>Не хватает слова с ударением (сохраните изменения)</target>
+        <target state="translated">Не хватает слова с ударением (сохраните изменения)</target>
       </trans-unit>
       <trans-unit id="AVWkXBb" resname="admin.yes">
         <source>admin.yes</source>
@@ -329,9 +329,9 @@
         <source>admin.equivalents</source>
         <target state="translated">Эквиваленты</target>
       </trans-unit>
-      <trans-unit id="JDP_UTo" resname="admin.exemplifications">
+      <trans-unit id="JDP_UTo" resname="admin.exemplifications" approved="yes">
         <source>admin.exemplifications</source>
-        <target>Экземплификации</target>
+        <target state="translated">Экземплификации</target>
       </trans-unit>
       <trans-unit id="nz0pECm" resname="admin.exception_to_inflection">
         <source>admin.exception_to_inflection</source>
@@ -381,9 +381,9 @@
         <source>app.updated_at</source>
         <target state="translated">Дата последнего изменения</target>
       </trans-unit>
-      <trans-unit id="xNrkv18" resname="app.link.intercorp">
+      <trans-unit id="xNrkv18" resname="app.link.intercorp" approved="yes">
         <source>app.link.intercorp</source>
-        <target>Ссылка на слово в корпусах InterCorp</target>
+        <target state="translated">Ссылка на слово в корпусах InterCorp</target>
       </trans-unit>
       <trans-unit id="_BqshM0" resname="app.abbreviation">
         <source>app.abbreviation</source>
@@ -465,29 +465,25 @@
         <source>app.menu.notations</source>
         <target state="translated">Нотация</target>
       </trans-unit>
-      <trans-unit id="9FFoFcf" resname="app.feedback_intro">
+      <trans-unit id="9FFoFcf" resname="app.feedback_intro" approved="yes">
         <source>app.feedback_intro</source>
-        <target>Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
+        <target state="translated">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
       </trans-unit>
-      <trans-unit id="QsL30Os" resname="app.write_us">
+      <trans-unit id="QsL30Os" resname="app.write_us" approved="yes">
         <source>app.write_us</source>
-        <target>Свяжитесь с нами!</target>
+        <target state="translated">Свяжитесь с нами!</target>
       </trans-unit>
-      <trans-unit id="1kT3pVy" resname="app.thank_you">
+      <trans-unit id="1kT3pVy" resname="app.thank_you" approved="yes">
         <source>app.thank_you</source>
-        <target>Благодарим Вас за содействие!</target>
+        <target state="translated">Благодарим Вас за содействие!</target>
       </trans-unit>
-      <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text">
+      <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text" approved="yes">
         <source>app.feedback.content.help_text</source>
-        <target>Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
+        <target state="translated">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
       </trans-unit>
-      <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text">
+      <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text" approved="yes">
         <source>app.feedback.email.help_text</source>
-        <target>На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
-      </trans-unit>
-      <trans-unit id="sB.hsgu" resname="admin.title_in_russian">
-        <source>admin.title_in_russian</source>
-        <target>__admin.title_in_russian</target>
+        <target state="translated">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
       </trans-unit>
     </body>
   </file>
