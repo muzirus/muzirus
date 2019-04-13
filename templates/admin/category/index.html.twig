@@ -9,6 +9,7 @@
                 <thead>
                     <tr>
                         <th>{{ 'admin.title'|trans }}</th>
+                        <th>{{ 'admin.title_in_russian'|trans }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,12 +20,18 @@
                                     {{ category.title }}
                                 </a>
                             </td>
+                            <td>
+                                <a href="{{ path('admin.category.edit', {id: category.id}) }}">
+                                    {{ category.titleInRussian }}
+                                </a>
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>
                 <tfoot>
                     <tr>
                         <th>{{ 'admin.title'|trans }}</th>
+                        <th>{{ 'admin.title_in_russian'|trans }}</th>
                     </tr>
                 </tfoot>
             </table>

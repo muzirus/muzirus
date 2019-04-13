@@ -19,11 +19,14 @@ class CategoryFactoryTest extends TestCase
     public function testCreateFromFormData(): void
     {
         $title = 'title';
-        $symbolFormData = new CategoryFormData();
-        $symbolFormData->setTitle($title);
+        $titleInRussian = 'title in russian';
+        $categoryFormData = new CategoryFormData();
+        $categoryFormData->setTitle($title);
+        $categoryFormData->setTitleInRussian($titleInRussian);
 
-        $category = $this->categoryFactory->createFromFormData($symbolFormData);
+        $category = $this->categoryFactory->createFromFormData($categoryFormData);
 
         $this->assertSame($title, $category->getTitle());
+        $this->assertSame($titleInRussian, $category->getTitleInRussian());
     }
 }

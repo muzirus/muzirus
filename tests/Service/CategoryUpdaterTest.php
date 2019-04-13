@@ -20,12 +20,16 @@ class CategoryUpdaterTest extends TestCase
     public function testUpdateFromFormData(): void
     {
         $title = 'title';
+        $titleInRussian = 'title in russian';
         $formData = new CategoryFormData();
         $formData->setTitle($title);
-        $category = new Category('bla');
+        $formData->setTitleInRussian($titleInRussian);
+
+        $category = new Category('bla', 'bla in russian');
 
         $this->categoryUpdater->updateCategory($category, $formData);
 
         $this->assertSame($title, $category->getTitle());
+        $this->assertSame($titleInRussian, $category->getTitleInRussian());
     }
 }
