@@ -30,11 +30,18 @@ class Category implements CategoryInterface
      */
     private $title = '';
 
+    /**
+     * @ORM\Column(type="string", name="title_in_russian", options={"default": ""})
+     * @var string
+     */
+    private $titleInRussian = '';
+
     //-------------------------------------------------------------------------
 
-    public function __construct(string $title)
+    public function __construct(string $title, string $titleInRussian)
     {
         $this->title = $title;
+        $this->titleInRussian = $titleInRussian;
     }
 
     public function __toString(): string
@@ -57,5 +64,15 @@ class Category implements CategoryInterface
     public function setTitle(string $title): void
     {
         $this->title = $title;
+    }
+
+    public function getTitleInRussian(): string
+    {
+        return $this->titleInRussian;
+    }
+
+    public function setTitleInRussian(string $titleInRussian): void
+    {
+        $this->titleInRussian = $titleInRussian;
     }
 }

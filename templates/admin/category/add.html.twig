@@ -17,6 +17,13 @@
                 {{ form_errors(form.title) }}
             </div>
         </div>
+        <div class="box-body">
+            <div class="form-group">
+                {{ form_label(form.titleInRussian) }}
+                {{ form_widget(form.titleInRussian) }}
+                {{ form_errors(form.titleInRussian) }}
+            </div>
+        </div>
         <div class="box-footer">
             <button class="btn btn-primary">
                 {{ 'admin.button.save'|trans }}

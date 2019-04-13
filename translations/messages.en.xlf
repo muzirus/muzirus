@@ -1,492 +1,493 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="zu" target-language="en" datatype="plaintext" original="file.ext">
+  <file source-language="cs" target-language="en" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="CGzZr97" resname="admin.abbreviations" approved="yes">
+      <trans-unit id="CGzZr97" resname="admin.abbreviations">
         <source>admin.abbreviations</source>
-        <target xml:lang="en">Abbreviations</target>
+        <target>Abbreviations</target>
       </trans-unit>
-      <trans-unit id="sbhZQg4" resname="admin.actions" approved="yes">
+      <trans-unit id="sbhZQg4" resname="admin.actions">
         <source>admin.actions</source>
-        <target xml:lang="en">Actions</target>
+        <target>Actions</target>
       </trans-unit>
-      <trans-unit id="pi9wrKg" resname="admin.activities" approved="yes">
+      <trans-unit id="pi9wrKg" resname="admin.activities">
         <source>admin.activities</source>
-        <target xml:lang="en">Activities</target>
+        <target>Activities</target>
       </trans-unit>
-      <trans-unit id="ZV9LX17" resname="admin.approved" approved="yes">
+      <trans-unit id="ZV9LX17" resname="admin.approved">
         <source>admin.approved</source>
-        <target xml:lang="en">Approved</target>
+        <target>Approved</target>
       </trans-unit>
-      <trans-unit id="P.Hnfjo" resname="admin.authors" approved="yes">
+      <trans-unit id="P.Hnfjo" resname="admin.authors">
         <source>admin.authors</source>
-        <target xml:lang="en">Authors</target>
+        <target>Authors</target>
       </trans-unit>
-      <trans-unit id="4BclTtg" resname="admin.box.title.add" approved="yes">
+      <trans-unit id="4BclTtg" resname="admin.box.title.add">
         <source>admin.box.title.add</source>
-        <target xml:lang="en">Add</target>
+        <target>Add</target>
       </trans-unit>
-      <trans-unit id="Ksz0Zf3" resname="admin.box.title.edit" approved="yes">
+      <trans-unit id="Ksz0Zf3" resname="admin.box.title.edit">
         <source>admin.box.title.edit</source>
-        <target xml:lang="en">Edit</target>
+        <target>Edit</target>
       </trans-unit>
-      <trans-unit id="Ey5h7lv" resname="admin.button.add_abbreviation" approved="yes">
+      <trans-unit id="Ey5h7lv" resname="admin.button.add_abbreviation">
         <source>admin.button.add_abbreviation</source>
-        <target xml:lang="en">Add abbreviation</target>
+        <target>Add abbreviation</target>
       </trans-unit>
-      <trans-unit id="C.SnTPc" resname="admin.button.add_category" approved="yes">
+      <trans-unit id="C.SnTPc" resname="admin.button.add_category">
         <source>admin.button.add_category</source>
-        <target xml:lang="en">Add category</target>
+        <target>Add category</target>
       </trans-unit>
-      <trans-unit id="QoqVREI" resname="admin.button.add_equivalent" approved="yes">
+      <trans-unit id="QoqVREI" resname="admin.button.add_equivalent">
         <source>admin.button.add_equivalent</source>
-        <target xml:lang="en">Add equivalent</target>
+        <target>Add equivalent</target>
       </trans-unit>
-      <trans-unit id="DlJl4e5" resname="admin.button.add_new" approved="yes">
+      <trans-unit id="DlJl4e5" resname="admin.button.add_new">
         <source>admin.button.add_new</source>
-        <target xml:lang="en">Add new</target>
+        <target>Add new</target>
       </trans-unit>
-      <trans-unit id="fGgNoTe" resname="admin.button.add_source" approved="yes">
+      <trans-unit id="fGgNoTe" resname="admin.button.add_source">
         <source>admin.button.add_source</source>
-        <target xml:lang="en">Add source</target>
+        <target>Add source</target>
       </trans-unit>
-      <trans-unit id="0TR5Jf5" resname="admin.button.add_source_type" approved="yes">
+      <trans-unit id="0TR5Jf5" resname="admin.button.add_source_type">
         <source>admin.button.add_source_type</source>
-        <target xml:lang="en">Add source type</target>
+        <target>Add source type</target>
       </trans-unit>
-      <trans-unit id="n917io5" resname="admin.button.add_symbol" approved="yes">
+      <trans-unit id="n917io5" resname="admin.button.add_symbol">
         <source>admin.button.add_symbol</source>
-        <target xml:lang="en">Add symbol</target>
+        <target>Add symbol</target>
       </trans-unit>
-      <trans-unit id="WU8OgUk" resname="admin.button.add_word" approved="yes">
+      <trans-unit id="WU8OgUk" resname="admin.button.add_word">
         <source>admin.button.add_word</source>
-        <target xml:lang="en">Add word</target>
+        <target>Add word</target>
       </trans-unit>
-      <trans-unit id="TVLcjT8" resname="admin.button.add_user" approved="yes">
+      <trans-unit id="TVLcjT8" resname="admin.button.add_user">
         <source>admin.button.add_user</source>
-        <target xml:lang="en">Add user</target>
+        <target>Add user</target>
       </trans-unit>
-      <trans-unit id="yXBGMRp" resname="admin.button.back_to_list" approved="yes">
+      <trans-unit id="yXBGMRp" resname="admin.button.back_to_list">
         <source>admin.button.back_to_list</source>
-        <target xml:lang="en">Back to list</target>
+        <target>Back to list</target>
       </trans-unit>
-      <trans-unit id="ZLMhXCg" resname="admin.button.back_to_translations" approved="yes">
+      <trans-unit id="ZLMhXCg" resname="admin.button.back_to_translations">
         <source>admin.button.back_to_translations</source>
-        <target xml:lang="en">Back to translations</target>
+        <target>Back to translations</target>
       </trans-unit>
-      <trans-unit id="2eOpgs4" resname="admin.button.back_to_translation_examples" approved="yes">
+      <trans-unit id="2eOpgs4" resname="admin.button.back_to_translation_examples">
         <source>admin.button.back_to_translation_examples</source>
-        <target xml:lang="en">Back to translation examples</target>
+        <target>Back to translation examples</target>
       </trans-unit>
-      <trans-unit id="YvRfkVZ" resname="admin.button.edit" approved="yes">
+      <trans-unit id="YvRfkVZ" resname="admin.button.edit">
         <source>admin.button.edit</source>
-        <target xml:lang="en">Edit</target>
+        <target>Edit</target>
       </trans-unit>
-      <trans-unit id="EFinykD" resname="admin.button.remove" approved="yes">
+      <trans-unit id="EFinykD" resname="admin.button.remove">
         <source>admin.button.remove</source>
-        <target xml:lang="en">Remove</target>
+        <target>Remove</target>
       </trans-unit>
-      <trans-unit id="VJnpThW" resname="admin.button.save" approved="yes">
+      <trans-unit id="VJnpThW" resname="admin.button.save">
         <source>admin.button.save</source>
-        <target xml:lang="en">Save</target>
+        <target>Save</target>
       </trans-unit>
-      <trans-unit id="TsqB94w" resname="admin.button.save_and_new" approved="yes">
+      <trans-unit id="TsqB94w" resname="admin.button.save_and_new">
         <source>admin.button.save_and_new</source>
-        <target xml:lang="en">Save and new</target>
+        <target>Save and new</target>
       </trans-unit>
-      <trans-unit id="wxCfZlI" resname="admin.created" approved="yes">
+      <trans-unit id="wxCfZlI" resname="admin.created">
         <source>admin.created</source>
-        <target xml:lang="en">Created</target>
+        <target>Created</target>
       </trans-unit>
-      <trans-unit id="SMA_Ggq" resname="admin.czech" approved="yes">
+      <trans-unit id="SMA_Ggq" resname="admin.czech">
         <source>admin.czech</source>
-        <target xml:lang="en">Czech</target>
+        <target>Czech</target>
       </trans-unit>
-      <trans-unit id="7wvN45X" resname="admin.czech_note" approved="yes">
+      <trans-unit id="7wvN45X" resname="admin.czech_note">
         <source>admin.czech_note</source>
-        <target xml:lang="en">Czech note</target>
+        <target>Czech note</target>
       </trans-unit>
-      <trans-unit id="uNVn6wf" resname="admin.czech_sentence" approved="yes">
+      <trans-unit id="uNVn6wf" resname="admin.czech_sentence">
         <source>admin.czech_sentence</source>
-        <target xml:lang="en">Czech sentence</target>
+        <target>Czech sentence</target>
       </trans-unit>
-      <trans-unit id="erA_SSh" resname="admin.czech_word" approved="yes">
+      <trans-unit id="erA_SSh" resname="admin.czech_word">
         <source>admin.czech_word</source>
-        <target xml:lang="en">Czech word</target>
+        <target>Czech word</target>
       </trans-unit>
-      <trans-unit id="QUx_B.1" resname="admin.czech_words" approved="yes">
+      <trans-unit id="QUx_B.1" resname="admin.czech_words">
         <source>admin.czech_words</source>
-        <target xml:lang="en">Czech words</target>
+        <target>Czech words</target>
       </trans-unit>
-      <trans-unit id="540R2gg" resname="admin.dashboard" approved="yes">
+      <trans-unit id="540R2gg" resname="admin.dashboard">
         <source>admin.dashboard</source>
-        <target xml:lang="en">Dashboard</target>
+        <target>Dashboard</target>
       </trans-unit>
-      <trans-unit id="cGC_Rml" resname="admin.deleted" approved="yes">
+      <trans-unit id="cGC_Rml" resname="admin.deleted">
         <source>admin.deleted</source>
-        <target xml:lang="en">Deleted</target>
+        <target>Deleted</target>
       </trans-unit>
-      <trans-unit id="QTO0aOj" resname="admin.description" approved="yes">
+      <trans-unit id="QTO0aOj" resname="admin.description">
         <source>admin.description</source>
-        <target xml:lang="en">Description</target>
+        <target>Description</target>
       </trans-unit>
-      <trans-unit id="CBbI8g4" resname="admin.examples" approved="yes">
+      <trans-unit id="CBbI8g4" resname="admin.examples">
         <source>admin.examples</source>
-        <target xml:lang="en">Examples</target>
+        <target>Examples</target>
       </trans-unit>
-      <trans-unit id="H1Z5Hld" resname="admin.explanation" approved="yes">
+      <trans-unit id="H1Z5Hld" resname="admin.explanation">
         <source>admin.explanation</source>
-        <target xml:lang="en">Explanation</target>
+        <target>Explanation</target>
       </trans-unit>
-      <trans-unit id="q.FI9Wn" resname="admin.gender" approved="yes">
+      <trans-unit id="q.FI9Wn" resname="admin.gender">
         <source>admin.gender</source>
-        <target xml:lang="en">Gender</target>
+        <target>Gender</target>
       </trans-unit>
-      <trans-unit id=".dE4hhi" resname="admin.hidden" approved="yes">
+      <trans-unit id=".dE4hhi" resname="admin.hidden">
         <source>admin.hidden</source>
-        <target xml:lang="en">Hidden</target>
+        <target>Hidden</target>
       </trans-unit>
-      <trans-unit id="bNf4bJZ" resname="admin.home" approved="yes">
+      <trans-unit id="bNf4bJZ" resname="admin.home">
         <source>admin.home</source>
-        <target xml:lang="en">Home</target>
+        <target>Home</target>
       </trans-unit>
-      <trans-unit id="dzNyV0R" resname="admin.inflection" approved="yes">
+      <trans-unit id="dzNyV0R" resname="admin.inflection">
         <source>admin.inflection</source>
-        <target xml:lang="en">Inflection</target>
+        <target>Inflection</target>
       </trans-unit>
-      <trans-unit id="zTvnmsO" resname="admin.language_note" approved="yes">
+      <trans-unit id="zTvnmsO" resname="admin.language_note">
         <source>admin.language_note</source>
-        <target xml:lang="en">Language note</target>
+        <target>Language note</target>
       </trans-unit>
-      <trans-unit id="VnaTAPO" resname="admin.news" approved="yes">
+      <trans-unit id="VnaTAPO" resname="admin.news">
         <source>admin.news</source>
-        <target xml:lang="en">News</target>
+        <target>News</target>
       </trans-unit>
-      <trans-unit id="8Kxt.xW" resname="admin.no" approved="yes">
+      <trans-unit id="8Kxt.xW" resname="admin.no">
         <source>admin.no</source>
-        <target xml:lang="en">No</target>
+        <target>No</target>
       </trans-unit>
-      <trans-unit id="tb6FviE" resname="admin.no_news_yet" approved="yes">
+      <trans-unit id="tb6FviE" resname="admin.no_news_yet">
         <source>admin.no_news_yet</source>
-        <target xml:lang="en">No news yet</target>
+        <target>No news yet</target>
       </trans-unit>
-      <trans-unit id="8AyOkeC" resname="admin.original_database" approved="yes">
+      <trans-unit id="8AyOkeC" resname="admin.original_database">
         <source>admin.original_database</source>
-        <target xml:lang="en">Original database</target>
+        <target>Original database</target>
       </trans-unit>
-      <trans-unit id="o59YO88" resname="admin.other" approved="yes">
+      <trans-unit id="o59YO88" resname="admin.other">
         <source>admin.other</source>
-        <target xml:lang="en">Other</target>
+        <target>Other</target>
       </trans-unit>
-      <trans-unit id="1Z2K2C0" resname="admin.pages_count" approved="yes">
+      <trans-unit id="1Z2K2C0" resname="admin.pages_count">
         <source>admin.pages_count</source>
-        <target xml:lang="en">Pages count</target>
+        <target>Pages count</target>
       </trans-unit>
-      <trans-unit id="lcCLsWy" resname="admin.published_date" approved="yes">
+      <trans-unit id="lcCLsWy" resname="admin.published_date">
         <source>admin.published_date</source>
-        <target xml:lang="en">Published date</target>
+        <target>Published date</target>
       </trans-unit>
-      <trans-unit id="6SLpLKU" resname="admin.published_place" approved="yes">
+      <trans-unit id="6SLpLKU" resname="admin.published_place">
         <source>admin.published_place</source>
-        <target xml:lang="en">Published place</target>
+        <target>Published place</target>
       </trans-unit>
-      <trans-unit id="sFSIpnn" resname="admin.publisher" approved="yes">
+      <trans-unit id="sFSIpnn" resname="admin.publisher">
         <source>admin.publisher</source>
-        <target xml:lang="en">Publisher</target>
+        <target>Publisher</target>
       </trans-unit>
-      <trans-unit id="6kA8Ada" resname="admin.russian" approved="yes">
+      <trans-unit id="6kA8Ada" resname="admin.russian">
         <source>admin.russian</source>
-        <target xml:lang="en">Russian</target>
+        <target>Russian</target>
       </trans-unit>
-      <trans-unit id="absP7S7" resname="admin.russian_words" approved="yes">
+      <trans-unit id="absP7S7" resname="admin.russian_words">
         <source>admin.russian_words</source>
-        <target xml:lang="en">Russian word</target>
+        <target>Russian word</target>
       </trans-unit>
-      <trans-unit id=".lIOZ8u" resname="admin.russian_note" approved="yes">
+      <trans-unit id=".lIOZ8u" resname="admin.russian_note">
         <source>admin.russian_note</source>
-        <target xml:lang="en">Russian note</target>
+        <target>Russian note</target>
       </trans-unit>
-      <trans-unit id="EcLZZCv" resname="admin.russian_sentence" approved="yes">
+      <trans-unit id="EcLZZCv" resname="admin.russian_sentence">
         <source>admin.russian_sentence</source>
-        <target xml:lang="en">Russian sentence</target>
+        <target>Russian sentence</target>
       </trans-unit>
-      <trans-unit id="EPxSfQm" resname="admin.russian_word" approved="yes">
+      <trans-unit id="EPxSfQm" resname="admin.russian_word">
         <source>admin.russian_word</source>
-        <target xml:lang="en">Russian word</target>
+        <target>Russian word</target>
       </trans-unit>
-      <trans-unit id="4z_BI3K" resname="admin.sign_out" approved="yes">
+      <trans-unit id="4z_BI3K" resname="admin.sign_out">
         <source>admin.sign_out</source>
-        <target xml:lang="en">Sign out</target>
+        <target>Sign out</target>
       </trans-unit>
-      <trans-unit id="_UEiBP." resname="admin.source" approved="yes">
+      <trans-unit id="_UEiBP." resname="admin.source">
         <source>admin.source</source>
-        <target xml:lang="en">Source</target>
+        <target>Source</target>
       </trans-unit>
-      <trans-unit id="5OVojhB" resname="admin.sources" approved="yes">
+      <trans-unit id="5OVojhB" resname="admin.sources">
         <source>admin.sources</source>
-        <target xml:lang="en">Sources</target>
+        <target>Sources</target>
       </trans-unit>
-      <trans-unit id="mY5YSB." resname="admin.source_types" approved="yes">
+      <trans-unit id="mY5YSB." resname="admin.source_types">
         <source>admin.source_types</source>
-        <target xml:lang="en">Source types</target>
+        <target>Source types</target>
       </trans-unit>
-      <trans-unit id="I0kHNHG" resname="admin.status" approved="yes">
+      <trans-unit id="I0kHNHG" resname="admin.status">
         <source>admin.status</source>
-        <target xml:lang="en">Status</target>
+        <target>Status</target>
       </trans-unit>
-      <trans-unit id="iAVdTlr" resname="admin.symbols" approved="yes">
+      <trans-unit id="iAVdTlr" resname="admin.symbols">
         <source>admin.symbols</source>
-        <target xml:lang="en">Symbols</target>
+        <target>Symbols</target>
       </trans-unit>
-      <trans-unit id="cuJvME7" resname="admin.system" approved="yes">
+      <trans-unit id="cuJvME7" resname="admin.system">
         <source>admin.system</source>
-        <target xml:lang="en">System</target>
+        <target>System</target>
       </trans-unit>
-      <trans-unit id="ioIKL10" resname="admin.tab.edit" approved="yes">
+      <trans-unit id="ioIKL10" resname="admin.tab.edit">
         <source>admin.tab.edit</source>
-        <target xml:lang="en">Edit</target>
+        <target>Edit</target>
       </trans-unit>
-      <trans-unit id="XneOvFD" resname="admin.title" approved="yes">
+      <trans-unit id="XneOvFD" resname="admin.title">
         <source>admin.title</source>
-        <target xml:lang="en">Title</target>
+        <target>Title</target>
       </trans-unit>
-      <trans-unit id="BWcOky8" resname="admin.translation" approved="yes">
+      <trans-unit id="BWcOky8" resname="admin.translation">
         <source>admin.translation</source>
-        <target xml:lang="en">Translation</target>
+        <target>Translation</target>
       </trans-unit>
-      <trans-unit id="4kkJ2qk" resname="admin.translations" approved="yes">
+      <trans-unit id="4kkJ2qk" resname="admin.translations">
         <source>admin.translations</source>
-        <target xml:lang="en">Translations</target>
+        <target>Translations</target>
       </trans-unit>
-      <trans-unit id="JNZM.Hg" resname="admin.type" approved="yes">
+      <trans-unit id="JNZM.Hg" resname="admin.type">
         <source>admin.type</source>
-        <target xml:lang="en">Type</target>
+        <target>Type</target>
       </trans-unit>
-      <trans-unit id="IuwmOhz" resname="admin.updated" approved="yes">
+      <trans-unit id="IuwmOhz" resname="admin.updated">
         <source>admin.updated</source>
-        <target xml:lang="en">Updated</target>
+        <target>Updated</target>
       </trans-unit>
-      <trans-unit id=".6JML1a" resname="admin.users" approved="yes">
+      <trans-unit id=".6JML1a" resname="admin.users">
         <source>admin.users</source>
-        <target xml:lang="en">Users</target>
+        <target>Users</target>
       </trans-unit>
-      <trans-unit id="b7wqUw4" resname="admin.value" approved="yes">
+      <trans-unit id="b7wqUw4" resname="admin.value">
         <source>admin.value</source>
-        <target xml:lang="en">Value</target>
+        <target>Value</target>
       </trans-unit>
-      <trans-unit id="vxRh7G0" resname="admin.visit_site" approved="yes">
+      <trans-unit id="vxRh7G0" resname="admin.visit_site">
         <source>admin.visit_site</source>
-        <target xml:lang="en">Visit site</target>
+        <target>Visit site</target>
       </trans-unit>
-      <trans-unit id="X62KUAn" resname="admin.word" approved="yes">
+      <trans-unit id="X62KUAn" resname="admin.word">
         <source>admin.word</source>
-        <target xml:lang="en">Word</target>
+        <target>Word</target>
       </trans-unit>
-      <trans-unit id="FJHBYMQ" resname="admin.words" approved="yes">
+      <trans-unit id="FJHBYMQ" resname="admin.words">
         <source>admin.words</source>
-        <target xml:lang="en">Words</target>
+        <target>Words</target>
       </trans-unit>
-      <trans-unit id="gyPtWlL" resname="admin.word_with_accent" approved="yes">
+      <trans-unit id="gyPtWlL" resname="admin.word_with_accent">
         <source>admin.word_with_accent</source>
-        <target xml:lang="en">Word with accent</target>
+        <target>Word with accent</target>
       </trans-unit>
-      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing" approved="yes">
+      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing">
         <source>admin.word_with_accent_is_missing</source>
-        <target xml:lang="en">Word with accent is missing</target>
+        <target>Word with accent is missing</target>
       </trans-unit>
-      <trans-unit id="AVWkXBb" resname="admin.yes" approved="yes">
+      <trans-unit id="AVWkXBb" resname="admin.yes">
         <source>admin.yes</source>
-        <target xml:lang="en">Yes</target>
+        <target>Yes</target>
       </trans-unit>
-      <trans-unit id="V52jnON" resname="admin.not_processed" approved="yes">
+      <trans-unit id="V52jnON" resname="admin.not_processed">
         <source>admin.not_processed</source>
-        <target xml:lang="en">Not processed</target>
+        <target>Not processed</target>
       </trans-unit>
-      <trans-unit id="iC4gpUW" resname="admin.equivalents_not_found" approved="yes">
+      <trans-unit id="iC4gpUW" resname="admin.equivalents_not_found">
         <source>admin.equivalents_not_found</source>
-        <target xml:lang="en">Equivalent not found</target>
-        <alt-trans>
-          <target xml:lang="en">Equivalents not found</target>
-        </alt-trans>
+        <target>Equivalent not found</target>
       </trans-unit>
-      <trans-unit id="zqkxrpL" resname="admin.examples_added" approved="yes">
+      <trans-unit id="zqkxrpL" resname="admin.examples_added">
         <source>admin.examples_added</source>
-        <target xml:lang="en">Examples added</target>
+        <target>Examples added</target>
       </trans-unit>
-      <trans-unit id="UDMqpcw" resname="admin.checked" approved="yes">
+      <trans-unit id="UDMqpcw" resname="admin.checked">
         <source>admin.checked</source>
-        <target xml:lang="en">Checked</target>
+        <target>Checked</target>
       </trans-unit>
-      <trans-unit id="2aLfPGw" resname="admin.tab.equivalents" approved="yes">
+      <trans-unit id="2aLfPGw" resname="admin.tab.equivalents">
         <source>admin.tab.equivalents</source>
-        <target xml:lang="en">Equivalents</target>
+        <target>Equivalents</target>
       </trans-unit>
-      <trans-unit id="41JKWc7" resname="admin.no_content" approved="yes">
+      <trans-unit id="41JKWc7" resname="admin.no_content">
         <source>admin.no_content</source>
-        <target xml:lang="en">No content</target>
+        <target>No content</target>
       </trans-unit>
-      <trans-unit id="oR01ae2" resname="admin.equivalents" approved="yes">
+      <trans-unit id="oR01ae2" resname="admin.equivalents">
         <source>admin.equivalents</source>
-        <target xml:lang="en">Equivalents</target>
+        <target>Equivalents</target>
       </trans-unit>
-      <trans-unit id="JDP_UTo" resname="admin.exemplifications" approved="yes">
+      <trans-unit id="JDP_UTo" resname="admin.exemplifications">
         <source>admin.exemplifications</source>
-        <target xml:lang="en">Exemplifications</target>
+        <target>Exemplifications</target>
       </trans-unit>
-      <trans-unit id="nz0pECm" resname="admin.exception_to_inflection" approved="yes">
+      <trans-unit id="nz0pECm" resname="admin.exception_to_inflection">
         <source>admin.exception_to_inflection</source>
-        <target xml:lang="en">Exception to inflection</target>
+        <target>Exception to inflection</target>
       </trans-unit>
-      <trans-unit id="Rd_ge0k" resname="admin.topics" approved="yes">
+      <trans-unit id="Rd_ge0k" resname="admin.topics">
         <source>admin.topics</source>
-        <target xml:lang="en">Topics</target>
+        <target>Topics</target>
       </trans-unit>
-      <trans-unit id="DSKNpQJ" resname="admin.topic" approved="yes">
+      <trans-unit id="DSKNpQJ" resname="admin.topic">
         <source>admin.topic</source>
-        <target xml:lang="en">Topic</target>
+        <target>Topic</target>
       </trans-unit>
-      <trans-unit id="rujVJ3G" resname="app.title" approved="yes">
+      <trans-unit id="rujVJ3G" resname="app.title">
         <source>app.title</source>
-        <target xml:lang="en">Title</target>
+        <target>Title</target>
       </trans-unit>
-      <trans-unit id="66McrTq" resname="app.title.topics" approved="yes">
+      <trans-unit id="66McrTq" resname="app.title.topics">
         <source>app.title.topics</source>
-        <target xml:lang="en">Topics</target>
+        <target>Topics</target>
       </trans-unit>
       <trans-unit id="9QsvAMc" resname="app.title.vocabulary_russian">
         <source>app.title.vocabulary_russian</source>
-        <target xml:lang="en" state="needs-translation">app.title.vocabulary_russian</target>
+        <target state="needs-translation">app.title.vocabulary_russian</target>
       </trans-unit>
       <trans-unit id="oPuW94E" resname="app.title.vocabulary_czech">
         <source>app.title.vocabulary_czech</source>
-        <target xml:lang="en" state="needs-translation">app.title.vocabulary_czech</target>
+        <target state="needs-translation">app.title.vocabulary_czech</target>
       </trans-unit>
-      <trans-unit id="wevQNDx" resname="app.title.abbreviations" approved="yes">
+      <trans-unit id="wevQNDx" resname="app.title.abbreviations">
         <source>app.title.abbreviations</source>
-        <target xml:lang="en">Abbreviations</target>
+        <target>Abbreviations</target>
       </trans-unit>
-      <trans-unit id="G5Nl4Le" resname="app.title.notations" approved="yes">
+      <trans-unit id="G5Nl4Le" resname="app.title.notations">
         <source>app.title.notations</source>
-        <target xml:lang="en">Notations</target>
+        <target>Notations</target>
       </trans-unit>
       <trans-unit id="2Rx6JsF" resname="app.title.proccessing_of_words">
         <source>app.title.proccessing_of_words</source>
-        <target xml:lang="en" state="needs-translation">app.title.proccessing_of_words</target>
+        <target state="needs-translation">app.title.proccessing_of_words</target>
       </trans-unit>
-      <trans-unit id="sG537mo" resname="app.title.suggest_improvement" approved="yes">
+      <trans-unit id="sG537mo" resname="app.title.suggest_improvement">
         <source>app.title.suggest_improvement</source>
-        <target xml:lang="en">Suggest improvement</target>
+        <target>Suggest improvement</target>
       </trans-unit>
-      <trans-unit id="Dvk5L9V" resname="app.updated_at" approved="yes">
+      <trans-unit id="Dvk5L9V" resname="app.updated_at">
         <source>app.updated_at</source>
-        <target xml:lang="en">Updated at</target>
+        <target>Updated at</target>
       </trans-unit>
-      <trans-unit id="xNrkv18" resname="app.link.intercorp" approved="yes">
+      <trans-unit id="xNrkv18" resname="app.link.intercorp">
         <source>app.link.intercorp</source>
-        <target xml:lang="en">InterCorp</target>
+        <target>InterCorp</target>
       </trans-unit>
-      <trans-unit id="_BqshM0" resname="app.abbreviation" approved="yes">
+      <trans-unit id="_BqshM0" resname="app.abbreviation">
         <source>app.abbreviation</source>
-        <target xml:lang="en">Abbreviation</target>
+        <target>Abbreviation</target>
       </trans-unit>
-      <trans-unit id="8NE67Z5" resname="app.meaning" approved="yes">
+      <trans-unit id="8NE67Z5" resname="app.meaning">
         <source>app.meaning</source>
-        <target xml:lang="en">Meaning</target>
+        <target>Meaning</target>
       </trans-unit>
-      <trans-unit id="O9Z.97Q" resname="app.title.about_project" approved="yes">
+      <trans-unit id="O9Z.97Q" resname="app.title.about_project">
         <source>app.title.about_project</source>
-        <target xml:lang="en">About project</target>
+        <target>About project</target>
       </trans-unit>
-      <trans-unit id="gpMRAR9" resname="app.topics" approved="yes">
+      <trans-unit id="gpMRAR9" resname="app.topics">
         <source>app.topics</source>
-        <target xml:lang="en">Topics</target>
+        <target>Topics</target>
       </trans-unit>
-      <trans-unit id="Rcf1s3M" resname="admin.button.preview" approved="yes">
+      <trans-unit id="Rcf1s3M" resname="admin.button.preview">
         <source>admin.button.preview</source>
-        <target xml:lang="en">Preview</target>
+        <target>Preview</target>
       </trans-unit>
-      <trans-unit id="Aqplk4J" resname="admin.name" approved="yes">
+      <trans-unit id="Aqplk4J" resname="admin.name">
         <source>admin.name</source>
-        <target xml:lang="en">Name</target>
+        <target>Name</target>
       </trans-unit>
-      <trans-unit id="_a8huP6" resname="admin.email" approved="yes">
+      <trans-unit id="_a8huP6" resname="admin.email">
         <source>admin.email</source>
-        <target xml:lang="en">Email</target>
+        <target>Email</target>
       </trans-unit>
-      <trans-unit id="c07P7Xs" resname="admin.announcements" approved="yes">
+      <trans-unit id="c07P7Xs" resname="admin.announcements">
         <source>admin.announcements</source>
-        <target xml:lang="en">Announcements</target>
+        <target>Announcements</target>
       </trans-unit>
-      <trans-unit id="elpuZOz" resname="admin.author" approved="yes">
+      <trans-unit id="elpuZOz" resname="admin.author">
         <source>admin.author</source>
-        <target xml:lang="en">Author</target>
+        <target>Author</target>
       </trans-unit>
-      <trans-unit id="Bc_YkQZ" resname="admin.button.add_announcement" approved="yes">
+      <trans-unit id="Bc_YkQZ" resname="admin.button.add_announcement">
         <source>admin.button.add_announcement</source>
-        <target xml:lang="en">Add announcement</target>
+        <target>Add announcement</target>
       </trans-unit>
-      <trans-unit id="WDOKSsr" resname="admin.posts" approved="yes">
+      <trans-unit id="WDOKSsr" resname="admin.posts">
         <source>admin.posts</source>
-        <target xml:lang="en">Posts</target>
+        <target>Posts</target>
       </trans-unit>
-      <trans-unit id="iDIKEkQ" resname="admin.slug" approved="yes">
+      <trans-unit id="iDIKEkQ" resname="admin.slug">
         <source>admin.slug</source>
-        <target xml:lang="en">Slug</target>
+        <target>Slug</target>
       </trans-unit>
-      <trans-unit id="lF1PyIx" resname="admin.button.add_post" approved="yes">
+      <trans-unit id="lF1PyIx" resname="admin.button.add_post">
         <source>admin.button.add_post</source>
-        <target xml:lang="en">Add post</target>
+        <target>Add post</target>
       </trans-unit>
-      <trans-unit id="KNvZX6B" resname="admin.position" approved="yes">
+      <trans-unit id="KNvZX6B" resname="admin.position">
         <source>admin.position</source>
-        <target xml:lang="en">Position</target>
+        <target>Position</target>
       </trans-unit>
-      <trans-unit id="YgtsFut" resname="admin.messages" approved="yes">
+      <trans-unit id="YgtsFut" resname="admin.messages">
         <source>admin.messages</source>
-        <target xml:lang="en">Messages</target>
+        <target>Messages</target>
       </trans-unit>
-      <trans-unit id="07gHh4v" resname="app.title.feedback" approved="yes">
+      <trans-unit id="07gHh4v" resname="app.title.feedback">
         <source>app.title.feedback</source>
-        <target xml:lang="en">Feedback</target>
+        <target>Feedback</target>
       </trans-unit>
-      <trans-unit id="_iBE.pS" resname="app.button.close" approved="yes">
+      <trans-unit id="_iBE.pS" resname="app.button.close">
         <source>app.button.close</source>
-        <target xml:lang="en">Close</target>
+        <target>Close</target>
       </trans-unit>
-      <trans-unit id="offSCMJ" resname="app.button.send" approved="yes">
+      <trans-unit id="offSCMJ" resname="app.button.send">
         <source>app.button.send</source>
-        <target xml:lang="en">Send</target>
+        <target>Send</target>
       </trans-unit>
-      <trans-unit id="qlqlV3d" resname="admin.content" approved="yes">
+      <trans-unit id="qlqlV3d" resname="admin.content">
         <source>admin.content</source>
-        <target xml:lang="en">Context</target>
+        <target>Context</target>
       </trans-unit>
-      <trans-unit id="05k5L1N" resname="app.menu.notations" approved="yes">
+      <trans-unit id="05k5L1N" resname="app.menu.notations">
         <source>app.menu.notations</source>
-        <target xml:lang="en">Notations</target>
+        <target>Notations</target>
       </trans-unit>
       <trans-unit id="9FFoFcf" resname="app.feedback_intro">
         <source>app.feedback_intro</source>
-        <target xml:lang="en" state="needs-translation">app.feedback_intro</target>
+        <target state="needs-translation">app.feedback_intro</target>
       </trans-unit>
-      <trans-unit id="QsL30Os" resname="app.write_us" approved="yes">
+      <trans-unit id="QsL30Os" resname="app.write_us">
         <source>app.write_us</source>
-        <target xml:lang="en">Write us!</target>
+        <target>Write us!</target>
       </trans-unit>
-      <trans-unit id="1kT3pVy" resname="app.thank_you" approved="yes">
+      <trans-unit id="1kT3pVy" resname="app.thank_you">
         <source>app.thank_you</source>
-        <target xml:lang="en">Thank you!</target>
+        <target>Thank you!</target>
       </trans-unit>
       <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text">
         <source>app.feedback.content.help_text</source>
-        <target xml:lang="en" state="needs-translation">app.feedback.content.help_text</target>
+        <target state="needs-translation">app.feedback.content.help_text</target>
       </trans-unit>
       <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text">
         <source>app.feedback.email.help_text</source>
-        <target xml:lang="en" state="needs-translation">app.feedback.email.help_text</target>
+        <target state="needs-translation">app.feedback.email.help_text</target>
+      </trans-unit>
+      <trans-unit id="sB.hsgu" resname="admin.title_in_russian">
+        <source>admin.title_in_russian</source>
+        <target>__admin.title_in_russian</target>
       </trans-unit>
     </body>
   </file>
