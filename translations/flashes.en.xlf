@@ -1,105 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="zu" target-language="en" datatype="plaintext" original="file.ext">
+  <file source-language="cs" target-language="en" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="G3cnDyL" resname="admin.abbreviation.created" approved="yes">
+      <trans-unit id="G3cnDyL" resname="admin.abbreviation.created">
         <source>admin.abbreviation.created</source>
-        <target xml:lang="en">Abbreviation has been created.</target>
+        <target>Abbreviation has been created.</target>
       </trans-unit>
-      <trans-unit id="erm3Y3W" resname="admin.abbreviation.updated" approved="yes">
+      <trans-unit id="erm3Y3W" resname="admin.abbreviation.updated">
         <source>admin.abbreviation.updated</source>
-        <target xml:lang="en">Abbreviation has been updated.</target>
+        <target>Abbreviation has been updated.</target>
       </trans-unit>
-      <trans-unit id="KYFq_La" resname="admin.abbreviation.deleted" approved="yes">
+      <trans-unit id="KYFq_La" resname="admin.abbreviation.deleted">
         <source>admin.abbreviation.deleted</source>
-        <target xml:lang="en">Abbreviation has been deleted.</target>
+        <target>Abbreviation has been deleted.</target>
       </trans-unit>
-      <trans-unit id="UwNIHmX" resname="admin.category.created" approved="yes">
+      <trans-unit id="UwNIHmX" resname="admin.category.created">
         <source>admin.category.created</source>
-        <target xml:lang="en">Category has been created.</target>
+        <target>Category has been created.</target>
       </trans-unit>
-      <trans-unit id="TL30csv" resname="admin.category.updated" approved="yes">
+      <trans-unit id="TL30csv" resname="admin.category.updated">
         <source>admin.category.updated</source>
-        <target xml:lang="en">Category has been updated.</target>
+        <target>Category has been updated.</target>
       </trans-unit>
-      <trans-unit id="OLOKQ9U" resname="admin.category.deleted" approved="yes">
+      <trans-unit id="OLOKQ9U" resname="admin.category.deleted">
         <source>admin.category.deleted</source>
-        <target xml:lang="en">Category has been deleted.</target>
+        <target>Category has been deleted.</target>
       </trans-unit>
-      <trans-unit id="gJmcYAB" resname="admin.source.created" approved="yes">
+      <trans-unit id="gJmcYAB" resname="admin.source.created">
         <source>admin.source.created</source>
-        <target xml:lang="en">Source has been created.</target>
+        <target>Source has been created.</target>
       </trans-unit>
-      <trans-unit id="jvNas2Y" resname="admin.source.updated" approved="yes">
+      <trans-unit id="jvNas2Y" resname="admin.source.updated">
         <source>admin.source.updated</source>
-        <target xml:lang="en">Source has been updated.</target>
+        <target>Source has been updated.</target>
       </trans-unit>
-      <trans-unit id="YUFKLWb" resname="admin.source.deleted" approved="yes">
+      <trans-unit id="YUFKLWb" resname="admin.source.deleted">
         <source>admin.source.deleted</source>
-        <target xml:lang="en">Source has been deleted.</target>
+        <target>Source has been deleted.</target>
       </trans-unit>
-      <trans-unit id="aU_2nN5" resname="admin.source_type.created" approved="yes">
+      <trans-unit id="aU_2nN5" resname="admin.source_type.created">
         <source>admin.source_type.created</source>
-        <target xml:lang="en">Source type has been created.</target>
+        <target>Source type has been created.</target>
       </trans-unit>
-      <trans-unit id="c.uYEpO" resname="admin.source_type.updated" approved="yes">
+      <trans-unit id="c.uYEpO" resname="admin.source_type.updated">
         <source>admin.source_type.updated</source>
-        <target xml:lang="en">Source type has been updated.</target>
+        <target>Source type has been updated.</target>
       </trans-unit>
-      <trans-unit id="nlj3hq9" resname="admin.source_type.deleted" approved="yes">
+      <trans-unit id="nlj3hq9" resname="admin.source_type.deleted">
         <source>admin.source_type.deleted</source>
-        <target xml:lang="en">Source type has been deleted.</target>
+        <target>Source type has been deleted.</target>
       </trans-unit>
-      <trans-unit id="mIy5kA8" resname="admin.symbol.created" approved="yes">
+      <trans-unit id="mIy5kA8" resname="admin.symbol.created">
         <source>admin.symbol.created</source>
-        <target xml:lang="en">Symbol has been created.</target>
+        <target>Symbol has been created.</target>
       </trans-unit>
-      <trans-unit id="sZKa2QR" resname="admin.symbol.updated" approved="yes">
+      <trans-unit id="sZKa2QR" resname="admin.symbol.updated">
         <source>admin.symbol.updated</source>
-        <target xml:lang="en">Symbol has been updated.</target>
+        <target>Symbol has been updated.</target>
       </trans-unit>
-      <trans-unit id="iBIB6_u" resname="admin.symbol.deleted" approved="yes">
+      <trans-unit id="iBIB6_u" resname="admin.symbol.deleted">
         <source>admin.symbol.deleted</source>
-        <target xml:lang="en">Symbol has been deleted.</target>
+        <target>Symbol has been deleted.</target>
       </trans-unit>
-      <trans-unit id="Mot6m6I" resname="admin.translation.created" approved="yes">
+      <trans-unit id="Mot6m6I" resname="admin.translation.created">
         <source>admin.translation.created</source>
-        <target xml:lang="en">Translation has been created.</target>
+        <target>Translation has been created.</target>
       </trans-unit>
-      <trans-unit id="zQ3p9mY" resname="admin.translation.updated" approved="yes">
+      <trans-unit id="zQ3p9mY" resname="admin.translation.updated">
         <source>admin.translation.updated</source>
-        <target xml:lang="en">Translation has been updated.</target>
+        <target>Translation has been updated.</target>
       </trans-unit>
-      <trans-unit id="qddKbUt" resname="admin.translation.deleted" approved="yes">
+      <trans-unit id="qddKbUt" resname="admin.translation.deleted">
         <source>admin.translation.deleted</source>
-        <target xml:lang="en">Translation has been deleted.</target>
+        <target>Translation has been deleted.</target>
       </trans-unit>
-      <trans-unit id="blW99I0" resname="admin.translation_example.created" approved="yes">
+      <trans-unit id="blW99I0" resname="admin.translation_example.created">
         <source>admin.translation_example.created</source>
-        <target xml:lang="en">Translation example has been created.</target>
+        <target>Translation example has been created.</target>
       </trans-unit>
-      <trans-unit id="ydLhrDE" resname="admin.translation_example.updated" approved="yes">
+      <trans-unit id="ydLhrDE" resname="admin.translation_example.updated">
         <source>admin.translation_example.updated</source>
-        <target xml:lang="en">Translation example has been updated.</target>
+        <target>Translation example has been updated.</target>
       </trans-unit>
-      <trans-unit id="odoNrm6" resname="admin.translation_example.deleted" approved="yes">
+      <trans-unit id="odoNrm6" resname="admin.translation_example.deleted">
         <source>admin.translation_example.deleted</source>
-        <target xml:lang="en">Translation example has been deleted.</target>
+        <target>Translation example has been deleted.</target>
       </trans-unit>
-      <trans-unit id="TfvTC0X" resname="admin.word.created" approved="yes">
+      <trans-unit id="TfvTC0X" resname="admin.word.created">
         <source>admin.word.created</source>
-        <target xml:lang="en">Word has been created.</target>
+        <target>Word has been created.</target>
       </trans-unit>
-      <trans-unit id="ZSYkpmV" resname="admin.word.updated" approved="yes">
+      <trans-unit id="ZSYkpmV" resname="admin.word.updated">
         <source>admin.word.updated</source>
-        <target xml:lang="en">Word has been updated.</target>
+        <target>Word has been updated.</target>
       </trans-unit>
-      <trans-unit id="EacBDv5" resname="admin.word.deleted" approved="yes">
+      <trans-unit id="EacBDv5" resname="admin.word.deleted">
         <source>admin.word.deleted</source>
-        <target xml:lang="en">Word has been deleted.</target>
+        <target>Word has been deleted.</target>
       </trans-unit>
     </body>
   </file>

@@ -15,6 +15,14 @@ class CategoryFormData implements CategoryFormDataInterface
      */
     private $title = '';
 
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
+     * @Assert\Type("string")
+     * @var string
+     */
+    private $titleInRussian = '';
+
     //-------------------------------------------------------------------------
 
     public static function createFromCategory(Category $category): self
@@ -22,6 +30,7 @@ class CategoryFormData implements CategoryFormDataInterface
         $formData = new self();
 
         $formData->setTitle($category->getTitle());
+        $formData->setTitleInRussian($category->getTitleInRussian());
 
         return $formData;
     }
@@ -36,5 +45,15 @@ class CategoryFormData implements CategoryFormDataInterface
     public function setTitle(string $title): void
     {
         $this->title = $title;
+    }
+
+    public function getTitleInRussian(): string
+    {
+        return $this->titleInRussian;
+    }
+
+    public function setTitleInRussian(string $titleInRussian): void
+    {
+        $this->titleInRussian = $titleInRussian;
     }
 }

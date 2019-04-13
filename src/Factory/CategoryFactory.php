@@ -10,6 +10,6 @@ class CategoryFactory implements CategoryFactoryInterface
 {
     public function createFromFormData(CategoryFormDataInterface $formData): CategoryInterface
     {
-        return new Category($formData->getTitle());
+        return new Category($formData->getTitle(), $formData->getTitleInRussian());
     }
 }
