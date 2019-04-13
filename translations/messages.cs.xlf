@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="cs" target-language="cs" datatype="plaintext" original="file.ext">
+  <file source-language="zu" target-language="cs" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
@@ -487,7 +487,7 @@
       </trans-unit>
       <trans-unit id="sB.hsgu" resname="admin.title_in_russian">
         <source>admin.title_in_russian</source>
-        <target>__admin.title_in_russian</target>
+        <target state="translated">Název v ruštině</target>
       </trans-unit>
     </body>
   </file>
