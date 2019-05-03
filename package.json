@@ -26,6 +26,6 @@
         "dev": "./node_modules/.bin/encore dev",
         "watch": "./node_modules/.bin/encore dev --watch",
         "build": "./node_modules/.bin/encore production",
-        "postinstall": "yarn run build"
+        "postinstall": "npm run build"
     }
 }
