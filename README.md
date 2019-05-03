@@ -9,7 +9,6 @@ Source code of dictionary Muzirus.cz
 - [PHP 7.2+](https://launchpad.net/~ondrej/+archive/ubuntu/php)
 - [Composer](https://getcomposer.org/download/)
 - [Node](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
-- [Yarn](https://yarnpkg.com/en/docs/install#linux-tab)
 - [Git](https://git-scm.com/download/linux)
 
 ## Installation
@@ -40,10 +39,16 @@ Install PHP dependencies with dev dependencies
 composer dev
 ```
 
-Install JS dependencies and build them
+Install JS dependencies from `package-lock.json` and build assets
+ 
+```bash
+npm ci
+```
+
+Build modified assets
 
 ```bash
-yarn install
+npm run build
 ```
 
 Start server
