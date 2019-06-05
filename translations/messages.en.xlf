@@ -308,9 +308,6 @@
       <trans-unit id="iC4gpUW" resname="admin.equivalents_not_found" approved="yes">
         <source>admin.equivalents_not_found</source>
         <target state="translated">Equivalent not found</target>
-        <alt-trans>
-          <target>Equivalents not found</target>
-        </alt-trans>
       </trans-unit>
       <trans-unit id="zqkxrpL" resname="admin.examples_added" approved="yes">
         <source>admin.examples_added</source>
