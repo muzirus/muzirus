@@ -8,8 +8,21 @@
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
     <meta name="google-site-verification" content="iVZ1u4mbsaG3TrWqFDQ_QMEWsNaCSo4CZgVguBHHtSY">
+    <link rel="dns-prefetch preconnect" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch preconnect" href="//www.google-analytics.com">
     <title>{% block title %}{{ 'app.title'|trans }}{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118230986-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'UA-118230986-1');
+    </script>
 </head>
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
     {% block body %}{% endblock %}
