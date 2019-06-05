@@ -96,9 +96,6 @@
       <trans-unit id="hhQprcA" resname="label.code_of_publication" approved="yes">
         <source>label.code_of_publication</source>
         <target state="translated">Kód publikace</target>
-        <alt-trans>
-          <target>Kód ISBN/ISSN</target>
-        </alt-trans>
       </trans-unit>
       <trans-unit id="5Vda1JD" resname="label.word" approved="yes">
         <source>label.word</source>
