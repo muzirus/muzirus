@@ -2,11 +2,11 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\SourceType;
-use App\Event\SourceTypeEvent;
+use App\Event\SourceTypeCreatedEvent;
+use App\Event\SourceTypeUpdatedEvent;
 use App\Facade\SourceTypeFacade;
 use App\Form\SourceType\SourceTypeForm;
 use App\Form\SourceType\SourceTypeFormData;
@@ -51,10 +51,7 @@ class SourceTypeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $sourceType = $sourceTypeFacade->createSourceType($formData);
 
-            $dispatcher->dispatch(
-                Events::SOURCE_TYPE_CREATED,
-                new SourceTypeEvent($this->getUser(), $sourceType)
-            );
+            $dispatcher->dispatch(new SourceTypeCreatedEvent($this->getUser(), $sourceType));
 
             $this->addFlashSuccess(Flashes::SOURCE_TYPE_CREATED);
 
@@ -86,10 +83,7 @@ class SourceTypeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $sourceTypeFacade->updateSourceType($sourceType, $formData);
 
-            $dispatcher->dispatch(
-                Events::SOURCE_TYPE_UPDATED,
-                new SourceTypeEvent($this->getUser(), $sourceType)
-            );
+            $dispatcher->dispatch(new SourceTypeUpdatedEvent($this->getUser(), $sourceType));
 
             $this->addFlashSuccess(Flashes::SOURCE_TYPE_UPDATED);
 

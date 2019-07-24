@@ -2,13 +2,13 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\CzechWord;
 use App\Entity\Translation;
 use App\Entity\TranslationExample;
-use App\Event\TranslationExampleEvent;
+use App\Event\TranslationExampleCreatedEvent;
+use App\Event\TranslationExampleUpdatedEvent;
 use App\Facade\TranslationExampleFacade;
 use App\Form\TranslationExample\TranslationExampleForm;
 use App\Form\TranslationExample\TranslationExampleFormData;
@@ -48,10 +48,7 @@ class CzechWordTranslationExampleController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $translationExample = $translationExampleFacade->createTranslationExample($formData);
 
-            $dispatcher->dispatch(
-                Events::TRANSLATION_EXAMPLE_CREATED,
-                new TranslationExampleEvent($this->getUser(), $translationExample)
-            );
+            $dispatcher->dispatch(new TranslationExampleCreatedEvent($this->getUser(), $translationExample));
 
             $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_CREATED);
 
@@ -100,10 +97,7 @@ class CzechWordTranslationExampleController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $translationExampleFacade->updateTranslationExample($translationExample, $formData);
 
-            $dispatcher->dispatch(
-                Events::TRANSLATION_EXAMPLE_UPDATED,
-                new TranslationExampleEvent($this->getUser(), $translationExample)
-            );
+            $dispatcher->dispatch(new TranslationExampleUpdatedEvent($this->getUser(), $translationExample));
 
             $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_UPDATED);
 

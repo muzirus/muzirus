@@ -2,12 +2,12 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\CzechWord;
 use App\Entity\Translation;
-use App\Event\TranslationEvent;
+use App\Event\TranslationCreatedEvent;
+use App\Event\TranslationUpdatedEvent;
 use App\Facade\TranslationFacade;
 use App\Form\Translation\CreateCzechWordTranslationForm;
 use App\Form\Translation\TranslationFormData;
@@ -50,10 +50,7 @@ class CzechWordTranslationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $translation = $translationFacade->createTranslation($formData);
 
-            $dispatcher->dispatch(
-                Events::TRANSLATION_CREATED,
-                new TranslationEvent($this->getUser(), $translation)
-            );
+            $dispatcher->dispatch(new TranslationCreatedEvent($this->getUser(), $translation));
 
             $this->addFlashSuccess(Flashes::TRANSLATION_CREATED);
 
@@ -95,10 +92,7 @@ class CzechWordTranslationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $translationFacade->updateTranslation($translation, $formData);
 
-            $dispatcher->dispatch(
-                Events::TRANSLATION_UPDATED,
-                new TranslationEvent($this->getUser(), $translation)
-            );
+            $dispatcher->dispatch(new TranslationUpdatedEvent($this->getUser(), $translation));
 
             $this->addFlashSuccess(Flashes::TRANSLATION_UPDATED);
 

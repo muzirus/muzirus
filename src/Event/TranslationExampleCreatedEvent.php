@@ -5,7 +5,7 @@ namespace App\Event;
 use App\Entity\TranslationExampleInterface;
 use App\Entity\UserInterface;
 
-class TranslationExampleEvent extends AbstractEvent
+class TranslationExampleCreatedEvent extends AbstractEvent
 {
     /** @var TranslationExampleInterface */
     private $translationExample;
@@ -16,7 +16,7 @@ class TranslationExampleEvent extends AbstractEvent
         $this->translationExample = $translationExample;
     }
 
-    public function getTranslationExample(): TranslationExampleInterface
+    final public function getTranslationExample(): TranslationExampleInterface
     {
         return $this->translationExample;
     }

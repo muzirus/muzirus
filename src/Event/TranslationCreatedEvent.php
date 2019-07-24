@@ -5,7 +5,7 @@ namespace App\Event;
 use App\Entity\TranslationInterface;
 use App\Entity\UserInterface;
 
-class TranslationEvent extends AbstractEvent
+class TranslationCreatedEvent extends AbstractEvent
 {
     /** @var TranslationInterface */
     private $translation;
@@ -16,7 +16,7 @@ class TranslationEvent extends AbstractEvent
         $this->translation = $translation;
     }
 
-    public function getTranslation(): TranslationInterface
+    final public function getTranslation(): TranslationInterface
     {
         return $this->translation;
     }

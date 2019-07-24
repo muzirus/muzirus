@@ -5,7 +5,7 @@ namespace App\Event;
 use App\Entity\RussianWordInterface;
 use App\Entity\UserInterface;
 
-class RussianWordEvent extends AbstractEvent
+class RussianWordCreatedEvent extends AbstractEvent
 {
     /** @var RussianWordInterface */
     private $word;
@@ -16,7 +16,7 @@ class RussianWordEvent extends AbstractEvent
         $this->word = $word;
     }
 
-    public function getWord(): RussianWordInterface
+    final public function getWord(): RussianWordInterface
     {
         return $this->word;
     }
