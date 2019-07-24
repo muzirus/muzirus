@@ -5,7 +5,7 @@ namespace App\Event;
 use App\Entity\SourceInterface;
 use App\Entity\UserInterface;
 
-class SourceEvent extends AbstractEvent
+class SourceCreatedEvent extends AbstractEvent
 {
     /** @var SourceInterface */
     private $source;
@@ -16,7 +16,7 @@ class SourceEvent extends AbstractEvent
         $this->source = $source;
     }
 
-    public function getSource(): SourceInterface
+    final public function getSource(): SourceInterface
     {
         return $this->source;
     }

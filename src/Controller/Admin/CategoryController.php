@@ -2,11 +2,11 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Category;
-use App\Event\CategoryEvent;
+use App\Event\CategoryCreatedEvent;
+use App\Event\CategoryUpdatedEvent;
 use App\Facade\CategoryFacade;
 use App\Form\Category\CategoryForm;
 use App\Form\Category\CategoryFormData;
@@ -51,10 +51,7 @@ class CategoryController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $category = $categoryFacade->createCategory($formData);
 
-            $dispatcher->dispatch(
-                Events::CATEGORY_CREATED,
-                new CategoryEvent($this->getUser(), $category)
-            );
+            $dispatcher->dispatch(new CategoryCreatedEvent($this->getUser(), $category));
 
             $this->addFlashSuccess(Flashes::CATEGORY_CREATED);
 
@@ -86,10 +83,7 @@ class CategoryController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $categoryFacade->updateCategory($category, $formData);
 
-            $dispatcher->dispatch(
-                Events::CATEGORY_UPDATED,
-                new CategoryEvent($this->getUser(), $category)
-            );
+            $dispatcher->dispatch(new CategoryUpdatedEvent($this->getUser(), $category));
 
             $this->addFlashSuccess(Flashes::CATEGORY_UPDATED);
 

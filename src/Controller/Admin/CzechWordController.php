@@ -2,11 +2,11 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\CzechWord;
-use App\Event\CzechWordEvent;
+use App\Event\CzechWordCreatedEvent;
+use App\Event\CzechWordUpdatedEvent;
 use App\Facade\CzechWordFacade;
 use App\Form\Word\CzechWordForm;
 use App\Form\Word\CzechWordFormData;
@@ -51,10 +51,7 @@ class CzechWordController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $word = $czechWordFacade->createCzechWord($formData);
 
-            $dispatcher->dispatch(
-                Events::CZECH_WORD_CREATED,
-                new CzechWordEvent($this->getUser(), $word)
-            );
+            $dispatcher->dispatch(new CzechWordCreatedEvent($this->getUser(), $word));
 
             $this->addFlashSuccess(Flashes::WORD_CREATED);
 
@@ -88,10 +85,7 @@ class CzechWordController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $czechWordFacade->updateCzechWord($word, $formData);
 
-            $dispatcher->dispatch(
-                Events::CZECH_WORD_UPDATED,
-                new CzechWordEvent($this->getUser(), $word)
-            );
+            $dispatcher->dispatch(new CzechWordUpdatedEvent($this->getUser(), $word));
 
             $this->addFlashSuccess(Flashes::WORD_UPDATED);
 

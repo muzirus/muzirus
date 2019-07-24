@@ -5,7 +5,7 @@ namespace App\Event;
 use App\Entity\CategoryInterface;
 use App\Entity\UserInterface;
 
-class CategoryEvent extends AbstractEvent
+class CategoryCreatedEvent extends AbstractEvent
 {
     /** @var CategoryInterface */
     private $category;
@@ -16,7 +16,7 @@ class CategoryEvent extends AbstractEvent
         $this->category = $category;
     }
 
-    public function getCategory(): CategoryInterface
+    final public function getCategory(): CategoryInterface
     {
         return $this->category;
     }

@@ -2,11 +2,10 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Translation;
-use App\Event\TranslationEvent;
+use App\Event\TranslationUpdatedEvent;
 use App\Facade\TranslationFacade;
 use App\Form\Translation\TranslationFormData;
 use App\Form\Translation\UpdateTranslationForm;
@@ -52,10 +51,7 @@ class TranslationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $translationFacade->updateTranslation($translation, $formData);
 
-            $dispatcher->dispatch(
-                Events::TRANSLATION_UPDATED,
-                new TranslationEvent($this->getUser(), $translation)
-            );
+            $dispatcher->dispatch(new TranslationUpdatedEvent($this->getUser(), $translation));
 
             $this->addFlashSuccess(Flashes::TRANSLATION_UPDATED);
 

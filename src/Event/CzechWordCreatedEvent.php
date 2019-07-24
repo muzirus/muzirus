@@ -5,7 +5,7 @@ namespace App\Event;
 use App\Entity\CzechWordInterface;
 use App\Entity\UserInterface;
 
-class CzechWordEvent extends AbstractEvent
+class CzechWordCreatedEvent extends AbstractEvent
 {
     /** @var CzechWordInterface */
     private $word;
@@ -16,7 +16,7 @@ class CzechWordEvent extends AbstractEvent
         $this->word = $word;
     }
 
-    public function getWord(): CzechWordInterface
+    final public function getWord(): CzechWordInterface
     {
         return $this->word;
     }

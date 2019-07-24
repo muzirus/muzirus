@@ -2,11 +2,11 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Events;
 use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\RussianWord;
-use App\Event\RussianWordEvent;
+use App\Event\RussianWordCreatedEvent;
+use App\Event\RussianWordUpdatedEvent;
 use App\Facade\RussianWordFacade;
 use App\Form\Word\RussianWordForm;
 use App\Form\Word\RussianWordFormData;
@@ -51,10 +51,7 @@ class RussianWordController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $word = $russianWordFacade->createRussianWord($formData);
 
-            $dispatcher->dispatch(
-                Events::RUSSIAN_WORD_CREATED,
-                new RussianWordEvent($this->getUser(), $word)
-            );
+            $dispatcher->dispatch(new RussianWordCreatedEvent($this->getUser(), $word));
 
             $this->addFlashSuccess(Flashes::WORD_CREATED);
 
@@ -88,10 +85,7 @@ class RussianWordController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $russianWordFacade->updateRussianWord($word, $formData);
 
-            $dispatcher->dispatch(
-                Events::RUSSIAN_WORD_UPDATED,
-                new RussianWordEvent($this->getUser(), $word)
-            );
+            $dispatcher->dispatch(new RussianWordUpdatedEvent($this->getUser(), $word));
 
             $this->addFlashSuccess(Flashes::WORD_UPDATED);
 
