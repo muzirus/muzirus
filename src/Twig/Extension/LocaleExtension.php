@@ -2,7 +2,7 @@
 
 namespace App\Twig\Extension;
 
-use Symfony\Component\Intl\Intl;
+use Symfony\Component\Intl\Locales;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
@@ -36,7 +36,7 @@ class LocaleExtension extends AbstractExtension
         foreach ($this->localeCodes as $localeCode) {
             $this->locales[] = [
                 'code' => $localeCode,
-                'name' => Intl::getLocaleBundle()->getLocaleName($localeCode, $localeCode),
+                'name' => Locales::getName($localeCode, $localeCode),
             ];
         }
 
