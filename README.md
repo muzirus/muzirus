@@ -1,76 +1,67 @@
-# Muzirus
+# muzirus
 
-Source code of dictionary Muzirus.cz
+Source code of Czech-to-Russian and Russian-to-Czech dictionary.
 
 [![Build Status Master](https://travis-ci.com/muzirus/muzirus.svg?branch=master)](https://travis-ci.com/muzirus/muzirus)
 
+**Thanks to [Travis-ci.com](https://travis-ci.com/) and [Sentry.io](https://sentry.io/welcome/) for free open-source plans of their services!**
+
 ## Requirements
 
-- [PHP 7.2+](https://launchpad.net/~ondrej/+archive/ubuntu/php)
-- [Composer](https://getcomposer.org/download/)
-- [Node](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
-- [Git](https://git-scm.com/download/linux)
+Just [Docker](https://www.docker.com/) (`docker` and `docker-compose`), everything else should be inside docker containers.
 
 ## Installation
 
-### Clone repository
+Clone repository
 
 ```bash
 git clone git@github.com:muzirus/muzirus.git muzirus
 ```
 
-### Go to project folder
+Go to project folder
 
 ```bash
 cd muzirus
 ```
 
-### Install PHP dependencies
+Build docker containers
 
 ```bash
-composer prod
+docker-compose build
 ```
 
-## Dev server
+Run docker containers
 
-Install PHP dependencies with dev dependencies
+```bash
+docker-compose up -d
+```
+
+Run `bush` in `muzirus_php` docker container
+
+```bash
+docker exec -it muzirus_php bash
+```
+
+Install PHP dependencies with dev dependencies inside `muzirus_php` docker container
 
 ```bash
 composer dev
 ```
 
-Install JS dependencies from `package-lock.json` and build assets
+Install JS dependencies from `package-lock.json` to build assets inside `muzirus_php` docker container
  
 ```bash
 npm ci
 ```
 
-Build modified assets
+Build modified assets inside `muzirus_php` docker container
 
 ```bash
 npm run build
 ```
 
-Start server
+Stop docker containers
 
 ```bash
-bin/console server:start
-```
-
-Restart server
-
-```bash
-bin/console server:restart
-```
-
-Stop server
-
-```bash
-bin/console server:stop
-```
-
-Get status of server
-
-```bash
-bin/console server:status
+docker-compose stop
 ```
