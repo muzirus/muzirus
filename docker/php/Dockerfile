@@ -22,6 +22,9 @@ RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
 
 RUN composer global require hirak/prestissimo
 
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+    && apt-get install -y nodejs
+
 WORKDIR /usr/src/muzirus
 
 COPY . /usr/src/muzirus
