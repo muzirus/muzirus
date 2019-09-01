@@ -41,6 +41,10 @@ services:
             - ./vendor:/usr/src/muzirus/vendor:cached
         env_file:
             - .env
+        links:
+          - mysql
+        depends_on:
+          - mysql
         user: 1000:1000
 
     nginx:

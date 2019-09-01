@@ -12,10 +12,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends --no-install-su
     zip \
     wget
 
-RUN docker-php-ext-install pdo_mysql \
-    && docker-php-ext-install intl
+RUN docker-php-ext-install pdo_mysql
 
-RUN docker-php-ext-configure intl
+RUN docker-php-ext-install intl \
+    && docker-php-ext-configure intl
 
 RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
 	mv composer.phar /usr/local/bin/composer
