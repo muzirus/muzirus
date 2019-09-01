@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as SymfonyAbstractController;
 
 abstract class AbstractController extends SymfonyAbstractController
@@ -29,5 +30,16 @@ abstract class AbstractController extends SymfonyAbstractController
     protected function addFlashDanger(string $message = 'Wild Application Error!'): void
     {
         $this->addFlash(self::FLASH_TYPE_DANGER, $message);
+    }
+
+    protected function getUser(): UserInterface
+    {
+        $user = parent::getUser();
+
+        if ($user instanceof UserInterface) {
+            return $user;
+        }
+
+        throw new \LogicException('You cannot get user if nobody is logged in.');
     }
 }
