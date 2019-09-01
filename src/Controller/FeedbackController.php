@@ -23,6 +23,7 @@ class FeedbackController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $messageFacade->createFeedback($formData);
 
+            // todo: add to translations
             $this->addFlashSuccess('Vaše připomínky jsme si uložili. Děkujeme!');
 
             return $this->redirectToRoute('app.feedback');

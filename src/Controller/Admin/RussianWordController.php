@@ -110,7 +110,7 @@ class RussianWordController extends AbstractController
     {
         $russianWordFacade->deleteRussianWord($word);
 
-        $this->addFlashSuccess('admin.word.deleted');
+        $this->addFlashSuccess(Flashes::WORD_DELETED);
 
         return $this->redirectToRoute(Flashes::WORD_DELETED);
     }
