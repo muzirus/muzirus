@@ -11,28 +11,28 @@ down:
 	docker-compose down
 
 bash:
-	docker-compose exec php sh -c "bash"
+	docker-compose exec muzirus_php sh -c "bash"
 
 build-dev:
-	docker-compose exec php sh -c "composer dev"
+	docker-compose exec muzirus_php sh -c "composer dev"
 
 build-prod:
-	docker-compose exec php sh -c "composer prod"
+	docker-compose exec muzirus_php sh -c "composer prod"
 
 test:
-	docker-compose exec php sh -c "composer test"
+	docker-compose exec muzirus_php sh -c "composer test"
 
 phpstan:
-	docker-compose exec php sh -c "composer phpstan"
+	docker-compose exec muzirus_php sh -c "composer phpstan"
 
 phpunit:
-	docker-compose exec php sh -c "composer phpunit"
+	docker-compose exec muzirus_php sh -c "composer phpunit"
 
 cs:
-	docker-compose exec php sh -c "composer cs"
+	docker-compose exec muzirus_php sh -c "composer cs"
 
 cs-fix:
-	docker-compose exec php sh -c "composer cs-fix"
+	docker-compose exec muzirus_php sh -c "composer cs-fix"
 
 # catch all target (%) which does nothing to silently ignore the other goals.
 %:
