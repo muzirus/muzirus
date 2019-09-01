@@ -26,4 +26,8 @@ WORKDIR /usr/src/muzirus
 
 COPY . /usr/src/muzirus
 
+RUN groupadd --system --gid 1000 muzirus
+
+RUN useradd --system --create-home --home-dir /home/muzirus --shell /bin/bash --uid 1000 --gid 1000 muzirus
+
 RUN PATH=$PATH:/usr/src/muzirus/vendor/bin:bin
