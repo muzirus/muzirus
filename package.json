@@ -1,4 +1,8 @@
 {
+    "name": "muzirus",
+    "description": "",
+    "license": "MIT",
+    "private": true,
     "dependencies": {
         "@symfony/webpack-encore": "^0.28.0",
         "admin-lte": "^2.4.18",
@@ -21,8 +25,6 @@
         "sass-loader": "^7.0.3",
         "url-loader": "^2.1.0"
     },
-    "license": "MIT",
-    "private": true,
     "scripts": {
         "dev-server": "./node_modules/.bin/encore dev-server",
         "dev": "./node_modules/.bin/encore dev",
