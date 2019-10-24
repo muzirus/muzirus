@@ -25,7 +25,8 @@ composer.phar
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
-/public/build/
+# todo: uncomment after building assets on server
+#/public/build/
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
