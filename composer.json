@@ -42,7 +42,7 @@
         "symfony/translation": "^4.3",
         "symfony/validator": "^4.3",
         "symfony/web-link": "^4.3",
-        "symfony/webpack-encore-pack": "^1.0",
+        "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "^4.3",
         "webmozart/assert": "^1.4",
         "white-october/pagerfanta-bundle": "^1.2"
