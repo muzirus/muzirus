@@ -101,6 +101,26 @@
         <source>admin.word.deleted</source>
         <target state="needs-translation">admin.word.deleted</target>
       </trans-unit>
+      <trans-unit id="TWdERNA" resname="admin.announcement.created">
+        <source>admin.announcement.created</source>
+        <target state="needs-translation">admin.announcement.created</target>
+      </trans-unit>
+      <trans-unit id="cosP4Tw" resname="admin.announcement.updated">
+        <source>admin.announcement.updated</source>
+        <target state="needs-translation">admin.announcement.updated</target>
+      </trans-unit>
+      <trans-unit id="FbkXzfz" resname="admin.announcement.deleted">
+        <source>admin.announcement.deleted</source>
+        <target state="needs-translation">admin.announcement.deleted</target>
+      </trans-unit>
+      <trans-unit id="LQ4fxCg" resname="admin.post.created">
+        <source>admin.post.created</source>
+        <target state="needs-translation">admin.post.created</target>
+      </trans-unit>
+      <trans-unit id="RZclx0q" resname="admin.post.updated">
+        <source>admin.post.updated</source>
+        <target state="needs-translation">admin.post.updated</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
