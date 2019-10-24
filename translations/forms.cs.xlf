@@ -7,243 +7,243 @@
     <body>
       <trans-unit id="UrRn8xj" resname="label.title" approved="yes">
         <source>label.title</source>
-        <target state="translated">Název</target>
+        <target state="final">Název</target>
       </trans-unit>
       <trans-unit id="szWUC0C" resname="label.value" approved="yes">
         <source>label.value</source>
-        <target state="translated">Hodnota</target>
+        <target state="final">Hodnota</target>
       </trans-unit>
       <trans-unit id="4cEApe1" resname="label.description" approved="yes">
         <source>label.description</source>
-        <target state="translated">Popis</target>
+        <target state="final">Popis</target>
       </trans-unit>
       <trans-unit id="mQs59HX" resname="label.note" approved="yes">
         <source>label.note</source>
-        <target state="translated">Poznámka</target>
+        <target state="final">Poznámka</target>
       </trans-unit>
       <trans-unit id="hzhzbqw" resname="label.status" approved="yes">
         <source>label.status</source>
-        <target state="translated">Stav</target>
+        <target state="final">Stav</target>
       </trans-unit>
       <trans-unit id="eH8yxtn" resname="label.categories" approved="yes">
         <source>label.categories</source>
-        <target state="translated">Kategorie</target>
+        <target state="final">Kategorie</target>
       </trans-unit>
       <trans-unit id="ACwJHah" resname="label.sources" approved="yes">
         <source>label.sources</source>
-        <target state="translated">Zdroje</target>
+        <target state="final">Zdroje</target>
       </trans-unit>
       <trans-unit id="LtYcT7g" resname="label.source_type" approved="yes">
         <source>label.source_type</source>
-        <target state="translated">Typ zdroje</target>
+        <target state="final">Typ zdroje</target>
       </trans-unit>
       <trans-unit id="D0AAVMV" resname="label.language_note.pronunciation" approved="yes">
         <source>label.language_note.pronunciation</source>
-        <target state="translated">Jazyková poznámka - výslovnost</target>
+        <target state="final">Jazyková poznámka - výslovnost</target>
       </trans-unit>
       <trans-unit id="e7z3rtA" resname="label.language_note.inflection" approved="yes">
         <source>label.language_note.inflection</source>
-        <target state="translated">Jazyková poznámka - skloňování a časování</target>
+        <target state="final">Jazyková poznámka - skloňování a časování</target>
       </trans-unit>
       <trans-unit id="gWEZnDm" resname="label.language_note.exception_to_inflection" approved="yes">
         <source>label.language_note.exception_to_inflection</source>
-        <target state="translated">Jazyková poznámka - výjimka při skloňování a časování</target>
+        <target state="final">Jazyková poznámka - výjimka při skloňování a časování</target>
       </trans-unit>
       <trans-unit id="S64wP45" resname="label.language_note.type" approved="yes">
         <source>label.language_note.type</source>
-        <target state="translated">Jazyková poznámka - slovní druh</target>
+        <target state="final">Jazyková poznámka - slovní druh</target>
       </trans-unit>
       <trans-unit id="oD2tg8Q" resname="label.language_note.gender" approved="yes">
         <source>label.language_note.gender</source>
-        <target state="translated">Jazyková poznámka - rod</target>
+        <target state="final">Jazyková poznámka - rod</target>
       </trans-unit>
       <trans-unit id="lEry.2l" resname="label.language_note.other" approved="yes">
         <source>label.language_note.other</source>
-        <target state="translated">Jazyková poznámka - ostatní</target>
+        <target state="final">Jazyková poznámka - ostatní</target>
       </trans-unit>
       <trans-unit id="RINRxkA" resname="label.explanation" approved="yes">
         <source>label.explanation</source>
-        <target state="translated">Výklad</target>
+        <target state="final">Výklad</target>
       </trans-unit>
       <trans-unit id="nWb6Ivb" resname="label.explanation_source_info" approved="yes">
         <source>label.explanation_source_info</source>
-        <target state="translated">Zdroj výkladu</target>
+        <target state="final">Zdroj výkladu</target>
       </trans-unit>
       <trans-unit id="LvvKMxR" resname="label.explanation_source_date" approved="yes">
         <source>label.explanation_source_date</source>
-        <target state="translated">Datum výkladu</target>
+        <target state="final">Datum výkladu</target>
       </trans-unit>
       <trans-unit id="PucUOw0" resname="label.name_of_author" approved="yes">
         <source>label.name_of_author</source>
-        <target state="translated">Jméno autora</target>
+        <target state="final">Jméno autora</target>
       </trans-unit>
       <trans-unit id="W5b2C2o" resname="label.name_of_publisher" approved="yes">
         <source>label.name_of_publisher</source>
-        <target state="translated">Jmého vydavatele</target>
+        <target state="final">Jmého vydavatele</target>
       </trans-unit>
       <trans-unit id="RCcd8sh" resname="label.date_of_release" approved="yes">
         <source>label.date_of_release</source>
-        <target state="translated">Datum vydání</target>
+        <target state="final">Datum vydání</target>
       </trans-unit>
       <trans-unit id="7E99SOX" resname="label.place_of_release" approved="yes">
         <source>label.place_of_release</source>
-        <target state="translated">Místo vydání</target>
+        <target state="final">Místo vydání</target>
       </trans-unit>
       <trans-unit id="kLExILX" resname="label.pages_count" approved="yes">
         <source>label.pages_count</source>
-        <target state="translated">Počet stran</target>
+        <target state="final">Počet stran</target>
       </trans-unit>
       <trans-unit id="hhQprcA" resname="label.code_of_publication" approved="yes">
         <source>label.code_of_publication</source>
-        <target state="translated">Kód publikace</target>
+        <target state="final">Kód publikace</target>
       </trans-unit>
       <trans-unit id="5Vda1JD" resname="label.word" approved="yes">
         <source>label.word</source>
-        <target state="translated">Slovo</target>
+        <target state="final">Slovo</target>
       </trans-unit>
       <trans-unit id="GTVmCHx" resname="label.word_with_accent" approved="yes">
         <source>label.word_with_accent</source>
-        <target state="translated">Slovo s akcentem</target>
+        <target state="final">Slovo s akcentem</target>
       </trans-unit>
       <trans-unit id="iDa0ulB" resname="label.gender.unknown" approved="yes">
         <source>label.gender.unknown</source>
-        <target state="translated">Neznámý (nevyplněn)</target>
+        <target state="final">Neznámý (nevyplněn)</target>
       </trans-unit>
       <trans-unit id="ABs4BLG" resname="label.gender.masculine" approved="yes">
         <source>label.gender.masculine</source>
-        <target state="translated">Mužský</target>
+        <target state="final">Mužský</target>
       </trans-unit>
       <trans-unit id="fMrrg7g" resname="label.gender.feminine" approved="yes">
         <source>label.gender.feminine</source>
-        <target state="translated">Ženský</target>
+        <target state="final">Ženský</target>
       </trans-unit>
       <trans-unit id="Srl3f6I" resname="label.gender.neuter" approved="yes">
         <source>label.gender.neuter</source>
-        <target state="translated">Střední</target>
+        <target state="final">Střední</target>
       </trans-unit>
       <trans-unit id="ASVxPBQ" resname="label.czech_sentence" approved="yes">
         <source>label.czech_sentence</source>
-        <target state="translated">Česká věta</target>
+        <target state="final">Česká věta</target>
       </trans-unit>
       <trans-unit id="HtfZD6G" resname="label.russian_sentence" approved="yes">
         <source>label.russian_sentence</source>
-        <target state="translated">Ruská věta</target>
+        <target state="final">Ruská věta</target>
       </trans-unit>
       <trans-unit id="BDxAouf" resname="label.czech_word" approved="yes">
         <source>label.czech_word</source>
-        <target state="translated">České slovo</target>
+        <target state="final">České slovo</target>
       </trans-unit>
       <trans-unit id="_wdlW3y" resname="label.czech_note" approved="yes">
         <source>label.czech_note</source>
-        <target state="translated">Česká poznámka</target>
+        <target state="final">Česká poznámka</target>
       </trans-unit>
       <trans-unit id="c998tqP" resname="label.russian_word" approved="yes">
         <source>label.russian_word</source>
-        <target state="translated">Ruské slovo</target>
+        <target state="final">Ruské slovo</target>
       </trans-unit>
       <trans-unit id="l8bjJU0" resname="label.russian_note" approved="yes">
         <source>label.russian_note</source>
-        <target state="translated">Ruská poznámka</target>
+        <target state="final">Ruská poznámka</target>
       </trans-unit>
       <trans-unit id="C_E9YjQ" resname="label.status.not_processed" approved="yes">
         <source>label.status.not_processed</source>
-        <target state="translated">Nezpracováno</target>
+        <target state="final">Nezpracováno</target>
       </trans-unit>
       <trans-unit id="Vc9iHcE" resname="label.status.equivalents_not_found" approved="yes">
         <source>label.status.equivalents_not_found</source>
-        <target state="translated">Nalezeny ekvivalenty</target>
+        <target state="final">Nalezeny ekvivalenty</target>
       </trans-unit>
       <trans-unit id="6l2T3aO" resname="label.status.examples_added" approved="yes">
         <source>label.status.examples_added</source>
-        <target state="translated">Vloženy ukázky</target>
+        <target state="final">Vloženy ukázky</target>
       </trans-unit>
       <trans-unit id="kzDM5JW" resname="label.status.checked" approved="yes">
         <source>label.status.checked</source>
-        <target state="translated">Zkontrolováno</target>
+        <target state="final">Zkontrolováno</target>
       </trans-unit>
       <trans-unit id="GOmG_mh" resname="label.type.unknown" approved="yes">
         <source>label.type.unknown</source>
-        <target state="translated">Neznámý (nevyplněn)</target>
+        <target state="final">Neznámý (nevyplněn)</target>
       </trans-unit>
       <trans-unit id="TRhzwgx" resname="label.type.noun" approved="yes">
         <source>label.type.noun</source>
-        <target state="translated">Podstatná jména (Substantiva)</target>
+        <target state="final">Podstatná jména (Substantiva)</target>
       </trans-unit>
       <trans-unit id="H1Q.0iP" resname="label.type.verb" approved="yes">
         <source>label.type.verb</source>
-        <target state="translated">Slovesa (Verba)</target>
+        <target state="final">Slovesa (Verba)</target>
       </trans-unit>
       <trans-unit id="9XJVmv3" resname="label.type.adjective" approved="yes">
         <source>label.type.adjective</source>
-        <target state="translated">Přídavná jména (Adjektiva)</target>
+        <target state="final">Přídavná jména (Adjektiva)</target>
       </trans-unit>
       <trans-unit id="9PEphfJ" resname="label.type.pronoun" approved="yes">
         <source>label.type.pronoun</source>
-        <target state="translated">Zájmena (Pronomina)</target>
+        <target state="final">Zájmena (Pronomina)</target>
       </trans-unit>
       <trans-unit id="ai4JPLn" resname="label.type.numeral" approved="yes">
         <source>label.type.numeral</source>
-        <target state="translated">Číslovky (Numeralia)</target>
+        <target state="final">Číslovky (Numeralia)</target>
       </trans-unit>
       <trans-unit id="jKPgxjA" resname="label.type.adverb" approved="yes">
         <source>label.type.adverb</source>
-        <target state="translated">Příslovce (Adverbia)</target>
+        <target state="final">Příslovce (Adverbia)</target>
       </trans-unit>
       <trans-unit id="xUA.s6v" resname="label.type.preposition" approved="yes">
         <source>label.type.preposition</source>
-        <target state="translated">Předložky (Prepozice)</target>
+        <target state="final">Předložky (Prepozice)</target>
       </trans-unit>
       <trans-unit id="Uw5v1lg" resname="label.type.conjunction" approved="yes">
         <source>label.type.conjunction</source>
-        <target state="translated">Spojky (Konjunkce)</target>
+        <target state="final">Spojky (Konjunkce)</target>
       </trans-unit>
       <trans-unit id="6mz98VL" resname="label.type.particle" approved="yes">
         <source>label.type.particle</source>
-        <target state="translated">Částice (Partikule)</target>
+        <target state="final">Částice (Partikule)</target>
       </trans-unit>
       <trans-unit id="1cmY3Bj" resname="label.type.interjection" approved="yes">
         <source>label.type.interjection</source>
-        <target state="translated">Citoslovce (Interjekce)</target>
+        <target state="final">Citoslovce (Interjekce)</target>
       </trans-unit>
       <trans-unit id="S_Vw6L1" resname="label.yes" approved="yes">
         <source>label.yes</source>
-        <target state="translated">Ano</target>
+        <target state="final">Ano</target>
       </trans-unit>
       <trans-unit id="bdYD32t" resname="label.no" approved="yes">
         <source>label.no</source>
-        <target state="translated">Ne</target>
+        <target state="final">Ne</target>
       </trans-unit>
       <trans-unit id="wKXsZRA" resname="label.hidden" approved="yes">
         <source>label.hidden</source>
-        <target state="translated">Schováno</target>
+        <target state="final">Schováno</target>
       </trans-unit>
       <trans-unit id="jbdcgnz" resname="label.link" approved="yes">
         <source>label.link</source>
-        <target state="translated">Odkaz na heslo v korpusech InterCorp</target>
+        <target state="final">Odkaz na heslo v korpusech InterCorp</target>
       </trans-unit>
       <trans-unit id="qqpGLJl" resname="label.content" approved="yes">
         <source>label.content</source>
-        <target state="translated">Obsah</target>
+        <target state="final">Obsah</target>
       </trans-unit>
       <trans-unit id="a2klMSd" resname="label.slug" approved="yes">
         <source>label.slug</source>
-        <target state="translated">Slug (link)</target>
+        <target state="final">Slug (link)</target>
       </trans-unit>
       <trans-unit id="6WLYQgT" resname="label.feedback_content" approved="yes">
         <source>label.feedback_content</source>
-        <target state="translated">Vaše návrhy na zlepšení</target>
+        <target state="final">Vaše návrhy na zlepšení</target>
       </trans-unit>
       <trans-unit id="qS_918I" resname="label.feedback_email" approved="yes">
         <source>label.feedback_email</source>
-        <target state="translated">Váš email (nepovinný)</target>
+        <target state="final">Váš email (nepovinný)</target>
       </trans-unit>
       <trans-unit id="lxKCuFm" resname="label.title_in_russian" approved="yes">
         <source>label.title_in_russian</source>
-        <target state="translated">Název v ruštině</target>
+        <target state="final">Název v ruštině</target>
       </trans-unit>
       <trans-unit id="hVqU4gg" resname="label.content_in_russian" approved="yes">
         <source>label.content_in_russian</source>
-        <target state="translated">Obsah v ruštině</target>
+        <target state="final">Obsah v ruštině</target>
       </trans-unit>
     </body>
   </file>
