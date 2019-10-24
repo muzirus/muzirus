@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\CzechWord;
 use App\Entity\Translation;
@@ -19,6 +18,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Webmozart\Assert\Assert;
 
 /**
@@ -40,7 +40,8 @@ class CzechWordTranslationController extends AbstractController
         CzechWord $word,
         TranslationFacade $translationFacade,
         CzechWordRepository $czechWordRepository,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = TranslationFormData::createFromCzechWord($word);
 
@@ -52,7 +53,7 @@ class CzechWordTranslationController extends AbstractController
 
             $dispatcher->dispatch(new TranslationCreatedEvent($this->getUser(), $translation));
 
-            $this->addFlashSuccess(Flashes::TRANSLATION_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.translation.created', [], 'flashes'));
 
             return $this->redirectToRoute('admin.czech-word.translations', ['id' => $word->getId()]);
         }
@@ -82,7 +83,8 @@ class CzechWordTranslationController extends AbstractController
         CzechWord $word,
         Translation $translation,
         TranslationFacade $translationFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = TranslationFormData::createFromTranslation($translation);
 
@@ -94,7 +96,7 @@ class CzechWordTranslationController extends AbstractController
 
             $dispatcher->dispatch(new TranslationUpdatedEvent($this->getUser(), $translation));
 
-            $this->addFlashSuccess(Flashes::TRANSLATION_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.translation.updated', [], 'flashes'));
 
             return $this->redirectToRoute(
                 'admin.czech-word.translations.edit',
@@ -127,13 +129,14 @@ class CzechWordTranslationController extends AbstractController
     public function translationsRemove(
         CzechWord $word,
         Translation $translation,
-        TranslationFacade $translationFacade
+        TranslationFacade $translationFacade,
+        TranslatorInterface $translator
     ): RedirectResponse {
         Assert::same($word, $translation->getCzechWord());
 
         $translationFacade->deleteTranslation($translation);
 
-        $this->addFlashSuccess(Flashes::TRANSLATION_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.translation.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.czech-word.translations', ['id' => $word->getId()]);
     }
@@ -159,13 +162,14 @@ class CzechWordTranslationController extends AbstractController
         CzechWord $word,
         Translation $translation,
         TranslationFacade $translationFacade,
-        string $position
+        string $position,
+        TranslatorInterface $translator
     ): RedirectResponse {
         Assert::same($word, $translation->getCzechWord());
 
         $translationFacade->updateTranslationPositionInCzechWordDetail($translation, $position);
 
-        $this->addFlashSuccess(Flashes::TRANSLATION_UPDATED);
+        $this->addFlashSuccess($translator->trans('admin.translation.deleted', [], 'flashes'));
 
         return $this->redirectToRoute(
             'admin.czech-word.translations',

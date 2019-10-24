@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\SourceType;
 use App\Event\SourceTypeCreatedEvent;
@@ -16,6 +15,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/source-type")
@@ -41,7 +41,8 @@ class SourceTypeController extends AbstractController
     public function add(
         Request $request,
         SourceTypeFacade $sourceTypeFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = new SourceTypeFormData();
 
@@ -53,7 +54,7 @@ class SourceTypeController extends AbstractController
 
             $dispatcher->dispatch(new SourceTypeCreatedEvent($this->getUser(), $sourceType));
 
-            $this->addFlashSuccess(Flashes::SOURCE_TYPE_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.source_type.created', [], 'flashes'));
 
             return $this->redirectToRoute('admin.source-type');
         }
@@ -73,7 +74,8 @@ class SourceTypeController extends AbstractController
         Request $request,
         SourceType $sourceType,
         SourceTypeFacade $sourceTypeFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = SourceTypeFormData::createFromSourceType($sourceType);
 
@@ -85,7 +87,7 @@ class SourceTypeController extends AbstractController
 
             $dispatcher->dispatch(new SourceTypeUpdatedEvent($this->getUser(), $sourceType));
 
-            $this->addFlashSuccess(Flashes::SOURCE_TYPE_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.source_type.updated', [], 'flashes'));
 
             return $this->redirectToRoute('admin.source-type');
         }
@@ -102,11 +104,14 @@ class SourceTypeController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.source-type.remove")
      */
-    public function remove(SourceType $sourceType, SourceTypeFacade $sourceTypeFacade): RedirectResponse
-    {
+    public function remove(
+        SourceType $sourceType,
+        SourceTypeFacade $sourceTypeFacade,
+        TranslatorInterface $translator
+    ): RedirectResponse {
         $sourceTypeFacade->deleteSourceType($sourceType);
 
-        $this->addFlashSuccess(Flashes::SOURCE_TYPE_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.source_type.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.source-type');
     }

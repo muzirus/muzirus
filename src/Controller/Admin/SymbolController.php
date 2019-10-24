@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Symbol;
 use App\Facade\SymbolFacade;
@@ -13,6 +12,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/symbol")
@@ -35,7 +35,7 @@ class SymbolController extends AbstractController
     /**
      * @Route("/add", methods={"GET", "POST"}, name="admin.symbol.add")
      */
-    public function add(Request $request, SymbolFacade $symbolFacade): Response
+    public function add(Request $request, SymbolFacade $symbolFacade, TranslatorInterface $translator): Response
     {
         $formData = new SymbolFormData();
 
@@ -45,7 +45,7 @@ class SymbolController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $symbolFacade->createSymbol($formData);
 
-            $this->addFlashSuccess(Flashes::SYMBOL_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.symbol.created', [], 'flashes'));
 
             return $this->redirectToRoute('admin.symbol');
         }
@@ -61,8 +61,12 @@ class SymbolController extends AbstractController
     /**
      * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.symbol.edit")
      */
-    public function edit(Request $request, Symbol $symbol, SymbolFacade $symbolFacade): Response
-    {
+    public function edit(
+        Request $request,
+        Symbol $symbol,
+        SymbolFacade $symbolFacade,
+        TranslatorInterface $translator
+    ): Response {
         $formData = SymbolFormData::createFromSymbol($symbol);
 
         $form = $this->createForm(SymbolForm::class, $formData);
@@ -71,7 +75,7 @@ class SymbolController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $symbolFacade->updateSymbol($symbol, $formData);
 
-            $this->addFlashSuccess(Flashes::SYMBOL_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.symbol.updated', [], 'flashes'));
 
             return $this->redirectToRoute('admin.symbol');
         }
@@ -88,11 +92,14 @@ class SymbolController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.symbol.remove")
      */
-    public function remove(Symbol $symbol, SymbolFacade $symbolFacade): RedirectResponse
-    {
+    public function remove(
+        Symbol $symbol,
+        SymbolFacade $symbolFacade,
+        TranslatorInterface $translator
+    ): RedirectResponse {
         $symbolFacade->deleteSymbol($symbol);
 
-        $this->addFlashSuccess(Flashes::SYMBOL_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.symbol.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.symbol');
     }

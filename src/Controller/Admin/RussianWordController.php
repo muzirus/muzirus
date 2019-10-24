@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\RussianWord;
 use App\Event\RussianWordCreatedEvent;
@@ -16,6 +15,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/russian-word")
@@ -41,7 +41,8 @@ class RussianWordController extends AbstractController
     public function add(
         Request $request,
         RussianWordFacade $russianWordFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = new RussianWordFormData();
 
@@ -53,7 +54,7 @@ class RussianWordController extends AbstractController
 
             $dispatcher->dispatch(new RussianWordCreatedEvent($this->getUser(), $word));
 
-            $this->addFlashSuccess(Flashes::WORD_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.word.created', [], 'flashes'));
 
             return $this->redirectToRoute('admin.russian-word.edit', ['id' => $word->getId()]);
         }
@@ -75,7 +76,8 @@ class RussianWordController extends AbstractController
         RussianWord $word,
         RussianWordFacade $russianWordFacade,
         RussianWordRepository $russianWordRepository,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = RussianWordFormData::createFromWord($word);
 
@@ -87,7 +89,7 @@ class RussianWordController extends AbstractController
 
             $dispatcher->dispatch(new RussianWordUpdatedEvent($this->getUser(), $word));
 
-            $this->addFlashSuccess(Flashes::WORD_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.word.updated', [], 'flashes'));
 
             return $this->redirectToRoute('admin.russian-word.edit', ['id' => $word->getId()]);
         }
@@ -106,12 +108,15 @@ class RussianWordController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.russian-word.remove")
      */
-    public function remove(RussianWord $word, RussianWordFacade $russianWordFacade): RedirectResponse
-    {
+    public function remove(
+        RussianWord $word,
+        RussianWordFacade $russianWordFacade,
+        TranslatorInterface $translator
+    ): RedirectResponse {
         $russianWordFacade->deleteRussianWord($word);
 
-        $this->addFlashSuccess('admin.word.deleted');
+        $this->addFlashSuccess($translator->trans('admin.word.deleted', [], 'flashes'));
 
-        return $this->redirectToRoute(Flashes::WORD_DELETED);
+        return $this->redirectToRoute('admin.russian-word');
     }
 }

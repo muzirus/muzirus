@@ -4,7 +4,7 @@ security:
         ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
     encoders:
         App\Entity\User:
-            algorithm: bcrypt
+            algorithm: auto
     providers:
         my_db_provider:
             entity:

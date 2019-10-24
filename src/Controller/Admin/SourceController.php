@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Source;
 use App\Event\SourceCreatedEvent;
@@ -16,6 +15,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/source")
@@ -38,8 +38,12 @@ class SourceController extends AbstractController
     /**
      * @Route("/add", methods={"GET", "POST"}, name="admin.source.add")
      */
-    public function add(Request $request, SourceFacade $sourceFacade, EventDispatcherInterface $dispatcher): Response
-    {
+    public function add(
+        Request $request,
+        SourceFacade $sourceFacade,
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
+    ): Response {
         $formData = new SourceFormData();
 
         $form = $this->createForm(SourceForm::class, $formData);
@@ -50,7 +54,7 @@ class SourceController extends AbstractController
 
             $dispatcher->dispatch(new SourceCreatedEvent($this->getUser(), $source));
 
-            $this->addFlashSuccess(Flashes::SOURCE_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.source.created', [], 'flashes'));
 
             return $this->redirectToRoute('admin.source');
         }
@@ -70,7 +74,8 @@ class SourceController extends AbstractController
         Request $request,
         Source $source,
         SourceFacade $sourceFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = SourceFormData::createFromSource($source);
 
@@ -82,7 +87,7 @@ class SourceController extends AbstractController
 
             $dispatcher->dispatch(new SourceUpdatedEvent($this->getUser(), $source));
 
-            $this->addFlashSuccess(Flashes::SOURCE_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.source.updated', [], 'flashes'));
 
             return $this->redirectToRoute('admin.source');
         }
@@ -99,11 +104,14 @@ class SourceController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.source.remove")
      */
-    public function remove(Source $source, SourceFacade $sourceFacade): RedirectResponse
-    {
+    public function remove(
+        Source $source,
+        SourceFacade $sourceFacade,
+        TranslatorInterface $translator
+    ): RedirectResponse {
         $sourceFacade->deleteSource($source);
 
-        $this->addFlashSuccess(Flashes::SOURCE_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.source.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.source');
     }
