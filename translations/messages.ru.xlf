@@ -295,7 +295,7 @@
       </trans-unit>
       <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing">
         <source>admin.word_with_accent_is_missing</source>
-        <target state="translated">Не хватает слова с ударением (сохраните изменения)</target>
+        <target state="final">Не хватает слова с ударением (сохраните изменения)</target>
       </trans-unit>
       <trans-unit id="AVWkXBb" resname="admin.yes">
         <source>admin.yes</source>
@@ -331,7 +331,7 @@
       </trans-unit>
       <trans-unit id="JDP_UTo" resname="admin.exemplifications">
         <source>admin.exemplifications</source>
-        <target state="translated">Экземплификации</target>
+        <target state="final">Экземплификации</target>
       </trans-unit>
       <trans-unit id="nz0pECm" resname="admin.exception_to_inflection">
         <source>admin.exception_to_inflection</source>
@@ -383,7 +383,7 @@
       </trans-unit>
       <trans-unit id="xNrkv18" resname="app.link.intercorp">
         <source>app.link.intercorp</source>
-        <target state="translated">Ссылка на слово в корпусах InterCorp</target>
+        <target state="final">Ссылка на слово в корпусах InterCorp</target>
       </trans-unit>
       <trans-unit id="_BqshM0" resname="app.abbreviation">
         <source>app.abbreviation</source>
@@ -467,23 +467,23 @@
       </trans-unit>
       <trans-unit id="9FFoFcf" resname="app.feedback_intro">
         <source>app.feedback_intro</source>
-        <target state="translated">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
+        <target state="final">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
       </trans-unit>
       <trans-unit id="QsL30Os" resname="app.write_us">
         <source>app.write_us</source>
-        <target state="translated">Свяжитесь с нами!</target>
+        <target state="final">Свяжитесь с нами!</target>
       </trans-unit>
       <trans-unit id="1kT3pVy" resname="app.thank_you">
         <source>app.thank_you</source>
-        <target state="translated">Благодарим Вас за содействие!</target>
+        <target state="final">Благодарим Вас за содействие!</target>
       </trans-unit>
       <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text">
         <source>app.feedback.content.help_text</source>
-        <target state="translated">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
+        <target state="final">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
       </trans-unit>
       <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text">
         <source>app.feedback.email.help_text</source>
-        <target state="translated">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
+        <target state="final">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
       </trans-unit>
       <trans-unit id="sB.hsgu" resname="admin.title_in_russian">
         <source>admin.title_in_russian</source>
