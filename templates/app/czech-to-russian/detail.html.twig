@@ -63,7 +63,7 @@
                     <small class="text-primary">{{ translation.czechWordNote }}</small>
                 {% endif %}
             </em>
-            {% spaceless %}
+            {% apply spaceless %}
                 <a href="{{ path('app.russian_to_czech.detail', { id: translation.russianWord.id }) }}">
                     {% if translation.russianWord.contentWithAccent is not empty %}
                         <strong>{{ translation.russianWord.contentWithAccent|highlight_accent }}</strong>
@@ -71,7 +71,7 @@
                         <strong>{{ translation.russianWord.content }}</strong>
                     {% endif %}
                 </a>
-            {% endspaceless %}
+            {% endapply %}
             {{ translation.russianWord|word_info_after }}
         </h3>
 
