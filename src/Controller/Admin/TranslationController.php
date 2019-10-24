@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Translation;
 use App\Event\TranslationUpdatedEvent;
@@ -15,6 +14,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/translation")
@@ -41,7 +41,8 @@ class TranslationController extends AbstractController
         Request $request,
         Translation $translation,
         TranslationFacade $translationFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = TranslationFormData::createFromTranslation($translation);
 
@@ -53,7 +54,7 @@ class TranslationController extends AbstractController
 
             $dispatcher->dispatch(new TranslationUpdatedEvent($this->getUser(), $translation));
 
-            $this->addFlashSuccess(Flashes::TRANSLATION_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.translation.updated', [], 'flashes'));
 
             return $this->redirectToRoute('admin.translation.edit', ['id' => $translation->getId()]);
         }
@@ -70,11 +71,14 @@ class TranslationController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.translation.remove")
      */
-    public function remove(Translation $translation, TranslationFacade $translationFacade): RedirectResponse
-    {
+    public function remove(
+        Translation $translation,
+        TranslationFacade $translationFacade,
+        TranslatorInterface $translator
+    ): RedirectResponse {
         $translationFacade->deleteTranslation($translation);
 
-        $this->addFlashSuccess(Flashes::TRANSLATION_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.translation.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.translation');
     }

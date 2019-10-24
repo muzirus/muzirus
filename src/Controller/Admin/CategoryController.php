@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Category;
 use App\Event\CategoryCreatedEvent;
@@ -16,6 +15,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/category")
@@ -41,7 +41,8 @@ class CategoryController extends AbstractController
     public function add(
         Request $request,
         CategoryFacade $categoryFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = new CategoryFormData();
 
@@ -53,7 +54,7 @@ class CategoryController extends AbstractController
 
             $dispatcher->dispatch(new CategoryCreatedEvent($this->getUser(), $category));
 
-            $this->addFlashSuccess(Flashes::CATEGORY_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.category.created', [], 'flashes'));
 
             return $this->redirectToRoute('admin.category');
         }
@@ -73,7 +74,8 @@ class CategoryController extends AbstractController
         Request $request,
         Category $category,
         CategoryFacade $categoryFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = CategoryFormData::createFromCategory($category);
 
@@ -85,7 +87,7 @@ class CategoryController extends AbstractController
 
             $dispatcher->dispatch(new CategoryUpdatedEvent($this->getUser(), $category));
 
-            $this->addFlashSuccess(Flashes::CATEGORY_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.category.updated', [], 'flashes'));
 
             return $this->redirectToRoute('admin.category');
         }
@@ -102,11 +104,14 @@ class CategoryController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.category.remove")
      */
-    public function remove(Category $category, CategoryFacade $categoryFacade): RedirectResponse
-    {
+    public function remove(
+        Category $category,
+        CategoryFacade $categoryFacade,
+        TranslatorInterface $translator
+    ): RedirectResponse {
         $categoryFacade->deleteCategory($category);
 
-        $this->addFlashSuccess(Flashes::CATEGORY_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.category.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.category');
     }

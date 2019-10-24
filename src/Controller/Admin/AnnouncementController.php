@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Announcement;
 use App\Facade\AnnouncementFacade;
@@ -13,6 +12,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/announcement")
@@ -35,8 +35,11 @@ class AnnouncementController extends AbstractController
     /**
      * @Route("/add", methods={"GET", "POST"}, name="admin.announcement.add")
      */
-    public function add(Request $request, AnnouncementFacade $announcementFacade): Response
-    {
+    public function add(
+        Request $request,
+        AnnouncementFacade $announcementFacade,
+        TranslatorInterface $translator
+    ): Response {
         $formData = new AnnouncementFormData();
 
         $form = $this->createForm(AnnouncementForm::class, $formData);
@@ -45,7 +48,7 @@ class AnnouncementController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $announcement = $announcementFacade->createAnnouncement($formData);
 
-            $this->addFlashSuccess(Flashes::ANNOUNCEMENT_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.announcement.created', [], 'flashes'));
 
             return $this->redirectToRoute(
                 'admin.announcement.edit',
@@ -66,8 +69,12 @@ class AnnouncementController extends AbstractController
     /**
      * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.announcement.edit")
      */
-    public function edit(Request $request, Announcement $announcement, AnnouncementFacade $announcementFacade): Response
-    {
+    public function edit(
+        Request $request,
+        Announcement $announcement,
+        AnnouncementFacade $announcementFacade,
+        TranslatorInterface $translator
+    ): Response {
         $formData = AnnouncementFormData::createFromAnnouncement($announcement);
 
         $form = $this->createForm(AnnouncementForm::class, $formData);
@@ -76,7 +83,7 @@ class AnnouncementController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $announcementFacade->updateAnnouncement($announcement, $formData);
 
-            $this->addFlashSuccess(Flashes::ANNOUNCEMENT_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.announcement.updated', [], 'flashes'));
 
             return $this->redirectToRoute(
                 'admin.announcement.edit',
@@ -98,11 +105,14 @@ class AnnouncementController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.announcement.remove")
      */
-    public function remove(Announcement $announcement, AnnouncementFacade $announcementFacade): RedirectResponse
-    {
+    public function remove(
+        Announcement $announcement,
+        AnnouncementFacade $announcementFacade,
+        TranslatorInterface $translator
+    ): RedirectResponse {
         $announcementFacade->deleteAnnouncement($announcement);
 
-        $this->addFlashSuccess(Flashes::ANNOUNCEMENT_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.announcement.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.announcement');
     }

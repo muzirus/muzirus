@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\TranslationExample;
 use App\Event\TranslationExampleUpdatedEvent;
@@ -15,6 +14,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/translation-example")
@@ -41,7 +41,8 @@ class TranslationExampleController extends AbstractController
         Request $request,
         TranslationExample $translationExample,
         TranslationExampleFacade $translationExampleFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = TranslationExampleFormData::fromTranslationExample($translationExample);
 
@@ -53,7 +54,7 @@ class TranslationExampleController extends AbstractController
 
             $dispatcher->dispatch(new TranslationExampleUpdatedEvent($this->getUser(), $translationExample));
 
-            $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.translation_example.updated', [], 'flashes'));
 
             return $this->redirectToRoute(
                 'admin.translation-example.edit',
@@ -77,11 +78,12 @@ class TranslationExampleController extends AbstractController
      */
     public function remove(
         TranslationExample $translationExample,
-        TranslationExampleFacade $translationExampleFacade
+        TranslationExampleFacade $translationExampleFacade,
+        TranslatorInterface $translator
     ): RedirectResponse {
         $translationExampleFacade->deleteTranslationExample($translationExample);
 
-        $this->addFlashSuccess(Flashes::TRANSLATION_EXAMPLE_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.translation_example.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.translation-example');
     }

@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\CzechWord;
 use App\Event\CzechWordCreatedEvent;
@@ -16,6 +15,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/czech-word")
@@ -41,7 +41,8 @@ class CzechWordController extends AbstractController
     public function add(
         Request $request,
         CzechWordFacade $czechWordFacade,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = new CzechWordFormData();
 
@@ -53,7 +54,7 @@ class CzechWordController extends AbstractController
 
             $dispatcher->dispatch(new CzechWordCreatedEvent($this->getUser(), $word));
 
-            $this->addFlashSuccess(Flashes::WORD_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.word.created', [], 'flashes'));
 
             return $this->redirectToRoute('admin.czech-word.edit', ['id' => $word->getId()]);
         }
@@ -75,7 +76,8 @@ class CzechWordController extends AbstractController
         CzechWord $word,
         CzechWordFacade $czechWordFacade,
         CzechWordRepository $czechWordRepository,
-        EventDispatcherInterface $dispatcher
+        EventDispatcherInterface $dispatcher,
+        TranslatorInterface $translator
     ): Response {
         $formData = CzechWordFormData::createFromWord($word);
 
@@ -87,7 +89,7 @@ class CzechWordController extends AbstractController
 
             $dispatcher->dispatch(new CzechWordUpdatedEvent($this->getUser(), $word));
 
-            $this->addFlashSuccess(Flashes::WORD_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.word.updated', [], 'flashes'));
 
             return $this->redirectToRoute('admin.czech-word.edit', ['id' => $word->getId()]);
         }
@@ -106,11 +108,14 @@ class CzechWordController extends AbstractController
     /**
      * @Route("/{id}/remove", requirements={"id": "\d+"}, methods={"POST"}, name="admin.czech-word.remove")
      */
-    public function remove(CzechWord $word, CzechWordFacade $czechWordFacade): RedirectResponse
-    {
+    public function remove(
+        CzechWord $word,
+        CzechWordFacade $czechWordFacade,
+        TranslatorInterface $translator
+    ): RedirectResponse {
         $czechWordFacade->deleteCzechWord($word);
 
-        $this->addFlashSuccess(Flashes::WORD_DELETED);
+        $this->addFlashSuccess($translator->trans('admin.word.deleted', [], 'flashes'));
 
         return $this->redirectToRoute('admin.czech-word');
     }

@@ -119,6 +119,8 @@
             "@composer-schema-validate",
             "@doctrine-schema-validate"
         ],
+        "translations:dump": "@php bin/console translation:update zu --dump-messages",
+        "translations:update": "@php bin/console translation:update zu --dump-messages --force",
         "prod": "@composer install --no-dev",
         "lock": "@composer update --lock"
     },

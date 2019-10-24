@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Constant\Flashes;
 use App\Controller\AbstractController;
 use App\Entity\Post;
 use App\Facade\PostFacade;
@@ -12,6 +11,7 @@ use App\Repository\PostRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("admin/post")
@@ -34,7 +34,7 @@ class PostController extends AbstractController
     /**
      * @Route("/add", methods={"GET", "POST"}, name="admin.post.add")
      */
-    public function add(Request $request, PostFacade $postFacade): Response
+    public function add(Request $request, PostFacade $postFacade, TranslatorInterface $translator): Response
     {
         $formData = new PostFormData();
 
@@ -44,7 +44,7 @@ class PostController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $post = $postFacade->createPost($formData);
 
-            $this->addFlashSuccess(Flashes::POST_CREATED);
+            $this->addFlashSuccess($translator->trans('admin.post.created', [], 'flashes'));
 
             return $this->redirectToRoute(
                 'admin.post.edit',
@@ -65,8 +65,12 @@ class PostController extends AbstractController
     /**
      * @Route("/{id}/edit", requirements={"id": "\d+"}, methods={"GET", "POST"}, name="admin.post.edit")
      */
-    public function edit(Request $request, Post $post, PostFacade $postFacade): Response
-    {
+    public function edit(
+        Request $request,
+        Post $post,
+        PostFacade $postFacade,
+        TranslatorInterface $translator
+    ): Response {
         $formData = PostFormData::fromPost($post);
 
         $form = $this->createForm(PostForm::class, $formData);
@@ -75,7 +79,7 @@ class PostController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $postFacade->updatePost($post, $formData);
 
-            $this->addFlashSuccess(Flashes::POST_UPDATED);
+            $this->addFlashSuccess($translator->trans('admin.post.updated', [], 'flashes'));
 
             return $this->redirectToRoute(
                 'admin.post.edit',
