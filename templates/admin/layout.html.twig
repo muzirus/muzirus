@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('build/css/admin.css') }}">
+    {{ encore_entry_link_tags('css/admin') }}
 {% endblock %}
 
 {% block javascripts %}
-    <script defer src="{{ asset('build/js/admin.js') }}"></script>
+    {{ encore_entry_script_tags('js/admin') }}
 {% endblock %}
 
 {% block body_class 'skin-purple hold-transition sidebar-mini fixed' %}
