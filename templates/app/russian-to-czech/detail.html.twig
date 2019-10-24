@@ -66,11 +66,11 @@
                     <small class="text-primary">{{ translation.russianWordNote }}</small>
                 {% endif %}
             </em>
-            {% spaceless %}
+            {% apply spaceless %}
                 <a href="{{ path('app.czech_to_russian.detail', { id: translation.czechWord.id }) }}">
                     <strong>{{ translation.czechWord }}</strong>
                 </a>
-            {% endspaceless %}
+            {% endapply %}
             {{ translation.czechWord|word_info_after }}
         </h3>
 
