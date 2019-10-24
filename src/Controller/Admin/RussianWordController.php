@@ -112,6 +112,6 @@ class RussianWordController extends AbstractController
 
         $this->addFlashSuccess('admin.word.deleted');
 
-        return $this->redirectToRoute(Flashes::WORD_DELETED);
+        return $this->redirectToRoute('admin.russian-word');
     }
 }
