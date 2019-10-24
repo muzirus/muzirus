@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="cs" target-language="ru" datatype="plaintext" original="file.ext">
+  <file source-language="zu" target-language="ru" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
@@ -293,7 +293,7 @@
         <source>admin.word_with_accent</source>
         <target state="translated">Слово с ударением</target>
       </trans-unit>
-      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing">
+      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing" approved="yes">
         <source>admin.word_with_accent_is_missing</source>
         <target state="final">Не хватает слова с ударением (сохраните изменения)</target>
       </trans-unit>
@@ -329,7 +329,7 @@
         <source>admin.equivalents</source>
         <target state="translated">Эквиваленты</target>
       </trans-unit>
-      <trans-unit id="JDP_UTo" resname="admin.exemplifications">
+      <trans-unit id="JDP_UTo" resname="admin.exemplifications" approved="yes">
         <source>admin.exemplifications</source>
         <target state="final">Экземплификации</target>
       </trans-unit>
@@ -381,7 +381,7 @@
         <source>app.updated_at</source>
         <target state="translated">Дата последнего изменения</target>
       </trans-unit>
-      <trans-unit id="xNrkv18" resname="app.link.intercorp">
+      <trans-unit id="xNrkv18" resname="app.link.intercorp" approved="yes">
         <source>app.link.intercorp</source>
         <target state="final">Ссылка на слово в корпусах InterCorp</target>
       </trans-unit>
@@ -465,23 +465,23 @@
         <source>app.menu.notations</source>
         <target state="translated">Нотация</target>
       </trans-unit>
-      <trans-unit id="9FFoFcf" resname="app.feedback_intro">
+      <trans-unit id="9FFoFcf" resname="app.feedback_intro" approved="yes">
         <source>app.feedback_intro</source>
         <target state="final">Вы не нашли то, что Вы искали, или у Вас появились идеи с которыми Вы желаете поделиться?</target>
       </trans-unit>
-      <trans-unit id="QsL30Os" resname="app.write_us">
+      <trans-unit id="QsL30Os" resname="app.write_us" approved="yes">
         <source>app.write_us</source>
         <target state="final">Свяжитесь с нами!</target>
       </trans-unit>
-      <trans-unit id="1kT3pVy" resname="app.thank_you">
+      <trans-unit id="1kT3pVy" resname="app.thank_you" approved="yes">
         <source>app.thank_you</source>
         <target state="final">Благодарим Вас за содействие!</target>
       </trans-unit>
-      <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text">
+      <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text" approved="yes">
         <source>app.feedback.content.help_text</source>
         <target state="final">Отправьте нам свои замечания или рекомендации новых понятий, которые, по Вашему мнению, стоит обработать. Можно предложить русские и чешские слова, добавить к ним пояснения или источник дополнительной информации, который нам советуете изучить.</target>
       </trans-unit>
-      <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text">
+      <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text" approved="yes">
         <source>app.feedback.email.help_text</source>
         <target state="final">На указанный адрес мы отправим отзыв или благодарность за предложенную Вами словарную статью.</target>
       </trans-unit>
