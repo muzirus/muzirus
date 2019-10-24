@@ -119,8 +119,16 @@
             "@composer-schema-validate",
             "@doctrine-schema-validate"
         ],
-        "translations:dump": "@php bin/console translation:update zu --dump-messages",
-        "translations:update": "@php bin/console translation:update zu --dump-messages --force",
+        "translation:dump": [
+            "@php bin/console translation:update zu --dump-messages",
+            "@php bin/console translation:update cs --dump-messages",
+            "@php bin/console translation:update ru --dump-messages"
+        ],
+        "translation:update": [
+            "@php bin/console translation:update zu --dump-messages --force",
+            "@php bin/console translation:update cs --dump-messages --force",
+            "@php bin/console translation:update ru --dump-messages --force"
+        ],
         "prod": "@composer install --no-dev",
         "lock": "@composer update --lock"
     },

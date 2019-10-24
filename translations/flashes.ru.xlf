@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="zu" target-language="ru" datatype="plaintext" original="file.ext">
+  <file source-language="cs" target-language="ru" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
@@ -100,6 +100,26 @@
       <trans-unit id="EacBDv5" resname="admin.word.deleted">
         <source>admin.word.deleted</source>
         <target state="needs-translation">admin.word.deleted</target>
+      </trans-unit>
+      <trans-unit id="TWdERNA" resname="admin.announcement.created">
+        <source>admin.announcement.created</source>
+        <target>__admin.announcement.created</target>
+      </trans-unit>
+      <trans-unit id="cosP4Tw" resname="admin.announcement.updated">
+        <source>admin.announcement.updated</source>
+        <target>__admin.announcement.updated</target>
+      </trans-unit>
+      <trans-unit id="FbkXzfz" resname="admin.announcement.deleted">
+        <source>admin.announcement.deleted</source>
+        <target>__admin.announcement.deleted</target>
+      </trans-unit>
+      <trans-unit id="LQ4fxCg" resname="admin.post.created">
+        <source>admin.post.created</source>
+        <target>__admin.post.created</target>
+      </trans-unit>
+      <trans-unit id="RZclx0q" resname="admin.post.updated">
+        <source>admin.post.updated</source>
+        <target>__admin.post.updated</target>
       </trans-unit>
     </body>
   </file>
