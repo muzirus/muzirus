@@ -384,9 +384,6 @@
     "symfony/polyfill-intl-idn": {
         "version": "v1.11.0"
     },
-    "symfony/polyfill-php73": {
-        "version": "v1.11.0"
-    },
     "symfony/process": {
         "version": "v4.0.4"
     },

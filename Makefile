@@ -29,10 +29,10 @@ phpunit:
 	docker-compose exec php sh -c "composer phpunit"
 
 cs:
-	docker-compose exec php sh -c "composer cs"
+	docker-compose exec php sh -c "composer ecs"
 
 cs-fix:
-	docker-compose exec php sh -c "composer cs-fix"
+	docker-compose exec php sh -c "composer ecs-fix"
 
 # catch all target (%) which does nothing to silently ignore the other goals.
 %:
