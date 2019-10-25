@@ -5,489 +5,489 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="CGzZr97" resname="admin.abbreviations">
+      <trans-unit id="CGzZr97" resname="admin.abbreviations" approved="yes">
         <source>admin.abbreviations</source>
-        <target state="translated">Zkratky</target>
+        <target state="final">Zkratky</target>
       </trans-unit>
-      <trans-unit id="sbhZQg4" resname="admin.actions">
+      <trans-unit id="sbhZQg4" resname="admin.actions" approved="yes">
         <source>admin.actions</source>
-        <target state="translated">Akce</target>
+        <target state="final">Akce</target>
       </trans-unit>
-      <trans-unit id="pi9wrKg" resname="admin.activities">
+      <trans-unit id="pi9wrKg" resname="admin.activities" approved="yes">
         <source>admin.activities</source>
-        <target state="translated">Aktivity</target>
+        <target state="final">Aktivity</target>
       </trans-unit>
-      <trans-unit id="ZV9LX17" resname="admin.approved">
+      <trans-unit id="ZV9LX17" resname="admin.approved" approved="yes">
         <source>admin.approved</source>
-        <target state="translated">Schváleno</target>
+        <target state="final">Schváleno</target>
       </trans-unit>
-      <trans-unit id="P.Hnfjo" resname="admin.authors">
+      <trans-unit id="P.Hnfjo" resname="admin.authors" approved="yes">
         <source>admin.authors</source>
-        <target state="translated">Autoři</target>
+        <target state="final">Autoři</target>
       </trans-unit>
-      <trans-unit id="4BclTtg" resname="admin.box.title.add">
+      <trans-unit id="4BclTtg" resname="admin.box.title.add" approved="yes">
         <source>admin.box.title.add</source>
-        <target state="translated">Přidat</target>
+        <target state="final">Přidat</target>
       </trans-unit>
-      <trans-unit id="Ksz0Zf3" resname="admin.box.title.edit">
+      <trans-unit id="Ksz0Zf3" resname="admin.box.title.edit" approved="yes">
         <source>admin.box.title.edit</source>
-        <target state="translated">Upravit</target>
+        <target state="final">Upravit</target>
       </trans-unit>
-      <trans-unit id="Ey5h7lv" resname="admin.button.add_abbreviation">
+      <trans-unit id="Ey5h7lv" resname="admin.button.add_abbreviation" approved="yes">
         <source>admin.button.add_abbreviation</source>
-        <target state="translated">Přidat zkratku</target>
+        <target state="final">Přidat zkratku</target>
       </trans-unit>
-      <trans-unit id="C.SnTPc" resname="admin.button.add_category">
+      <trans-unit id="C.SnTPc" resname="admin.button.add_category" approved="yes">
         <source>admin.button.add_category</source>
-        <target state="translated">Přidat kategorii</target>
+        <target state="final">Přidat kategorii</target>
       </trans-unit>
-      <trans-unit id="QoqVREI" resname="admin.button.add_equivalent">
+      <trans-unit id="QoqVREI" resname="admin.button.add_equivalent" approved="yes">
         <source>admin.button.add_equivalent</source>
-        <target state="translated">Přidat ekvivalent</target>
+        <target state="final">Přidat ekvivalent</target>
       </trans-unit>
-      <trans-unit id="DlJl4e5" resname="admin.button.add_new">
+      <trans-unit id="DlJl4e5" resname="admin.button.add_new" approved="yes">
         <source>admin.button.add_new</source>
-        <target state="translated">Přidat nové</target>
+        <target state="final">Přidat nové</target>
       </trans-unit>
-      <trans-unit id="fGgNoTe" resname="admin.button.add_source">
+      <trans-unit id="fGgNoTe" resname="admin.button.add_source" approved="yes">
         <source>admin.button.add_source</source>
-        <target state="translated">Přidat zdroj</target>
+        <target state="final">Přidat zdroj</target>
       </trans-unit>
-      <trans-unit id="0TR5Jf5" resname="admin.button.add_source_type">
+      <trans-unit id="0TR5Jf5" resname="admin.button.add_source_type" approved="yes">
         <source>admin.button.add_source_type</source>
-        <target state="translated">Přidat typ zdroje</target>
+        <target state="final">Přidat typ zdroje</target>
       </trans-unit>
-      <trans-unit id="n917io5" resname="admin.button.add_symbol">
+      <trans-unit id="n917io5" resname="admin.button.add_symbol" approved="yes">
         <source>admin.button.add_symbol</source>
-        <target state="translated">Přidat symbol</target>
+        <target state="final">Přidat symbol</target>
       </trans-unit>
-      <trans-unit id="WU8OgUk" resname="admin.button.add_word">
+      <trans-unit id="WU8OgUk" resname="admin.button.add_word" approved="yes">
         <source>admin.button.add_word</source>
-        <target state="translated">Přidat slovo</target>
+        <target state="final">Přidat slovo</target>
       </trans-unit>
-      <trans-unit id="TVLcjT8" resname="admin.button.add_user">
+      <trans-unit id="TVLcjT8" resname="admin.button.add_user" approved="yes">
         <source>admin.button.add_user</source>
-        <target state="translated">Přidat uživatele</target>
+        <target state="final">Přidat uživatele</target>
       </trans-unit>
-      <trans-unit id="yXBGMRp" resname="admin.button.back_to_list">
+      <trans-unit id="yXBGMRp" resname="admin.button.back_to_list" approved="yes">
         <source>admin.button.back_to_list</source>
-        <target state="translated">Zpět na seznam</target>
+        <target state="final">Zpět na seznam</target>
       </trans-unit>
-      <trans-unit id="ZLMhXCg" resname="admin.button.back_to_translations">
+      <trans-unit id="ZLMhXCg" resname="admin.button.back_to_translations" approved="yes">
         <source>admin.button.back_to_translations</source>
-        <target state="translated">Zpět na překlady</target>
+        <target state="final">Zpět na překlady</target>
       </trans-unit>
-      <trans-unit id="2eOpgs4" resname="admin.button.back_to_translation_examples">
+      <trans-unit id="2eOpgs4" resname="admin.button.back_to_translation_examples" approved="yes">
         <source>admin.button.back_to_translation_examples</source>
-        <target state="translated">Zpět na ukázky překladů</target>
+        <target state="final">Zpět na ukázky překladů</target>
       </trans-unit>
-      <trans-unit id="YvRfkVZ" resname="admin.button.edit">
+      <trans-unit id="YvRfkVZ" resname="admin.button.edit" approved="yes">
         <source>admin.button.edit</source>
-        <target state="translated">Upravit</target>
+        <target state="final">Upravit</target>
       </trans-unit>
-      <trans-unit id="EFinykD" resname="admin.button.remove">
+      <trans-unit id="EFinykD" resname="admin.button.remove" approved="yes">
         <source>admin.button.remove</source>
-        <target state="translated">Odstranit</target>
+        <target state="final">Odstranit</target>
       </trans-unit>
-      <trans-unit id="VJnpThW" resname="admin.button.save">
+      <trans-unit id="VJnpThW" resname="admin.button.save" approved="yes">
         <source>admin.button.save</source>
-        <target state="translated">Uložit</target>
+        <target state="final">Uložit</target>
       </trans-unit>
-      <trans-unit id="TsqB94w" resname="admin.button.save_and_new">
+      <trans-unit id="TsqB94w" resname="admin.button.save_and_new" approved="yes">
         <source>admin.button.save_and_new</source>
-        <target state="translated">Uložit a nové</target>
+        <target state="final">Uložit a nové</target>
       </trans-unit>
-      <trans-unit id="wxCfZlI" resname="admin.created">
+      <trans-unit id="wxCfZlI" resname="admin.created" approved="yes">
         <source>admin.created</source>
-        <target state="translated">Vytvořeno</target>
+        <target state="final">Vytvořeno</target>
       </trans-unit>
-      <trans-unit id="SMA_Ggq" resname="admin.czech">
+      <trans-unit id="SMA_Ggq" resname="admin.czech" approved="yes">
         <source>admin.czech</source>
-        <target state="translated">České</target>
+        <target state="final">České</target>
       </trans-unit>
-      <trans-unit id="7wvN45X" resname="admin.czech_note">
+      <trans-unit id="7wvN45X" resname="admin.czech_note" approved="yes">
         <source>admin.czech_note</source>
-        <target state="translated">Česká poznámka</target>
+        <target state="final">Česká poznámka</target>
       </trans-unit>
-      <trans-unit id="uNVn6wf" resname="admin.czech_sentence">
+      <trans-unit id="uNVn6wf" resname="admin.czech_sentence" approved="yes">
         <source>admin.czech_sentence</source>
-        <target state="translated">Česká věta</target>
+        <target state="final">Česká věta</target>
       </trans-unit>
-      <trans-unit id="erA_SSh" resname="admin.czech_word">
+      <trans-unit id="erA_SSh" resname="admin.czech_word" approved="yes">
         <source>admin.czech_word</source>
-        <target state="translated">České slovo</target>
+        <target state="final">České slovo</target>
       </trans-unit>
-      <trans-unit id="QUx_B.1" resname="admin.czech_words">
+      <trans-unit id="QUx_B.1" resname="admin.czech_words" approved="yes">
         <source>admin.czech_words</source>
-        <target state="translated">Česká slova</target>
+        <target state="final">Česká slova</target>
       </trans-unit>
-      <trans-unit id="540R2gg" resname="admin.dashboard">
+      <trans-unit id="540R2gg" resname="admin.dashboard" approved="yes">
         <source>admin.dashboard</source>
-        <target state="translated">Nástěnka</target>
+        <target state="final">Nástěnka</target>
       </trans-unit>
-      <trans-unit id="cGC_Rml" resname="admin.deleted">
+      <trans-unit id="cGC_Rml" resname="admin.deleted" approved="yes">
         <source>admin.deleted</source>
-        <target state="translated">Smazáno</target>
+        <target state="final">Smazáno</target>
       </trans-unit>
-      <trans-unit id="QTO0aOj" resname="admin.description">
+      <trans-unit id="QTO0aOj" resname="admin.description" approved="yes">
         <source>admin.description</source>
-        <target state="translated">Popis</target>
+        <target state="final">Popis</target>
       </trans-unit>
-      <trans-unit id="CBbI8g4" resname="admin.examples">
+      <trans-unit id="CBbI8g4" resname="admin.examples" approved="yes">
         <source>admin.examples</source>
-        <target state="translated">Ukázky</target>
+        <target state="final">Ukázky</target>
       </trans-unit>
-      <trans-unit id="H1Z5Hld" resname="admin.explanation">
+      <trans-unit id="H1Z5Hld" resname="admin.explanation" approved="yes">
         <source>admin.explanation</source>
-        <target state="translated">Vysvětlení</target>
+        <target state="final">Vysvětlení</target>
       </trans-unit>
-      <trans-unit id="q.FI9Wn" resname="admin.gender">
+      <trans-unit id="q.FI9Wn" resname="admin.gender" approved="yes">
         <source>admin.gender</source>
-        <target state="translated">Rod</target>
+        <target state="final">Rod</target>
       </trans-unit>
-      <trans-unit id=".dE4hhi" resname="admin.hidden">
+      <trans-unit id=".dE4hhi" resname="admin.hidden" approved="yes">
         <source>admin.hidden</source>
-        <target state="translated">Schováno</target>
+        <target state="final">Schováno</target>
       </trans-unit>
-      <trans-unit id="bNf4bJZ" resname="admin.home">
+      <trans-unit id="bNf4bJZ" resname="admin.home" approved="yes">
         <source>admin.home</source>
-        <target state="translated">Domů</target>
+        <target state="final">Domů</target>
       </trans-unit>
-      <trans-unit id="dzNyV0R" resname="admin.inflection">
+      <trans-unit id="dzNyV0R" resname="admin.inflection" approved="yes">
         <source>admin.inflection</source>
-        <target state="translated">Skloňování</target>
+        <target state="final">Skloňování</target>
       </trans-unit>
-      <trans-unit id="zTvnmsO" resname="admin.language_note">
+      <trans-unit id="zTvnmsO" resname="admin.language_note" approved="yes">
         <source>admin.language_note</source>
-        <target state="translated">Jazyková poznámka</target>
+        <target state="final">Jazyková poznámka</target>
       </trans-unit>
-      <trans-unit id="VnaTAPO" resname="admin.news">
+      <trans-unit id="VnaTAPO" resname="admin.news" approved="yes">
         <source>admin.news</source>
-        <target state="translated">Novinky</target>
+        <target state="final">Novinky</target>
       </trans-unit>
-      <trans-unit id="8Kxt.xW" resname="admin.no">
+      <trans-unit id="8Kxt.xW" resname="admin.no" approved="yes">
         <source>admin.no</source>
-        <target state="translated">Ne</target>
+        <target state="final">Ne</target>
       </trans-unit>
-      <trans-unit id="tb6FviE" resname="admin.no_news_yet">
+      <trans-unit id="tb6FviE" resname="admin.no_news_yet" approved="yes">
         <source>admin.no_news_yet</source>
-        <target state="translated">Zatím žádné novinky</target>
+        <target state="final">Zatím žádné novinky</target>
       </trans-unit>
-      <trans-unit id="8AyOkeC" resname="admin.original_database">
+      <trans-unit id="8AyOkeC" resname="admin.original_database" approved="yes">
         <source>admin.original_database</source>
-        <target state="translated">Původní databáze</target>
+        <target state="final">Původní databáze</target>
       </trans-unit>
-      <trans-unit id="o59YO88" resname="admin.other">
+      <trans-unit id="o59YO88" resname="admin.other" approved="yes">
         <source>admin.other</source>
-        <target state="translated">Ostatní</target>
+        <target state="final">Ostatní</target>
       </trans-unit>
-      <trans-unit id="1Z2K2C0" resname="admin.pages_count">
+      <trans-unit id="1Z2K2C0" resname="admin.pages_count" approved="yes">
         <source>admin.pages_count</source>
-        <target state="translated">Počet stran</target>
+        <target state="final">Počet stran</target>
       </trans-unit>
-      <trans-unit id="lcCLsWy" resname="admin.published_date">
+      <trans-unit id="lcCLsWy" resname="admin.published_date" approved="yes">
         <source>admin.published_date</source>
-        <target state="translated">Datum vydání</target>
+        <target state="final">Datum vydání</target>
       </trans-unit>
-      <trans-unit id="6SLpLKU" resname="admin.published_place">
+      <trans-unit id="6SLpLKU" resname="admin.published_place" approved="yes">
         <source>admin.published_place</source>
-        <target state="translated">Místo vydání</target>
+        <target state="final">Místo vydání</target>
       </trans-unit>
-      <trans-unit id="sFSIpnn" resname="admin.publisher">
+      <trans-unit id="sFSIpnn" resname="admin.publisher" approved="yes">
         <source>admin.publisher</source>
-        <target state="translated">Vydavatel</target>
+        <target state="final">Vydavatel</target>
       </trans-unit>
-      <trans-unit id="6kA8Ada" resname="admin.russian">
+      <trans-unit id="6kA8Ada" resname="admin.russian" approved="yes">
         <source>admin.russian</source>
-        <target state="translated">Ruské</target>
+        <target state="final">Ruské</target>
       </trans-unit>
-      <trans-unit id="absP7S7" resname="admin.russian_words">
+      <trans-unit id="absP7S7" resname="admin.russian_words" approved="yes">
         <source>admin.russian_words</source>
-        <target state="translated">Ruská slova</target>
+        <target state="final">Ruská slova</target>
       </trans-unit>
-      <trans-unit id=".lIOZ8u" resname="admin.russian_note">
+      <trans-unit id=".lIOZ8u" resname="admin.russian_note" approved="yes">
         <source>admin.russian_note</source>
-        <target state="translated">Ruská poznámka</target>
+        <target state="final">Ruská poznámka</target>
       </trans-unit>
-      <trans-unit id="EcLZZCv" resname="admin.russian_sentence">
+      <trans-unit id="EcLZZCv" resname="admin.russian_sentence" approved="yes">
         <source>admin.russian_sentence</source>
-        <target state="translated">Ruská věta</target>
+        <target state="final">Ruská věta</target>
       </trans-unit>
-      <trans-unit id="EPxSfQm" resname="admin.russian_word">
+      <trans-unit id="EPxSfQm" resname="admin.russian_word" approved="yes">
         <source>admin.russian_word</source>
-        <target state="translated">Ruské slovo</target>
+        <target state="final">Ruské slovo</target>
       </trans-unit>
-      <trans-unit id="4z_BI3K" resname="admin.sign_out">
+      <trans-unit id="4z_BI3K" resname="admin.sign_out" approved="yes">
         <source>admin.sign_out</source>
-        <target state="translated">Odhlásit</target>
+        <target state="final">Odhlásit</target>
       </trans-unit>
-      <trans-unit id="_UEiBP." resname="admin.source">
+      <trans-unit id="_UEiBP." resname="admin.source" approved="yes">
         <source>admin.source</source>
-        <target state="translated">Zdroj</target>
+        <target state="final">Zdroj</target>
       </trans-unit>
-      <trans-unit id="5OVojhB" resname="admin.sources">
+      <trans-unit id="5OVojhB" resname="admin.sources" approved="yes">
         <source>admin.sources</source>
-        <target state="translated">Zdroje</target>
+        <target state="final">Zdroje</target>
       </trans-unit>
-      <trans-unit id="mY5YSB." resname="admin.source_types">
+      <trans-unit id="mY5YSB." resname="admin.source_types" approved="yes">
         <source>admin.source_types</source>
-        <target state="translated">Typy zdrojů</target>
+        <target state="final">Typy zdrojů</target>
       </trans-unit>
-      <trans-unit id="I0kHNHG" resname="admin.status">
+      <trans-unit id="I0kHNHG" resname="admin.status" approved="yes">
         <source>admin.status</source>
-        <target state="translated">Stav</target>
+        <target state="final">Stav</target>
       </trans-unit>
-      <trans-unit id="iAVdTlr" resname="admin.symbols">
+      <trans-unit id="iAVdTlr" resname="admin.symbols" approved="yes">
         <source>admin.symbols</source>
-        <target state="translated">Symboly</target>
+        <target state="final">Symboly</target>
       </trans-unit>
-      <trans-unit id="cuJvME7" resname="admin.system">
+      <trans-unit id="cuJvME7" resname="admin.system" approved="yes">
         <source>admin.system</source>
-        <target state="translated">Systém</target>
+        <target state="final">Systém</target>
       </trans-unit>
-      <trans-unit id="ioIKL10" resname="admin.tab.edit">
+      <trans-unit id="ioIKL10" resname="admin.tab.edit" approved="yes">
         <source>admin.tab.edit</source>
-        <target state="translated">Upravit</target>
+        <target state="final">Upravit</target>
       </trans-unit>
-      <trans-unit id="XneOvFD" resname="admin.title">
+      <trans-unit id="XneOvFD" resname="admin.title" approved="yes">
         <source>admin.title</source>
-        <target state="translated">Název</target>
+        <target state="final">Název</target>
       </trans-unit>
-      <trans-unit id="BWcOky8" resname="admin.translation">
+      <trans-unit id="BWcOky8" resname="admin.translation" approved="yes">
         <source>admin.translation</source>
-        <target state="translated">Překlad</target>
+        <target state="final">Překlad</target>
       </trans-unit>
-      <trans-unit id="4kkJ2qk" resname="admin.translations">
+      <trans-unit id="4kkJ2qk" resname="admin.translations" approved="yes">
         <source>admin.translations</source>
-        <target state="translated">Překlady</target>
+        <target state="final">Překlady</target>
       </trans-unit>
-      <trans-unit id="JNZM.Hg" resname="admin.type">
+      <trans-unit id="JNZM.Hg" resname="admin.type" approved="yes">
         <source>admin.type</source>
-        <target state="translated">Typ</target>
+        <target state="final">Typ</target>
       </trans-unit>
-      <trans-unit id="IuwmOhz" resname="admin.updated">
+      <trans-unit id="IuwmOhz" resname="admin.updated" approved="yes">
         <source>admin.updated</source>
-        <target state="translated">Aktualizováno</target>
+        <target state="final">Aktualizováno</target>
       </trans-unit>
-      <trans-unit id=".6JML1a" resname="admin.users">
+      <trans-unit id=".6JML1a" resname="admin.users" approved="yes">
         <source>admin.users</source>
-        <target state="translated">Uživatelé</target>
+        <target state="final">Uživatelé</target>
       </trans-unit>
-      <trans-unit id="b7wqUw4" resname="admin.value">
+      <trans-unit id="b7wqUw4" resname="admin.value" approved="yes">
         <source>admin.value</source>
-        <target state="translated">Hodnota</target>
+        <target state="final">Hodnota</target>
       </trans-unit>
-      <trans-unit id="vxRh7G0" resname="admin.visit_site">
+      <trans-unit id="vxRh7G0" resname="admin.visit_site" approved="yes">
         <source>admin.visit_site</source>
-        <target state="translated">Zobrazit stránku</target>
+        <target state="final">Zobrazit stránku</target>
       </trans-unit>
-      <trans-unit id="X62KUAn" resname="admin.word">
+      <trans-unit id="X62KUAn" resname="admin.word" approved="yes">
         <source>admin.word</source>
-        <target state="translated">Slovo</target>
+        <target state="final">Slovo</target>
       </trans-unit>
-      <trans-unit id="FJHBYMQ" resname="admin.words">
+      <trans-unit id="FJHBYMQ" resname="admin.words" approved="yes">
         <source>admin.words</source>
-        <target state="translated">Slova</target>
+        <target state="final">Slova</target>
       </trans-unit>
-      <trans-unit id="gyPtWlL" resname="admin.word_with_accent">
+      <trans-unit id="gyPtWlL" resname="admin.word_with_accent" approved="yes">
         <source>admin.word_with_accent</source>
-        <target state="translated">Slovo s akcentem</target>
+        <target state="final">Slovo s akcentem</target>
       </trans-unit>
-      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing">
+      <trans-unit id="5cIs8UR" resname="admin.word_with_accent_is_missing" approved="yes">
         <source>admin.word_with_accent_is_missing</source>
-        <target state="translated">Chybí slovo s akcentem (uložte formulář)</target>
+        <target state="final">Chybí slovo s akcentem (uložte formulář)</target>
       </trans-unit>
-      <trans-unit id="AVWkXBb" resname="admin.yes">
+      <trans-unit id="AVWkXBb" resname="admin.yes" approved="yes">
         <source>admin.yes</source>
-        <target state="translated">Ano</target>
+        <target state="final">Ano</target>
       </trans-unit>
-      <trans-unit id="V52jnON" resname="admin.not_processed">
+      <trans-unit id="V52jnON" resname="admin.not_processed" approved="yes">
         <source>admin.not_processed</source>
-        <target state="translated">Nezpracováno</target>
+        <target state="final">Nezpracováno</target>
       </trans-unit>
-      <trans-unit id="iC4gpUW" resname="admin.equivalents_not_found">
+      <trans-unit id="iC4gpUW" resname="admin.equivalents_not_found" approved="yes">
         <source>admin.equivalents_not_found</source>
-        <target state="translated">Nalezeny ekvivalenty</target>
+        <target state="final">Nalezeny ekvivalenty</target>
       </trans-unit>
-      <trans-unit id="zqkxrpL" resname="admin.examples_added">
+      <trans-unit id="zqkxrpL" resname="admin.examples_added" approved="yes">
         <source>admin.examples_added</source>
-        <target state="translated">Vloženy ukázky</target>
+        <target state="final">Vloženy ukázky</target>
       </trans-unit>
-      <trans-unit id="UDMqpcw" resname="admin.checked">
+      <trans-unit id="UDMqpcw" resname="admin.checked" approved="yes">
         <source>admin.checked</source>
-        <target state="translated">Zkontrolováno</target>
+        <target state="final">Zkontrolováno</target>
       </trans-unit>
-      <trans-unit id="2aLfPGw" resname="admin.tab.equivalents">
+      <trans-unit id="2aLfPGw" resname="admin.tab.equivalents" approved="yes">
         <source>admin.tab.equivalents</source>
-        <target state="translated">Ekvivalenty</target>
+        <target state="final">Ekvivalenty</target>
       </trans-unit>
-      <trans-unit id="41JKWc7" resname="admin.no_content">
+      <trans-unit id="41JKWc7" resname="admin.no_content" approved="yes">
         <source>admin.no_content</source>
-        <target state="translated">Žádný obsah</target>
+        <target state="final">Žádný obsah</target>
       </trans-unit>
-      <trans-unit id="oR01ae2" resname="admin.equivalents">
+      <trans-unit id="oR01ae2" resname="admin.equivalents" approved="yes">
         <source>admin.equivalents</source>
-        <target state="translated">Ekvivalenty</target>
+        <target state="final">Ekvivalenty</target>
       </trans-unit>
-      <trans-unit id="JDP_UTo" resname="admin.exemplifications">
+      <trans-unit id="JDP_UTo" resname="admin.exemplifications" approved="yes">
         <source>admin.exemplifications</source>
-        <target state="translated">Exemplifikace</target>
+        <target state="final">Exemplifikace</target>
       </trans-unit>
-      <trans-unit id="nz0pECm" resname="admin.exception_to_inflection">
+      <trans-unit id="nz0pECm" resname="admin.exception_to_inflection" approved="yes">
         <source>admin.exception_to_inflection</source>
-        <target state="translated">Výjimky</target>
+        <target state="final">Výjimky</target>
       </trans-unit>
-      <trans-unit id="Rd_ge0k" resname="admin.topics">
+      <trans-unit id="Rd_ge0k" resname="admin.topics" approved="yes">
         <source>admin.topics</source>
-        <target state="translated">Tematické okruhy</target>
+        <target state="final">Tematické okruhy</target>
       </trans-unit>
-      <trans-unit id="DSKNpQJ" resname="admin.topic">
+      <trans-unit id="DSKNpQJ" resname="admin.topic" approved="yes">
         <source>admin.topic</source>
-        <target state="translated">Tematický okruh</target>
+        <target state="final">Tematický okruh</target>
       </trans-unit>
-      <trans-unit id="rujVJ3G" resname="app.title">
+      <trans-unit id="rujVJ3G" resname="app.title" approved="yes">
         <source>app.title</source>
-        <target state="translated">Rusko-český, česko-ruský slovník hudebních pojmů online</target>
+        <target state="final">Rusko-český, česko-ruský slovník hudebních pojmů online</target>
       </trans-unit>
-      <trans-unit id="66McrTq" resname="app.title.topics">
+      <trans-unit id="66McrTq" resname="app.title.topics" approved="yes">
         <source>app.title.topics</source>
-        <target state="translated">Tematické okruhy</target>
+        <target state="final">Tematické okruhy</target>
       </trans-unit>
-      <trans-unit id="9QsvAMc" resname="app.title.vocabulary_russian">
+      <trans-unit id="9QsvAMc" resname="app.title.vocabulary_russian" approved="yes">
         <source>app.title.vocabulary_russian</source>
-        <target state="translated">Ruský heslář</target>
+        <target state="final">Ruský heslář</target>
       </trans-unit>
-      <trans-unit id="oPuW94E" resname="app.title.vocabulary_czech">
+      <trans-unit id="oPuW94E" resname="app.title.vocabulary_czech" approved="yes">
         <source>app.title.vocabulary_czech</source>
-        <target state="translated">Český heslář</target>
+        <target state="final">Český heslář</target>
       </trans-unit>
-      <trans-unit id="wevQNDx" resname="app.title.abbreviations">
+      <trans-unit id="wevQNDx" resname="app.title.abbreviations" approved="yes">
         <source>app.title.abbreviations</source>
-        <target state="translated">Zkratky</target>
+        <target state="final">Zkratky</target>
       </trans-unit>
-      <trans-unit id="G5Nl4Le" resname="app.title.notations">
+      <trans-unit id="G5Nl4Le" resname="app.title.notations" approved="yes">
         <source>app.title.notations</source>
-        <target state="translated">Glosář hudební notace</target>
+        <target state="final">Glosář hudební notace</target>
       </trans-unit>
-      <trans-unit id="2Rx6JsF" resname="app.title.proccessing_of_words">
+      <trans-unit id="2Rx6JsF" resname="app.title.proccessing_of_words" approved="yes">
         <source>app.title.proccessing_of_words</source>
-        <target state="translated">Zpracování hesel</target>
+        <target state="final">Zpracování hesel</target>
       </trans-unit>
-      <trans-unit id="sG537mo" resname="app.title.suggest_improvement">
+      <trans-unit id="sG537mo" resname="app.title.suggest_improvement" approved="yes">
         <source>app.title.suggest_improvement</source>
-        <target state="translated">Navrhnout zlepšení</target>
+        <target state="final">Navrhnout zlepšení</target>
       </trans-unit>
-      <trans-unit id="Dvk5L9V" resname="app.updated_at">
+      <trans-unit id="Dvk5L9V" resname="app.updated_at" approved="yes">
         <source>app.updated_at</source>
-        <target state="translated">Datum poslední změny:</target>
+        <target state="final">Datum poslední změny:</target>
       </trans-unit>
-      <trans-unit id="xNrkv18" resname="app.link.intercorp">
+      <trans-unit id="xNrkv18" resname="app.link.intercorp" approved="yes">
         <source>app.link.intercorp</source>
-        <target state="translated">Odkaz na heslo v korpusech InterCorp</target>
+        <target state="final">Odkaz na heslo v korpusech InterCorp</target>
       </trans-unit>
-      <trans-unit id="_BqshM0" resname="app.abbreviation">
+      <trans-unit id="_BqshM0" resname="app.abbreviation" approved="yes">
         <source>app.abbreviation</source>
-        <target state="translated">Zkratka</target>
+        <target state="final">Zkratka</target>
       </trans-unit>
-      <trans-unit id="8NE67Z5" resname="app.meaning">
+      <trans-unit id="8NE67Z5" resname="app.meaning" approved="yes">
         <source>app.meaning</source>
-        <target state="translated">Význam</target>
+        <target state="final">Význam</target>
       </trans-unit>
-      <trans-unit id="O9Z.97Q" resname="app.title.about_project">
+      <trans-unit id="O9Z.97Q" resname="app.title.about_project" approved="yes">
         <source>app.title.about_project</source>
-        <target state="translated">O projektu</target>
+        <target state="final">O projektu</target>
       </trans-unit>
-      <trans-unit id="gpMRAR9" resname="app.topics">
+      <trans-unit id="gpMRAR9" resname="app.topics" approved="yes">
         <source>app.topics</source>
-        <target state="translated">Tematické okruhy</target>
+        <target state="final">Tematické okruhy</target>
       </trans-unit>
-      <trans-unit id="Rcf1s3M" resname="admin.button.preview">
+      <trans-unit id="Rcf1s3M" resname="admin.button.preview" approved="yes">
         <source>admin.button.preview</source>
-        <target state="translated">Zobrazit ukázku</target>
+        <target state="final">Zobrazit ukázku</target>
       </trans-unit>
-      <trans-unit id="Aqplk4J" resname="admin.name">
+      <trans-unit id="Aqplk4J" resname="admin.name" approved="yes">
         <source>admin.name</source>
-        <target state="translated">Jméno</target>
+        <target state="final">Jméno</target>
       </trans-unit>
-      <trans-unit id="_a8huP6" resname="admin.email">
+      <trans-unit id="_a8huP6" resname="admin.email" approved="yes">
         <source>admin.email</source>
-        <target state="translated">Email</target>
+        <target state="final">Email</target>
       </trans-unit>
-      <trans-unit id="c07P7Xs" resname="admin.announcements">
+      <trans-unit id="c07P7Xs" resname="admin.announcements" approved="yes">
         <source>admin.announcements</source>
-        <target state="translated">Oznámení</target>
+        <target state="final">Oznámení</target>
       </trans-unit>
-      <trans-unit id="elpuZOz" resname="admin.author">
+      <trans-unit id="elpuZOz" resname="admin.author" approved="yes">
         <source>admin.author</source>
-        <target state="translated">Autor</target>
+        <target state="final">Autor</target>
       </trans-unit>
-      <trans-unit id="Bc_YkQZ" resname="admin.button.add_announcement">
+      <trans-unit id="Bc_YkQZ" resname="admin.button.add_announcement" approved="yes">
         <source>admin.button.add_announcement</source>
-        <target state="translated">Přidat oznámení</target>
+        <target state="final">Přidat oznámení</target>
       </trans-unit>
-      <trans-unit id="WDOKSsr" resname="admin.posts">
+      <trans-unit id="WDOKSsr" resname="admin.posts" approved="yes">
         <source>admin.posts</source>
-        <target state="translated">Články</target>
+        <target state="final">Články</target>
       </trans-unit>
-      <trans-unit id="iDIKEkQ" resname="admin.slug">
+      <trans-unit id="iDIKEkQ" resname="admin.slug" approved="yes">
         <source>admin.slug</source>
-        <target state="translated">Slug</target>
+        <target state="final">Slug</target>
       </trans-unit>
-      <trans-unit id="lF1PyIx" resname="admin.button.add_post">
+      <trans-unit id="lF1PyIx" resname="admin.button.add_post" approved="yes">
         <source>admin.button.add_post</source>
-        <target state="translated">Přidat článek</target>
+        <target state="final">Přidat článek</target>
       </trans-unit>
-      <trans-unit id="KNvZX6B" resname="admin.position">
+      <trans-unit id="KNvZX6B" resname="admin.position" approved="yes">
         <source>admin.position</source>
-        <target state="translated">Pozice</target>
+        <target state="final">Pozice</target>
       </trans-unit>
-      <trans-unit id="YgtsFut" resname="admin.messages">
+      <trans-unit id="YgtsFut" resname="admin.messages" approved="yes">
         <source>admin.messages</source>
-        <target state="translated">Zprávy</target>
+        <target state="final">Zprávy</target>
       </trans-unit>
-      <trans-unit id="07gHh4v" resname="app.title.feedback">
+      <trans-unit id="07gHh4v" resname="app.title.feedback" approved="yes">
         <source>app.title.feedback</source>
-        <target state="translated">Navrhnout zlepšení</target>
+        <target state="final">Navrhnout zlepšení</target>
       </trans-unit>
-      <trans-unit id="_iBE.pS" resname="app.button.close">
+      <trans-unit id="_iBE.pS" resname="app.button.close" approved="yes">
         <source>app.button.close</source>
-        <target state="translated">Zavřít</target>
+        <target state="final">Zavřít</target>
       </trans-unit>
-      <trans-unit id="offSCMJ" resname="app.button.send">
+      <trans-unit id="offSCMJ" resname="app.button.send" approved="yes">
         <source>app.button.send</source>
-        <target state="translated">Odeslat</target>
+        <target state="final">Odeslat</target>
       </trans-unit>
-      <trans-unit id="qlqlV3d" resname="admin.content">
+      <trans-unit id="qlqlV3d" resname="admin.content" approved="yes">
         <source>admin.content</source>
-        <target state="translated">Obsah</target>
+        <target state="final">Obsah</target>
       </trans-unit>
-      <trans-unit id="05k5L1N" resname="app.menu.notations">
+      <trans-unit id="05k5L1N" resname="app.menu.notations" approved="yes">
         <source>app.menu.notations</source>
-        <target state="translated">Notace</target>
+        <target state="final">Notace</target>
       </trans-unit>
-      <trans-unit id="9FFoFcf" resname="app.feedback_intro">
+      <trans-unit id="9FFoFcf" resname="app.feedback_intro" approved="yes">
         <source>app.feedback_intro</source>
-        <target state="translated">Nenašli jste, co jste hledali, nebo byste rádi něčím přispěli?</target>
+        <target state="final">Nenašli jste, co jste hledali, nebo byste rádi něčím přispěli?</target>
       </trans-unit>
-      <trans-unit id="QsL30Os" resname="app.write_us">
+      <trans-unit id="QsL30Os" resname="app.write_us" approved="yes">
         <source>app.write_us</source>
-        <target state="translated">Napište nám!</target>
+        <target state="final">Napište nám!</target>
       </trans-unit>
-      <trans-unit id="1kT3pVy" resname="app.thank_you">
+      <trans-unit id="1kT3pVy" resname="app.thank_you" approved="yes">
         <source>app.thank_you</source>
-        <target state="translated">Děkujeme Vám!</target>
+        <target state="final">Děkujeme Vám!</target>
       </trans-unit>
-      <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text">
+      <trans-unit id="c_ua2GD" resname="app.feedback.content.help_text" approved="yes">
         <source>app.feedback.content.help_text</source>
-        <target state="translated">Pošlete nám své připomínky nebo tipy na nová hesla, která bychom podle Vás měli zpracovat. Můžete navrhnout ruská i česká hesla, přidat vysvětlivku nebo informační zdroj, který stojí za prostudování.</target>
+        <target state="final">Pošlete nám své připomínky nebo tipy na nová hesla, která bychom podle Vás měli zpracovat. Můžete navrhnout ruská i česká hesla, přidat vysvětlivku nebo informační zdroj, který stojí za prostudování.</target>
       </trans-unit>
-      <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text">
+      <trans-unit id="LGOaAqL" resname="app.feedback.email.help_text" approved="yes">
         <source>app.feedback.email.help_text</source>
-        <target state="translated">Pokud uvedete svůj kontaktní e-mail, budeme Vás o zveřejnění Vámi navrženého hesla informovat.</target>
+        <target state="final">Pokud uvedete svůj kontaktní e-mail, budeme Vás o zveřejnění Vámi navrženého hesla informovat.</target>
       </trans-unit>
-      <trans-unit id="sB.hsgu" resname="admin.title_in_russian">
+      <trans-unit id="sB.hsgu" resname="admin.title_in_russian" approved="yes">
         <source>admin.title_in_russian</source>
-        <target state="translated">Název v ruštině</target>
+        <target state="final">Název v ruštině</target>
       </trans-unit>
     </body>
   </file>
