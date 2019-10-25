@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\LogEntry;
+use App\Entity\AbstractLogEntry;
 use App\Entity\LogEntryInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
@@ -13,7 +13,7 @@ class LogEntryRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, LogEntry::class);
+        parent::__construct($registry, AbstractLogEntry::class);
     }
 
     /**

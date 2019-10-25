@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace App\Entity;
+namespace App\Entity\LogEntry;
 
 use App\Entity\Able\TimestampableInterface;
 
-interface LogEntryInterface extends TimestampableInterface
+interface LogEntryInterface
 {
     public function getId(): int;
 
