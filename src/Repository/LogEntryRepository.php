@@ -2,8 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\AbstractLogEntry;
-use App\Entity\LogEntryInterface;
+use App\Entity\LogEntry\AbstractLogEntry;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 use Pagerfanta\Pagerfanta;
@@ -17,7 +16,7 @@ class LogEntryRepository extends ServiceEntityRepository
     }
 
     /**
-     * @return Pagerfanta|LogEntryInterface[]
+     * @return Pagerfanta|AbstractLogEntry[]
      */
     public function findAsPaginatorOptimizedForAdminActivityTimeline(int $page, int $maxPerPage = 10): Pagerfanta
     {

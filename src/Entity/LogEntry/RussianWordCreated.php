@@ -5,7 +5,7 @@ namespace App\Entity\LogEntry;
 use App\Entity\RussianWord;
 use App\Entity\User;
 
-class RussianWordCreatedAbstractLogEntry extends AbstractLogEntry
+class RussianWordCreated extends AbstractLogEntry
 {
     public function __construct(User $user, RussianWord $russianWord)
     {
@@ -19,5 +19,10 @@ class RussianWordCreatedAbstractLogEntry extends AbstractLogEntry
     public function getRussianWord(): ?RussianWord
     {
         return $this->russianWord;
+    }
+
+    public function toString(): string
+    {
+        return 'Russian word has been created';
     }
 }

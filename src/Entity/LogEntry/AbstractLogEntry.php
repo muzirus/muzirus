@@ -3,7 +3,14 @@
 namespace App\Entity\LogEntry;
 
 use App\Entity\Able\TimestampableInterface;
-use App\Entity\UserInterface;
+use App\Entity\Category;
+use App\Entity\CzechWord;
+use App\Entity\RussianWord;
+use App\Entity\Source;
+use App\Entity\SourceType;
+use App\Entity\Translation;
+use App\Entity\TranslationExample;
+use App\Entity\User;
 use App\EntityTrait\TimestampsTrait;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -29,75 +36,82 @@ abstract class AbstractLogEntry implements TimestampableInterface
     /**
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", onDelete="SET NULL")
-     * @var UserInterface|null
+     * @var User|null
      */
     private $user;
 
     /**
      * @ORM\ManyToOne(targetEntity="RussianWord")
      * @ORM\JoinColumn(name="russian_word_id", referencedColumnName="id", onDelete="CASCADE")
-     * @var RussianWordInterface|null
+     * @var RussianWord|null
      */
     protected $russianWord;
 
     /**
      * @ORM\ManyToOne(targetEntity="CzechWord")
      * @ORM\JoinColumn(name="czech_word_id", referencedColumnName="id", onDelete="CASCADE")
-     * @var CzechWordInterface|null
+     * @var CzechWord|null
      */
     protected $czechWord;
 
     /**
      * @ORM\ManyToOne(targetEntity="Category")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="CASCADE")
-     * @var CategoryInterface|null
+     * @var Category|null
      */
     protected $category;
 
     /**
      * @ORM\ManyToOne(targetEntity="Source")
      * @ORM\JoinColumn(name="source_id", referencedColumnName="id", onDelete="CASCADE")
-     * @var SourceInterface|null
+     * @var Source|null
      */
     protected $source;
 
     /**
      * @ORM\ManyToOne(targetEntity="SourceType")
      * @ORM\JoinColumn(name="source_type_id", referencedColumnName="id", onDelete="CASCADE")
-     * @var SourceTypeInterface|null
+     * @var SourceType|null
      */
     protected $sourceType;
 
     /**
      * @ORM\ManyToOne(targetEntity="Translation")
      * @ORM\JoinColumn(name="translation_id", referencedColumnName="id", onDelete="CASCADE")
-     * @var TranslationInterface|null
+     * @var Translation|null
      */
     protected $translation;
 
     /**
      * @ORM\ManyToOne(targetEntity="TranslationExample")
      * @ORM\JoinColumn(name="translation_example_id", referencedColumnName="id", onDelete="CASCADE")
-     * @var TranslationExampleInterface|null
+     * @var TranslationExample|null
      */
     protected $translationExample;
 
     //-------------------------------------------------------------------------
 
-    public function __construct(UserInterface $user)
+    public function __construct(User $user)
     {
         $this->user = $user;
     }
 
     //-------------------------------------------------------------------------
 
-    public function getId(): int
+    final public function getId(): int
     {
         return $this->id;
     }
 
-    public function getUser(): ?UserInterface
+    final public function getUser(): ?User
     {
         return $this->user;
     }
+
+    final public function getClass(): string
+    {
+        return get_class($this);
+    }
+
+    abstract public function toString(): string;
 }
