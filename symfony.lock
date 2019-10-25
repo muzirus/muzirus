@@ -137,29 +137,14 @@
     "nesbot/carbon": {
         "version": "2.16.3"
     },
-    "nette/bootstrap": {
-        "version": "v2.4.6"
-    },
-    "nette/di": {
-        "version": "v2.4.14"
-    },
     "nette/finder": {
         "version": "v2.4.1"
-    },
-    "nette/neon": {
-        "version": "v2.4.3"
-    },
-    "nette/php-generator": {
-        "version": "v3.0.5"
     },
     "nette/robot-loader": {
         "version": "v3.0.3"
     },
     "nette/utils": {
         "version": "v2.5.1"
-    },
-    "nikic/php-parser": {
-        "version": "v4.1.0"
     },
     "ocramius/proxy-manager": {
         "version": "2.2.0"
@@ -178,9 +163,6 @@
     },
     "phpdocumentor/type-resolver": {
         "version": "0.4.0"
-    },
-    "phpstan/phpdoc-parser": {
-        "version": "0.2"
     },
     "phpstan/phpstan": {
         "version": "0.9.2"
