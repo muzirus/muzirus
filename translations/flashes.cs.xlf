@@ -5,121 +5,121 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="G3cnDyL" resname="admin.abbreviation.created">
+      <trans-unit id="G3cnDyL" resname="admin.abbreviation.created" approved="yes">
         <source>admin.abbreviation.created</source>
-        <target state="translated">Vytvoření zkratky proběhlo úspěšně.</target>
+        <target state="final">Vytvoření zkratky proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="erm3Y3W" resname="admin.abbreviation.updated">
+      <trans-unit id="erm3Y3W" resname="admin.abbreviation.updated" approved="yes">
         <source>admin.abbreviation.updated</source>
-        <target state="translated">Upravení zkratky proběhlo úspěšně.</target>
+        <target state="final">Upravení zkratky proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="KYFq_La" resname="admin.abbreviation.deleted">
+      <trans-unit id="KYFq_La" resname="admin.abbreviation.deleted" approved="yes">
         <source>admin.abbreviation.deleted</source>
-        <target state="translated">Smazání zkratky proběhlo úspěšně.</target>
+        <target state="final">Smazání zkratky proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="UwNIHmX" resname="admin.category.created">
+      <trans-unit id="UwNIHmX" resname="admin.category.created" approved="yes">
         <source>admin.category.created</source>
-        <target state="translated">Vytvoření kategorie proběhlo úspěšně.</target>
+        <target state="final">Vytvoření kategorie proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="TL30csv" resname="admin.category.updated">
+      <trans-unit id="TL30csv" resname="admin.category.updated" approved="yes">
         <source>admin.category.updated</source>
-        <target state="translated">Upravení kategorie proběhlo úspěšně.</target>
+        <target state="final">Upravení kategorie proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="OLOKQ9U" resname="admin.category.deleted">
+      <trans-unit id="OLOKQ9U" resname="admin.category.deleted" approved="yes">
         <source>admin.category.deleted</source>
-        <target state="translated">Smazání kategorie proběhlo úspěšně.</target>
+        <target state="final">Smazání kategorie proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="gJmcYAB" resname="admin.source.created">
+      <trans-unit id="gJmcYAB" resname="admin.source.created" approved="yes">
         <source>admin.source.created</source>
-        <target state="translated">Vytvoření zdroje proběhlo úspěšně.</target>
+        <target state="final">Vytvoření zdroje proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="jvNas2Y" resname="admin.source.updated">
+      <trans-unit id="jvNas2Y" resname="admin.source.updated" approved="yes">
         <source>admin.source.updated</source>
-        <target state="translated">Upravení zdroje proběhlo úspěšně.</target>
+        <target state="final">Upravení zdroje proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="YUFKLWb" resname="admin.source.deleted">
+      <trans-unit id="YUFKLWb" resname="admin.source.deleted" approved="yes">
         <source>admin.source.deleted</source>
-        <target state="translated">Smazání zdroje proběhlo úspěšně.</target>
+        <target state="final">Smazání zdroje proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="aU_2nN5" resname="admin.source_type.created">
+      <trans-unit id="aU_2nN5" resname="admin.source_type.created" approved="yes">
         <source>admin.source_type.created</source>
-        <target state="translated">Vytvoření typu zdroje proběhlo úspěšně.</target>
+        <target state="final">Vytvoření typu zdroje proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="c.uYEpO" resname="admin.source_type.updated">
+      <trans-unit id="c.uYEpO" resname="admin.source_type.updated" approved="yes">
         <source>admin.source_type.updated</source>
-        <target state="translated">Upravení typu zdroje proběhlo úspěšně.</target>
+        <target state="final">Upravení typu zdroje proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="nlj3hq9" resname="admin.source_type.deleted">
+      <trans-unit id="nlj3hq9" resname="admin.source_type.deleted" approved="yes">
         <source>admin.source_type.deleted</source>
-        <target state="translated">Smazání typu zdroje proběhlo úspěšně.</target>
+        <target state="final">Smazání typu zdroje proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="mIy5kA8" resname="admin.symbol.created">
+      <trans-unit id="mIy5kA8" resname="admin.symbol.created" approved="yes">
         <source>admin.symbol.created</source>
-        <target state="translated">Vytvoření symbolu proběhlo úspěšně.</target>
+        <target state="final">Vytvoření symbolu proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="sZKa2QR" resname="admin.symbol.updated">
+      <trans-unit id="sZKa2QR" resname="admin.symbol.updated" approved="yes">
         <source>admin.symbol.updated</source>
-        <target state="translated">Upravení symbolu proběhlo úspěšně.</target>
+        <target state="final">Upravení symbolu proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="iBIB6_u" resname="admin.symbol.deleted">
+      <trans-unit id="iBIB6_u" resname="admin.symbol.deleted" approved="yes">
         <source>admin.symbol.deleted</source>
-        <target state="translated">Smazání symbolu proběhlo úspěšně.</target>
+        <target state="final">Smazání symbolu proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="Mot6m6I" resname="admin.translation.created">
+      <trans-unit id="Mot6m6I" resname="admin.translation.created" approved="yes">
         <source>admin.translation.created</source>
-        <target state="translated">Vytvoření ekvivalentu proběhlo úspěšně.</target>
+        <target state="final">Vytvoření ekvivalentu proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="zQ3p9mY" resname="admin.translation.updated">
+      <trans-unit id="zQ3p9mY" resname="admin.translation.updated" approved="yes">
         <source>admin.translation.updated</source>
-        <target state="translated">Upravení ekvivalentu proběhlo úspěšně.</target>
+        <target state="final">Upravení ekvivalentu proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="qddKbUt" resname="admin.translation.deleted">
+      <trans-unit id="qddKbUt" resname="admin.translation.deleted" approved="yes">
         <source>admin.translation.deleted</source>
-        <target state="translated">Smazání ekvivalentu proběhlo úspěšně.</target>
+        <target state="final">Smazání ekvivalentu proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="blW99I0" resname="admin.translation_example.created">
+      <trans-unit id="blW99I0" resname="admin.translation_example.created" approved="yes">
         <source>admin.translation_example.created</source>
-        <target state="translated">Vytvoření exemplifikace proběhlo úspěšně.</target>
+        <target state="final">Vytvoření exemplifikace proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="ydLhrDE" resname="admin.translation_example.updated">
+      <trans-unit id="ydLhrDE" resname="admin.translation_example.updated" approved="yes">
         <source>admin.translation_example.updated</source>
-        <target state="translated">Upravení exemplifikace proběhlo úspěšně.</target>
+        <target state="final">Upravení exemplifikace proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="odoNrm6" resname="admin.translation_example.deleted">
+      <trans-unit id="odoNrm6" resname="admin.translation_example.deleted" approved="yes">
         <source>admin.translation_example.deleted</source>
-        <target state="translated">Smazání exemplifikace proběhlo úspěšně.</target>
+        <target state="final">Smazání exemplifikace proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="TfvTC0X" resname="admin.word.created">
+      <trans-unit id="TfvTC0X" resname="admin.word.created" approved="yes">
         <source>admin.word.created</source>
-        <target state="translated">Vytvoření slova proběhlo úspěšně.</target>
+        <target state="final">Vytvoření slova proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="ZSYkpmV" resname="admin.word.updated">
+      <trans-unit id="ZSYkpmV" resname="admin.word.updated" approved="yes">
         <source>admin.word.updated</source>
-        <target state="translated">Upravení slova proběhlo úspěšně.</target>
+        <target state="final">Upravení slova proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="EacBDv5" resname="admin.word.deleted">
+      <trans-unit id="EacBDv5" resname="admin.word.deleted" approved="yes">
         <source>admin.word.deleted</source>
-        <target state="translated">Smazání slova proběhlo úspěšně.</target>
+        <target state="final">Smazání slova proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="TWdERNA" resname="admin.announcement.created">
+      <trans-unit id="TWdERNA" resname="admin.announcement.created" approved="yes">
         <source>admin.announcement.created</source>
-        <target state="needs-translation">admin.announcement.created</target>
+        <target state="final">Vytvoření oznámení proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="cosP4Tw" resname="admin.announcement.updated">
+      <trans-unit id="cosP4Tw" resname="admin.announcement.updated" approved="yes">
         <source>admin.announcement.updated</source>
-        <target state="needs-translation">admin.announcement.updated</target>
+        <target state="final">Upravení oznámení proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="FbkXzfz" resname="admin.announcement.deleted">
+      <trans-unit id="FbkXzfz" resname="admin.announcement.deleted" approved="yes">
         <source>admin.announcement.deleted</source>
-        <target state="needs-translation">admin.announcement.deleted</target>
+        <target state="final">Smazání oznámení proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="LQ4fxCg" resname="admin.post.created">
+      <trans-unit id="LQ4fxCg" resname="admin.post.created" approved="yes">
         <source>admin.post.created</source>
-        <target state="needs-translation">admin.post.created</target>
+        <target state="final">Vytvoření článku proběhlo úspěšně.</target>
       </trans-unit>
-      <trans-unit id="RZclx0q" resname="admin.post.updated">
+      <trans-unit id="RZclx0q" resname="admin.post.updated" approved="yes">
         <source>admin.post.updated</source>
-        <target state="needs-translation">admin.post.updated</target>
+        <target state="final">Upravení článku proběhlo úspěšně.</target>
       </trans-unit>
     </body>
   </file>
