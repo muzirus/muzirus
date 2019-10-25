@@ -353,13 +353,13 @@
         <source>app.title.topics</source>
         <target state="final">Topics</target>
       </trans-unit>
-      <trans-unit id="9QsvAMc" resname="app.title.vocabulary_russian">
+      <trans-unit id="9QsvAMc" resname="app.title.vocabulary_russian" approved="yes">
         <source>app.title.vocabulary_russian</source>
-        <target state="needs-translation">app.title.vocabulary_russian</target>
+        <target state="final">Russian vocabulary</target>
       </trans-unit>
-      <trans-unit id="oPuW94E" resname="app.title.vocabulary_czech">
+      <trans-unit id="oPuW94E" resname="app.title.vocabulary_czech" approved="yes">
         <source>app.title.vocabulary_czech</source>
-        <target state="needs-translation">app.title.vocabulary_czech</target>
+        <target state="final">Czech vocabulary</target>
       </trans-unit>
       <trans-unit id="wevQNDx" resname="app.title.abbreviations" approved="yes">
         <source>app.title.abbreviations</source>
@@ -369,9 +369,9 @@
         <source>app.title.notations</source>
         <target state="final">Notations</target>
       </trans-unit>
-      <trans-unit id="2Rx6JsF" resname="app.title.proccessing_of_words">
+      <trans-unit id="2Rx6JsF" resname="app.title.proccessing_of_words" approved="yes">
         <source>app.title.proccessing_of_words</source>
-        <target state="needs-translation">app.title.proccessing_of_words</target>
+        <target state="final">Proccessing of words</target>
       </trans-unit>
       <trans-unit id="sG537mo" resname="app.title.suggest_improvement" approved="yes">
         <source>app.title.suggest_improvement</source>
@@ -485,9 +485,9 @@
         <source>app.feedback.email.help_text</source>
         <target state="needs-translation">app.feedback.email.help_text</target>
       </trans-unit>
-      <trans-unit id="sB.hsgu" resname="admin.title_in_russian">
+      <trans-unit id="sB.hsgu" resname="admin.title_in_russian" approved="yes">
         <source>admin.title_in_russian</source>
-        <target state="needs-translation">admin.title_in_russian</target>
+        <target state="final">Title in russian</target>
       </trans-unit>
     </body>
   </file>
