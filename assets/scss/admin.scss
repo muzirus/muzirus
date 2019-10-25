@@ -2,20 +2,21 @@
 // to load the Bootswatch web fonts locally and avoid loading them from Google servers
 // see https://github.com/thomaspark/bootswatch/issues/55#issuecomment-298093182
 $web-font-path: 'data:text/css;base64,';
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "~font-awesome/scss/font-awesome";
 @import "~datatables.net-bs/css/dataTables.bootstrap.css";
 @import "~select2/dist/css/select2.min.css";
-//@import "~admin-lte/dist/css/AdminLTE.min.css";
-//@import "~admin-lte/dist/css/skins/skin-purple.min.css";
+@import "~admin-lte/dist/css/AdminLTE.min.css";
+@import "~admin-lte/dist/css/skins/skin-purple.min.css";
 
 .highlight-accent {
-  font-weight: bold;
-  color: #ff0000;
+    font-weight: bold;
+    color: #ff0000;
 }
 
 .highlight-latin,
 .highlight-cyrillic {
-  color: #ff0000;
+    color: #ff0000;
 }
