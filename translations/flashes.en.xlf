@@ -101,25 +101,25 @@
         <source>admin.word.deleted</source>
         <target state="final">Word has been deleted.</target>
       </trans-unit>
-      <trans-unit id="TWdERNA" resname="admin.announcement.created">
+      <trans-unit id="TWdERNA" resname="admin.announcement.created" approved="yes">
         <source>admin.announcement.created</source>
-        <target state="needs-translation">admin.announcement.created</target>
+        <target state="final">Announcement has been created.</target>
       </trans-unit>
-      <trans-unit id="cosP4Tw" resname="admin.announcement.updated">
+      <trans-unit id="cosP4Tw" resname="admin.announcement.updated" approved="yes">
         <source>admin.announcement.updated</source>
-        <target state="needs-translation">admin.announcement.updated</target>
+        <target state="final">Announcement has been updated.</target>
       </trans-unit>
-      <trans-unit id="FbkXzfz" resname="admin.announcement.deleted">
+      <trans-unit id="FbkXzfz" resname="admin.announcement.deleted" approved="yes">
         <source>admin.announcement.deleted</source>
-        <target state="needs-translation">admin.announcement.deleted</target>
+        <target state="final">Announcement has been deleted.</target>
       </trans-unit>
-      <trans-unit id="LQ4fxCg" resname="admin.post.created">
+      <trans-unit id="LQ4fxCg" resname="admin.post.created" approved="yes">
         <source>admin.post.created</source>
-        <target state="needs-translation">admin.post.created</target>
+        <target state="final">Post has been created.</target>
       </trans-unit>
-      <trans-unit id="RZclx0q" resname="admin.post.updated">
+      <trans-unit id="RZclx0q" resname="admin.post.updated" approved="yes">
         <source>admin.post.updated</source>
-        <target state="needs-translation">admin.post.updated</target>
+        <target state="final">Post has been updated.</target>
       </trans-unit>
     </body>
   </file>
