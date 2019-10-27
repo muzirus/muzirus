@@ -2,20 +2,20 @@
 
 namespace App\Event;
 
-use App\Entity\UserInterface;
+use App\Entity\User;
 use Symfony\Contracts\EventDispatcher\Event;
 
 abstract class AbstractEvent extends Event
 {
-    /** @var UserInterface */
+    /** @var User */
     private $user;
 
-    public function __construct(UserInterface $user)
+    public function __construct(User $user)
     {
         $this->user = $user;
     }
 
-    final public function getUser(): UserInterface
+    final public function getUser(): User
     {
         return $this->user;
     }

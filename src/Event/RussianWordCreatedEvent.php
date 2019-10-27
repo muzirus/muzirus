@@ -2,21 +2,21 @@
 
 namespace App\Event;
 
-use App\Entity\RussianWordInterface;
-use App\Entity\UserInterface;
+use App\Entity\RussianWord;
+use App\Entity\User;
 
 class RussianWordCreatedEvent extends AbstractEvent
 {
-    /** @var RussianWordInterface */
+    /** @var RussianWord */
     private $word;
 
-    public function __construct(UserInterface $user, RussianWordInterface $word)
+    public function __construct(User $user, RussianWord $word)
     {
         parent::__construct($user);
         $this->word = $word;
     }
 
-    final public function getWord(): RussianWordInterface
+    final public function getWord(): RussianWord
     {
         return $this->word;
     }

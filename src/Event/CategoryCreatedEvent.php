@@ -2,21 +2,21 @@
 
 namespace App\Event;
 
-use App\Entity\CategoryInterface;
-use App\Entity\UserInterface;
+use App\Entity\Category;
+use App\Entity\User;
 
 class CategoryCreatedEvent extends AbstractEvent
 {
-    /** @var CategoryInterface */
+    /** @var Category */
     private $category;
 
-    public function __construct(UserInterface $user, CategoryInterface $category)
+    public function __construct(User $user, Category $category)
     {
         parent::__construct($user);
         $this->category = $category;
     }
 
-    final public function getCategory(): CategoryInterface
+    final public function getCategory(): Category
     {
         return $this->category;
     }

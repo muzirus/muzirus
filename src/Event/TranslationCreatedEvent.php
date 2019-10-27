@@ -2,21 +2,21 @@
 
 namespace App\Event;
 
-use App\Entity\TranslationInterface;
-use App\Entity\UserInterface;
+use App\Entity\Translation;
+use App\Entity\User;
 
 class TranslationCreatedEvent extends AbstractEvent
 {
-    /** @var TranslationInterface */
+    /** @var Translation */
     private $translation;
 
-    public function __construct(UserInterface $user, TranslationInterface $translation)
+    public function __construct(User $user, Translation $translation)
     {
         parent::__construct($user);
         $this->translation = $translation;
     }
 
-    final public function getTranslation(): TranslationInterface
+    final public function getTranslation(): Translation
     {
         return $this->translation;
     }

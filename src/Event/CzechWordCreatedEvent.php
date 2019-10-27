@@ -2,21 +2,21 @@
 
 namespace App\Event;
 
-use App\Entity\CzechWordInterface;
-use App\Entity\UserInterface;
+use App\Entity\CzechWord;
+use App\Entity\User;
 
 class CzechWordCreatedEvent extends AbstractEvent
 {
-    /** @var CzechWordInterface */
+    /** @var CzechWord */
     private $word;
 
-    public function __construct(UserInterface $user, CzechWordInterface $word)
+    public function __construct(User $user, CzechWord $word)
     {
         parent::__construct($user);
         $this->word = $word;
     }
 
-    final public function getWord(): CzechWordInterface
+    final public function getWord(): CzechWord
     {
         return $this->word;
     }

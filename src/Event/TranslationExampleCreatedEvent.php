@@ -2,21 +2,21 @@
 
 namespace App\Event;
 
-use App\Entity\TranslationExampleInterface;
-use App\Entity\UserInterface;
+use App\Entity\TranslationExample;
+use App\Entity\User;
 
 class TranslationExampleCreatedEvent extends AbstractEvent
 {
-    /** @var TranslationExampleInterface */
+    /** @var TranslationExample */
     private $translationExample;
 
-    public function __construct(UserInterface $user, TranslationExampleInterface $translationExample)
+    public function __construct(User $user, TranslationExample $translationExample)
     {
         parent::__construct($user);
         $this->translationExample = $translationExample;
     }
 
-    final public function getTranslationExample(): TranslationExampleInterface
+    final public function getTranslationExample(): TranslationExample
     {
         return $this->translationExample;
     }

@@ -2,21 +2,21 @@
 
 namespace App\Event;
 
-use App\Entity\SourceTypeInterface;
-use App\Entity\UserInterface;
+use App\Entity\SourceType;
+use App\Entity\User;
 
 class SourceTypeCreatedEvent extends AbstractEvent
 {
-    /** @var SourceTypeInterface */
+    /** @var SourceType */
     private $sourceType;
 
-    public function __construct(UserInterface $user, SourceTypeInterface $sourceType)
+    public function __construct(User $user, SourceType $sourceType)
     {
         parent::__construct($user);
         $this->sourceType = $sourceType;
     }
 
-    final public function getSourceType(): SourceTypeInterface
+    final public function getSourceType(): SourceType
     {
         return $this->sourceType;
     }
