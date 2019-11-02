@@ -21,7 +21,7 @@
         "cocur/slugify": "^3.2",
         "enumag/no-thanks": "^0.1.0",
         "erusev/parsedown": "^1.7",
-        "ezyang/htmlpurifier": "^4.11",
+        "ezyang/htmlpurifier": "^4.12",
         "sensio/framework-extra-bundle": "^5.5",
         "sensiolabs/security-checker": "^4.1",
         "sentry/sentry-symfony": "^2.3",
