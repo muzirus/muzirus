@@ -139,7 +139,7 @@
         "symfony": {
             "id": "01C5H95BKEGJF8VQ5H9F02MXM5",
             "allow-contrib": false,
-            "require": "4.3.*"
+            "require": "4.4.*"
         }
     }
 }
