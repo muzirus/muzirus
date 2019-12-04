@@ -8,9 +8,7 @@ use Twig\TwigFunction;
 
 class CountExtension extends AbstractExtension
 {
-    /**
-     * @var CountRepository
-     */
+    /** @var CountRepository */
     private $countRepository;
 
     public function __construct(CountRepository $countRepository)
@@ -21,16 +19,16 @@ class CountExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('count_translations', function () {
+            new TwigFunction('count_translations', function (): int {
                 return $this->countRepository->countTranslations();
             }),
-            new TwigFunction('count_translation_examples', function () {
+            new TwigFunction('count_translation_examples', function (): int {
                 return $this->countRepository->countTranslationExamples();
             }),
-            new TwigFunction('count_czech_words', function () {
+            new TwigFunction('count_czech_words', function (): int {
                 return $this->countRepository->countCzechWords();
             }),
-            new TwigFunction('count_russian_words', function () {
+            new TwigFunction('count_russian_words', function (): int {
                 return $this->countRepository->countRussianWords();
             }),
         ];

@@ -154,7 +154,7 @@ abstract class AbstractWord implements AbstractWordInterface
      *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},
      *     inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="CASCADE")}
      * )
-     * @var ArrayCollection
+     * @var ArrayCollection|Category[]
      */
     protected $categories;
 
@@ -166,12 +166,12 @@ abstract class AbstractWord implements AbstractWordInterface
      *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},
      *     inverseJoinColumns={@ORM\JoinColumn(name="source_id", referencedColumnName="id", onDelete="CASCADE")}
      * )
-     * @var ArrayCollection
+     * @var ArrayCollection|Source[]
      */
     protected $sources;
 
     /**
-     * @var ArrayCollection
+     * @var ArrayCollection|Translation[]
      */
     protected $translations;
 

@@ -16,7 +16,7 @@ class RussianWord extends AbstractWord implements RussianWordInterface
      *
      * @ORM\OneToMany(targetEntity="Translation", mappedBy="russianWord", cascade={"remove"})
      * @ORM\OrderBy({"positionInRussianWordDetail": "ASC"})
-     * @var ArrayCollection
+     * @var ArrayCollection|Translation[]
      */
     protected $translations;
 }

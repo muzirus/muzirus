@@ -19,7 +19,7 @@ class CountRepository
     /** @var bool */
     private $loaded = false;
 
-    /** @var array */
+    /** @var string[] */
     private $data = [];
 
     //-------------------------------------------------------------------------

@@ -38,6 +38,7 @@ class RussianAlphabetProvider
         'я',
     ];
 
+    /** @return string[] */
     public static function getRussianLetters(): array
     {
         return self::LETTERS;

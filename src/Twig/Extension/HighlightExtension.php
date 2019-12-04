@@ -12,7 +12,7 @@ class HighlightExtension extends AbstractExtension
         return [
             new TwigFilter(
                 'highlight_accent',
-                function (string $text) {
+                function (string $text): string {
                     return $this->highlightAccent($text);
                 },
                 [
@@ -24,7 +24,7 @@ class HighlightExtension extends AbstractExtension
             ),
             new TwigFilter(
                 'highlight_cyrillic',
-                function (string $text) {
+                function (string $text): string {
                     return $this->highlightCyrillic($text);
                 },
                 [
@@ -36,7 +36,7 @@ class HighlightExtension extends AbstractExtension
             ),
             new TwigFilter(
                 'highlight_latin',
-                function (string $text) {
+                function (string $text): string {
                     return $this->highlightLatin($text);
                 },
                 [

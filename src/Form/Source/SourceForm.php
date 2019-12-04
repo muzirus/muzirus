@@ -4,6 +4,7 @@ namespace App\Form\Source;
 
 use App\Entity\SourceType;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -13,6 +14,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class SourceForm extends AbstractType
 {
+    /**
+     * @param mixed[] $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -23,12 +27,12 @@ class SourceForm extends AbstractType
                     'autofocus' => true,
                 ],
             ])
-            ->add('type', Entitytype::class, [
+            ->add('type', EntityType::class, [
                 'label' => 'label.source_type',
                 'class' => SourceType::class,
                 'choice_label' => 'title',
-                'query_builder' => function (EntityRepository $er) {
-                    return $er->createQueryBuilder('st')->orderBy('st.title', 'ASC');
+                'query_builder' => static function (EntityRepository $entityRepository): QueryBuilder {
+                    return $entityRepository->createQueryBuilder('st')->orderBy('st.title', 'ASC');
                 },
             ])
             ->add('nameOfAuthor', TextType::class, [

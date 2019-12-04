@@ -7,6 +7,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class RussianWordForm extends CzechWordForm
 {
+    /**
+     * @param mixed[] $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         parent::buildForm($builder, $options);

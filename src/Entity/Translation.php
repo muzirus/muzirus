@@ -77,7 +77,7 @@ class Translation implements TranslationInterface
      * Inverse side.
      *
      * @ORM\OneToMany(targetEntity="TranslationExample", mappedBy="translation")
-     * @var ArrayCollection
+     * @var ArrayCollection|TranslationExample[]
      */
     private $translationExamples;
 

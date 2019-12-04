@@ -13,7 +13,7 @@ class StatusLightExtension extends AbstractExtension
         return [
             new TwigFilter(
                 'convert_status_code_to_icon',
-                function (int $status) {
+                function (int $status): string {
                     return $this->getStatusLightCode($status);
                 },
                 [
@@ -24,7 +24,7 @@ class StatusLightExtension extends AbstractExtension
             ),
             new TwigFilter(
                 'convert_status_code_to_class',
-                function (int $status) {
+                function (int $status): string {
                     return $this->getStatusLightClass($status);
                 }
             ),

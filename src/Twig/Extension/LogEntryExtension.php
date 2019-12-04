@@ -29,7 +29,7 @@ class LogEntryExtension extends AbstractExtension
         return [
             new TwigFunction(
                 'getLogEntryIcon',
-                function (LogEntry $logEntry) {
+                function (LogEntry $logEntry): string {
                     return $this->getLogEntryIcon($logEntry);
                 },
                 [
@@ -40,13 +40,13 @@ class LogEntryExtension extends AbstractExtension
             ),
             new TwigFunction(
                 'getLogEntryTitle',
-                function (LogEntry $logEntry) {
+                function (LogEntry $logEntry): string {
                     return $this->getLogEntryTitle($logEntry);
                 }
             ),
             new TwigFunction(
                 'getLogEntryBody',
-                function (LogEntry $logEntry) {
+                function (LogEntry $logEntry): string {
                     return $this->getLogEntryBody($logEntry);
                 },
                 [

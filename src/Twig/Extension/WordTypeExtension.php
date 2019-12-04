@@ -11,7 +11,7 @@ class WordTypeExtension extends AbstractExtension
     public function getFilters(): array
     {
         return [
-            new TwigFilter('type_as_string', function (int $type) {
+            new TwigFilter('type_as_string', function (int $type): string {
                 return $this->convertTypeIdToString($type);
             }),
         ];
