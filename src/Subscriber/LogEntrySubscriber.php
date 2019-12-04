@@ -17,17 +17,17 @@ use App\Event\TranslationCreatedEvent;
 use App\Event\TranslationExampleCreatedEvent;
 use App\Event\TranslationExampleUpdatedEvent;
 use App\Event\TranslationUpdatedEvent;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class LogEntrySubscriber implements EventSubscriberInterface
 {
-    /** @var ObjectManager */
-    private $objectManager;
+    /** @var EntityManagerInterface */
+    private $entityManager;
 
-    public function __construct(ObjectManager $objectManager)
+    public function __construct(EntityManagerInterface $entityManager)
     {
-        $this->objectManager = $objectManager;
+        $this->entityManager = $entityManager;
     }
 
     /** @return string[] */
@@ -56,8 +56,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_CATEGORY_CREATED, $event->getUser());
         $logEntry->setCategory($event->getCategory());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onCategoryUpdated(CategoryUpdatedEvent $event): void
@@ -65,8 +65,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_CATEGORY_UPDATED, $event->getUser());
         $logEntry->setCategory($event->getCategory());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onCzechWordCreated(CzechWordCreatedEvent $event): void
@@ -74,8 +74,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_CZECH_WORD_CREATED, $event->getUser());
         $logEntry->setCzechWord($event->getWord());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onCzechWordUpdated(CzechWordUpdatedEvent $event): void
@@ -83,8 +83,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_CZECH_WORD_UPDATED, $event->getUser());
         $logEntry->setCzechWord($event->getWord());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onRussianWordCreated(RussianWordCreatedEvent $event): void
@@ -92,8 +92,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_RUSSIAN_WORD_CREATED, $event->getUser());
         $logEntry->setRussianWord($event->getWord());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onRussianWordUpdated(RussianWordUpdatedEvent $event): void
@@ -101,8 +101,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_RUSSIAN_WORD_UPDATED, $event->getUser());
         $logEntry->setRussianWord($event->getWord());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onSourceCreated(SourceCreatedEvent $event): void
@@ -110,8 +110,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_SOURCE_CREATED, $event->getUser());
         $logEntry->setSource($event->getSource());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onSourceUpdated(SourceUpdatedEvent $event): void
@@ -119,8 +119,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_SOURCE_UPDATED, $event->getUser());
         $logEntry->setSource($event->getSource());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onSourceTypeCreated(SourceTypeCreatedEvent $event): void
@@ -128,8 +128,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_SOURCE_TYPE_CREATED, $event->getUser());
         $logEntry->setSourceType($event->getSourceType());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onSourceTypeUpdated(SourceTypeUpdatedEvent $event): void
@@ -137,8 +137,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_SOURCE_TYPE_UPDATED, $event->getUser());
         $logEntry->setSourceType($event->getSourceType());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onTranslationCreated(TranslationCreatedEvent $event): void
@@ -146,8 +146,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_TRANSLATION_CREATED, $event->getUser());
         $logEntry->setTranslation($event->getTranslation());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onTranslationUpdated(TranslationUpdatedEvent $event): void
@@ -155,8 +155,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_TRANSLATION_UPDATED, $event->getUser());
         $logEntry->setTranslation($event->getTranslation());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onTranslationExampleCreated(TranslationExampleCreatedEvent $event): void
@@ -164,8 +164,8 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_TRANSLATION_EXAMPLE_CREATED, $event->getUser());
         $logEntry->setTranslationExample($event->getTranslationExample());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 
     public function onTranslationExampleUpdated(TranslationExampleUpdatedEvent $event): void
@@ -173,7 +173,7 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $logEntry = new LogEntry(LogEntry::NAME_TRANSLATION_EXAMPLE_UPDATED, $event->getUser());
         $logEntry->setTranslationExample($event->getTranslationExample());
 
-        $this->objectManager->persist($logEntry);
-        $this->objectManager->flush();
+        $this->entityManager->persist($logEntry);
+        $this->entityManager->flush();
     }
 }
