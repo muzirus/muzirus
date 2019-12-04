@@ -21,7 +21,7 @@ class MarkdownExtension extends AbstractExtension
         return [
             new TwigFilter(
                 'md2html',
-                function (string $text) {
+                function (string $text): string {
                     return $this->markdownParser->parseToHtml($text);
                 },
                 [

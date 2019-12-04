@@ -6,6 +6,7 @@ use App\Entity\AbstractWordInterface;
 use App\Entity\Category;
 use App\Entity\Source;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -16,6 +17,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class CzechWordForm extends AbstractType
 {
+    /**
+     * @param mixed[] $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -103,8 +107,8 @@ class CzechWordForm extends AbstractType
                 'label' => 'label.categories',
                 'class' => Category::class,
                 'choice_label' => 'title',
-                'query_builder' => function (EntityRepository $er) {
-                    return $er->createQueryBuilder('wc')->orderBy('wc.title', 'ASC');
+                'query_builder' => static function (EntityRepository $entityRepository): QueryBuilder {
+                    return $entityRepository->createQueryBuilder('wc')->orderBy('wc.title', 'ASC');
                 },
                 'multiple' => true,
                 'expanded' => true,
@@ -114,8 +118,8 @@ class CzechWordForm extends AbstractType
                 'label' => 'label.sources',
                 'class' => Source::class,
                 'choice_label' => 'title',
-                'query_builder' => function (EntityRepository $er) {
-                    return $er->createQueryBuilder('s')->orderBy('s.title', 'ASC');
+                'query_builder' => static function (EntityRepository $entityRepository): QueryBuilder {
+                    return $entityRepository->createQueryBuilder('s')->orderBy('s.title', 'ASC');
                 },
                 'multiple' => true,
                 'expanded' => true,

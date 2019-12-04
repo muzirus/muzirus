@@ -34,6 +34,7 @@ class CzechAlphabetProvider
         'z',
     ];
 
+    /** @return string[] */
     public static function getCzechLetters(): array
     {
         return self::LETTERS;

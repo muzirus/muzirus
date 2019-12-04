@@ -6,6 +6,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class CreateCzechWordTranslationForm extends UpdateTranslationForm
 {
+    /**
+     * @param mixed[] $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         parent::buildForm($builder, $options);

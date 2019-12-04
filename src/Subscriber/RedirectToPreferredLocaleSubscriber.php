@@ -4,7 +4,7 @@ namespace App\Subscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
@@ -21,7 +21,7 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
     /** @var UrlGeneratorInterface */
     private $urlGenerator;
 
-    /** @var array */
+    /** @var string[] */
     private $locales;
 
     /** @var string */
@@ -37,7 +37,7 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
         }
 
         $this->locales = $localesAsArray;
-        $this->defaultLocale = $defaultLocale ?: $this->locales[0];
+        $this->defaultLocale = $defaultLocale ?? $this->locales[0];
 
         if (!in_array($this->defaultLocale, $this->locales, true)) {
             throw new \UnexpectedValueException(
@@ -56,6 +56,7 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
         $this->locales = array_unique($this->locales);
     }
 
+    /** @return string[] */
     public static function getSubscribedEvents(): array
     {
         return [
@@ -63,7 +64,7 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
         ];
     }
 
-    public function onKernelRequest(GetResponseEvent $event): void
+    public function onKernelRequest(RequestEvent $event): void
     {
         $request = $event->getRequest();
 

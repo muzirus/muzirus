@@ -11,7 +11,7 @@ class WordGenderExtension extends AbstractExtension
     public function getFilters(): array
     {
         return [
-            new TwigFilter('gender_as_string', function (int $gender) {
+            new TwigFilter('gender_as_string', function (int $gender): string {
                 return $this->convertGenderIdToString($gender);
             }),
         ];

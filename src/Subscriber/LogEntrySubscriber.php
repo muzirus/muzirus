@@ -30,6 +30,7 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $this->objectManager = $objectManager;
     }
 
+    /** @return string[] */
     public static function getSubscribedEvents(): array
     {
         return [

@@ -38,7 +38,7 @@ class WordInfoExtension extends AbstractExtension
         return [
             new TwigFilter(
                 'word_info_under',
-                function (AbstractWordInterface $word) {
+                function (AbstractWordInterface $word): string {
                     return $this->getInfoUnder($word);
                 },
                 [
@@ -47,7 +47,7 @@ class WordInfoExtension extends AbstractExtension
             ),
             new TwigFilter(
                 'word_info_after',
-                function (AbstractWordInterface $word) {
+                function (AbstractWordInterface $word): string {
                     return $this->getInfoAfter($word);
                 },
                 [

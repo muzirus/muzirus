@@ -100,7 +100,7 @@ class TranslationFormData implements TranslationFormDataInterface
 
     public static function createFromCzechWord(CzechWordInterface $word): self
     {
-        $formData = new static();
+        $formData = new self();
         $formData->setCzechWord($word);
 
         return $formData;
@@ -108,7 +108,7 @@ class TranslationFormData implements TranslationFormDataInterface
 
     public static function createFromRussianWord(RussianWordInterface $word): self
     {
-        $formData = new static();
+        $formData = new self();
         $formData->setRussianWord($word);
 
         return $formData;
@@ -116,7 +116,7 @@ class TranslationFormData implements TranslationFormDataInterface
 
     public static function createFromTranslation(TranslationInterface $translation): self
     {
-        $formData = new static();
+        $formData = new self();
         $formData->setRussianWord($translation->getRussianWord());
         $formData->setRussianWordNote($translation->getRussianWordNote());
         $formData->setCzechWord($translation->getCzechWord());

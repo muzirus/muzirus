@@ -11,9 +11,6 @@ class LocaleExtension extends AbstractExtension
     /** @var string[] */
     private $localeCodes;
 
-    /** @var string[]|null */
-    private $locales;
-
     public function __construct(string $locales)
     {
         $this->localeCodes = explode('|', $locales);
@@ -26,20 +23,17 @@ class LocaleExtension extends AbstractExtension
         ];
     }
 
+    /** @return string[][] */
     public function getLocales(): array
     {
-        if ($this->locales !== null) {
-            return $this->locales;
-        }
-
-        $this->locales = [];
-        foreach ($this->localeCodes as $localeCode) {
-            $this->locales[] = [
-                'code' => $localeCode,
-                'name' => Locales::getName($localeCode, $localeCode),
-            ];
-        }
-
-        return $this->locales;
+        return array_map(
+            static function (string $localeCode): array {
+                return [
+                    'code' => $localeCode,
+                    'name' => Locales::getName($localeCode, $localeCode),
+                ];
+            },
+            $this->localeCodes
+        );
     }
 }
