@@ -5,34 +5,34 @@ sudo: false
 language: php
 
 matrix:
-  fast_finish: true
-  include:
-    - php: 7.3
-    - php: 7.4
-  allow_failures:
-    - php: 7.4
+    fast_finish: true
+    include:
+        -   php: 7.3
+        -   php: 7.4
+    allow_failures:
+        -   php: 7.4
 
 branches:
-  only:
-    - master
-    - develop
-    - /^feature\/.*$/
-    - /^bugfix\/.*$/
+    only:
+        - master
+        - develop
+        - /^feature\/.*$/
+        - /^bugfix\/.*$/
 
 cache:
-  directories:
-    - $HOME/.composer/cache
-    - ./bin/.phpunit
+    directories:
+        - $HOME/.composer/cache
+        - ./bin/.phpunit
 
 before_install:
-  - composer self-update
-  - composer validate --no-check-publish
+    - composer self-update
+    - composer validate --no-check-publish
 
 install:
-  - composer install
+    - composer install
 
 script:
-  - composer test
+    - composer test
 
 notifications:
-  email: false
+    email: false
