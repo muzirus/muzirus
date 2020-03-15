@@ -30,7 +30,6 @@ class LogEntrySubscriber implements EventSubscriberInterface
         $this->entityManager = $entityManager;
     }
 
-    /** @return string[] */
     public static function getSubscribedEvents(): array
     {
         return [
