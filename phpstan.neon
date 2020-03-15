@@ -12,5 +12,4 @@ parameters:
         - %currentWorkingDirectory%/src/Migrations/*
     ignoreErrors:
         - '#Function twig_escape_filter not found.#'
-        - '#Method [a-zA-Z\\]+::buildForm\(\) has parameter#'
     checkGenericClassInNonGenericObjectType: false
