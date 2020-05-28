@@ -13,16 +13,10 @@ composer.phar
 .phpunit
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
-
-###> symfony/web-server-bundle ###
-.web-server-pid
-###< symfony/web-server-bundle ###
-
 ###> friendsofphp/php-cs-fixer ###
 /.php_cs
 /.php_cs.cache
 ###< friendsofphp/php-cs-fixer ###
-
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 # todo: uncomment after building assets on server
@@ -30,7 +24,6 @@ composer.phar
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
-
 ###> squizlabs/php_codesniffer ###
 /.phpcs-cache
 /phpcs.xml
