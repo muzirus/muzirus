@@ -58,8 +58,7 @@
         "symfony/css-selector": "^4.4",
         "symfony/dotenv": "^4.4",
         "symfony/phpunit-bridge": "^4.4",
-        "symfony/profiler-pack": "^1.0",
-        "symfony/web-server-bundle": "^4.4"
+        "symfony/profiler-pack": "^1.0"
     },
     "config": {
         "optimize-autoloader": true,
