@@ -126,12 +126,6 @@
     "http-interop/http-factory-guzzle": {
         "version": "1.0.0"
     },
-    "illuminate/contracts": {
-        "version": "v5.8.35"
-    },
-    "illuminate/support": {
-        "version": "v5.8.35"
-    },
     "jean85/pretty-package-versions": {
         "version": "1.2"
     },
@@ -146,9 +140,6 @@
     },
     "monolog/monolog": {
         "version": "1.25.2"
-    },
-    "nesbot/carbon": {
-        "version": "2.27.0"
     },
     "nette/finder": {
         "version": "v2.5.1"
@@ -285,9 +276,6 @@
             "config/packages/prod/sentry.yaml",
             "config/packages/sentry.yaml"
         ]
-    },
-    "slam/php-cs-fixer-extensions": {
-        "version": "v1.19.1"
     },
     "slevomat/coding-standard": {
         "version": "5.0.4"
@@ -656,8 +644,11 @@
     "symfony/yaml": {
         "version": "v4.4.1"
     },
-    "symplify/better-phpdoc-parser": {
-        "version": "v5.4.16"
+    "symplify/auto-bind-parameter": {
+        "version": "v7.2.19"
+    },
+    "symplify/autowire-array-parameter": {
+        "version": "v7.2.19"
     },
     "symplify/coding-standard": {
         "version": "v5.4.16"
@@ -667,6 +658,12 @@
     },
     "symplify/package-builder": {
         "version": "v5.4.16"
+    },
+    "symplify/set-config-resolver": {
+        "version": "v7.2.19"
+    },
+    "symplify/smart-file-system": {
+        "version": "v7.2.19"
     },
     "twig/twig": {
         "version": "v3.0.0"
