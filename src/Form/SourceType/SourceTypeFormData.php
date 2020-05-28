@@ -11,9 +11,8 @@ class SourceTypeFormData implements SourceTypeFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $title = '';
+    private string $title = '';
 
     //-------------------------------------------------------------------------
 

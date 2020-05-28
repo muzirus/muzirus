@@ -10,9 +10,8 @@ class RussianWordFormData extends AbstractWordFormData implements RussianWordFor
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $contentWithAccent = '';
+    private string $contentWithAccent = '';
 
     //-------------------------------------------------------------------------
 

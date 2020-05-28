@@ -7,8 +7,7 @@ use App\Entity\UserInterface;
 
 class CategoryCreatedEvent extends AbstractEvent
 {
-    /** @var CategoryInterface */
-    private $category;
+    private CategoryInterface $category;
 
     public function __construct(UserInterface $user, CategoryInterface $category)
     {

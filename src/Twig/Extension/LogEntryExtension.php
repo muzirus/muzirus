@@ -16,8 +16,7 @@ use Twig\TwigFunction;
 
 class LogEntryExtension extends AbstractExtension
 {
-    /** @var UrlGeneratorInterface */
-    private $urlGenerator;
+    private UrlGeneratorInterface $urlGenerator;
 
     public function __construct(UrlGeneratorInterface $urlGenerator)
     {

@@ -3,26 +3,23 @@
 namespace App\Facade;
 
 use App\Entity\TranslationInterface;
-use App\Factory\TranslationFactory;
+use App\Factory\TranslationFactoryInterface;
 use App\Form\Translation\TranslationFormDataInterface;
-use App\Service\TranslationUpdater;
+use App\Service\TranslationUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class TranslationFacade implements TranslationFacadeInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
 
-    /** @var TranslationFactory */
-    private $translationFactory;
+    private TranslationFactoryInterface $translationFactory;
 
-    /** @var TranslationUpdater */
-    private $translationUpdater;
+    private TranslationUpdaterInterface $translationUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        TranslationFactory $translationFactory,
-        TranslationUpdater $translationUpdater
+        TranslationFactoryInterface $translationFactory,
+        TranslationUpdaterInterface $translationUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->translationFactory = $translationFactory;

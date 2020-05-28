@@ -18,21 +18,18 @@ class Message implements MessageInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="email")
-     * @var string
      */
-    private $email;
+    private string $email;
 
     /**
      * @ORM\Column(type="text", name="content")
-     * @var string
      */
-    private $content;
+    private string $content;
 
     public function __construct(string $email, string $content)
     {

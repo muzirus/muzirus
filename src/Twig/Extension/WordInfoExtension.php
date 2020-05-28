@@ -9,17 +9,13 @@ use Twig\TwigFilter;
 
 class WordInfoExtension extends AbstractExtension
 {
-    /** @var Environment */
-    private $environment;
+    private Environment $environment;
 
-    /** @var HighlightExtension */
-    private $highlightExtension;
+    private HighlightExtension $highlightExtension;
 
-    /** @var WordTypeExtension */
-    private $wordTypeExtension;
+    private WordTypeExtension $wordTypeExtension;
 
-    /** @var WordGenderExtension */
-    private $wordGenderExtension;
+    private WordGenderExtension $wordGenderExtension;
 
     public function __construct(
         Environment $environment,

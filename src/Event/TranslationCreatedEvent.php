@@ -7,8 +7,7 @@ use App\Entity\UserInterface;
 
 class TranslationCreatedEvent extends AbstractEvent
 {
-    /** @var TranslationInterface */
-    private $translation;
+    private TranslationInterface $translation;
 
     public function __construct(UserInterface $user, TranslationInterface $translation)
     {

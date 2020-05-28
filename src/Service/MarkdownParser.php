@@ -8,30 +8,23 @@ class MarkdownParser implements MarkdownParserInterface
         'Cache.DefinitionImpl' => null, // Disable caching
     ];
 
-    /** @var \Parsedown */
-    private $parsedown;
+    private \Parsedown $parsedown;
 
-    /** @var \HTMLPurifier_Config */
-    private $purifierConfig;
-
-    /** @var \HTMLPurifier */
-    private $purifier;
+    private \HTMLPurifier $purifier;
 
     public function __construct()
     {
         $this->parsedown = new \Parsedown();
 
-        $this->purifierConfig = \HTMLPurifier_Config::create(self::PURIFIER_CONFIG);
+        $purifierConfig = \HTMLPurifier_Config::create(self::PURIFIER_CONFIG);
 
-        $this->purifier = new \HTMLPurifier($this->purifierConfig);
+        $this->purifier = new \HTMLPurifier($purifierConfig);
     }
 
     public function parseToHtml(string $text): string
     {
         $html = $this->parsedown->text($text);
 
-        $safeHtml = $this->purifier->purify($html);
-
-        return $safeHtml;
+        return $this->purifier->purify($html);
     }
 }

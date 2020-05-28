@@ -14,72 +14,60 @@ class Source implements SourceInterface
 {
     use TimestampsTrait;
 
-    //-------------------------------------------------------------------------
-
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="title")
-     * @var string
      */
-    private $title = '';
+    private string $title = '';
 
     /**
      * Owning side.
      *
      * @ORM\ManyToOne(targetEntity="SourceType")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id", nullable=false)
-     * @var SourceTypeInterface
      */
-    private $type;
+    private SourceTypeInterface $type;
 
     /**
      * @ORM\Column(type="string", name="name_of_author")
-     * @var string
      */
-    private $nameOfAuthor = '';
+    private string $nameOfAuthor = '';
 
     /**
      * @ORM\Column(type="string", name="name_of_publisher")
-     * @var string
      */
-    private $nameOfPublisher = '';
+    private string $nameOfPublisher = '';
 
     /**
      * @ORM\Column(type="string", name="date_of_release")
-     * @var string
      */
-    private $dateOfRelease = '';
+    private string $dateOfRelease = '';
 
     /**
      * @ORM\Column(type="string", name="place_of_release")
-     * @var string
      */
-    private $placeOfRelease = '';
+    private string $placeOfRelease = '';
 
     /**
      * @ORM\Column(type="integer", name="pages_count")
-     * @var int
      */
-    private $pagesCount = 0;
+    private int $pagesCount = 0;
 
     /**
      * @ORM\Column(type="string", name="isbn_code")
-     * @var string
      */
-    private $isbnCode = '';
+    private string $isbnCode = '';
 
     /**
      * @ORM\Column(type="string", name="note")
-     * @var string
      */
-    private $note = '';
+    private string $note = '';
 
     //-------------------------------------------------------------------------
 

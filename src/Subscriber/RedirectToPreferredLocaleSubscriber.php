@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace App\Subscriber;
 
@@ -20,14 +18,12 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
  */
 class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
 {
-    /** @var UrlGeneratorInterface */
-    private $urlGenerator;
+    private UrlGeneratorInterface $urlGenerator;
 
     /** @var string[] */
-    private $locales;
+    private array $locales;
 
-    /** @var string */
-    private $defaultLocale;
+    private string $defaultLocale;
 
     public function __construct(UrlGeneratorInterface $urlGenerator, string $locales, string $defaultLocale = null)
     {
@@ -39,7 +35,7 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
         }
 
         $this->locales = $localesAsArray;
-        $this->defaultLocale = $defaultLocale ?? $this->locales[0];
+        $this->defaultLocale = $defaultLocale ?? $this->locales[array_key_first($this->locales)];
 
         if (!in_array($this->defaultLocale, $this->locales, true)) {
             throw new \UnexpectedValueException(sprintf(

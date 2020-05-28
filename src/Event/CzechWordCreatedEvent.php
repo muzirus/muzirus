@@ -7,8 +7,7 @@ use App\Entity\UserInterface;
 
 class CzechWordCreatedEvent extends AbstractEvent
 {
-    /** @var CzechWordInterface */
-    private $word;
+    private CzechWordInterface $word;
 
     public function __construct(UserInterface $user, CzechWordInterface $word)
     {

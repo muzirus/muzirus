@@ -12,37 +12,32 @@ class TranslationFormData implements TranslationFormDataInterface
     /**
      * @Assert\NotBlank()
      * @Assert\Type("object")
-     * @var RussianWordInterface|null
      */
-    private $russianWord;
+    private ?RussianWordInterface $russianWord;
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $russianWordNote = '';
+    private string $russianWordNote = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Type("object")
-     * @var CzechWordInterface|null
      */
-    private $czechWord;
+    private ?CzechWordInterface $czechWord;
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $czechWordNote = '';
+    private string $czechWordNote = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $link = '';
+    private string $link = '';
 
     //-------------------------------------------------------------------------
 

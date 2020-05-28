@@ -3,26 +3,23 @@
 namespace App\Facade;
 
 use App\Entity\RussianWordInterface;
-use App\Factory\RussianWordFactory;
+use App\Factory\RussianWordFactoryInterface;
 use App\Form\Word\RussianWordFormDataInterface;
-use App\Service\RussianWordUpdater;
+use App\Service\RussianWordUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class RussianWordFacade implements RussianWordFacadeInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
 
-    /** @var RussianWordFactory */
-    private $russianWordFactory;
+    private RussianWordFactoryInterface $russianWordFactory;
 
-    /** @var RussianWordUpdater */
-    private $russianWordUpdater;
+    private RussianWordUpdaterInterface $russianWordUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        RussianWordFactory $russianWordFactory,
-        RussianWordUpdater $russianWordUpdater
+        RussianWordFactoryInterface $russianWordFactory,
+        RussianWordUpdaterInterface $russianWordUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->russianWordFactory = $russianWordFactory;

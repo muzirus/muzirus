@@ -10,14 +10,11 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class SourceFacade implements SourceFacadeInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
 
-    /** @var SourceFactoryInterface */
-    private $sourceFactory;
+    private SourceFactoryInterface $sourceFactory;
 
-    /** @var SourceUpdaterInterface */
-    private $sourceUpdater;
+    private SourceUpdaterInterface $sourceUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,

@@ -20,93 +20,78 @@ class LegacyWord
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="original")
-     * @var string
      */
-    private $original = '';
+    private string $original = '';
 
     /**
      * @ORM\Column(type="string", name="category")
-     * @var string
      */
-    private $category = '';
+    private string $category = '';
 
     /**
      * @ORM\Column(type="integer", name="document_id", options={"default":0})
-     * @var int
      */
-    private $documentId = 0;
+    private int $documentId = 0;
 
     /**
      * @ORM\Column(type="text", name="explanation")
-     * @var string
      */
-    private $explanation = '';
+    private string $explanation = '';
 
     /**
      * @ORM\Column(type="text", name="language_note")
-     * @var string
      */
-    private $languageNote = '';
+    private string $languageNote = '';
 
     /**
      * @ORM\Column(type="text", name="translation")
-     * @var string
      */
-    private $translation = '';
+    private string $translation = '';
 
     /**
      * @ORM\Column(type="text", name="source")
-     * @var string
      */
-    private $source = '';
+    private string $source = '';
 
     /**
      * @ORM\Column(type="boolean", name="approved_1", options={"default":false})
-     * @var bool
      */
-    private $approved1 = false;
+    private bool $approved1 = false;
 
     /**
      * @ORM\Column(type="boolean", name="approved_2", options={"default":false})
-     * @var bool
      */
-    private $approved2 = false;
+    private bool $approved2 = false;
 
     /**
      * @ORM\Column(type="boolean", name="approved_3", options={"default":false})
-     * @var bool
      */
-    private $approved3 = false;
+    private bool $approved3 = false;
 
     /**
      * @ORM\Column(type="boolean", name="approved_4", options={"default":false})
-     * @var bool
      */
-    private $approved4 = false;
+    private bool $approved4 = false;
 
     /**
      * @ORM\Column(type="boolean", name="hidden", options={"default":false})
-     * @var bool
      */
-    private $hidden = false;
+    private bool $hidden = false;
 
     /**
      * @ORM\Column(type="boolean", name="deleted", options={"default":false})
-     * @var bool
      */
-    private $deleted = false;
+    private bool $deleted = false;
 
     /**
      * @ORM\Column(type="boolean", name="imported", options={"default":false})
-     * @var bool
      */
-    private $imported = false;
+    private bool $imported = false;
 
     //-------------------------------------------------------------------------
 
@@ -127,7 +112,7 @@ class LegacyWord
 
     public function hasCategory(): bool
     {
-        return $this->category !== null && $this->category !== '';
+        return $this->category !== '';
     }
 
     public function getCategory(): string
@@ -152,7 +137,7 @@ class LegacyWord
 
     public function hasExplanation(): bool
     {
-        return $this->explanation !== null && $this->explanation !== '';
+        return $this->explanation !== '';
     }
 
     public function getExplanation(): string
@@ -167,7 +152,7 @@ class LegacyWord
 
     public function hasLanguageNote(): bool
     {
-        return $this->languageNote !== null && $this->languageNote !== '';
+        return $this->languageNote !== '';
     }
 
     public function getLanguageNote(): string
@@ -182,7 +167,7 @@ class LegacyWord
 
     public function hasTranslation(): bool
     {
-        return $this->translation !== null && $this->translation !== '';
+        return $this->translation !== '';
     }
 
     public function getTranslation(): string
@@ -197,7 +182,7 @@ class LegacyWord
 
     public function hasSource(): bool
     {
-        return $this->source !== null && $this->source !== '';
+        return $this->source !== '';
     }
 
     public function getSource(): string

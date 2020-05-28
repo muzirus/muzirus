@@ -10,14 +10,11 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class CategoryFacade implements CategoryFacadeInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
 
-    /** @var CategoryFactoryInterface */
-    private $categoryFactory;
+    private CategoryFactoryInterface $categoryFactory;
 
-    /** @var CategoryUpdaterInterface */
-    private $categoryUpdater;
+    private CategoryUpdaterInterface $categoryUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,

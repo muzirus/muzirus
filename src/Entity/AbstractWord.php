@@ -58,93 +58,78 @@ abstract class AbstractWord implements AbstractWordInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    protected $id;
+    protected string $id;
 
     /**
      * @ORM\Column(type="string", name="content")
-     * @var string
      */
-    protected $content = '';
+    protected string $content = '';
 
     /**
      * @ORM\Column(type="string", name="content_with_accent")
-     * @var string
      */
-    protected $contentWithAccent = '';
+    protected string $contentWithAccent = '';
 
     /**
      * @ORM\Column(type="string", name="language_note_pronunciation")
-     * @var string
      */
-    protected $languageNotePronunciation = '';
+    protected string $languageNotePronunciation = '';
 
     /**
      * @ORM\Column(type="string", name="language_note_inflection")
-     * @var string
      */
-    protected $languageNoteInflection = '';
+    protected string $languageNoteInflection = '';
 
     /**
      * @ORM\Column(type="string", name="language_note_exception_to_inflection")
-     * @var string
      */
-    protected $languageNoteExceptionToInflection = '';
+    protected string $languageNoteExceptionToInflection = '';
 
     /**
      * @ORM\Column(type="integer", name="language_note_type", options={"default":0})
-     * @var int
      */
-    protected $languageNoteType = self::TYPE_UNKNOWN;
+    protected int $languageNoteType = self::TYPE_UNKNOWN;
 
     /**
      * @ORM\Column(type="integer", name="language_note_gender", options={"default":0})
-     * @var int
      */
-    protected $languageNoteGender = self::GENDER_UNKNOWN;
+    protected int $languageNoteGender = self::GENDER_UNKNOWN;
 
     /**
      * @ORM\Column(type="text", name="language_note_other")
-     * @var string
      */
-    protected $languageNoteOther = '';
+    protected string $languageNoteOther = '';
 
     /**
      * @ORM\Column(type="text", name="explanation")
-     * @var string
      */
-    protected $explanation = '';
+    protected string $explanation = '';
 
     /**
      * @ORM\Column(type="string", name="explanation_source_info")
-     * @var string
      */
-    protected $explanationSourceInfo = '';
+    protected string $explanationSourceInfo = '';
 
     /**
      * @ORM\Column(type="string", name="explanation_source_date")
-     * @var string
      */
-    protected $explanationSourceDate = '';
+    protected string $explanationSourceDate = '';
 
     /**
      * @ORM\Column(type="text", name="note")
-     * @var string
      */
-    protected $note = '';
+    protected string $note = '';
 
     /**
      * @ORM\Column(type="integer", name="status_light", options={"default":0})
-     * @var int
      */
-    protected $statusLight = self::STATUS_LIGHT_NOT_PROCESSED;
+    protected int $statusLight = self::STATUS_LIGHT_NOT_PROCESSED;
 
     /**
      * @ORM\Column(type="boolean", name="imported", options={"default":false})
-     * @var bool
      */
-    protected $imported = false;
+    protected bool $imported = false;
 
     /**
      * Owning side.
@@ -219,7 +204,7 @@ abstract class AbstractWord implements AbstractWordInterface
 
     public function hasLanguageNotePronunciation(): bool
     {
-        return mb_strlen($this->languageNotePronunciation) > 0;
+        return $this->languageNotePronunciation !== '';
     }
 
     public function getLanguageNotePronunciation(): string
@@ -234,7 +219,7 @@ abstract class AbstractWord implements AbstractWordInterface
 
     public function hasLanguageNoteInflection(): bool
     {
-        return mb_strlen($this->languageNoteInflection) > 0;
+        return $this->languageNoteInflection !== '';
     }
 
     public function getLanguageNoteInflection(): string
@@ -249,7 +234,7 @@ abstract class AbstractWord implements AbstractWordInterface
 
     public function hasLanguageNoteExceptionToInflection(): bool
     {
-        return mb_strlen($this->languageNoteExceptionToInflection) > 0;
+        return $this->languageNoteExceptionToInflection !== '';
     }
 
     public function getLanguageNoteExceptionToInflection(): string
@@ -288,7 +273,7 @@ abstract class AbstractWord implements AbstractWordInterface
 
     public function hasLanguageNoteOther(): bool
     {
-        return mb_strlen($this->languageNoteOther) > 0;
+        return $this->languageNoteOther !== '';
     }
 
     public function getLanguageNoteOther(): string

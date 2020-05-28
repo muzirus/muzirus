@@ -13,14 +13,12 @@ class CountRepository
 
     //-------------------------------------------------------------------------
 
-    /** @var Connection */
-    private $connection;
+    private Connection $connection;
 
-    /** @var bool */
-    private $loaded = false;
+    private bool $loaded = false;
 
     /** @var string[] */
-    private $data = [];
+    private array $data = [];
 
     //-------------------------------------------------------------------------
 
