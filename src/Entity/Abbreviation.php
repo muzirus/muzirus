@@ -20,27 +20,23 @@ class Abbreviation implements AbbreviationInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="title")
-     * @var string
      */
-    private $title = '';
+    private string $title = '';
 
     /**
      * @ORM\Column(type="string", name="content", unique=true)
-     * @var string
      */
-    private $content = '';
+    private string $content = '';
 
     /**
      * @ORM\Column(type="string", name="description")
-     * @var string
      */
-    private $description = '';
+    private string $description = '';
 
     //-------------------------------------------------------------------------
 

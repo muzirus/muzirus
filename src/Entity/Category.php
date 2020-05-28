@@ -20,21 +20,18 @@ class Category implements CategoryInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="title")
-     * @var string
      */
-    private $title = '';
+    private string $title;
 
     /**
      * @ORM\Column(type="string", name="title_in_russian")
-     * @var string
      */
-    private $titleInRussian = '';
+    private string $titleInRussian;
 
     //-------------------------------------------------------------------------
 

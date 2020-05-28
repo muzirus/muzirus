@@ -3,26 +3,23 @@
 namespace App\Facade;
 
 use App\Entity\SourceTypeInterface;
-use App\Factory\SourceTypeFactory;
+use App\Factory\SourceTypeFactoryInterface;
 use App\Form\SourceType\SourceTypeFormDataInterface;
-use App\Service\SourceTypeUpdater;
+use App\Service\SourceTypeUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class SourceTypeFacade implements SourceTypeFacadeInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
 
-    /** @var SourceTypeFactory */
-    private $sourceTypeFactory;
+    private SourceTypeFactoryInterface $sourceTypeFactory;
 
-    /** @var SourceTypeUpdater */
-    private $sourceTypeUpdater;
+    private SourceTypeUpdaterInterface $sourceTypeUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        SourceTypeFactory $sourceTypeFactory,
-        SourceTypeUpdater $sourceTypeUpdater
+        SourceTypeFactoryInterface $sourceTypeFactory,
+        SourceTypeUpdaterInterface $sourceTypeUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->sourceTypeFactory = $sourceTypeFactory;

@@ -13,92 +13,80 @@ abstract class AbstractWordFormData implements AbstractWordFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $content = '';
+    private string $content = '';
 
     /**
      * @Assert\Type("array")
      * @var CategoryInterface[]
      */
-    private $categories = [];
+    private array $categories = [];
 
     /**
      * @Assert\Type("array")
      * @var SourceInterface[]
      */
-    private $sources = [];
+    private array $sources = [];
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $languageNotePronunciation = '';
+    private string $languageNotePronunciation = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $languageNoteInflection = '';
+    private string $languageNoteInflection = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $languageNoteExceptionToInflection = '';
+    private string $languageNoteExceptionToInflection = '';
 
     /**
      * @Assert\Type("integer")
-     * @var int
      */
-    private $languageNoteType = AbstractWordInterface::TYPE_UNKNOWN;
+    private int $languageNoteType = AbstractWordInterface::TYPE_UNKNOWN;
 
     /**
      * @Assert\Type("integer")
-     * @var int
      */
-    private $languageNoteGender = AbstractWordInterface::GENDER_UNKNOWN;
+    private int $languageNoteGender = AbstractWordInterface::GENDER_UNKNOWN;
 
     /**
      * @Assert\Type("string")
-     * @var string
      */
-    private $languageNoteOther = '';
+    private string $languageNoteOther = '';
 
     /**
      * @Assert\Type("string")
-     * @var string
      */
-    private $explanation = '';
+    private string $explanation = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $explanationSourceInfo = '';
+    private string $explanationSourceInfo = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $explanationSourceDate = '';
+    private string $explanationSourceDate = '';
 
     /**
      * @Assert\Type("string")
-     * @var string
      */
-    private $note = '';
+    private string $note = '';
 
     /**
      * @Assert\Type("integer")
-     * @var int
      */
-    private $statusLight = AbstractWordInterface::STATUS_LIGHT_NOT_PROCESSED;
+    private int $statusLight = AbstractWordInterface::STATUS_LIGHT_NOT_PROCESSED;
 
     //-------------------------------------------------------------------------
 

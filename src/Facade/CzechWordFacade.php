@@ -3,26 +3,23 @@
 namespace App\Facade;
 
 use App\Entity\CzechWordInterface;
-use App\Factory\CzechWordFactory;
+use App\Factory\CzechWordFactoryInterface;
 use App\Form\Word\CzechWordFormDataInterface;
-use App\Service\CzechWordUpdater;
+use App\Service\CzechWordUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class CzechWordFacade implements CzechWordFacadeInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
 
-    /** @var CzechWordFactory */
-    private $czechWordFactory;
+    private CzechWordFactoryInterface $czechWordFactory;
 
-    /** @var CzechWordUpdater */
-    private $czechWordUpdater;
+    private CzechWordUpdaterInterface $czechWordUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        CzechWordFactory $czechWordFactory,
-        CzechWordUpdater $czechWordUpdater
+        CzechWordFactoryInterface $czechWordFactory,
+        CzechWordUpdaterInterface $czechWordUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->czechWordFactory = $czechWordFactory;

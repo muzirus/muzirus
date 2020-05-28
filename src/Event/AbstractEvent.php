@@ -7,8 +7,7 @@ use Symfony\Contracts\EventDispatcher\Event;
 
 abstract class AbstractEvent extends Event
 {
-    /** @var UserInterface */
-    private $user;
+    private UserInterface $user;
 
     public function __construct(UserInterface $user)
     {

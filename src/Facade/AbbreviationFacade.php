@@ -10,14 +10,11 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class AbbreviationFacade implements AbbreviationFacadeInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
 
-    /** @var AbbreviationFactoryInterface */
-    private $abbreviationFactory;
+    private AbbreviationFactoryInterface $abbreviationFactory;
 
-    /** @var AbbreviationUpdaterInterface */
-    private $abbreviationUpdater;
+    private AbbreviationUpdaterInterface $abbreviationUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,

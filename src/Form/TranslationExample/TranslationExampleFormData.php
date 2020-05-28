@@ -8,30 +8,24 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class TranslationExampleFormData implements TranslationExampleFormDataInterface
 {
-    /**
-     * @var TranslationInterface
-     */
-    private $translation;
+    private TranslationInterface $translation;
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $czechWordSentence = '';
+    private string $czechWordSentence = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $russianWordSentence = '';
+    private string $russianWordSentence = '';
 
     /**
      * @Assert\Type("boolean")
-     * @var bool
      */
-    private $hidden = false;
+    private bool $hidden = false;
 
     //-------------------------------------------------------------------------
 

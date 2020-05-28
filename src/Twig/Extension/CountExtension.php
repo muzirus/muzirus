@@ -8,8 +8,7 @@ use Twig\TwigFunction;
 
 class CountExtension extends AbstractExtension
 {
-    /** @var CountRepository */
-    private $countRepository;
+    private CountRepository $countRepository;
 
     public function __construct(CountRepository $countRepository)
     {

@@ -11,24 +11,21 @@ class SymbolFormData implements SymbolFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $title = '';
+    private string $title = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $content = '';
+    private string $content = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $description = '';
+    private string $description = '';
 
     //-------------------------------------------------------------------------
 

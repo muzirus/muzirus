@@ -11,17 +11,15 @@ class CategoryFormData implements CategoryFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $title = '';
+    private string $title = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $titleInRussian = '';
+    private string $titleInRussian = '';
 
     //-------------------------------------------------------------------------
 

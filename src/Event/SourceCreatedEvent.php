@@ -7,8 +7,7 @@ use App\Entity\UserInterface;
 
 class SourceCreatedEvent extends AbstractEvent
 {
-    /** @var SourceInterface */
-    private $source;
+    private SourceInterface $source;
 
     public function __construct(UserInterface $user, SourceInterface $source)
     {

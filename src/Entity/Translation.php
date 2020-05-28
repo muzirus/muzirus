@@ -21,57 +21,49 @@ class Translation implements TranslationInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * Owning side.
      *
      * @ORM\ManyToOne(targetEntity="RussianWord", inversedBy="translations")
      * @ORM\JoinColumn(name="first_word_id", referencedColumnName="id", nullable=false)
-     * @var RussianWordInterface
      */
-    private $russianWord;
+    private RussianWordInterface $russianWord;
 
     /**
      * @ORM\Column(type="string", name="russian_word_note")
-     * @var string
      */
-    private $russianWordNote = '';
+    private string $russianWordNote = '';
 
     /**
      * Owning side.
      *
      * @ORM\ManyToOne(targetEntity="CzechWord", inversedBy="translations")
      * @ORM\JoinColumn(name="second_word_id", referencedColumnName="id", nullable=false)
-     * @var CzechWordInterface
      */
-    private $czechWord;
+    private CzechWordInterface $czechWord;
 
     /**
      * @ORM\Column(type="string", name="czech_word_note")
-     * @var string
      */
-    private $czechWordNote = '';
+    private string $czechWordNote = '';
 
     /**
      * @ORM\Column(type="string", name="link")
-     * @var string
      */
-    private $link = '';
+    private string $link = '';
 
     /**
      * @ORM\Column(type="integer", name="position", options={"default":0})
-     * @var int
      */
-    private $positionInRussianWordDetail = 0;
+    private int $positionInRussianWordDetail = 0;
 
     /**
      * @ORM\Column(type="integer", name="position_in_czech_word_detail", options={"default":0})
-     * @var int
      */
-    private $positionInCzechWordDetail = 0;
+    private int $positionInCzechWordDetail = 0;
 
     /**
      * Inverse side.

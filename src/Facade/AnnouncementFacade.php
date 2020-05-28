@@ -3,26 +3,23 @@
 namespace App\Facade;
 
 use App\Entity\AnnouncementInterface;
-use App\Factory\AnnouncementFactory;
+use App\Factory\AnnouncementFactoryInterface;
 use App\Form\Announcement\AnnouncementFormDataInterface;
-use App\Service\AnnouncementUpdater;
+use App\Service\AnnouncementUpdaterInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class AnnouncementFacade implements AnnouncementFacadeInterface
 {
-    /** @var EntityManagerInterface */
-    private $entityManager;
+    private EntityManagerInterface $entityManager;
 
-    /** @var AnnouncementFactory */
-    private $announcementFactory;
+    private AnnouncementFactoryInterface $announcementFactory;
 
-    /** @var AnnouncementUpdater */
-    private $announcementUpdater;
+    private AnnouncementUpdaterInterface $announcementUpdater;
 
     public function __construct(
         EntityManagerInterface $entityManager,
-        AnnouncementFactory $announcementFactory,
-        AnnouncementUpdater $announcementUpdater
+        AnnouncementFactoryInterface $announcementFactory,
+        AnnouncementUpdaterInterface $announcementUpdater
     ) {
         $this->entityManager = $entityManager;
         $this->announcementFactory = $announcementFactory;

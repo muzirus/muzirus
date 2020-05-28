@@ -8,8 +8,7 @@ use Twig\TwigFilter;
 
 class MarkdownExtension extends AbstractExtension
 {
-    /** @var MarkdownParser */
-    private $markdownParser;
+    private MarkdownParser $markdownParser;
 
     public function __construct(MarkdownParser $markdownParser)
     {

@@ -18,28 +18,24 @@ class PostRevision implements PostRevisionInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Post", inversedBy="revisions")
      * @ORM\JoinColumn(name="post_id", referencedColumnName="id", nullable=false)
-     * @var PostInterface
      */
-    private $post;
+    private PostInterface $post;
 
     /**
      * @ORM\Column(type="text", name="content")
-     * @var string
      */
-    private $content;
+    private string $content;
 
     /**
      * @ORM\Column(type="text", name="content_in_russian")
-     * @var string
      */
-    private $contentInRussian;
+    private string $contentInRussian;
 
     public function __construct(PostInterface $post, string $content, string $contentInRussian)
     {

@@ -20,36 +20,31 @@ class TranslationExample implements TranslationExampleInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * Owning side.
      *
      * @ORM\ManyToOne(targetEntity="Translation", inversedBy="translationExamples")
      * @ORM\JoinColumn(name="translation_id", referencedColumnName="id", onDelete="cascade")
-     * @var TranslationInterface
      */
-    private $translation;
+    private TranslationInterface $translation;
 
     /**
      * @ORM\Column(type="string", name="first_word_sentence")
-     * @var string
      */
-    private $russianWordSentence = '';
+    private string $russianWordSentence;
 
     /**
      * @ORM\Column(type="string", name="second_word_sentence")
-     * @var string
      */
-    private $czechWordSentence = '';
+    private string $czechWordSentence;
 
     /**
      * @ORM\Column(type="boolean", name="hidden", options={"default":false})
-     * @var bool
      */
-    private $hidden = false;
+    private bool $hidden;
 
     //-------------------------------------------------------------------------
 

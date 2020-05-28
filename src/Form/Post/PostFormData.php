@@ -11,39 +11,34 @@ class PostFormData implements PostFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Length(min="1", max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $slug = '';
+    private string $slug = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $title = '';
+    private string $title = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $titleInRussian = '';
+    private string $titleInRussian = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Type("string")
-     * @var string
      */
-    private $content = '';
+    private string $content = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Type("string")
-     * @var string
      */
-    private $contentInRussian = '';
+    private string $contentInRussian = '';
 
     //-------------------------------------------------------------------------
 

@@ -11,19 +11,17 @@ trait TimestampsTrait
 {
     /**
      * @ORM\Column(type="datetime", name="created_at", options={"default":"CURRENT_TIMESTAMP"})
-     * @var \DateTime
      */
-    private $createdAt;
+    private \DateTimeInterface $createdAt;
 
     /**
      * @ORM\Column(type="datetime", name="updated_at", options={"default":"CURRENT_TIMESTAMP"})
-     * @var \DateTime
      */
-    private $updatedAt;
+    private \DateTimeInterface $updatedAt;
 
     //-------------------------------------------------------------------------
 
-    public function getCreatedAt(): \DateTime
+    public function getCreatedAt(): \DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -33,7 +31,7 @@ trait TimestampsTrait
         return $this->getCreatedAt()->format($format);
     }
 
-    public function getUpdatedAt(): \DateTime
+    public function getUpdatedAt(): \DateTimeInterface
     {
         return $this->updatedAt;
     }

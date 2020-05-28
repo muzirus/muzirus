@@ -19,34 +19,29 @@ class Post implements PostInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="slug", unique=true)
-     * @var string
      */
-    private $slug;
+    private string $slug;
 
     /**
      * @ORM\Column(type="string", name="title")
-     * @var string
      */
-    private $title;
+    private string $title;
 
     /**
      * @ORM\Column(type="string", name="title_in_russian")
-     * @var string
      */
-    private $titleInRussian;
+    private string $titleInRussian;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", onDelete="SET NULL")
-     * @var UserInterface|null
      */
-    private $author;
+    private ?UserInterface $author;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\PostRevision", mappedBy="post")

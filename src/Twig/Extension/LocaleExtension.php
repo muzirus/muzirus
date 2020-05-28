@@ -9,7 +9,7 @@ use Twig\TwigFunction;
 class LocaleExtension extends AbstractExtension
 {
     /** @var string[] */
-    private $localeCodes;
+    private array $localeCodes;
 
     public function __construct(string $locales)
     {

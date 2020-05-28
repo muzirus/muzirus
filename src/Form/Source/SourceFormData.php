@@ -12,65 +12,56 @@ class SourceFormData implements SourceFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $title = '';
+    private string $title = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Type("object")
-     * @var SourceTypeInterface
      */
-    private $type;
+    private SourceTypeInterface $type;
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $nameOfAuthor = '';
+    private string $nameOfAuthor = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $nameOfPublisher = '';
+    private string $nameOfPublisher = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $dateOfRelease = '';
+    private string $dateOfRelease = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $placeOfRelease = '';
+    private string $placeOfRelease = '';
 
     /**
      * @Assert\Type("integer")
      * @Assert\GreaterThanOrEqual(0)
-     * @var int
      */
-    private $pagesCount = 0;
+    private int $pagesCount = 0;
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $isbnCode = '';
+    private string $isbnCode = '';
 
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $note = '';
+    private string $note = '';
 
     //-------------------------------------------------------------------------
 

@@ -15,36 +15,31 @@ class Note implements NoteInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * Owning side.
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
-     * @var UserInterface
      */
-    private $user;
+    private UserInterface $user;
 
     /**
      * @ORM\Column(type="text", name="content")
-     * @var string
      */
-    private $content;
+    private string $content;
 
     /**
      * @ORM\Column(type="datetime", name="created_at", options={"default":"CURRENT_TIMESTAMP"})
-     * @var \DateTime
      */
-    private $createdAt;
+    private \DateTimeInterface $createdAt;
 
     /**
      * @ORM\Column(type="datetime", name="updated_at", options={"default":"CURRENT_TIMESTAMP"})
-     * @var \DateTime
      */
-    private $updatedAt;
+    private \DateTimeInterface $updatedAt;
 
     //-------------------------------------------------------------------------
 
@@ -84,7 +79,7 @@ class Note implements NoteInterface
         $this->content = $content;
     }
 
-    public function getCreatedAt(): \DateTime
+    public function getCreatedAt(): \DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -94,7 +89,7 @@ class Note implements NoteInterface
         return $this->getCreatedAt()->format($format);
     }
 
-    public function getUpdatedAt(): \DateTime
+    public function getUpdatedAt(): \DateTimeInterface
     {
         return $this->updatedAt;
     }

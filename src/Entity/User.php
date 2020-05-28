@@ -14,6 +14,8 @@ class User implements UserInterface
 {
     use TimestampsTrait;
 
+    //-------------------------------------------------------------------------
+
     public const ROLE_USER = 'ROLE_USER';
     public const ROLE_ADMIN = 'ROLE_ADMIN';
     public const ROLE_SUPER_ADMIN = 'ROLE_SUPER_ADMIN';
@@ -24,39 +26,33 @@ class User implements UserInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="name")
-     * @var string
      */
-    private $name = '';
+    private string $name = '';
 
     /**
      * @ORM\Column(type="string", name="email", unique=true)
-     * @var string
      */
-    private $email = '';
+    private string $email = '';
 
     /**
      * @ORM\Column(type="string", name="password_hash")
-     * @var string
      */
-    private $passwordHash = '';
+    private string $passwordHash = '';
 
     /**
      * @ORM\Column(type="boolean", name="admin", options={"default":false})
-     * @var bool
      */
-    private $admin = false;
+    private bool $admin = false;
 
     /**
      * @ORM\Column(type="boolean", name="banned", options={"default":false})
-     * @var bool
      */
-    private $banned = false;
+    private bool $banned = false;
 
     //-------------------------------------------------------------------------
 
@@ -145,13 +141,6 @@ class User implements UserInterface
 
     //-------------------------------------------------------------------------
 
-    /**
-     * String representation of object
-     *
-     * @link http://php.net/manual/en/serializable.serialize.php
-     * @return string the string representation of the object or null
-     * @since 5.1.0
-     */
     public function serialize(): string
     {
         return serialize([
@@ -162,13 +151,7 @@ class User implements UserInterface
     }
 
     /**
-     * Constructs the object
-     *
-     * @link http://php.net/manual/en/serializable.unserialize.php
-     * @param string $serialized <p>
-     * The string representation of the object.
-     * </p>
-     * @since 5.1.0
+     * @param string $serialized
      */
     public function unserialize($serialized): void
     {
@@ -176,29 +159,17 @@ class User implements UserInterface
             $this->id,
             $this->email,
             $this->passwordHash,
-        ] = unserialize($serialized);
+        ] = unserialize($serialized, ['allowed_classes' => [self::class]]);
     }
 
     /**
-     * Returns the roles granted to the user.
-     *
-     * <code>
-     * public function getRoles()
-     * {
-     *     return array('ROLE_USER');
-     * }
-     * </code>
-     *
-     * Alternatively, the roles might be stored on a ``roles`` property,
-     * and populated in any number of different ways when the user object
-     * is created.
-     *
-     * @return string[] The user roles
+     * @return string[]
      */
     public function getRoles(): array
     {
-        $roles = [];
-        $roles[] = self::ROLE_USER;
+        $roles = [
+            self::ROLE_USER,
+        ];
 
         if ($this->isAdmin()) {
             $roles[] = self::ROLE_ADMIN;
@@ -207,47 +178,21 @@ class User implements UserInterface
         return $roles;
     }
 
-    /**
-     * Returns the password used to authenticate the user.
-     *
-     * This should be the encoded password. On authentication, a plain-text
-     * password will be salted, encoded, and then compared to this value.
-     *
-     * @return string The password
-     */
     public function getPassword(): string
     {
         return $this->passwordHash;
     }
 
-    /**
-     * Returns the salt that was originally used to encode the password.
-     *
-     * This can return null if the password was not encoded using a salt.
-     *
-     * @return string|null The salt
-     */
     public function getSalt(): ?string
     {
         return null;
     }
 
-    /**
-     * Returns the username used to authenticate the user.
-     *
-     * @return string The username
-     */
     public function getUsername(): string
     {
         return $this->email;
     }
 
-    /**
-     * Removes sensitive data from the user.
-     *
-     * This is important if, at any given point, sensitive information like
-     * the plain-text password is stored on this object.
-     */
     public function eraseCredentials(): void
     {
     }

@@ -20,15 +20,13 @@ class SourceType implements SourceTypeInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="title", unique=true)
-     * @var string
      */
-    private $title = '';
+    private string $title;
 
     //-------------------------------------------------------------------------
 

@@ -11,16 +11,14 @@ class AnnouncementFormData implements AnnouncementFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $title = '';
+    private string $title = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Type("string")
-     * @var string
      */
-    private $content = '';
+    private string $content = '';
 
     //-------------------------------------------------------------------------
 

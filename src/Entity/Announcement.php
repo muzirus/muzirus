@@ -18,28 +18,24 @@ class Announcement implements AnnouncementInterface
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="bigint", name="id")
-     * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @ORM\Column(type="string", name="title")
-     * @var string
      */
-    private $title;
+    private string $title;
 
     /**
      * @ORM\Column(type="text", name="content")
-     * @var string
      */
-    private $content;
+    private string $content;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", onDelete="SET NULL")
-     * @var UserInterface|null
      */
-    private $author;
+    private ?UserInterface $author;
 
     public function __construct(string $title, string $content, ?UserInterface $author = null)
     {

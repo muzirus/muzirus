@@ -9,16 +9,14 @@ class FeedbackFormData implements FeedbackFormDataInterface
     /**
      * @Assert\Length(max="255")
      * @Assert\Type("string")
-     * @var string
      */
-    private $email = '';
+    private string $email = '';
 
     /**
      * @Assert\NotBlank()
      * @Assert\Type("string")
-     * @var string
      */
-    private $content = '';
+    private string $content = '';
 
     //-------------------------------------------------------------------------
 
