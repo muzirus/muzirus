@@ -13,7 +13,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "ext-iconv": "*",
         "ext-intl": "*",
         "ext-mbstring": "*",
@@ -65,7 +65,7 @@
         "optimize-autoloader": true,
         "classmap-authoritative": true,
         "platform": {
-            "php": "7.3.12"
+            "php": "7.4.6"
         },
         "preferred-install": {
             "*": "dist"
@@ -88,7 +88,8 @@
         "symfony/polyfill-php70": "*",
         "symfony/polyfill-php71": "*",
         "symfony/polyfill-php72": "*",
-        "symfony/polyfill-php73": "*"
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*"
     },
     "scripts": {
         "auto-scripts": {
