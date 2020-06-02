@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\EntityTrait\TimestampsTrait;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,9 +47,9 @@ class Post implements PostInterface
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\PostRevision", mappedBy="post")
      * @ORM\OrderBy({"createdAt": "ASC"})
-     * @var ArrayCollection|PostRevisionInterface[]
+     * @var Collection<PostRevisionInterface>
      */
-    private $revisions;
+    private Collection $revisions;
 
     public function __construct(string $slug, string $title, string $titleInRussian, ?UserInterface $author = null)
     {

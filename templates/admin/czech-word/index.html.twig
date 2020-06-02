@@ -46,8 +46,8 @@
                             <td>{{ word.languageNoteInflection }}</td>
                             <td>{{ word.languageNoteExceptionToInflection }}</td>
                             <td>{{ word.languageNoteGender|gender_as_string }}</td>
-                            <td>{{ word.createdAtFormat('Y-m-d') }}</td>
-                            <td>{{ word.updatedAtFormat('Y-m-d') }}</td>
+                            <td>{{ word.createdAt|date }}</td>
+                            <td>{{ word.updatedAt|date }}</td>
                             <td>{{ labels.wordStatus(word.statusLight) }}</td>
                         </tr>
                     {% endfor %}

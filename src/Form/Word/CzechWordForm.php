@@ -17,9 +17,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class CzechWordForm extends AbstractType
 {
-    /**
-     * @param mixed[] $options
-     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder

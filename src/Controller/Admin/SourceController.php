@@ -77,7 +77,7 @@ class SourceController extends AbstractController
         EventDispatcherInterface $dispatcher,
         TranslatorInterface $translator
     ): Response {
-        $formData = SourceFormData::createFromSource($source);
+        $formData = SourceFormData::fromSource($source);
 
         $form = $this->createForm(SourceForm::class, $formData);
         $form->handleRequest($request);

@@ -479,6 +479,9 @@
     "symfony/polyfill-intl-idn": {
         "version": "v1.13.1"
     },
+    "symfony/polyfill-php80": {
+        "version": "v1.17.0"
+    },
     "symfony/polyfill-uuid": {
         "version": "v1.14.0"
     },

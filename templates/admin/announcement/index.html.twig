@@ -29,7 +29,7 @@
                                 {% endif %}
                             </td>
                             <td>
-                                {{ announcement.createdAtFormat }}
+                                {{ announcement.createdAt|date('Y-m-d H:i') }}
                             </td>
                         </tr>
                     {% endfor %}

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\EntityTrait\TimestampsTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -11,6 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Note implements NoteInterface
 {
+    use TimestampsTrait;
+
+    //-------------------------------------------------------------------------
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -31,25 +36,12 @@ class Note implements NoteInterface
      */
     private string $content;
 
-    /**
-     * @ORM\Column(type="datetime", name="created_at", options={"default":"CURRENT_TIMESTAMP"})
-     */
-    private \DateTimeInterface $createdAt;
-
-    /**
-     * @ORM\Column(type="datetime", name="updated_at", options={"default":"CURRENT_TIMESTAMP"})
-     */
-    private \DateTimeInterface $updatedAt;
-
     //-------------------------------------------------------------------------
 
     public function __construct(UserInterface $user, string $content)
     {
         $this->user = $user;
         $this->setContent($content);
-
-        $this->createdAt = new \DateTime();
-        $this->updatedAt = new \DateTime();
     }
 
     public function __toString(): string
@@ -77,35 +69,5 @@ class Note implements NoteInterface
     public function setContent(string $content): void
     {
         $this->content = $content;
-    }
-
-    public function getCreatedAt(): \DateTimeInterface
-    {
-        return $this->createdAt;
-    }
-
-    public function getCreatedAtFormat(string $format = 'Y-m-d H:i'): string
-    {
-        return $this->getCreatedAt()->format($format);
-    }
-
-    public function getUpdatedAt(): \DateTimeInterface
-    {
-        return $this->updatedAt;
-    }
-
-    public function getUpdatedAtFormat(string $format = 'Y-m-d H:i'): string
-    {
-        return $this->getUpdatedAt()->format($format);
-    }
-
-    //-------------------------------------------------------------------------
-
-    /**
-     * @ORM\PreUpdate()
-     */
-    public function _timestampsPreUpdate(): void
-    {
-        $this->updatedAt = new \DateTime();
     }
 }

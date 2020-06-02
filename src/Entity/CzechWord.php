@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -16,7 +16,7 @@ class CzechWord extends AbstractWord implements CzechWordInterface
      *
      * @ORM\OneToMany(targetEntity="Translation", mappedBy="czechWord", cascade={"remove"})
      * @ORM\OrderBy({"positionInCzechWordDetail": "ASC"})
-     * @var ArrayCollection|Translation[]
+     * @var Collection<TranslationInterface>
      */
-    protected $translations;
+    protected Collection $translations;
 }

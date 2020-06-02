@@ -29,7 +29,7 @@
                                 </a>
                             </td>
                             <td class="text-nowrap">
-                                {{ post.createdAtFormat }}
+                                {{ post.createdAt|date('Y-m-d H:i') }}
                             </td>
                             <td>
                                 <a href="{{ path('admin.post.edit', {id: post.id}) }}" class="btn btn-primary btn-xs">

@@ -77,7 +77,7 @@ class CategoryController extends AbstractController
         EventDispatcherInterface $dispatcher,
         TranslatorInterface $translator
     ): Response {
-        $formData = CategoryFormData::createFromCategory($category);
+        $formData = CategoryFormData::fromCategory($category);
 
         $form = $this->createForm(CategoryForm::class, $formData);
         $form->handleRequest($request);

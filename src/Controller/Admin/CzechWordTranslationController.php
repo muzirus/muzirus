@@ -43,7 +43,7 @@ class CzechWordTranslationController extends AbstractController
         EventDispatcherInterface $dispatcher,
         TranslatorInterface $translator
     ): Response {
-        $formData = TranslationFormData::createFromCzechWord($word);
+        $formData = TranslationFormData::fromCzechWord($word);
 
         $form = $this->createForm(CreateCzechWordTranslationForm::class, $formData);
         $form->handleRequest($request);
@@ -86,7 +86,7 @@ class CzechWordTranslationController extends AbstractController
         EventDispatcherInterface $dispatcher,
         TranslatorInterface $translator
     ): Response {
-        $formData = TranslationFormData::createFromTranslation($translation);
+        $formData = TranslationFormData::fromTranslation($translation);
 
         $form = $this->createForm(UpdateTranslationForm::class, $formData);
         $form->handleRequest($request);

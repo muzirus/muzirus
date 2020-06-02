@@ -20,9 +20,6 @@ class UpdateTranslationForm extends AbstractType
     public const FIELD_CZECH_WORD_NOTE = 'czechWordNote';
     public const FIELD_LINK = 'link';
 
-    /**
-     * @param mixed[] $options
-     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add(

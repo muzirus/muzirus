@@ -10,7 +10,7 @@
             <h2>Email</h2>
             <p>{{ message.email }}</p>
             <h2>Vytvořeno</h2>
-            <p>{{ message.createdAtFormat }}</p>
+            <p>{{ message.createdAt|date('Y-m-d H:i') }}</p>
         </div>
     </div>
 {% endblock %}

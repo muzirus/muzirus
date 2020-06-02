@@ -110,7 +110,7 @@
 
     <hr>
     <p class="text-center text-muted">
-        {{ 'app.updated_at'|trans }} {{ word.updatedAtFormat('j.n.Y') }}
+        {{ 'app.updated_at'|trans }} {{ word.updatedAt|date }}
 
         {% if app.user %}
             <a href="{{ path('admin.russian-word.edit', {id: word.id}) }}">

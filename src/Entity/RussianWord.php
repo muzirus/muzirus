@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -16,7 +16,7 @@ class RussianWord extends AbstractWord implements RussianWordInterface
      *
      * @ORM\OneToMany(targetEntity="Translation", mappedBy="russianWord", cascade={"remove"})
      * @ORM\OrderBy({"positionInRussianWordDetail": "ASC"})
-     * @var ArrayCollection|Translation[]
+     * @var Collection<TranslationInterface>
      */
-    protected $translations;
+    protected Collection $translations;
 }

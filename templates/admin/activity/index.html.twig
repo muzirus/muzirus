@@ -8,7 +8,7 @@
             <li>
                 {{ getLogEntryIcon(logEntry) }}
                 <div class="timeline-item">
-                    <span class="time"><i class="fa fa-clock-o"></i> {{ logEntry.createdAtFormat }}</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> {{ logEntry.createdAt|date('Y-m-d H:i') }}</span>
                     <h3 class="timeline-header">
                         {{ getLogEntryTitle(logEntry) }}
                     </h3>
