@@ -67,7 +67,7 @@ class SymbolController extends AbstractController
         SymbolFacade $symbolFacade,
         TranslatorInterface $translator
     ): Response {
-        $formData = SymbolFormData::createFromSymbol($symbol);
+        $formData = SymbolFormData::fromSymbol($symbol);
 
         $form = $this->createForm(SymbolForm::class, $formData);
         $form->handleRequest($request);

@@ -79,7 +79,7 @@ class RussianWordController extends AbstractController
         EventDispatcherInterface $dispatcher,
         TranslatorInterface $translator
     ): Response {
-        $formData = RussianWordFormData::createFromWord($word);
+        $formData = RussianWordFormData::fromWord($word);
 
         $form = $this->createForm(RussianWordForm::class, $formData);
         $form->handleRequest($request);

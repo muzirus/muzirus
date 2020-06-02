@@ -19,7 +19,7 @@ class SourceFormData implements SourceFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Type("object")
      */
-    private SourceTypeInterface $type;
+    private ?SourceTypeInterface $type = null;
 
     /**
      * @Assert\Length(max="255")
@@ -65,7 +65,7 @@ class SourceFormData implements SourceFormDataInterface
 
     //-------------------------------------------------------------------------
 
-    public static function createFromSource(SourceInterface $source): self
+    public static function fromSource(SourceInterface $source): self
     {
         $formData = new self();
 

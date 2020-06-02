@@ -2,7 +2,7 @@
 
 namespace App\Form\Symbol;
 
-use App\Entity\Symbol;
+use App\Entity\SymbolInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class SymbolFormData implements SymbolFormDataInterface
@@ -29,7 +29,7 @@ class SymbolFormData implements SymbolFormDataInterface
 
     //-------------------------------------------------------------------------
 
-    public static function createFromSymbol(Symbol $symbol): self
+    public static function fromSymbol(SymbolInterface $symbol): self
     {
         $formData = new self();
 

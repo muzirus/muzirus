@@ -2,7 +2,7 @@
 
 namespace App\Form\Category;
 
-use App\Entity\Category;
+use App\Entity\CategoryInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class CategoryFormData implements CategoryFormDataInterface
@@ -23,7 +23,7 @@ class CategoryFormData implements CategoryFormDataInterface
 
     //-------------------------------------------------------------------------
 
-    public static function createFromCategory(Category $category): self
+    public static function fromCategory(CategoryInterface $category): self
     {
         $formData = new self();
 

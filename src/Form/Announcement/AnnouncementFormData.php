@@ -22,7 +22,7 @@ class AnnouncementFormData implements AnnouncementFormDataInterface
 
     //-------------------------------------------------------------------------
 
-    public static function createFromAnnouncement(AnnouncementInterface $announcement): self
+    public static function fromAnnouncement(AnnouncementInterface $announcement): self
     {
         $formData = new self();
 

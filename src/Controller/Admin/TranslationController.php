@@ -44,7 +44,7 @@ class TranslationController extends AbstractController
         EventDispatcherInterface $dispatcher,
         TranslatorInterface $translator
     ): Response {
-        $formData = TranslationFormData::createFromTranslation($translation);
+        $formData = TranslationFormData::fromTranslation($translation);
 
         $form = $this->createForm(UpdateTranslationForm::class, $formData);
         $form->handleRequest($request);

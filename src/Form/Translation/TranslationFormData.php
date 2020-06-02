@@ -13,7 +13,7 @@ class TranslationFormData implements TranslationFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Type("object")
      */
-    private ?RussianWordInterface $russianWord;
+    private ?RussianWordInterface $russianWord = null;
 
     /**
      * @Assert\Length(max="255")
@@ -25,7 +25,7 @@ class TranslationFormData implements TranslationFormDataInterface
      * @Assert\NotBlank()
      * @Assert\Type("object")
      */
-    private ?CzechWordInterface $czechWord;
+    private ?CzechWordInterface $czechWord = null;
 
     /**
      * @Assert\Length(max="255")
@@ -93,7 +93,7 @@ class TranslationFormData implements TranslationFormDataInterface
 
     //-------------------------------------------------------------------------
 
-    public static function createFromCzechWord(CzechWordInterface $word): self
+    public static function fromCzechWord(CzechWordInterface $word): self
     {
         $formData = new self();
         $formData->setCzechWord($word);
@@ -101,7 +101,7 @@ class TranslationFormData implements TranslationFormDataInterface
         return $formData;
     }
 
-    public static function createFromRussianWord(RussianWordInterface $word): self
+    public static function fromRussianWord(RussianWordInterface $word): self
     {
         $formData = new self();
         $formData->setRussianWord($word);
@@ -109,7 +109,7 @@ class TranslationFormData implements TranslationFormDataInterface
         return $formData;
     }
 
-    public static function createFromTranslation(TranslationInterface $translation): self
+    public static function fromTranslation(TranslationInterface $translation): self
     {
         $formData = new self();
         $formData->setRussianWord($translation->getRussianWord());

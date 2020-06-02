@@ -15,7 +15,7 @@ class RussianWordFormData extends AbstractWordFormData implements RussianWordFor
 
     //-------------------------------------------------------------------------
 
-    public static function createFromWord(RussianWordInterface $word): self
+    public static function fromWord(RussianWordInterface $word): self
     {
         $formData = new self();
 

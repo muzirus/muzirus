@@ -6,7 +6,7 @@ use App\Entity\CzechWordInterface;
 
 class CzechWordFormData extends AbstractWordFormData implements CzechWordFormDataInterface
 {
-    public static function createFromWord(CzechWordInterface $word): self
+    public static function fromWord(CzechWordInterface $word): self
     {
         $formData = new self();
 

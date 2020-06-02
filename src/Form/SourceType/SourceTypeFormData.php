@@ -2,7 +2,7 @@
 
 namespace App\Form\SourceType;
 
-use App\Entity\SourceType;
+use App\Entity\SourceTypeInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class SourceTypeFormData implements SourceTypeFormDataInterface
@@ -16,7 +16,7 @@ class SourceTypeFormData implements SourceTypeFormDataInterface
 
     //-------------------------------------------------------------------------
 
-    public static function createFromSourceType(SourceType $sourceType): self
+    public static function fromSourceType(SourceTypeInterface $sourceType): self
     {
         $formData = new self();
 

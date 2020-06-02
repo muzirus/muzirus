@@ -75,7 +75,7 @@ class AnnouncementController extends AbstractController
         AnnouncementFacade $announcementFacade,
         TranslatorInterface $translator
     ): Response {
-        $formData = AnnouncementFormData::createFromAnnouncement($announcement);
+        $formData = AnnouncementFormData::fromAnnouncement($announcement);
 
         $form = $this->createForm(AnnouncementForm::class, $formData);
         $form->handleRequest($request);
