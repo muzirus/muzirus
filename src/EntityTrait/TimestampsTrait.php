@@ -26,19 +26,9 @@ trait TimestampsTrait
         return $this->createdAt;
     }
 
-    public function getCreatedAtFormat(string $format = 'Y-m-d H:i'): string
-    {
-        return $this->getCreatedAt()->format($format);
-    }
-
     public function getUpdatedAt(): \DateTimeInterface
     {
         return $this->updatedAt;
-    }
-
-    public function getUpdatedAtFormat(string $format = 'Y-m-d H:i'): string
-    {
-        return $this->getUpdatedAt()->format($format);
     }
 
     //-------------------------------------------------------------------------

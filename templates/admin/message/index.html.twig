@@ -16,7 +16,7 @@
                 <tbody>
                     {% for message in messages %}
                         <tr>
-                            <td>{{ message.createdAtFormat }}</td>
+                            <td>{{ message.createdAt|date('Y-m-d H:i') }}</td>
                             <td>
                                 <a href="{{ path('admin.message.view', {id: message.id}) }}">
                                     {{ message.content }}
