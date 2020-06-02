@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\EntityTrait\TimestampsTrait;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -13,8 +14,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="language", type="string")
  * @ORM\DiscriminatorMap({
- *   "czech" = "CzechWord",
- *   "russian" = "RussianWord",
+ *   "czech": "CzechWord",
+ *   "russian": "RussianWord",
  * })
  * @ORM\HasLifecycleCallbacks()
  */
@@ -139,9 +140,9 @@ abstract class AbstractWord implements AbstractWordInterface
      *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},
      *     inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="CASCADE")}
      * )
-     * @var ArrayCollection|Category[]
+     * @var Collection<CategoryInterface>
      */
-    protected $categories;
+    protected Collection $categories;
 
     /**
      * Owning side.
@@ -151,14 +152,14 @@ abstract class AbstractWord implements AbstractWordInterface
      *     joinColumns={@ORM\JoinColumn(name="word_id", referencedColumnName="id", onDelete="CASCADE")},
      *     inverseJoinColumns={@ORM\JoinColumn(name="source_id", referencedColumnName="id", onDelete="CASCADE")}
      * )
-     * @var ArrayCollection|Source[]
+     * @var Collection<SourceInterface>
      */
-    protected $sources;
+    protected Collection $sources;
 
     /**
-     * @var ArrayCollection|Translation[]
+     * @var Collection<TranslationInterface>
      */
-    protected $translations;
+    protected Collection $translations;
 
     //-------------------------------------------------------------------------
 

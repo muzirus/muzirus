@@ -14,6 +14,8 @@ class Announcement implements AnnouncementInterface
 {
     use TimestampsTrait;
 
+    //-------------------------------------------------------------------------
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -36,6 +38,8 @@ class Announcement implements AnnouncementInterface
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", onDelete="SET NULL")
      */
     private ?UserInterface $author;
+
+    //-------------------------------------------------------------------------
 
     public function __construct(string $title, string $content, ?UserInterface $author = null)
     {

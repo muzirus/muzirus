@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\EntityTrait\TimestampsTrait;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -69,9 +70,9 @@ class Translation implements TranslationInterface
      * Inverse side.
      *
      * @ORM\OneToMany(targetEntity="TranslationExample", mappedBy="translation")
-     * @var ArrayCollection|TranslationExample[]
+     * @var Collection<TranslationExampleInterface>
      */
-    private $translationExamples;
+    private Collection $translationExamples;
 
     //-------------------------------------------------------------------------
 
