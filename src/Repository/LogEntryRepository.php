@@ -6,7 +6,7 @@ use App\Entity\LogEntry;
 use App\Entity\LogEntryInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
-use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Pagerfanta\Doctrine\ORM\QueryAdapter;
 use Pagerfanta\Pagerfanta;
 
 class LogEntryRepository extends ServiceEntityRepository
@@ -43,7 +43,7 @@ class LogEntryRepository extends ServiceEntityRepository
             ->orderBy('le.createdAt', 'DESC')
             ->getQuery();
 
-        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
+        $paginator = new Pagerfanta(new QueryAdapter($query));
         $paginator->setMaxPerPage($maxPerPage);
         $paginator->setCurrentPage($page);
 
