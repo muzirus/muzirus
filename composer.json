@@ -20,7 +20,6 @@
         "ext-pdo": "*",
         "babdev/pagerfanta-bundle": "^2.5",
         "cocur/slugify": "^3.2",
-        "enumag/no-thanks": "^0.1.0",
         "erusev/parsedown": "^1.7",
         "ezyang/htmlpurifier": "^4.12",
         "sensio/framework-extra-bundle": "^5.5",

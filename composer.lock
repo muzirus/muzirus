@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1a7568abba13b51aae44c5c341f6f87",
+    "content-hash": "d42e641ff3655e67e314575fa7becd0c",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -1629,49 +1629,6 @@
                 "sql"
             ],
             "time": "2020-07-30T16:57:33+00:00"
-        },
-        {
-            "name": "enumag/no-thanks",
-            "version": "v0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/enumag/no-thanks.git",
-                "reference": "f756d4c4d62888b3b6712d030a8d36203de43e2a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/enumag/no-thanks/zipball/f756d4c4d62888b3b6712d030a8d36203de43e2a",
-                "reference": "f756d4c4d62888b3b6712d030a8d36203de43e2a",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0",
-                "php": "^7.1.0"
-            },
-            "replace": {
-                "symfony/thanks": "*"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Symfony\\Thanks\\Thanks"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Thanks\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jáchym Toušek",
-                    "email": "enumag@gmail.com"
-                }
-            ],
-            "description": "Prevents symfony/flex from printing thanks reminder.",
-            "time": "2018-09-27T10:31:07+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -10605,5 +10562,5 @@
     "platform-overrides": {
         "php": "7.4.6"
     },
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
