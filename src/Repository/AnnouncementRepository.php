@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\Announcement;
 use App\Entity\AnnouncementInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 
 class AnnouncementRepository extends ServiceEntityRepository
 {

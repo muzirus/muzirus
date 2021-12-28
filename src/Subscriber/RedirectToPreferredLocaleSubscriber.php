@@ -29,8 +29,9 @@ class RedirectToPreferredLocaleSubscriber implements EventSubscriberInterface
     {
         $this->urlGenerator = $urlGenerator;
 
+        /** @var string[]|false $localesAsArray Prior to PHP 8, don't forget to remove after upgrade to PHP 8. */
         $localesAsArray = explode('|', trim($locales));
-        if ($localesAsArray === []) {
+        if ($localesAsArray === [] || $localesAsArray === false) {
             throw new \UnexpectedValueException('The list of supported locales must not be empty.');
         }
 

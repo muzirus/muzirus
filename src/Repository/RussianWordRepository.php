@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\RussianWord;
 use App\Entity\RussianWordInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 
 class RussianWordRepository extends ServiceEntityRepository
 {

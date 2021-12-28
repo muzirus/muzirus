@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\Post;
 use App\Entity\PostInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * @method PostInterface[] findAll()

@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use Doctrine\DBAL\Connection;
+use Psr\Log\LoggerInterface;
 
 class CountRepository
 {
@@ -15,16 +16,24 @@ class CountRepository
 
     private Connection $connection;
 
+    private LoggerInterface $logger;
+
     private bool $loaded = false;
 
-    /** @var string[] */
-    private array $data = [];
+    /** @var array<string, string> */
+    private array $data = [
+        self::KEY_CZECH_WORDS_COUNT => '0',
+        self::KEY_RUSSIAN_WORDS_COUNT => '0',
+        self::KEY_TRANSLATIONS_COUNT => '0',
+        self::KEY_TRANSLATION_EXAMPLES_COUNT => '0',
+    ];
 
     //-------------------------------------------------------------------------
 
-    public function __construct(Connection $connection)
+    public function __construct(Connection $connection, LoggerInterface $logger)
     {
         $this->connection = $connection;
+        $this->logger = $logger;
     }
 
     //-------------------------------------------------------------------------
@@ -81,10 +90,20 @@ class CountRepository
             );
         ";
 
-        $stmt = $this->connection->prepare($sql);
-        $stmt->execute();
+        try {
+            /** @var array<string, string> $result */
+            $result = $this->connection->prepare($sql)->executeQuery()->fetchAssociative();
 
-        $this->data = $stmt->fetch();
+            $this->data = $result;
+        } catch (\Doctrine\DBAL\Exception | \Doctrine\DBAL\Driver\Exception $exception) {
+            $this->logger->error(
+                'Failed to load counts.',
+                [
+                    'exception' => $exception,
+                ]
+            );
+        }
+
         $this->loaded = true;
     }
 }

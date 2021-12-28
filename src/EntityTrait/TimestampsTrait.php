@@ -35,8 +35,9 @@ trait TimestampsTrait
 
     /**
      * @ORM\PrePersist()
+     * @internal
      */
-    public function _timestampsPrePersist(): void
+    public function timestampsPrePersist(): void
     {
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
@@ -44,8 +45,9 @@ trait TimestampsTrait
 
     /**
      * @ORM\PreUpdate()
+     * @internal
      */
-    public function _timestampsPreUpdate(): void
+    public function timestampsPreUpdate(): void
     {
         $this->updatedAt = new \DateTime();
     }
